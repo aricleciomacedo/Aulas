@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>thumb-hardware</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        p ,a{
+            color: white;
+            text-decoration: none;
+        }
+        .hdw p a:hover {
+            border: 3px solid red;
+            border-radius: 30px;
+            padding: 3px;
+            padding-left: 7px;
+            padding-right: 7px;
+            transition: 100ms;
+            cursor: pointer;
+        }
+        .hardware {
+            display: inline;
+        }
+        .botao-prev {
+            /*border-radius: 30px;*/
+            transition: 100ms;
+            cursor: pointer;
+        }
+        .botao-prev:hover {
+            border: red 5px solid;
+            border-radius: 30px;
+        }
+        iframe:hover {
+            border: red 3px solid;
+            transition: 100ms;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section class="hardware">
+            <div class="hdw">
+                <section>
+                    <h1>Curso de Hardware</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iT6E92Kt38o?si=uOLOG2sGdcavHcCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p>
+                        <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dn1JHgN9wpbIUhzZmycYQXW" target="_blank" rel="external">Veja o curso completo</a>
+                    </p>
+                    <a href="index.html">
+                    <img class="botao-prev" src="voltar.png" alt="voltar.png"></a>
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

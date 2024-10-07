@@ -1,0 +1,89 @@
+<!-- 
+Módulo 01, Capítulo 11, aula 35
+Vídeo:
+Vídeos em hospedagem própria - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=TCeyIwFGkYo&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=35
+
+    Comece baixando um video sem direitos autorais e grátis no site abaixo;
+https://www.pexels.com/videos/
+Lemre-se dos formatos de vídeo que são: mp4 = m4v, webm, ogv
+
+Módulo 01, Capítulo 11, aula 36
+Vídeo:
+Incorporação de vídeos externos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=36
+
+    Não se esqueça de acompanhar também, o estudo em pdf!
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vídeo com HTML5</title>
+    <style>
+        .a {
+            border: 5px solid rgb(107, 104, 104);
+            border-radius: 75%;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button><a href="index_videocapa.html">Ir para o vídeo com capa</a></button>
+        <button><a href="index_vazio.html">Link vazio</a></button>
+        <button><a href="index_videoyt.html">Ir para vídeo do YouTube</a></button>
+        <button><a href="index_videovim.html">Ir para o video do Vimeo</a></button>
+    </div>
+
+    <h1>Inserindo videos hospedado localmente</h1>
+    <p>Este vídeo está hospedado no meu própio servidor.</p>
+    <!-- Mesmo que usemo o width para diminuir o tamanho do vídeo na página, o seu tamanho de ocupção continua os mesmos 12MB, adionamos o contros para exibir opçções do player.
+    DICA: Coloque todas os formatos, para que não tenha problemas com algum navegador que não suporte algum tipo de formato. -->
+    <video src="midia/meu-video.ogv" width="500" height="315" controls loop autoplay ></video>
+    <!-- A forma simples de add de videos acima náo é tão legal para adcionar vários formatos, então usamos a opção certa abaixo:-->
+
+    <!-- Veja como dessa forma, conseguimos adcionar mais formatos, e fica mais fácil de adcionar parâmetros ao player. -->
+    <video class="a" width="500" poster="imagens/limoes-capa.png" controls muted ><!-- Aqui definimos o tamanho do quadro de exibição do video usando "width", definimos a capa do vídeo usando "poster" , adcionamos os controles do player usando "controls", "muted" para exibir o player mudo inicialmente -->
+        <source src="index.html" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatíbilidade com reprodução de vídeos.</p>
+    </video>
+
+    <!-- Podemos ainda incorporar vídeo de servidor externo por meio de link.
+    Abaixo nós usamos um vídeo do youtube, clicando nos 3 pontinhos do vídeo escolhido, escolhendo a opção de compartilhar e em ( < > ) que é o incorporar, e copiando o código gerado. -->
+
+    <h1>Inserindo vídeos do youtube</h1>
+    <iframe muted width="400" height="215" src="https://www.youtube.com/embed/sjyMSWv9Uf8?si=Hrhj-xhtdD7_Rn42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <!-- SAIBA QUE:
+    A opção de linkar(incorporar) vídeo é melhor do que colocar vídeos do seu próprio servidor pois o consumo de dados da sua página não será sobre-carregada, pois o usuário irá ser direcionado a consumir dados do youtube. -->
+
+    <div>
+        <h1>&quot;Inserindo vídeos do YouTube&quot;</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LW0bhKitRBk" title="CGI Animation Showreel HD &quot;Animation Show Reel&quot; by AnimationCafe Studio | CGMeetup" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- 
+        Aqui usamos o exemplo do Vimeo, que é parecido com o YouTube, e nos permitirá escolher em deixar um vídeo livre ou não para um determinado grupo de pessoas; Como por exemplo uma aula para determinado número de pessoas, que poderão assistir caso  exija a liberação para tal; Ou seja podemos escolher se vai ser privado ou não.
+
+        ---Os serviços do Vimeo é pago, e a qualidade é ótima, porém o codec dele não é tão bom, resultando em travamentos indesejados.
+        Link:
+        Vimeo.com
+        ---
+    -->
+    <div>
+        <h1>Inserindo vídeos do Vimeo</h1>
+        <iframe src="https://player.vimeo.com/video/197093965?color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

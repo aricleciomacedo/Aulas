@@ -1,0 +1,114 @@
+<!--
+
+    Módulo 01, Capítulo 05, aula 13
+Vídeo:
+Parágrafos e Quebras - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=f6NTJdtEFOc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=13
+
+Módulo 01, Capítulo 05, aula 14
+Vídeo:
+Símbolos e Emoji no seu site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=nhMdFe3WwYc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=14
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafos</title>
+</head>
+<body>
+    <h1>Parágrafos e quebras de linha</h1>
+    <hr>
+    <p>Você pode escrever
+        um parágrafo de 
+        qualquer jeito.
+        Basta colocar tudo
+        no meio do par de tags
+        &lt;p&gt; e &lt;/p&gt; <!-- LESS THAN / GREATER THAN --><!--
+    </p>
+    <p>Se precisar quebrar
+        o texto em algum lugar
+        específico <br>como esse,
+        você pode usar a tag &lt;br&gt;.
+    </p>
+    <p>Vamos adicionar alguns símbolos especiais:
+        &reg;
+        &copy;
+        &trade;
+        &euro;
+        &pound;
+        &yen;
+        &cent;
+        &Delta;
+        &uarr;
+    </p>
+    <p>Vamos adicionar alguns emoji: 
+        &#x1F596;
+        &#x1F913;
+    </p>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Parágrafos</title>
+</head>
+<body>
+    <h1>@Curso em Vídeo HTML5 e CSS3</h1>
+    <hr>    <!--Aqui é para add um alinha horizontal abaixo-->
+    <a href="https://www.youtube.com/watch?v=f6NTJdtEFOc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=13&ab_channel=CursoemV%C3%ADdeo">Video Aula</a>
+    <h1>Parágrafos e quebra de linha</h1>
+    <p>Você pode escrever
+        um parágrafo de 
+        qualquer jeito.
+        Basta colocar tudo 
+        no meio do par de tags
+        &lt;p&gt; e &lt;/p&gt; <!--Aqui usamos a entidade E comercial "& + lt para add o simbolo menor que "<" e E comercial + gt para add o simbolo maior que ">", pois se usarmos literalmente os simbolos, criamos tags ao invés de add os simbolos ao texto.-->
+    </p>
+    <p>Se precisar quebrar 
+        o texro em algum lugar
+        específico <br>como esse, <br><!-- aqui usamos o breake row, que quebra linha-->
+        você precisa usar a tag &lt;br&gt; <hr>
+    </p>
+    <h2>Veja no site w3schools Alguns Exemplos de "entidades"</h2>
+    <a href="https://www.w3schools.com/html/html_entities.asp">VEJA AQUI!</a>
+    <p>	non-breaking space serve para 
+        dar&nbsp;espaço inquebrável&#160;no texto. <br>
+        less than é o sinal de menor que &lt; = &#60;<br>
+        ampersand é o simbolo E comercial &amp; = &#38;<br>
+        <h4>Veja também Misc Simbols UTF-8! "Simbolos Diversos"</h4>
+        <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp">VEJA AQUI!</a>
+        <hr>
+    </p>
+    <p>
+        <a href="https://www.youtube.com/watch?v=nhMdFe3WwYc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=15&ab_channel=CursoemV%C3%ADdeo">Video Aula</a>
+        <h1>Símbolos e Emoji no seu site</h1>
+        Vamos adicionar alguns simbolos especiais de exemplo: <br>
+        Marca registrada&reg; <br>
+        Copy rigth &copy; <br>
+        Trade mark &trade; <br>
+        Euro &euro; <br>
+        Libra moeda Inglesa &pound; <br>
+        Moeda Japonesa &yen; <br>
+        Centavo Americano &cent; <br>
+        delta minusculo &delta; Delta maiusculo &Delta; <br>
+        Seta pra cima &uparrow; ou &uarr;
+    </p><hr>
+    <h2>Veja no site emojipedia + "símbolos especiais"</h2>
+        <a href="https://emojipedia.org/">VEJA AQUI!</a><br>
+    <p>
+        DICA: Quando quiser adcionar um desse simbolos especias, como por exemplo esse  "&#x2705", nós devemos optar por copiar o Technical Information e copiar o CodePoints desse simbolo que U+2705 <br>
+        Ao invés de copiar o simbolo e colar diretamente no VSC, que  também funciona porém pode acontecer de alguns navegadores não serem compátiveis e não exibir o símbolo adcionado; Busque adcionar o simbolo usando o CodePoint, escrevendo &#x e na frente escrever ou colar o codepoint. <br>
+        VEJAMOS COMO FICA O EXEMPLO ABAIXO: <br>
+        U+2705 modificamos para &amp;#x2705 que é o símbolo &#x2705 <br>
+        Outros > &#x1F6D; ou &#x1F91;
+    </p>
+</body>
+</html>

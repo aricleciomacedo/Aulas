@@ -1,0 +1,47 @@
+<!-- 
+    Módulo 02, Capítulo 15, aula 03
+Vídeo:
+Pseudo-classes em CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=WPtRX4n0UJs&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=21
+
+    Aqui estudamos o uso de Pseudo-classes, que está relaionado ao estado de um determindao elemneto;por exemplo: se ele está ativo, desabilitado, se foi ele visiado, marcado , vazio, habilitado, etc daí podemos atribuir o que poderá ser feito com esse elemento. 
+    A forma de chamar uma psudo classe na CSS é o uso dos dois pontos (:) + o identificador na frente do elemento. VEJA um exemplo:
+        nav:hover ()
+    É um pseudo-classe que identifica se o mouse está passando sobre o elemento e aplica propriedades que sobre-põe as atuais.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block;/* Assim deixamos uma div ao lado da outra. */
+            background-color: lightgray;
+            border: 1px solid black;/* Shorthand para cria uma borda no elemento, e seus valores são: Medida, Tipo e Cor. */
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+
+        div:hover {/* Aqui usamos a pseudo classe para aplicar esse esilo quando o mouse passar sobre o parar sobre esse elemento. */
+            background-color: rgba(255, 251, 0, 0.87);
+            border-radius: 50%;
+            transition: 300ms;/* Aqui definimos o tempo de duração desse efeito causado pela pseudo classe. */
+            opacity: 22%;/* Assim diminuimos a opacidade da cor no elemento. O que é opacidade? 
+                1. qualidade, estado ou propriedade do que é opaco; ausência de transparência."a o. do ferro"
+                2. FIGURADO sombra cerrada, densa; local sombrio, brumoso."a o. das florestas" */
+        }
+    </style>
+</head>
+<body>
+    <!-- Podemos criar div para serem espaços na página , ela se comporta como uma linha        -->
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

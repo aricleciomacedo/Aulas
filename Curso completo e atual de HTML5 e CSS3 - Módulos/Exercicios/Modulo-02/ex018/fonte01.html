@@ -1,0 +1,128 @@
+<!-- 
+    Módulo 02, Capítulo 14, aula 06
+Vídeo:
+Usando Google Fonts - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=FLuQonci9wU&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=14
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Fontes com Google Fontes</title>
+
+<!-- Aqui importamos as fontes Aton e Kaushan Script por meio de link na opção <> Get embed code...
+Veja : https://fonts.google.com/specimen/Anton?preview.text=Ol%C3%A1%20Jesus -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+<style>
+        /* Aqui importamos a fonte Kaushan Script do site google fontes no link: 
+    https://fonts.google.com/specimen/Kaushan+Script?preview.text=ol%C3%A1%20Jesus&classification=Handwriting 
+        Copiamos então a regra de importação @import na opção <> get embed code...
+         */
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+        /* Fonte Atkinson Hyperlegible e suas variações pega do Google Fontes : https://fonts.google.com/selection/embed */
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Aqui importamos a Fonte Work Sans e suas variações: 
+        OBS: <uniquifier>: Use a unique and descriptive class name
+            <weight>: Use a value from 100 to 900*/
+        @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Kaushan+Script&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* OBS: 
+            @ é uma regra;
+            body, h1, h2, p , etc são seletores de tags;
+            font-family, color,font-size etc, são declarações que conjutos de propriedades e valores. 
+        */ 
+        div {
+            background-color: rgb(227, 227, 248)
+        }
+        div .section_one {
+            background-color: rgba(175, 174, 174, 0);
+        }
+
+        body {
+            background-color: rgba(180, 180, 224, 0.555);
+            font-family: 'Kaushan Script', cursive, Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: black;
+        }
+        h1 {
+            color: rgb(3, 3, 133);
+            font-family: 'Kaushan Script','Times New Roman', Times, serif;
+            font-size: 3em;
+        }
+        h2 {
+            font-family: 'Kaushian Script',cursive;/* Aqui erramos propositalmente o nome da fonte, para que vejamos o funcionamento da próxima; Que é a "cursive"  */
+            font-size: 2em;
+        }
+
+        /* Aqui nós selecionamos as classes para formatar o <h3> e o <p> que usamos para treinar o uso e estilo da fonte externa Atkinson Hyperlegible. */
+        .div_three > h3 {
+            font-family: "Atkinson Hyperlegible", sans-serif;
+            font-size: 2em;
+            font-weight: 700;
+            font-style: italic;
+        }
+        .div_three > p {
+            font-family: "Atkinson Hyperlegible", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Aqui nós selecionamos as classe div_four para formatar o <h4> e o <p> que usamos para treinar o uso e estilo da fonte externa Atkinson Hyperlegible. */
+        .div_four > .section_four > h4 {
+            font-family: "Work Sans", sans-serif;
+            font-size: 2em;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+        }
+        .div_four > .section_four > p {
+            font-family: "Work Sans", sans-serif;
+            font-size: 1em;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* Aqui dizemos que todos os <p> terão esse padrão de fonte, caso nenhum seletor seja usado para modificar. */
+        p {
+            font-family: 'Anton', sans-serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section class="section_one">
+            <h1>Fonte Kaushan Script</h1>
+            <p>Aqui neste parágrafo estamos usando a fonte "Anton" <br> elit. Mollitia iste aut blanditiis, similique reiciendis qui esse molestias sapiente doloribus quisquam nobis repellat fugit quos quibusdam ut rerum officia quae laboriosam!</p>
+        </section>
+        <hr>
+        <section class="section_two">
+            <h2>Este Subtítulo tem fonte "cursive" já que a Kaushan Sript foi escrita errada na CSS.</h2>
+            <p>Aqui neste parágrafo estamos usando a fonte "Anton" <br> elit. Odit impedit repellat unde recusandae saepe itaque nihil rerum earum, culpa iure nam ipsam, repellendus ab quis perferendis nulla? Nobis, consequuntur eaque?</p>
+        </section>
+    </div>
+    <div class="div_three">
+        <!-- <section class="section_three"> -->
+            <h3>Fonte Atkinson Hyperlegible</h3>
+            <p>Aqui estamos usando a fonte "Atkinson Hyperlegible e suas variações" <br> elit. Odit impedit repellat unde recusandae saepe itaque nihil rerum earum, culpa iure nam ipsam, repellendus ab quis perferendis nulla? Nobis, consequuntur eaque?</p>
+        <!-- </section> -->
+    </div>
+
+    <div class="div_four">
+        <section class="section_four">
+            <h4>Fonte Work Sans</h4>
+            <p>Aqui estamos usando a fonte "Work Sans" e suas variações" <br> elit. Odit impedit repellat unde recusandae saepe itaque nihil rerum earum, culpa iure nam ipsam, repellendus ab quis perferendis nulla? Nobis, consequuntur eaque?</p>
+        </section>
+    </div>
+</body>
+</html>

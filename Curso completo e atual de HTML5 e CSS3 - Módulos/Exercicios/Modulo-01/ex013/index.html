@@ -1,0 +1,60 @@
+<!-- 
+    >>>>>>INíCIO Capítulo 12 <<<<<<<<<
+
+Módulo 01, Capítulo 12, aula 38
+Vídeo:
+Estilos CSS inline - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=byqhpuVpvEI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=38
+
+    VEJA: Existe um conceito antigo de se fazer inline style, que até funciona, porém tornou-se obsoleto e até o Visual Studio Code alerta e pinta de 
+vermelho indicando que essa propriedade não deve ser usada, e ao apontar o mouse sobre a proprieda, o VSCode dará a propriedade correta a se usar.
+    EXemplos: 
+...
+<body bgcolor="red">
+    <p font color="white">Eample</p> 
+...
+-->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Estilos Inline</title>
+</head>
+
+<!-- Aqui é a forma atual inline de estilizar 
+OBS: Essa forma é boa para quando um estilo não será repetido, ou para que não seja sobreposto por outro, como se fosse algo incomum ou particular a tag.
+Outra coisa é a limitação que se tem no estilo inline, que é a particularidade do estilo, então podemos dizer cada tag recebe seu estilo indivual, e que outra não sofre alteração, mas se caso queira adcionar o estilo a outra tag, devemos por na tag desejada o estilo.
+    Essa forma polui o html, pois mistura CSS junto com as linhas da HTML.-->
+<body style="background-color: lightskyblue; font-size: 20px;">
+    <h1 style="color: mediumblue; font-family: Arial, Helvetica, sans-serif; text-align: center; font-size: 2em;">Capítulo 1 - CSS inline </h1> <!-- Título -->
+    <h2 style="color: darkred; text-align: center;">Capítulo 1.1</h2> <!-- Sub-título de h1 -->
+    <p style="text-align: center; color: white; background-color:black;">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Nobis hic aliquid et nemo eligendi architecto maxime molestiae dolor libero. <br> Ipsam iusto, odio sint earum culpa unde totam in veritatis reprehenderit!
+    </p>
+    <h2 style="color: darkred; text-align: center;">Capítulo 1.2</h2>
+    <p style="text-align: center; color: white; background-color: black;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Perferendis delectus ut laudantium itaque sed cum, aliquam commodi assumenda aperiam eaque, <br>numquam fugiat vero debitis repudiandae! Fugiat nihil corporis cumque ab?
+    </p>
+    <h1 style="color: mediumblue; text-align: center; font-size: 2em;">Capítulo 2 - Estilo dentro da tag </h1>
+    <h2 style="color: darkred; text-align: center;">Capítulo 2.1</h2>
+    <p style="text-align: center; color: white; background-color: black;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Eveniet soluta optio in velit enim ut recusandae tempore quo amet commodi, earum nobis, <br>vel distinctio. Molestiae, distinctio nihil. Enim, ab eligendi?
+    </p>
+</body>
+<!-- 
+    "LEMBRETE"
+    Abaixo fizemos uma reapresentação de como era feita a estilização básica.
+    
+<body bgcolor="red">  
+    <h1>Olá mundo!</h1>
+    <p><font color="white">oi</font></p>  
+</body> 
+
+    Esse é um jeito antigo de fazer estilo, funciona, porém está obsoleto pela w3c.
+    Note que aqui a tag antiga está vermelha, pois é errado usar.
+-->
+</html>

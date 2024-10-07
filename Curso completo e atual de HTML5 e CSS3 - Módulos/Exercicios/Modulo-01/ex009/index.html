@@ -1,0 +1,162 @@
+<!-- 
+    Módulo 01, Capítulo 09, aula 25
+Vídeo:
+Listas OL e UL - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=JlE0pzESf5g&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=25
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1> <!-- Title main = Título principal -->
+    <h2>Listas ordenadas</h2><!-- Subtitle  = Sub título -->
+<!-- Abaixo nós vemos um exemplo de lista, porém fazer listas dessa forma dificulta na hora de por exemplo adcionar outro item, pois teremos que editar todos os números novamente um por um. -->
+    1 - Acordar
+    2 - Ligar para João
+    3 - Tomar café
+    4 - Escovar os dentes
+    5 - Lavar Roupa
+
+<!-- Para ajudar na criação de listas, temos a tag <ol> (ordered list = lista ordenada), essa tag cria listas númeradas e mesmo que se adcione outro item depois,a númeração é refeita de forma automática -->
+    <ol>
+        <!-- OBS: A partir da HTML5, o fechamento da tag <li> é opcional.
+            VEJA ABAIXO exemplo da tag aberta e ela fechada. -->
+        <li>Acordar</li> <!-- A tag <li> é usada para adcionar itens -->
+        <li>Ligar para o João
+        <li>Tomar café</li><!-- Exxemplo de tag fechada -->
+        <li>Escovar os dentes <!-- Exemplo de tag aberta -->
+    </ol>
+<!-- Podemos ainda personalizar algumas listas usando parâmetros de formatação, que vareiam de númerações a letras ou símbolos.
+Para isso use o parâmetro (type) dentro da tag de lista, entre as aspas ("") tecle Crtl+Espace e veja as opções que pode ser: 
+1 = Ordem Númerica; 
+A = Ordem Alfábetica Maiúscula; 
+a = Ordem Alfábetica Minúscula; 
+I = Ordem em algarismo romanos maiúsculo; e por fim 
+i = Ordem em algarismo romanos minúsculo.
+PODEMOS ainda dizer apartir de qual número essa lista vai começar, para isso usamos atribuimos o parâmetro (start dentro da tag).
+VEJA ABAIXO O EXEMPLO: -->
+    <h2>Lista do tipo númerica começando apartir do 4</h2>
+    <ol type="1" start="4">
+        <li>Acordar</li>
+        <li>Ligar para o João
+        <li>Tomar café</li>
+        <li>Escovar os dentes
+    </ol>
+    <h2>Lista do tipo Alfabética Maiúscula começando apartir do F </h2>
+    <ol type="A" start="6">
+        <li>Acordar</li>
+        <li>Ligar para o João
+        <li>Tomar café</li>
+        <li>Escovar os dentes
+    </ol>
+    <h2>Lista do tipo Algorismo romano minúsculo começando apartir do X </h2>
+    <ol type="i" start="10">
+        <li>Acordar
+        <li>Ligar para o João
+        <li>Tomar café
+        <li>Escovar os dentes
+    </ol>
+
+<!-- Aqui é a lista não ordenada, que são aquelas com pontinhos, símblos, quadradinhos, setas e etc; ou seja não uma ordem lógica. -->
+    <h2>Listas não ordenadas</h2>
+<!-- Usaremos a tag <ul> (unordered list = lista não ordenada).
+OBS: Podemos mudar o tipo dessa marcação dos itens usando o parâmetro (Type) e uma das opções que pode a ser: "disc=bolinha, circle=circulo, square=quadradinho" 
+ABAIXO USAMOS o exemplo de marcação om quadradinhos.-->
+    <ul type="square" >
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+<!-- Aqui nós iremos fazer junção de listas, que é algo bastante usando em páginas web. -->
+    <h2>Minhas linguagens favoritas</h2>
+    <ol>
+       <li>Antigas</li>
+       <ol type="a"><!-- NOTE que podemos usar outra tag <ol> para a junção , e podemos usar parâmetros para ordenação iguais aos que já vimos acima.-->
+        <!-- Esse title vamos ver quando pararmos a seta mouse em cima -->
+           <li title="Linguagem de programar">Clipper</li>
+           <li>Visual Basic</li>
+           <li>Fortran</li>
+          <li>Delphi</li>
+       </ol>
+       <li>Novas</li>
+       <ol type="a" start="5" ><!-- Aqui usamos o start para continuar a sequência da ordem. Note que o start   é um parâmetro que recebe valor númerico para ambas as ordens;sejam númericas ou alfabétias. -->
+           <li>PHP</li>
+           <li>Python</li>
+           <li>JavaScript</li>
+           <li>Kotlin</li>
+       </ol>
+    </ol>
+
+<!-- Podemos ainda misturar listas usando tags <ol> com <ul>, e também adionar parâmetros como nas anteriores acima.
+    VEJAMOS ABAIXO COMO FICA:-->
+    <h2>Meus jogos favoritos</h2>
+    <ul>
+        <li>Nintendinho(NES)</li>
+        <ol type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario Lost Levels</li>
+            </ul>
+            <li>Ninja Gaiden III</li>
+        </ol type="square">
+        <li>Super Nintendo(SNES)</li>
+        <ol type="square">
+            <li>Super Bomberman I, II, III, IV and IV</li>
+            <li>Super Mario World</li>
+            <li>Donkey Kong</li>
+            <ul>
+                <li>Donkey Kong Country III</li>
+                <li>Diddy´s Kong Quest</li>
+            </ul>
+            <li>Campeonato Brasileiro 96</li>
+            <li>Mortal Combate Ultimate</li>
+        </ol>
+        <li>Play Station(PS)</li>
+        <ol type="square">
+            <li>Bomba Patch</li>
+            <li>Final Fantasy</li>
+            <ul>
+                <li>Final Fanstasy VII</li>
+                <li>Final Fantasy IX</li>
+            </ul>
+            <li>Castlevania</li>
+            <ul>
+                <li>Simphony of the Night</li>
+            </ul>
+        </ol type="square">
+    </ul>
+
+<!-- Aqui usaremos a tag <dl> de definition list = definição de lista, e seu funcionamento  é semelante a um dicionário.
+    NOTE que não tem potuação de ordem
+Dentro dessa lista nós usamos os termos, que são as tags <dt> de definition list = definição de termo, e <dd> definition description = definição de descrição.
+    VEJAMOS ABAIXO os exemplos : -->
+    <h2>Lista de Definições</h2>
+        <dt>Termo</dt>
+        <dd>Descrição</dd>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação de conteúdo de um site.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd><dfn>Linguagem</dfn> de programação para a criação de interatividade de um site.</dd>
+        <dt>SEO</dt>
+        <dd><dfn>Search Engine Optmization</dfn> = Otimização para Motores de Buscas.</dd>
+        <!-- OBS:
+        Usar Listas de definição é bom para quando alguém pesquisar algo sobre determinado assunto, os mecânismo de busca do Google indique nosso site para ver tal definição. -->
+    
+</body>
+</html>

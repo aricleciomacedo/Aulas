@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--Aqui é título de nossa página; aquele que aparece na Aba do navegador. -->
+    <title>Como surgiu o mascote do Android</title>
+<!-- Aqui adcionamos o icone da Aba, e como ele é uma imargem interna; é preciso apontar no href com o local onde está "O ícone". -->
+    <link rel="shortcut icon" href="pacote-projeto-d010/imagens/favicon.ico" type="image/x-icon">
+<!-- Aqui é para pegarmos uma font externa por meio do link, e usarmos a fonte no CSS, e caso opte por importar via @import, a sua idetação deve ser antes do @font-face -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> -->
+
+<!-- Aqui pegamos a folha de estilos interna -->
+    <link rel="stylesheet" href="estilo/estilo.css">
+</head>
+<body>
+    <!-- Cabeçalho do site. -->
+    <header>
+        <!-- Título Principal do site. -->
+        <h1>Curiosidades de Tecnologia</h1>
+        <!-- Parágrafo sobre nosso site. -->
+        <p>Tudo aquilo que você precisa saber sobre o mundo tech, em um único lugar.</p>
+    </header>
+    <!-- FIM do cabeçalho do site. -->
+
+    <!-- Menu de navegação principal ao site. -->
+    <nav><!--  -->
+        <a href="#">Home</a>
+        <a href="#">Notícias</a>
+        <!-- <a href="#">Curiosidades</a> Por questão de responsividade desativamos esse item na aula de manutenção em sites hospedados no GitHub Pages.-->
+        <a href="#">Contato</a>
+    </nav>
+    <!--FIM do Menu de navegação principal ao site. -->
+
+    <!-- Conteúdo Principal. -->
+    <main>
+        <!-- Atrtigo. -->
+        <article>
+            <h1><!-- Título principal do main. -->
+                História do Mascote do Android
+            </h1>
+            
+            <p> <!-- Paragrafo 1; <strong> destaca em negrito.-->
+                Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo <strong>Google</strong> é um dos mais utilizados para dispositivos móveis em 
+                todo o mundo. Mas tavez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe esse artigo para aprender muita 
+                coisa sobre esse robozinho.
+            </p>
+            
+            <h2> <!-- Sub-título 1 -->
+                A primeira versão
+            </h2>
+            
+            <p> <!-- Parágrafo 2; <a> direciona para um link ao clicar na palavra envelopada; target=blank irá abrir em outra aba; <abbr> para mostrar do que se trata o texto; <strong> para deixar em "forte"=negrito. -->
+                A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a href="https://androidcommunity.com/dan-morrill-shows-us-the-android-mascot-that-almost-was-20130103/" target="_blank" title="Desenvolvedor de imagens Dan Morril." class="externo">Dan Morrill</a>. 
+                Ele conta que abriu o <a href="https://inkscape.org/pt-br/" target="_blank" title="Programa Web de editar imagens." class="externo">Inkscape</a> (área livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.
+            </p>
+            
+            <!-- [FOTO] 1-->
+            <picture><!-- Adcionamos essa tag para fazermos para aplicarmos mais responsividade -->
+                <!-- O <source media="" servirá para aplicar outra imagem quando a a tela atingir o valor determinado, que nesse caso é largura máxima de tela em 670 pixels.-->
+                <source media="(max-width: 670px)" srcset="pacote-projeto-d010/imagens/dan-droids-pq.png">
+                <img src="pacote-projeto-d010/imagens/dan-droids.png" alt="Primeiro Mascote do Android" title="Imagem do Mascote do Android">
+            </picture>
+            <!-- FIM de foto -->
+            
+            <p><!-- Parágrafo 2 relacão com a imagem 1-->
+                Essa primeira versão bizarra até foi batizada 
+                em homenagem ao seu criador: seriam os <strong>Dandroids</strong>.
+            </p>
+            
+            <h2><!-- Sub-título 2 -->
+                Surge um novo mascote
+            </h2>
+            
+            <p><!-- Parágrafo 3 relacionado ao h2-2 -->
+                A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <a href="https://www.irinablok.com/" target="_blank" title="Irina Blok criadora do mascote do android." class="externo">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.
+            </p>
+            
+            
+            <!-- [FOTO] 1 da Criadora do Android-->
+            <picture><!-- Adcionamos essa tag para fazermos para aplicarmos mais responsividade -->
+                <!-- O <source media="" servirá para aplicar outra imagem quando a a tela atingir o valor determinado, que nesse caso é largura máxima de tela em 670 pixels.-->
+                <source media="(max-width: 670px)" srcset="pacote-projeto-d010/imagens/irina-blok-pq.jpg">
+                <img src="pacote-projeto-d010/imagens/irina-blok.jpg" alt="Irina Blok" title="Criadora do Bugdroid">
+            </picture>
+            
+            <p> <!-- Parágrafo 4, relacionado a imagem 2 -->
+                A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação 
+                rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.
+            </p>
+            
+            <!-- [FOTO] 3, imagem do Bugdroid-->
+            <picture>
+                <!-- A class foi criada para melhor estilizar diretamente essa imagem no css. -->
+                <img class="pequena" src="pacote-projeto-d010/imagens/bugdroid.png" alt="Mascote.png" title="bugdroid">
+            </picture>
+            
+            <p><!-- Parágrafo 5, ralacionado a img 3 -->
+                A principal inspiração para os traços do novo <strong>Bugdroid</strong> veio daqueles 
+                bonequinhos que ilustram portas de banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório 
+                do <strong>Google</strong> e olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo.
+            </p>
+            
+            <!-- [VIDEO] Video de link externo, incorporado do youtube.-->
+                <!-- Aqui envelopamos o link externo em uma div, para facilitar a manipulação do elemento.   -->
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M?si=-gSKJRXxxsaUnCOv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            <!-- FIM [VIDEO] -->
+                
+            <!-- [EXTRA]  conteúdo a parte , porém relacionado.-->
+        <!-- É uma caixa semântca de conteúdos periféricos onde não precisa exatamente tratar do mesmo conteúdo da matéria, mas pode ser algo relacionado, a respeito, algo extra que tem a ver com o assunto, algo informativo que siga a idéia de curiosidade e mais. -->
+            <aside>
+                <h3> <!-- Sub-título aside (Aparte) -->
+                	Quer aprender mais?
+                </h3> 
+                
+                <p> <!-- Parágrafo aparte -->
+                    Outro assunto 
+                    curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a 9.0.
+                </p>
+                <!-- Aqui é nossa lista, e cada item deverá mostrar do que se trata, quando o usuário passar o mouse sobre a palavra na página.  -->
+                <ul>
+                    <li>
+                    	1.5 - <abbr title="Bolo de copo">Cupcake</abbr>
+                    </li>
+                    <li>
+                    	1.6 - <abbr title="Rosquinha">Donut</abbr>
+                    </li>
+                    <li>
+                    	3.0 - <abbr title="Bomba">Eclair</abbr>
+                    </li>
+                    <li>
+                    	2.2 - <abbr title="Iorgute congelado">Froyo</abbr>
+                    </li>
+                    <li>
+                    	2.3 - <abbr title="Biscoito de grngibre">Gingerbread</abbr>
+                    </li>
+                    <li>
+                    	3.0 - <abbr title="Favo de mel">Honeycomb</abbr>
+                    </li>
+                    <li>
+                    	4.0 - <abbr title="Sandwich de Sorvete ">Ice Cream Sandwich</abbr>
+                    </li>
+                    <li>
+                    	4.1 - <abbr title="Jujuba">Jelly Bean</abbr>
+                    </li>
+                    <li>
+                    	4.4 - <abbr title="kitkat">KitKat</abbr>
+                    </li>
+                    <li>
+                    	5.0 - <abbr title="Pirulito">Lolipop</abbr>
+                    </li>
+                    <li>
+                    	6.0 - <abbr title="Marshmallow">Marshmallow</abbr>
+                    </li>
+                    <li>
+                    	7.0 - <abbr title="Torrone">Nougat</abbr>
+                    </li>
+                    <li>
+                    	8.0 - <abbr title="Oreo">Oreo</abbr>
+                    </li>
+                    <li>
+                    	9.0 - <abbr title="Torta">Pie</abbr>
+                    </li>
+                </ul>
+                
+                <p> <!-- Parágrafo 2 aparte.-->
+                    Infelizmente, o <strong>Android Q</strong> não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar 
+                    numerações, o que deu origem ao Android 10.
+                </p>
+                
+                <p><!-- Parágrafo 3 aparte. -->
+                    Acesse aqui o site <a href="https://www.android.com/intl/en_uk/history/#/donut" target="_blank" title="História do Android" class="externo">Android History</a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe 
+                    para o sistema Android.
+                </p>
+            </aside>
+                <!-- Fim do [/EXTRA] conteúdo a parte -->
+                
+                <p> <!-- Parágrafo 6 do article do main -->
+                    Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android e seu simpático 
+                    mascote.
+                </p>
+        </article>
+    </main>
+    <footer>
+        <p>Site Criado por <a href="https://gustavoguanabara.github.io/" target="_blank">Gustavo Ganabara</a> para o <a href="https://www.youtube.com/@CursoemVideo" target="_blank">CursoemVideo</a>.</p>
+    </footer>
+</body>
+</html>

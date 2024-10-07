@@ -1,0 +1,218 @@
+<!-- 
+    Módulo 02, Capítulo 16, aula 04
+Vídeo:
+Grouping Tags em HTML5 - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=JPMm-jyKOaM&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=26
+
+    As tags de agrupamento básicamento sempre foram duas, a <div> que é do tipo block-level, e a <span> que é do  tipo inline-level.
+        Antigamente usavamos muitas d<iv> para criar sites, mas hoje em dia, com evolução da linguagem, podemos usar e é bem melhor usar tags semênticas pois com isso ajudamos aos mecânismos de buscas e ainda nosso sie fica organizado em tela.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Grounpin Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify; /* Assim facilita  a leitura */
+            background-color: darkgrey;
+            margin: 0;
+        }
+        header {
+            /* position: relative; */
+            /* width: auto; */
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        header > h1 {
+            color: rgb(218, 221, 252);
+            background-color: lightslategray;
+            /* width: 100%; */
+            text-align: left;
+            padding-left: 5px;
+            top: 0;
+        /* Veja abaixo uma explicação sobre essa ShortHand de sombrear caixas.*/
+            box-shadow: inset -1px -1px 20px 12px rgba(0, 0, 0, 0.804);
+        }
+        nav {
+            /* width: 100%; */
+            /* height: auto; */
+            background-color: #ccc;
+            border: 1px solid rgb(0, 0, 0);
+            padding: 3px;
+            /* position: absolute;
+            top: 0;
+            right: 0; */
+        
+            /* 
+                    ShortHand box-shadow para sombra em caixa
+            Propriedade  e valores para sombra de caixa, e seus parÂmetros são:
+            " px = deslocamento horizonal " ; 
+            " px = deslocamento vertical " ;  
+            " px = espalhamento " e 
+            " Cor de sombra" */
+            box-shadow: 3px 3px 4px 3px rgba(0, 0, 0, 0.801);
+            /* Ainda podemos ver no DefTools (que é o inspecionador do navegador), e observar que temos 2 tipos de box-shadow; que são: Type:Outset "início" que posiciona a sombra atrás da caixa, e Type:Inset "inserir" que posiciona a sombra dentro da caixa.
+                Os Valores são da seguinte forma:
+                    Type:Outset que é padrão não precisa atribuir
+                1º = X offset , que pode ser negativo ou positivo , e serve para mover a sombra no eixo X que é esquerda e direita na linha horizontal.
+                2º = Y offset, que pode ser negativo ou positivo, e serve para mover a sombra no eixo Y que é pra cima ou pra baixo na linha vertical.
+                3º = Blur = Borrão (como mancha de spray, ou desfocado) que vai de 0 á 20 de itensidade.
+                4º Spread = Espalhar (E aumenta a espeçura da sombra) e seu valor varia de 0 à 20 de intensidade.
+                    Type:inset que precisa atribuir
+                Recebe os mesmos valores do outset, porém a sombra será projetada dentro da caixa, dando um efeito contrário.
+                EXEMPLO:
+                    box-shadow: inset 3px 3px 4px 3px black;*/
+        }
+        nav > a {
+            text-decoration: none;
+            color: rgb(44, 43, 43);
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 9px 3px rgba(0, 0, 0, 0.501);
+        }
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside {
+            font-size: 1.2em;
+            position: relative;
+            /* font-weight: bold; */
+            background-color: rgb(138, 133, 133);
+            top: -5px;
+            /* text-align: right; */
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0;
+        }
+        footer > p {
+            margin: 0px;
+        }
+        .section_2 {
+            position: relative;
+        }
+        .section_2 a {
+            /* display: flex; */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            position: relative;
+            color: rgb(17, 0, 253);
+            padding: 5px;
+            inset: -10px 10px;
+        }
+        div#bola {
+            display: flex;
+            position: absolute;
+            height: 70px;
+            width: 70px;
+            margin: 18px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            border: 1px solid rgb(17, 0 , 253);
+            box-shadow: inset 25px 15px 4px 25px rgb(17, 0, 253);
+            /* top: 0px;
+            left: 70%;
+            bottom: 0px; */
+            inset: -35px 300px; /* Position Shorthand */
+            transition: 1.2s;
+        }
+        div#bola:hover {
+            box-shadow: inset -0px -0px 14px 30px rgba(0, 102, 255, 0.425);
+            border: 1px solid rgb(17, 0 , 253);
+            /* transform: translate(box-shadow: -0px -0px 14px 30px rgba(0, 102, 255, 0.425);) */
+        }
+        p {
+            text-indent: 30px;/* Assim determinamos um espaço no início do parágrafo. */
+        }
+    </style>
+</head>
+<body>
+    <!-- Exemplo antigo em html 4 para criação de sites, usando as grouping tags não semânticas: -->
+    <div>
+        <div id="cabecalho">
+            <h1>
+
+            </h1>
+        </div>
+        <div id="menu">
+
+        </div>
+        <div id="conteudo">
+
+        </div>
+        <div id="rodape">
+
+        </div>
+    </div>
+
+    <!--  Exemplo moderno em html 5 para criação de sites, usando as grouping tags semânticas: 
+        OBS: Todas essas tags, são consideradas divs, porém; semântias, pois dá sentido ao que queremos para a página.-->
+
+    <header><!-- Div especial = tag semântica para informar ao mecânismos de busca que aqui é o cabeçalho. -->
+        <h1>Meu Site</h1><!-- Título principa -->
+        <nav><!-- Div especial de menu de navegação -->
+            <!-- Links para o cabeçalho -->
+            <a href="#">&lt;LINKS&gt;</a>
+            <a href="#">&lt;LINK&gt;</a>
+            <a href="#">&lt;LINK&gt;</a>
+            <a href="#">&lt;LINK&gt;</a>
+            <a href="#">&lt;LINK&gt;</a>
+        </nav>
+    </header>
+    <main><!-- Semântica de conteúdo principal -->
+        <!-- OBS: Podemos usar <section> dentro de <article> ou vice-versa, não há regra quanto a isso. -->
+        <section id="assuntos"><!-- Seção de conteúdos -->
+            <h2>Esportes Política Tecnologia</h2>
+        </section>
+        <section id="noticias"><!-- Seção de conteúdos -->
+            <article><!-- tag de artigo -->
+                <h2>Notícias sobre o Brasil.</h2>
+                <!-- Assunto -->
+                <p><strong>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore sunt porro est qui odio! Quisquam illum nostrum ullam repellendus inventore optio sint eveniet. Omnis aspernatur facilis, repellat maiores culpa eos?</strong></p>
+                <aside><!-- Tag para conteúdo aparte, porém relacionado ao principal; pode ser o exemplo abaixo -->
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+            <article><!-- tag de artigo -->
+                <div>
+                    <h1>O assunto mais falado!</h1>
+                    <aside>
+                        <a href="#">VEJA +</a>
+                    </aside>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, neque nesciunt provident numquam ducimus eaque praesentium recusandae explicabo in culpa commodi quasi magni ipsa consequatur obcaecati maxime eligendi asperiores illo.</p>
+                </div>
+                <section class="section_2">
+                    <h3>Fique por dentro dos assuntos</h3>
+                    <a href="#">Esportes</a>
+                    <a href="#">Saúde</a>
+                    <a href="#">Educação</a>
+                    <a href="#">Finanças</a>
+                    
+                    <div id="bola"></div>
+                </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por CursoemVideo.</p>
+    </footer>
+</body>
+</html>

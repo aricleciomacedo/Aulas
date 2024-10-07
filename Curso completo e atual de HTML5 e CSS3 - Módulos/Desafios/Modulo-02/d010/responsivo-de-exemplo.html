@@ -1,0 +1,52 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste de Responsividade</title>
+<!-- Aqui usaremos estilo interno e configurar os exemplos de resposividade -->
+    <style>
+        body {
+            background-color: gray;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /*width: 800px; aqui define o tamanho do elemento main mas podemos optar por definir tamanho minímo e máximo. VEJA abaixo: */
+            min-width: 320px;/* O minimo baseado no tamanho de tela de celulares */
+            max-width: 800px;/* O máximo baseado em telas grandes */
+
+            margin: auto;/* Com isso jogamos o elemento para o meio */
+        }
+        img {
+            width: 100%;/* Assim fará com que a imagem se adapte ao tamanho do elemento pai, que no caso é o main. */
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Nesse formato abaixo, podemos notar no navegador de quando diminuimos o tamanho da tela, elemento como a imagem não diminuem, e ficam por fora do conteúdo e ao aumentar a tela, o conteúdo de texto vai ocupando uma mesma linha; Isso é "FEIO" para um site.
+        ENTÃO temos que tornar nosso site responsivél, que é fazer com que ele seja ajustado a todo tipo de tela sem que o conteúdo fique sobre-pondo outros, ou que elemento fiquem fora de tela fazedo com barras de rolagem apareçam. -->
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro numquam quasi eum quibusdam! Dolore provident dignissimos similique molestiae, cum, nulla atque iusto optio obcaecati voluptatum ea id blanditiis voluptates tempora!
+        Sit rerum velit, accusamus eum laborum qui ratione aperiam quae laudantium vel molestiae soluta, omnis ipsum saepe maxime voluptatem labore provident vero dolorum reiciendis! Magnam quasi nemo repellat quibusdam aperiam.
+        Repudiandae optio, commodi tenetur, fugiat sapiente asperiores temporibus nesciunt quisquam placeat minima consequatur consequuntur sit nemo! Quo, recusandae eveniet omnis corrupti nihil totam aspernatur nisi sequi, accusantium incidunt magnam error!</p>
+
+<!-- Para melhor responsividade dessa <img> envelopamos ela com a tag <picture> e adcionamos a tag <source> para definirmos a largura por meio do media na qual outra imagem será posta no lugar, e servirá para melhor dimensionamento quando a página estiver em dispositivos móveis de telas menores , ou maiores como é o caso de tvs. -->
+        <picture>
+            <source media="(max-width: 800px)" srcset="pacote-projeto-d010/imagens/irina-blok-pq.jpg"><!-- Aqui é a imagem para telas menores de dispositivos móveis, e podemos ver seu aparecimento usando dev-tools do navegador por meio do toggle device toobar (Que é a ferramenta de Dimensões: na opção Responsive); ou teclando Crtl+Shift+M -->
+            <img src="pacote-projeto-d010/imagens/irina-blok.jpg" alt="Irina Blok"><!-- aqui é a imagem que vai aparecer em telas maiores, de dispositivos maiores. -->
+        </picture>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus rerum facere nobis eum ducimus accusantium repellat porro, labore quos sit provident fuga, cum sint voluptas deleniti nam vero recusandae illo!Facere veniam officia tempore iste velit quod quas necessitatibus. Autem voluptas, odio repellat aliquid blanditiis dolor itaque sed minima possimus vel nemo dolores quod aut unde fuga, tempore numquam eum?Velit illum deserunt unde inventore, dolores doloribus iste sed nulla, fugiat cupiditate suscipit quis dignissimos rerum aliquid, exercitationem obcaecati voluptatibus? Labore vel quod sit magni quibusdam debitis enim corporis accusamus.</p>
+    </main>
+
+<!-- Para melhor vermos como se comporta a responsividade de nossa página, iremos intalar uma ferrammenta em foram de plugin do google chrome chamada window risizer no link:
+    https://chromewebstore.google.com/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=pt-BR
+OBS: Após adcionar a extensão , vá o Izinho e dê permissão de uso, e escolha a opção : (Permitir acesso aos URLs do arquivo) e marque permitir.-->
+</body>
+</html>

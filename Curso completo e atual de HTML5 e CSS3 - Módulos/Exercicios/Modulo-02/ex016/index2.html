@@ -1,0 +1,90 @@
+<!-- 
+Módulo 02, Capítulo 13, aula 06
+Vídeo:
+Como criar degradê com CSS ? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=_P-guJX-TtU&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=7 
+
+    OBS: Este arquivo na aula foi nomeado como > cor02 <
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Gradiente em CSS</title>
+    <!-- Para fazermos o gradiente, precisamos usar uma propriedade diferente de background-color, usamos aqui a backgroun-image, pois ela nos dá uma função interna chamada linear-gradient() -->
+    <style>
+        * {  /* Usamos as configurações globais das CSS, para que o gradiente top, ou bottom não fique bugado  */
+            height: 100%;
+        }
+        h1 {
+            height: 10vw;
+            width: 30vw;
+        }
+        p {
+            height: 10vw;
+            width: 70vw;
+        }
+        .container {
+            width: 32vw;
+            height: 32vh;
+            background-color: rgb(102, 11, 138);
+            outline-color: white;
+            color: yellow;
+        }
+        .container:hover {
+            background-image: radial-gradient(circle, #000CF0, #2e4146, #fbfffe, #2C33B0 10em, #f9f9fa   10%);
+            color: rgb(102, 11, 138);
+        }
+        body {
+            height: 50vw;
+            width: 99vw;
+            /*background-color: rgb(80, 200, 236);*/
+            /* Aqui atribuimos os valores, que definem o gradiente começado branco a direita e terminando azul a esquerda, ou de cima pra baixo, pra isso basta mudar o valor de (to), e adcionar quantas cores desejar.
+            Obs: para  definirmos os valores to top, e to bottom, precisamos usar uma configuração global,dentro do css que utiliza um seletor seletor especial que é o asterisco (*) "veja acima, dentro da tag <style>"  */
+            
+            /* Exemplo com to rigth, ou to left 
+            background-image: linear-gradient( to right, #011CCC, #1F2F99, #293166, #1F2133, #292A33);
+            background-attachment: fixed; /* Acionamos esse atributo , para tirar o bug que dá em baixo, devido a barra de rolagem */
+            
+            /* Exemplo com to top, ou to bottom 
+            background-image: linear-gradient( to bottom, #011CCC, #1F2F99, #293166, #1F2133, #292A33);
+            background-attachment: fixed;*/
+
+            /* Aqui usamos os valores em graus para melhor definir o gradiente, e usamos a cor gradiente do instagram. Fizemos por meio do site ferramenta (https://color.adobe.com/pt/create/image-gradient) 
+            OBS: Que usamos o valor deg, e o número de angulo que queremos dar ao degrdê.
+            background-image: linear-gradient( 45deg, #7F3DB1, #8D47C3, #B7378D, #F94E00, #F80E00);
+            background-attachment: fixed;*/
+
+            /* Aqui usamos a função radial, e o valor circle  
+            background-image: radial-gradient( circle, #7F3DB1, #8D47C3, #B7378D, #F94E00, #F80E00);
+            background-attachment: fixed;*/
+
+            /* Aqui definimos uma porcentagem de ocupação pra cor.  */
+            background-image: linear-gradient( to right, #7F3DB1 10%, #8D47C3, #B7378D, #F94E00, #F80E00 90%);
+            background-attachment: fixed;
+        }
+        .button_close {
+            padding: 10px;
+            margin: 0;
+            width: 10vw;
+            height: 5vh;
+            background-color: slateblue;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Testando Gradiente</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sint a porro delectus fugiat eum in quos voluptatem! Autem ratione cumque, laborum iusto saepe mollitia reiciendis laboriosam facilis ipsam assumenda.</p>
+        <button class="container"><strong>PASSE O MOUSE AQUI PARA VER O RADIAL-GRADIENTE</strong></button>
+    </div>
+    <button  class="button_close">
+        <a href="javascript:window.close()">FECHAR</a>
+    </button>
+</body>
+</html>

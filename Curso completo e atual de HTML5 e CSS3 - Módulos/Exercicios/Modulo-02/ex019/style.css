@@ -1,0 +1,95 @@
+/* Adcionamos aqui uma regra para que o CSS também aceite diferentes tipos de acentuações de texto. */
+@charset "UTF-8";
+
+body {
+    /* margin: 0; */
+    background-color: rgb(205, 247, 203);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Quando usamos somente o seletor de tags, todas as tags receberão essas propriedades.
+Portanto é importante usar outros seletores para aplicar estilos idividuais a determinado elemento html. */
+h1 {
+    color: rgb(4, 109, 0);
+}
+
+    /* OBS: id em HTML = ao # em CSS 
+         class em HTML = ao . em CSS*/
+/* Assim dizemos que a tag <h1> que tiver o identificador  (id) com nome principal receberá essas propriedades.
+Ainda podemos chamar de seletor personalizado.*/
+h1#principal {
+    text-align: center;
+}
+/* Ainda podemos usar o seletor de identificador (id), usando o # e o nome do id, porém o resultado é o mesmo.*/
+#principal {
+    text-align: center;
+    background-color: green;
+    color: white;
+}
+
+h2 {
+    color: rgb(251, 255, 9);
+}
+
+/* Aqui usamos os seletores das classes nomeadas e definidas no seletor01.html 
+OBS: Esse seletor de classes sobre-põe os seletores de tags*/
+.basico {
+    color: #3c805e;
+    font-weight:900;/* Aqui mudamos o peso da fonte de vai de um bold=negrito a 900 */
+}
+.intermediario {
+    color: #80793c;
+}
+.avancado {
+    color: #803c3c;
+}
+
+/* POdemos ainda usar seletor multiplo de classes da seguinte forma. */
+.destaque {
+    background-color: #c5c56070;
+}
+
+
+/* Aqui personalizei os links das aulas */
+footer {/* Semântica para roda-pé */
+    display: flex;
+    background-color: rgb(104, 103, 103);
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+#h2_footer {
+    color: rgb(251, 255, 9);
+    text-shadow: 2px 3px 3px black;
+}
+
+/* Aqui estilizamos por meio de seletor de tag , a tag  <a> com os links dentro da tag <footer */
+a {
+    color: rgb(5, 34, 1);
+    background-color: rgb(170, 226, 164);
+    border-radius: 30%; /* Arredonda as bordas */
+    padding-left: 20px;/*  */
+    padding-right: 20px;
+    margin: 5px;
+    font: normal 1em Arial; /* Aqui é um save-hand da junção de font-style + font-size + font-family. */
+    text-decoration: none;/* Remove sublinhado */
+    font-weight: bold /* Assim deixa negrito */
+}
+/* Aqui muda os estilos dos elemtentos ao passar o mouse sobre eles, que no caso é a tag <a> de dentro do <footer> */
+a:hover {
+    color: rgb(33, 224, 8);
+    background-color: rgb(15, 20, 14);
+    border-radius: 40%;
+    font: normal 1em Arial;
+    text-decoration: none;
+    transition: 0.5s;
+}
+/* Aqui pegamos a tag <a> de forma exclusiva dentro da tag <div> e aplicamos um estilo que sobrepõe o que foi aplicado para o seletor de tag <a> acima. */
+div > a:hover {
+    background-color: rgb(251, 255, 0);
+    border-radius: 40%;
+    font: normal 1em Arial;
+    text-decoration: none;
+    transition: 0.5s;
+}

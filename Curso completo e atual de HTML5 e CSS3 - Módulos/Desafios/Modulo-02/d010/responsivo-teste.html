@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /* width: 800px; 
+                esse parâmetro não é necessário; Quando definimos um min-width e max-width.
+            */
+            
+                /* Abaixo definimos uma larguma miníma e máxima para que nosso conteúdo se adapte a diferentes tamanhos de telas. */
+            min-width: 280px;/* Essa é a largura ,mínima, por exemplo de aparelhos mais antigos. */
+            max-width: 800px;/* Essa largura máxoma ideal para que o conteúdo não quebre. */
+            margin: auto;
+        }
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique corporis dignissimos atque illo non totam porro, maiores voluptate culpa consequatur laborum a molestiae recusandae omnis deserunt tempore ea quaerat unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, deleniti! Consectetur neque corrupti, recusandae itaque perspiciatis reiciendis ullam ab quidem ducimus nulla excepturi? Animi autem aspernatur exercitationem, modi non expedita. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae consequatur rerum laudantium, pariatur sapiente blanditiis repellat quas placeat hic, distinctio rem dolorem aperiam veniam odit ipsam facilis sequi necessitatibus error!</p>
+
+        <!-- Aqui envelopamos a <img> para dentro da <picture> para usarmos um <source> diferente, e com isso podermos trabalhar com largura máxima ou miníma, fazendo nesse caso, outra imagem aparecer quando o tamanho da tela for inferior ou maior que o definido no parâmetro "srcset="  -->
+        <picture>
+            <!-- Esta imagem irá aparecer quando o tamanho máximo da tela for menor 600px. -->
+            <source media="(max-width: 600px)" srcset="../d010/pacote-projeto-d010/imagens/irina-blok-pq.jpg">
+            <!-- Esta imagem aparece em telas maiores que 800px. -->
+            <img src="../d010/pacote-projeto-d010/imagens/irina-blok.jpg" alt="Irina-blok">
+        </picture>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique corporis dignissimos atque illo non totam porro, maiores voluptate culpa consequatur laborum a molestiae recusandae omnis deserunt tempore ea quaerat unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, deleniti! Consectetur neque corrupti, recusandae itaque perspiciatis reiciendis ullam ab quidem ducimus nulla excepturi? Animi autem aspernatur exercitationem, modi non expedita. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae consequatur rerum laudantium, pariatur sapiente blanditiis repellat quas placeat hic, distinctio rem dolorem aperiam veniam odit ipsam facilis sequi necessitatibus error!</p>
+    </main>
+</body>
+</html>

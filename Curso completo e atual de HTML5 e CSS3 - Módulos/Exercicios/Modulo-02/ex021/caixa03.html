@@ -1,0 +1,117 @@
+<!-- 
+Módulo 02, Capítulo 16, aula 07
+Vídeo:
+Bordas decoradas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=n0rjAs_Im4w&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=29
+
+        Aqui nessa aula criamos uma borda(imagem) usando o Gimp; Essa imagem criada tem tamanho de 80x80pxs com 70.000 de resolução e preencimento transparente.
+
+Fizemos 4 linhas da puxando a régua , e as ilhas foram 2 pro lado e 2 pra baixo, fomando assim 6 quadrados imaginários iguais.
+
+Escolhemos a "Ferramenta de seleção retangular", desmarcamos a opção de "Antisserrilhamento" marcamos a opção "Cantos arredondados" e puxamos um circulo dentro de um dos quadrados imaginários.
+    ENTÃO usamos a "Ferramenta de preenchimento", clicamos na "primera cor ativa", selecionamos a cor, e clicamos dentro da área que queremos pintar que é "EX o circulo".
+
+    AGORA, clicamos na opção "Duplicar camadas" (OBS: ela fica no menu lateral direito na parte do roda-pé.), NOTE que aparece um (cópia de Fundo), então vá na "Ferramenta de movimentação" e arraste o elemento criado(circulo) , e repita a duplicação de camadas para os outros , menos a do meio (exceto a do meio).
+
+    OBSERVAÇÂO: Caso não esteja conseguindo pintar (preencher) os outros circulos na mesma cor, então escolha a "Ferramenta de movimento" e em baixo da cor na opção "Mover" escolha "Mover: seleção" dai arrastamno a seleção do outro "circulo" para outro desejado, e assim poder editar (pintar no caso) o elemento que queremos.
+
+ESSA de exemplos que criamos tem como "Vertices" as "bolas de cor verde" e as linhas horizontais e verticais são "bolas azuis".
+
+    ...............................................
+VALE LEMBRAR: "Que podemos desenhar a borda que desejamos, seguindo esses parâmetros ensinados.""
+    ...................................................
+
+    SALVAR:
+        Vá na opção "Arquivo" e escolha "Exportar" ou teclar (Ctrl+E), Nomeie a imagem e salve dentro da pasta ex021 onde está os arquivos html criados nas aulas e lembre-se de marcar a opção de "Salvar informações de cor dos pixels transparentes" caso ele esteja desmarcado.
+
+    Essa borda será aplicada ao elemento por meio do parâmetro border-imade-source, dentro do CSS.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Borda personalizada</title>
+    <style>
+        h1 {
+        
+        /* E importante que essa  borda esteja adcionada para que a border-image possa funcionar.*/
+            border: 20px solid black; /* Podemos usar o valor (transparent) , e vai ser funional, e também servirá para em casos de incompatibilidade de navegadores. */
+            padding: 10px;
+
+        /* Aqui adcionamos a borda personalizada no Gimp, e poderemos ver essa imagem aplicada nos quatro cantos do elemento na página. */
+            border-image-source: url('bordaa.png');/* Assim dizemos que nossa borda será preenchida com um arquivo do tipo png dentro da url que faz refencia  a pasta onde está  a imagem. */
+
+        /* Aqui fatiamos a border-image e fazemos com que ela se espalhe e direção ao centro.*/
+            border-image-slice: 27;
+        /* Aqui repetimos o efeito  */
+            border-image-repeat: repeat;
+            /* Agora use o DevTools do navegador e configure os valores de (slice) e (expessura da borda) para que essa borda fique com varias bolinhas perfeitas. 
+                OBS: Podmeos usar além do valor (repeat), o valor (stretch) que puxa a imagem de borda.*/
+
+
+            /* IMAGEM de fundo no elemento */
+
+        /* Aqui colocamos uma imagem ao fundo do elemento*/
+            /* background-image: url(borda.png); */
+
+        /* Aqui aumenta o tamanho dessa imagem, e os valores são para largura e altura.
+            OBS: Podmeos ainda atribuir (contain ou cover) ao invés de números.*/
+            background-size: 60px 60px;
+
+        /* Aqui tiramos o padrão que multiplica essa imagem */
+            background-repeat: no-repeat; /* Temos aqui valores do tipo:
+                repeat = repetir a imagem.
+                no-repeat = não repetir imagem.
+                repeat-x = repetir imagem na horizontal.
+                repeat-y = repetir iamgem na vertical.
+                revert = reverter a imagem.
+                space = imagem só no espaço dado pelo elemento. */
+
+            /* 
+                Shorthand para border-image
+            LEMBRE-SE que a borda deve está definida para esta propriedade fincionar.
+
+            border-image: url("bordaa.png") 27 repeat;
+
+            */
+        }
+        p {
+            border: 12px solid black;
+            padding: 10px;
+            /* border-image-source: url("borda.png");
+            border-image-slice: 27;
+            border-image-repeat: repeat; */
+
+            border-image: url("borda.png") 27 repeat;
+
+            font-weight: bolder;
+        }
+        div {
+            border: 12px solid transparent;
+            padding: 10px;
+            border-image-source: url("borda_A.png");
+            border-image-slice: 27;
+            border-image-repeat: repeat;
+            /* border-image: url("borda.png") 27 repeat; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de borda</h1> 
+    <p>Borda personalizada no parágrafo.</p>
+    <div>
+        <h2>Teste de Borda usando &lt;div&gt;</h2>
+    </div>
+
+    <!-- Gambiarras de teste -->
+    <br><br><br><br><br><br><br>
+    <!-- UAU! -->
+    <div>
+        <h1>A</h1>
+        <p>A</p>
+    </div>
+</body>
+</html>

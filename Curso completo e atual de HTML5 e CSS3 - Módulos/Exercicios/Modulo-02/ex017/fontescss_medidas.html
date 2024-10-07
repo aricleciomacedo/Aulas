@@ -1,0 +1,66 @@
+<!-- 
+    Módulo 02, Capítulo 14, aula 04
+Vídeo:
+Tamanho de fonte e suas medidas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=NGfPXJGiNH8&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=12
+
+Medidas absolutas:
+    cm, 
+    mm, 
+    in = polegadas e 
+    1pol = 2.54cm, 
+    px = pixel OBS: 16px é o padrão dos navegadores, 
+    pt = ponto que é muito usado em textos para impressão ; e
+    pc = paica.
+Medidas Relativas:
+    "em" = Altura m = medida relativa ao tamanho do M maiusculo atual da fonte; 
+    "ex" = Altura x = medida relativa ao X minusculo da fonte; 
+    "rem" = Altura do M relativo ao root (que são as configurações dentro do body ou do seletor universal dos elementos "*") e é semelhante ao (em); "vw" = View Width = Largura da view port = tamanho da tela, e podemos dizer que é a porcentagem da largura da view port; 
+    "vh" =Altura da view port; e 
+    "%" = porcentagem.
+
+OBS: Para medidas de FONTEs, a recomendação da W3C é o uso de {px} e {em} 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Tamanho de fonte em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* Aqui abaixo usamos parâmetro para dimensionar as fontes e seu respectivo valor. */
+            font-size: 16px;/* Assim é o padrão dos navegadores. */
+        }
+        h2 {
+        font-family: 'Times New Roman', Times, serif;
+
+        /* 
+            Aqui será 2 x 16px "que é o tamanho configurado pro body ou pro (*) Asterisco 
+                OBS: No CSS, o asterisco (*) é um seletor universal que seleciona todos os elementos de um documento ou do elemento pai. Ele é usado para aplicar as definições de estilo a todos os elementos que não têm namespaces declarados. 
+        */
+        font-size: 2em;
+
+        font-weight: bolder;
+        font-style: italic;
+        text-decoration: underline;
+        }
+        h1 {
+            font: italic bolder 3em 'work Sans', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamanho de fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quaerat iure placeat voluptates! Molestias fugit vero a assumenda, ab id sunt maiores laboriosam incidunt magni nobis? Mollitia sit facere vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci molestias, laudantium quod quasi beatae obcaecati inventore. Neque voluptates impedit minima libero similique modi velit sunt rerum. Iusto aspernatur doloribus ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque minima perferendis quia mollitia similique, dignissimos eveniet distinctio tempore tenetur odit obcaecati? Nulla consequuntur magnam a recusandae, excepturi qui pariatur.
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ab a illum ducimus nobis dolorem eaque vel odit nostrum magnam earum vitae est alias ad magni placeat, deserunt, perferendis cum?</p>
+    </p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa iusto facilis, repellat accusamus aspernatur. Aspernatur vel recusandae id fugiat dicta nostrum totam beatae qui fuga similique? Voluptates, repudiandae? Eaque.lotre.</p>
+</body>
+</html>

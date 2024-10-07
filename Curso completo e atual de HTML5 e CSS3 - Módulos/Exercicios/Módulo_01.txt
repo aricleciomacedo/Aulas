@@ -1,0 +1,455 @@
+﻿>>>>>>>>>>>>	INÍCIO DO MÓDULO 01	<<<<<<<<<<<<
+
+
+Play List:
+https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n
+
+Módulo 01, Capítulo 05, aula 12
+Vídeo:
+Seu primeiro código HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=E6CdIawPTh0&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=12
+
+	Nessa aula aprendemos a criar uma pasta de estudos, que pode ser criada onde bem desejar o aluno, (optamos por criar a pasta "Exercicio"
+e dentro dela, os modulos, e bem assim a aulas, que inicia apartir da pasta "ex001".
+que essa pasa seja bem loalizada para não dificultar a abertura da mesma durante todo o curso. 
+  É importante também que essa pasta seja nomeada usando nomes fáceis e sem símbolos, e se usar símbolo e que seja
+o anderline ( _ ), para facilitar a busca.
+	
+	Criamos o arquivo index.html, e o código base do html 5 usando o atalho digitando exclamação (!), o qual selecionamos a opção: html.
+O código automático será exibido assim, e segue o resumo do que significa:
+
+<!DOCTYPE html>									= Isso quer dizer que esse é um documeno html 5.
+<html lang="pt-br">								= Isso quer dizer que esse documento terá uma linguagem padrão definida.
+<head>										= Isso quer dizer , que abrimos a tag de head (cabeça) para receber as configurações seguintes.
+    <meta charset="UTF-8">							= Isso quer dizer que esse documento terá correções automáticas para idiomas que usam símbolos e acentuações na escrita.
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	= Isso quer dizer que esse documento terá a correção para tamanhos de telas diferentes.
+    <title>Meu primeiro exercício</title>					= Isso é o título do documento, e será exibido na aba da página no navegador.
+</head>										= Aqui é o fechamento da tag das confugurações.
+<body>										= Aqui é a tag body (corpo) que comportará todo o conteúdo da página (site) criado.
+    <h1>Olá, Mundo!</h1>							= Aqui é um exemplo de tag, nesse caso é um título de nível 1.
+</html>										= Fechamento da esrutura html5.
+
+	Agora acompanhe e siga os passos do vídeo aula, e prátique o código no documento index.html por meio do VScode.
+
+Módulo 01, Capítulo 05, aula 13
+Vídeo:
+Parágrafos e Quebras - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=f6NTJdtEFOc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=13
+	
+	Na pasta de "Exercicios", dentro da pasta "Modulo-01" criamos a pasta "ex002" e o arquivo "index.html"
+	Nessa aula nós falaremos um pouco sobre os parágrafos e quebras de lihas, e no código veja mais dicas!
+
+	Usamos <hr> = horizontal line, para adcionar uma linha horizontal na página.
+	
+Módulo 01, Capítulo 05, aula 14
+Vídeo:
+Símbolos e Emoji no seu site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=nhMdFe3WwYc&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=14
+
+	Na pasta do exercício anterior "ex002" e no 	
+
+
+Módulo 01, Capítulo 05, aula 15
+Vídeo:
+Você tem o direito de usar qualquer imagem no seu site? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=bDULqeGEvAw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=15
+
+
+	NEssa aulas aprendemos um pouco sobre direitos autorais, que consequências podem ter ao violar tais direitos, e quais sites podemos usar para
+conseguir imagens que sejam de domínio público , e que não firam direitos autorais.
+	Aprendemos também sobre um software gratuito para editar imagens.
+
+
+Módulo 01, Capítulo 03, aula 16
+Vídeo:
+Quais são os formatos para imagens na Web? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=xg-vHgLF0mI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=16
+
+	NEssa aula aprendemos a instalar o programa para editar imagens (gimp), e a como editar formatos definidos pra sites (web).
+
+
+Módulo 01, Capítulo 04, aula 17
+Vídeo:
+O tamanho das imagens importa para um site? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=8rkuukKA8a4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=17
+
+
+	Nessa aula aprendemos a usar o GIMP para editar e dimensionar imagens para uso geral.
+
+
+Módulo 01, Capítulo 05, aula 18
+Vídeo:
+A tag img em HTML5 - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=CwOmEetWMnU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=18
+
+	Nessa aula aprendemos a usar a tag <img> e alguns parâmetros a se usar, como por exemplo src="" que o caminho onde irá buscar essa imagem e o fomrato
+para exibir na página . ex: <img src="logo-html.png"> ; ainda usmaos o alt="" que é uma maneira alternativa que exibe um texto caso a imagem por algum motivo
+quebre, ou seja: se a imagem não carregar, um texto será mostrado como alernativa . ex: <img src="logo-html.png" alt="Logo HTML5">
+
+	OBS: É bom sempre manter seus arquivos de imagens em uma pasta de imagens, vídeos em pasta de víeos e, músicas em pasta de músicas de forma
+ individuais para facilitar o trabalho de busca, ou se seu arquivo contém poucos elemento então busque mantêlos em uma mesma página.
+	Nesse exemplo usamos a imagem dentro da mesma pasta do arquivo html.
+
+	Agora para mais detalhes veja o arquivo index.html, dentro a pasta ex003.
+
+Módulo 01, Capítulo 06, aula 19
+Vídeo:
+Como mudar o favicon de um site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=1ZeettFfxys&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=19
+
+
+	Nessa aula aprendemos a usar a meta tag <link> para adcionar um ícone da página , e podemos vê o mesmo na aba da página.
+Veja o exemplo no arquivo index.html, dentro da pasta ex004, e no código html5 veja dentro da tag <head> a seguinte estrutura:
+	<link rel="shortcut icon" href="LetraAicon.ico" type="image/x-icon">
+
+	LEMBRE-SE: Como estamos usando poucos arquivos nesta aulas, então optamos por usar a imagem na mesma pasta do index.htl.
+
+Módulo 01, Capítulo 07, aula 20
+Vídeo:
+Hierarquia de Títulos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=aiOEBhozEOg&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=20
+
+	Nessa aula aprenderemos a herarquia so títulos que podemos comprender com a seguinte estrutura de exemplo:
+
+	Entendendo Portugal 			  > Título principal, aparece em letras grande e a tag semântica usada é <h1>
+1. INTRODUçÃO................................. 1  > Sub título, aparece em letras um pouco menor, e pode ser usadas as tags semântias <h2> á <h6>
+  1.1 Justificação de temática ............... 2  > Também sub Título , aparece em letras também menores , e pode ser tags semânticas <h3> á <h6>
+  1.2 Metodologia de investigação ............ 3  > Também sub Título , aparece em letras também menores , e pode ser tags semânticas <h4> á <h6>
+    1.2.1 Etapas de investigação ............. 4  > Também sub Título , aparece em letras pequenas , e pode ser tags semânticas <h5> á <h6>
+
+	Essa mesma estruta pode ser usada para quantos títulos tiverem no projeto, nesse caso podemos dar exemplo da seguinte forma:
+
+	Entendendo Portugal
+1. INTRODUçÃO.................................1
+  1.1 Justificação de temática ...............2
+  1.2 Metodologia de investigação ............3
+    1.2.1 Etapas de investigação .............4
+1. EXEMPLO 2 .................................5
+  1.1 Justificação de temática ...............6
+  1.2 Metodologia de investigação ............7
+    1.2.1 Etapas de investigação .............8
+    1.2.2 Etapas de investigação 2 ...........9
+
+	Agora veja no materia PDF os exemplos mais claros sobre o assunto.
+
+Módulo 01, Capítulo 08, aula 21
+Vídeo:
+Semântica na HTML5 é importante - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=HaSgt1hK2Fs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=21
+
+	Nessa aprendemos o que significa semântica, que pode ser entendida como:
+No dicionário Aurélio
+1. Estudo sicrônico ou Diacrônico da significação como pare dos sistemas das linguas naturais.
+2.Num sistema linguistíco, o componente do sentido das palavras e da interpretação das sentenças e dos enunciados.
+No dicionário Michaelis
+2. O significado dos vocábulos, em oposição á sua forma.
+	"Assim podemos entender que o significado têm mais valor do que a forma".
+Isso se dá muito em questão de que antes, no html4, existiam algumas tags que não tinha significado algum, como por exemplo a tag <center>.
+	Agora vá ao estudo do arquivo html4.html, e html5.html na pasta de exercicios; a ex007.
+
+
+Módulo 01, Capítulo 08, aula 22
+Vídeo:
+Negrito e Itálico do jeito certo - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=T-d_hsO3hUI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=22
+
+	Antes de tudo dá uma a conferida no material pdf para entender um pouco mais sobre o assunto.
+Criamos então a pasta ex008, e dentro dela o arquivo index_n_i.html o qual recebe os exemplo dessa aula.
+	
+DICA:
+	Aprendemos a como evelopar conteúdo dentro de tags de forma rápida.
+  Para isso: Seguramos SHIFT + CTRL e tecle P, então escolha a opção (Emment: Envelope com a abreviatura) "CASO não apareça esta opção: Digite (abb)"
+e tecle ENTER, por fim digite a tag desejada para envelopar o conteúdo.
+
+Módulo 01, Capítulo 08, aula 23
+Vídeo:
+Formatações adicionais em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=8TgKFYkcO5Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=23
+	
+	Esta aula é uma continuação e começa a partir da criação da tag <h2>Texto marcado<\h2>, e para isso aprendemos a usar a tag <mark>, que pinta sobre
+o texto desejado, uma marca semelhane aquelas canetas de marcar texto.
+	Aprendemos ainda sobre textos grandes e pequenos, e as tags <big> e <small> , porém o uso da big está absoleto, e não tem sentido algum, enquanto que
+small significa e tem sentido de estarem ali; Um exemplo é letras pequenas em alguns contratos.
+	agora veja no arquivo dentroda pasta ex008 , o arquivo index_n_i.html todo o exemplo dessa aula e como aplicar o uso delas. 
+
+
+Módulo 01, Capítulo 08, aula 24
+Vídeo:
+Citações e Códigos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=4ynvsrkamt8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=24
+	
+	Última aula desse capitulo, e aqui aprendemos um pouco mais sobre formatações de textos.
+Para essa aula criamos a pasta ex008b e dentro dela o arquivo index.html.
+OBS:
+ Aprendemos a indetar linhas de códigos,, e para isso selecionamos todo o código que queremo indetar, e teclar SHIFT + TAB para voltar indetação, ou 
+TAB para avançar indetação.
+	Agora abra o arquivo e veja mais sobre o assunto.
+
+
+Módulo 01, Capítulo 09, aula 25
+Vídeo:
+Listas OL e UL - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=JlE0pzESf5g&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=25
+
+	Criamos a pasta ex009 e dentro dela o arquivo index.html para praticar esta aula.
+
+	Nesta aula vamos aprender as diversas maneiras de se usar e aplicar listas, de como elas são importantes, além de facilitar a leitura e organizar
+o conteúdo, vamos compreender que listas também simplificam as apresentações de itens.
+	Para mais aprendizado , estudo o material em pdf referente ao capítulo.
+
+Módulo 01, Capítulo 09, aula 26
+Vídeo:
+Listas mistas e de definição - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Ez1kgIyoGuE&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=26
+
+	Esta é a continuação, e usamos o mesmo index.html criado na aula antrior.
+
+
+
+	CAPÍTULO 11
+
+
+Módulo 01, Capítulo 10, aula 27 (01)
+Vídeo:
+Links e Âncoras em HTML5 - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27
+
+	Nesta aula iremos entender a importância que os links têm em páginas da web.
+Básicamente a estrutura da web é formada por links, como vimos em aulas anteriores , na parte em que falamos de Tim Bernes-Lee.
+	
+Uma DICA: Estudar mais sobre o SEO = Search Engine Optmization = Otimização para Motores de Buscas.
+	Agora abra a pasta ex010 e veja os arquivos index criados no estudo dessa aula.
+
+Módulo 01, Capítulo 10, aula 28 (02)
+Vídeo:
+Links internos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=LeLnlT-ZKw8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=28
+
+	Nesta aula  Continuamos na pasta ex10, criamos a pasta noticias, além dos arquivos pag002.html, e pag003.html .
+Aprendemos então alguns parâmetros para âncoras e links, e de como podemos melhorar nosso site para os mecânismos de buscas melhor avaliar.
+
+
+Módulo 01, Capítulo 10, aula 29 (03)
+Vídeo:
+Links para download - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Jszz7M676y8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=29
+
+	Nesta aula  Continuamos na pasta ex10 aprendemos a fixar um arquivo para download junto ao link.
+VEja o passo a passo de como criamos um arquivo pdf para exemplo, e um outro compactado em zip para exemplo de arquivos grandes.
+
+
+Módulo 01, Capítulo 10, aula 30
+Vídeo:
+Desafios propostos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=suL56Mdx22Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=30
+
+	Nesta aula foi proposto a resolução dos desfios 005 e 006
+
+
+
+	CAPÍTULO 11
+
+
+Módulo 01, Capítulo 11, aula 31
+Vídeo:
+Imagens Dinâmicas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=E01LDVj0Rpg&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=31
+
+	Nesta aula vamos aprender a trabalhar com mídias em geral e tivemos uma pequena prévia de como se usar o programa de edição de imagens (GIMP) par
+editar o tamanho e a resolução das imagens que precisamos para diferentes tamanho de telas.
+
+Portanto criamos a pasta ex011 e dentro dela todos os arquivos e pastas necessários para praticar os ensinos.		
+
+Então não se esqueça de acompanhar o material da aula em pdf (11 - Imagens dinâmicas, áudios e vídeos) para entender mais sobre o assunto.
+
+
+Módulo 01, Capítulo 11, aula 32
+Vídeo:
+Imagens que se adaptam sozinhas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=cAgkwPWE4hU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=32
+
+	NEsta aula ultilizamos as imagens editadas no GIMP na aula anterior, e continuamos na prática com o arquivo index.html.
+
+Módulo 01, Capítulo 11, aula 33
+Vídeo:
+Colocando áudio no seu site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=4OZYsFl-J9s&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=33
+
+	"Antes de tudo acompanhe o estudo no material pdf!"
+
+	Nesta aula iremos aprender a adcionar áudio em nossa página, e iniciamos criando a pasta "midia" e dentro dela adcionar um áudio qualquer.
+VALE lembrar que assim como aprendemos nas aulas anteriores sobre direitos autorias, o mesmo se aplica nessa aula sobre áudio, pois os mesmo podem
+conter direitos autorais em músicas/sons e utilização desses arquivos sem a licença necessária podem gerar processos por uso não autorizado, e pode levar
+seu site a uma queda do ar.
+
+	VEJA um exemplo de como pegar efeitos sonoros e músicas acessando seu painel de controle do seu canal de youtube, na opção youtube Studio e 
+no painel principal clicamos na opção "biblioteca de áudio".
+
+	OBS: Entenda que essas músicas e efeitos de áudio na Biblioteca de áudio do youtube Studio são 100% gratuitas, porém podemos esolher usar a 
+Atribuição ou não; 
+
+  Se escolhermos a opção de Atribuição Nescessária, então obrigátoriamente deveremos adcionar a linhas de códigos deiponíbilizadas ao nosso código HTMl 
+para que essa música seja tocada em nosso site.
+PARA isso: Vá na barra de pesquisa (3 barras verticais acima da música ou do som), escolha a opção Atribuição necessária, então clique no Tipo de licença
+(CC) da música ou som, copie o código e adcione no seu HTML.	
+	Se escolher a opção Atribuição não é necessária; Então desconsidere as demais supra falados acima.
+
+	OBS:
+	  Tome cuidado com tamanhos e qualidade aumentada de Sons e músicas, assim como aprendemos nas aulas sobre imagens, pois pode gerar lentidão de
+	 carregamento da sua página, tornando seu site chato; Esse mesmo cuidado serve para mídias em geral, seja imagens, sons ou vídeos.
+
+   Há ainda mídias que são autorizadas para se usar gratuitamente, e para isso basta pesquisar quais são; Veja nesse LINK do professor Gustavo Guanabara
+na opção "Código disponível para os exercícios", dentro da pasta de Exercicios, no ex011 dentro da pasta "midia" os exemplos de mp3 .
+LINK: https://gustavoguanabara.github.io/ 
+
+
+
+Módulo 01, Capítulo 11, aula 34
+Vídeo:
+Formatos de vídeo para seu site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=DjOSM72cYac&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=34
+
+
+	NEsta aula vamos aprender um pouco sebre , formatos de Vídeos, e é importante que você estude o aquivo pdf que fala sobre Imagens dinâmicas, 
+áudios e vídeos. 
+
+Também baixamos vídeo do site Pixels, e formatamos ele usando o HandBrake que é um programa baixada para isso.
+	ENTão criamos a pasta midia para adcionarmos os videos que iremos usar nos exercícios.
+
+	OBS: 
+	  Busque sempre baixar e usar vídeos grátis, desses que não contenha direitos autorais pois já aprendemos que isso pode gerar problemas para vocÊ.
+	
+	DICA:
+	  NO site  https://www.pexels.com/pt-br/ podemos encontra vídeos gratuitos e sem diteiros autorais.
+
+	Essa aula práticamente é um breve resumo de como podemos baixar e converter aquivos de vídeos criando vários formatos.
+
+
+Módulo 01, Capítulo 11, aula 35
+Vídeo:
+Vídeos em hospedagem própria - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=TCeyIwFGkYo&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=35
+	
+	NEsta aula vamos aprender a adcionar vídeos a nossa página, portando não se esqueça de estudar o arquivo pdf sobre o assunto.
+Então crieamos a pasta "ex012" e dentro dela as pasta de "midia" onde baixamos os vídeos e os quais já formatamos na aula anterior .
+	VALE lembrar que pe importante ter o vídeo em vários formatos, para questões de compatibilidade de alguns navegadores.
+
+	AGORA para crie o indez.html e comece os exercícios.
+
+Módulo 01, Capítulo 11, aula 36
+Vídeo:
+Incorporação de vídeos externos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=3hng-hmSv2Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=36
+
+	Nesta aula aprenderemos a adcionar vídeos de serviços de vídeos, como por exemplo o bem conhecido YouTube; Com isso podemos economizar dados para
+que o cliente navegue sem que nosso site passe por instabilidade, ou lentidão.
+	
+	Agora acompanhe no material de pdf mais sobre o assunto.
+
+
+Módulo 01, Capítulo 11, aula 37
+Vídeo:
+Desafio: um site com vídeos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=gqrySQQzvvQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=37
+
+	Esse vídeo refere-se a resolução do desfio 9. 
+>>>>>>>>>>>>>>    "MAS"
+	OBs: Veja o materia pdf sobre Imagens dinâmicas, para também completar os defafios 7 e 8.
+
+>>>>>>>>>>>>>>>.....FIM Capítulo 11 <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+>>>>>>>>>>>>>>>.....INíCIO Capítulo 12 <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Módulo 01, Capítulo 12, aula 38
+Vídeo:
+Estilos CSS inline - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=byqhpuVpvEI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=38
+
+	
+	Aqui aprendemos sobre a CSS (cascading Style Sheets) que já foi falado no capítulo 3, mas seremos específicos em abordar sobre o inline style, que 
+tem como defnição (Estilo em Linha) ao pé da letra.
+	
+	VEJA: Existe um conceito antigo de se fazer inline style, que até funciona, porém tornou-se obsoleto e até o Visual Studio Code alerta e pinta de 
+vermelho indicando que essa propriedade não deve ser usada, e ao apontar o mouse sobre a proprieda, o VSCode dará a propriedade correta a se usar.
+	EXemplos: <body bgcolor="red">
+		     <p font color="white">Example</p>
+	
+	AGORA é importante que você acompanhe também o material em PDF, e para praticar criamos o exerício ex013.
+
+Módulo 01, Capítulo 12, aula 39
+Vídeo:
+Estilos CSS internos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=fzyab4P2pn8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=39
+
+	Esta aula tem continuação a partir da copia do exercício ex013 e renomeado como ex014.
+
+
+Módulo 01, Capítulo 12, aula 40
+Vídeo:
+Estilos CSS externos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=-i1JVMspDJQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=40
+	
+	Nesta aula aprenderemos a usar vários arquivos de estilo para nosso projeto, e essa é a melhor maneira de estilização pois permite usar vários
+estilos CSS para várias páginas, e com facilita a edição de algum parâmetro sem que este interfira ou modifique outros em outra páginas.
+	
+	AGORA: acompanhando o material PDF e a aula crie o ex015 e acompanhe os ensinos do professor Gustavo Guanabara.
+
+
+Módulo 01, Capítulo 12, aula 41
+Vídeo:
+Fim do Módulo 1: Certificados liberados - ‪@CursoemVideo‬ HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=xYLizixflv4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=41
+
+	
+	NEste vídeo tem informações de como emitir o certificado do módulo 1.
+
+Consiga certificados fazendo o curso diretamente pelo site oficial do projeto:
+== Site: https://www.cursoemvideo.com
+
+	É necessário ter Login e Senha para emitir o certificad, e caso você não tenha, então faça o cadastro  gratuitamente para poder assitir as aulas e 
+ver algumas informações sobre outros curso.
+
+	VEJA o vídeo completo e entenda como funciona o processo de emição do certificado.
+
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>   FIM do Módulo 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
+
+

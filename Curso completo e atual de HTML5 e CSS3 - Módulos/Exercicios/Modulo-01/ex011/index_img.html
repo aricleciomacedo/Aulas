@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Imagens em HTML5</title>
+    <style>
+        menu {
+            display: block;
+            width: 550px;
+
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul > li {
+            background-color: #022d7c9d;
+            box-shadow: 1px 2px 3px 3px black;
+            border-radius: 12px;
+            padding: 7px;
+            list-style: none;
+        }
+        ul > li > a {
+            color: white;/* Cpr de texto dos links */
+            text-decoration: none;/* Remove ublinhado dos links */
+            text-shadow: 0.1em 0.1em #000000a9;/* Sombra no texto do link */
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <ul>
+            <li>
+                <a href="index.html">Voltar para a página principal</a>
+            </li>
+            <li>
+                <a href="index_audio.html">Áudio em HTML5</a>
+            </li>
+            <li>
+                <a href="index_vid.html">Vídeos em HTML5</a>
+            </li>
+        </ul>
+    </menu>
+    <h1>Imagens adaptáveis</h1>
+    <P>Aqui você vê as imagens se adaptanto aos diferenes tamanhos de telas, e para isso basta abrir em outros dispositivos ou diminuir o tamanho da página no navegador.</P>
+    <picture>
+        <!-- 
+            Para telas menores abaixo de 300px carrega essa imagem. 
+        -->
+        <source media="(max-width:300px)" srcset="imagens/foto-p.png" type="image/png">
+        <!-- 
+            Para telas menores abaixo de 450px carrega essa imagem. 
+        -->
+        <source media="(max-width:450px)" srcset="imagens/foto_obi_m.png" type="image/png">
+        <!-- 
+            Para telas menores abaixo de 750px carrega essa imagem. 
+        -->
+        <source media="(max-width:750px)" srcset="imagens/foto_obi.jpg" type="image/jpg">
+        <!-- 
+            Essa será a imagem a ser carregada na página, com sua amostra acima de 750px, que foi o tamanho máximo definido para carregar a imagem acima. 
+        -->
+        <img src="imagens/foto_hd.png" alt="Oficina e Borracharia" width="100%" height="100%">
+    </picture>
+</body>
+</html>

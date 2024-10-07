@@ -1,0 +1,67 @@
+<!-- 
+    Módulo 02, Capítulo 15, aula 01, 02
+Vídeos:
+Usando o id com CSS - @Curso em Vídeo HTML5 e CSS3
+As diferenças entre id e class - @Curso em Vídeo HTML5 e CSS3
+Links:
+https://www.youtube.com/watch?v=TZuVpJmSNSE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=19
+https://www.youtube.com/watch?v=zXfTjPrMC_0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=20
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Seletores Personalizados</title>
+    <!-- Usamos aqui o estilo externo onde o link aponta para o arquivo CSS. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Aqui nesse h1, usamos um id para aplicar propriedades exclusivas, e vale lembrar que esse seletor id não pode se repetir em outra tag, como é no caso de uma classe.
+    Podemos dizer que esse H1 é diferente dos demias. -->
+    <h1 id="principal">Criando Sites com HTML e CSS</h1>
+     <!-- LEMBRE-Se que usar um mesmo id para outro elemento é errado de acordo com as regras da W3C; o nome de um id é exclusivo ao um único elemento. 
+    OBS: Podemos ainda usar seletor de classe em conjunto com o id. 
+    Exemplo: 
+    <h1 id"principal" class="destaque">
+    E assim mesmo tendo id, esse elemento receberia também os parâmetros de uma classe; porém o id sobre-põe as configurações de classe, assim como a classe sobre-põe as de tag.
+    -->
+     
+    <h1>Aprendendo HTML</h1>
+
+    <!-- Aqui definimos um seletor de classe para essa tag, e assim podmeos definir para outras.
+    OBS que temos aqi duas tags <h2> com o mesmo nome para o seletor de classe, e isso está correto e dentro dos padrões da W3C. 
+        Vale salientar que é importante que se dê o nome de uma classe de acordo com a função, ao invés de usar nome de cores por exemplo; que quando precisar mudar estilo, também terá que mudar nome de classe. Outra coisa ainda: é não usar nomescom letras maiúsculas e acentuações para as classes.-->        
+    <h2 class="basico">HTML básico</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum d
+    <span class="basico">olore voluptate</span> <!-- Invelopamos esse trecho com span e definimos como a mesma classe do h2 para receber os memsos parametros exclusivos para esse trecho do conteúdo. -->
+    maiores ea vero eum aperiam reiciendis laudantium veritatis expedita minima.</p>
+    <h2 class="intermediario">HTML intermediário</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolore voluptate maiores ea vero eum aperiam reiciendis.</p>
+    <h2 class="avancado">HTML avançado</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolore voluptate maiores ea vero eum aperiam reiciendis .</p>
+    <h1 class="destaque">Aprendendo CSS</h1>
+
+    <!-- Aqui definimos um seletor de classe para essa tag, e assim podmeos definir para outras.
+    OBS que temos aqi duas tags <h2> com o mesmo nome para o seletor de classe, e isso está correto e dentro dos padrões da W3C. 
+        Vale salientar que é importante que se dê o nome de uma classe de acordo com a função, ao invés de usar nome de cores por exemplo; que quando precisar mudar estilo, também terá que mudar nome de classe. Outra coisa ainda: é não usar nomescom letras maiúsculas e acentuações para as classes.-->
+    <h2 class="basico">CSS básico</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolore voluptate maiores ea vero eum aperiam reiciendis laudantium.</p>
+    <h2 class="intermediario">CSS intermediário</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolore voluptate maiores ea vero eum aperiam reiciendis.</p>
+
+    <!-- Aqui usamos os seletores de duas classes pré definidas, e os parametros de configurações delas serão aplicados aqui , e para isso separamos o nome de uma classe do outro da seguinte forma:-->
+    <h2 class="avancado destaque">CSS avançado</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolore voluptate maiores ea vero eum aperiam reiciendis .</p>
+    <footer>
+        <h2 id="h2_footer">Links das aulas em vídeo</h2>
+        <a target="blank" title="As diferenças entre id e class - @Curso em Vídeo HTML5 e CSS3" href="https://www.youtube.com/watch?v=TZuVpJmSNSE&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=19">Aula 1</a>
+        <a target="blank" title="Usando o id com CSS - @Curso em Vídeo HTML5 e CSS3" href="https://www.youtube.com/watch?v=zXfTjPrMC_0&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=20">Aula 2</a>
+        <div>
+            <a target="blank" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s"><img src="../../../../imagens/youtube.png" alt="youtube.png" width="50%" height="10px" title="Play list para todos os vídeos" ></a>
+        </div>
+    </footer>
+</body>
+</html>

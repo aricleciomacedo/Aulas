@@ -1,0 +1,92 @@
+{   Link da aula teórica    } : 
+    https://www.youtube.com/watch?v=3ZFYXkzXhqE
+
+
+*   Modelos de caixas   *
+$ NEssa aula estudaremos sobre os conceitos de modelos de caixas.
+Vale lembrar que ele é aplicável ao HTML, e a linguagem CSS. Ambos são um conjunto que vai faciliatar o aprendizado sobre como organizar o disigner da página, as partes de um site.
+
+    A teoria sobre esse tipo, esse modelo de caixas, tem que a ver com a ideia de realmente se ter algo semelhante a uma caixa.
+
+Podemos notar que toda a exibição de um conteúdo de site, página é algo parecido, exibido em forma caixa; percebemos também que na maioria das vezes o conteúdo é como se fossem caixas dentro de outras caixas.
+
+$ Saiba que na medida que colocamos um elemento dentro do outro, o nome dado a isso é: "Aninhamento".
+    Não podemos confundir com alinhamento, pois o aninhamneto literalmente é em forma de ninho, um dentro do outro.
+
+" Por exemplo quando usamos um elemento de Título, no caso o h1, "
+{   <h1>Olá, mundo!</h1>     }
+"Ele como os demais é uma caixa, e suas propriedades definem o box que ela é"
+# Saiba que todo elemento em tela (na página), ele é na verdade um caixa.
+
+ OBS:
+    $ uma caixa é o elemento que envolve o conteúdo, no caso do h1, se traçarmos pontilhados em volta do texto Olá, mundo! Poderemos notar que o pontilhado envolve todo o texto sem espaços entre letras e pontilhados. 
+    = Vale lembrar que: Uma caixa pode variar o tamanho idependente do conteúdo dentro dela.
+(   Podemos variar esse tamanho mundando suas configurações de altura e largura dentro do CSS, e Para isso alteramos os valores das propriedades:)
+[   hight = altura    , e ]
+[   width = largura       ]
+= Com isso mudamos o tamanho dessa caixa sem alterar o tamanho do conteúdo.
++ Na prática podemos aplicar uma cor de fundo nessa caixa e ver seu comportamento.
+
+*   border  *
+{   A borda é a parte que envolve toda a caixa; podemos dizer que ela uma linha que circunda o conteúdo, e sua aplicação é como algo que evolve o elemento; "tipo a borda de uma pizza". }
+= Podemos ver a borda em volta do elemento (caixa) aplicando a propriedade no CSS, que define a largura dessa , o estilo (tipo), e a cor.
++ O parêmetro pode ser por exemplo:
+border: 5px solid blue; # Aqui dizemos que a borda terá a largura de 5pixels, tipo solido, e cor azul.  
+
+*   padding  *
+= COnhecido como acochoamento ou preenchimento, ele serve para dar um espaço interno entre o conteúdo e  a borda do elemento; a sua aplicação visivelmente avoluma o elemento como se o esivesse engordando.
+$ Com isso, podemos ainda pereber que  a borda se afasta do Conteúdo.
+[ Podemos usar o padding para ambos lados , atribuindo propriedades e valores idividuais, ou usando short-hands que configura todos de uma vez, e para isso veja os exemplo aplicados no CSS:   ]
+padding-top: 20px;         $Espaçamento_entre_o_conteúdo_e_o_topo.
+padding- rigth: 20px:      $Espaçamento_entre_o_conteúdo_e_a_direita.
+padding-bottom: 20px:      $Espaçamento_entre_o_conteúdo_e_o_chão.
+padding-left: 20px:        $Espaçamento_entre_o_conteúdo_e_a_esquerda.
+    " OU"
+padding: 20px 20px 20px 20px; " Assim representa a sequência acima, em forma de short-hand."
+
+*   margin  *
+= Espaço externo entre um elemento (caixa) e outro(a).
++ Podem os com isso determinar que a borda de um elemento próximo não grude com outros elementos, mantendo assim a distancia entre uma caixa e outra.
+
+* outline   *
+= Essa área pode ser considerada traduzida e considerada "conatorno", ou como traçado.
++ Podemos notar que essa área ela ficará por fora do conteúdo, acima da borda do contéudo. 
+$ Vale notar que : Esse contorno ficará fora do elemento enquanto a borda fica por dentro.
+
+{   ENTENDA TIPOS DE CAIXAS    }
+$ Basicamente existem dois tipos de caixas, e o exemplo que usamos acima, o h1, é uma caixa e é um tipo de caixa.
+
+* 1. = box-level  e 2. = inline-level
+= NOTA: 
+< 
+    box-level se refere as caixas que ocupam outra linha com largura total de tela de um elemento; isso porque uma caixa do tipo block-level ocupa 100% do view-port do conteúdo. >
+< 
+    inline-level se refere a uma caixa que ocupa espaço na mesma linha, continuado de um conteúdo; seu uso ainda possibilita que o restante do conteúdo continua na mesma linha.>
+
+# Exemplos de caixa e elementos que são do tipo :
+
+    $ block-level                            e               inline level
+{   Aqui é um paragrafo  com conteúdos.}        {   Aqui é um paragrafo  com conteúdos. }
+{    Aqui é um box-leve (block-level). }        {    Aqui é um box-leve (block-level). Aqui continua o parágrafo , pois o}
+{    Aqui continua o parágrafo , pois o}        { inline-level não quebra a linha, e o conteúdo continua logo depois se preferir. }
+{ box level quebrou a linha.            }       { Já que ele ocupa somente o que precisa dentro  do conteúdo.}
+
+* Exemplos de tags com os tipos acima citados:
+$ Poderiamos dar dois exemplos famosos que são as tags <div> e a <span> .
+A diferença entre a div e a span é que a div, é usada quando queremos que a caixa ocupe todo o espaço disponível, fazendo com outros elementos se posicionem antes ou depois, enquanto que a span faz com outros elementos possam ficar ao lado, pois ela por si só ja é uma espanção de conteúdo.
+
++ MAIS EXEMPLOS
+$ Aqui os que quebram linha e                     $ Aqui não quebra linha e não
+$ocupam 100% de largura em tela.                  $ocupam 100% da largura em tela, somente o espaço necessário. 
+"   block-level"                    %E            "inline-level"
+<div> * Divisão                                 <span> * Espanção de conteúdo.
+<h1>-<h6> * Nível de Títulos                    <a> * Elemento âncora que Linka algo.            
+<p> * Parágrafos                                <code> * O conteúdo é um código.
+<main> * Conteúdo principal                     <small>   *  O conteúdo é pequeno        
+<header> * Cabeçalho                            <strong>  * O conteúdo é grande     
+<nav>   * Menu                                  <em> * Elemento de ênfase e diz se o conteúdo é italico ou negrito.
+<article> * Artigo                              <sup> - <sub> * A² - A, O conteúdo é acima ou abaixo.  
+<aside> * Aparte                                <label>   * Repesenta uma legenda para um item, como um click-me de um input.
+<footer> *roda-pé                               <button> * O conteúdo é um botão
+<form> * Formulário                             <input> * O conteúdo é algo que será jogado em tela.   
+<video> * advinha!                              <select> *  Representa um controle que apresenta um menu de opções.

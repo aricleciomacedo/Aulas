@@ -1,0 +1,149 @@
+<!--  
+    LINK da aula: 
+Aula-1: https://www.youtube.com/watch?v=rXF1okX0v9E
+Aula-2: https://www.youtube.com/watch?v=-CPoDvZLQ6k
+ -->
+
+ <!-- MUitas vezes queremos centralizar conteúdos dentro das caixas apliando  margin, ou padding, isso pode causar desconformes a depender dom tamanho mde tela do usuário.
+    O jeito mais correto de centralizar caixa pode ser3plicando um margin: auto; ao invés de margin para todos os lados, e no caso de texto , o text-align: center; talvez já resolva. 
+-->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Modelo de caixas</title>
+     <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+     <link rel="stylesheet" href="style.css">
+     <style type="text/css">
+
+     /* QAqui selecionamos o h1 que é elemento box-level  */
+        h1 {
+    
+    /* Aqui muda somente a cor de fundo dessa caixa */
+            background-color: lightgray; /* Cor fundo. */
+    /* Aqui só altera os padrões para esse elemento */
+            height: 300px;/* Altura da caixa. */
+            width: 300px;/* Largura da caixa. */
+
+    /* Veja que essa borda envolverar o conteúdo com a Largura da borda, o Tipo, estilo e a Cor da borda. 
+        Mas podemos usar short-hands para simplificar. Veja abaixo como fica:*/
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+        /* Short-hands de multipla propriedas e valores */
+                border: 10px solid darkslategray;    
+
+    /* Aqui aplicamos um espaçamento interno no conteúdo "texto" nesse da borda pra dentro.
+        Mas podemos usar short-hands para simplificar. Veja abaixo como fica: */ 
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        /* Short-hands de multipla propriedas e valores */
+                padding: 10px 10px 10px 10px;  /* SE for todas iguais simplefique como abaixo */ 
+                    padding: 10px; /* Assim aplica a todos os lados, mas se quiser cima e baixo + esquerda e direira faz como abaixo */
+                        padding: 10px 20px;
+    
+    /* Aqui adcionamos a margem, que é a distância da borda pra fora.
+        Mas podemos usar short-hands para simplificar. Veja abaixo como fica:*/
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 40px; /* Faz com a caixa do a-link abaixe, se afastando da caixa h1. */
+            margin-left: 10px;
+        /* Short-hands de multipla propriedas e valores */
+            /* margin: auto;  Aqui podemos centralizar a caixa*/
+                margin: 20px 20px 40px 20px;
+                    margin: 20px auto 40px auto;/* Assim centraliza */
+
+    /* Aqui adcioamos o outiline, mas na vizualizaçaõ podemos  ver que ele fica entre a borda e a margem "Porém dentro da margem e em cima da borda
+        Outra coisa de podemos notar é que ele pode estravejar a margem e sobrepor outros elementos, porém ao aumentar sua largura a margem não cresce.*/
+             outline-width: 5px; /* Largura do Outline.*/
+             outline-style: dashed; /* Estilo traçejao. */
+             outline-color: salmon;
+            /*  Short-hands */
+                outline: 10px dashed green;
+
+        }
+
+         /* Aqui selecionamos a tag a que é um elemtento do tipo inline-level*/
+         a {
+            border-width: 10px;/* short-hands */
+                /* Propriedades individuais */
+                border-top-width: 3px;
+                border-right-width: 3px; 
+                border-bottom-width: 3px;
+                border-left-width: 3px;
+            border-style: solid; /* Short-hands */
+                /* Propriedades individuais */
+                border-top-style: dotted;/* Pontilhados */
+                border-right-style: double; /* linha dupla, tipo2d*/
+                border-bottom-style: groove; /* Suco, pinta a parte interna da borda com cor mais escura. */
+                border-left-style: ridge; /* Semelhante ao groove */
+            border-color: red;/* Short-hand */
+                border-top-color: rgb(2, 250, 2);
+                border-right-color: rgb(1, 180, 1);
+                border-bottom-color: darkgreen;
+                border-left-color: rgba(1, 20, 1, 0.877);
+
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+                margin: 20px;
+                    margin: auto;
+         }
+         div > h1 {
+            width: auto;
+            height: auto;
+            padding: auto;
+            border: 1px solid black;
+            outline: none;
+            margin: auto;
+            text-align: center;
+         }
+         div > a {
+            border: 1px solid black;
+            background-color: rgb(134, 134, 212);
+            display: block;
+            transition: 30ms;
+         }
+         div > a:hover {
+            background-color: rgb(4, 4, 192);
+            color: white;
+         }
+         div > .a1 {
+            /* width: 32vw; */ /* Não funciona em display inline */
+            /* height: 70px;/ /* Não funciona em display inline */
+            display: inline;
+            margin: 10px;
+         }
+         div > .a2 {
+            width: 32vw;
+            display: inline-block;
+         }
+     </style>
+ </head>
+ <body>
+    <!-- Lembre-se que: h1 até h6 são do tipo block-level, pois ocupa linhas inteiras. Veja esse comportamento aplicando uma cor de fundo no CSS. -->
+     <h1>Exemplo de caixa box-level</h1>
+        
+    <!-- Aqui usamos a tag <a> como exemplo caixa inline-level, para vermos o comportamento apartir da estilização no CSS. -->
+     <p>Parágrafos também são exemplos de box-level, mas os <a href="modelo-de-caixas.txt" target="_blank" title="Página com texto da aula anterior." translate="no" accesskey="over" type="text/txt">links são exemplos de caixas inline-level</a>. Vamos ver como isso funciona.
+    </p>
+    <div>
+        <h1>Exemplo de Links block-level; inline-level e inline-block</h1>
+        <a href="#">A</a>
+        <a href="#">B</a>
+        <a href="#">C</a>
+        <a class="a1" href="#">D</a>
+        <a class="a1" href="#">E</a>
+        <a class="a1" href="#">F</a>
+        <a class="a2" href="#">D</a>
+        <a class="a2" href="#">E</a>
+        <a class="a2" href="#">F</a>
+    </div>
+ </body>
+ </html>

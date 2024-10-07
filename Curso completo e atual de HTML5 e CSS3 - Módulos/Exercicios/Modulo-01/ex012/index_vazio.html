@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Link Vazio</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            font-weight: bold;
+        }
+        li {
+            margin: 17px ;
+        }
+        ul {
+            color:white;
+            background-image: linear-gradient(12deg, black, white);
+            border-radius: 0.7em;
+            border: 1px solid #0000002c;
+            list-style-type: circle;
+        }
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto 10px;
+            border-radius: 30px;
+            border: 1px solid transparent;
+            background-color: #ffffff;
+            box-shadow: 0.1em 0.1em 7px 3px black;
+            /* font-size: 0.8em; */
+            font-style: italic; /* Estilo da fonte */
+            font-weight: bolder; /* Peso da fonte */
+        }
+        button :hover {
+            color: white;
+            background-color: #0c000e;
+            transition: 0.3s;
+            border-radius: 30px;
+            padding: 0px 5px;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* 
+        Aqui inserimos um texto depois do elemento: Veja mais no link:
+            https://developer.mozilla.org/pt-BR/docs/Web/CSS/::after 
+        E inserimos um simbolo, copiado do site, no link:
+            https://www.w3schools.com/html/html_symbols.asp
+        */
+        button ::after {
+            content: " ←";
+        }
+    </style>
+</head>
+<body>
+    <h1>Este ambiente ainda não possui conteúdo!</h1>
+    <p>"Por favor, escolha outra página!"</p>
+    <ul>
+        <li>
+            <button><a href="index.html">Voltar para a página principal</a></button>
+        </li>
+        <li>
+            <button><a href="index_videocapa.html">Ir para o vídeo com capa</a></button>
+        </li>
+        <li>
+            <button><a href="index_videoyt.html">Ir para vídeo do YouTube</a></button>
+        </li>
+        <li>
+            <button><a href="index_videovim.html">Ir para o video do Vimeo</a></button>
+        </li>
+    </ul>
+</body>
+</html>

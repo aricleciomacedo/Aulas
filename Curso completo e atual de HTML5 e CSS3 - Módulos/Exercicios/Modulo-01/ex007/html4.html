@@ -1,0 +1,46 @@
+<!--
+    O que significa semântica da HTML? 
+De acordo com o Dicionário on-line, o Michaelis 
+(https://michaelis.uol.com.br/moderno-portugues/busca/portugues-brasileiro/sem%C3%A2ntica/);
+Semântica (2 LING) O significado dos vocábulos, por oposição à sua forma.
+Ou seja, tem muito mais valor o significado, do que a forma.
+
+    Isso acontece porque, antigamente no HTML4, existia algumas tags, que não falava de significado, mas tão somente de forma.
+
+Outra coisa do HTML4; é que a tag para mudança de idioma, sequer existia, e geralmente alguns navegadores não mostram algumas acentuações utilizadas.
+
+LEMBRE-SE QUE: Algumas tags e parâmetros podem até funcionar no navegador, porém, com o tempo, elas podem deixar de funcionar, e seu site pode perder a credibilidade, tão somente por estar usando coisas que são consideradas obsoletas pela W3C {World Wide Web Consortion}. Veja mais sobre isso no link:https://www.w3.org/TR/html5-diff/#absent-attributes
+OBS: Fique sempre atento as mudanças feitas pelo orgão oficial acima, para não acontecer de estar usando tags obsoletas{Aquelas em desuso e que no HTML5 não se usa mais e estão em não-conformidade; ,mostrando que elas existem porém a W3C não recomenda o uso}.
+
+Note: que apartir do Html5 o foco é total na semântica pois trabalha com significado, diferente do html4 que era focado na forma;
+Por exemplo <h1> significa título e nível 1, <p> = parágrafo, etc. 
+Hoje para dar forma ao conteúdo tudo ficapor conta da CSS, pois ela é a responsável para isso;
+Por exemplo mudar cor de fundo, de texto, mudar posições e etc.
+
+ATENÇÃO: Vamos ver bem abaixo um exemplo de como as tags eram usadas sem significado, como no caso da tag <u> que sublinha o texto dando apenas uma forma, ao invés de significado. Entenda que aqundo você vê o texto sublinado, ele básicamente não sigmifica nada, porém se estilizarmos esse mesmo texto de maneira que você ao olhar para ele, entenda ser ele um endereço por exemplo, você estarávendo um endereço; Isso se chama significado e não forma; Como vermos apartir do HTML5.
+
+NÃO ESQUEÇA: Quando se trata de semântica {siginficado} usamos HTML;
+            E quando se trata de forma {Estilo} usamos o CSS.
+Por isso é muito importante que você saiba o que vai fazer dentro de cada um deles.
+
+Vejamos abaixo alguns exemplos dessas tags e como era a base do HTML4:
+-->
+<html>  <!-- Essa estrura HTML pode até funcionar , porém seu uso não é mais adequado aos nossos dias uma vez que muitas tag ficaram obsoletas.-->
+    <head>
+        <title>Meu site HTML4</title>
+    </head>
+    <body bgcolor="black-green"><!-- aqui podemos ver um parâmetro fora de conformidade pois está destacado de vermelho pelo VSC, mostrando com isso, que o parâmetro não se usa mais, pois deixou de existir.-->
+
+        <center><!-- Antigamente centralizava texto assim-->
+        <h1>Exemplo de site em HTML4</h1><!--<h1> significa que é um título de nível um-->
+        <h2>Exercício de site em HTML4</h2></center>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid repellendus magnam dolores quos laudantium praesentium?</p> <!-- <P> significa que é um parágrafo-->
+        <p><font color="white">Teste de parágrafo</font></p>
+        Eu moro na <u>Rua dos Capixabas, 229 - Botafogo - RJ</u>
+        <!-- Aqui abaixo vemos outro exemplo de ag absoleta, e mesmo que ela não esteja em destaque vermelho, porém no site da W3c já recomenda o não uso dela mesmo que funcione; Vale lembrar que o cuidadp com essas tags, é para prevêni-lo de um bug mais pra frente, caso elas deixem de funcionar, e além do mais, o Google pode desvalorizar o seu conteúdo por conta dessas tags absoletas. -->
+        <marquee behavior="up" direction="left">Teste de Marquee</marquee>
+        <!--Acima vemos um exemplo de tag <u> de underlined = sublinhado que é "desconsiderada"; note que mesmo ela não ficando vermelha
+        Agora veja no index.html5, a forma como damos significado a tag , mostrando ser ela um endereço, e usando ao invés de <u> a tag <address>-->
+    
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!-- 
+    "LEMBRANDO que as imagens usadas nessas aulas foram criadas na aula anterior, usado o editor de imagens GIMP".
+Módulo 01, Capítulo 11, aula 32
+Vídeo:
+Imagens que se adaptam sozinhas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=cAgkwPWE4hU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=32
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+    <style>
+        menu {
+            display: block;
+            width: 550px;
+
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        ul > li {
+            background-color: #022d7c9d;
+            box-shadow: 1px 2px 3px 3px black;
+            border-radius: 12px;
+            padding: 7px;
+            list-style: none;
+        }
+        ul > li > a {
+            color: white;/* Cpr de texto dos links */
+            text-decoration: none;/* Remove ublinhado dos links */
+            text-shadow: 0.1em 0.1em #000000a9;/* Sombra no texto do link */
+        }
+        audio {
+            border:2px solid rgb(168, 168, 245);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <menu>
+        <ul>
+            <li>
+                <a href="index_img.html">Imagens em HTML5</a>
+            </li>
+            <li>
+                <a href="index_audio.html">Áudio em HTML5</a>
+            </li>
+            <li>
+                <a href="index_vid.html">Vídeos em HTML5</a>
+            </li>
+        </ul>
+    </menu>
+   <h1>Imagem dinâmica</h1>
+   <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+   <!-- Essa tag parece com a <img> , e até recebe uma dentro ela, e ela permite criar vários sources (srcs) que são várias fontes, ou seja vai mostrar imagem na página, e poderá ser alterada automáticamente conforme muda o tamanho da tela.-->
+   <picture>
+       <!-- Assim dizemos que quando o máximo da tela chegar a 1050px, a foto_m será carregada no lugar da foto_g , e quando chegar a 750px a foto_p será carregada no lugar da foto_m.-->
+       <source media="(max-width: 350px)" srcset="imagens/foto_p.png" type="image/png">
+       <source media="(max-width: 750px)" srcset="imagens/foto_m.png" type="image/png">
+        <source media="(max-width: 950px)" srcset="imagens/foto_g.png" type="image/png">
+       <img src="imagens/foto_hd.png" alt="Imagem flexível" width="50% " height="50%">
+   </picture>
+
+   <h1>Reproduzindo Áudio</h1>
+   <p>Vamos aprender a reproduzir áudios em HTML5</p>
+   <!--  Aqui inserimos áudio em nossa página, usamos o parâmetro (controls) para aparecer opções de player e para uma reprodução automática usamos o parâmetro (autoplay)-->
+   <audio src="midia/bensound-creativeminds.mp3" controls "autoplay" title="bensound"></audio>
+   <!-- Temos alguns formatos para usar : MP3 ; WAV ; OGG-->
+
+   <!-- Aqui nessa outra maneira de inserirmos áudio, removemos o parâmetro (scr) e usamos o source src.    E abaixo de cada um temos outras opções de formato de áudio para cada navegador. Poemos dizer que é para caso um falhe o outro toque.-->
+
+   <!-- Usamos aqui o preload que tem 3 opções ( "auto" que é o padrão porém não é bom deixar pois considera que o site terminou de carregar quando esse audio carregar, e para um audio de 1h com uns 70Mb demora muito para concluir o carregamento; "metadata" ele vai carregar somente algumas informações do arquivo e "none" também não é recomendado pois não vai carregar nada, só quando o usuário apertar play nos controles.) 
+    Usamos autoplay para reproduzir automáticamente ; controls para mostrar os controles de mídia ; loop para repetir o áudio ao final da reprodução, title para exibir um texto quando parar o cursor sobre o play, e muted para iniciar a reprodução com o mudo ativado.-->
+   <audio preload="metadata" "autoplay" controls loop muted title="All Stars">
+        <source src="midia/All Stars - Patrick Patrikios.mp3" type="audio/mpeg">
+        <source src="midia/All Stars - Patrick Patrikios.ogg" type="audio/ogg">
+        <source src="midia/All Stars - Patrick Patrikios.wav" type="audio/wav">
+            <!-- É bom evitar wav, pois é formato pesado. -->
+
+        <!-- Caso o navegador não toque nenhum dos formatos, abaixo tem um paragráfo a exibir a opção para baixar o arquivo.-->
+        <p>Infelizmente seu navegador não consegue reproduzir  áudio. <a href="midia/All Stars - Patrick Patrikios.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+   </audio>
+   <h1>Reproduzindo Vídeo para teste</h1>
+   <p>
+       <strong>OBS: Só vamos aprender sobre vídeos na aula seguinte!</strong>
+       <br>
+       Aqui reproduzimos vídeos de link YouTube e podemos fazer ele iniciar automático e mudo ativado usando <em>(?autoplay=1&mute=1)</em>
+   </p>
+   <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+   </iframe>
+</body>
+</html>

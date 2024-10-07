@@ -1,0 +1,57 @@
+<!-- 
+    Módulo 02, Capítulo 14, aula 05
+Vídeo:
+Peso, estilo e shorthand font - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=oHj5ez1bSkc&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=13 
+
+    Nesta aula podemos os parâmetros de configuração do peso e estilo da fonte, e semore é bom buscar saber quais os pesos e estilos que a fonte que está sendo usada , aceita os valores de configuração.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Peso, estilo e shorthand de fonte CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4em;
+
+        /* Aqui usamos os parâmetros para configuração de peso e estilo da fonte.*/
+        font-weight: bolder;/* Assim configuramos o peso da fonte e seus valores varia de acordo co a fonte que está sendo usada. 
+            GERALMENTE podemos ver os valores aceitos teclando Ctrl + space para ver os valores ente : ;
+                EXEMPLOS: 100 = forte; 900 = extra forte; bold = Negrito; bolder = Extra Negrito; lighter = Mais leve; normal = padrão = 400 ; etc. 
+                OBS: O peso da fonte pode variar numericamente de 100 á 900, e para saber se aceita ou não ;Pesquise sobre a fonte usada.*/
+        font-style: italic;/* Aqui podemos configurar o estilo da fonte, e podemos ver se há mais valores, teclando Ctrl + space ente : e ; 
+            EXEMPLO de estilo = italic, normal*/
+        text-decoration: underline;/* Aqui definimos se o texto ficará underline = sublinhado, overline = linha em cima do texto; ou line-through = texto riscado; e none = Sem decoração.*/
+        }
+
+        /* Shorthand para estilizar fonte. */
+        h2 {
+            font: italic bolder 2.5em 'work Sans', sans-serif;/* Assim definimos em uma única linha de código, todas a configurações feitas acima para estilo de fonte.
+        As 4 declarações na ordem são:
+            1-font-style; 
+            2-font-weight; 
+            3-font-size; e
+            4-font-family; 
+            OBS: Apenas tex-decoration; Não é aceito na shorthand. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Peso, estilo e shorthand de fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quaerat iure placeat voluptates! Molestias fugit vero a assumenda, ab id sunt maiores laboriosam incidunt magni nobis? Mollitia sit facere vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci molestias, laudantium quod quasi beatae obcaecati inventore. Neque voluptates impedit minima libero similique modi velit sunt rerum. Iusto aspernatur doloribus ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque minima perferendis quia mollitia similique, dignissimos eveniet distinctio tempore tenetur odit obcaecati? Nulla consequuntur magnam a recusandae, excepturi qui pariatur.
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid ab a illum ducimus nobis dolorem eaque vel odit nostrum magnam earum vitae est alias ad magni placeat, deserunt, perferendis cum?</p>
+    </p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa iusto facilis, repellat accusamus aspernatur. Aspernatur vel recusandae id fugiat dicta nostrum totam beatae qui fuga similique? Voluptates, repudiandae? Eaque.lotre.</p>
+</body>
+</html>

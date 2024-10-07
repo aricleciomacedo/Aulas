@@ -1,0 +1,107 @@
+<!-- 
+    Desafio 009 
+    foi completado seguindo as aulas do Professor Gustavo Guanabara ensinadas no Curso em Vídeo HTML5 e CSS3 no módulo 1; aula 1 - 37.
+Material disponível:
+    htts://github.com/gustavoguanabara/
+PDF: desafafio-videos.pdf
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Desafio d009</title>
+    <style>
+        body {background-color: black;}
+        h1{color: white;text-align: center; font-size: 55px;}
+        h2{color: white;text-align: center; font-size: 55px;}
+        .navegar { 
+            /* border: 1px solid white; */
+            /* margin: 0px 20px; */
+            /* padding: 17px; */
+            text-align: center;
+        }
+        /* .itens {
+            border: white 5px solid;
+        } */
+        .menu .itens div{ /*Aqui selecionamos as divis dentro da classe itens dentro da classe menu*/
+            /*border: white solid 3px;*/
+            text-align: center;
+        }
+        .menu .itens { /*Aqui selecionamos a classe itens dentro da classe menu*/
+            display: flex; /* Aqui deixamos os itens um ao lado do outro */
+            flex-wrap: wrap; /*  Aqui Definimos se nosso menu (contanier) vai quebrar um linha ou não , e o valor nowrap é o padrão, mas definimos wrap que é pra quebrar a linha e jogar e jogar o último item pra baixo */
+            justify-content: center; /* aqui centralizamos os itens */
+            margin-top: -30px; /* Aqui afastamos os itens do parágrafo ou deixaos próximo   */
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-bottom: 30px;
+            height: 10%;
+            width: 50%;
+            background: #000000;
+            border: rgb(116, 116, 116) solid 3px;
+            border-radius: 30px;
+        }
+        .menu .itens .item a{ /*Aqui selecionamos as classes item dentro da classe itens dentro da classe menu*/
+            display: flex;
+            border: rgb(116, 116, 116) solid 2px; /*  Adcionamos uma borda aos itens */
+            /*background: chartreuse;*/
+            width: 200px; /* Aqui efinimos a largura destes itens */
+            padding: 5px; /*  Aqui é o tanto de espaço iterno desse itens */
+            border-radius: 14px; /* Aqui é o formato dos cantos da borda */
+            margin: 7px; /* Aqui espaçamos (afastamos) um item do outro */
+            flex-wrap: wrap;
+        }
+        .menu .itens .item a:hover{
+            border: rgb(255, 0, 0) solid 3px;
+            border-radius: 14px;
+            transition: 200ms;
+        }
+        .item{
+            height: 50%;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nave">
+        <h1>Vídeos legais para assistir</h1>
+        <section class="navegar">
+            <h2 style=font-size:33px;>Escolha um video</h2>
+            <div>
+                <p>
+                    <a href="thumb-html.html"><img src="thumb-html.png" alt="html.png"></a>
+                    <a href="thumb-js.html"><img src="thumb-js.png" alt="java.png"></a>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <a href="thumb-hardware.html"><img src="thumb-hardware.png" alt="hardware.png"></a>
+                    <a href="thumb-python.html"><img src="thumb-python.png" alt="python.png"></a>
+                </p>
+            </div>
+        </section>
+        <!-- menu -->
+        <section class="menu">
+            <h2>Vídeos legais para assistir</h2>
+            <div class="itens">
+                <div class="item">
+                    <a href="thumb-html.html"><img src="thumb-html.png" alt="html.png"></a>
+                </div>
+                <div class="item">
+                    <a href="thumb-js.html"><img src="thumb-js.png" alt="java.png"></a>
+                </div>
+                <div class="item">
+                    <a href="thumb-hardware.html"><img src="thumb-hardware.png" alt="hardware.png"></a>
+                </div>
+                <div class="item">
+                    <a href="thumb-python.html"><img src="thumb-python.png" alt="python.png"></a>
+                </div>
+            </div>
+        </section>
+        <!-- end menu -->
+    </nav>
+</body>
+</html>

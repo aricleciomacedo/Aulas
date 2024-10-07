@@ -1,0 +1,53 @@
+<!-- 
+    Resolvido o desafio 007
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imagen Flexível Desafio 007</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .a {
+            border: 5px solid rgb(107, 104, 104);
+            border-radius: 75%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button><a href="index_ex.html">Ir para a próxima página</a></button>
+        <button><a href="#">Link vazio</a></button>
+        <button><a href="index_ex.html">Ir para a próxima página</a></button>
+    </div>
+    <h1>Imagem Flexível</h1>
+
+    <!-- Aqui neste parágrafo adcionamos as entidades e emojis (&#128516 &#128525 &#128151 &#9829; &#128517) dos respectivos sites:
+            https://www.w3schools.com/html/html_emojis.asp
+            https://symbl.cc/pt/html-entities/
+    -->
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência &#128516 &#128525 &#128151 &#9829; &#128517</p>
+    <!-- Aqui é a tag que aprendemos na aula sobre imagens que se adaptam sozinhas, e as imagens foram editadas no GIMP conforme ensinado na aula: O tamanho das imagens importa para um site? no Link: 
+        https://www.youtube.com/watch?v=8rkuukKA8a4&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=17 
+        
+        E foi usado essa aula para completar este desafio.
+    Link:
+        https://www.youtube.com/watch?v=cAgkwPWE4hU&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=32-->
+    <picture>
+
+        <!-- O carregamento dessa imagem, se dá quando a ela for menor que 250px. -->
+        <source media="(max-width:250px)" srcset="paisagem-p.png" type="image/png">
+
+        <!-- Essa imagem será carregada se a tela for menor que 750px. -->
+        <source media="(max-width:750px)" srcset="paisagem-m.png" type="image/png">
+
+        <!-- Será carregada essa imagem quando a tela for menor que 1050px. -->
+        <source media="(max-width:1050px)" srcset="paisagem-g.png" type="image/png">
+
+        <!-- Essa é a imagem que será carregada se por algum motivo, os sources não funcionarem.-->
+        <img width="100%" height="100%" src="paisagem-full.png" alt="Imagem de qualidade full">
+    </picture> 
+</body>
+</html>

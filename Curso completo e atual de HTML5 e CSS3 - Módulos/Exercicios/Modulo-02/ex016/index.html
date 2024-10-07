@@ -1,0 +1,106 @@
+<!-- 
+Módulo 02, Capítulo 13, aula 02
+Vídeo:
+Representando Cores com CSS3 - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=uKjKnztS3cY&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=3
+
+    Nesse exercício, veremos as formas como as cores podem ser representadas em seu estilo. 
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatibilidade" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Cores em CSS</title>
+    <style>
+        .div_container {
+            box-shadow: 25px 20px 10px -17px black;
+            width: 70vw;
+            margin: 0px auto;
+        }
+        .div_container >div {
+            text-align: center;
+            border: 1px solid #0000001a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cores em CSS</h1>
+    <p>Para entender esse exercício, olhe bem atentamente o código fonte do arquivo e acompanhe o material tanto em vídeo , quanto em PDF.</p>
+    <p>As cores resultantes são exatamente as mesmas, mas o formato de representação muda conforme o padrão escolhido.</p>
+    <p>Também é possível usar transparência, usando o formato RGBA (red, green, blue, alpha)</p>
+    <div class="div_container" style="display: flex; flex-direction: row; flex-wrap: wrap;justify-content: space-evenly;"><!-- Aqui representamos as mesmas cores usando configurações(representações) diferentes. -->
+        <div>
+            <h2 style="background-color: darkblue; color: white;">Este título está colorido usando a representaçãos das cores por nome</h2>
+        </div>
+        <div>
+            <h2 style="background-color: #00008b; color: #ffffff;">Já esse está usando cores pelo código Hexadecimal</h2>
+        </div>
+        <div>
+            <h2 style="background-color: rgb(0, 0, 139); color: rgb(255, 255, 255);">Este outro está colorido usando códigos RGB (red, green, blue)</h2>
+        </div>
+        <div>
+            <h2 style="background-color: hsl(240, 100%, 27%); color: hsl(0, 0%, 100%);">Este outro aqui está usando códigos HSL (hue, saturation, luminosity)</h2>
+        </div>
+        <div>
+            <h2 style="background-color: rgba(0, 0, 139, 0.5); color: white;">Nesse título, o fundo azul teve sua transparência configurada para 50%</h2>
+        </div>
+    </div>
+<hr>
+<p>ABAIXO é o mesmo exercício de forma prática, porém comentado para questões de aprendizado.</p>
+<hr>
+<!-- 
+    Aqui podemos usar as cores em estilo inline atribuindo os valores por nome (nome das cores), poré essa maneira é limitada, pois teclamos Ctrl+Space para vermo mais cores, notamos que são poucas em relação a gama de cores que chegam a pouco mais de 65 milhões de cores disponíveis.
+    
+    Chamamos essa representação por nomes
+-->
+    <h2 style="background-color:blue; color:white;">Exemplo de cores</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatum, architecto ipsum possimus quasi sunt.</p>
+    
+<!-- 
+    Representação por códigos Hexadecimais 
+Quando falamos de decimal, nos referimos a sequência númerica que é: 0 1 2 3 4 5 6 7 8 9, logo a base decimal são dez Algarismos, que no caso são números de 0 à 9.
+Quando falamos hexadecimal, nos referimos a sequência de 15 digitos (algarismos), logo não pode ir de 0 à 16, porém letras complementam essa sequência que é: 0 1 2 3 4 5 6 7 8 9 A B C D E F totalizando Dezesseis Algaritimos (digitos Alphanúmericos).
+As cores aqui tem como estrutura as cobinações das 3 cores primárias, que são representada por 00 = mínimo de vermelho ou ff = máximo, 00 = mínimo de verde ou ff = máximo e 00= mínimo de azul ou ff = máximo.
+Essa conbinações podem serem feitas apenas variando os algarismos (números e as letras).-->
+    <h2 style="background-color: #009fff; color: #ffffff;">Exemplo de cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore animi, placeat quibusdam odit reiciendis voluptas sint.</p>
+
+<!-- 
+    Representação por RBG
+Essa forma pode ser variada apenas mudando os números das cores, que são: 0 , 0 , 0 que é mínimo de vermelho, verde e azul forma preto
+são: 255, 255, 255 que é máximo de vermelho, verde e azul forma branco
+No exemplo abaixo usamos rgb (0, 0, 255) que representa a cor azul e rgb(255, 255, 255) que forma a cor branco.
+    Essa palheta de cores podemos obter por meio de qualquer programa de edição de imagens, e nesse exemplo foi usado o Gimp para vermos as cores que podem ser geradas e pelo código gerado e copiado, poderemos  aplicar em nosso código.
+-->
+    <h2 style="background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Exemplo de cores</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet magnam, ratione aliquid quisquam totam eligendi.</p>
+
+<!--  
+    Representação por caracteristicas de cores
+As cores possuem caracteristicas como: Matiz = hue , Saturação = saturation e Luminosidade = ligthness (luminosity), e essa representação podemos adcionar usando a função hsl da css e atribuir os valores h , s%, l%.
+Veja no exemplo abaixo 
+-->
+<h2 style="background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplo e cores</h2>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto neque laborum odio nulla aspernatur, accusamus molestiae.</p>
+
+<!--  
+    Representação com Transparencia
+Essa forma de estilo nas cores usa o acrescimo da transparencia em qualquer representação de cores, seja em nome, hexadecimal, rgb ou hsl.
+Para mudar a transparencia de um cor, pare o cursor sobre a cor, vai aparecer a palhetas de cores, e na palheta temos a barra de cores, e entra a barra de cores e o quadrado com tons de cores temos a barra de trasparencia que ao movimetar ela de cima pra baixo, o acrescimo de masi 2 digitos vai aparecer junto a representação das cores.
+VEJA Os EXEMPLOs ABAIXO . -->
+<h2 style="background-color: rgba(1, 116, 16, 0.979); color:white;">Exemplo e cores</h2>
+<p style="background-color: #0000ffa6; color: #ffffffe5;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+<p style="background-color:hsla(240, 100%, 50%, 0.507); color:hsla(0, 100%, 99%, 0.945);">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+<hr>
+<div style="padding: 22px;" @>
+    <p>Para sair dessa página clique em SAIR.</p>
+    <button>
+            <a href="javascript:window.close()">fechar</a>
+    </button>
+</div>
+</body>
+</html>

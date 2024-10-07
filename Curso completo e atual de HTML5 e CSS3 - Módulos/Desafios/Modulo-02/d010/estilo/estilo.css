@@ -1,0 +1,246 @@
+@charset "UTF-8";/* Aqui usaremos o charset global , pois estamos usando CSS exerno, e com isso fazemos com que nossa página aceite as acentuações de linguagem. */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");/* Importação da fonte para aplicar via CSS.
+OBS: Caso queira aplicar via  html, use o <link> e importe dentro do <head> da html, aos invés de @import na css.*/
+@font-face { /* Importação de fontes internas */
+    font-family: "Android";
+    src: url("../pacote-projeto-d010/fontes/idroid.otf") format("opentype");
+    font-weight: normal;
+}
+
+/* OBS: Todas as cores foram obtidas com o uso do adobecolor.com ensinado no capítulo 13 e as fontes de texto tiramos do site "fonts.googl.com", e "dafont.com".
+Aqui usaremos variáveis de cores e fonts para nossos elementos. Isso nos ajudará na hora de mudar as cores e as fonts de vários elementos que possuem uma determinada cor ou font. 
+    Para isso usamos a Pseudo-classe ( :root ) que todo documento tem, pois ela é a raíz da árvore de configurações de nosso documento; "Podemos dizer que tudo o que determinarmos aqui servirá para todo o nosso documento.
+LEMBRE_SE que as variáveis facilita, pois ao mudar o valor na variável, dai todo elemento que contenha essa variável, sofrerá as mudanças também.
+EXEMPLOS:
+Cor      Variável no CSS
+cor_1 = --cor0: #c5ebd6 
+cor_2 = --cor1: #83e1ad
+cor_3 = --cor2: #3ddc84
+cor_4 = --cor3: #2fa866
+cor_5 = --cor4: #1a5c37
+cor_6 = --cor5: #063d1e
+--fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+*/
+:root {/* Pseudo-classe para as variáveis. 
+Vale lembrar que esse nome pode ser qualquer outro nome que desejar...
+     nome:   Valor da cor */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    /* nome:            Valor da fonte */
+    --fonte-padrao: Arial, Verdana, Helvetica,sans-serif;/*Fontes para caso dê erro nas outras */
+    --fonte-destaque: "Bebas Neue", sans-serif; /* Fonte tirada do fonts.google.com */
+    --fonte-android: "Android", cursive;
+
+}
+
+/* Aqui usamos a configuração global para remover os padrões de valores das tags */
+* {
+    margin: 0px;
+    padding: opx;
+}
+
+        /* Corpo  */
+body { /* Seletor de todo o corpo */
+    /* background-color: #c5ebd6; Aqui é a cor sem variável*/
+    background-color: var(--cor0);/* usamos aqui a varável de cor configurada na pseudo-classe :root. */
+    font-family: var(--fonte-padrao);/* Aqui usamos a variável com a fonte padrão */
+}
+/*p {  OBS: Ao usar somente o seletor p {}, todos os parágrafos são mexidos, e para que o parágrafo do cabeçalho não sofra essa mudança, use o seletor exclusivo para as tags <p> do <main>, e busque não usar o maior que (>) para isso, pois queremos pegar os parágrafos que estão dentro de outras tags,  ou seja a tag ,p> pode estar dentro do <main> em qualquer nível, e não somente como filho do main.
+    VEja no seletor do main como ficou!
+    margin: 15px 0px; Fazemos com que os parágrafosse afastem um pouco dos títulos. 
+    text-align: justify;  Justificamos os textos dos parágrafos para não ficarem bagunçado a direita. 
+}*/
+a.externo::after {/* Esse seletor vai pegar qualquer link em qualquer hierarquia para Adcionamos um elemento após; e ele se posicionará na frente; para isso use a classe (externa) em qualquer elemento que se queira por algo depois dele. */
+    /* content: "🔗"; *//* Veja outra forma abaixo: */
+    content: "\00A0\1F517";/* \00A0 = Espaço */
+}
+        /* FIM do corpo */
+
+        /* Cabeçalho */
+header {
+    background-color: var(--cor4);/* Essa cor de fundo servirá para caso o gradiente não seja compátivel com algum navegador. */
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));/* Adcionamos uma cor de fundo em modo gradente. */
+    min-height: 150px; /* Definimos uma altura miníma da aixa do cabeçalho, para exibiçaõ em qualquer tamanho de tela e dispositivo */
+    text-align: center;/* Centraliza o conteúdo dessa caixa, e caso não funcione só com isso; use o esse parâmetro no seletor de cada elemento. */
+    padding-top: 40px;/* Assim descolamos os elementos da parte superior, se vazar margem, como no caso do margin top do h1. */
+}
+header > h1 { /* Seletor do filho h1 do pai header */
+    /* color: #2fa866; */
+    color: white;/*color: var(--cor5); usamos aqui a varável de cor configurada na pseudo-classe :root. */
+    /* font-family: "Bebas Neue" ,cursive; Optamos por usar fonte de uma variável.*/
+    font-family: var(--fonte-destaque);
+    /* Fonte usando a do google fonts. */
+    font-size: 3em;
+    /* margin-top: 30px; *//* Descolamos o h1 da parte superior mais o elemento vazou e então, atribuimos padding top ao header. */
+    font-weight: normal;/* Removemos o padrão negrito. */
+    margin-bottom: 20px;/* Fazemos com que abaixo do h1, outro elemento se afaste pra baixo. */ 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);/* Sombra no texto h1 principal */
+}
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;/* Tamanho da letra */
+    color: white;
+    max-width: 600px;/* Determinamos o tamanho máximo dessa caixa de parágrafo, porém para centralizar em tela, é necessário atribuir margin auto, pois a tag <p> não é um bloco por padrão. */
+    margin: auto;/* Centraliza o elemento que por padrão é linha ; fazendo comque ele se comporte como um bloco ao dimensionar a tela do dispositivo.*/
+    padding-bottom: 30px;/* Aqui trocamos de margim, pra padding, pois queremos evitar uma barra abaixo do parágrafo quando em telas menores. */
+    padding-right: 10px;/* Descolar o parágrafo do canto */
+    padding-left: 10px;/* Descolar o parágrafo do canto */
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);/* Sombra no texto p principal */
+}
+        /* FIM do Cabeçalho */
+
+        /* Menu de navegação */
+nav {
+    background-color: var(--cor5);
+    padding: 10px;/* Espaçamento interno geral. */
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);/*Sombra na caixa do menu, mas só a vemos em tela grande. */
+}
+nav > a {/* Seletor do filho <a> */
+    color: var(--cor1);/*  */
+    padding: 10px;/* Espaçamento interno entre os elementos. */
+    border-radius: 5px;/* Arredondamos as bordas da caixa do Menu */
+    text-decoration: none;/* Remove as ddecorações de texto, que no caso é o sublinhado padrão de links. */
+    font-weight: bold;/* Mudamos o texto para negrito, fazendo que não precise usar <strong> */
+    transition-duration: .5s;/* Texto de surgimento do Menu. "No caso .5s = meio segundo = 0.5s = 500ms" */
+}
+nav > a:hover{/* Ações para quando passar o mouse sobre os elementos do Menu. */
+    background-color: var(--cor3);/* Muda a cor de fundo */
+    color: var(--cor5);/* Muda a cor das letras */
+}
+        /* FIM de Menu de navegação. */
+
+        /* Conteúdo principal. */ 
+main {  
+    /* Definições para melhor responsvidade da página */
+    min-width: 300px;/* Responsonde bem até telas com 300 pixel de largura  */
+    max-width: 1000px;/* Suporta bem telas maiores, e para de crescer quando atingir 1000 pixels de largura*/
+    margin: auto;/* Para quando em tela cheia, a margem não crescer, fazendo a página perder a qualidade. */
+    margin-bottom: 30px;/* Assim afastamos a caixa main da caixa footer (roda-pé). */
+    padding: 20px;/* Para desgrudar do canto esquerdo, os elementos. */
+    background-color: white;
+    box-shadow: /* inset */ 0px 0px 10px  rgba(0, 0, 0, 0.411);/* Sombra com deslocamento lateral, vertical, espalhamento e cor.    Veja essa sombra emvolvendo a caixa do conteúdo principal. OBS: Se preferir sombra dentro da caixa, use o valor inset */
+    border-bottom-left-radius: 10px;/* Arredondamos  a borda inferior esquerda da caixa. */
+    border-bottom-right-radius: 10px;/* Arredondamos  a borda inferior direita da caixa. */
+}
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;/* Sub-escreve o negrito padrão. */
+    font-size: 1.8em;
+}
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;/* Sub-escreve o negrito.  */
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* Abaixo outra maneira */
+    /* background-image: linear-gradient(45deg, var(--cor1), transparent); */
+    text-indent: 8px;/* Optamos pelo text-indent para afastarmos o texto a esquerda ao invés do padding. */
+}
+main p { /* Aqui pegamos os parágrafos que estão dentro de outras tags,  ou seja a tag <p> pode estar dentro do <main> em qualquer nível, e não somente como filho do main.*/
+    margin: 15px 0px;/* Fazemos com que os parágrafosse afastem um pouco dos títulos. */
+    text-align: justify;/* Justificamos os textos dos parágrafos para não ficarem bagunçado a direita */
+    text-indent: 30px;/* Determinamos uma indentação para o parágrafo, que é um afastamento do texto na primeira linha em relação a margem esquerda. */
+        /* Essas duas propriedades (fonte-size) e (line-height) melhoram a fonte para leitura. */
+    font-size: 1em;/*Aumentamos o tamanho da letra, para que fique + destacado com line-height definido. */
+    line-height: 2em;/* Aqui definimos a altura entre uma linha e outra dos textos. */
+}
+main strong {/* São os textos dentro da tag <strong> */
+    color: var(--cor4);/* Cor do texto */
+    font-weight: bold; /* Peso da fonte, aqui definimos negrito. */
+    border-radius: 20px;/* Arredondamos as bordas. */
+    padding: 2px 6px; /* Afastamos o texto em relação ao texto esquerdo e direito na linha. */
+    border: 1px solid var(--cor1);/* Borda solida colorida. */
+}
+main a { /* Aqui pegamos os links quer sejam filhos, netos, bisnetos do elemento pai main. */
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    border-radius: 20px;
+    padding: 2px 6px;
+}
+main a:hover {/* Muda o elemento quando passar o mouse sobre ele. */
+    text-decoration: underline;
+    color: var(--cor4);
+}
+main img { /* Para melhor responsividade das imagens, busque envelopar a imagens com <picture> e adcione <source media=""> para aplicar outra imagem menor e valores para quando for para telas menores. */
+    width: 100%;/* Com esse parâmetro as imagens do main, serão responsivas. de acordo com a tela. */
+}
+main img.pequena {/* Essa classe foi definida da img no arquivo android.html */
+    /* width: 50%;  Com essa propriedade a imagem ficou muito pequena em telas menores e embaçando em telas maiores por isso optamos por usar a propriedade max-width para melhor responsividade.*/
+    max-width: 350px;
+    display: block;/* Definimos que essa imagem ficará em bloco. */
+    margin: auto; /* Como a imagem por padrão não é um bloco, e para "CENTRALIZAR" é necessário definir display como bloco. */
+    border: 2px solid var(--cor5);
+    border-top-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+div.video {/* Seletor da classe video dentro da div. */
+    background-color: var(--cor5);
+    /* margin-bottom: 30px; *//* Desgrudamos a caixa do elemento aside. */
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57.25%;/* Aqui cresce a caixa pai, mas não altera nada do filho, pois ele está posicionado em relação ao top desse elemento. 
+    OBS: Caso o Vídeo fique com bordas laterais preta, acerte essa porcentagem para que ela desapareça.*/
+    
+    /* Aqui usamos a posição relative para que o elemento filho seja absolute e com isso podermos ter mais opções de manipulação da caixa e do conteúdo. */
+    position: relative;
+}
+div.video > iframe {/* Usamos essa forma conhecida como "gambiarra", para podermos mexer um pouco no elemento iframe que é um link externo e porisso nos dá pouca possibilidade de manipulação. */
+    position: absolute;/* Como o elemento pai foi definido como relative, isso fará com que esse conteúdo se posicione na caixa com relação ao top e ao left. Então o padding-bottom do pai pode ser alterado sem mexer no filho. */
+/* Aqui abaixo são as opções de manipulação do link externo do video. */
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+        /* FIM do conteúdo principal */
+
+        /* Aside Conteúdo periféricos (aparte) */
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+aside > h3 {/* Parágrafo filho aside, em nível 3. */
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+aside > ul {
+    list-style-type: "✔️\00A0\00A0";/* Para mudar o ponto de marcação de lista, copiamos e usamos o símbolo cheket mark do site: https://emojipedia.org ; Caso não funcione copiar e colar, use o código com a barra invertida; Exemplo: "\2714" e para adcionar espaço entre o ponto e o texto use o código que é nbsp = "\00A0*/
+    list-style-position: inside;/* inside = dentro, e outside fora; isso faz com que a bolinha da lista se posicione com o valor. */
+    columns: 2; /* Fizemos a lista ficar em duas colunas. */
+}
+/* FIM do /* Aside Conteúdo periféricos (aparte) */
+
+        /* Roda-pé */
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;/*Centraliza o texto. */
+    font-size: 0.8em;/* Tamanho da fonte. */
+    padding: 5px;/* Espaço interno em ambos os lados entre a borda da caixa e o conteúdo. */
+}
+/*footer a {}  Podemos fazer assim pois pegamos a tag <a> em qualquer nível de hierarquia. Mas para selecionar a tag <a> dentro da tag <p> dentro da tag <footer>, usamos a forma abaixo, de forma específica. */
+footer > p > a {/* Estilo dos links footer */
+    color: var(--cor1);
+    font-weight: bold;
+    text-decoration: none;
+    /* transition-duration: 3s; */ /* Duração do carregamento */
+}
+footer > p > a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+        /* FIM do Roda-pé */

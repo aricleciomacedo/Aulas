@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vídeos do Vimeo.com em HTML5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p {
+            font-weight: bold;
+        }
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto 10px;
+            border-radius: 30px;
+            border: 1px solid transparent;
+            background-color: #ffffff;
+            box-shadow: 0.1em 0.1em 7px 3px black;
+            /* font-size: 0.8em; */
+            font-style: italic; /* Estilo da fonte */
+            font-weight: bolder; /* Peso da fonte */
+        }
+        button :hover {
+            color: white;
+            background-color: #0c000e;
+            transition: 0.3s;
+            border-radius: 30px;
+            padding: 0px 5px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inserindo Vídeos hospedados em serviços de vídeos</h1>
+    <p>Este vídeo está hospedado no site &quot;<a href="https://www.vimeo.com">vimeo.com&quot;</a> e foi incorporado aqui por meio da opção &lt;  &gt;</p>
+    <div>
+        <iframe src="https://player.vimeo.com/video/197093965?color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div>
+        <button><a href="index.html">Ir para a página principal</a></button>
+        <button><a href="index_vazio.html">Link vazio</a></button>
+        <button><a href="index_videoyt.html">Ir para vídeo do YouTube</a></button>
+        <button><a href="index_videocapa.html">Ir para o vídeo com capa</a></button>
+    </div>
+</body>
+</html>

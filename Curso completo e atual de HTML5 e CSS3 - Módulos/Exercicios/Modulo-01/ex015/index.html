@@ -1,0 +1,52 @@
+<!-- 
+    Módulo 01, Capítulo 12, aula 40
+Vídeo:
+Estilos CSS externos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=-i1JVMspDJQ&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=40
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Aqui usamos um ico que está localizado dento da pasta ico, já que o navegador não carregou o ico estando na mesma pasta do index.html -->
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    
+    <title>Estilos Externos</title>
+    <!--    ESTILO      -->
+<!--  Diferente das técnicas anteriores, essa maneira de estilizar é bem mais comum e prática para trabalhar com a CSS e podem ser criados quantos links desejar; vale lebram ainda que as outas técnicas de estilos podem ser aplicados também; como no exemplo abaixo-->
+
+    <link rel="stylesheet" href="style.css"> <!-- Aqui endereçamos o arquivo CSS que tem os estilos que serve para todas as páginas. 
+    PARA vizualizar o arquivo, pare o mouse sobre o que está no href e Siga o link ou segura CTRL e clique no nome do arquivo dentro do href="".-->
+
+    <!-- 
+        Lembre-se que esse estilo serve só para essa página, enquanto o linkado acima serve para mais página, apenas chamando no link no parâmetro href.
+    -->
+    <style>
+        h1 {
+            text-decoration: underline;
+        }
+    </style>
+    <!-- O estilo abaixo serve apenas para a tag, e deve ser evitado, exceto em caso de particularidade (que sera unica para a tag e nao se repetira. (Veja o exemplo no link da tag <p> ). -->
+</head>
+<body>
+        <!--  CONTEÚDO PRINCIPAL -->
+    <!-- Diferente do Estilo inline, o estilo interno, facilita na formatção de tags, pois assim é possível aplicar o estilo desejado a várias tags de uma vez; o que ajuda muito a agilizar seu trabalho pro cliente.
+        Primeiro passo é adcionar o CSS interno criando entre (colchetes angulares ) a tag <style> dentro do <head>, para podermos selecionar as tag a serem estilizadas.-->
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit assumenda itaque vitae optio modi quaerat aperiam perspiciatis dignissimos sit repudiandae asperiores ipsam officiis aliquid explicabo quis fuga nesciunt, esse possimus.</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel debitis omnis illo sunt, accusantium quaerat provident quam eius consequuntur quae veritatis id alias laudantium porro natus expedita, hic et recusandae?</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus blanditiis earum molestiae quasi, repellendus quis assumenda nesciunt quo, ullam animi aspernatur deserunt aliquam deleniti totam aut culpa dolorem reprehenderit facere?</p>
+
+    <!-- Aqui criamos um páragrafo com link para acessar outra página de forma esterna, e para abrir no navegador esse arquivo deve estar dentro da mesma pasta que esse arquivo.
+    OBS; Usamos o targent self para abrir na mesma aba do navegador. -->
+    <p style="text-align: right;"><a href="pagina02.html" target="_self">Ir para a página 2</a></p>
+</body>
+</html>

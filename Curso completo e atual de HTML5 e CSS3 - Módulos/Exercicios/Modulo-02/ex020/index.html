@@ -1,0 +1,84 @@
+<!--
+    ## IMPORTANTE ##
+    Você tem todo o direito de usar esse material 
+    para seu próprio aprendizado. Professores também 
+    podem ter acesso a todo o conteúdo e usá-los com 
+    seus alunos. Porém todos os que usarem esse 
+    material - seja para qual for a finalidade - deverão 
+    manter a referência ao material original, disponível 
+    em https://github.com/gustavoguanabara/html-css. Este 
+    material não poderá ser utilizado em nenhuma hipótese 
+    para ser replicada - integral ou parcialmente - 
+    por autores/editoras/instituições para criar livros 
+    ou apostilas, com finalidades de obter ganho financeiro 
+    com ele.
+-->
+
+<!DOCTYPE html>
+<!-- Os IDs identificam elementos na página. Não é permitido que dois elementos tenham um mesmo ID em um mesmo documento HTML, fica ligadinho(a) aí! -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificação em CSS</title>
+    <style>
+        header {
+            text-align: center;
+            background-color: black;
+            background-image: linear-gradient(to top, black 80%, gray );
+        }
+        h1 {
+            color: chartreuse;
+        }
+        p {
+            color: cornflowerblue;
+        }
+        div {
+            display:inline-block; /* exibe uma div ao lado da outra, em linha */
+            width: 200px; /* largura do bloco */
+            height: 200px; /* altura do bloco */
+            background-color: lightgray;
+            border: 1px solid rgba(0, 0, 0, 0.966); /* borda do bloco */
+        }
+
+        div#area01 { /* configurações exclusivas do elemento com ID "area01" */
+            background-color: darkred;
+        }
+
+        #area02 { /* não é necessário colocar o nome da tag, basta o ID */
+            background-color: darkolivegreen;
+        }
+
+        div#area03, div#area05 { /* podemos atribuir propriedades a mais de um elemento */
+            background-color: darkblue;
+        }
+
+        /*  ATENçÃO
+        a "area04" não teve nenhuma configuração especial, logo ficará sendo exibida como uma div comum (cinza) 
+        */
+
+        div#area06 {
+            background-color: cornsilk;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Identificadores em CSS</h1>
+        <p>No exercício anterior, vimos as <mark>classes</mark> e entendemos que vários elementos podem ter uma mesma classe. Mas se quisermos <mark>identificar</mark> os elementos, dando um "nome" específico para cada um, podemos usar os IDs. Em um mesmo documento, <strong>não podemos ter dois elementos com o mesmo ID!</strong></p>
+    
+        <div id="area01">
+            <h1>Título</h1>
+            <p>Parágrafo</p>
+            <section><article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet ducimus mollitia velit est, quaerat consequuntur vero molestiae, officiis </article></section>
+        </div>
+        <div id="area02"></div>
+        <div id="area03"></div>
+        <div id="area04"></div>
+        <div id="area05"></div>
+        <div id="area06"></div>
+    </header>
+
+</body>
+</html>

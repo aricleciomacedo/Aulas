@@ -1,0 +1,70 @@
+<!-- 
+    Módulo 01, Capítulo 10, aula 27, 28 e 29
+Vídeo:
+Links e Âncoras em HTML5 - @Curso em Vídeo HTML5 e CSS3
+Links internos - @Curso em Vídeo HTML5 e CSS3
+Links para download - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27
+https://www.youtube.com/watch?v=LeLnlT-ZKw8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=28
+https://www.youtube.com/watch?v=Jszz7M676y8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=29
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <!--  Aqui adcionamos links externos -->
+    <h1>Usando links externos</h1> <!-- O que é link externo? Ele é um link que aponta para outro site que não é o nosso."Mas pode ser". -->
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.io/">repositório público no Github</a></p> <!-- Aqui nós envelopamos a frase com a tag <a> de âncora , e ela é quem conterá o link para outra página da web. Note que o href ( Hyper text refence) é o parÂmetro para o link.
+        Note na página a frase sublinhada e letras na cor azul, mostrando que ali tem um link indexado.-->
+    <p>Você também pode acessar essa aula no meu <a href="https://youtube.com/cursoemvideo/">canal gratuito no YouTube</a></p>
+    <!--NOTA: Essa forma simples de linkar algo, é bom porém quando o navegador leva o usuário para outra página, é bem possível que o usuário não volte mais para a sua, pois assim estamos sobrepondo o nosso repositório.
+
+    PARA RESOLVER é bom  e recomendado que usemos alguns parâmetros como nos exemplos abaixo, para que abra outra página com o link e assim mantendo a nossa aberta.. -->
+    <h2>Exemplo de link externo</h2>
+    <!-- Com esses parâmetros nós informamos ao site que o link será algo externo , pois vai para fora do meu site; informamos que ele tem um alvo "target" com _blank "janela em branco", e que ele é relativo algo , que no exemplo é a external. -->
+    <p>Vai abrir outra guia com o <a href="https://gustavoguanabara.io/ " target="_blank" rel="external">repositório público no Github</a></p>
+    <p>Aqui abri nova guia com o <a href="https://youtube.com/cursoemvideo/" target="_blank" rel="external">canal gratuito no YouTube</a></p>
+
+    <!-- Aqui usaremos exemplo de links internos, que fazem "ligação" ou que abre no navegador, um arquivo que esteja em nossa , ou podemos dizer que é uma segunda página; e esta é criada semelhante a essa.-->
+    <h2>Usando links internos</h2>
+
+    <!--  Aqui no paragráfo nós adcionamos uma âncora <a> com o link interno de nossa segunda página.
+        DICA: Dentro do href, podemos segurar Crtl e teclar Space, para vermos os arquivos dentro da mesma pasta do index.html, ou digitar um ponto (.), dois pontos barra (../) para ver pasta fora desta, ou ./ pra ver pasta anterior a esta. ainda barra (/) para ver outras opções.
+    OBS: cada ../ é uma pasta antes, então podemos usar vários da seguinte forma ../../../ que quer dizer 3 pastas antes.-->
+    <p>Está é a primeira página do site. <br> Se você quiser, pode acessar também a minha segunda página clicando abaixo: <br> <a href="pag002.html" rel="next" style="background-color: black; color:white;"><b>Segunda Página</b></a></p>
+    <!--  Esssa maneira de linkar é de forma que essa página seja aberta na mesma aba, pois está relacionada com nossos conteúdos, caso seja de terceiros , geralmente usamos a forma de linkar anterior, como no exemplo de link externo.
+    OBS: Como não existe o comando que vimos no acima para rel="external" ser rel="internal", então colocamos aqui um rel="next" fazendo referencia a próxima página e dessa forma facilitamos o mecânismo de busca a encontrar qual é sistema de navegação que estamos criando pro site. Em outras palavras estamos dizendo qual é o próxima página,e não permitindo ao Google decidir qual será. A mesma coisa será com a segunda página ao adcionaromos o rel="prev" indicando a página anterior.-->
+
+    <p>Você também pode acessar a nossa página 2 no botão abaixo. <br> <a href="./noticias/pag003.html" rel="next" target="_self" style="border: 2px solid blue; text-decoration: none;">página de notícias</a></p><!-- Aqui endereçamos o arquivo pag003.html, e usamos o target="_self" para dizer que esse link será aberto na própria página, ou nessa página mesmo.
+    OBS: Mesmo sem essa target como no no <p> anterior funciona; mas podemos usar para facilitar o mecanismo de busca entender e bem assim damos a semântica (signficado) dessa navegação.
+        VEJA que usei aqui o Style para fazer uma borda e remover o sublinhado do texto-->
+
+<!--  Aqui vamos adcionar arquivos indexados ao link para download. -->
+
+    <h1>Links para download</h1>
+    <ul>
+        <li> <img src="../../../Desafios/Modulo-01/d005/icone-facebook.png" alt=""> <a href="#">Exemplo de link vazio</a></li>
+
+        <!-- Aqui abaixo usamos o parametro dowload=" "  para no caso de não gerar a opção de baixar do navegador; Usamos também o parâmetro type="" para identificar nosso arquivo , e podemos ver mais sobre types no site abaixo:
+https://www.iana.org/assignments/media-types/media-types.xhtml
+Para pesquisar tecle no site ; Ctrl+F e veja a opção de type pra cada arquivo que você vai disponibilizar.-->
+        <li><a href="livros/meulivro.pdf" download="meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livros/meulivro.zip" download="meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+
+<!-- Aqui eu crie uma espécie de menu para acessar as páginas -->
+
+    <h3>Páginas</h3>
+    <ul style="list-style-type: circle;"> <!-- Aqui mudamos a marcação -->
+       <li><b><a href="pag002.html">Pág 2</a></b></li>
+       <li><b><a href="noticias/pag003.html">Pág 3</a></b></li>
+    </ul>
+</body>
+</html>

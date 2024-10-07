@@ -1,0 +1,125 @@
+<!-- 
+    Por padrão , ou seja: sem estilos CSS.
+        1. Links sublinhados.
+        2. links sem nada href, src ou URL ficam em preto.
+        3. Links não visitados ficam em azul.
+        4. Links visitados ficam em violeta.
+        5. Link quando recebe click fica vermelho.
+        6. Curso pointer (mãozinha) aparece.
+    Para mudar usaremos as propriedades CSS necessárias.
+
+Usaremos por exemplo: Pseudo-Classes que são palavras que ddefinem estados de elementos dentro da HTML.
+    Temos ainda os pseudos-elementos, que pode agir nas classes, nos elemnetos, nos "id"; em outras palavras, ele meche diretamente no conteúdo periférico do elemento'.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Links</title>
+    <style>
+
+        /* 
+            SEMPRE É BOM LEMBRAR OS SELETORES PERSONALIZADOS;
+                #  = id
+                .  = class
+                :  = pseudo-class
+                :: = pseudo-element
+                >  = children
+         */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif   ;
+        }
+        a { /* Aqui definimos que os links ficarão com essas propriedades idependente de ter sido visitado ou não. */
+            color: red; /* Sobre-pões as cores dos textos */
+            text-decoration: none; /* Remove sublinado */  
+            font-weight: bold;/* Negrito para o texto    */
+        }
+
+    /* Aqui são as pseudo-classes para mudar os padrões dos links */
+        a:visited{/* Quando o link for visitado */ 
+            color: darkred;/* Sobre-põe o padrão violeta */
+        }
+        a:hover {/* Quando passar o mouse sobre o link */
+            color: black;/* Muda  a cor do texto */
+            text-decoration: underline;/* Sublinha o texto */
+        }
+        a:active {/* Quando clicar no link  */
+            color: yellow;/* Sobre-põe a cor vermelha */
+        }
+
+    /* Aqui são os pseudo-elementos que usaremos para agir no conteúdo diretamente*/
+        a::before {/* Aqui irá adcionar algo atrás do elemento <a> que no caso são os links: */
+            content: '☞    ';
+        }
+        a::after { /* Aqui irá adcionar algo na frente do elemento <a> que no caso são os links:*/
+            content: '    ⇒ link ⇐' ;/* adcionando a palavra na frente do elemento*/
+            text-decoration: none;/* Remove sublinhado */
+            font-weight: normal;/* Mudamos o peso da fonte */
+            color: darkgray;/* Cor de texto */
+        }
+
+    /* PSeudo-elemento na classe */
+        .especial {
+            background-color: #ccc;
+            border-radius: 30px;
+        }
+        .especial::before {
+            content: ' ☑';
+        }
+        .especial::after {
+            content: '☑';
+            color: darkred;
+        }
+
+        #imagem > img {
+            width: 200px;
+            display: none;
+        }
+        #imagem:hover > img{
+            display: block;
+        }
+
+        .divexemplo > .divezemplo-a{
+            background-color: rgba(51, 48, 48, 0.178);
+            color: white;
+            text-shadow: 2px 1px 1px black;/* Sombra */
+            width: 350px;
+            padding: 40px;
+            text-align: center;
+            display: none;
+        }
+        .divexemplo:hover > .divezemplo-a {
+            display: block;
+            background-image: linear-gradient(to top, red, blue);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <!-- Podemos add um target="_blank" para os links abrirem em nova aba. -->
+        <li><a href="testedelinks.html">Repositório GitHub</a></li>
+
+<!-- Add uma classe, para usarmos pseudo-elementos nela , e esse mesmo nome podemos atribuir a outro elemento para que este também herde essas propriedades.-->
+        <li><a href="testedelinks.html" class="especial" target="_blank">Canal do YouTube</a></li>
+
+        <li><a href="testedelinks.html" target="_blank">Site do Cursoemvideo</a></li>
+
+        <li id="imagem"><img src="../../../imagens/mascote.png" alt="imagem,png"><a href="testedelinks.html" class="especial" target="_blank">Exemplo de mesma classe</a></li>
+    </ul>
+    <div class="divexemplo">
+        <a href="testedelinks.html" class="especial" target="_blank">Exemplo de div</a>
+        <div class="divezemplo-a">
+            <h1>Olá Deus</h1>
+            <h2>João 7.17</h2>
+            <p>Se alguém quer fazer a vontade de Deus<br>
+            conheça a respeito da doutrina.</p>
+        </div>
+    <div>
+</body>
+</html>

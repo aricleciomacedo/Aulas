@@ -1,0 +1,114 @@
+<!-- 
+    Módulo 01, Capítulo 08, aula 02 e 03 
+    Módulo 01, Capítulo 08, aula 22 e 23 Totais
+Vídeos:
+Negrito e Itálico do jeito certo - @Curso em Vídeo HTML5 e CSS3
+Formatações adicionais em HTML - @Curso em Vídeo HTML5 e CSS3
+Links:
+https://www.youtube.com/watch?v=T-d_hsO3hUI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=22
+https://www.youtube.com/watch?v=8TgKFYkcO5Y&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=23
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Aqui usamos o fivicon para pegar a prática. -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Formatação de Textos</title>
+
+    <!-- Aqui usamos o CSS para aplicar os estilos das tags, e como vimos abaixo no exemplo 2 , usamos o seletor da tag <mark> para aplicar isso.
+    Note que todas as tags <mark> recebem esse estilo, exceto a que tem um estilo definido dentro de si, como é o caso do <p> do exemplo 1 abaixo.-->
+    <style> 
+        mark {
+            background-color:rgb(255, 238, 0);
+        }
+        div {
+            background-color: lightgray;
+        }
+        #p1 {
+            display: none;
+        }
+        #div1:hover {
+            border: 2px solid black;
+        }
+        #div1:hover #p1{
+            display: block;
+            text-align: center;
+            background-color: lightgray;
+            color: rgb(3, 3, 3);
+            border: 2px solid black;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    
+    <!-- 
+        Aqui usamos uma div, para praticar uma maneira de esconder conteúdo, e apenas vizualizar se passar o mouse sobre um outro conteúdo.
+        Usamos ainda as entidades html greater than = Maior Que = (>), e less than = Menor que (<), que são adcionados por meio do Name ou number = &gt; &#62, e &lt;	&#60.
+         VEJA que &#60 b &gt, será mostrado na página a seguinte escrita <b>.
+    OBS: As entidades podem serem vista no link:
+        https://www.w3schools.com/html/html_entities.asp
+     -->
+    <div id="div1">
+        Nesta frase temos um <b>termo em negrito</b> usando a tag B (não semântica).<p id="p1">
+            Como já vimos , a tag &#60 b &gt é uma tag não semântica, pois não possui significado, somente forma, como vemos é formato em negrito; Em outras palavras você quis esse formato, e isso não significa muita coisa.
+        </p>
+    </div> 
+    <p>Nesta frase, tenho um <strong> termo em destaque</strong> usando a tag STRONG (semântica).</p><!-- Aqui usamos a tag <strong>, e podemos notar na página que tem a mesma fumção da tag <b> que é negritar a formatação da palavra com fonte mais grossae sendo a forma a mesma, porém aqui a tag ganha força de destaque, e não somente a forma de negrito.  -->
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (Não semântica).</p>
+    <!-- Nós envelopamos  a tag <i> usando um atalho no Editar, Emmet, Envelope com abreviatura(Wrap Wrirte Abbreviation) Enter, digita a tag desejada que foi i, e Enter.
+        Usamos para agilizar .
+    OBS: Usamos a tag abbr para praticar o uso da tag, e para indicar a abrevia;áo de um termo.-->
+
+    <!-- 
+        Aqui usamos essa div, para treinar a forma de esconder algum conteúdo e só mostrar depois de passar o mouse sobre um texto ou outro conteúdo.
+    -->
+    <div id="div1">
+        <b>Hello world!</b>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus velit, et veniam perferendis iste labore, nemo eligendi doloribus iure ea voluptates? Illo ipsa, distinctio sequi aut consequatur quaerat cumque aliquam.</p>
+    </div>
+
+
+    <p>Nesta frase, temos um <em>termo em ênfase</em> usando a tag <abbr title="do  Inglês  emphasis">Em</abbr>(de ênfase semântico)</p>
+    <!--Aqui a tag <e> significa que o texto é semântio e tem uma forma com significaso que é ênfatizar a importancia do texto escrito.-->
+    <h2>Texto marcado</h2>
+    <p>Podemos criar também <mark>um texto marcado</mark> usando uma tag    MARK.</p>
+    <!-- Básicamente a tag <mark> não é reconhecida pelo VSC no meados de 2019 Mas o efeito dela é simulando aquelas canetas de marcar texto. Essa tag serve justamente para voçê destacar o que julga importante.
+    OBS:Podemos mudar a cor padrão que é amarelo, para qualquer cor desejada, para isso existem três maneiras.
+    1. Usando <style> CSS dentro da própria tag.
+    2. Usando <style> CSS dentro do <head>.
+    3. Usando link externo para style CSS. 
+VEJAMOS OS EXEMPLOS:-->
+
+    <p>Neste parágrafo o <mark style="background-color: rgb(9, 255, 9);">texto está marcado</mark> por meio de CSS dentro da tag.</p>
+    <!-- Aqui é o exemplo 1, e vemos que usando o style a tag <mark>, estilizamos essa tag de forma individual, e a tag passa a ter um significado, e não somente uma forma e podemos dizer que significa algo importante a destacar. -->
+    <p>E neste parágrafo, temos um <mark>texto marcado</mark> usando CSS dentro do head.</p>
+    <!-- Aqui é o exemplo 2, dessa forma estilizamos a tag usando o CSS dentro do head por meio de seletor de tag, e essa maneira aqui também serve para aplicar a cor a todos os <mark>.
+    VEJA O EXEMPLO DENTRO DA TAG <HEAD> ACIMA!  -->
+    <p>A outra maneira usada para <mark>marca este texto</mark>, é por meio de link externo, e que será alvo de aulas futuras</p>
+
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nesse parágrafo.</p><!-- Note que a tag <big> ficou em vermelho pois ela está obsoleta de acordo com a W3C, e isso é justamente por ela ser um a form; que é ficar grande, porém não tem um significado; Ficar grande não quer dizer que tem significado, uma vez que podemos fazer isso alterando tamanho de fonte no CSS.
+    Já a tag <smal> não ficou vermelha, pois tem um significado, e podemos ver isso por exemplo em documentos como contratos onde a letra pequena significa observações importante e que merecem atenção, e com isso dá sentido aquelas pequenas letras, e não somente forma.-->
+
+    <h2>Texto deletado</h2>
+    <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado.</p><!-- Aqui usamos a tag <del>, para riscar um texto. -->
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> para dar ênfase e indicar que ele foi adicionado depois.</p><!-- Aqui usamos a tag <ins> para riscar o texto em baixo. -->
+    <p>Existe também o <u>sublinhado</u> com a tag U (não semântica)</p>
+    <!-- Porém essa maneira aqui já pode ser considerada uma tag quase obsoleta, pois não possui um significado semântico.
+    Diferente do <ins> que quer dizer tipo, preencha aqui uma lacuna. -->
+
+    <h2>Sobrescrito</h2><!-- Um exemplo disso é o ( X²) -->
+    <p>Para inserir coisas do tipo X<sup>20</sup>+3</p><!-- Aqu queremos mostrar uma equação de X elevado a 20 vezes 3. -->
+    <h2>Texto subscrito</h2><!-- Um exemplo disso é o ( H2O) -->
+    <p>Para inserir coisas do tipo H<sub>2</sub>O</p><!-- omo sabemos a fórmula da água, esse 2, é em baixo e pequeno. -->
+</body>
+</html>

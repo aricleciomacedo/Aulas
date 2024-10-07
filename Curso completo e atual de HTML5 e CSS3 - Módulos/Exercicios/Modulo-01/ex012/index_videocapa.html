@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vídeos com capa em HTML5</title>
+    <style>
+        body {
+            background-color: #0616ff;
+            color: white;
+            text-shadow: 0.1em 0.11em black;
+        }
+        video {
+            border: 3px solid black;
+            /* border-radius: 17px; */
+            border-top-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+            box-shadow: 0.7em 10px 10px 10px black;
+        }
+        div {
+            margin: 30px auto;
+        }
+        button {
+            margin: auto 10px;
+            border-radius: 30px;
+            border: 1px solid transparent;
+            background-color: #ffffff;
+            box-shadow: 0.1em 0.1em 7px 3px black;
+        }
+        a {
+            text-decoration: overline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeos está hospedado mo meu próprio servidor</p>
+
+    <video width="500" poster="imagens/limoes-capa.png" controls muted>
+        <source src="index.html" type="video/mp4">
+        <source src="midia/meu-video.mp4" type="Vídeo/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.webm" type="Vídeo/webm">
+        <source src="midia/meu-video.ogv" type="Vídeo/ogg">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+
+    <div>
+        <button><a href="index.html">Ir para a página principal</a></button>
+        <button><a href="index_vazio.html">Link vazio</a></button>
+        <button><a href="index_videoyt.html">Ir para vídeo do YouTube</a></button>
+        <button><a href="index_videovim.html">Ir para o vídeo do Vimeo</a></button>
+    </div>
+
+</body>
+</html>

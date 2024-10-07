@@ -1,0 +1,91 @@
+<!--
+    ## IMPORTANTE ##
+    Você tem todo o direito de usar esse material 
+    para seu próprio aprendizado. Professores também 
+    podem ter acesso a todo o conteúdo e usá-los com 
+    seus alunos. Porém todos os que usarem esse 
+    material - seja para qual for a finalidade - deverão 
+    manter a referência ao material original, disponível 
+    em https://github.com/gustavoguanabara/html-css. Este 
+    material não poderá ser utilizado em nenhuma hipótese 
+    para ser replicada - integral ou parcialmente - 
+    por autores/editoras/instituições para criar livros 
+    ou apostilas, com finalidades de obter ganho financeiro 
+    com ele.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <style>
+
+        /* Aqui importamos a fonte "pacifico" do Google Fontes */
+        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+        /* REGRA para fonte do h1
+        Aqui definimos a regra para adcionar a fonte "Pacifico" ao <h1>, podemos ver essa regra ao para o mouse sobre o link url do @import, e clicar na opção siga o link; Então vemos as várias regras para adcionar essa fonte ao nosso projeto. 
+        */
+        @font-face {
+            font-family: 'Pacifico';
+            font-style: normal;
+            font-weight: normal;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/pacifico/v22/FwZY7-Qmy14u9lezJ-6H6Mk.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+         /* Aqui usamos a regra para adcionar uma fonte externa baixada e extraida em formato compatível. */
+        @font-face {
+            font-family: 'littlebird';/* Nomeamos a fonte */
+            src: url('./Fontes/littlebird.ttf');/* Endereço de onde se localize a fonte em nossa máquina. */
+            font-weight: normal;/* Peso da fonte. */
+            font-style: normal;/* Estilo da fonte. */
+        }
+        body {
+            height: 93vh;
+            font-size: 15pt;
+            background-image: linear-gradient(277deg, black, white 47%);
+            /* background-repeat: no-repeat; */
+        }
+
+        h1 {/* Aqui usamos a fonte definida na regra font-face cujo nome littlebird. */
+            font-family: "Pacifico", serif;
+            font-weight: 700;
+            font-size: 3em;
+        }
+
+        h2 {
+            font-weight: normal; /* serve para tirar o negrito dos títulos */
+        }
+
+        h2#padrao {
+            font-family: Arial, Helvetica, sans-serif; /* O navegador vai tentar carregar a primeira, se não funcionar, passa pra próxima */
+        }
+
+        h2#google {
+            font-family: 'Pacifico', cursive; /* A importação dessa fonte aconteceu na linha 8 */
+        }
+
+        h2#local {
+            font-family: 'littlebird', sans-serif; /* Fonte local importada da linha 9 até 12 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes em CSS</h1>
+    <p>O título acima está com a fonte "Pacifico", que foi adcionada por meio da regra @font-face.</p>
+    <hr>
+    <h2 id="padrao">Podemos configurar fontes padrão do sistema</h2>
+    <p>Acima usamos as fontes "Arial, Helvetica, sans-serif"</p>
+    <hr>
+    <h2 id="google">Ou então usar uma fonte do Google Fonts</h2>
+    <P>Acima usamos a fonte "Pacifico" por meio de link de importação</P>
+    <hr>
+    <h2 id="local">Ou ainda usar um arquivo local de fontes</h2>
+    <p>Acima usamos a fonte "littlebird" que está em formato "ttf" em nossa máquina</p>
+    <hr>
+</body>
+</html>

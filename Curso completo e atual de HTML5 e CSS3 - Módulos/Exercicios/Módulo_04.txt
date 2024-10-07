@@ -1,0 +1,185 @@
+﻿>>> {INÍCIO DO CAPÍTULO 23} <<<
+Módulo 04, Capítulo 23, aula 02
+Vídeo:
+Vamos começar o projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/Rgji4o96ZhA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+
+COmece acessando https://gustavoguanabara.github.io/ , clique em Resolva os desafios, vá na pasta modulo-04/d-13
+e baixe o pacote-d013.zip ; Então extraia os arquivos que são imagens um favicon.
+Agora crie a pasta chamada projeto-social-master e dentro vai todos os arquivos da pasta pacote-d013.
+LEMBRE-SE de subir e comitar tudo para o GitHub.
+    Agora no Visuas Studio Code crie o index.html e inicie o projeto.
+
+Módulo 04, Capítulo 23, aula 03
+Vídeo:
+Criando a página inicial do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/HUnltyZ9Rxg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+Nessa aula começamos apartir da tag <main>, que a tag semântica para o contéudo principal. 
+
+Módulo 04, Capítulo 23, aula 04
+Vídeo:
+Posicionando o conteúdo do site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/Gx-zp0aaOto?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+Essa aula começa apartir da criação do arquivo home.html.
+    Esse arquivo não possui conteúdos no <body>, mas tão somente estilos CSS, e será carregado dentro do index.html na tag <iframe> dentro da <section>.
+
+Módulo 04, Capítulo 23, aula 05
+Vídeo:
+Criando os botões para redes sociais - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/1kOhJr4DXIg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Essa aula começa apartir da adção de uma mensagem dentro do <iframe> para caso em que o navegador não é
+compatível, adcionamos um link dentro da <section id="redes-sociais"> com imagens , e  cada link será um "botão" .
+
+Módulo 04, Capítulo 23, aula 06
+Vídeo:
+Criando as páginas de cada rede social - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/ar5UB2MxraE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Essa aula iniciamos adcinoando o link do home.html para <a href=""> do botão Home, e resolvendo um
+ probleminha que dá quando por curiosidade clicamos nos botões que estão apenas com o "#" definido para o href da âncora. Então para resolver esse problema de barras de rolagem aparecerem, adcionamos os links para todas as âncoras (<a>).
+    As demais telas que serão carregadas quando clicado nos demais botões que não seja o Home, irão carregar
+uma imagem em "tipo ripa" que será ensinado a fazer, em aulas próximas. PArA isso criaremos um arquivo HTML para incorporar essa imagem e torna-lá um link local, assim como o Home.
+
+Módulo 04, Capítulo 23, aula 07
+Vídeo:
+Personalizando as imagens do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/z30JMe5Cufs?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula é ensinado a editar as imagens para ficarem compridas , parecendo ripas e para  poder  aplicar
+dentro do iframe como vimos no exercício anterior.
+    Então o primeiro passo é tirar print da tela do celular com o início da página da rede social, ou com a 
+imagem que se desejar; no exemplo do projeto foi tirado vários prints, (quatro prints em alguns casos e mais de quatrom em outros), para formar uma imagem comprida.
+    Agora use o Gimp para editar as imagens, ou algum editor que se tenha mais noção do que fazer para
+montar a imagem única.
+
+>>> {FIM DO CAPÍTULO 23} <<<
+
+
+>>> {INÍCIO DO CAPÍTULO 24} <<<
+
+Módulo 04, Capítulo 24, aula 1
+Vídeo:
+Como criar formulários com HTML5 - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/Wa1Ji2t2gmc?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula estudaremos sobre formuláros, e é importante que se tenha feitos todos o exercícios, desafio
+e mini-projetos que foram estudados até aqui! Pois nada adianta querer aprender sobre o assunto de formulários se não tiver aprende a base de tudo. 
+    Outra coisa impotante é: Para início de noção JavaScript é bom que se aprenda sobre formulários, pois a 
+linguagem JavaScript na sua essência surgiu como uma linguagem script para ser aplicado junto com HTML e CSS, apesar de existir hoje inúmeras aplicações para essa linguagem de programação.
+    Aprenderemos de fato o que é um formulário, que básicamente é um local onde os visitantes de um site
+(páginas) podem armazenar dados. Os formulários nem sempre são digitais, porém vamos aprender também sobre.
+    De forma simples de entender podemos pegar de exemplo um formulário de papel que muitas vezes eram usados
+em promoções de lojas onde era necessário que o cliente colocasse seus dados para participar de uma promoção, que muitas vezes eram depositadas em urnas improvidas etc.
+
+    Foi usado de exemplo; o site da hostnet para vermos o preenchmento de um formlário para vermos como
+funciona parte de um formulário. Vale lembrar que para abrir conta no GitHub, foi preciso também preeencher um formulário. Pois então! É assim que é básicamente o que o usuário vê como formulário.
+
+    POR FIM , no Visual Studio Code , na pasta do Modulo-04 criamos o exercicio ex25 apartir do form001.html.
+
+
+Módulo 04, Capítulo 24, aula 2
+Vídeo:
+Usar Label vai melhorar seus formulários - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/MqdSffM1HZc?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula vamos resolver alguns dos incovenientes de um formulário, como por emxemplo o de os campos
+não terem ligação com seus nomes, já o de os dados não estarem indo para lugar algum será resolvido em aulas futuras, pois necessitamos de aprender outra linguagem.
+    OBS: Ainda continuamos no exercício da pasta ex025 no arquivo form001.html, e inicialmente desligamos o
+campo que mostra textos (memorizados) recém digitados e que servem de preenchimento rápido usando o atributo da seguinte forma <form autocomplete="off">.
+
+
+Módulo 04, Capítulo 24, aula 3
+Vídeo:
+Métodos GET e POST para formulários - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/rcaXavXsWGA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Na aula anterior aprendemos que nessa estrutura básica de formulário, quando digitamos por exemplo nome
+e sobrenome nos campos de dados e enviamos esses dados; os mesmo aparecem na barra de endereços(URL) do navegador e isso é padrão no envi de formulários e pode nos levar a pensar que seja uma falta de segurança.
+    MAs pode ser que seja uma falta de segurança, porém pode ser algo impensado por parte do programador, já
+que se pode desativar por meio de parâmetros.
+    Outra coisa que podemos entender é que formulários usamo por padrão esse parâmetro de mostra na URL o
+que foi digitado dentro da caixa de dados, que é a caixa (q) que é caixa da solitação = \(quere); 
+OBSERVE depois do "search?" e depois e depois do "&oq" os dados digitados na caixa.
+VEJA por exemplo nessa URL pesquisada:  https://www.google.com/search?q=curso+em+video&oq=curso+em+video&aqs=chrome..69i57j0i512l8.5893j0j15&sourceid=chrome&ie=UTF-8
+
+    Agora para deixar formulários seguro é necessário estudos mais avançados em alguma linguagem de
+programação, porém existem dois metódos simples para envio de formulário.
+    1º  É esse padrão que não precisamos definir algo dentro da tag <form>, e ele se chama metódo (GET).
+PODEMOS ainda por meio do atributo method definido da seguinte dorma: <form method=""> e entre aspas duplas por meio do CTRL ver os parâmetros que são o padrão GET , o POST e o {dialog}.
+    "OBSERVAÇÃO: Na HTML tanto faz digitar GET ou get, pois só há diferença para a linguagem PHP."
+    2º Esse é o metódo POST que faz com que esses dados não apareçam na URL da barra de endereços do
+navegador.
+
+    # POR FIM veja no arquivo form001.html apartir da aplicação na tag <form>. 
+
+
+Módulo 04, Capítulo 24, aula 4
+Vídeo:
+Criando caixas de texto e de senha - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/SinNyasc-zU?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Começamos essa aula apartir da criação do arquivo cadastro.php para entendermos um pouco mais sobre
+envios de formulários; neste caso nos deparamos com o envio de dados para o arquivo mesmo sem nada digitado nas caixas de dados; Então para resolvermos isso, iremos entender um pouco mais sobre o assunto.
+    PARA didática inserimos duas frases dentro do arquivo PHP, e enviamos os dados sem nada, e obrservamos
+que mesmo sem dado algum digitado, o envio acontece, então criamos o arquivo fomr002.html para aprendermos alguns atributos para melhorar esse Pequeno incongruente.
+    OBSERVAÇÃO:
+        Caso seu navegador mostre um erro ao invés de mostrar a mensagem que foi digitado no arquivo PHP
+então arraste o arquivo.php para o navegador, isso fará o navegador abrir o arquivo e mostrará a mensagem desse exemplo que foi feito para vizualizar o envio de dados ; {DICA dada por flaviana...9 nos comentários}.
+
+Módulo 04, Capítulo 24, aula 5
+Vídeo:
+Elementos number, month, date e time em formulários HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/7P22zubU6i8?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula inicia com a criação do arquivo form003.html.
+
+
+Módulo 04, Capítulo 24, aula 6
+Vídeo:
+ECompatibilidade com navegadores - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/jX7v3lFdnvg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula vemos como se comporta os controles para as caixas e as labels em diferentes navegadores.
+    
+    É importante saber que nem todos os navegadores tem suporte para as caixas e configurações de labels e
+inputs, como por exemplo no safari que agora só é disponível para MAC e IOS a caixa configurada para números onde o usuário digita HORA, aceita letras e ainda envia conforme for digitado.
+
+    OBSERVAÇÃO: Dá pra resolver esses problemas de compatíbilidade dos controles, desenvolvendo nossos próprios controles por meio de JavaScrip, porém não é contúdo para essas aulas.
+
+
+Módulo 04, Capítulo 24, aula 7
+Vídeo:
+Formulários com telefone e e-mail - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/SRMEHklQC4M?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    O início dessa aula se dá apartir da criação do arquivo form004.html.
+Nela usaremos o input especial para e-mail, mas não podemos exigir muito dele, pois é algo simples.
+
+
+Módulo 04, Capítulo 24, aula 8
+Vídeo:
+Checkbox e Radio button em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/iGDHFa4znHE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula vamos aprender dois botões (tipos de controle) bem utilizados em HTML, que são os botões de radios e o checkboxs.
+Iniciamos então com a adção dos botões Enviar, limpar; e usamos checkboxs para que  usuário marque seus favoritos.
+
+>>> {FIM DO CAPÍTULO 24} <<<

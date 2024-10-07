@@ -1,0 +1,68 @@
+<!-- 
+    Módulo 01, Capítulo 08, aula 24
+Vídeo:
+Citações e Códigos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=4ynvsrkamt8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=24
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Aqui adcionamos o ícone -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Código-fonte</h2><!-- São comandos, partes de códigos. -->
+    <p>O comando document.getElementById('teste') é escrito em linguagem JavaScript.</p><!-- Note que essa maneira de exibição mostra as letras ocupando espaços diferentes uma das outras, e dificulta muita vezes a leitura pois não é fonte monoespaçada. -->
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p><!-- Essa maneira de exibição fonte espaçada e mostra as letras ocupando espaços de igual modo ajudando até na visibilidade para o leitor. 
+    OBS: Essa tag é ótima para exibir códigos, e faz jus ao nome da tag.-->
+
+    <code><!--  Aqui notamos que apesar do <code> deixar a aparência da escrita bonita semelhante ao código, a tag não é capaz de indetar, ou seja mostra exatamente da maneira como está escrito abaixo.
+        Para resolver esse B.O, coloque essa tag, dentro da tad <pre>.
+        VEJA NO EXEMPLO DEPOIS DESSE. -->
+        num = int(input('Digite um número'))
+        if num % 2 == 0:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é IMPAR')
+        print ('Fim do programa')
+    </code>
+
+    <pre><!-- Aqui fazemos o texto aparecer exatamente com essa formatação -->
+        <code>
+<!-- OBS: Cada espaço será cosiderado na vizualização do conteúdo, e com isso eliminamos o uso da tag <br> que também ajuda na quebra de linha, porém com a tag <pre> isso se torna mais agil e melhor.-->
+    num = int(input('Digite um número'))
+    if num % 2 == 0:
+        print(f'O número {num} é PAR')
+    else:
+        print(f'O número {num} é IMPAR')
+    print ('Fim do programa')
+        </code>
+    </pre>
+
+    <h2>Citações simples</h2>
+    <p>Como diria o pai de um amigo: <q>O computador é um burro muito rápido</q>.</p><!-- Poderiamos colocar as aspas diretamente, porém utilizando a tag <q> de (quote) damos um sentido de citação, pois realmente estamos citando algo que foi dito por alguém.
+        Chamamos essa de citação simples.-->
+    
+    <h2>Citações completas</h2>
+    <p>Segundo Jeff Noble, no seu livro HTML para leigos:</p>
+    <blockquote cite="https://books.google.com.br/books?id=E8ZtDwAAQBAJ&pg=PA17&dq=HTML&hl=pt-BR&sa=X&ved=0ahUKEwjH5-PevNboAhVNIbkGHcoxCOgQ6AEIOjAC#v=onepage&q=HTML&f=false"><!-- Essa tag é boa para descrever uma citação pois dentro dela podemos adcionar link de referência ao autor do texto. Para isso basta usar o parâmetro cite="" que é citando.
+    OBS: Essa citação ao autor, não mostrará nada na página, porém os mecanismo de busca do Google saberá que essa frase se refencia ao livro  disponível no endereço (link), e com isso você não fere os direitos autorais.-->
+        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+    </blockquote><!--  Aqui temos uma citação com quebra de linhas e afastamento horizontal pra lateral direita. -->
+
+    <h2>Abreviações</h2>
+    <!-- A tag <abbr> serve para darmos o significado de siglas -->
+    <p>Estou estudando <abbr title="HypeText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+    <!-- Note que usando a tag <abbr> as siglas irão ficar pontilhadas, e quando passar o mouse sobre; será mostrado um popup na tela e dentro o title. -->
+
+    <h2>Texto invertido</h2><!--Aqui invertemos a frase-->
+    <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+    <!-- Podemos usar também ltr para normal, ou seja escrito da esquerda para a direita (left to right). -->
+</body>
+</html>

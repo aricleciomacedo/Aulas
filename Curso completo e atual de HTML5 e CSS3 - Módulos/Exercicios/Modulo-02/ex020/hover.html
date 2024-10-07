@@ -1,0 +1,54 @@
+<!-- 
+    Módulo 02, Capítulo 15, aula 03
+Vídeo:
+Pseudo-classes em CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=WPtRX4n0UJs&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=21
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* background-image: linear-gradient(to left, yellow,red); plao de fundo degradê */
+        }
+
+        /* Assim dizemos que selecionamos dentro da tag pai <div> o filho tag <p> para receber de forma exclusiva essas propriedades
+        NOTE que a representação de thaiode (símbolo maior que)=">"" significa o filho */
+        div > p {
+            display: none; /* Oculta o elemento */
+        }
+        /* Aqui desocultamos o elemento filho <p> de dentro da <div> */
+        div:hover > p {/* Ao passar o mouse sobre a div */
+            display: block;/* desoculta o elemento */
+            color: white;/* muda  a cor do texto */
+            text-align: center;/* Alinha o texto ao entro */
+            font-weight: bold; /* Define texto em negrito */
+            background-color: red;/* Fundo muda de cor */
+            width: 30%;/* Largura do elemento */
+            /*block-size: 70px;  aqui cresce o elemento para baixo*/
+            /* float: right; joga o elemento pro lado */
+            
+        }
+
+        div:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do exemplo!</p>
+</body>
+</html>

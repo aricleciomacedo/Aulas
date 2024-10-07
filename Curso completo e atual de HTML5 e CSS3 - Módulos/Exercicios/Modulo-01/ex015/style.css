@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* Aqui aplicamos uma regra (@) e resolvemos os problemas de compatibilidade com acentuações e simbolos de textos que variam de idioma.
+OBS: Veja mais regras teclando Ctrl+Space depois do @ 
+SAIBA: Que não obrigátorio usar essa regra, porém como a estilização está em arquivo fora do html, sempre será bom usar essa regra de compatíbilidade.*/
+
+/* Aqui é o estilo aplicado com link externo (<link rel="stylesheet" href="style.css">) dentro do index.html e do pagina02.html*/
+body { /* Aqui chamamos de seletor de tag para estilizarmos o body (corpo). */
+    background-color: #f0fda2; /* Cor de fundo. */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte de texto. */
+    font-size: 15px; /* Tamanho da fonte do texto */
+}
+h1 { /* Aqui é o seletor de h1 para estilizarmos todas as tags <h1> */
+    color: maroon; /* Aqui mudamos a cor de todas as tags <h1> */
+    background-color: goldenrod; /* Cor de fundo */
+    text-align: center;
+}
+h2 { /* Aqui estilizamos todas as tags <h2> */
+    color: darkred; /* Cor do texto */
+    text-align: center;
+}
+p { /* Aqui é o seletor de para estilizamos todas as tags <p> */
+    /* text-align: justify; Aqui mudamos orientação do texto*/
+    text-align: center;
+    font-size: 19px;
+    color: black;
+}

@@ -1,0 +1,151 @@
+<!-- 
+    Aqui foi montado o projeto de exemplo usando as groupin-tags no estudo pdf sore Modelo de Maixas, onde o diagrama mostra um código montado e ao lado uma ideia de como fica uma página usando as tags.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grouping Tags e Semantic Tags</title>
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: rgba(0, 0, 139, 0.116);
+        }
+        header {
+            border: 1px solid blue;
+            background-color: rgba(7, 2, 255, 0.171);
+            /* font-weight: bolder; */
+            /* font-size: 1.5em; */
+        }
+        b {
+            margin: 10px;
+        }
+        nav {
+            border: 1px solid blue;
+            margin: 10px;
+            padding: 10px;
+            height: 10vh;
+            text-align: center;
+            background-color: rgba(0, 4, 255, 0.486);
+            box-shadow:3px 3px 4px 3px rgba(0, 0, 255, 0.363);
+        }
+        main {
+            /* border-radius: 12px; */
+            background-color: rgba(7, 2, 255, 0.171);
+            height: 70%;
+            margin: 7px auto;
+            border: 1px solid blue;
+        }
+        nav > h2 {
+            display: inline;
+            /* margin: -15px; */
+        }
+        .div_main {
+            display: flex;
+        }
+        section {
+            /* margin: 7px auto; */
+            border: 1px solid blue;
+            background-color: rgba(0, 4, 255, 0.486);
+            margin: 7px;
+        }
+        .div_section {
+            width: 80%;
+        }
+        article {
+            margin: 7px;
+            border: 1px solid blue;
+            background-color: rgb(215, 215, 251);
+        }
+        .article_two {
+            display: flex;
+            justify-content: space-between;
+        }
+        .content_article {
+            display: inline;
+        }   
+        .article_two > article {
+            width: 100%;
+        }
+        .aside_article{
+            /* display: inline; */
+            width: 100%;
+            margin: 7px;
+            border: 1px solid blue;
+            background-color: rgb(215, 215, 251);
+            text-align: center;
+        }
+        .div_aside {
+            width: 20%;
+            margin: 7px;
+            border: 1px solid blue;
+            background-color: rgb(215, 215, 251);
+            text-align: center;
+        }
+        footer {
+            height: 7vh;
+            /* margin: 7px; */
+            background-color: rgba(0, 4, 255, 0.486);
+            border: 1px solid blue;
+            text-align: center;
+        }
+        footer > h3{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <b>header</b>
+        <h1>Título de nível 1</h1>
+        <nav>Link Link Link Link... <br><h2>nav</h2></nav>
+    </header>
+    <main> 
+        <b>main</b>
+        <div class="div_main">
+            <div class="div_section">
+                <section> 
+                    <b>section</b>
+                    <article>
+                        <b>article</b>
+                        <h2>Título de nível 2</h2>
+                        <p>Texto do artigo</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minima facere dolorum quia sequi unde iste, magni consectetur rerum nisi vitae dignissimos iusto reprehenderit. Esse fugiat labore ad autem facilis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure ratione, ipsa nihil fugit culpa vel, recusandae maxime consequuntur laudantium molestias voluptatum blanditiis tenetur quis iste in quos! Autem, aspernatur accusamus!</p>
+                    </article>
+                    <article class="article_two">
+                        <b>article 2</b>
+                        <div class="content_article">
+                            <h2>Título de nível 2</h2>
+                            <p>Texto do artigo</p>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, quidem sed blanditiis quis autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eius omnis reprehenderit inventore fugit cumque vero. Velit maiores saepe cum dicta molestias aliquid, labore, quod quae expedita officia sit consequuntur?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita totam obcaecati, quos, doloremque ad cumque libero, recusandae eaque consectetur culpa dolore omnis laboriosam placeat doloribus aut incidunt sint iure. Labore.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo tempora eos blanditiis exercitationem corporis. Culpa impedit, quos voluptas facere, tempore porro velit incidunt error repellendus dicta excepturi dolor possimus!</p>
+                            <h3>+ lorens</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde libero officia dolorem perferendis in repellat ducimus minus nihil, doloremque cumque ratione consectetur tenetur. Omnis enim dolor repellendus nisi repudiandae consectetur?</p>
+                        </div>
+                        <aside class="aside_article"> 
+                            <b>aside</b>
+                            <h2>Conteúdo periférico</h2> 
+                            <p>(Conteúdo a parte) do artigo.</p>
+                        </aside>
+                    </article>
+                </section>
+            </div>
+            <div class="div_aside">
+                <aside>
+                    <b>aside</b>
+                    <h2> periférico</h2> 
+                    <p>(a parte) do site.</p>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <b>footer</b>
+        <h4 style="display: inline;">Roda-Pé</h4>
+        <p style="margin: 0;">Conteúdo final da página.</p>
+    </footer>
+</body>
+</html>

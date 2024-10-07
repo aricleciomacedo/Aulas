@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Alinhamentos</title>
+    <!-- Aqui iremos usar um estilo local -->
+    <style>
+        body {
+            /* Aqui usamos um short-hand de fontes */
+            /*     peso   medida   fonte  */
+            font: normal 16px Arial, Verdana, serif;
+            text-align: left; /* Left ja é padrão e não muda nada */
+        }
+        h1 {
+            text-align: center; /* O texto ficará ao centro */
+        }
+        h2 {
+            text-align: right; /* O texto ficará á direita */
+        }
+
+        /* 
+            OBSERVAÇÃO sobre o alinhamento justificado "justify". 
+            Para que você perceba isso, terá que colocar um texto um pouco maior. Caso você não perceba que o alinhamento está sendo feito nas duas laterais, tente diminuir um pouco o tamanho do seu navegador. Esse tipo de alinhamento é bastante utilizado para textos longos e grandes parágrafos, para dar uma sensação de simetria. Agora eu já não sei mais o que escrever, mas vou continuar para que seu texto fique grande o suficiente para que você possa ver o alinhamento justificado. Nunca pensei que seria tão difícil ficar escrevendo coisas sem sentido só pra que uma explicação faça um sentido mínimo. Já chega, pra mim já deu! Espero que você tenha conseguido entender. 
+        */
+        p {
+            text-align: justify ; /* Espaço entre palavras ajustando o texto*/
+            text-indent: 30px; /* Indeta o inicio do parágrafo; muito usado em redação , onde se dá um espaço no inicio do texto. "É tipo um tab no inicio do texto." */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de alinhamento</h1>
+    <p>O Título acima tem alinhamento padrão que é "text-align: left;. &uarr; "</p>
+
+    <!-- Antigamento tinhamos a tag <center> que centralizava o texto, veja baixo o exemplo: -->
+    <center><b>TESTE</b></center> <!-- Veja que essa tag está vermelha pois ela é considerada obsoleta, e  não se usa mais. Outro exemplo que já vimos anteriormente é a proprieda bgcolor="" dentro da tag, para mudar cor de fundo.-->
+    <p>Este texto acima tem o linhamento por meio da tag &ltcenter&gt que está obsoleta no HTML5. &uarr;</p>
+
+    <h2>Subtítulo</h2>
+    <p>Este Subtítulo acima tem seu alinhamento "text-align: right;." &uarr;</p>
+    <p>Vale lembrar que alinhar textos usando html não dá sentido a sua página, e com isso os buscadores menosprezam seu site. Portanto use sempre CSS para alinhar o conteúdo uma vez que alinhamento não é semântico e não tem significado algum.</p>
+
+
+    <h3>Alinhamento dos parágrafos</h3>
+    <p><b>Todos os parágrafos desta página estão com alinhamento "text-align: justify;e com text-indet: 30px;."</b></p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, maiores deleniti tempora quos atque eius ullam? Fuga necessitatibus numquam laboriosam rem, iste est qui illo. Aut ducimus praesentium ut tenetur.</p>
+    <p>Ipsum facere magni in sapiente molestiae iste repudiandae officia! Mollitia similique fugiat, minus cumque, id perspiciatis modi nihil nostrum eius autem totam quasi. Saepe dolorum aperiam accusantium, inventore veniam tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptate, maxime quam repellendus laborum mollitia veritatis illo. Libero culpa excepturi totam repellendus quas quos! Consectetur, tenetur. Sunt quidem tenetur quos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nisi, cumque ipsum laborum saepe nesciunt. Iusto reiciendis excepturi voluptas ab vitae maxime? Minima, architecto sapiente animi sunt magni eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quas ullam facilis assumenda illum delectus officia facere, voluptatum deserunt minima sit illo vero debitis esse dignissimos corporis ex nihil totam.
+    Ab deleniti laboriosam nemo, libero dolorem cumque qui? Molestias laudantium corrupti porro facere quas rem odit, architecto molestiae maxime id reiciendis dolores vero ratione aperiam, repellat dolorum? Temporibus, molestias voluptate!
+    Minima natus praesentium dolorem tempora sed corporis cupiditate neque perspiciatis tenetur dolores in fugiat eligendi velit perferendis suscipit provident eius doloremque sunt, quae temporibus? Facere eveniet soluta voluptatem perspiciatis aspernatur!
+    Cum quas eveniet beatae maxime fugiat facilis voluptatem quia aut at sit. In perferendis eos ipsam, pariatur repellendus temporibus corporis eius, odio nihil amet delectus iure provident esse nobis tenetur?
+    Ea deserunt, itaque aperiam nulla expedita repellendus officiis, praesentium excepturi in eos fugit veniam facere quidem repellat veritatis? Temporibus facilis saepe similique aspernatur voluptatibus impedit, harum porro fuga iure! Beatae!</p>
+</body>
+</html>

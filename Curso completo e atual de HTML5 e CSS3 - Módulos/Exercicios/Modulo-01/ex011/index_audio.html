@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Sons em HTML5</title>
+    <style>
+    body {
+        /* background-image:linear-gradient(rgb(0, 0, 0), rgba(4, 43, 216, 0.911), 
+        rgb(0, 9, 128) 20%); */
+        background-image: linear-gradient(90deg, #021db4, #02023a 70%, transparent);
+
+        background-repeat: no-repeat;
+    }
+    menu {
+            display: block;
+            width: 550px;
+
+        }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    ul > li {
+        background-color: #022d7c9d;
+        box-shadow: 1px 2px 3px 3px black;
+        border-radius: 12px;
+        padding: 7px;
+        list-style: none;
+    }
+    ul > li > a {
+        color: white;/* Cpr de texto dos links */
+        text-decoration: none;/* Remove ublinhado dos links */
+        text-shadow: 0.1em 0.1em #000000a9;/* Sombra no texto do link */
+    }
+    h1 {
+        color: white;
+    }
+    p {
+        color: white;
+    }
+    div {
+        background-image: url("imagens/foto_p.png");
+        background-repeat: no-repeat;
+        height: 300px;
+    }
+    .aud {
+        margin: 20px;
+        background-color: #0008249d;
+        border: 1px solid rgba(1, 3, 121, 0.233);
+        border-radius: 30px;
+        box-shadow: 7px 7px 7px -3px black;
+    }
+    </style>
+</head>
+<body>
+    <menu>
+        <ul>
+            <li>
+                <a href="index.html">Voltar para a página principal</a>
+            </li>
+            <li>
+                <a href="index_img.html">Imagens em HTML5</a>
+            </li>
+            <li>
+                <a href="index_vid.html">Vídeos em HTML5</a>
+            </li>
+        </ul>
+        </menu>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <!-- Aqui é tag para adcionar o áudio, e para tocar na página, usamos o parâmetro "autoplay" e para adcionar os controles usamos o parâmetro "controls".  -->
+    <audio src="midia/Cypher - Wayne Jones.mp3" controls "autoplay"></audio>
+
+<!-- Há casos em que o formato mp3 não é compatível e nem tocado em alguns navegadores, então podemos formatar para mais opções de fomatos como por exemplo:
+        MP3; WAV; OGG 
+    Portanto para usar mais de um formato, basta adcionar vários "sources" conforme os formatos desejados.
+    ASSIM o navegador poderá tocar o áudio seguinte caso o primeiro seja incompatível, e caso não reproduza nem um dos formatos adionados, então a mensagem contida no <p> será exbida, e uma opção de link será dada para baixar o arquivo incompatível ao navegador.
+OBS:
+    O type de cada formato é indicado no parâmetro "type".
+-->
+    <div>
+        <audio class="aud" preload="auto" "autoplay" controls loop title="Audio_teste">
+            <source src="midia/happy-mistake.mp3" type="audio/mpeg">
+            <source src="midia/happy-mistake.ogg" type="audio/ogg">
+            <source src="midia/happy-mistake.wav" type="audio/wav">
+            <p>Infelizmente seu navegador não consegue reproduzir áudio! <a href="midia/happy-mistake.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+        </audio>
+    </div>
+</body>
+</html>
