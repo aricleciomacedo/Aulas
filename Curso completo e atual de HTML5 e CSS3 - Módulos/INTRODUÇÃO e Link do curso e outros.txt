@@ -1,0 +1,48 @@
+				Videos 
+
+https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n
+
+				Arquivos para download
+
+https://github.com/gustavoguanabara/html-css/blob/master/ajude-a-divulgar/arte001-gustavoguanabara/instagram-multi/instagram-multi-003.png
+
+				Acordo para focar nos estudos 
+
+Link da aula: Precisamos fazer um acordo - @Curso em Vídeo HTML5 e CSS3
+https://www.youtube.com/watch?v=VfIXgGJWLvA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=3&ab_channel=CursoemV%C3%ADdeo
+
+				INTRODUÇÃO
+
+	É bem comum que pessoas digam que não consegue aprender linguagens de programação ou algo do tipo! já tentou fazer cursos e não adianta, 
+e muitas vezesaté desistem de seus objetivos. Poém é preciso persistencia e prática dia-a-dia , pouco-a-pouco sem falta.
+ 	Que acordo é esse que você precisa fazer? E a resposta é: Dedicar-se e não desstir.
+
+	MÓDULOS DO CURSO
+M01 = Primeiros passos HTML+CSS > Que abrange os conceitos básicos, preparação do ambiente, semântica do html5,texos, títulos, ligações, multimídia, 
+	estilos.
+M02 = Deixando as coisas mais bonitas, visualmente atraentes > São os findamentos do design, psicologia das cores, tipografia, elementos css,
+	modelos de caixas, wireframe (prototipação de alguns projetos,sites), e a resposividade (que é importante para que o projeto funcione em vários
+	dispositivos, com difernete tamanhos de tela; seja pc móveis , ou do tipo tv, relófios , entre outros que dependem de programação lógica).
+M03 = Colocando um prorótipo no ar > Que é o versionamento de software, hospedagem de sites estáticos (não dinámicas, que iremos aprender mais),o uso
+	de tabelas.Podemos aida dizer que; é básicamente o modo como iremos colocar um site , ou projeto a disposição de outros usuários
+M04 = Aprofundando conhecimntos > Onde vamos falar sobre quadros em linha (que são os in-line frames), formulários, media queries (que facilita bastante 
+	a adaptação das telas), e sobre um importante conceito que é o mobile first.
+M05 = Novas tecnologias > Porém não abordaremos todas de css e html, porém focaremos principalmente de css as tecnologias de (Flex box), de (Grid Layout),
+	e vamos construir um projeto final ao fim do quinto módulo.
+	
+				Do que você precisa?
+
+	Você precisa de Pc com boa tela, e também de um celular para que possa acompanhar a evolução do projeto, e saber se de fato ele está funcionando; 
+precisará de internet, além de tudo! foco e dedicação nos estudos; buscar anotar coisas importantes para memorizar o oconteúdo, e lhe ajude quanto as
+dúvidas referente a determinado módulo. Você deve ainda manter a rotina de práticar os exercicíos dia a dia, sempre assistir os videos de forma que não fique
+com tantas dúvidas quanto ao assunto. Outra dica ainda é buscar partilhar desses conhecimentos com outros interessados de maneira que você ensine e aprenda
+com alguém sobre o que se está sendo estudado.
+	
+				
+				ATENÇÃO!
+
+Não encare esse curso como se estivesse maratonando uma serie de filmes, por outro lado dedique-se aos estudos, e sem medo de errar tente e procure 
+entender os códigos até que se torne comum a sua digitação.
+Não tenha pressa e fique achando que precisa atropelar aulas.
+Busque estabelecer uma rotina de estudos e siga firme sem falta, pode ser cerca de 30 minutos diarios para ajudar no aprendizado.
+				
