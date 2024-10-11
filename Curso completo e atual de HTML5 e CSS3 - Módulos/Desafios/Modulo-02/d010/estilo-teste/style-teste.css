@@ -92,7 +92,7 @@ header > p {
     color: white;
     max-width: 500px;
     padding-right: 10px;
-    padding-left: 10px;
+    padding-bottom: 50px; /* margin-bottom: 30px; Aqui foi alterado na aula: Manutenção em sites hospedados no GitHub Pages - @Curso em Vídeo HTML5 e CSS3*/
     margin: auto;
     margin-bottom: 30px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
