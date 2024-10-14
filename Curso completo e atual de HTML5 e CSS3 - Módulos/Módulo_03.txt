@@ -1,0 +1,191 @@
+>>>>>>>>>>> ÍNICIO DO MÓDULO 3 <<<<<<<<<<<<
+	
+
+Módulo 03, capítulo 18, Aula 0 "Introdução"
+Vídeo:
+O que vamos aprender no módulo 3? - @Curso em Vídeo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=ofFgnDtn_1c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+*	Aqui é uma pequena introdução do que aprenderemos durante esse módulo.	*
+
+
+Módulo 03, capítulo 18, Aula 1
+Vídeo:
+O que é Git e GitHub? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=GDGMf2bnHlE&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=2
+
+	NEsta aula é ensinado um pouco sobre o Git e o GitHub e é *IMPORTANTE* que você estude o material "Aprendendo Git e GitHub.pdf " para aprender mais sobre o assunto.
+
+Módulo 03, capítulo 18, Aula 2
+Vídeo:
+Instalando Git e GitHub no PC - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=NgWExh3bswg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=3
+
+	Primeiro baixamos o GIT no link: https://git-scm.com
+		OBS: scm significa:
+			source code maneger = gerenciador de código fonte
+	Segundo baixamos o GitHub Desktop no link: https://desktop.github.com/download/
+
+Módulo 03, capítulo 18, Aula 3
+Vídeo:
+Criando conta no GitHub - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=1QTi8nIlK1o&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=4
+
+	NEsta aula acessamos o site:  https://github.com e criamos uma conta para usarmos os recursos disponibilizados do GitHub Desktop.
+
+Módulo 03, capítulo 18, Aula 4
+Vídeo:
+Primeiro repositório git e GitHub - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=P0Hvrf8T3zo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=5
+
+	LEMBRE-SE de sempre sair da conta GitHub Desktop se você estiver em alguma máquina que não seja a sua; Por exemplo PC do Trabalho, ou LanHouse.
+		Para isso clique me File; Options... e na opção Accounts clique em Sign out of GitHub.com.
+
+	OBS: Para que outras pessoas vizualize seu repositório e seus códigos é importante que desmarque a opção "Keep this code private" que vem marcada por padrão.
+	PARA isso: Clique em Publish repository e desmarque a opção "Keep this code private" e clique em "Publish repository".
+
+		VEJA que o professor sempre recomenda que para iniciantes, o bom é compartilhar informações com outras pessoas.
+
+		ATENÇÃO:
+			Para que você consiga hospedar seu site , é importante que a opção acima esteja {desmarcada}.
+		
+		DETALHE:
+			Sempre que virmos a palavra "Fetch Origin" a lado de "Current Branch", isso que dizer que os arquivos estão indo para o GitHub.
+
+		NOTE: Que a opção " Publish repository" ou "Publish Origin" quando aparece no GitHub Desktop, é porque é necessário atualizar , e para isso basta clicar e aguardar.
+
+Módulo 03, capítulo 18, Aula 5
+Vídeo:
+Gerenciando Repositórios GitHub - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Sbcu_GuySjo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=6
+
+	Nesta aula aprendemos a adcionar repositórios, e em caso de sem querer marcamos a opção de "Private", então vimos como resolver. Também APRENDEMOS a excluir repositórios locais e remotos.
+
+LEMBRE-SE de acompanhar o material "pdf".
+
+
+
+Módulo 03, capítulo 18, Aula 6
+Vídeo:
+Hospedando site gratuitamente com GitHub Pages - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=_jI3782DGDc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=7
+
+	NEsta aula vamos aprender a tornar nosso site vísivel na internet.
+		{Aqui seguimos a dica do canal do youtube "Dotcode"} Link:https://www.youtube.com/watch?v=1_eKyE_mHrg
+		Aula: Hospede seu site rápido e de graça com GitHub Pages em 2023
+
+	PARA isso:
+	1. Abrimos o nosso GitHub, então escolhemos 	o repositório onde está nosso projeto.
+	2. Clicamos na opção "Settings"
+	3. Clicamos na opção "Pages"
+		OBS: Se a opção "Branch" estiver desativada "None", então ative para "main", e a opção "Source" é para estar como "Deploy from a branch".
+	4. A raiz do sistema tem que estar marcado como "/root".
+	AGORA:
+		Após estas configurações devemos aguardar o repositótio subir, e quando subir vamos ver a seguinte informação:
+
+			Your site is live at https://username.github.io/yourrepository/
+			Last deployed by @username username 00 minutes mês
+				Botão "Visit site"
+
+	
+Módulo 03, capítulo 18, Aula 7
+Vídeo:
+Manutenção em sites hospedados no GitHub Pages - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=ejQwG2cvWxg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=8
+
+	Iniciaremos esta aula resolvendo um pequeno problema em nosso site do projeto criado anteriormente no Desafio 10; Este problema consiste em ter ficado uma barra clara abaixo do parágrafo inicial que resolveremos nesta aula, e uma quebra de linha no menu em tela de celular, que será alvo para aula futura.
+		ENTÃO revise o arquivo "style.css (style-teste.css)" dentro da pasta "estilo", na pasta "d010", na pasta "Modulo-02", na pasta "Desafios".
+			ReVISAMOS no "style.css" no seletor "header > p" alteramos a propriedade "margin-bottom: 30px;" para "padding-bottom: 30px;"
+
+
+Módulo 03, capítulo 18, Aula 8
+Vídeo:
+Recursos Sociais do GitHub - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=g5orqzMzwkY&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=9
+
+	NEsta aula é ensinado um pouco de como podemos seguir pessoas(usuários) e acompanhar repositórios.
+	Foi ensinado a explorar algumas configurações.
+
+Módulo 03, capítulo 18, Aula 9
+Vídeo:
+Clonando Repositórios GitHub - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=sRBSr9X5nAQ&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=10
+
+	NEsta aula é ensinado a maneira como podemos trabalhar em nosso repositório mesmo que não estejamos na máquina em que os nossos arquivos estejam nele.
+	OBS: É necessário que a máquina em que você vai trabalhar, esteja com o Git e GitHub instalados.
+		VEJA a aula em vídeo para compreender mais.
+
+
+Módulo 03, capítulo 18, Aula 10
+Vídeo:
+GitHub em vários PCs - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=c-MATEcIuPQ&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=11
+
+	Nesta aula é ensinado a maneira de como podemos trabalhar com nosso nosso projeto em duas ou mais máquinas.
+
+	DICA:
+		Pode acontecer de ao logar no seu GitHub Desktop em outra máquina, aprensentar erro ao escolher um repositório para trabalhar. Isso acontece por quê, o Git não está funcionando nesta máquina; Então clique em "file", em "Options", e clique na opção "Git". confira seus dados [login e Email temporário] clique em ambos e "Save".
+	Agora basta escolher o repositório e clicar no botão [Clone + nome do repositório] que irá aparcer; Escolha o local onde vai salvar e clique em "Clone".
+
+	LEMBRE-SE:
+		Para SALVAR e subir as edições nos seu projetos.
+		Abra seu projeto usando Virtual Studio Code {Ou seu editor preferido}, clique em {Commmit to main} e {Push origin} para subir a atualização.
+
+		Para SAIR sem deixar seus arquivos na máquina "que não é sua".
+		  Feche todos os programas usados exceto o GitHub Desktop, e clique na opção {Repository}, clique em {Remove}, marque a opção {Also move this repository to Recycle Bin} e clique em {Remove}.
+		  
+		Antes de IR EMBORA clique em {File}, {Options}, {Sign Out of GitHub.com} para deslogar da sua conta; depois ainda na {Options} clique em {Git} e apague o {Nome e Email temporário} e clique em {Save} e por fim feche o programa e 
+* Esvazie a lixeira *
+
+{>>>>>>>>		OBSERVAÇÃO 		>>>>>>>>>>>>}
++	TUDO isto tem de ser rotina se caso você não esteja em seu computador  +
+
+*	ATENÇÃO		*
+	Faça o curso sobre Git e GitHub para se especializar mais no assunto e tornar seus repositórios mais seguros.
+	Link da PlayList completa do Curso em Vídeo:
+	https://youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA&si=CTnHpOjfBOOmu71i
+
+*	SUPER DICA DE SEGURANÇA		*
+"	Assita o vídeo: Seu GitHub muito mais seguro - Curso de Git e GitHub
+É indicado assistir esse vídeo para aprender como usar o Google Autheticator para gerar chave de segurança em seu dispositivo móvel, fazendo assim um segurança extra e tornando muito mais díficil a captura de dados em caso de uso de KeyLoggers na máquina em que você Logou que não seja a sua.
+"
+
+
+Módulo 03, capítulo 19, Aula 1
+Vídeo:
+Download das imagens do capítulo - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=sms5H5cKDy4&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=12
+
+	Acessamos o link: https://gitgub.com/gustavoguanabara 
+	 Para baixarmos um pacote de imagens, no repositório {html-css} na parte {exercicios}, na pasta {ex022} e clicar no {imagens-cap19.zip}, e na opção "Dowloand" e baixar.
+
+	 AGORA:
+	 	Criamos dentro da pasta de exercícios a pasta "ex022" e dentro desta, colocamos a pasta "imagens" que foi descompactada do pacote baixado anteriormente.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>>>>>>>> ÍNICIO DO MÓDULO 3 <<<<<<<<<<<<
