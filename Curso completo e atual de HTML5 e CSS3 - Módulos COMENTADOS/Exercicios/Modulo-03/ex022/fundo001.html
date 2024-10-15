@@ -1,0 +1,90 @@
+<!-- 
+    Módulo 03, capítulo 19, Aula 2
+Vídeo:
+Colocando uma imagem de fundo no seu site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=9hV5oXi80-A&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=13
+
+    O que aprenderemos nessa aula é que todo elemento de (visual) de caixa , podem receber uma imagem de fundo, e essa imagem de fundo  é feita por meiom da declaração "background-image" e a função "url" para poder carregar a imagem.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Teste de imagem de fundo</title>
+    <style>
+        /* Aqui usamos o seletor de tag, para estilizar o body */
+        body {
+            background-image: url('imagens/wallpaper001.jpg');
+        }
+        /* Aqui usamos o seletor da class quadrado que foi definida nas tags(divs). */
+        div.quadrado {
+            display: inline-block;/* Aqui definimos que as caixas serão em linha-bloco, saindo do padrão em bloco.    Isso fará com que uma caixa fique ao lado da outra, e não em baixo.*/
+            border: 2px solid black; /* usamos short-hand para colocar bordas nas caixas (divs.). */
+            border-radius: 10px;/* Definimos o estilo das pontas da borda*/
+            background-color:lightgray;
+            width: 300px;/* Definimos a largura das caixas. */
+            height: 300px;/* Definimos a altura das caixas. */
+        }
+
+        div#q1 {
+            background-color: skyblue;/* Aqui definimos a cor de fundo da div com id = q1.*/
+        }
+        div#q2 {
+            background-image: linear-gradient(to bottom, yellow, red);/* Aqui definimos uma cor de fundo em estilo degradê, para a div com id = q2.*/
+        }
+        div#q3 {
+            /* Essa imagem de fundo funcionabem com elementos de caixa como no caso de uma div. 
+        A propriedade é feita pela declaração (background-image: ;) que recebe uma função (url) para carregar a imagem.*/
+            background-image: url('imagens/pattern003.png');/* Aqui definimos uma imagem que será aplicada dentro desta caixa, que é a div com id = q3. OBS: Quando adcionamos uma imagem dessa forma, note que ela se multiplica dentro da caixa, e para muda esse efeito padrão, usando a propriedade background-repeat: e o valor de no-repeat; VEJA abaixo como ficou.
+        Para evitar erro com essa aplicação escolha uma imagem no tamanho exato da caixa, ou estilize ao seu critério. Outra coisa pra lembrar, é que essa aplicação de imagem não fica fazendo parte do conteúdo, e que não tem valor semântico, e para os mecansmos de busca, isso não faz sentido, pois é apenas um estilo, um designer, uma cor etc.*/
+
+            /* background-repeat: no-repeat; */ /* Aqui removemos a mulplicação da imagem dentro da caixa. */
+        }
+
+        /* Usamos estes seletores para praticar mais sobre o assunto */
+        div.container-teste {
+            text-align: center;
+            border: 1px solid black;
+            height: 340px;
+            width: 700px;
+            background-image: url("imagens/wallpaper005.jpg");
+        }
+        div.quadrado-teste {
+            display: inline-block;
+            border: 1.7px solid black;
+            border-radius: 10px;
+            background-color: rgb(68, 0, 255);
+            height: 200px;
+            width: 200px;
+        }
+        div#q1-teste {
+            background-color: rgb(8, 166, 228);
+        }
+        div#q2-teste {
+            background-image: linear-gradient(to bottom, black, red);
+        }
+        div#q3-teste {
+            background-image: url("./imagens/pattern001.png");
+        }
+    </style>
+</head>
+<body>
+    <!-- Definimos a mesma (class) para as divis, pois queremos que elas recebam o mesmo estilo. Para formatar no css uma classe , use ponto(.) e o nome da classe. Ex: no index.html class="exemplo" e no css o seletor é = a .exemplo.
+        já o (id) é iividual para que ambos recebam configurações idividuais. Para formatar no css um id , use jogo-da-velha(#) e o nome do id. Ex: no index.html id="exemplo" e no css o seletor é = a #exemplo.-->
+    <div class="quadrado" id="q1"></div>
+    <div class="quadrado" id="q2"></div>
+    <div class="quadrado" id="q3"></div>
+
+    <div class="container-teste">
+        <h2>Divs feitas para teste</h2>
+        <br>
+        <div class="quadrado-teste" id="q1-teste"></div>
+        <div class="quadrado-teste" id="q2-teste"></div>
+        <div class="quadrado-teste" id="q3-teste"></div>
+    </div>
+</body>
+</html>
