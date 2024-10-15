@@ -175,6 +175,19 @@ https://www.youtube.com/watch?v=sms5H5cKDy4&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 	 	Criamos dentro da pasta de exercícios a pasta "ex022" e dentro desta, colocamos a pasta "imagens" que foi descompactada do pacote baixado anteriormente.
 
 
+Módulo 03, capítulo 19, Aula 2
+Vídeo:
+Colocando uma imagem de fundo no seu site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=9hV5oXi80-A&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=13
+
+	Nesta aula abrimos o diretório por meio do GitHub Desktop. 
+É IMPORTANTE lembrar que apartir daqui, possamos colocar em prática a mania de tudo o que for editar durante as aulas, que sejam abertas pelo GitHub Desktop com Visual Studio Code.
+	ENTÃO criamo a pasta "fundo001" dentro da já criada pasta "ex022".
+
+	OBS:
+		Imagens adcionadas por meio da CSS não dá sentido nenhum ao seu conteúdo, pois não há valor semântico com isso.
+
 
 
 
