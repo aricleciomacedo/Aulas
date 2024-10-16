@@ -34,20 +34,20 @@ https://www.youtube.com/watch?v=9hV5oXi80-A&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
             background-color: skyblue;/* Aqui definimos a cor de fundo da div com id = q1.*/
         }
         div#q2 {
-            background-image: linear-gradient(to bottom, yellow, red);/* Aqui definimos uma cor de fundo em estilo degradê, para a div com id = q2.*/
+            background-image: linear-gradient(to bottom, yellow, red);/* Aqui usamos a propriedade "background-image" e a função "linear-gradiente" para definir uma cor de fundo em estilo degradê, para a div com id = q2.*/
         }
         div#q3 {
-            /* Essa imagem de fundo funcionabem com elementos de caixa como no caso de uma div. 
+            /* Essa imagem de fundo funciona bem com elementos de caixa como no caso de uma div. 
         A propriedade é feita pela declaração (background-image: ;) que recebe uma função (url) para carregar a imagem.*/
             background-image: url('imagens/pattern003.png');/* Aqui definimos uma imagem que será aplicada dentro desta caixa, que é a div com id = q3. OBS: Quando adcionamos uma imagem dessa forma, note que ela se multiplica dentro da caixa, e para muda esse efeito padrão, usando a propriedade background-repeat: e o valor de no-repeat; VEJA abaixo como ficou.
-        Para evitar erro com essa aplicação escolha uma imagem no tamanho exato da caixa, ou estilize ao seu critério. Outra coisa pra lembrar, é que essa aplicação de imagem não fica fazendo parte do conteúdo, e que não tem valor semântico, e para os mecansmos de busca, isso não faz sentido, pois é apenas um estilo, um designer, uma cor etc.*/
+        Para evitar erro com essa aplicação escolha uma imagem no tamanho exato da caixa, ou estilize ao seu critério. Outra coisa pra lembrar, é que essa aplicação de imagem não fica fazendo parte do conteúdo, e que não tem valor semântico, e para os mecanismos de busca, isso não faz sentido, pois é apenas um estilo, um designer, uma cor etc.*/
 
             /* background-repeat: no-repeat; */ /* Aqui removemos a mulplicação da imagem dentro da caixa. */
         }
 
         /* Usamos estes seletores para praticar mais sobre o assunto */
         div.container-teste {
-            text-align: center;
+            text-align: center; 
             border: 1px solid black;
             height: 340px;
             width: 700px;
