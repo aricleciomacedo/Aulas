@@ -183,13 +183,21 @@ https://www.youtube.com/watch?v=9hV5oXi80-A&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 
 	Nesta aula abrimos o diretório por meio do GitHub Desktop. 
 É IMPORTANTE lembrar que apartir daqui, possamos colocar em prática a mania de tudo o que for editar durante as aulas, que sejam abertas pelo GitHub Desktop com Visual Studio Code.
-	ENTÃO criamo a pasta "fundo001" dentro da já criada pasta "ex022".
+	ENTÃO criamos a pasta "fundo001" dentro da já criada pasta "ex022".
 
 	OBS:
 		Imagens adcionadas por meio da CSS não dá sentido nenhum ao seu conteúdo, pois não há valor semântico com isso.
 
+	VEJA TAMBém:
+		Imagem de fundo com o CSS – com exemplos em HTML
+		https://www.freecodecamp.org/portuguese/news/imagem-de-fundo-com-o-css-com-exemplos-em-html/
 
 
+Módulo 03, capítulo 19, Aula 3
+Vídeo:
+Imagens que se repetem no fundo do site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=_5KoMUMCTG0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=14
 
 
 
