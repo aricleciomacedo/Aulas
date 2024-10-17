@@ -1,0 +1,113 @@
+<!-- 
+    Módulo 03, capítulo 19, Aula 3
+Vídeo:
+Imagens que se repetem no fundo do site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=_5KoMUMCTG0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=14
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Personalização dos fundos</title>
+    <style>
+        body {
+            /* background-image: url('imagens/wallpaper001.jpg'); *//* aqui usamos uma imagem local (do nosso pc). OBS: Resolvemos colocar esse exemplo em uma div class='img-url-link' */
+            background-image: linear-gradient(17deg ,black , rgb(61, 2, 138));
+            font: 12pt Arial; /* Aqui determinamos a fonte de todo contéudo em tamanho e estilo. */
+        }
+        /* Button */
+        div.option-button {
+            position: fixed;
+            background-color: white;
+            width: 10%;
+            height: auto;
+            text-align: center;
+        }
+        div.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        div.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+        h1 {
+            background-color:white;
+            text-align: center;
+        }
+        h2 {
+            background-color:white;
+            text-align: center;
+        }
+        h3 {
+            background-color:white;
+            text-align: center;
+        }
+        p {
+            background-color: rgb(6, 5, 51);
+            text-align: center;
+            color: white;
+        }
+        div { /* Aqui aplicamos um estilo a todas as caixas divs/ para estilizar de forma individual, use classes ou ids para cada uma que desejar impor estilos diferentes. */
+            width: 90%; /* Aqui é a largura das caixas */
+            height: 230px;/* Aqui é a altura das boxes */
+            background-size: 100px 100px;/* Aqui definimos o tamanho da imagem de fundo, e podemos modificar de forma individual, por meio de classe ou id da caixa. VEJAMOS abaixo os exemplos. */
+            background-color: lightgray;
+            border: 3px solid black;
+        }
+        .img-url-link {
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');/* Aqui usamos uma imagem externa. OBS: Essa maneira de aplicar imagem ao palno de fundo é algo que nos deixa refém de outro site, uma vez que ele só funciona enquanto a link estiver no ar; Caso o site fornecedor da imagem saia do ar, em nosso projeto a imagem vai quebrar, deixando de funcionar.*/
+            background-repeat: repeat; /*Aqui é o padrão, mas veja abaixo outros exemplos.*/
+            /* background-repeat: repeat-x; */ /* Repete a imagem em linha, na horizontal, no eixo X. */
+            /* background-repeat: repeat-y; *//* Repete a imagem em bloco, na vertical, no eixo Y. */
+            /* background-repeat: no-repeat; *//* Aqui definimos a não repetição dessa imagem, removendo o padrão que multiplica a imagem de fundo. OBS: Podemos ainda usar outros valores de repetição */
+            background-size: 100px 100px;/* Aqui definimos o tamanho dessa imagem de forma idividual. */
+            /* width: 90%; */ /* Aqui define a largura da caixa de forma individual*/
+            /* height: 230px; *//* Aqui define a altura da caixa forma individual*/
+            background-color: white;
+        }
+        .img-url1 {
+            background-image: url('imagens/pattern001.png');
+            background-repeat: repeat;
+        }
+        div.img-url2 {
+            background-image: url('imagens/pattern002.png');
+            background-repeat: repeat-x;
+        }
+        div.img-url3 {
+            background-image: url('imagens/pattern003.png');
+            background-repeat: repeat-y;
+        }
+        div.img-url4 {
+            background-image: url('imagens/pattern004.png');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="option-button">
+        <p>Veja aqui como ficou a página usando o código do professor Gustavo Guanabara!</p>
+        <button>
+            <a href="fundo002a.html" rel="external">CLIQUE AQUI!</a>
+        </button>
+    </div>
+    <h1>Teste de aplicação de imagem de fundo de forma interna</h1>
+    <p>Aqui ao fundo principal do &lt;body&gt;, usamos um gradiente linear e sua aplicação é por meio da CSS.</p>
+    <h2>Exemplo de imagem de fundo externa</h2>
+    <p> Aqui nessa div, aplicamos uma imagem externa e seu link direciona para outro local, neste caso , a página do Gustavo Guanabara. <br>Vale lembrar que se por algum motivo essa imagem for removida, ou não estiver disponível no servidor, ela não será exibida em nossa página; por isso, essas aplicações só é bem usada, se for de um servidor que sabemos que não fica indisponível.
+    <div class="img-url-link"></div>
+    <h3>Abaixo usamos um fundo com a propriedade CSS repetição com valor de repeat, isso faz com que a imagem se multiplique dentro da caixa, ou seja ela é repetida no eixo X e Y, começando no canto esquerdo superior.</h3>
+    <div class="img-url1"></div>
+    <h3>Exemplo de imagem de fundo com propriedade de repetição no eixo X.</h3>
+    <div class="img-url2"></div>
+    <h3>Exemplo de imagem de fundo com propriedade de repetição no eixo Y.</h3>
+    <div class="img-url3"></div>
+    <h3>Exemplo de imagem de fundo sem propriedade de repetição..</h3>
+    <div class="img-url4"></div>
+</body>
+</html>

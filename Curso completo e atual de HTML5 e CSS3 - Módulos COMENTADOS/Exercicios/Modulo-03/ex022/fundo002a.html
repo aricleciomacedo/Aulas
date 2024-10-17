@@ -1,0 +1,85 @@
+<!--
+    Aqui eu comento o código do professor Gustavo Guanabara do curso em vídeo , refasso no passo a passo e coloco em prática o que já aprendi sobre o assunto.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font: 13pt Arial;
+            color: black;
+        }
+        /* Button */
+        div.option-button {
+            position: fixed;
+            background-color: white;
+            width: 10%;
+            height: auto;
+            text-align: center;
+            right: 1px;
+        }
+        div.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        div.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+        div { 
+            width: 90%;
+            height: 400px;
+            background-color: lightgray;
+            border: 1px solid black;
+        }
+
+        div#area001 {
+            background-image: url('imagens/pattern001.png');
+            background-repeat: repeat;
+        }
+
+        div#area002 {
+            background-image: url('imagens/pattern002.png');
+            background-repeat: repeat-x;
+        }
+
+        div#area003 {
+            background-image: url('imagens/pattern003.png');
+            background-repeat: repeat-y;
+        }
+
+        div#area004 {
+            background-image: url('imagens/pattern004.png');
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="option-button">
+        <p>Clique abaixo para voltar!</p>
+        <button>
+            <a href="fundo002.html" target="_self" rel="next">VOLTAR!</a>
+        </button>
+    </div>
+
+    <h1>Repetições em background-image</h1>
+
+    <h2>background-repeat: repeat;</h2>
+    <p>Repete a imagem tanto no sentido vertical, quanto horizontal (padrão).</p>
+    <div id="area001"></div>
+    <h2>background-repeat: repeat-x;</h2>
+    <p>Repete apenas no eixo horizontal.</p>
+    <div id="area002"></div>
+    <h2>background-repeat: repeat-y;</h2>
+    <p>Repete apenas no eixo vertical.</p>
+    <div id="area003"></div>
+    <h2>background-repeat: no-repeat;</h2>
+    <p>Não repete em nenhum eixo. A imagem só é carregada uma única vez.</p>
+    <div id="area004"></div>
+</body>
+</html-->

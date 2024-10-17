@@ -1,0 +1,49 @@
+<!--
+    Aqui eu comento o código do professor , refasso no passo a passo e coloco em prática o que já aprendi sobre o assunto.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Posicionamento2</title>
+    <style>
+        /* Como já falamos na aula anterior, a imagem de fundo não é responsiva por padrão. Ela é cortada na medida em que a tela é diminuida, e ela se repete na caixa na medida que a tela cresce ou a caixa. 
+            VAle Observar que a posição que definimos, é onde a imagem vai ancorar o seu inicio, e na medida que a tela for diminuida, a imagem vai cortar a partir do lado oposto ao que foi definido.*/
+        body {
+            height: 120vh;/* Definimos que a página vai ocupar 97% da viewport height que é essa parte branca, isso fizemos para remover a barra de rolagem lateral.
+                OBS: Depois fiz o teste com 120vh, que foi para aparecer a imagem em sua altura completa, sem corte ou repetição. */
+            background-image: url('imagens/wallpaper003.jpg');
+            background-position: center center;/* Aqui definimos a posição em que a imagem vai ficar ancorda, ou seja a parte fixa, que ao diminuir a tela, o browser usa essa posição de referência para alinhar a imagem. */
+        }
+        /* Button */
+        header.option-button {
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+    </style>
+</head>
+<body>
+    <header class="option-button">
+        <p>Veja Também!</p>
+        <button>
+            <a href="fundo005a.html" rel="external">CLIQUE AQUI!</a>
+        </button>
+    </header>
+</body>
+</html>

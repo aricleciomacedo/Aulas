@@ -1,0 +1,83 @@
+<!--
+    Aqui eu comento o código do professor , refasso no passo a passo e coloco em prática o que já parendi sobre o assunto.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Fundo</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font: 13pt Arial;
+            color: black;
+        }
+        p {
+            font-weight: bold;
+        }
+
+        div { 
+            width: 90%;
+            height: 400px;
+            background-color: lightgray;
+            background-image: url('imagens/wallpaper003.jpg');
+            border: 1px solid black;
+        }
+
+        div#area001 {
+            background-position: left top;
+        }
+
+        div#area002 {
+            background-position: right bottom;
+        }
+
+        div#area003 {
+            background-position: center top;
+        }
+
+        div#area004 {
+            background-position: center center;
+        }
+        /* Button */
+        header.option-button {
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+    </style>
+</head>
+<body>
+    
+    <header class="option-button">
+        <p>Caso queira voltar a página anterior, então clique no botão abaixo!</p>
+        <button>
+            <a href="fundo003.html" target="_self" rel="next">VOLTAR!</a>
+        </button>
+    </header>
+    <h1>Posição de um background</h1>
+
+    <h2>background-position: left top;</h2>
+    <div id="area001"></div>
+    <h2>background-position: right bottom;</h2>
+    <div id="area002"></div>
+    <h2>background-position: center top;</h2>
+    <div id="area003"></div>
+    <h2>background-position: center center;</h2>
+    <div id="area004"></div>
+</body>
+</html-->

@@ -1,0 +1,79 @@
+<!--
+    Aqui eu comento o código do professor , refasso no passo a passo e coloco em prática o que já aprendi sobre o assunto.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Posicionamento</title>
+    <style>
+        body { /* seletor da tag <body> */
+            height: 97vh;/* Aqui definimos altura total da view port que é esta da parte branca,e assim será ocupada 100% pelo conteúdo. 97vh foi usada para não ter barra de rolagem lateral.*/
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');/* Imagem de fundo apartir de um link externo. */
+            background-size: 100px;/* Altura e largura da imagem de fundo.*/
+            background-repeat: no-repeat; /* Remove a repetição da imagem de fundo. */
+
+/* A propriedade para posicionar a imagem, tem seus valores que representa valor de posição de linha e valor de posição de bloco.
+    Neste primero exemplo: backgroud-position é a propriedade; left é o valor que corresponde a posição em coluna, e o top é o valor que corresponde a posição em linha. */
+
+        /* Aqui é o padrão de posicionamento iniciando a esquerda em cima. */
+            /* background-position: left top; */
+
+        /* Aqui inicia o posicionamento apartir da esquerda pelo centro. */
+           /*  background-position: left center; */
+
+        /* Aqui inicia o posicionamento apartir da esquerda em baixo. */
+            /* background-position: left bottom; */
+
+        /* Aqui inicia o posicionamento apartir de baixo pelo centro. */
+            /* background-position: center bottom; */
+            
+        /* Aqui centraliza o posicionamento. */
+            background-position: center center;
+
+        /* Aqui inicia o posicionamento apartir de cima pelo centro. */
+            /* background-position: center top; */
+
+        /* Aqui inicia o posicionamento apartir de cima pela direita. */
+            /* background-position: right top; */
+
+        /* Aqui inicia o posicionamento apartir do centro pela direita. */
+            /* background-position: right center; */
+
+        /* Aqui inicia o posicionamento apartir de baixo pela direita. */
+            /* background-position: right bottom; */
+        }
+        /* Button */
+        header.option-button {
+            position: fixed;
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            font-weight: bold;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+    </style>
+</head>
+<body>
+    <header class="option-button">
+        <p>Veja Também!</p>
+        <button>
+            <a href="fundo004a.html" rel="external">CLIQUE AQUI!</a>
+        </button>
+    </header>
+</body>
+</html>

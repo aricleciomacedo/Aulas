@@ -1,0 +1,137 @@
+<!--
+    Aqui eu comento o código do professor , e refasso no passo a passo colocando em prática o que já aprendi sobre o assunto.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Posição de Fundos</title> <!-- Título da página, esse aparece na aba do navegador. -->
+
+    <!-- Usamos  aqui a estlização interna.-->
+    <style>
+        body {/* Usamos o seletor da tag body, pois queremos aplicar essas propriedades para todo texto dentro de nossa página. */
+            font: 12pt Arial; /* tamanho de fonte e estilo .*/
+            text-align: center;/* Alinhamento de texto. */
+        }
+        p {/* Selionamos <p> de qualquer nível dentro da HTML. */
+            font-weight: bold;/* O peso da fonte fica negrito. */
+        }
+        div.bloco {/* Aqui usamos o seletor para as <div>s que são classe=bloco */
+            background-image: url('imagens/wallpaper002.jpg');
+            height: 200px;/* Definimos a altura da caixa. */
+            border: 1px solid black;/* Adcionamos uma borda. */
+            border-radius: 20px;/* Arrendonda as bordas. */
+            margin: 10px;/* Essa margem desgruda um caixa da outra. */
+        }
+
+    /*  
+        Aqui usamos os seletores id para posicionarmos as imagens de fundo de forma idividual; isso nos fará comprender um pouco mais sobre essa propriedade.
+    */
+        div#q {/* Seletor da <div id=q> */
+            height: 853px;/* altura da caixa */
+        }
+        div#q1 {/* Seletor da <dv id=q1> */
+            background-position: left top;/* Posição padrão iniciando o alinhamneto em cima a esquerda.*/
+        }
+        div#q2 {/* Seletor da <dv id=q1> */
+            background-position: left center;/* Posição inicando da esquerda pelo centro. */
+        }
+        div#q3 {/* Seletor da <dv id=q1> */
+            background-position: right bottom;/* Posição iniciando a direita na parte de baixo. */
+        }
+        div#q4 {/* Seletor da <dv id=q1> */
+            background-position: center center;/* Posição central da imagem. */
+        }
+
+    /* Aqui é os ids para mais detlahes. */
+        div.bloco2 {/* Aqui usamos o seletor para as <div>s que são classe=bloco */
+            background-image: url('imagens/wallpaper003.jpg');
+            height: 200px;/* Definimos a altura da caixa. */
+            border: 1px solid black;/* Adcionamos uma borda. */
+            border-radius: 20px;/* Arrendonda as bordas. */
+            margin: 10px;/* Essa margem desgruda um caixa da outra. */
+        }
+        div#q5 {/* Seletor da <div id=q> */
+            height: 853px;/* altura da caixa */
+        }
+        div#q6 {/* Seletor da <dv id=q1> */
+            background-position: left top;/* Posição padrão iniciando o alinhamneto em cima a esquerda.*/
+        }
+        div#q7 {/* Seletor da <dv id=q1> */
+            background-position: left center;/* Posição inicando da esquerda pelo centro. */
+        }
+        div#q8 {/* Seletor da <dv id=q1> */
+            background-position: right bottom;/* Posição iniciando a direita na parte de baixo. */
+        }
+        div#q9 {/* Seletor da <dv id=q1> */
+            background-position: center center;/* Posição central da imagem. */
+        }
+        /* Button */
+        header.option-button {
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+    </style>
+</head>
+<body>
+    <header class="option-button">
+        <p>Veja aqui como ficou a página usando o código do professor Gustavo Guanabara!</p>
+        <button>
+            <a href="fundo003a.html" rel="external">CLIQUE AQUI!</a>
+        </button>
+    </header>
+    <!-- Aqui definimos as <div> como classe, e seu seletor será usado dentro do style CSS -->
+    <h1>Explicando um pouco sobre a aplicação de fundos usando propriedades CSS.</h1>
+    <p>Aqui devemos entender que a imagem é aplicada começando do canto superior esquerdo que é o eixo-X e termina no canto inferior direito que é o eixo-Y</p> 
+    <hr> <!-- Aqui é um linha vertical adionada na página para separar o conteúdo. -->
+<!-- 
+    Para cada <div> optamos por criar uma única classe para com isso adcionarmos propriedades CSS que se aplique a todas elas, e para propriedades exclusívas usamos o seletor "id".
+ -->
+
+    <h2>Abaixo é um exemplo de imagem aplicada completamente.</h2>
+    <p>As propriedades de posição não estão aplicadas aqui, porém para vermos essa imagem completa optamos por definir a altura dela proporcional ao tamanho real da foto, que é de 853 pixels. 
+    Vale lembrar que esse padrão aplicado, não tem função responsiva, ou seja conforme muda o tamanho de tela, a caixa diminui em proporção a tela, porém a imagem é cortada.</p>
+    <div class="bloco" id="q"></div>
+
+    <h2>Abaixo é um exemplo de posicionamento padrão.</h2>
+    <p>Compare com a imagem completa e veja que esta imagem começa a esquerda do topo da caixa, ou seja a esquerda do eixo-X e termina a direita no eixo-Y.</p>
+    <div class="bloco" id="q1"></div>
+
+    <h2>Abaixo é o exemplo de posicionamento iniciando a esquerda pelo centro.</h2>
+    <p>Compare com a imagem completa e veja que esta imagem começa a esquerda caixa e pelo centro, ou seja centralizada a esquerda do eixo-X e termina a direita no eixo-Y.</p>
+    <div class="bloco" id="q2"></div>
+
+    <h2>Abaixo é o exemplo de posicionamento iniciando a direita da parte de baixo.</h2>
+    <p>Compare com a imagem completa e veja que esta imagem começa na parte de baixo da direita,  eixo-X e termina a esquerda no eixo-Y.</p>
+    <div class="bloco" id="q3"></div>
+
+    <h2>Abaixo é o exemplo de posicionamento centralizado.</h2>
+    <p>Compare com a imagem completa e veja que esta imagem foi aplicada exatamente no centro. </p>
+    <div class="bloco" id="q4"></div>
+
+<!-- Exemplos detalhados para a aplicação de imagem de fundo e suas posições por meio de CSS. -->
+    <h1>Exemplos mais detalhados.</h1>
+    <p>Compare com a imagem completa sem os detalhes, para compreender a aplicação de imagem de fundo e sua posição na caixa.</p>
+    <div class="bloco2" id="q5"></div>
+    <div class="bloco2" id="q6"></div>
+    <div class="bloco2" id="q7"></div>
+    <div class="bloco2" id="q8"></div>
+    <div class="bloco2" id="q9"></div>
+</body>
+</html>
