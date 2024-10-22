@@ -61,9 +61,35 @@ https://www.youtube.com/watch?v=lNaoi5AUCsc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
             border: 3px solid darkblue;/*  borda sólida com cor.*/
             border-radius: 15px;/* Arredonda as bordas. */
         }
+        /* Button */
+        header.option-button {
+            display: block;
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            font-weight: bold;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
     </style>
 </head>
 <body>
+    <header class="option-button">
+        <p>Veja Também!</p>
+        <button>
+            <a href="fundo006a.html" rel="external">CLIQUE AQUI!</a>
+        </button>
+    </header>
     <main>
         <h1>Teste de imagem de fundo!</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quae? Ut vel consectetur quia officiis ipsum maxime magni non repellendus, alias officia, iusto asperiores corporis impedit deserunt in inventore voluptates!

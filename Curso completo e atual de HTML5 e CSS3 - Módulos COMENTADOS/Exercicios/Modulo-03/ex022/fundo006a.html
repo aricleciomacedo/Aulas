@@ -23,9 +23,33 @@
             border: 1px solid darkblue;
             border-radius: 15px;
         }
+        /* Button */
+        header.option-button {
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
     </style>
 </head>
 <body>
+    <header class="option-button">
+        <p>Caso queira voltar a página anterior, então clique no botão abaixo!</p>
+        <button>
+            <a href="fundo006.html" target="_self" rel="next">VOLTAR!</a>
+        </button>
+    </header>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptate excepturi ut ratione cumque! Iusto placeat ipsa necessitatibus dicta unde, quaerat consequuntur, odio saepe laborum beatae non quod laudantium hic. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione dolore incidunt quam nam distinctio obcaecati commodi voluptatibus quas. Repudiandae amet fugit dolor placeat error laborum fuga beatae sequi veniam deserunt.
