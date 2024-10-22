@@ -1,0 +1,85 @@
+<!-- ]
+    Módulo 03, capítulo 19, Aula 5
+Vídeo:
+Mudando o tamanho da imagem de fundo do site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=lNaoi5AUCsc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=16
+
+    Esse exercício é algo próximo do que seria um site. Usamos divs semânticas como exemplo a <main>. 
+    -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fundo fixo de tela</title>
+    <style>
+        body {/* Seletor do corpo da página. */
+            height: 100vh;/* Definimos que a página ocupará toda  a height-altura da view-port. */
+
+        /* VALE lembrar que podemos definir uma shorthand que comporta esses valores em um só código. */
+        
+            /* 
+            Aqui foram comentadas na aula sobre background-attachment e shorthand. 
+            */
+            /* background-color: black; *//* Cor de fundo para garantir de uma eventual não carregamento da imagem pelo navagador. */
+            /* background-image: url('imagens/wallpaper002.jpg'); *//* Adcinamos imagem ao fundo. */
+            /* background-position: center center; *//* Aqui se alinha a imagem apartir do centro. */
+            /* background-repeat:no-repeat; *//* Aqui remove ou adciona a repetição da imagem caso ela seja menor que a página. */
+        /* background-size: 100%;  Não é bom de usar essa maneira de ajustar a imagem na tela, pois ao aumentar ou diminuir a tela, faz com que a imagem se distorça, causando uma aparência feia ao conteudo da página. O mesmo acontece para os valores : container, ou auto então podemos dizer que uma boa opção é o valor: cover, que conforme diminui ou aumenta  a tela, o navegador corta a imagem sem distorcer para manter os 100% de ocupação. VEJA ABAixo como fica.
+            OBS: Foi removido para no-repeat na aula de background-attachmen e shorthand.*/
+            /* background-size: cover; *//* Mesmo com cover definido, pode acontecer de na página ter muitos conteúdos, por exemplo um texto enorme e que ultrapassa o tamanho da altura  da página fazendo com que vaze a imagem causando outro percausso no site; outra coisa notável é que mesmo mudando o valor de background-repeat para repeat, é preciso outras propriedades para melhor resolver esse B.O de conteúdo vazando imagem, em outras palavras precisamos fazer com que o conteúdo role sem que a imagem de fundo role junto.
+        Pra resolver isso o Professor Guanabara explica na próxima aula. */
+
+            /* Aqui vamos adcionar um vinculo ao background para que role o conteúdo e não a imagem. */
+            /* background-attachment: fixed; */ /* Aqui são os tipos de axexos ao fundo, e  scrool é o padrão definido para rolar junto ao conteúdo. Outros valores são: fixed = fixa o fundo e rola somente o conteúdo. OBS: Esse parâmetro junto ao cover do background-size cover, deixa a responsividade boa, e outra coisa pode ser melhorada que é o mudar width do main para max-width.*/
+
+        /* SHORTHAND de background é definida da seguinte forma:
+            color + image + position + repeat + [size, que está em OBS:] + attachment  
+        */
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat /* cover */ fixed; /* Agora com essa shorthand simplificando os parâmetros de estilo de fundo, agora podemos remover as propriedades de background individuais acima. 
+                OBS do size: o size=cover na shorthand ainda não funciona, e isso faz com que o fundo fique branco; Pode até dizer na documentação que funciona mas na prática ainda não. O que sabemos é que está na regra porém não está aplicável ainda. 
+            Para funcionar veja acima o background-size=cover comentado e declarado aqui abaixo.*/
+            background-size: cover;/* 
+                Um jovem nos comentários do video background-attachment e shorthand - @Curso em Vídeo HTML5 e CSS3 resolveu da seguinte forma:
+                @trakkj há 2 anos
+                    Dá pra aplicar o size no shorthand sim, clã. Tem que fazer desse jeito:  
+                    color > image > position > / > size > repeat > attachment. 
+
+                Exemplo:
+                    background: #000 url('imagem.jpg') center top/cover no-repeat fixed;
+             */
+
+        }
+        main {/* Seletor da tag <main> */
+            background-color: white;/* Cor de fundo. */
+            /* Aqui definimos depois por max-width para que o conteúdo se mantenha visivel em telas menores, e fazendo com que o fundo se exprema sem alter o conteúdo. */
+            max-width: 400px; /* LArgura da caixa. */
+            padding: 10px;/* Espaçamento interno da caixa. */
+            margin: auto;/* Essa margin faz com que a caixa centralize. */
+            border: 3px solid darkblue;/*  borda sólida com cor.*/
+            border-radius: 15px;/* Arredonda as bordas. */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de fundo!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quae? Ut vel consectetur quia officiis ipsum maxime magni non repellendus, alias officia, iusto asperiores corporis impedit deserunt in inventore voluptates!
+        Eum distinctio eos velit aspernatur reprehenderit expedita culpa nemo, iure veritatis similique in ipsam voluptatibus facilis deserunt error, modi quod? Rem dignissimos sapiente architecto iste eos aut! Cumque, perspiciatis! Corrupti.
+        Officiis voluptatem quaerat, animi temporibus eveniet in adipisci? Odit est sed inventore explicabo, eligendi error, dicta veritatis, quo facere dolorum corrupti odio reprehenderit! Fugit consequatur officiis explicabo! Eligendi, voluptas soluta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque eum placeat quibusdam ducimus modi natus recusandae aliquam, distinctio eaque sint? Aut cumque pariatur sint molestiae rerum a tempora, quos porro.
+        Tempore rerum maxime possimus eos sapiente accusamus totam, ex fugit tempora vero, dolorem, quae nobis ullam labore nam ipsam animi hic cupiditate provident fugiat autem architecto est natus! Laudantium, ullam!
+        Non laborum quibusdam provident cupiditate quidem sed vero tenetur sequi dolore, quos at necessitatibus tempore dignissimos eaque hic deleniti natus sint magni, voluptatem, aspernatur sit dolorem cumque excepturi. Consequatur, reiciendis.
+        Neque expedita illo dolorum dolores placeat? Hic, nulla vero enim consectetur at aut voluptate voluptatibus accusantium atque perspiciatis eveniet dolore sit explicabo sunt dolores illo, numquam, exercitationem aperiam a. Ipsa.
+        Vel quisquam rerum repellat ex accusamus voluptate laboriosam libero deserunt accusantium, id modi, velit itaque. Eveniet quibusdam cupiditate exercitationem quidem. Odio dignissimos autem delectus ea commodi cupiditate doloremque cum incidunt.
+        Dolorem vitae facere magni minus aspernatur magnam asperiores ea ad? Veniam, doloremque harum iusto dicta eum eligendi asperiores nam quos repudiandae ad id consectetur suscipit facere quia molestiae! Reiciendis, quam!
+        Delectus modi dolore a, dolorum reiciendis nam at quibusdam cupiditate! Asperiores sequi aspernatur aut quod. Distinctio architecto necessitatibus in. Aut veniam unde error cum harum nemo ratione nisi? Esse, adipisci.
+        Dignissimos recusandae perspiciatis, consectetur expedita ratione qui repellendus nisi sapiente, excepturi explicabo nemo atque reprehenderit corrupti laborum nihil vitae assumenda quia rem autem nesciunt deserunt, reiciendis commodi! Iusto, vitae accusamus.
+        Amet voluptatibus delectus laudantium dolorum optio perferendis in voluptates aliquid incidunt reprehenderit sunt labore cum error cupiditate natus ratione quos numquam, eius sint quam assumenda iusto cumque. Delectus, accusantium cum!
+        Quae quam suscipit perferendis dolorem aut eius laboriosam deleniti iure temporibus neque optio doloribus, atque aliquam assumenda eaque nostrum necessitatibus sapiente distinctio consectetur cumque recusandae dolor! Sapiente quidem aliquid harum.
+        Officia eveniet quis laborum sint minus maxime quia consequuntur, error optio dignissimos consectetur corporis illum dolores eius voluptates ea ad quisquam voluptas dolorum tempora, omnis odio nisi similique atque! Assumenda?
+        Quam accusantium ipsum aut! Qui rem iusto nisi, consequuntur sint cupiditate beatae commodi amet blanditiis officia ex itaque odit cumque deleniti quibusdam maiores, facilis quisquam quis. Iure dolor vitae alias.</p>
+    </main>
+</body>
+</html>
