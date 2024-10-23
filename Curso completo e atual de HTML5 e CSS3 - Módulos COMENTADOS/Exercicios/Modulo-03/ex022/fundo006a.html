@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fundo fixo2 de tela</title>
     <style>
         body {
             height: 100vh;/* Altura importante para não distorcer imagem, e para que não se repita a imagem causando feiura no projeto. */
-            background-color: black;
-            background-image: url('./imagens/wallpaper002.jpg');
-            background-position: center top;
-            background-repeat: repeat-y;/* Para garantir a imagem fique sem repetições dentro da caixa, mas para conteúdo com "height" de valores muito altos, é possível que esse valor precise ser alterado: 
+            /* background-color: black; */
+            /* background-image: url('./imagens/wallpaper002.jpg'); */
+            /* background-position: center top; */
+            /* background-repeat: no-repeat; *//* Para garantir a imagem fique sem repetições dentro da caixa, mas para conteúdo com "height" de valores muito altos, é possível que esse valor precise ser alterado: 
             Podemos usar valores como: "repeat", "no-repeat", "repeat-y", e "repeat-x"*/
-            background-size: cover;/*Podemos trabalhar com pixels nesse exemplo usamos "1000px", usamos  2 valores porcentuais "100% 100%",  usamos "auto", Usamos "contain" para aplicar 100% da aplicação da imagem sem cortes, mas dependendo do tamanho da tela, barras laterais podem surgir, e usamos "cover" para que a imagem seja aplicada 100% idependente do tamanho da tela.*/
+            /* background-size: cover; *//*Podemos trabalhar com pixels nesse exemplo usamos "1000px", usamos  2 valores porcentuais "100% 100%",  usamos "auto", Usamos "contain" para aplicar 100% da aplicação da imagem sem cortes, mas dependendo do tamanho da tela, barras laterais podem surgir, e usamos "cover" para que a imagem seja aplicada 100% idependente do tamanho da tela.*/
+
+            /* 
+                Aqui definimo o vinculo do plano de fundo */
+            /* background-attachment: fixed; *//* O valor scroll permite o fundo rolar junto com o conteúdo; O valor fixed permite que o conteúdo role enquando o plano de fundo não. 
+                OBS: Com essa propriedade definida, podemos definir o valor de repetição = no-repeat.*/
+
+            /* 
+                Shorthand - background
+                color > image > position > repeat > [size] > attachment 
+                OBS: o [size] deve ser posto junto ao position por meio de uma barra (/).*/
+            background: black url('imagens/wallpaper002.jpg') center center/cover no-repeat scroll;
+            /* COM ISSO podemos excluir todas as outras declarações para background. */
         }
         main {
             background-color: white;
@@ -25,12 +37,21 @@
         }
         /* Button */
         header.option-button {
+            width: 57%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 17px;
             background-color: lightgray;
             border-bottom: 1px solid black;
             color: black;
-            width: 100%;
             text-align: center;
             font-weight: bold;
+        }
+        header.option-button > p {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 7px;
         }
         header.option-button > button:hover{
             background-color: rgba(61, 2, 138, 0.479);
