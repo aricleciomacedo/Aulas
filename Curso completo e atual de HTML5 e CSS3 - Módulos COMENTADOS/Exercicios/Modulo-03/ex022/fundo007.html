@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url('./imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: relative;
+            height: 96vh;/* Era 500px */
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo {
+            background-image: url('./imagens/target001.png');
+            background-size: 100% 100%;
+
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            
+            /* margin: auto; *//* Assim alinhamos horizontalmente */
+
+            left: 50%;
+            top: 50%;
+
+            /* Propriedade e operação */
+            transform: translate(-50%, -50%);/* Essa propriedade mexe o elemento em ambos os eixos X e Y (Neste caso = pra direita e para baixo) ou -X e -Y = pra esquerda e pra cima. */
+        }
+
+        /* Button */
+        header.option-button {
+            width: 57%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 17px;
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+        header.option-button > p {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 7px;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+    </style>
+</head>
+<body>
+    <header class="option-button">
+        <p>Veja Também!</p>
+        <button>
+            <a href="fundo007a.html" rel="external">CLIQUE AQUI!</a>
+        </button>
+    </header>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

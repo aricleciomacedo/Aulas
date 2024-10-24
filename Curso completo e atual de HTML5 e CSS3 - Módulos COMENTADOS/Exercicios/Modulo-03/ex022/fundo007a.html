@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alinhamento Vertical</title>
+    <style>
+        #container {/* Seletor do id */
+            background-image: url('./imagens/target001.png');/* Aqui usamos uma imagem de fundo que é tipo um alvo de como se posiciona o elemento por meio das propriedades dos posistions. */
+            background-size: 100% 100%; /* Assim fazemos imagem de fundo ocupar a caixa inteira sem uma possível repetição. */
+            position: relative; /* Aqui definimos o container como relativo. Na verdade esse já é padrão. AGORA definimos o filho como (absoluto) para melhor alihamento. */
+            height: /* 500px */ 96vh;/* Altura dessa caixa. */
+            background-color:#00Bfff;/*Cor de fundo. */
+            padding: 10px;/* COm esse espaçamento podemos ver que o roxo ocupa uma dimensão em que a caixa amarela fica dentro. */
+        }
+        #conteudo {/* seletor do id. */
+            text-align: center;
+            background-image: url('./imagens/target001.png');/* Aqui usamos uma imagem de fundo que é tipo um alvo de como se posiciona o elemento por meio das propriedades dos posistions. */
+            background-size: 100% 100%; /* Assim fazemos imagem de fundo ocupar a caixa inteira sem uma possível repetição. */
+            position: absolute;/* Aqui definimos como absolute pois o elento pai é relativo. AGORA com essa definição, podemos usar quatro propriedades aplicadas a um elemento absoluto; são elas (left) ; (top) ; (right) e (bottom)*/
+            height: 200px;/* Altura dessa caixa. */
+            width: 400px;/* LArgura dessa caixa. */
+            background-color: yellow;/* Cor de fundo. */
+
+            /* margin: auto; *//* assim é a maneira mais prática de alinhar um (caixa) conteudo ao centro, porém essa entralização só acontece horizontalmente, e para de fato alinhar ao centro em ambos os sentidos horizontal/vertical precisamos trabalhar com as posições relative ou absolute.
+                VEJA ACIMA onde aplicamos absolute ao container. */
+
+            left: /* 100px */ 50%; /* Aqui é a distância equivalente da borda esquerda da caixa pai até a borda esquerda dessa caixa filho e definimos 50% para aprendermos um pouco sobre esse posicionamento.*/
+            top: /* 200px */ 50%;/* Aqui é a distância equivalente da borda de cima da caixa pai até a borda  de cima dessa caixa filho.  */
+        
+        /* 
+        OBS: Devemos ter em mente que quando posicionamos uma caixa dentro de outra usando essas propriedades acima, elas pegam como refenência a a ponta superio esquerda da borda da caixa filha em direção ao top e da esquerda da caixa pai. PORTANTO seu alinhamento deve ser compreendido, para não pensar que está dando errado.
+        */
+
+        /* Aqui usaremos a propriedade transform que permite mexer a caixa (elemento) de maneira que podemos pegar a referÊncia de qualquer ponto da caixa filha para alinhar com qualqer ponto da caixa pai.*/
+            transform: translate(-50%, -50%); /* Aqui usamos a operação translate que mexe (move) o elemento no eixo-X e eixo-Y para centralizar a caixa filha dentro da caixa pai. 
+                Valores exemplos: - Nº - Nº = para esquerda e para cima 
+                                  + Nº + Nº = para direita e para baixo
+                                  - Nº + Nº = para esquerda e para baixo 
+                                  + Nº - Nº = para direita e para cima 
+
+                OBS: Essa forma de alinhar elementos também é responsiva em telas menores e maiores pois seus valores são em porcentagem.
+         */
+
+        }
+
+        #conteudo2 {
+            text-align: center;
+            background-image: url('imagens/target001.png');
+            background-color: green ;
+            background-size: 100% 100%;
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -160%);
+        }
+
+        /* ANIMAÇÕES CSS*/
+        /* #conteudo {
+            position: relative;
+            animation: mover 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes mover {
+            0% {
+                top: 10%;
+                filter: opacity(7%);
+            }
+            25% {
+                padding: 30%;
+            }
+            100% {
+                top: 80%;
+            }
+        } */
+        
+         /* Button */
+         header.option-button {
+            width: 57%;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            border-radius: 17px;
+            background-color: lightgray;
+            border-bottom: 1px solid black;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+        header.option-button > p {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 7px;
+        }
+        header.option-button > button:hover{
+            background-color: rgba(61, 2, 138, 0.479);
+            transition: .3s;
+        }
+        header.option-button > button a:hover{
+            color: yellow;
+            transition: .3s;
+        }
+        /* FIM Button */
+    </style>
+</head>
+<body>
+    <header class="option-button">
+        <p>Caso queira voltar a página anterior, então clique no botão abaixo!</p>
+        <button>
+            <a href="fundo007.html" target="_self" rel="next">VOLTAR!</a>
+        </button>
+    </header>
+
+    <!-- Para centralizar verticalmente , é necessário termos  caracterista (a presença) de um container e de um conteúdo. -->
+    <section id="container">
+        <article id="conteudo">
+            <p>COTEUDO</p>
+        </article>
+        <article id="conteudo2">
+            <p>COTEUDO2</p>
+        </article>
+        <p>CONTAINER</p>
+    </section>
+</body>
+</html>

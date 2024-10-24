@@ -204,21 +204,49 @@ https://www.youtube.com/watch?v=_5KoMUMCTG0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 		É IMPORTANTE que leia o arquivo "Imagens de Fundo.pdf" sobre o assunto e assista o vídeo.
 
 
-		Módulo 03, capítulo 19, Aula 4
+Módulo 03, capítulo 19, Aula 4
 Vídeo:
 Configurando a posição da imagem no fundo do site - @Curso em Vídeo HTML5 e CSS3
 Link:
 https://www.youtube.com/watch?v=RpcmGqvzWxQ&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=15
 
-	 Nessa aula criamos o arquivo "fundo003.html" para aprendermos um pouco sobre a propriedade "background-position" e a maneira como definimos a posição de fixação da image na tela apartir da direção do eixo x ou y determindo nos valores "left, top, right, bottom e center".
+	 Nessa aula criamos o arquivo "fundo003.html" dentro de "ex022" para aprendermos um pouco sobre a propriedade "background-position" e a maneira como definimos a posição de fixação da image na tela apartir da direção do eixo x ou y determindo nos valores "left, top, right, bottom e center".
 	
 	Criamos ainda nesta aula o exercício 4 que é o arquivo "fundo004.html" e exercício 5 que é o arquivo "fundo005.html".
 
 
+Módulo 03, capítulo 19, Aula 5
+Vídeo:
+Mudando o tamanho da imagem de fundo do site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=lNaoi5AUCsc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=16
+
+	NEsta aula vamos aprender algumas personalizações da propriedade "background-size: ;"
+Agora veja o arquivo ""
+
+*	LEMBRE-SE sempre de atualizar o "Commit" e "Push Origin" para o Git Hub. *
+
+	Então criamos o arquivo "fundo006.html" dentro do exercício "ex022" e comentamos mais sobre a aula. 
+	OBS:
+	+	Busque ler o material pdf já citado anteriormente.
+
+Módulo 03, capítulo 19, Aula 6
+Vídeo:
+background-attachment e shorthand - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=PzJwwA6LVts&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=17
+
+	Nesta aula vamos aprender a maneira como vinculamos o background ao conteúdo de maneira que possamos definir se ele vai rolar junto com o conteúdo ou se ele vai ficar travado enquanto o conteúdo rola.
+ENTÃO continuamos com o exercício anterior que é o "ex022" e o arquivo "fundo006".
 
 
+Módulo 03, capítulo 19, Aula 7
+Vídeo:
+Centralização vertical de caixas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=-w0Qo_qQiRg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=18
 
-
+	LEMBRE-SE de acompanhar o material pdf e a aula em vídeo.
 
 
 
