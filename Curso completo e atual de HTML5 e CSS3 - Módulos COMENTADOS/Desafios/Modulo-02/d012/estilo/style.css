@@ -1,0 +1,154 @@
+/* OBESERVAÇÃO:
+    Sempre é bom manter a organização do estilo de maneira que faça sentido; ou seja é bem mais prático manter os seletores na ordem em que os elementos do index.html estejam; assim mantemos ordem e facilita  a compreensão do estilo aplicado. 
+"Não faz sentido estilizar o roda-pé por exemplo; antes do header! até funciona, porém embaralha o código e futuramente irá dificultar possíveis modificações até mesmo por parte do desenvolvedor".  */
+
+/* 
+    Aqui usamos a regra padrão para acentuações. 
+*/
+@charset "UTF-8";
+
+/* Aqui são as importações de fonts do site fonts.google.com 
+    OBS: Dê uma olhadinha  no arquivo Links.txt para ver mais sobres estas fontes. */
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+/* Aqui são as variáveis que usaremos para aplicar as fonts. */
+:root {
+        /* Aqui é nossa fonte padrão */
+    --font1: Verdana, Geneva, Tahoma, sans-serif;/* Essa é Para caso as importadas não funcionem, ela vai sobre-pôr. */
+        /* Aqui são  as fonts importadas. */
+    --font2: "Passion One", cursive; /* Essa usaremos nos títulos */
+    --font3:"Sriracha", cursive;/* Essa usaremos no conteúdo, pois ela tem a aparência com escrita humana em papel. */
+}
+
+/* 
+    Selecionamos a classe golbal para resetarmos as configurações padrões dos elementos.
+De inicio, esse reset cola todo o onteúdo no canto esquerdo da página.
+*/
+* {
+    margin: 0px;/* Assim remove a margem padrão dado pelo navegador. */
+    padding: 0px;/* Assim remove o espaçamento padrão dado pelo navegador. */
+    font-size: 1em;/* Aqui definimos o tamanho padrão para todas as letras do conteúdo que é de 16px. */
+}
+
+/* 
+    Aqui selecionamos as tags <html> e <body> para ambos receberem esse memsmo estilo; ou seja: Tanto html quanto body recebem em comum estas comfigurações.
+*/
+html, body {
+    min-height: 100vh;/* Assim configuramos um tamanho mínimo para nossa página, e fazemos isso definindo o tamanho da view=port que nesse exemplo == 100vh=100% da view-height > altura, ou vw = view-width > largura.*/
+    background-color: darkgray;/* Assim definimos a cor de fundo. */
+    font-family: var(--font1);/* Aqui é a variável com a fonte padrão. */
+    /* font:30px var(--font1); */ /* Teste short-hand. */
+}
+
+/* 
+    Aqui selecionamos o <header> e logo abaixo todos os elementos dentro dele.
+*/
+header {
+    background-color: black;/* Cor de fundo. */
+    color: white; /* Cor do texto. */
+    text-align: center;/* Centraliza o texto */
+    /* padding: 10vh; */
+}
+/* Aqui selecionamos  o <h1> que está dentro do <header. */
+header > h1 {
+    padding-top: 50px;/* Assim definimos um espaço que se estende da parte superior do h1 até o topo da página. */
+
+    /* text-transform: uppercase; *//* Nesse projeto optamos por font-variant. Mas aqui podemos mudar  o caractere da letra. >uppercase=maiúsulas ; lowercase=minúsculas e capitalize=padrão. */
+
+    font-variant: small-caps; /* Assim definimos que as letras minúsculas se tornarão maiúsculas e mantenso o mesmo tamanho. */
+
+    font-family: var(--font2);/* Aqui chamamos a variável que contém a font importada. */
+    
+    /* font-size: 2em; *//* Aqui definimos que a fonte terá duas vezes o tamanho padrão; ou seja 2*16pixels , porém para ficar melhor em telas menores será bom usat medi-queres, porisso optamos por usar a opção de View-port, VEJA ABAIXO.*/
+    font-size: 10vw;/* Assim fará com que o texto aumente ou diminua conforme o tamanho da tela, pois o View-Port pega como referência a VW = View Width = Largura da Tela.*/
+} 
+/* Aqui selecionamos a tag <p> que está dentro do <header>> */
+header > p { 
+    padding-bottom: 50px; /* Assim definimos um espaço entre a parte inferior do parágrafo e a parte de baixo do cabeçalho (header). */
+}
+
+/* 
+    Aqui definimos o estilo de todos os links na página.
+*/
+a { /* Se desejar colocar links dentro  do conteúdo use o seletor conjunto par amobos, da seguinte forma:
+header a, footer a {} */
+    color: white;/* Cor de texto. */
+    text-decoration: none;/* Remove o sublinhado.*/
+    font-weight: bolder;/* Pesamos a fonte com negrito. */
+}
+/* Aqui definimos um efeito quando o mouse passar sobre este elemento <a>. */
+a:hover {/* Se colocar links dentro  do conteúdo use o seletor conjunto para ambos da seguinte forma:
+header a:hover, footer a:hover {} */
+    text-decoration: underline;/* Sublinha o texto */
+}
+
+/* Aqui selecionamos de forma geral a <section> para que todos os elementos dentro dela, receba as configurações. Esse seletor servirá para as classes também, mas o seletor indivual de classes sobre-põe esse.*/
+section {
+    /* Aqui espaçamos um conteúdo do outro, dando mais barra de rolagem para a página ; deixano responsivel e ajustando-se a qualquer tamanho de tela e para melhor aplicação de um efeito paralax (que permite rolar o conteúdo sem mexer a imagem de fundo. */
+    padding-top: 10vh;/* Um espaço interno de 10% da view-port da altura na parte de cima.*/
+    padding-bottom: 10vh;/*Espaço interno de 10% na parte de baixo. */
+    line-height: 2em;/* Assim damos um espaço de uma linha de texto em relação a outra. */
+    padding-left: 30px;/* Assim afastamos o conteúdo em relação ao canto esquerdo da página. */
+    font-family: var(--font3);/* Aqui usamos a variável contendo a fonte importada. */
+
+    /* font-size: 2em; *//* Aqui definimos que a fonte terá duas vezes o tamanho padrão; ou seja 2*16pixels , porém para ficar melhor em telas menores será bom usat medi-queres, porisso optamos por usar a opção de View-port, VEJA ABAIXO.*/
+    font-size: 3.5vw;/* Assim fará com que o texto aumente ou diminua conforme o tamanho da tela, pois o View-Port pega como referência a VW = View Width = Largura da Tela.*/
+}
+/* Aqui selecionamos a tag <p> dentro da section */
+section p {
+    padding-bottom: 2em;/* Assim com esse espaço em baixo , descolamos os parágrafos um do outro. */
+}
+
+/* 
+    Aqui selecionamos as classes dentro das sections.
+ */
+/* Selecionamos aqui as sections que possuem a classe normal.  */
+section.normal {
+    background-color: #fff;/* Cor de fundo */
+    color: #000;/* Cor da letra. */
+}
+/* Aqui selecionamos as sections que possuem a classe imagem. */
+section.imagem {
+    background-color: rgb(51,51,51); /* Cor de fundo. */
+    color: white;/* Cor da letra. */
+    /* box-shadow: inset 6px 6x 12px 0px rgba(0, 0, 0, 0.473); *//* Assim criamos uma sobra na caixa inset = (de fora pra dentro) com 6px de deslocamento na vertical, 6px na horizontal, 12px de espalhamento e 0px de amplitude (ampliação) na cor preta. */
+    box-shadow: inset 6px 40px 35px 0px rgba(0, 0, 0, 0.473 );
+    background-size: cover;/* Assim fazemos com que a imagem se dimensione conforme o tamanho da tela, mas foi comentada nos seletores de ids, porém assim atribuimos o efeito a todas as imagens dessa section classe image. */
+    background-attachment: fixed;/* Assim fazemos efeito Paralax, ou seja fixa a imagem enquanto o conteúdo passa sobre ela. */
+}
+/* Aqui selecionamos a tag <p> dentro da section classe imagem. 
+    E esse estilo vai fazer sentido quando aplicarmos uma imagem de fundo dentro dessa section classe imagem.*/
+section.imagem > p {
+/* HOUVE um probleminha em defnir esta largura, pois o texto se desorganizou dentro das caixas devido ao font-size = vw, porisso optmos por definir como display inline-block para que este ajuste seja garantido independete do tamanho de tela. */
+    /* width: 400px; *//* Definimos a largura da caixa deste elemento. */
+
+    display: inline-block;/* Assim faz com que a caixa se amolde ao conteúdo. */
+    padding: 5px;/* Assim desolamos o conteúdo da caixa. */
+
+    background-color: rgba(0, 0, 0, 0.524);/* Cor de fundo. */
+    text-shadow: 1px 1px 0px black; /* Assim sombreamos o texto. */
+}
+/* Aqui seleciomamos os ids das sections. */
+section#img01{
+    background-image: url('../pacote-d012/imagens/background001.jpg');/* Assimm adcionamos uma imagem de fundo. */
+    background-position: right center;/* Aqui posicionamos a imagem de fundo. */
+    /* background-size: cover; *//* Assim fazemos com que a imagem se dimensione conforme o tamanho da tela, mas foi comentada , porém usamos ela no seletor da classe imagem pois dará o mesmo efeito para as demais umagens do conteúdo.*/
+}
+section#img02 {
+    background-image: url('../pacote-d012/imagens/background002.jpg');/* Assim fazemos com que a imagem se dimensione conforme o tamanho da tela, mas foi comentada , porém usamos ela no seletor da classe imagem pois dará o mesmo efeito para as demais umagens do conteúdo. */;
+}
+
+
+
+
+
+/* 
+    Seletor de Roda-pé
+*/
+footer {
+    background-color: black;/* Cor de fundo.*/
+    color: white;/* Cor de texto. */
+    text-align: center;/* Alinhamento de texto. */
+    padding: 10px;/* Espaçamento interno entre os elementos e as margens da caixa footer.*/
+}

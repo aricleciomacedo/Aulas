@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+* { 
+    margin: 0px; 
+    padding: 0px;
+}
+/* :root {
+    --cor1: rgb(247, 174, 66);
+}
+body {
+    background-color:var(--cor1);
+} */
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    letter-spacing: .7rem;
+    padding-top: 50px;
+    /* text-transform: uppercase; */ /* essa propriedade para deixar todas as letras maíusculas. */
+    font-variant: small-caps;/* Assim deixamos as letras maísculas mais com as letras iniciais maiores.*/
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    letter-spacing: 2px;/* Adcionei para ver como fica. */
+    padding-left: 30px;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+section.imagem > p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,99 @@
+Aulas:
+Capítulo 20.
+
+1-Um projeto completo usando HTML e CSS - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/cz7AoKGcwlY?si=nDLOjKOkFpAPWXc-
+2-Download e organização dos arquivos - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/V8kF1WZisbg?si=PUIcOWKs9f5EBW5Q
+3-Ajustes no HTML do projeto - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/e-HB90dx_CI?si=w2OnN94WX-f-ALsW
+4-Ajustes no CSS do projeto - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/82vIYws5wF8?si=lUYl5beqtqCXzjuR
+5-Colocando as fontes ao projeto - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/0bBBaHNkzVE?si=slnGHUVYm9e7JUde
+6-Imagens com efeito Parallax simples - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/UnYur3GqcDc?si=0C9D_qsDvVKp9ZHz
+7-Hospedando o Projeto Cordel gratuitamente - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/78hBqKLaWCU?si=4rd9P93TXovbFz0U
+
+
+Google Fonts:
+
+https://fonts.google.com/selection/embed
+
+
+>>> Importação da fonte Passion one:
+
+	No index.html:
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+	No style.css:
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+	Ou em Css interno
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+</style>
+
+	Exemplo de Uso nos seletores:
+
+.passion-one-regular {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.passion-one-bold {
+  font-family: "Passion One", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.passion-one-black {
+  font-family: "Passion One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+>>> Importação da fonte Sriracha:
+
+	No ndex.html:
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap" rel="stylesheet">
+
+	No style.css:
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+	Exemplo de uso nos seletores:
+
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

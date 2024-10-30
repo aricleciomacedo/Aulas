@@ -249,5 +249,79 @@ https://www.youtube.com/watch?v=-w0Qo_qQiRg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 	LEMBRE-SE de acompanhar o material pdf e a aula em vídeo.
 
 
+Módulo 03, capítulo 20, Aula 1
+Vídeo:
+Um projeto completo usando HTML e CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=cz7AoKGcwlY&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=19
 
->>>>>>>>>>>>> ÍNICIO DO MÓDULO 3 <<<<<<<<<<<<
+	Esta aula começa com o acesso ao site: https://professorguanabara.github.io/projeto-cordel/
+
+	O projeto mostrado é uma amostra do desafio que vamos resolver neste capítulo.
+VALE LEMBRAR que esse conteúdo possuí direitos autorais e aprendemos a dar os devidos créditos para evitar possíveis e futuros problemas.
+
+Módulo 03, capítulo 20, Aula 2
+Vídeo:
+Download e organização dos arquivos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=V8kF1WZisbg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=20
+
+	Neste vídeo é ensinado onde baixamos as imagens que serão usadas no desafio.
+
+Módulo 03, capítulo 20, Aula 3
+Vídeo:
+Ajustes no HTML do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=e-HB90dx_CI&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=21
+
+	NEsta aula começamos por copiar o texto inteiro do desafio e esse texto está no arquivo "pacote-d012.zip" , que foi baixado na aula anterior.
+
+	ENVELOPAMOS com a tag <header> o conteúdo do cabeçalho e também envelopamos o <a> link(âncora) para o site do auto do projeto; Adcionamos o Título principal do conteúdo <h1> e o parágrafo <p>.
+
+	ENVELOPAMOS com a tag <footer> o roda-pé do projeto, adcionamos o <a> link para o GitHub do professor Guanabara, o <a> link para o site do CursoemVídeo e adcionamos a atributo: target _blank.
+		O que é target _blank?
+			O target="_blank" é um atributo do HTML que abre um link em uma nova janela ou aba do navegador.
+	ENVELOPAMOS com a tag <section> as 5 seções de nosso conteúdo e adcionamos as BraksHovers <br> para quebrar linha entre as frases e como sections não separa por parágrafos, então envelopamos cada uma das septilhas com a tag <p>.
+
+	CRIAMOS a pasta estilos e o arquivo .css
+	COMO?
+		Abaixo da tag <title>, digitamos link:css e teclamos ENTER;
+			VIDE = <link rel="stylesheet" href="./estilo/style2.css">
+		Paramos a seta do mouse sobre "style.css" , então clicamos em "Siga o Link(CTRL + clique)" e clicamos em "criar o arquivo" para criar o (arquivo) e a pasta para estilo.
+
+	POR FIM; COm o arquivo "style.css" aberto adcione a regra padrão = @charset "UTF-8" que vai servir para aceitar todos os caracteres de acentuação de textos em vários idiomas.
+
+	+ SOBRE:
+	@charset "UTF-8" 
+
+		A regra @charset "UTF-8" em CSS serve para especificar a codificação de caracteres UTF-8 na folha de estilo: 
+		Garante a decodificação dos caracteres, mesmo que eles não sejam os mesmos na folha de estilo 
+		É uma boa prática e altamente recomendável 
+		É uma questão de segurança 
+		A regra @charset deve ser o primeiro elemento na folha de estilo e não ser precedida de qualquer caráter. Além disso, é importante salvar a folha de estilo na codificação de caracteres UTF-8. 
+		O UTF-8 (UCS Transformation Format 8) é a codificação de caracteres mais comum da World Wide Web. 
+
+
+
+Módulo 03, capítulo 20, Aula 4
+Vídeo:
+Ajustes no CSS do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=82vIYws5wF8&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=22
+
+	Iniciamos esta aula separando as seções e definido quais delas serão comuns e quais delas receberão o efeito da imagem de fundo em paralax.
+PORTANTO criamos a "class=normal" que tem o fundo branco e a "class=imagem"; E adcionamos as classes as suas devidas secitons.
+
+POR FIM na CSS resetamos as propriedades padrões e iniciamos os estilos do nosso projeto.
+OBS:
+	Este reset é feito usando o seletor de todas as tags = * {}
+
+	VEJA que usei no seletor "header > h1 {}" a propriedade "latter-spacing {}" Para definir o espaçamento entre as letras, basta utilizar a propriedade letter-spacing e especificar o valor desejado. Por exemplo, para definir um espaçamento de 5 pixels, pode-se utilizar o código div style="letter-spacing: 5px;">. 
+	É possível utilizar valores em pixels ou em valores relativos, como em, para que o espaçamento permaneça relativo ao tamanho da fonte. 
+	A utilização da propriedade letter-spacing é recomendada em vez de adicionar caracteres em branco para controlar o espaçamento, pois os caracteres em branco podem alterar o significado e a pronúncia da palavra. 
+	Para modificar o espaçamento entre linhas de um texto, pode-se utilizar a propriedade line-height do CSS. 
+
+	AGORA mão na massa e nos arquivos "index.html e style.css" já criado anteriormente.
+
+
+>>>>>>>>>>>>> FIM DO MÓDULO 3 <<<<<<<<<<<<
