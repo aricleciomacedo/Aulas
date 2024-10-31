@@ -324,4 +324,49 @@ OBS:
 	AGORA mão na massa e nos arquivos "index.html e style.css" já criado anteriormente.
 
 
+Módulo 03, capítulo 20, Aula 5
+Vídeo:
+Colocando as fontes ao projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=0bBBaHNkzVE&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=23
+
+	Nessa aula é ensinado a usar fontes importadas do "Google Fonts" no link: https://fonts.google.com/selection; 
+		As famílias de fontes que importamos foram:
+			"Passion One" e "Sriracha" 
+		AGORA veja no arquivo "style.css" o código da importação das duas fontes =
+			@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+		PODEMOS importar indivudualmente da seguinte forma:
+			+ PassiOne
+			@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+			+ Sriracha
+			@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+		COMO usar:
+			.sriracha-regular {
+			font-family: "Sriracha", cursive;
+			font-weight: 400;
+			font-style: normal;
+			}
+
+			.passion-one-regular {
+				font-family: "Passion One", sans-serif;
+				font-weight: 400;
+				font-style: normal;
+			  }
+			  	* Ou
+			  .passion-one-bold {
+				font-family: "Passion One", sans-serif;
+				font-weight: 700;
+				font-style: normal;
+			  }
+			  	* Ou
+			  .passion-one-black {
+				font-family: "Passion One", sans-serif;
+				font-weight: 900;
+				font-style: normal;
+			  }
+			
+	POR FIM veja a aplicação na css dentro da criação de variáveis = "":root"
+
+
+
 >>>>>>>>>>>>> FIM DO MÓDULO 3 <<<<<<<<<<<<
