@@ -365,8 +365,18 @@ https://www.youtube.com/watch?v=0bBBaHNkzVE&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 				font-style: normal;
 			  }
 			
-	POR FIM veja a aplicação na css dentro da criação de variáveis = "":root"
+	POR FIM veja a aplicação na css dentro da criação de variáveis = ":root"
 
 
+Módulo 03, capítulo 20, Aula 6
+Vídeo:
+Imagens com efeito Parallax simples - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=UnYur3GqcDc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=24
+
+	Iníciamos esta aula adicionando a css, o seletor "section > p" para aplicar um espaço interno(padding), em cada elemento <p> da <section>.
+		Fizemos isso para separar as septilhas que estão próximas de mais, e usamos a propriedade "padding-bottom: ;"
+	POR FIM adicionamos um "id" para as <section class imagem>, adcionamos para ambos os seletores CSS = "section#img01 e section#img02";
+		E os comentários adicionais estarão nos arquivos "index.html e style.css".
 
 >>>>>>>>>>>>> FIM DO MÓDULO 3 <<<<<<<<<<<<
