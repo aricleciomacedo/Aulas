@@ -131,12 +131,12 @@ section.imagem > p {
 }
 /* Aqui seleciomamos os ids das sections. */
 section#img01{
-    background-image: url('../pacote-d012/imagens/background001.jpg');/* Assimm adcionamos uma imagem de fundo. */
+    background-image: url('../imagens/background001.jpg');/* Assimm adcionamos uma imagem de fundo. */
     background-position: right center;/* Aqui posicionamos a imagem de fundo. */
     /* background-size: cover; *//* Assim fazemos com que a imagem se dimensione conforme o tamanho da tela, mas foi comentada , porém usamos ela no seletor da classe imagem pois dará o mesmo efeito para as demais umagens do conteúdo.*/
 }
 section#img02 {
-    background-image: url('../pacote-d012/imagens/background002.jpg');/* Assim fazemos com que a imagem se dimensione conforme o tamanho da tela, mas foi comentada , porém usamos ela no seletor da classe imagem pois dará o mesmo efeito para as demais umagens do conteúdo. */;
+    background-image: url('../imagens/background002.jpg');/* Assim fazemos com que a imagem se dimensione conforme o tamanho da tela, mas foi comentada , porém usamos ela no seletor da classe imagem pois dará o mesmo efeito para as demais umagens do conteúdo. */;
 }
 
 
