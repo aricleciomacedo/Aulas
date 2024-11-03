@@ -41,7 +41,7 @@ Vale lembrar que esse nome pode ser qualquer outro nome que desejar...
 /* Aqui usamos a configuração global para remover os padrões de valores das tags */
 * {
     margin: 0px;
-    padding: opx;
+    padding: 0px;
 }
 
         /* Corpo  */
