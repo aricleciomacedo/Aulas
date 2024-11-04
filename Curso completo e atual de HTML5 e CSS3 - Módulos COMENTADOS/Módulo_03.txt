@@ -379,4 +379,46 @@ https://www.youtube.com/watch?v=UnYur3GqcDc&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 	POR FIM adicionamos um "id" para as <section class imagem>, adcionamos para ambos os seletores CSS = "section#img01 e section#img02";
 		E os comentários adicionais estarão nos arquivos "index.html e style.css".
 
+Módulo 03, capítulo 20, Aula 7
+Vídeo:
+Hospedando o Projeto Cordel gratuitamente - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=78hBqKLaWCU&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=25
+
+	NEsta aula hospedamos o projeto.
+	
+*	FIM DO PROJETO
+
+
+
+
+Módulo 03, capítulo 21, Aula 1
+Vídeo:
+Ainda podemos usar tabelas em HTML? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=9IF4xvg5rWI&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=26
+
+	Nesta aula aprendemos teoricamente um pouco sobre a estrutura e uma tabela, e uma observação importante é que não se pode usar tabela para criar a estrutura de um site.
+
+Módulo 03, capítulo 21, Aula 2
+Vídeo:
+Sua primeira tabela em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=lIiZu-94PBk&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=27
+
+		Iniciamos esta aula abrindo o programa do Excel e criando um exemplo de como é uma tabela; 
+			VEJA o arquivo "Primera_planilha_do_cursoemvideo.xlsx" na pasta "ex023".
+		
+		SAIBA:
+			  HIERARQUIA DE TABELAS (Simples) consiste em:
+				  <table> = TABLE = tabela
+				  <tr> = TABLE ROW = Linha de tabela
+				  <th> = TABLE HEADER = Cabeçalho de tabela
+				  <td> = TABLE DATA = Dado de tabela
+
+			OBS:
+			  USAMOS a propiedade css "border-collapse" para definir se ela vai ter as células padrão separadas(separate) ou unidas (collapse).
+
+			AGORA veja os comentários sobre tabelas nos arquivos "html" do exercício 23.
+
 >>>>>>>>>>>>> FIM DO MÓDULO 3 <<<<<<<<<<<<
