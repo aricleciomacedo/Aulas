@@ -421,4 +421,39 @@ https://www.youtube.com/watch?v=lIiZu-94PBk&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 
 			AGORA veja os comentários sobre tabelas nos arquivos "html" do exercício 23.
 
+Módulo 03, capítulo 21, Aula 3
+Vídeo:
+Alinhando o conteúdo em tabelas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=djvX6p9l-Rk&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=28
+
+	Iniciamos esta aula apagando as duas últimas linhas da tabela que criamos durante a explicação sobre fechamento da tag de linha = <tr> e de dado = <td>;
+	Removemos as classe e as cores definidas e adcionamos uma altura para as células da tabela; Usando a proriedade "height:400px;" ao seletor "table".
+
+*	PARA essa tabela criamos o arquivo "tabela001a.html"
+
+	Pra alinhar o conteúdo de dentro da tabela na (horizontal) usamos a propriedade "text-align" ao seletor dos dados que no caso é o "td" na CSS, já o valor pode ser "right, center e left."
+
+	Pra alinhar o conteúdo de dentro da tabela  na (vertical) usamos a propriedade "vertical-align" ao seletor dos dados que no caso é o "td" na CSS, já o valor pode ser "top, middle(padrão) e bottom."
+
+	Criamos uma classe "class:numero" e definimos que seu seletor CSS ".numero" terá a propriedade "text-align:right;" para colocarmos as <td>C2 e C3 para a direita.
+
+	AGORA veja nos arquivos html's mais sobre o assunto.
+
+
+Módulo 03, capítulo 21, Aula 4
+Vídeo:
+Aprendendo a trabalhar com tabelas grandes - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=XmrNuqmmckM&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=29
+
+	Nessa aula é ensinado que assim como existem tags semânticas indicadas pela W3C para conteúdos; Existem a forma semêntica para criar tabelas grandes com bastante conteúdos(dados). MAS se for para pequenas tabelas , ENTÃO podemos usar o metódo convencional como no exemplo anterior.
+	 OBS:
+		O metódo a segir serve para ambas tabelas, seja ela grande ou pequena.
+
+*	LEMBRE-Se de atualizar o repositório o GitHub adcionando o exercício anterior.
+
+
+
+
 >>>>>>>>>>>>> FIM DO MÓDULO 3 <<<<<<<<<<<<
