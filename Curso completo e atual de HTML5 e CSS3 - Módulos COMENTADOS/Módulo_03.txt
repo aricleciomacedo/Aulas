@@ -1,4 +1,4 @@
->>>>>>>>>>> ÍNICIO DO MÓDULO 3 <<<<<<<<<<<<
+﻿>>>>>>>>>>> ÍNICIO DO MÓDULO 3 <<<<<<<<<<<<
 	
 
 Módulo 03, capítulo 18, Aula 0 "Introdução"
@@ -28,6 +28,10 @@ https://www.youtube.com/watch?v=NgWExh3bswg&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 		OBS: scm significa:
 			source code maneger = gerenciador de código fonte
 	Segundo baixamos o GitHub Desktop no link: https://desktop.github.com/download/
+
+	Ver se tem git instalado no pc:
+	No prompt de comando digite;
+	>>> git --version e tecle ENTER
 
 Módulo 03, capítulo 18, Aula 3
 Vídeo:
@@ -453,7 +457,255 @@ https://www.youtube.com/watch?v=XmrNuqmmckM&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxb
 
 *	LEMBRE-Se de atualizar o repositório o GitHub adcionando o exercício anterior.
 
+	1. Criamos então o arquivo "tabela002.html" e nele adcionamos mais comentários sobre a aula.
+	2. Adicionamos as tags semânticas para criar a tabela, e usamos a tabela do Wikipedia com os dados da população de exemplo para a aula.
+		VEJA: https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_popula%C3%A7%C3%A3o
+	3. Adicionamos todos os dados referente as <td>'s'
+	4. Adicionamos uma classe referente aos números.
+	5. Adicionamos a <td> do número total da <tr> da <tfoot> em uma <strong>.
 
+	Lembre-se de ler e praticar a tabela do arquivo criado.
+
+
+Módulo 03, capítulo 21, Aula 5
+Vídeo:
+Caption e Escopo de títulos em tabelas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=ZnjU3PzhGi0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=30
+
+	Nesta aula vamos ver que a parte semântica é importante para o navegador entender do que se trata cada elemento.
+VEJA que não importa a ordem de posição do <caption>, seja antes ou depois do <tbody>, antes ou depois do do <thead> ou <tfoot> mesmo assim o navegador sempre vai posicionar o conteúdo acima entre <tbody> e <thead> pois se trata de uma legenda para a tabela.
+
+2- Adicionamos o estilo usando o seletor do caption.
+3- Aprendemos o uso espoco correto para Títulos<th> e Dados<td> na  tabela:
+	3.a scope = col: Refere-se a Título da coluna de dados.
+		Ex: <th scope="col">Estado</th> == Título dos dados em coluna referentes aos estados
+	3.b scope = row: Refere-se a Título da linha de dados.
+		Ex: <th scope="row">Total de Habitantes</th> == Refere-se aos dados em linha referente ao total de Habitantes.
+
+	3.c OBS:
+		Assim como existem "col" e "row", existem ainda "colgroup" e "rowgroup" que será alvo de aula futura.
+
+	3.d Esses atributos não causam nenhum efeito\resultado visual, mas é importante para os mecânismos de buscas(os parcers), como por exemplo o Google que analize e compreenda os dados de forma coerente para fazer sentido.
+
+4- Definimos uma largura para a coluna de dados da população = <th>População</th> e fizemos isso adicionando um "style" in-line.
+
+
+
+Módulo 03, capítulo 21, Aula 6
+Vídeo:
+Efeito Zebrado na tabela com HTML e CSS;
+Link:
+https://www.youtube.com/watch?v=IYUiFRE5hpI&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=31
+
+	Nesta aula é ensinado a usar o recurso zebrado que serve para melhorar a visibilidade dos dados da tabela, pois permite pintar uma linha de cada cor.
+
+SAIBA que se você fizer o seletor CSS para todo <tr> filho direto do <tbody> da seguinte maneira "tbody > tr {}", não ficará do jeito esperado que é o = zebrado.
+
+ENTÃO para melhor efeito, usamos a pseudo-classe que faz aplicação da propriedade que queremos de maneira pré-defenida.
+	EX: Se queremos Cor de fundo, mas queremos pintar uma sim e outra não, e assim seguir, então a pseudo-classe ":nth-child(2n) {background-color: gray;}" fará esse efeito.
+
+OUTRA maneira é adicionar "odd" = "2n-1" = ímpar, ou "even" = "2n" = par, na pseudo-classe indicando que queremos manipular os elementos ímpares ou pares.
+
+VALE lembrar que podemos usar o seletor com a pseudo-classe duas vezes, e para usar em ambas os valores para células ímpares e pares com diversas propriedade, mas só faz sentido neste caso se for usar para o efeito ensinado. 
+
+AGORA veja mais sobre isso, no arquivo index da aula.
+
+Módulo 03, capítulo 21, Aula 7
+Vídeo:
+Cabeçalho fixo em tabelas grandes - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=k277B58kC9c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=32
+
+	O conteúdo dessa aula não está no material de apoio, pelo motivo simples; Esse recurso ensinado nesta aula, ainda não está funcionando perfeitamente em todos os navegadores (Isso a 2(dois) anos desta data = 12/11/2024); Exceto Google Chrome.
+
+	OBS:	
+		Este recurso só serve para tabelas grandes, pois tem mais conteúdos a serem Scrollados por terem muitos dados, como por exemplo; Esta que criamos durante a aula.
+
+	PASSOS:
+	1- Definimos obrigatoriamente a propriedade "position = relative" na css para o seletor da "table".
+	2- Usamos o seletor css "thead > tr > th { }" e assim pegamos diretamente o elemento, e aplicamos a propriedade "position = sticky" e o "top" para que o efeito aconteça.
+
+Módulo 03, capítulo 21, Aula 8
+Vídeo:
+Mesclagem de células - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=olZgL09uDAU&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=33
+
+	NEsta aula criamos o arquivo tabela003.html.
+	
+	OBS:
+		Para esta aula é de suma importância que entenda-se a base para criação de tabelas.
+	Ex:
+		<table>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+			</tr>
+		</table>
+	Essa estrutura de células (linha/colunas) se repetem no exercício.
+
+	OPS:
+	  PAra mesclar células usamos os aributos "colspan e rowspan".
+	O QUE são:
+		Visão geral criada por IA
+			...
+			1- Colspan e rowspan são atributos HTML que permitem mesclar células em tabelas:
+				Colspan
+				Mescla células na horizontal. O atributo colspan=n faz com que a célula ocupe o lugar das próximas n células vizinhas à direita de sua coluna.
+			2- Rowspan
+				Mescla células na vertical. O atributo rowspan=n faz com que a célula ocupe o lugar das próximas n células vizinhas abaixo de sua linha. 
+			
+			O valor do atributo colspan representa o número de colunas a serem mescladas.
+			... 
+
+
+	AGORA vejam no arquivo index e no style mais detalhes sobre isso.
+
+
+Módulo 03, capítulo 21, Aula 9
+Vídeo:
+Desafios (parte 1) - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=MnznvoNuy-I&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=34
+
+	Nesta aula criamos o exemplo de duas abelas e suas mesclas de células, para que com a mão na massa o estudante resolva os desafios, e baseado no que aprendeu até aqui consiga ampliar seus conhecimentos na prática.
+
+Módulo 03, capítulo 21, Aula 10
+Vídeo:
+Exemplo de tabela completa - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=JJXLr02Gx_c&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=35
+
+	Nesta aula vamos fazer mais um exercício, porém aplicamos dados "reais" que não sejam apenas (letras únicas ou números únicos).
+
+	Veja no arquivo "planilha_testes.xlsx" a tabela de exemplo, onde os dados são nomes de pessoas, e filmes que elas gostam.
+
+	Criamos o arquivo "tabela004.html" e nele comentamos o pontos importantes da aula.
+ 
+
+
+Módulo 03, capítulo 21, Aula 11
+Vídeo:
+Escopos de grupo - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=muKp1-jcs3Q&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=36
+
+	Iníciamos esta aula com um LEMBRETE:
+		O W3C sempre recomenda o uso de "scope" nas <th>´s, para que se define se ele está em linha ou em coluna.
+	
+	AGORA vejamos mais sobre "Grupos de Linhas e Gurpos de Colunas".
+	1- scope="colgroup" é definido quando existem mais de uma coluna contendo dados.
+	 1a- scope="col"	é definido quando existe apenas uma coluna contendo dados.
+	2- scope="rowgroup" é definido quando existem mais de uma linha contendo dados.
+	 2a- scope="row"	é definido quando existe apenas uma linha contendo dados.
+
+	SAIBA:
+		Visão geral criada por IA
+
+			O scope rowgroup ou colgroup são atributos HTML que indica que uma célula de cabeçalho se aplica a um grupo de linhas ou colunas: 
+			
+			1- O atributo scope especifica se uma célula de cabeçalho é um cabeçalho para uma coluna, linha, ou grupo de colunas ou linhas.
+
+			>>>> Os valores possíveis para scope são row, col, rowgroup, e colgroup .
+				O valor rowgroup indica que a célula de cabeçalho se aplica a um grupo de linhas.
+
+			>>>> O atributo scope é usado para: 
+				Associar células de cabeçalho com células de dados em tabelas complexas 
+				Clarificar o escopo de qualquer célula usada como cabeçalho 
+				Ajudar leitores de tela e outras tecnologias assistivas a entenderem a relação entre células de cabeçalho e células de dados 
+				O atributo scope não tem efeito visual em navegadores web normais, mas pode ser usado por leitores de tela. 
+
+
+Módulo 03, capítulo 21, Aula 12
+Vídeo:
+Desafios (parte 2) - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=V2gVaqTSRmo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=37
+
+	Nesta aula é mostrado como ficou a tabela do desafio (parte 2) e esse é  desafio "d014" na pasta do "Modulo-03" no "Desafios".
+	
+	A resolução podemos ver no arquivo "index.html" na pasta do exercício "ex023", e o estilo aplicado está no arquivo "style.css".
+	A tabela esboço, está no arquivo "Planilha-teste.xlsx".
+
+Módulo 03, capítulo 21, Aula 13
+Vídeo:
+Agrupando Colunas com colgroup - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=1Ro7rjINNb0&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=38
+
+	NEsta aula criamos a tabela 005 (arquivo "tabela005.html") na pasta de exercícios "ex0023".
+	
+	VEJA também a mesma tabela e alguns cometários adcionais no arquivo "index.html" e seu estilo está no arquivo "style2.css".
+
+	1- Para aplicar estilo em linha de tabela, o procedimento é mais fácil, pois podemos atribuir uma "class" nas <tr>´s ou <tag> que queremos estilizar e por meio de seu seletor CSS, podemos aplicar as configurações que queremos.
+
+	2- Para aplicar estilo em colunas, o procedimento é um pouco diferente.
+		OBS:
+			Há quem atribua a "class name" a cada <th>, <td> da coluna, tornando isso mais trabalhoso e possívelmente dará dificuldades para manutenção do código se a tabela for complexa com maior dúmero de dados(registros).
+
+		PARA ISSO, na HTML5 existe um nova"<tag>" a <colgroup> que proporciona criar uma <tag = col> para cada coluna, e assim poder aplicar um único estilo para várias colunas de tabela.
+		VEJA no index a aplicação do exemplo, onde cada <col> representa um coluna:
+			  <table>
+				<colgroup>
+			  		<col>
+			  		<col>
+			  		<col>
+			  		<col>
+			  	</colgroup>
+			  </table>
+*		DETALHE:
+			"Podemos atribuir diferentes classes ou (id´s) para cada <col>, e assim poder configurar cada coluna de forma única e particular."
+
+	3 - Podemos apliar expanção para duas colunas de uma vez, por meio de class + span.
+			No exemplo da aula fizemos:
+				<col class="cname">	
+				<col class="cgroup" span="2">
+				<col class="cprof">
+			COM ISSO dizemos que duas colunas , tem class-name iguais e receberão o mesmo estilo.
+			O "span" neste caso corresponde ao número de colunas que a classe corresponde.
+
+	4- Podemos ainda fazer de exemplo da seguinte maneira:
+		HTML:
+		<colgroup>
+			<col class="yellow">
+			<col class="red">
+			<col class="yellow">
+			<col class="red">
+		</colgroup>
+
+		CSS:
+		col.yellow {
+			background-color: yellow;
+		}
+		col.red {
+			background-color: red;
+		}
+
+		Assim as <col> de class=yellow receberão a cor amarela e as <col> de class=red receberão a cor vermelha; VEJA no index o exemplo nas tags <th>OBS</th>
+
+*		*** VEJA mais detalhes no arquivo "tabela005.html" ***
+
+
+Módulo 03, capítulo 21, Aula 14
+Vídeo:
+Tabelas responsivas - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=-0CgGstWMcA&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=39
+	
+	Nesta aula abordamos o assunto que diz respeito a tabelas com muito dados, e que precise ajustar-se a diversos tamanhos de telas de diferentes dispositivos.
+
+	No arquivo "index.html" veja a parte ( Tabelas responsivas) e os estilos no arquivo "style3.css".
+
+	VEJA mais detalhes sobre o assunto nos comentários no arquivo "tabela006.html"
+
+
+Módulo 03, capítulo 21, FIM
+Vídeo:
+Fim do Módulo 3. O Módulo 4 de HTML5 vem aí! (revelamos aqui)
+Link:
+https://www.youtube.com/watch?v=XJ10-IKH8ig&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=40
 
 
 >>>>>>>>>>>>> FIM DO MÓDULO 3 <<<<<<<<<<<<
