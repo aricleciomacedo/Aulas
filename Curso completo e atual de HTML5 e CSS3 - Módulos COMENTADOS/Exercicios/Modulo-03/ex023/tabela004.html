@@ -1,0 +1,141 @@
+<!-- 
+    Aqui comentamos o código do professor para podermos acompanhar passo a passo na criação da tabela.
+    VÍDEO: Exemplo de tabela completa - @Curso em Vídeo HTML5 e CSS3
+    LINK: https://youtu.be/JJXLr02Gx_c?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+    Lembre-se de olhar o exemplo de tabela completa feita no Excel.
+
+    A parte 2 dessa tabela está na Aula Sobre:
+    Escopos de grupo - @Curso em Vídeo HTML5 e CSS3
+    Link: https://youtu.be/muKp1-jcs3Q?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+    Iniciamos então a aula sobre Escopos de grupos criando o <tfoot> da tabela.
+
+ Uma coisa que devemos entender é que para cada <th> que tem na tabela, significa que contém um escolpo, e no nosso exemplo abaixo nós temos 6 <th> , então serão 6 escolpos a serem definidos.
+    Para melhor compreensão e partindo pelo mais fácil, que é o <th> Grupos, que tem como escolpos 2 dados que são td = homens e Mulheres; Logo seu scope = "col" e isso significa esse Títlulo é dos dados em coluna.
+        Existem também : scope = "col" ; "colgroup" ; "row" e "rowgroup"
+        OBSERVAÇÃO: 
+            Para dados em um coluna use = "col"
+            Para dados em várias colunas use = "colgroup" Como no <th> Filmes.
+            Para dados em um linha use = "row" ; e 
+            Para dado em várias linhas use '"rowgroup"'
+ -->
+<!DOCTYPE html>
+<html lang="ept-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Tabelas</title>
+    <!-- Aqui aplicamos os estilos básicos para vizualizar a tabela no navegador. -->
+    <style>
+        body {/* Selector da tag <body>. */
+            font-family: Arial, Helvetica, sans-serif;/* Estilo da font. */
+        }
+        table {/* Seletor da tag <table> */
+            border-collapse: collapse;/* Assim une as células, borda om borda. */
+        }
+        caption {/* Seletor da tag <caption> */
+            font-size: 1.3em;/* Tamanho das letras. */
+            font-weight: bold;/* Largura das letras. */
+            padding: 10px;/* Espaço interno da células. */
+        }
+        th, td { /* Seletor das tags <th> e <td> para ambas receberem o estilo. */
+            border: 1px solid black;/* Espessura da borda, tipo e cor. */
+            padding: 10px;/* Espaço interno na célula. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Tabelas</h1>
+    <!-- TABELA -->
+    <table>
+        <caption><!-- Título da Tabela -->
+            Filmes Favoritos
+        </caption><!-- Fim Título -->
+
+        <thead><!-- Cabeçalho da Tabela. -->
+            <tr><!-- Linha 1 da cabeça-->
+                <!-- Aqui usamos <th> pois é a semântica para os títulos dos dados, e definimos que ele é título dos dados em coluna (scope=col), e para título de dados em mais de uma coluna definimos scope=colgroup.-->
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th><!-- Aqui mesclamos essa célula em 3 blocos(colunas) -->
+            </tr><!-- FIM linha 1 da cabeça-->
+        </thead><!-- Fim Cabeçalho. -->
+
+        <tbody><!-- Corpo da Tabela.-->
+        
+            <!-- Dados das Mulheres -->
+            <tr><!-- Linha 1 do corpo -->
+                <th rowspan="3" scope="rowgroup">Mulheres</th><!-- Aqui mesclamos essa célula em 3 linhas, e removemos (comentamos) as td 5 das Linhas 2 e 3 do corpo; E definimos que esse é o título dos dados em várias linhas por meio do scope=rowgroup.-->
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr><!-- FIM linha 1 cabeça. -->
+            <tr><!-- Linha 2 do corpo -->
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+                <!-- <td></td> --> <!-- Removido devido a mesclagem da célula th da Linha 1 do corpo. -->
+            </tr><!-- Fim Linha 2 do corpo -->
+            <tr><!-- Linha 3 do Corpo -->
+                <td>Cláudia Melo</td>
+                <td>Oblivion</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+                <!-- <td></td> --> <!-- Removido devido a mesclagem da célula th da Linha 1 do corpo. -->
+            </tr><!-- FIM linha 3 do corpo. -->
+
+        <!-- Dados dos Homens. -->    
+            <tr><!-- Linha 4 do corpo -->
+                <th rowspan="3" scope="rowgroup">Homens</th><!-- Aqui mesclamos essa célula em 3 linhas, portanto td 5 da linha 5 e 6 foram removidas. E definimos que esse é o título dos dados em várias linhas por meio do scope=rowgroup-->
+                <td>Bruno Mendonça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+                <!-- <td></td> --> <!-- Removido devido a mesclagem da célula th da Linha 1 do corpo. -->
+            </tr><!-- FIM linha 4 do corpo -->
+            <tr><!-- Linha 5 do corpo. -->
+                <td>Daniel Lourenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>Dangal</td>
+                <!-- <td></td> -->
+            </tr><!-- FIM linha 5 do corpo -->
+            <tr><!-- Linha 6 do corpo. -->
+                <td>Fabiano Mota</td>
+                <td>Star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+                <!-- <td></td> -->
+            </tr><!-- FIM linha 6 do corpo -->
+        </tbody><!-- FIM Corpo. -->
+
+        <tfoot><!-- Roda-pé -->
+            <tr><!-- Linha 1 do Roda-pé -->
+                <th colspan="4" scope="row">Total</th><!--Aqui mesclamos 4 células para  esse título, e definimos que ele tem dados (td) em linha que pertencem a ele.-->
+                <td>1000</td><!-- Dado 1 -->
+            </tr><!-- Fim Linha 1 roda-pé -->
+        </tfoot><!-- FIM Roda-pé -->
+    </table>
+    <!-- FIM TABELA -->
+
+    <!-- Aqui optei por adcionar o créditos e agradecimento ao Professor pela didática, no qual ajuda-me no aprendizado. -->
+        <br>
+        <hr>
+        <marquee behavior="up" direction="left" width=97%>
+            Exemplo de tabela completa - @Curso em Vídeo HTML5 e CSS3 PROFESSOR: Gustavo Guanabara 
+            <a href="https://youtu.be/JJXLr02Gx_c?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ" target="_blank">
+                LINK 1 AQUI!
+            </a>
+            Escopos de grupo - @Curso em Vídeo HTML5 e CSS3 PROFESSOR: Gustavo Guanabara
+            <a href="https://youtu.be/muKp1-jcs3Q?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">
+                LINK 2 AQUI!
+            </a>
+        </marquee>
+        
+</body>
+</html>

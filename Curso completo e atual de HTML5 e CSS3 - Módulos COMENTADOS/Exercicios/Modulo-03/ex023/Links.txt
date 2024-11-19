@@ -1,0 +1,90 @@
+VVídeo 1:
+Ainda podemos usar tabelas em HTML? - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/9IF4xvg5rWI?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+OBSERVAÇÕES:
+
+	Não podemos usar tabelas para criar a estrutura do site!
+Isso era bastante comum na época da HTML4, onde um site era criado dentro por meio de linhas e colunas, as quais tinha
+suas divisões formando várias outras tabelas.
+	VEJA COMO exemplo a imagem reascunho de exemplo na pasta.
+Por fim, é bom usar tabelas para fins de apresentação de dados, e quando for para layout de site , optar pra recursos 
+html ou css.
+
+Vídeo 2:
+Sua primeira tabela em HTML - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/lIiZu-94PBk?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+NESSE vídeo aprendemos a criar a primeira tabela do curso e para isso usamos o EXCEL.
+	Na tabela de exemplo no Excel podemos obsrvar que a estrutura de um atabela é fomada por linhas e colunas.
+Observe que na linha 1, escrevemos em 3 colunas que são A1 , B1 e C1; Na linha 2 escrevemos coluna A2, B2 e C2 ; na 
+linha 3 escrevemos as colunas A3, B3 e C3 e na linha 4 escrevemos as colunas A4, B4 e C4.s
+
+Vídeo 3:
+Alinhando o conteúdo em tabelas - @Curso em Vídeo HTML5 e CSS3
+	https://youtu.be/djvX6p9l-Rk?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+Esse vídeo é a continuação da aula anterior, e ensina a editar mais coisas em uma tabela.
+
+Para melhor entender, criamos um arquivo tabela001a.html para podermos apliar o que foi estudado com o 
+professor Gustavo Guanabara.
+
+Vídeo 4:
+Aprendendo a trabalhar com tabelas grandes - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/XmrNuqmmckM?si=7m18P4lhNAczI-MZ
+
+Vídeo 5:
+Caption e Escopo de títulos em tabelas - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/ZnjU3PzhGi0?si=WHYb-AcNQEaqDIrZ
+
+Vídeo 6:
+Efeito Zebrado na tabela com HTML e CSS;
+Curso em Vídeo
+	https://youtu.be/IYUiFRE5hpI?si=0lN-IrDxv0WP2S39
+
+Vídeo 7:
+Cabeçalho fixo em tabelas grandes - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/k277B58kC9c?si=OBfaoyAkpxvfSC0E
+
+Vídeo 8:
+Mesclagem de células - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/olZgL09uDAU?si=JujjVmYD7gcEpyfR
+
+Vídeo 9:
+Desafios (parte 1) - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/MnznvoNuy-I?si=dR_DqBZqj58NA4RL
+
+Vídeo 10:
+Exemplo de tabela completa - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/JJXLr02Gx_c?si=_3dfweGAT48pzD3n
+
+vídeo 11:
+Escopos de grupo - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/muKp1-jcs3Q?si=MpA5MA3x2PXJNhFA
+
+Vídeo 12:
+Desafios (parte 2) - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/V2gVaqTSRmo?si=8rylLxHav5XrqsN1
+
+Vídeo 13:
+Agrupando Colunas com colgroup - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/1Ro7rjINNb0?si=VaRUZ8F3OzFizCoI
+
+Vídeo 14:
+Tabelas responsivas - @Curso em Vídeo HTML5 e CSS3
+Curso em Vídeo
+	https://youtu.be/-0CgGstWMcA?si=EIOUPxT_La9XgCFX
+
+Vídeo 15:
+Fim do Módulo 3. O Módulo 4 de HTML5 vem aí! (revelamos aqui)
+Curso em Vídeo
+	https://youtu.be/XJ10-IKH8ig?si=UPNtun3rrQ3hogu2

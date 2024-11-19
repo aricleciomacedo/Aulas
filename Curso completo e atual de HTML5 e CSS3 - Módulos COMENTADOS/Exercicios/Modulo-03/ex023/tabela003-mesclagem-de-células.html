@@ -1,0 +1,88 @@
+<!-- 
+    Aqui comentamos todo o código do professor, e fizemos o passo a passo exatamente como ensinado . OBS: Evite estar copiando e colando códigos,e escreva-os para melhor memorização do aprendzado.
+
+    Vídeo: Mesclagem de células - @Curso em Vídeo HTML5 e CSS3
+    Link: https://youtu.be/olZgL09uDAU?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+    Nessa aula aprendemos alguns conceitos para meslagem de células em uma tabela, e começamos por inserir um <h1> para o título da tabela.
+
+ -->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+     <title>Tabelas</title>
+     <!-- Aqui são etilos aplicados: -->
+     <style>
+         body { /* Aqui selecionamos a tag <body> . */
+             font-family: Arial, Helvetica, sans-serif;/* Assim definimos a fonte das letras de textos. */
+         }
+         table {/* Aqui selecionamos a tag <table>. */
+            border-collapse: collapse;/* Assim colamos as bordas juntando as células removendo espaço entre um bloco e outro. */
+            width: 300px;/* Assim definimos a largura da tabela. */
+         }
+         td { /* Aqui selecionamos todas as tags <td> em qualquer nível. */
+            border: 1px solid black;/* Adcionamos a borda. */
+            padding: 10px;/* Assim espaçamos o interno das células. */
+            text-align: center;/* Alinhamento de texto. */
+         }
+    </style>
+ </head>
+ <body>
+     <!-- Título da tabela -->
+    <h1>Mesclagem de células.</h1>
+
+    <!-- Aqui criamos a tabela. -->
+    <table><!-- TABELa -->
+
+        <tr><!-- linha 1 -->
+            <!-- Célula 1 -->
+            <td>A</td>
+            <!-- Célula 2 -->
+            <td colspan="2">B</td><!-- Nessa célula aplicamos um expansão de colunas, fazendo ela ocupar 2 colunas na mesma linha.-->
+            <!-- Célula 3 -->
+            <!-- <td>C</td> Aqui removemos essa célula para aplicarmos um expansão na célula acima. -->
+        </tr><!-- FIM linha 1 -->
+            
+        <tr><!-- linha 2 -->
+            <!-- Célula 1 -->
+            <td rowspan="3">D</td>
+            <!-- Célula 2 -->
+            <td>E</td>
+            <!-- Célula 3 -->
+            <td rowspan="2">F</td><!-- Removemos o rowspace daqui para a td=D. PORÉm depois readcionamos.-->
+        </tr><!-- FIM linha 2 -->
+
+        <tr><!-- linha 3 -->
+            <!-- Célula 1 -->
+            <!-- <td>G</td> --> <!-- Removemos essa célula e a J, para vermos uma certa bagunça que causa quando se aplica a espansão de coluna. Então aplicamso a rowspan a td=F para que ela ocupe essas linhas vázias.-->
+            <!-- Célula 2 -->
+            <td>H</td>
+            <!-- Célula 3 -->
+            <!-- <td>I</td> --> <!-- Removemos essa célula e aplicamos um rowspace na td=F para que ela ocupe essa linha vázia. -->
+        </tr><!-- FIM linha 3 -->
+
+        <tr><!-- linha 4 -->
+            <!-- Célula 1 -->
+            <!-- <td>J</td> --><!-- Removemos essa célula e a G, para vermos uma certa bagunça que causa quando se aplica a espansão de coluna. Então aplicamso a colspan a td=F para que ela ocupe essas linhas vázias.-->
+            <!-- Célula 2 -->
+            <td colspan="2">K</td>
+            <!-- Célula 3 -->
+            <!-- <td>L</td> --> <!-- Removemos essa coluna para adcionarmos colspace a td=K para ocupar essa coluna que estará vazia. -->
+        </tr><!-- FIM linha 4 -->
+
+    </table><!-- FIM TABELa -->
+
+    <footer>
+        <div style="display: flex;">
+            <div>
+                <p>AGRADECIMENTOS</p>
+                <marquee behavior="up" direction="left" width=500px>☞ ☞  Agradecimentos ao professor Gustavo Guanabara do Curso em vídeo; Muito obrigado à vocês que nos ajudam, pois o fazem com tanta dedicação no YouTube e em outras plataformas e gratuitamente dedicam tempo e alegria para ensinar, ajudar a aprender, e também, a ser um profissional.  ☺☺ </marquee>
+            </div>
+        </div>
+    </footer>
+ </body>
+ </html>

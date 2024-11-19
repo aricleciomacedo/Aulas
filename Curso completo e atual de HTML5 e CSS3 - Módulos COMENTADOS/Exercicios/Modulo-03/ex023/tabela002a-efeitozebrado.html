@@ -1,0 +1,223 @@
+<!-- 
+    Vídeo: Efeito Zebrado na tabela com HTML e CSS;
+    Link: https://youtu.be/IYUiFRE5hpI?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+Nessa aula aprenderemos sobre o efeito que aplica cores em cada linha da tabela, facilitando o leitor a identificar o dado pertinente ao item listado.
+
+    Veja isso apartir do seletor de psudo classe dentro do style.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Tabelas com efeito zebrado</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: yellow;
+        }
+        h1 {
+            width: 500px;
+            text-align: center;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            box-shadow: 10px 10px 10px 0px black;
+            background-color: darkgray ;/* Assim mosdificamos a cor de fundo da tabela, e todas as linhas mudam a cor em relação ao body;
+                Mas mudaremos um pouco essas cores de fundo usando a psudo-classe :nth-child() e os valores correspondentes.*/
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption {
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+
+        /* Aqui usamos o seletor da tag <tr> que é filho diretamene ligado a <body>, mas somente assim fará com que todas fiquem com o mesmo estilo, e não é assim que queremos; ENTÃO usamos a pseudo classe para elemenos filhos que é :nth-child() e dentro o número que define de quantos em quantos esse estilo será aplicado aos elementos, que no nosso exemplo é de dois em dois = (2n) .
+            OBS: podemos usar outros valores na pseudo classe. 
+            POr esxemplo: 
+                (odd) que nesse caso, pinta os elementos impares.
+                (2n-1) fará algo semelhante ao (odd).
+                (even) fará algo semelhante a (2n).
+                (2n) Pinta os elementos pares. */
+        tbody > tr:nth-child(odd) { /* Ou 2n-1 */
+            background-color: lightgray;/* COr de fundo. */
+        }
+        /* Aqui usamos o mesmo seletor para aplicarmos estilos diferentes aos elementos <tr> impares e pares da tabela. 
+            OBS: Esse estilo serve para quando se desejar colorir linhas da tabela de cor difente ao da tabela.
+        COMO ASSIM?
+            Se o body estiver com cor de fundo amarelo como nesse exemplo, e a table não tiver um cor de fundo definida, então as linhas even=par  ficarão com cor de fundo amerela, mas se definir cor de fundo para  a table e depois usar essa pseudo classe, o estilo dela vai sobre-por as demais anteriormente definidas, que nesse casso aqui é a cor de fundo. 
+        PARA melhor entende e práticar modifique as cores de fundo da table, e veja as alterações removendo esse seletor aqui.*/
+        tbody > tr:nth-child(even) { /* Ou 2n */
+            background-color: white;/* Aplica cor de fundo. */
+    /*EX:*/ font-weight: bolder;/* Aplica o negrito nas letras. */
+    /*EX:*/ text-decoration: underline;/* Aplica sublinhado no texto, mas vale LEMBRAR que isso não faz sentido porém "pode" ser apliado. */
+    /*EX:*/ box-shadow: inset 17px -20px 5px -15px black;/* Aqui adcionei ""para práticar" uma sobra em baixo por dentro das caixas (even) pares. */
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes com efeito zebrado</h1>
+    <!-- 
+        ANATOMIA PARA TABELAS GRANDES:
+        TABLE
+            CAPTION = É tipo um título, mas é a melhor tradução é = legenda "mesmo".
+            THEAD = A parte de cima da tabela (cabeça). "Não é obrigátorio ter"
+                TR, TD, TH
+            TBODY = O conteúdo (corpo) da tabela.
+                TR, TD, TH
+            TFOOT = A parte de baixo da tabela (roda-pé) "Não é obrigátorio ter"
+                TR, TD, TH
+     -->
+   
+     <table> 
+         <caption><!-- Legenda -->
+            População da Unidades Federativas
+         </caption><!-- FIM Legenda -->
+
+         <thead><!-- Cabeça da Tabela -->
+            <tr><!-- Linha  1 formando cabeçalho-->
+                <th scope="col">Estado</th> 
+                <th scope="col" style="width: 50px;">População</th>
+            </tr><!-- FIM Linha 1 formando cabeçalho. -->
+         </thead><!-- FIM Cabeça da Tabela -->
+         <!-- FIM Cabeça da Tabela -->
+
+         <tbody><!-- Corpo da Tabela -->
+            <tr><!-- Linha 1 formando o corpo. -->
+                <td>São Paulo</td><!-- Dado 1 da linha 1-->
+                <!-- Criamos nessa td, uma classe para melhor estilizar na css. -->
+                <td class='num'>44 411 238</td><!-- Dado 2  da linha 1-->
+            </tr><!-- FIM Linha 1 formando o corpo -->
+            <tr><!-- Linha 2 do corpo-->
+                <td>Minas Gerais</td><!-- Dado 3 da linha 2 -->
+                <td class='num'>20 538 718</td><!-- Dado 4 da linha 2 -->
+            </tr><!-- FIM da linha 2 do corpo    -->
+            <tr><!-- Linha 3 -->
+                <td>Rio de Janeiro</td><!-- Dado 5 -->
+                <td class='num'>16 054 524</td><!-- Dado 6 -->
+            </tr><!-- FIM linha 3 -->
+            <tr><!-- Linha 4 -->
+                <td>Bahia</td>
+                <td class='num'>14 141 626</td>
+            </tr><!-- FIM linha 4 -->
+            <tr><!-- Linha 5 -->
+                <td>Paraná</td>
+                <td class='num'>11 444 380</td>
+            </tr><!-- FIM linha 5 -->
+            <tr><!-- Linha 6 -->
+                <td>Rio Grande do Sul</td>
+                <td class='num'>10 882 965</td>
+            </tr><!-- FIM linha 6 -->
+            <tr><!-- Linha 7 -->
+                <td>Pernambuco</td>
+                <td class='num'>9 058 931</td>
+            </tr><!-- FIM linha 7 -->
+            <tr><!-- Linha 8 -->
+                <td>Ceará</td>
+                <td class='num'>8 794 957</td>
+            </tr><!-- FIM linha 8 -->
+            <tr><!-- Linha 9 -->
+                <td>Pará</td>
+                <td class='num'>8 121 025</td>
+            </tr><!-- FIM linha 9 -->
+            <tr><!-- Linha 10-->
+                <td>Santa Catarina</td>
+                <td class='num'>7 610 361</td>
+            </tr><!-- FIM linha 10-->
+            <tr><!-- Linha 11 -->
+                <td>Goiás</td>
+                <td class='num'>7 056 495</td>
+            </tr><!-- FIM linha 11 -->
+            <tr><!-- Linha 12 -->
+                <td>Maranhão</td>
+                <td class='num'>6 775 805</td>
+            </tr><!-- FIM linha 12 -->
+            <tr><!-- Linha 13 -->
+                <td>Paraíba</td>
+                <td class='num'>3 974 687</td>
+            </tr><!-- FIM linha 13 -->
+            <tr><!-- Linha 14 -->
+                <td>Amazonas</td>
+                <td class='num'>3 941 613</td>
+            </tr><!-- FIM linha 14 -->
+            <tr><!-- Linha 15 -->
+                <td>Espírito Santo</td>
+                <td class='num'>3 833 712	</td>
+            </tr><!-- FIM linha 15 -->
+            <tr><!-- Linha 16 -->
+                <td>Mato Grosso</td>
+                <td class='num'>3 658 649</td>
+            </tr><!-- FIM linha 16 -->
+            <tr><!-- Linha 17 -->
+                <td>Rio Grande do Norte</td>
+                <td class='num'>3 302 729	</td>
+            </tr><!-- FIM linha 17 -->
+            <tr><!-- Linha 18 -->
+                <td>Piauí</td>
+                <td class='num'>3 271 199	</td>
+            </tr><!-- FIM linha 18 -->
+            <tr><!-- Linha 19 -->
+                <td>Alagoas</td>
+                <td class='num'>3 127 683</td>
+            </tr><!-- FIM linha 19 -->
+            <tr><!-- Linha 20 -->
+                <td>Distrito Federal</td>
+                <td class='num'>2 817 381</td>
+            </tr><!-- FIM linha 20 -->
+            <tr><!-- Linha 21 -->
+                <td>Mato Grosso do Sul</td>
+                <td class='num'>2 757 013</td>
+            </tr><!-- FIM linha 21 -->
+            <tr><!-- Linha 22 -->
+                <td>Sergipe</td>
+                <td class='num'>2 209 558</td>
+            </tr><!-- FIM linha 22 -->
+            <tr><!-- Linha 23 -->
+                <td>Rondônia</td>
+                <td class='num'>1 581 196</td>
+            </tr><!-- FIM linha 23 -->
+            <tr><!-- Linha 24 -->
+                <td>Tocantins</td>
+                <td class='num'>1 511 460</td>
+            </tr><!-- FIM linha 24 -->
+            <tr><!-- Linha 25 -->
+                <td>Acre</td>
+                <td class='num'>830 018</td>
+            </tr><!-- FIM linha 25 -->
+            <tr><!-- Linha 26 -->
+                <td>Amapá</td>
+                <td class='num'>733 759</td>
+            </tr><!-- FIM linha 26 -->
+            <tr><!-- Linha 27 -->
+                <td>Roraima</td>
+                <td class='num'>636 707</td>
+            </tr><!-- FIM linha 27 -->
+         </tbody><!-- FIM corpo da Tabela -->
+
+         <tfoot><!-- Roda-pé da Tabela -->
+            <tr><!-- Linha 1 do roda-pé -->
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>203 062 512</strong></td>
+            </tr><!-- FIM Linha 1 do roda-pé -->
+         </tfoot><!-- FIM Roda-pé da Tabela -->
+
+     </table><!-- FIM tabela -->
+</body>
+</html>

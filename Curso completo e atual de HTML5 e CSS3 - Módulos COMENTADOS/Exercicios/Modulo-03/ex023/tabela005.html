@@ -1,0 +1,390 @@
+<!-- 
+    Aula do Vídeo 13 do módulo 3.
+        Agrupando Colunas com colgroup - @Curso em Vídeo HTML5 e CSS3 Curso em Vídeo
+    Link: https://youtu.be/1Ro7rjINNb0?si=VaRUZ8F3OzFizCoI
+    
+    Nessa aula veremos a praticidade em selecionar elementos da tabela para receberem o mesmo estilo, pois nas aulas passadas aprendemos a usar escopos que definem quem é título de quem ; por exemplo um th scope colgroup , mostra que esse título pertence a várias colunas de dados, porém para manipular o estilo desses dados de maneira que possamos aplicar várias configurações ao seu grupo pertenente, dai usamos classe e ids demasiadamente repetitivo.
+        Sabemos que para estilizar <tr>, uma classe , ou id só , já estiliza um grupo de colunas , que são os dados <td> dessa linha, porém se for para fazermos o mesmo com dados em linhas de uma coluna, daí por meio de classes e id até dá certo, porém na hora de aplicar mudanças, ai o trabalhão que dá é sem medida.
+
+        Então dessa vez , usaremos uma maneira de selecionar todos os dados de uma coluna para receber estilos únicos; para isso na HTML5 contamos com a tag <colgroup> que recebe dentro as tags <col> que referenciam as colunas da tabela, e funciona como seletor de coluna para estilos.
+            
+            Exemplo:
+        Aqui é a definição para dizer que existem grupos de colunas na tabela e Cada <col> representa uma coluna da tabela e seus dados são os equivalentes as classes , ou id que nomearmos .
+            <colgroup>          
+                <col class="cnome"> 
+                <col class="csexo">             
+            </colgroup>
+        Agora basta na Css usar o seletor da classe criada, e aplicar por exemplo uma cor de fundo para uma das colunas, e a cor irá pintar a coluna com os respectivos dados.
+
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Exercício de Tabelas</title>
+    <!-- Aqui usamos os a CSS interno para por meio dos seletores dar estilos ä tabela. -->
+    <style>
+        /* Estilo padráo que aplicamos as tabelas para exercícios.*/
+        body {font-family: Arial, Helvetica, sans-serif;} /* Estilo das fontes de todo o conteúdo. */
+        table {width: 500px; border-collapse: collapse;}/* Tamanho e tipo de borda da tabela. */
+        caption {font-size: 1.3em; font-weight: bolder; padding: 10px;}/* Estilo do título da tabela. */
+        th, td {border: 1px solid black; padding: 7px;}/* Estilo para cada célula. */
+
+        /* Estilo da tabela 1 */
+        /* Aqui usamos os seletores de colgroup, e assim torna mais fácil a manutençaõ de estilos.*/
+        col.cnome {background-color: rgb(21, 255, 0);}/* Assim a coluna de dados recebe o estilo. */
+        col.csexo {background-color: rgb(255, 255, 3);}/* Assim a coluna de dados recebe o estilo. */
+
+        /* Estilo da tabela 2 
+        para vermos a aplicação na prática do estilo para colgroup */
+        col.cnome2 {background-color: rgb(1, 1, 250);}
+        col.csexo2 {background-color: rgb(56, 56, 240);}
+        col.cidade2 {background-color: rgb(126, 126, 250);}
+        col.cprofissao2 {background-color: rgb(203, 203, 248);}
+        /* Aqui para exemplo/ usamos o seletor que funciona para estilizar linhas da tabela. 
+            OBS: Esse seletor sobre-pöe o de colgroup.*/
+        .linha1 {background-color: yellow;}
+
+        /* Estilo da tabela 3 */
+        col.cnome3 { background-color: rgb(21, 255, 0);}
+        /* Assim dizemos que a coluna sexo3 virrula(,)= e cidade3 vão receberem o mesmo estilo. */
+        col.csexo3, col.cidade3 {background-color: yellow;}
+
+        /* Estilos tabela 4 */
+        /* Aqui usamos a expansão de colunas e aplicamos  estilo por meio do seletor de classe. */
+        col.cnome4 {background-color: rgb(38, 255, 0);}
+        /* Aqui usamos o seletor da classe que contém a expansão(span) para aplicar estilo referente ao número de colunas definido no span.*/
+        col.cgrupo {background-color: red;}
+
+        /* Estilos tabela 5 */
+        /* Aqui usamos o seletor de class name para estilizar as colunas */
+        .amarelo {background-color: yellow;}
+        .vermelho {background-color: red;}
+
+        /* Centralizando a tabela */
+        /* div.tabela_central {display: flex;} *//* Definimos um container flex para a div. */
+        /* .tabela_central > div {margin: 0 auto; text-align: center;} *//* Assim centraliza a div dentro da classe que comprta a tabela. */
+
+        /* Estilos de Tabela escondida */
+        .tabela_escondida > h1 {background-color: lightgray; width: 700px;}
+
+        /* Aparece a tabela 2 */
+        /* Aqui dizemos que a classe que contém o filho classe terá display none, e não vai aparecer. */
+        .tabela_escondida > .tabela {display: none;}
+        /* E quando passar o mouse sobre a div, então a tabela aparecerá. */
+        .tabela_escondida:hover > .tabela {
+            display: table;
+        }
+
+        /* Aparece a tabela 5 */
+        /* Aqui dizemos que a classe que contém o flho classe terá display none, e não vai aparecer. */
+        .tabela_escondida > .tabela5 {display: none;}
+        /* E quando passar o mouse sobre a div, então a tabela apareerá. */
+        .tabela_escondida:hover > .tabela5 {
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabela_central tabela_escondida"><!-- Tabela 1 -->
+        <!-- <div> -->
+            <h1>TABELA 1 com Exercício de Tabela</h1><!-- Título da página -->
+            <table class="tabela"><!-- Tabela 1-->
+        
+                <!-- Aqui usamos a <colgroup> para aplicarmos estilos por meio de seletores para CSS.
+                Cada <col> representa uma coluna da tabela, e seu class name ou id name serve para usarmos como seletor na folha de estilos da CSS.-->
+                <colgroup>
+                    <col class="cnome">
+                    <col class="csexo">
+                    <col class="cidade">
+                    <col class="cprofissao">
+                </colgroup>
+        
+                <caption>Cadrasto</caption><!-- Título da Tabela. -->
+                <tr><!-- Linha 1 da tabela -->
+                    <!-- Sub títulos dos dados, e com escopos de coluna.-->
+                    <th scope="col">Nome</th><!-- célula 1 = A1 -->
+                    <th scope="col">Sexo</th><!-- célula 2 = B1 -->
+                    <th scope="col">Idade</th><!-- célula 3 = C1 -->
+                    <th scope="col">Profissão</th> <!-- célula 4 = D1-->
+                </tr>
+                <tr><!-- Linha 2 da tabela -->
+                    <!-- Dados  -->
+                    <td>Ana Maria</td><!-- célula 5 = A2 -->
+                    <td>F</td><!-- célula 6 = B2 -->
+                    <td>25</td><!-- célula 7 = C2 -->
+                    <td>Jornalista</td><!-- célula 8 = D2-->
+                </tr>
+                <tr><!-- Linha 3 da tabela -->
+                    <td>Cláudio</td><!-- célula 9 = A3 -->
+                    <td>M</td><!-- célula 10 = B3-->
+                    <td>28</td><!-- célula 11 = C3 -->
+                    <td>Programador</td><!-- célula 12 = D3 -->
+                </tr>
+                <tr><!-- Linha 4 da tabela -->
+                    <td>Gustavo</td><!-- célula 13 = A4 -->
+                    <td>M</td><!-- célula 14 = B4 -->
+                    <td>42</td><!-- célula 15 = C4 -->
+                    <td>Professor</td><!-- célula 16 = D4 -->
+                </tr>
+                <tr><!-- Linha 5 da tabela -->
+                    <td>Hélio</td><!-- célula 17 = A5 -->
+                    <td>M</td><!-- célula 18 = B5 -->
+                    <td>19</td><!-- célula 19 = C5 -->
+                    <td>Vendedor</td><!-- célula 20 = D5 -->
+                </tr>
+                <tr><!-- Linha 6 da tabela -->
+                    <td>Maria</td><!-- célula 21 = A6 -->
+                    <td>F</td><!-- célula 22 = B6 -->
+                    <td>39</td><!-- célula 23 = C6 -->
+                    <td>Médica</td><!-- célula 24 = D6 -->
+                </tr>
+                <tr><!-- Linha 7 da tabela -->
+                    <td>Otávio</td><!-- célula 25 = A7 -->
+                    <td>M</td><!-- célula 26 = B7 -->
+                    <td>22</td><!-- célula 27 = C7 -->
+                    <td>Nutricionista</td><!-- célula 28 = D7 -->
+                </tr>
+            </table><!-- FIM tabela 1-->
+        <!-- </div> -->
+    </div><!-- FIM tabela 1 -->
+    <hr>
+    <div class="tabela_escondida"><!-- Tabela 2 -->
+        <h1>TABELA 2 com Exemplo de estilo para linha e coluna</h1>
+        <table class="tabela"><!-- Tabela 2-->
+            <colgroup>
+                <col class="cnome2">
+                <col class="csexo2">
+                <col class="cidade2">
+                <col class="cprofissao2">
+            </colgroup>
+    
+            <caption>Exemplo para vermos na prática estilo de linha sobre-pondo o de coluna</caption><!-- Título da Tabela. -->
+            <tr class="linha1"><!-- Linha 1 da tabela -->
+                <!-- Sub títulos dos dados, e com escopos de coluna.-->
+                <th scope="col">Nome</th><!-- célula 1 = A1 -->
+                <th scope="col">Sexo</th><!-- célula 2 = B1 -->
+                <th scope="col">Idade</th><!-- célula 3 = C1 -->
+                <th scope="col">Profissão</th> <!-- célula 4 = D1-->
+            </tr>
+            <tr><!-- Linha 2 da tabela -->
+                <!-- Dados  -->
+                <td>Ana Maria</td><!-- célula 5 = A2 -->
+                <td>F</td><!-- célula 6 = B2 -->
+                <td>25</td><!-- célula 7 = C2 -->
+                <td>Jornalista</td><!-- célula 8 = D2-->
+            </tr>
+            <tr><!-- Linha 3 da tabela -->
+                <td>Cláudio</td><!-- célula 9 = A3 -->
+                <td>M</td><!-- célula 10 = B3-->
+                <td>28</td><!-- célula 11 = C3 -->
+                <td>Programador</td><!-- célula 12 = D3 -->
+            </tr>
+            <tr><!-- Linha 4 da tabela -->
+                <td>Gustavo</td><!-- célula 13 = A4 -->
+                <td>M</td><!-- célula 14 = B4 -->
+                <td>42</td><!-- célula 15 = C4 -->
+                <td>Professor</td><!-- célula 16 = D4 -->
+            </tr>
+            <tr><!-- Linha 5 da tabela -->
+                <td>Hélio</td><!-- célula 17 = A5 -->
+                <td>M</td><!-- célula 18 = B5 -->
+                <td>19</td><!-- célula 19 = C5 -->
+                <td>Vendedor</td><!-- célula 20 = D5 -->
+            </tr>
+            <tr><!-- Linha 6 da tabela -->
+                <td>Maria</td><!-- célula 21 = A6 -->
+                <td>F</td><!-- célula 22 = B6 -->
+                <td>39</td><!-- célula 23 = C6 -->
+                <td>Médica</td><!-- célula 24 = D6 -->
+            </tr>
+            <tr><!-- Linha 7 da tabela -->
+                <td>Otávio</td><!-- célula 25 = A7 -->
+                <td>M</td><!-- célula 26 = B7 -->
+                <td>22</td><!-- célula 27 = C7 -->
+                <td>Nutricionista</td><!-- célula 28 = D7 -->
+            </tr>
+        </table><!-- FIM tabela 2 -->
+    </div><!-- FIM tabela 2 -->
+    <hr>
+    <div class="tabela_escondida"><!-- Tabela 3 -->
+        <h1>TABELA 3 com Exemplo de estilos únicos para colunas</h1>
+        <table class="tabela"><!-- Tabela 3-->
+            <colgroup>
+                <col class="cnome3">
+                <col class="csexo3">
+                <col class="cidade3">
+                <col class="cprofissao3">
+            </colgroup>
+    
+            <caption>Aqui vemos o seletor para duas classes</caption><!-- Título da Tabela. -->
+            <tr><!-- Linha 1 da tabela -->
+                <!-- Sub títulos dos dados, e com escopos de coluna.-->
+                <th scope="col">Nome</th><!-- célula 1 = A1 -->
+                <th scope="col">Sexo</th><!-- célula 2 = B1 -->
+                <th scope="col">Idade</th><!-- célula 3 = C1 -->
+                <th scope="col">Profissão</th> <!-- célula 4 = D1-->
+            </tr>
+            <tr><!-- Linha 2 da tabela -->
+                <!-- Dados  -->
+                <td>Ana Maria</td><!-- célula 5 = A2 -->
+                <td>F</td><!-- célula 6 = B2 -->
+                <td>25</td><!-- célula 7 = C2 -->
+                <td>Jornalista</td><!-- célula 8 = D2-->
+            </tr>
+            <tr><!-- Linha 3 da tabela -->
+                <td>Cláudio</td><!-- célula 9 = A3 -->
+                <td>M</td><!-- célula 10 = B3-->
+                <td>28</td><!-- célula 11 = C3 -->
+                <td>Programador</td><!-- célula 12 = D3 -->
+            </tr>
+            <tr><!-- Linha 4 da tabela -->
+                <td>Gustavo</td><!-- célula 13 = A4 -->
+                <td>M</td><!-- célula 14 = B4 -->
+                <td>42</td><!-- célula 15 = C4 -->
+                <td>Professor</td><!-- célula 16 = D4 -->
+            </tr>
+            <tr><!-- Linha 5 da tabela -->
+                <td>Hélio</td><!-- célula 17 = A5 -->
+                <td>M</td><!-- célula 18 = B5 -->
+                <td>19</td><!-- célula 19 = C5 -->
+                <td>Vendedor</td><!-- célula 20 = D5 -->
+            </tr>
+            <tr><!-- Linha 6 da tabela -->
+                <td>Maria</td><!-- célula 21 = A6 -->
+                <td>F</td><!-- célula 22 = B6 -->
+                <td>39</td><!-- célula 23 = C6 -->
+                <td>Médica</td><!-- célula 24 = D6 -->
+            </tr>
+            <tr><!-- Linha 7 da tabela -->
+                <td>Otávio</td><!-- célula 25 = A7 -->
+                <td>M</td><!-- célula 26 = B7 -->
+                <td>22</td><!-- célula 27 = C7 -->
+                <td>Nutricionista</td><!-- célula 28 = D7 -->
+            </tr>
+        </table> <!-- FIM tabela 3 -->
+    </div><!-- FIM tabela 3 -->
+    <hr>
+    <div class="tabela_escondida"><!-- Tabela 4 -->
+        <h1>TABELA 4 com Exemplo de estilos únicos para múltiplas colunas</h1>
+        <table class="tabela"><!-- Tabela 4-->
+            <colgroup>
+                <col class="cnome4">
+                <col class="cgrupo" span="3" ><!-- Assim quando aplicamos estilo a essa classe, ela também aplica na próxima coluna, pois depende do número de expansão(span) que foi definido. -->
+                <!-- <col class="cidade4"> --> <!-- Aqui removemos por causa do span mudado para 3.-->
+               <!--  <col class="cprofissao4"> --> <!-- Por causa do uso da expansão na coluna 2 , aqui podemos descartar o uso. -->
+            </colgroup>
+    
+            <caption>Aqui usa-se o seletor de classe que aplica estilo ao span de grupos de colunas.</caption><!-- Título da Tabela. -->
+            <tr><!-- Linha 1 da tabela -->
+                <!-- Sub títulos dos dados, e com escopos de coluna.-->
+                <th scope="col">Nome</th><!-- célula 1 = A1 -->
+                <th scope="col">Sexo</th><!-- célula 2 = B1 -->
+                <th scope="col">Idade</th><!-- célula 3 = C1 -->
+                <th scope="col">Profissão</th> <!-- célula 4 = D1-->
+            </tr>
+            <tr><!-- Linha 2 da tabela -->
+                <!-- Dados  -->
+                <td>Ana Maria</td><!-- célula 5 = A2 -->
+                <td>F</td><!-- célula 6 = B2 -->
+                <td>25</td><!-- célula 7 = C2 -->
+                <td>Jornalista</td><!-- célula 8 = D2-->
+            </tr>
+            <tr><!-- Linha 3 da tabela -->
+                <td>Cláudio</td><!-- célula 9 = A3 -->
+                <td>M</td><!-- célula 10 = B3-->
+                <td>28</td><!-- célula 11 = C3 -->
+                <td>Programador</td><!-- célula 12 = D3 -->
+            </tr>
+            <tr><!-- Linha 4 da tabela -->
+                <td>Gustavo</td><!-- célula 13 = A4 -->
+                <td>M</td><!-- célula 14 = B4 -->
+                <td>42</td><!-- célula 15 = C4 -->
+                <td>Professor</td><!-- célula 16 = D4 -->
+            </tr>
+            <tr><!-- Linha 5 da tabela -->
+                <td>Hélio</td><!-- célula 17 = A5 -->
+                <td>M</td><!-- célula 18 = B5 -->
+                <td>19</td><!-- célula 19 = C5 -->
+                <td>Vendedor</td><!-- célula 20 = D5 -->
+            </tr>
+            <tr><!-- Linha 6 da tabela -->
+                <td>Maria</td><!-- célula 21 = A6 -->
+                <td>F</td><!-- célula 22 = B6 -->
+                <td>39</td><!-- célula 23 = C6 -->
+                <td>Médica</td><!-- célula 24 = D6 -->
+            </tr>
+            <tr><!-- Linha 7 da tabela -->
+                <td>Otávio</td><!-- célula 25 = A7 -->
+                <td>M</td><!-- célula 26 = B7 -->
+                <td>22</td><!-- célula 27 = C7 -->
+                <td>Nutricionista</td><!-- célula 28 = D7 -->
+            </tr>
+        </table><!-- FIM tabela 4 -->
+    </div><!-- FIM tabela 4 -->
+    <hr>
+    <div class="tabela_escondida"> <!-- Tabela 5 -->
+        <h1>TABELA 5 com Exemplo 2 de estilos únicos para múltiplas colunas</h1>
+    	<table class="tabela5"><!-- Tabela 5-->
+    	    <colgroup>
+    	        <!-- LEMBRAR que cada <col> equivale a seleção de uma coluna, e caso remova um desses, o estilo definido no seletor de classes CSS não vai aplicar a ele. 
+    	            Outra coisa que pode-se fazer é remover um <col> e definir o span(expansáo) para aplicar estilo a outras colunas.-->
+    	        <col class="amarelo"> 
+    	        <col class="vermelho" span="2"><!-- Col 2 -->
+    	        <col class="amarelo">
+    	        <!-- <col class="vermelho"> --> <!-- Aqui removemos para aplicar o span ao col 2. -->
+    	    </colgroup>
+    
+    	    <caption>Aqui foi usado o span para definir a colunas a serem estilizadas e também o seletor de classe para o mesmo fim.</caption><!-- Título da Tabela. -->
+    	    <tr><!-- Linha 1 da tabela -->
+    	        <!-- Sub títulos dos dados, e com escopos de coluna.-->
+    	        <th scope="col">Nome</th><!-- célula 1 = A1 -->
+    	        <th scope="col">Sexo</th><!-- célula 2 = B1 -->
+    	        <th scope="col">Idade</th><!-- célula 3 = C1 -->
+    	        <th scope="col">Profissão</th> <!-- célula 4 = D1-->
+    	    </tr>
+    	    <tr><!-- Linha 2 da tabela -->
+    	        <!-- Dados  -->
+    	        <td>Ana Maria</td><!-- célula 5 = A2 -->
+    	        <td>F</td><!-- célula 6 = B2 -->
+    	        <td>25</td><!-- célula 7 = C2 -->
+    	        <td>Jornalista</td><!-- célula 8 = D2-->
+    	    </tr>
+    	    <tr><!-- Linha 3 da tabela -->
+    	        <td>Cláudio</td><!-- célula 9 = A3 -->
+    	        <td>M</td><!-- célula 10 = B3-->
+    	        <td>28</td><!-- célula 11 = C3 -->
+    	        <td>Programador</td><!-- célula 12 = D3 -->
+    	    </tr>
+    	    <tr><!-- Linha 4 da tabela -->
+    	        <td>Gustavo</td><!-- célula 13 = A4 -->
+    	        <td>M</td><!-- célula 14 = B4 -->
+    	        <td>42</td><!-- célula 15 = C4 -->
+    	        <td>Professor</td><!-- célula 16 = D4 -->
+    	    </tr>
+    	    <tr><!-- Linha 5 da tabela -->
+    	        <td>Hélio</td><!-- célula 17 = A5 -->
+    	        <td>M</td><!-- célula 18 = B5 -->
+    	        <td>19</td><!-- célula 19 = C5 -->
+    	        <td>Vendedor</td><!-- célula 20 = D5 -->
+    	    </tr>
+    	    <tr><!-- Linha 6 da tabela -->
+    	        <td>Maria</td><!-- célula 21 = A6 -->
+    	        <td>F</td><!-- célula 22 = B6 -->
+    	        <td>39</td><!-- célula 23 = C6 -->
+    	        <td>Médica</td><!-- célula 24 = D6 -->
+    	    </tr>
+    	    <tr><!-- Linha 7 da tabela -->
+    	        <td>Otávio</td><!-- célula 25 = A7 -->
+    	        <td>M</td><!-- célula 26 = B7 -->
+    	        <td>22</td><!-- célula 27 = C7 -->
+    	        <td>Nutricionista</td><!-- célula 28 = D7 -->
+    	    </tr>
+    	</table><!-- FIM tabela 5 -->
+    </div><!-- FIM tabela 5 -->
+    <hr>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!-- 
+    Vídeo 15:
+    Tabelas responsivas - @Curso em Vídeo HTML5 e CSS3 
+    Curso em Vídeo
+    https://www.youtube.com/watch?v=-0CgGstWMcA&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=39
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Tabelas responsivas</title>
+    <!-- Aqui apliamos o estilo a nossa página e tabela. -->
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}/* Estilo geral para fonte */
+        caption {font-size: 1.3em; font-weight: bolder; text-decoration: underline; margin-bottom: 10px;}/* Estilo do título da tabela. */
+        table {border-collapse: collapse;}/* Estilo de borda que elima as margens padrões dadas pelo navegador e gruda as células entre si.*/
+        th, td {border: 1px solid black; padding: 7px;}/* Assim deixamos a c[elulas parecidas com a do Excel. */
+        tr:nth-child(even) {background-color: rgba(1, 18, 255, 0.466);}/* Pseudo classe para fazer efeito zebrado. */
+        /* Aqui selecionamos a div_id para aplicarmos estilos */
+        div#container {
+            /* width: 50vw; *//* Largura definida em valores da view-port. */
+            overflow: auto;/* overflow quer dizer(transbordar) em ambos os eixos que são: X e Y, 
+                        overflow-y quer dizer (transborde) no eixo Y.
+                        overflow-x quer dizer (transborde) no eixo X.
+            overflow aceita valores do tipo: auto ; hidden; scrool 
+            E nesse caso usamos auto, pois queremos uma barra de rolagem contida na div, 
+            que permite a rolagem da tabela caso ela tranborde o limite e espaço.*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabelas em telas pequenas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sequi nesciunt, beatae, quaerat porro non harum mollitia eveniet omnis sit ducimus perferendis aut? Suscipit libero a amet nam est quidem.</p>
+    
+    <!-- Aqui envelopamos a <table> para dentro de uma <div> pois assim facilita fazermos as configurações 
+        para remover erros que impessam a responsividade da tabela, como por exemplo aquela barra de rolagem 
+        inferior que deixa tudo feião, ainda mais em telas de celulares.-->
+
+    <div id="container"><!-- Aqui atribuimos um id_name para aplicarmos os estilos na CSS. -->
+        <!-- Aqui criamos uma tabela de exemplo: -->
+        <table><!-- Tabela -->
+            <caption>Tabelas responsivas</caption><!-- Título da tabela. -->
+            <thead><!-- Cabeçalho da tabela -->
+                <tr><!-- Linha 1 -->
+                    <!-- Aqui são as <th> que são sub-títulos dos dados e cada th representa uma coluna. 
+                        OBS: Cada <th> ou <th> representa uma célula da tabela.-->
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr><!-- FIM linha 1 -->
+            </thead><!-- FIM abeçalho da tabela -->
+            <tbody><!-- Corpo da tabela -->
+            <!-- Aqui cada <tr> representa uma linha de dados e cada <td> representa um dado(célula).-->
+                <tr>
+                    <td>TV 40*</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Home Theater</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S20</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>iPad Mini</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>PlayStation 4</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Lava Louças</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Amazon Echo</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+            </tbody><!-- FIM corpo da tabela -->
+        </table><!-- FIM da tabela -->
+    </div><!-- FIM da div tabela. -->
+</body>
+</html>

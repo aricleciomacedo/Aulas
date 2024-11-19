@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table .exercicio_de_tabela {
+    width: 500px;
+    border-collapse: collapse;
+}
+
+.exercicio_de_tabela caption {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.exercicio_de_tabela th, .exercicio_de_tabela td {
+    border: 2px solid black;
+    padding: 8px;
+}
+
+/* 
+    Para Linhas de tabela, conseguimos aplicar facilmente um estilo idependente, por meio do seletor de classe, como podemos ver no exemplo da tr da classe destaque abaixo em (tr.destaque {} ): Assim toda tag <tr> da class = destaque recebe estas configurações. 
+*/
+tr.destaque {
+    background-color: chartreuse;
+}
+
+/* 
+    A dificuldade é um pouco maior quando é para aplicar um estilo para colunas, pois envolve o uso de uma <tag nova> da HTML5; Essa tag é a <colgroup>, então veja no index sobre ele, e abaixo as configurações por meio de seletores para cada classe criada pra referenciar cada coluna = <col>.
+    
+    OBS: Este seletor não sobre-põe o seletor direto para a classe criada na <tag> por exemplo no seletor da <tr class = destaque> que atribuimos o background-color: chartreuse;
+*/
+col.cnome {
+    background-color: darkblue;
+}
+col.csexo {
+    background-color: yellow;
+}
+col.cidade {
+    background-color: darkblue;
+}
+col.cprof {
+    background-color: darkblue;
+}
+
+/* 
+Esse seletor aplica configurações para duas colunas, que foram definidas por meio de "span". 
+    OBS: Este seletor não sobre-põe o seletor direto para a classe criada na <tag> por exemplo no seletor da <tr class = destaque> que atribuimos o background-color: chartreuse;
+*/
+col.cgroup {
+    background-color: red;
+}
+
+/* Seletores criados para exemplo do uso de <col "class= yellow e red"> */
+col.yellow {
+    background-color: orange;
+}
+col.red {
+    background-color: rgb(0, 119, 255);
+}
+
+table.exercicio_de_tabela tfoot > tr {
+    background-color: rgb(207, 177, 255);
+    transform: scale(0.9);
+    transition:.5s ease-in;
+}
+
+
+table.exercicio_de_tabela tfoot > tr:hover {
+    background-color: rgb(253, 0, 211);
+    color: white;
+    transform: scale(1);
+}

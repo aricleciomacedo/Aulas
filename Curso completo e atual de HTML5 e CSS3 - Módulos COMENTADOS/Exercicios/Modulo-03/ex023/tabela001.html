@@ -1,0 +1,110 @@
+<!-- 
+    Aqui comentamos o código do professor Gustavo Guanabara, e é importante que você faça o código acompanhando a aula, e não precise copiar esse , pois dificulca o aprendizado.
+        Quanto mais você prática a escrita dos códigos, mais você aprende.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Tabelas</title>
+    <style>
+        /* Assim selecionamos a tag <body> e definimos a fonte de estilo dos textos. */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Assim selecionamos a tag <table> . */
+        table {
+            width: 400px;/* Definimos a largura da tabela. */
+            border-collapse: collapse;/* Essa propriedade é para colapso da fronteira, que por padrão tem seu valor = separate, que separam as caixas por meio de um espaço entre uma borda de aixa eoutra. Temos também o valor = collapse que gruda as bordas de uma caixa na outra.*/
+        }
+        /* Assim selecionamos a tag <tr> , depois foi criada a classe linha e selecionada aqui por meio do ponto (.) para caso queiramos definir estilo deifente para determinda linha.*/
+        tr {
+            background-color: gray;/* Cor de fundo das tables-rows */
+        }
+        /* Assim selecionamos a tag que possui essa classe. */
+        tr.linha {
+            background-color: blue;/* Cor de fundo da table-row , assim a linha inteira recebe a cor.*/
+        }
+        /* Aqui seleionamos a tag <td>. */
+        td {
+            border: 1px solid black;/* Assim adcionamos as bordas , que formarão caixinhas em volta de cada dado da tabela. */
+            padding: 8px;/* Espaço interno nas caixinhas. */
+        }
+        /* Assim selecionamos a classe dado da tag <tr>. */
+        td.dado {
+            background-color: yellow;
+        }
+        /* Assim selecionei o id a6 da tag td. */
+        td#a6 {
+            background-color: rgb(53, 248, 4);/* Cor de fundo. */
+            box-shadow:inset -10px 3px 15px 2px black; /* sombra na caixa de fora para dentro. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!-- Aqui usamos a tag semântica para a criação de tabelas.
+Devemos entender que tabelas também têm hierarquias, e caso ela não seja respeitada, os dados vão parece antes da tabela, ou seja na parte superior de fora, como se estivess adcionado uma tag antes da <table>..
+    Nessa primeira vamos trabalhar com a HIERARQUIA DE TABELAS "SIMPLES" . 
+        A estruruta:
+        1º TABLE = Tabela.
+            TABLE ROW = Linha de tabela.
+                TABLE HEADER = Cabeçalho de tabela.
+                TABLE DATA  = Dados de tabela.
+
+    Nesse nosso exemplo, vamos trabalhar apenas com Dados, então veja no exemplo de tabela excel que fizemos e observe os dados ecritos nas linhas 1, 2, 3, 4 e nas colunas 1, 2, e 3.  
+Ent'ao podemos ver que/ Dado 1 = A1, Dado 2 = B1, Dado 3 = C1 isso na linha 1.
+                        Dado 4 = A2, Dado 5 = B2, Dado 6 = C2 iso na linha 2.
+                        Dado 7 = A3, Dado 8 = B3, Dado 9 = C3 iso na linha 3.
+                       Dado 10 = A4, Dado 11 = B4, Dado 12 = C4 iso na linha 4.
+                E assim segue a lógica de uma tabela
+
+    AGORA é transpor esses dados para a tabela na html.
+VALE LEMBRAR que: Por padrão as tabelas não em bordas, então para melhor parecer de fato om tabela, é nescesário adcionar as bordas que formarão os quadrinhos de cada caixinha da tabela. VEJA isso no style.css.
+-->
+
+    <table><!-- Início a tabela. -->
+        <!-- Aqui usamo a tag Table-row para criação de linhas na tabela. Cada <tr> é = uma linha.
+        Usamos a tag Table-Data para criação de colunas. Cada <td> é = Um DADO da tabela. (ou coluna), e VALE LEMBRAR que a tag <td> não tem seu fechamento obrigatório, podendo ser usada como no exemplo da Quarta Linha onde não fechamos as tags <td>. "MAS" deixa <td> fechada pois como o VSC fecha por padrão, então poupe tempo deixando do jeito que estiver ao invés de sair apagando o fechamento </td>  -->
+        <tr><!-- Primeira Linha -->
+            <td>A1</td><!-- Coluna 1 = Data 1 -->
+            <td>B1</td><!-- Coluna 2 = Data 2 -->
+            <td>C1</td><!-- COluna 3 = Data 3 -->
+        </tr><!-- FIM da primeira Linha -->
+<!-- 
+        Assim vamos usar a mesma lógica estrutural para as demais tabelas a seguir.
+    Outra coisa que fizemos foi adcionar a classe para vermos o estilo dado a tag, nesse caso uma cor de fundo vai pintar a linha inteira da <tr> e <td classe dado> vai receber outra cor de fundo para vermo o bloco referente ao dado, sendo pintado.
+-->
+        <tr class="linha"><!-- Segunda Linha. -->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr><!-- FIM da segunda LInha. -->
+        <tr><!--  Terceira Linha. -->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr><!-- Fim da Terceira Linha. -->
+        <tr><!-- Quarta Linha -->
+            <td>A4
+            <td class="dado">B4
+            <td>C4
+        </tr><!-- FIM Quarta Linha. -->
+        <tr>
+            <td>A5</td>
+            <td>B5</td>
+        </tr>
+        <tr>
+            <td id="a6">A6</td>
+        </tr>
+    </table><!-- Fim da Tabela. -->
+    <!-- Aqui adcionei uma linha horizontal  e um botão com link para outra página ,
+        só para praticar o aprendido. -->
+    <hr>
+    <p>Vá para o próximo exemplo clicando no botão!</p>
+    <button><a href="tabela001a.html">Clique Aqui!</a></button>
+</body>
+</html>

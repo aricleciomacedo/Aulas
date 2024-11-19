@@ -1,0 +1,56 @@
+/* Estilo Table 2 do desafio */
+:root {
+    --cor1: #ffffff;
+    --cor2: #000000;
+    --cor3: #3a3838;
+    --cor4: #555353;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table2 {
+    border-collapse: collapse;
+    width: 37rem;
+}
+.table2 th {
+    background-color: var(--cor4); /* #808080 ou #d3d3d3 */
+    color: var(--cor1);
+    border: 2px solid var(--cor2);
+}
+
+.table2 .th-exatas, .table2 .th-humanas {
+    background-color: var(--cor1);
+    color: var(--cor2);
+}
+/* .table2 .th-humanas {
+    color: var(--cor1);
+    background-color: var(--cor2);
+} */
+
+.table2 .th-media_exatas, .th-media_humanas{
+    text-align: left;
+}
+/* .table2 .th-media_humanas {
+    text-align: left;
+    background-color: blue;
+} */
+
+.table2 tr > td {
+    border: 2px solid var(--cor2);
+}
+
+
+.td-media_exatas, .td-media_humanas {
+    color: var(--cor1);
+    background-color: var(--cor4);
+}
+/* .td-media_humanas {
+    background-color: var(--cor4);
+    color: var(--cor1);
+} */
+
+.table2 tfoot > tr > th {
+    background-color: var(--cor3);
+}

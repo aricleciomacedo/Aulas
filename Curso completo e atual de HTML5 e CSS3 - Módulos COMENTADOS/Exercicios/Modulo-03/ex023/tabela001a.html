@@ -1,0 +1,83 @@
+<!-- 
+    Aqui só comentamos o que foi ensinado o vídeo: 
+Alinhando o conteúdo em tabelas - @Curso em Vídeo HTML5 e CSS3
+LINK: https://youtu.be/djvX6p9l-Rk?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ
+
+    De ínico removemos as classes criadas anteriormente, e removemos os estilos atribuidos.
+Então começamos apartir dos estilos.
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 400px;
+            height: 400px;/* Assim aumentamos a altura das caixas (colunas ou células) da tabela. */
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+
+        /* Com a combinação de alinhamentos é possível posicionar os dados em qualquer parte de celular entro de um atabela. */
+            text-align: center;/* >>> Alinhamento Horizontal
+            Assim alinhamos os dados da tabela ao centro na vertical e ao centro na horizontal, sobrepondo o padrão left que é alinhado a esquerda na horizontal, e ao centro na vertical. Podemos ainda usar valores como: right.*/
+            vertical-align: middle;/* >>> Alinhamento Vertical
+            Assim posicionamos os dados da tabela em cima ou em baixo, e essa propriedade funciona muito bem em células de tabela. Ainda podemos usar valores como: Bottom que alinha em baixo, e o padrão que é middle = no meio. */
+        }
+    /* Aqui criamos a classe número para exemplificar algo que acontece em tabelas no excel, onde números são alinhados no centro a direita por padrão; e seguindo essa ideia nós também alinhamos os números dessa tabela para o centro a direita. */
+    .numero {
+        text-align: right;
+    }
+    </style>
+</head>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td class="numero">C2</td><!-- Essa classe foi  criada para exemplificar o que acontee no excel, veja no style.css como é por padrão em caso de números dentro das células de tabela. -->
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td class="numero">C3</td>
+        </tr>
+        <tr>
+            <td>A4
+            <td>B4
+            <td>C4
+        </tr>
+    </table>
+    <!-- Aqui adcionei uma linha horizontal  e um botão com link para outra página ,
+    só para praticar o aprendido. -->
+    <hr>
+    <p>Volte clicando no botão!</p>
+    <button><a href="tabela001.html">Clique Aqui!</a></button>
+</body>
+</html>

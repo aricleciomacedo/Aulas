@@ -1,0 +1,87 @@
+/* Estilo de Tabelas Responsivas. */
+
+@charset "UTF-8";
+
+.tabela_responsiva {
+    font-family: Arial, Helvetica, sans-serif;
+}
+table.tabela_responsiva > {
+    border-collapse: collapse;
+}
+.tabela_responsiva > caption {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding: 20px;
+}
+.tabela_responsiva th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+.tabela_responsiva tr:nth-child(even) {
+    background-color: rgb(228, 228, 288);
+}
+
+/* Este seletor é do id = container. */
+div#container {
+
+    /* Por opção Podemos assim definir uma largura para a tabela, baseado na ViewPort do da tela do navegador. */
+/* width: 50vw; */
+
+    /* Aqui resolvemos problema de conteúdos que transbordam da tabela, fazendo com que a responsividade fique comprometida, pois sem ela, a barra de rolagem do navegador torna o conteúdo ruim de se consumir.
+    OverFlow = (que é o significado de Overflow) serve para criar um scroll abaixo da tabela, tornando a responsividade boa, pois não necessita da barra de rolagem do navegador; Assim é possível srollar a tabela lateralmente sem que  a barra de scroll de baixo adcionada pelo navegador incomode o usuário. */
+    overflow-x: auto;
+}
+
+/* Estilo do <tfoot> */
+table.tabela_responsiva tfoot {
+    background-color: blue;
+}
+table.tabela_responsiva tfoot > tr {
+    background-color: rgb(207, 177, 255);
+    transform: scale(0.9);
+}
+table.tabela_responsiva tfoot a:hover {
+    color: blue;
+    text-transform: uppercase;
+}
+
+.tabela_responsiva span{
+    position: relative;
+    background-color: blue;
+    border-radius: 50%;
+    cursor: cell;/* Aqui a seta vira um X parecendo simbolo de Hospital. */
+
+    transition-property: background-color, border-radius;
+    transition-duration: 2s, 0.5s;
+    transition-delay: .1s;
+    transition-timing-function: cubic-bezier(.15, .89, .85, .26);
+}
+
+.tabela_responsiva .emoji {
+    position: absolute;
+    left: 0;
+}
+
+/* Assim bugamos o emoji adicionado. */
+table.tabela_responsiva > span:hover {
+    background-color: rgba(2, 2, 53, 0.918);
+    /* border-radius: 50%; */
+/* font-size: 2rem; *//* Aumenta o fonte e BUGA. */
+}
+/* table.tabela_responsiva tfoot span#span-image:hover {
+    background-color: black;
+    border-radius: 75%;
+    border-bottom: 2px solid blue;
+} */
+
+table.tabela_responsiva tfoot span#span-image img {
+    /* transition-property: background-color, border-radius; */
+    transition-duration: 1.2s;
+    transition-timing-function: cubic-bezier(0.84, 0.85, 0, 0.01);
+}
+table.tabela_responsiva tfoot span#span-image img:hover {
+    background-color: rgba(2, 2, 53, 0.918);
+    border-radius: 17%;
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+}
