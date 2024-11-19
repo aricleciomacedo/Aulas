@@ -1,0 +1,19 @@
+/* Aqui optamos por seguir a mesma ideia que o professor ensinou na aula anterior, e aplicamos algumas propriedades de estilos para o <body> a <table> e a <td>. */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+table {
+    background-color: lightgray;
+    border-collapse: collapse;
+/* Sem essas  propriedades ACIMA , o exemplo proposto pelo professor já fica concluido. */
+    width: 500px;
+}
+td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+/* Aqui selecionamos a tags <td> que possuem a classe td-mesc. */
+td.td-mesc {
+    background-color: gray;
+}

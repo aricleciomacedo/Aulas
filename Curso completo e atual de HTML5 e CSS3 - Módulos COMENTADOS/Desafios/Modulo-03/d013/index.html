@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Tabela do desafio (parte 1)</title>
+
+    <!-- Estilo da Tabela 1 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Estilo da Tabela 2 -->
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- Aqui abaixo adcionamos um tipo painel onde as palavras passam de um lado até o outro. -->
+    <br>
+    <marquee behavior="up" direction="left" width=500px>
+        TABELA 1 DO DESAFIO NA AULA: Desafios (parte 1) - @Curso em Vídeo HTML5 e CSS3 PROFESSOR: Gustavo Guanabara 
+        <a href="https://youtu.be/MnznvoNuy-I?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ" target="_blank">
+            LINK AQUI:
+        </a>
+    </marquee>
+
+    <br>
+    <hr>
+
+    <!-- Aqui criamos a tabela seguindo a estrutura 
+        <table>
+            <tr>
+                <td><\td>   OBS: tr corresponde a uma linha criada na tabela, e td uma célula criada na linha
+            <\tr>
+        <\table>
+
+        Nas mesclagem de células fizemos exatamente como o exemplo do excel, caso tenha dúvidas de como ficou o projeto, VEJA o arquivo >>> Planilha-do-desafio(parte1).xlsx
+
+    AGORA depois de criada a tabela e enúmerado os dados (colunas/Células), aplicamos o estilo da tabela que por padrão aprendemos na aula anterior ao desafio (Aula: Mesclagem de Células LINK: https://youtu.be/olZgL09uDAU?si=lLTMexOa4m2A4DQx). VEJA no style!
+        
+        ENTÃO mesclamos as células por meio de rowspan que uni blocos, e colspan que uni colunas, e removemos (comentamos as células <td> para ficar semelhane ao exercício no excell.) 
+            
+        OBS: Usamos a classe para pintar a células mescladas!
+    -->
+    <table>
+        <!-- Linha 1 -->
+        <tr>
+            <td>1</td> <!-- Célula(coluna) 1 ou dado 1 da respectiva linha. -->
+            <td>2</td> <!-- Célula(coluna) 2 ou dado 2 da respectiva linha. -->
+            <td rowspan="2" class="td-mesc">3</td> <!-- Célula(coluna) 3 ou dado 3 da respectiva linha. -->
+            <td>4</td> <!-- Célula(coluna) 4 ou dado 4 da respectiva linha. -->
+                <!-- Assim segue o parâmetro para as demais Linhas e Colunas da Tabela. -->
+        </tr>
+
+        <!-- Linha 2 -->
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <!-- <td>8</td> -->
+        </tr>
+
+        <!-- Linha 3 -->
+        <tr>
+            <td colspan="3" class="td-mesc">8</td><!-- Era 9 virou 8 com a mesclagem -->
+            <!-- <td>10</td> -->
+            <!-- <td>11</td> -->
+            <td>9</td><!-- Era 12 virou 9 com a mesclagem -->
+        </tr>
+
+        <!-- Linha 4 -->
+        <tr>
+            <td rowspan="2" class="td-mesc">10</td> <!-- Remove a td 17  , e aqui 13 virou 10 com a mesclagem-->
+            <td colspan="2" class="td-mesc">11</td><!-- Remove a td 15 , e aqui 14 virou 11 com a mesclagem -->
+            <!-- <td>15</td> -->
+            <td>12</td><!-- Era 16 virou 12 com a mesclagem -->
+        </tr>
+
+        <!-- Linha 5 -->
+        <tr>
+            <!-- <td>17</td> --> <!-- Removido devido a mesclagem de linha td 13 que virou 10 -->
+            <td>13</td><!-- Era 18 virou 13 com a mesclagem -->
+            <td>14</td><!-- Era 19 virou 14 com a mesclagem -->
+            <td>15</td><!-- Era 20 virou 15 com a mesclagem -->
+        </tr>
+    </table>
+
+    <!-- Aqui abaixo adcionamos um tipo painel onde as palavras passam de um lado até o outro. -->
+    <hr>
+    <br>
+    <hr>
+    <marquee behavior="up" direction="left" width=500px>
+        TABELA 2 DO DESAFIO NA AULA: Desafios (parte 1) - @Curso em Vídeo HTML5 e CSS3 PROFESSOR: Gustavo Guanabara 
+        <a href="https://youtu.be/MnznvoNuy-I?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ" target="_blank">
+            LINK AQUI:
+        </a>
+    </marquee>
+
+    <hr>
+    <br>
+    <!-- Criamos a tabela 2 usando a estrutura :
+        Tabela
+        <table> =  TABELA
+            <tr> = LINHA 1 
+                <td></td>  = DADO 1 = CÉLULA 1 = COLUNA 1
+                <td></td>  = DADO 2 = CÉLULA 2 = COLUNA 2
+                <td></td>  = DADO 3 = CÉLULA 3 = COLUNA 3
+                <td></td>  = DADO 4 = CÉLULA 4 = COLUNA 4
+                <td></td>  = DADO 5 = CÉLULA 5 = COLUNA 5
+            </tr> FIM LINHA 1
+            E ASSIM SEGUE O EXEMPLO DE CRIAÇÃO PARA AS DEMAIS
+             LINHA 2...
+             LINHA 3...
+             LINHA 4...
+             LINHA 5...
+        </table>
+
+        ENTÃO no Style usamos as mesmas propriedades anteriormente aprendidas, que mostrarão de fato a tabela na página do navegador.
+         -->
+    <!-- Tabela  -->
+    <table class="tabela2"> <!-- TABELA -->
+
+        <!-- Exemplo apenas na linha 1, o restante desenrole, pois já tens conhecimento para tal. -->
+    
+            <tr><!-- LINHA 1 -->
+                <td colspan="4" class="color"><!-- DADO 1 -->
+                    A
+                </td><!-- FIM DADO 1 -->
+                    
+                <!--<td> DADO 2 
+                    B
+                </td>-->
+        
+                <!--<td> DADO 3 
+                    C
+                </td>-->
+        
+                <!--<td> DADO 4 
+                    D
+                </td>-->
+        
+                <td rowspan="4" class="color"><!-- DADO 5 --> <!-- Removemos td J , O e T -->
+                    B <!-- Era E -->
+                </td>
+            </tr><!-- FIM LINHA 1 -->
+    
+            <tr>
+                <td rowspan="4" class="color">C</td><!-- Era letra F ; Removemos entao as td N , S e Y -->
+                <td>D</td><!-- Era letra G -->
+                <td>E</td><!-- Era letra H -->
+                <td>F</td><!-- Era letra I -->
+                <!-- <td>J</td> -->
+            </tr>
+            <tr>
+                <td>G</td><!-- Era letra k -->
+                <td>H</td><!-- Era letra L -->
+                <td>I</td><!-- Era letra  -->
+                <!-- <td>N</td> -->
+                <!-- <td>0</td> -->
+            </tr>
+            <tr>
+                <td>J</td><!-- Era letra P -->
+                <td>K</td><!-- Era letra Q -->
+                <td>L</td><!-- Era letra R -->
+                <!-- <td>S</td> -->
+                <!-- <td>T</td> -->
+            </tr>
+            <tr>
+                <td colspan="4" class="color">M</td><!-- Era letra U; Entáo removemos as td V , W e X -->
+                <!-- <td>V</td> -->
+                <!-- <td>W</td> -->
+                <!-- <td>X</td> -->
+                <!-- <td>Y</td> -->
+            </tr>
+            <!-- Aqui adcionamos uma linha, Apenas para didática de compreensão de roda-pé da tabela -->
+            <tfoot>
+                <td colspan="5" class="colorfoot">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z </td><!-- Era letra Z -->
+            </tfoot>
+    
+        </table><!-- tabela2 -->
+</body>
+</html>

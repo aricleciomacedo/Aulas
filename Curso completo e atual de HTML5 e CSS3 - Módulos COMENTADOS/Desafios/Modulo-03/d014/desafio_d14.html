@@ -1,0 +1,450 @@
+<!-- 
+    Módulo 03, capítulo 21, Aula 12
+    Vídeo:
+    Desafios (parte 2) - @Curso em Vídeo HTML5 e CSS3
+    Link:
+    https://www.youtube.com/watch?v=V2gVaqTSRmo&list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ&index=37
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Desafio d14</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            }
+        caption {
+            font-size: 1.7em;
+            font-weight: bold;
+            padding: 12px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 12px;
+        }
+        .tabelaflex {
+            display: flex;
+            gap: 70px;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Aqui usei o seletor para etilizar a classe das <th> e também as <td> */
+        .tabelaflex .tabela_concluida table {
+            /* border: 3px solid black; */
+            box-shadow: 10px 5px 10px 0px black;
+        }
+        .tabela_concluida th, .td_color {
+            background-color: lightgray;
+        }
+        th.th_semcor {
+            background-color: white;
+        }
+        .tabela_concluida tfoot {
+            background-color: black;
+            background-image: linear-gradient( to left, black 70%, white) ;
+            color: white;
+            font-weight: bold;
+        }
+        .tabela_concluida .td-color {
+            background-color: rgba(128, 128, 128, 0.623);
+        }
+
+        /* ESTILOS DOS ESCOPOS */
+        .th_color:hover {
+            background-color: gray;
+            color: white;
+            transform: scale(1);
+            animation: colorir 2s ease-in-out infinite alternate;
+        }
+        @keyframes colorir {
+            0%  {
+                top: 0;
+                filter: opacity(0%);
+            }
+            100% {
+                top: 30px;
+                filter: opacity(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela criada no desafio 14</h1><!--Título principal. -->
+    <table> <!-- tabela teste-->
+        <caption><!-- Título da tabela -->
+            Notas acumuladas e médias finais.
+        </caption>
+        <thead>
+            <th scope="col">Área</th><!-- Título refente as áreas -->
+            <th scope="col">Disciplina</th><!-- Título para as matérias -->
+            <th colspan="2" scope="colgroup">Notas</th><!-- Título refente as notas -->
+            <th scope="col">Média</th><!-- Título referente as médias. -->
+        </thead>
+        <tbody>
+            <tr><!-- Linha  1-->
+                <!-- Aqui mesclamos 4 linhas, e agora removemos  -->
+                <th rowspan="4" scope="rowgroup">Exatas</th><!-- th 1 -->
+                <td>Matemática</td><!-- dado 1 disciplina -->
+                <td>Nota 1</td><!-- dado 2 -->
+                <td>Nota 2</td> <!-- dado 3 -->
+                <td>0.0</td><!-- dado 4 média matematica-->
+            </tr>
+            <tr><!-- Linha  2-->
+            
+                <td>Física</td><!-- dado 2 disciplina -->
+                <td>0.0</td><!-- dado 6 -->
+                <td>0.0</td><!-- dado 7-->
+                <td></td><!-- dado 8 -->
+            </tr>
+            <tr><!-- Linha 3 -->
+                <td>Química</td><!-- dado 9 -->
+                <td></td><!-- dado 10-->
+                <td></td><!-- dado 11 -->
+                <td></td><!-- dado 12 -->
+            </tr>
+            <tr><!-- Linha  4-->
+                <td>matemática</td><!-- dado 13 -->
+                <td></td><!-- dado 13 -->
+                <td></td><!-- dado 14 -->
+                <td></td><!-- dado 15-->
+            </tr>
+            <tr><!-- Linha  5-->
+                <th>Média de Humanas</th><!-- th 2 -->
+                <td></td><!-- dado 18 -->
+                <td></td><!-- dado 19 -->
+                <td></td><!-- dado 20 -->
+                <td></td><!-- dado 21 -->
+            </tr>
+            <tr><!-- Linha  6-->
+                <th>Média de Humanas</th><!-- th 3 -->
+                <td></td><!-- dado 23 -->
+                <td></td><!-- dado 24 -->
+                <td></td><!-- dado 25 -->
+                <td></td><!-- dado 26 -->
+            </tr>
+            <tr><!-- Linha 7 -->
+                <th>Humanas</th><!-- th 4 -->
+                <td></td><!-- dado 28 -->
+                <td></td><!-- dado 29 -->
+                <td></td><!-- dado 30 -->
+                <td></td><!-- dado 31 -->
+            </tr>
+        </tbody>
+    </table><!-- FIM tabela teste -->
+
+    <!-- NEssa
+        Nessa tabela acima tentei fazer mais ficou complicado, então resolvir fazer passo a passo criando a tabela completa, e mesclando as células e  removendo as que células que quebraram. 
+
+        Na tabela seguinte fiz as semântias da tabela e os escolpos de cada título e por fim conclui a tabela.
+    -->
+    <br>
+    <marquee behavior="up" direction="left">DESAFIO 14 deu ZEBRA.</marquee>
+
+    <div class="tabelaflex"><!-- Classe criada para posicionar as tabelas -->
+        <div>
+            <table>
+                <caption>Mesclagem</caption>
+                <!-- <thead> -->
+                    <!-- <th rowspan="2">Área</th> --><!-- célula 1-->
+                    <!-- <th rowspan="2">Disciplinas</th> --><!-- célula 2-->
+                    <!-- <th colspan="2">Notas</th> --><!-- célula 3-->
+                    <!-- <th rowspan="2">Média</th> --><!-- célula 4-->
+
+                    <!-- Aqui eu não consegui acertar de primeria os títulos , por isso resolvi fazer ddentro de <tr> -->
+
+                <!-- </thead> -->
+                <tbody>
+                    <tr><!-- linha 1 -->
+                        <td rowspan="2">1A</td><!--Mesclow 2 linhas e removeu 2E-->
+                        <td rowspan="2">1B</td><!--MEsclou 2 linhas e removeu 2D-->
+                        <td colspan="2">1C</td><!--Mesclou duas colunas e removeu 1E. -->
+                        <td rowspan="2">1D</td><!--Mesclou 2 linhas e removeu 2C-->
+                        <!-- <td>1E</td> --><!-- Removido para mesclar com 1C -->
+                    </tr>
+                    <tr><!-- linha 2 -->
+                        <td>2A</td><!-- -->
+                        <td>2B</td>
+                        <!-- <td>2C</td> --> <!-- Removido para a mesclagem de 1D -->
+                        <!-- <td>2D</td> --> <!-- Removido para a mesclagem de 1B -->
+                        <!-- <td>2E</td> --> <!-- Removido para a mesclagem de 1A -->
+                    </tr>
+                    <tr><!-- lina 3 -->
+                        <td rowspan="4">3A</td><!-- Mesclou 4 linhas e removeu 4E, 5E e 6E -->
+                        <td>3B</td>
+                        <td>3C</td>
+                        <td>3D</td>
+                        <td>3E</td>
+                    </tr>
+                    <tr><!-- linha 4 -->
+                        <td>4A</td>
+                        <td>4B</td>
+                        <td>4C</td>
+                        <td>4D</td>
+                        <!-- <td>4E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- linha 5 -->
+                        <td>5A</td>
+                        <td>5B</td>
+                        <td>5C</td>
+                        <td>5D</td>
+                        <!-- <td>5E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- Linha 6 -->
+                        <td>6A</td>
+                        <td>6B</td>
+                        <td>6C</td>
+                        <td>6D</td>
+                        <!-- <td>6E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- Linha 7 -->
+                        <td colspan="4">7A</td><!-- Mesclado 4 colunas e removidos 7C, 7D e 7E -->
+                        <td>7B</td>
+                        <!-- <td>7C</td>
+                        <td>7D</td>         removidos para mesclar 7A
+                        <td>7E</td> -->
+                    </tr>
+                    <tr><!-- Linha 8 -->
+                        <td rowspan="2">8A</td><!-- Mesclado 2 linhas e reovido 9E -->
+                        <td>8B</td>
+                        <td>8C</td>
+                        <td>8D</td>
+                        <td>8E</td>
+                    </tr>
+                    <tr><!-- Linha 9 -->
+                        <td>9A</td>
+                        <td>9B</td>
+                        <td>9C</td>
+                        <td>9D</td>
+                        <!-- <td>9E</td> --> <!-- Removido para a mesclagem de 8A -->
+                    </tr>
+                    <tr><!-- Linha 10 -->
+                        <td colspan="4">10A</td><!-- Mesclado 4 colunas e removidos 10C, 10D e 10E -->
+                        <td>10B</td>
+                        <!-- <td>10C</td>
+                        <td>10D</td>    Removidos para a mesclagem de 10A
+                        <td>10E</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <!-- Nessa tabela foi adcionado as semânticas <caption>, <thead>, <tbody> e <tfoot> e vamos atribuir os escolpos que são 10 , referente aos títulos se para dados em blocos, linhas etc.-->
+            <table>
+
+                <!-- Título da tabela -->
+                <caption>Escolpos</caption>
+
+                    <!-- Cabeçalho da Tabela -->
+                <thead><!-- linha 1 Cabeçalho-->
+                    <th rowspan="2" scope="row" class="th_color">1A</th><!--Mesclow 2 linhas e removeu 2E, e definimos que seu scope é título de dado em linhas.-->
+                    <th rowspan="2" scope="row" class="th_color">1B</th><!--MEsclou 2 linhas e removeu 2D, e definimos que seu scope é título de dado em linhas.-->
+                    <th colspan="2" scope="rowgroup" class="th_color">1C</th><!--Mesclou duas colunas e removeu 1E, e definimos que seu scope é título de dado em linhas. -->
+                    <th rowspan="2" scope="row" class="th_color">1D</th><!--Mesclou 2 linhas e removeu 2C, e definimos que seu scope é título de dado em linha.-->
+                    <!-- <td>1E</td> --><!-- Removido para mesclar com 1C -->
+                    <tr><!-- linha 2 -->
+                        <td>2A</td><!-- -->
+                        <td>2B</td>
+                        <!-- <td>2C</td> --> <!-- Removido para a mesclagem de 1D -->
+                        <!-- <td>2D</td> --> <!-- Removido para a mesclagem de 1B -->
+                        <!-- <td>2E</td> --> <!-- Removido para a mesclagem de 1A -->
+                    </tr>
+                </thead>
+
+                <!-- Corpo (Conteúdo) da Tabela -->
+                <tbody>
+                    <tr><!-- lina 3 -->
+                        <th rowspan="4" scope="colgroup" class="th_color">3A</th><!-- Mesclou 4 linhas e removeu 4E, 5E e 6E, e definimos que seu scope é título de dado em colunas. -->
+                        <td>3B</td>
+                        <td>3C</td>
+                        <td>3D</td>
+                        <td>3E</td>
+                    </tr>
+                    <tr><!-- linha 4 -->
+                        <td>4A</td>
+                        <td>4B</td>
+                        <td>4C</td>
+                        <td>4D</td>
+                        <!-- <td>4E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- linha 5 -->
+                        <td>5A</td>
+                        <td>5B</td>
+                        <td>5C</td>
+                        <td>5D</td>
+                        <!-- <td>5E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- Linha 6 -->
+                        <td>6A</td>
+                        <td>6B</td>
+                        <td>6C</td>
+                        <td>6D</td>
+                        <!-- <td>6E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- Linha 7 -->
+                        <th colspan="4" scope="col" class="th_color">7A</th><!-- Mesclado 4 colunas e removidos 7C, 7D e 7E , e definimos que seu scope é título de dado em coluna.-->
+                        <td>7B</td>
+                        <!-- <td>7C</td>
+                        <td>7D</td>         removidos para mesclar 7A
+                        <td>7E</td> -->
+                    </tr>
+                    <tr><!-- Linha 8 -->
+                        <th rowspan="2" scope="colgroup" class="th_color">8A</th><!-- Mesclado 2 linhas e reovido 9E , e definimos que seu scope é título de dado em colunas.-->
+                        <td>8B</td>
+                        <td>8C</td>
+                        <td>8D</td>
+                        <td>8E</td>
+                    </tr>
+                    <tr><!-- Linha 9 -->
+                        <td>9A</td>
+                        <td>9B</td>
+                        <td>9C</td>
+                        <td>9D</td>
+                        <!-- <td>9E</td> --> <!-- Removido para a mesclagem de 8A -->
+                    </tr>
+                    <tr><!-- Linha 10 -->
+                        <th colspan="4" scope="col" class="th_color">10A</th><!-- Mesclado 4 colunas e removidos 10C, 10D e 10E , e definimos que seu scope é título de dado em coluna.-->
+                        <td>10B</td>
+                        <!-- <td>10C</td>
+                        <td>10D</td>    Removidos para a mesclagem de 10A
+                        <td>10E</td> -->
+                    </tr>
+                </tbody>
+
+                <!-- Roda-pé da tabela, fiz para testar o aprendizado e práticar. -->
+                <tfoot>
+                    <tr>
+                        <td colspan="5" class="th_color">
+                            <marquee behavior="up" direction="left">RODA-PÉ</marquee>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div><!-- FIM tabelaflex -->
+
+    <div class="tabelaflex">
+        <div class="tabela_concluida">
+            <!-- Nessa tabela foi adcionado as semânticas <caption>, <thead>, <tbody> e <tfoot> e vamos atribuir os escolpos que são 10 , referente aos títulos se para dados em blocos, linhas etc.-->
+            <table>
+
+                <!-- Título da tabela -->
+                <caption>Tabela Concluída</caption>
+
+                    <!-- Cabeçalho da Tabela -->
+                <thead><!-- linha 1 Cabeçalho-->
+                    <th rowspan="2" scope="row">Área</th><!--Mesclow 2 linhas e removeu 2E, e definimos que seu scope é título de dado em linhas.-->
+                    <th rowspan="2" scope="row">Disciplinas</th><!--MEsclou 2 linhas e removeu 2D, e definimos que seu scope é título de dado em linhas.-->
+                    <th colspan="2" scope="rowgroup">Notas</th><!--Mesclou duas colunas e removeu 1E, e definimos que seu scope é título de dado em linhas. -->
+                    <th rowspan="2" scope="row">Média</th><!--Mesclou 2 linhas e removeu 2C, e definimos que seu scope é título de dado em linha.-->
+                    <!-- <td>1E</td> --><!-- Removido para mesclar com 1C -->
+                    <tr><!-- linha 2 -->
+                        <th class="td-color">Nota 1</th><!-- -->
+                        <th class="td-color">Nota 2</th>
+                        <!-- <td>2C</td> --> <!-- Removido para a mesclagem de 1D -->
+                        <!-- <td>2D</td> --> <!-- Removido para a mesclagem de 1B -->
+                        <!-- <td>2E</td> --> <!-- Removido para a mesclagem de 1A -->
+                    </tr>
+                </thead>
+
+                <!-- Corpo (Conteúdo) da Tabela -->
+                <tbody>
+                    <tr><!-- lina 3 -->
+                        <th rowspan="4" scope="colgroup" class="th_semcor">Exatas</th><!-- Mesclou 4 linhas e removeu 4E, 5E e 6E, e definimos que seu scope é título de dado em colunas. -->
+                        <td>Matemática</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr><!-- linha 4 -->
+                        <td>Física</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <!-- <td>4E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- linha 5 -->
+                        <td>Química</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <!-- <td>5E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- Linha 6 -->
+                        <td>Biologia</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <!-- <td>6E</td> --> <!-- Removido para a mesclagem de 3A -->
+                    </tr>
+                    <tr><!-- Linha 7 -->
+                        <th colspan="4" scope="col">Média de Exatas</th><!-- Mesclado 4 colunas e removidos 7C, 7D e 7E , e definimos que seu scope é título de dado em coluna.-->
+                        <td class="td_color">0.0</td>
+                        <!-- <td>7C</td>
+                        <td>7D</td>         removidos para mesclar 7A
+                        <td>7E</td> -->
+                    </tr>
+                    <tr><!-- Linha 8 -->
+                        <th rowspan="2" scope="colgroup" class="th_semcor">Humanas</th><!-- Mesclado 2 linhas e reovido 9E , e definimos que seu scope é título de dado em colunas.-->
+                        <td>História</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr><!-- Linha 9 -->
+                        <td>Geografia</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <!-- <td>9E</td> --> <!-- Removido para a mesclagem de 8A -->
+                    </tr>
+                    <tr><!-- Linha 10 -->
+                        <th colspan="4" scope="col" >Média de Humanas</th><!-- Mesclado 4 colunas e removidos 10C, 10D e 10E , e definimos que seu scope é título de dado em coluna.-->
+                        <td class="td_color">0.0</td>
+                        <!-- <td>10C</td>
+                        <td>10D</td>    Removidos para a mesclagem de 10A
+                        <td>10E</td> -->
+                    </tr>
+                </tbody>
+
+                <!-- Roda-pé da tabela, fiz para testar o aprendizado e práticar. 
+                OBSERVAÇÕES: NA medida que adciono textos no roda-pé , o mesmo aumenta sua largura, NÂO ENTENDI o porque, mas ficou bom-->
+                <tfoot>
+                    <tr>
+                        <td colspan="5">
+                            <marquee behavior="up" direction="left">RODA-PÉ ...RODA-PÉ...RODA-PÉ ...RODA-PÉ...RODA-PÉ ...RODA-PÉ...RODA-PÉ ...RODA-PÉ...RODA-PÉ ...RODA-PÉ... </marquee>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div><!-- Fim tabelaflex -->
+
+    <!-- FIM TABELA -->
+
+    <!-- Aqui optei por adcionar o créditos e agradecimento ao Professor pela didática, no qual ajuda-me no aprendizado. -->
+    <br>
+    <hr>
+    <marquee behavior="up" direction="left" width=97%>
+        Desafio pode ser resolvido por meio das aulas, mas também por meo de estudos adcionais...
+        Exemplo de tabela completa - @Curso em Vídeo HTML5 e CSS3 PROFESSOR: Gustavo Guanabara 
+        <a href="https://youtu.be/JJXLr02Gx_c?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ" target="_blank">
+            LINK 1 AQUI!
+        </a>
+        Escopos de grupo - @Curso em Vídeo HTML5 e CSS3 PROFESSOR: Gustavo Guanabara
+        <a href="https://youtu.be/muKp1-jcs3Q?list=PLHz_AreHm4dmcAviDwiGgHbeEJToxbOpZ">
+            LINK 2 AQUI!
+        </a>
+    </marquee>
+
+</body>
+</html>

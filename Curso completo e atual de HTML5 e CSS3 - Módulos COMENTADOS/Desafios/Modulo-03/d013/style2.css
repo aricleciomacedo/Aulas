@@ -1,0 +1,19 @@
+table.tabela2 {
+    width: 570px;
+}
+td {
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+/* Aqui selecionamos as td que possuem a classe color. */
+td.color {
+    background-color: gray;
+}
+/* Aqui pintamos a tag tfoot */
+tfoot {
+    background-color: lightgray;
+}
+marquee {
+    background-color: lightgrey;
+}
