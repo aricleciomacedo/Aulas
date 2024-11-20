@@ -1,0 +1,71 @@
+>>> { INÍCIO DO MÓDULO 4 } <<<
+
+Link da PlayList compelta:
+https://youtube.com/playlist?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&si=KIFef36xL3hnuVG8
+
+< Incorporar >
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=KIFef36xL3hnuVG8&amp;list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Módulo 04, Apresentação.
+Vídeo:
+O que vamos aprender no módulo 4? - @Curso em Vídeo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Tópicos desse vídeo Aula:
+    00:00 - Começa aqui o módulo 4
+    00:33 - Quer ver aulas antecipadas?
+    00:55 - Quais serão os capítulos?
+        Do 22 ao 26 totalizand 45 aulas.
+    01:12 - iFrames ainda são usados?
+        Sim! E é útil em alguns pontos expecíficos.
+        $ Confgurações de iframe.
+        $ Conteúdo no local.
+        $ Navegação no Iframe.
+        $ Conteúdo Estático.
+        $ Incovenietes, e o por que em alguns lugares não é bom usar.
+        $ Tornar Iframes seguros.
+        " Encerramento do Capítulo 22 com dicas importante e valiosas sobre IFRAMEs."
+    02:02 - Projeto completo que criaremos
+        " Início do Capítulo 23"
+        $ Criação do projeto ( Redes Sociais ) completo.  
+        " Fim do Capítulo 23"
+    02:36 - Vamos aprender formulários
+        " Início do Capítulo 24"
+    02:22 - Responsividade e Media Queries
+        " Início do Capítulo 25"
+    04:00 - Criando uma tela de login responsivo
+    04:32 - Quantas aulas por semana?
+    05:14 - Vamos começar
+
+{   Iníco do Capítulo 22}
+
+Módulo 04, Capítulo 22, Aula 1.
+Vídeo:
+O iframe ainda pode ser usado? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=GWULnkTnapM&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=2
+
+    Tópicos deste vídeo Aula:
+    00:00 - Módulo 04, Capítulo 22, aula 01
+    00:23 - iframe não serve pra nada?
+    01:48 - O que significa iframe
+        $ (i) de in-line = em linha, e (frame) de frame = quadro; Logo iframe = Quadro de linha.
+    03:11 - A Recode muda vidas
+    04:23 - Criando um novo exercício
+        1- Abrimos o GitHub Desktop e abrimos o repositório no Visuas Studio Code, como já vimos fazendo nas aulas anteriores.
+        2 - Criamos o exercício "ex024", e no nosso caso criamos também a pasta "Modulo-04" e colocamos este arquivo de exercício dentro da pasta.
+            --- Criamos então o arquivo "iframe001.html" para começarmos a praticar.
+
+*       VEJA o arquivo index.html com códigos completos e comentário no arquivos html´s.
+
+    05:30 - Abrindo o exercício
+        Adicionamos o código base do html.
+    06:42 - Criando um link
+    07:14 - Criando o primeiro iframe
+    08:13 - Configurando o iframe
+    08:38 - Mudando o source do iframe
+    09:51 - Criando mais um iframe
+    10:27 - Sites protegidos contra iframes
+    10:37 - Uma reflexão importante
+    11:37 - Estude pelo site, com certificado

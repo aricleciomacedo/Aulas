@@ -1,0 +1,106 @@
+<!-- 
+    Módulo 04, Capítulo 22, aula 01, 02
+
+Vídeos:
+    1- O iframe ainda pode ser usado? - @Curso em Vídeo HTML5 e CSS3
+    2- Configurando iframes - @Curso em Vídeo HTML5 e CSS3
+
+Links:
+    1- https://youtu.be/GWULnkTnapM?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+    2- https://youtu.be/eAxGt3ObQ24?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+O que é iframe?
+	Há alguns que pensam que esse "i" é de improve que significa "melhorar " Frame = quadro, 
+mas na verdade o (i) é de "inline" = em linha.
+    Significado literal de quadro em linha = iframe.
+
+Tamanho (dimensões) de iframe
+    O tamanho de um iframe por padrão é 300x150 , ou seja: width(largura) = 300px e height(altura) = 150px.
+Portanto podemos alterar o tamanho de um iframe, adcionando a propriedade e o valor dentro da abertura da tag. Exemplo com valor padrão que pode ser alterado: <iframe width="300" height ="150"></iframe>, OUTRA COISA que devemos entender é que mesmo com essa propriedade de largura e altura definido em linha do iframe, ainda pode sobre-por esses valores usando a CSS, pis o estilo CSS tem prioridade nesse elemento.
+
+Barra de rolagem (scolling) do iframe
+    Usamos o parâmetro scolling para adionar ou remover essa barra lateral de rolar conteúdo. 
+ Os valores podem ser definidos como:
+     (auto) usado para caso o conteúdo exceda o tamanho do iframe.
+     (yes) usado para mesmo que o conteúdo caiba inteiramente dentro do iframe, a barra de rolagem aparece.
+     (no) usado de acordo com a regra para que a barra de rolagem não apareça mesmo que o conteúdo seja maior que o iframe. Porém em alguns navegadores isso não acontece.
+
+Borda do iframe
+    O parâmetro frameborder="_" serve para adcionar borda no iframee, e, aceita dois valores que são:
+    "0" usado para remover bordas.
+    "1" usado para adcionar as bordas.
+    MAS caso não tenha o parâmetro atribuido na abertura da tag, então o valor padrão é = 1 (com bordas).
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estudos de iframe</title>
+    <!-- Aqui usamos um estilo para testar a prioridade CSS em relação aos parâmetros adcionados ao iframe. -->
+    <style>
+        /* Assim selecionamos o iframe com id name atribuido, e  mudamos a largura, mesmo que tenha o parâmetro definido em linha na abertura da tag. */
+        iframe#iframe-css {
+            width: 500px;
+            height: 220px;
+            border: 3px solid black;
+            outline: 1px solid red;
+            background-image: linear-gradient(17deg, rgb(8, 8, 8), rgba(4, 0, 255, 0.986));
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando o uso de iframe</h1>
+    <!-- Aqui nesse parágrafo foi adcionado um link âncora para o site cursoemvideo; porém podemos usar iframe para e isso fazemos de exemplo no parágrafo 2-->
+    <p>
+        Acessando o site do <a href="https://www.cursoemvideo.com" target="_blank">CursoemVídeo</a> para aprender a programar.
+    </p>
+
+    <!-- Parágrafo com iframe. 
+    Note que apenas adcionano a tag <frame> , na página será exibido um quadro vazio na mesma linha que o conteúdo, pois iframe quer dizer explicitamente " inline frame = quadro em linha, pois o seu display é inline.-->
+    <p>
+        Acessando o site do
+        <!-- Aqui usamos o exemplo de iframe com tamanho alterado, e VALE RESSALTAR que essa configuração pode ser alterado com prioridade na CSS. Então adcionamos um name id para usar de exemplo de estilo de prioridade na alteração das dimensões e estilo de borda..-->
+        <iframe></iframe> <iframe id="iframe-css" width="150"  height="200" frameborder="1" ></iframe>
+
+        para aprender a programar.
+    </p>
+
+    <!-- Parágrafo com iframe e alguns atributos. 
+        OBS:
+            frameborder remove o padrão de borda do quadro em linha.
+            src(source) é o endereçamento do link desejado; NOTE que ao adcionar  o link, dentro do quadro em linha vai abrir em miniatura a página referente ao link.
+            width define a largura do quadro.
+            height define a altura.
+    -->
+    <p>
+        Acessando o site do
+
+        <iframe src="https://www.cursoemvideo.com" frameborder="0">
+            <!-- Opcionalmente podemos deixar uma mensagem de aviso, ou link para caso esse iframe não carregue, da seguinte forma abaixo. -->
+            <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a> 
+        </iframe>
+
+        para aprender a programar.
+    </p>
+    
+    <!-- Aqui criamos um iframe para o site do Google para vermos na prática um exemplo de site que não carrega dentro do iframe por causa de uma proteção para que seu conteúdo não seja exibido por terceiros dentro de iframes. -->
+    <p>O site do <iframe src="https://www.google.com.br" frameborder="0"></iframe> também é muito legal, pena que não funciona dentro do iframe.</p>
+
+    <!-- Aula 2 -->
+    <!-- ATENÇÃO nem todo navegador de celular tem suporte para iframes, então é sempre bom fazer os testes de iframes para seu site me dispostivos móveis. 
+        Podemos usar e é bom fazer com que um link ou aviso fique disponível em caso de um iframe não carregar na página, seja por incompatiildade ou por bug. VEJA no iframe acima e aqui abaixo que usamos uma âncora <a href> e targe blank para abrir em outra aba do navegador.!-->
+
+    <p>
+        O repositório do Guanabara
+        <!-- Aqui usamos o scolling, para a remoção da barra de rolagem. SAIBA mais sobre isso, lendo o conteúdo informativo na parte Barra de rolagem (scolling) do iframe-->
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" scolling="no">
+            <!-- Opcionalmente podemos deixar uma mensagem de aviso, ou link para caso esse iframe não carregue, da seguinte forma abaixo. -->
+            no <a href="https://gustavoguanabara.github.io"" target="_blank">GitHub</a> 
+        </iframe>
+
+        também é bem legal!
+    </p>
+</body>
+</html>
