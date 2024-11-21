@@ -69,3 +69,62 @@ https://www.youtube.com/watch?v=GWULnkTnapM&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     10:27 - Sites protegidos contra iframes
     10:37 - Uma reflexão importante
     11:37 - Estude pelo site, com certificado
+
+
+Módulo 04, Capítulo 22, Aula 2.
+Vídeo:
+Configurando iframes - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=eAxGt3ObQ24&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=3
+
+    "Ainda no arquivo iframe001.html"
+    Iniciamos esta aula apagando o iframe com o link do Google, e criamos um <iframe> com o link para o GitHub do Professor Gustavo Guanabara.
+
+    1- Configuramos uma mensagem de incompatibilidade para navegadores que não suportam iframes.
+    EX no "index.html":
+        <p>
+            Nem todo navegador de Celular, tem suporte ao &lt; iframe &gt; então é por isso que usamos mensagem ou âncora de link
+            
+            <iframe src="https://www.cursoemvido.com" frameborder="0">
+                [ Seu navegador não é compátivel com isso ] 
+                Mas acesse o link para o <a href="https://www.cursoemvido.com" target="_blank">Curso em Vídeo</a>
+            </iframe>
+            
+            (entre abertura e fechamento da tag) para avisar da incompatibilidade e para que o usuário possa acessar o site que era para estar no iframe.
+        </p>
+
+    2- Podemos configurar Altura(height) e Largura(width) do <iframe>.
+*       Tamanho padrão de iframe = (300x150).
+
+        {   Para mudar usamos as propriedade diretamente na tag}.
+        Ex:
+        <iframe src="www.exemplo.com" frameborder="0" width="470" height="185"></iframe>
+
+    3- Podemos por meio da CSS, configurar a Largura e Altura de um iframe.
+        $ Vale lembrar que: A configuração CSS, sobre-põe a in-line, que foi feita na <tag>.
+        EX:
+        <iframe src="www.exemplo.com" frameborder="0" width="500" height="500"></iframe> "in-line"
+        <style>
+            iframe {                      "CSS"
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+
+    4- Sobre a barra de rolagem na lateral, podemos por meio do parâmetro "scroling", alterar seu comportamento em relação ao "iframe:", e para isso usamos os seguintes valores:
+            {auto} = Valor padrão, cria barra de rolagem na lateral se o conteúdo exceder o tamanho do frame.
+            {yes}  = Valor para dizer que mesmo se o Conteúdo for maior que o frame, então mostra a barra.
+            {no}   = Valor que não permite usar barra de rolagem mesmo que o conteúdo seja exceda o frame.
+                OBS sobre {no}, em alguns dispositivos, o Google chrome permite, e em outros não, então fique sabendo que isso depende muito de navegador para navegador.
+            
+        + sobre:
+           $ Visão geral criada por IA
+
+            O scrolling no iframe é um atributo que permite controlar a visibilidade da barra de rolagem dentro do elemento <iframe>. 
+            Os valores possíveis para o atributo são "yes", "no" ou "auto". Com "yes", a barra de rolagem é habilitada, com "no" é desabilitada, e com "auto" a barra de rolagem é exibida automaticamente quando necessário. 
+            O atributo de scrolling é importante para garantir que o conteúdo dentro do iframe seja apresentado conforme o pretendido, melhorando a experiência do usuário na página. 
+            O iFrame é um código em HTML que permite exibir um elemento dentro de outro. Ele é usado para incorporar documentos, vídeos e mídia interativa em uma página. 
+
+
+
+

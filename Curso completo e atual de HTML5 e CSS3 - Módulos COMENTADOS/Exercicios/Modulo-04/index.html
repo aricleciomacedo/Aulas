@@ -6,6 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
     <title>Estudos de iframe</title>
+    <style>
+        iframe.iframe-estilo {
+            width: 400px;
+            height: 400px;
+        }
+        .iframe-cor-de-borda {
+            border: 1px solid blue;
+        }
+    </style>
 </head>
 <body>
     <hr>
@@ -40,12 +49,76 @@
 
                 <iframe src="https://www.google.com.br" frameborder="0"></iframe>
 
-                também é muito legal
+                também é muito legal, pena que não funciona dentro de iframe!
             </p>
         </aside>
     </section>
     <hr>
     <br>
     <hr>
+    <section>
+        <p>
+            O reposiório do Guanabara
+
+            <iframe src="https://gustavoguanabara.github.io" frameborder="0"></iframe>
+
+            também é bem legal!
+        </p>
+        <hr>
+        <hr>
+        <aside>
+            <h2>Configuração iframe para incompatibilidade de navegadores</h2>
+            <p>
+                    Nem todo navegador de Celular, tem suporte ao &lt; iframe &gt; então é por isso que usamos mensagem ou âncora de link
+                    
+                    <iframe src="https://www.cursoemvido.com" frameborder="0">
+                        [ Seu navegador não é compátivel com isso ] 
+                        Mas acesse o link para o <a href="https://www.cursoemvido.com" target="_blank">Curso em Vídeo</a>
+                    </iframe>
+                    
+                    (entre abertura e fechamento da tag) para avisar da incompatibilidade e para que o usuário possa acessar o site que era para estar no iframe.
+                </p>
+        </aside>
+        <hr>
+        <h2>Exemplo de iframe com Largura e Altura definidas na tag</h2>
+        <p>
+            O reposiório do Guanabara
+
+            <iframe src="https://gustavoguanabara.github.io" frameborder="0" width="470" height="185"></iframe>
+
+            também é bem legal!
+        </p>
+        <hr>
+        <h2>Exemplo de iframe com Largura e Altura definidas na CSS</h2>
+        <p>
+            O reposiório do Guanabara
+
+            <iframe class="iframe-estilo" src="https://gustavoguanabara.github.io" frameborder="0" width="370" height="185"></iframe>
+
+            também é bem legal!
+        </p>
+        <hr>
+        <h2>Exemplo de iframe com parâmetro "scrolling"</h2>
+        <p>
+            O scrolling no iframe é um atributo que permite controlar a visibilidade da barra de rolagem dentro do elemento &lt;iframe&gt;;<br>Neste exemplo usamos o "no" para não permitir a rolagem do conteúdo.
+        </p>
+
+            <iframe class="iframe-estilo" src="https://gustavoguanabara.github.io" frameborder="0" width="200" height="100" scrolling="no"></iframe>
+        <hr>
+        <br>
+        <hr>
+        <section>
+            <hr>
+            <h2>Exemplo de iframe com parâmetro "frameborder"</h2>
+            <p>
+                O {frameborder} só aceita dois valores = 1 para com bordas; 0 para sem bordas, ou podemos configurar esta borda por meio da CSS usando a propriedade "border: ; Neste exemplo mudamos a cor da borda."
+            </p>
+                <!-- Neste iframe foi remmovido o par -->
+                <iframe class="iframe-cor-de-borda" src="https://gustavoguanabara.github.io" frameborder="1" width="800" height="100" scrolling="yes"></iframe>
+            <hr>
+            <br>
+            <hr>
+        </section>
+    </section>
 </body>
 </html>
