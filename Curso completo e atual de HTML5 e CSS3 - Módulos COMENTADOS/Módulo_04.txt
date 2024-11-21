@@ -126,5 +126,15 @@ https://www.youtube.com/watch?v=eAxGt3ObQ24&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
             O iFrame é um código em HTML que permite exibir um elemento dentro de outro. Ele é usado para incorporar documentos, vídeos e mídia interativa em uma página. 
 
 
+Módulo 04, Capítulo 22, Aula 3.
+Vídeo:
+Conteúdo local no iframe - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=G8H5jhabq8k&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=4
+
+    Iniciamos a aula criando o "iframe002".
+
+    COmo vimos na aula anterior existem sites que bloqueam a exibição de conteúdos em <iframe>´s, então nesta aula é ensinado a colocar sites próprios dentro do <iframe>.
+        PARA ISSO criamos um novo arquivo = "pagina001.html" para ser a página 1 de nosso site de teste no iframe.
 
 
