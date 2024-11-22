@@ -138,3 +138,24 @@ https://www.youtube.com/watch?v=G8H5jhabq8k&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
         PARA ISSO criamos um novo arquivo = "pagina001.html" para ser a página 1 de nosso site de teste no iframe.
 
 
+Módulo 04, Capítulo 22, Aula 4.
+Vídeo:
+Navegação no iframe - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=y6CKgnBYs5E&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=5
+
+    Iniciamos esta aula criando o arquivo "iframe03".
+
+NEsta aula é ensinado, que é possível adcionar conteúdos de navegação dentro de iframes.
+
+    Os links de ligação para serem exibidos dentro de um <iframe> pecisa de um parâmero chamado {target=""}, e o valor deve ser o name do "objeto/elemento" iframe em questão.
+        EX:
+        "<ul>
+            <li><a href="pag001.html" target="frame_name">Primeira página</a></li>
+            <li><a href="pag002.html" target="frame_name">Segunda Página</a></li>
+            <li><a href="pag003.html" target="frame_name">Terceira página</a></li>
+        </ul>"
+
+        "<iframe class="iframe003" id="tela"  name="frame_name" src="">"
+            <p>Mensagem de incompatibilidade de navegador!</p>
+        "</iframe>"
