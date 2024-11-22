@@ -1,0 +1,191 @@
+<!-- 
+    Criamos essa página de exemplo para usar no iframe da aula 3.
+    Então subsituimos o endereço "gustavoguanabara.github.io" dentro do iframe no iframe002.html pelo endereço dessa págins que é "pagina001.html"
+
+    Uma vez criada essa página, colocamos aqui no body o código referente a tabela criada no exercício anterior sobre tabelas, a tabela é a tabela006.html.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site de teste para iframe</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        body {/* 
+            display: flex; */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(0, 0, 255, 0.418);
+            /* color: white; */
+        }/* 
+        div {
+            margin: 20% auto;
+        }
+        h1 {
+            font-size: 50px;
+            background-color: #000;
+            width: 500px;
+            text-align: center;
+            border-radius: 20px 10px 30px 70px;
+            box-shadow: 10px 10px 40px 0px black;
+        } */
+        div:hover {
+            background-color: #000;
+            /* border-radius: 20px 10px 30px 70px; */
+            color: rgb(238, 255, 0);
+            box-shadow: 10px 10px 40px 0px black;
+            outline: 1px solid #09ff00;
+        }
+        /* ESTILO DA TABELA */
+        caption {font-size: 1.3em; font-weight: bolder; text-decoration: underline; margin-bottom: 10px;}
+        table {border-collapse: collapse; margin: 0 auto;}
+        th, td {border: 1px solid black; padding: 7px;}
+        tr:nth-child(even) {background-color: rgba(1, 18, 255, 0.466);}
+        div#container {
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <h1>Isso é um teste!</h1>
+    </div> -->
+    <div id="container"><!-- Aqui atribuimos um id_name para aplicarmos os estilos na CSS. -->
+        <!-- Aqui criamos uma tabela de exemplo: -->
+        <table><!-- Tabela -->
+            <caption>Tabelas responsivas</caption><!-- Título da tabela. -->
+            <thead><!-- Cabeçalho da tabela -->
+                <tr><!-- Linha 1 -->
+                    <!-- Aqui são as <th> que são sub-títulos dos dados e cada th representa uma coluna. 
+                        OBS: Cada <th> ou <th> representa uma célula da tabela.-->
+                    <th>Produto</th>
+                    <th>Jan</th>
+                    <th>Fev</th>
+                    <th>Mar</th>
+                    <th>Abr</th>
+                    <th>Mai</th>
+                    <th>Jun</th>
+                    <th>Jul</th>
+                    <th>Ago</th>
+                    <th>Set</th>
+                    <th>Out</th>
+                    <th>Nov</th>
+                    <th>Dez</th>
+                </tr><!-- FIM linha 1 -->
+            </thead><!-- FIM abeçalho da tabela -->
+            <tbody><!-- Corpo da tabela -->
+            <!-- Aqui cada <tr> representa uma linha de dados e cada <td> representa um dado(célula).-->
+                <tr>
+                    <td>TV 40*</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Home Theater</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Samsung Galaxy S20</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>iPad Mini</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>PlayStation 4</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Lava Louças</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Amazon Echo</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>07</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>02</td>
+                    <td>01</td>
+                    <td>01</td>
+                    <td>04</td>
+                    <td>16</td>
+                </tr>
+            </tbody><!-- FIM corpo da tabela -->
+        </table><!-- FIM da tabela -->
+    </div><!-- FIM da div tabela. -->
+</body>
+</html>
