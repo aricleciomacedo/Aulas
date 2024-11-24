@@ -202,197 +202,64 @@ Como já vimos, quando criamos um <iframe> ele abre vázio na página, e somente
 
 
 
-
-
-
-
-
-
-
-===    {Iníco do Capítulo 23}'      ===
-
-
-Módulo 04, Capítulo 23, aula 02
-Vídeo:
-Vamos começar o projeto - @Curso em Vídeo HTML5 e CSS3
+Módulo 04, Capítulo 22, Aula 6.
+Vídeo:Inconvenientes do iframe - @Curso em Vídeo HTML5 e CSS3
 Link:
-https://youtu.be/Rgji4o96ZhA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+https://www.youtube.com/watch?v=_bYRQTnFXF8&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=7la e
+
+    Quais são os problemas em usar iframe em sites HTML5? Existe algum defeito no iframe? 
+    Como resolver problemas com iframe?
+ Acompanhe esse vídeo até o final para responder a estas e muitas outras perguntas.
+
+    $ Tópicos deste vídeo:
+    00:00 - Módulo 04, Capítulo 22, aula 06
+    00:45 - Devo desistir dos iframes?
+        Não devemos nos desmotivar em usar os iframes, uma vez que eles são úteis em casos específicos; porém não podemos esquecer de que ele não são as sete maravilhas do mundo!
+    01:33 - Qual é a diferença entre frame e iframe?
+        A diferença básicamente é em questão de utilidade; Enquanto o <frame> não se usa mais na HTML5 tanto quanto se usava em versões anteriores. Mas existem sites que sim, usam (frames) e funcionam bem.
+        
+        As tags "frames" não foram eliminados da HTML5, (elas não são depreciadas "como falamos"), mas a galera tenta evitar.
+
+        POR OUTRO LADO, os <iframes>, eles são úteis pra caramba; Por exemplo: Não teriamos vídeos do YouTube em nossa página, se não tivesse o "iframe".
+            MAS nem por isso, podemos dizer que o iframe é 100%bom ou que é 100%ruim.
+    02:36 - Problemas com mecanismos de busca
+        Os mecanismos de busca (são BOTs que vasculham o códigos), como por exemplo o "GoogleBOts" que varrem os sites, encontram esses sites, e de acordo com a relevância desse site determinada pelos algoritimos, eles vão posicionando(ranckeando) o site.
+
+        "
+            VEJA abixo , e na vídeo aula mais sobre o assunto.
+        "
 
 
-Comece acessando https://gustavoguanabara.github.io/ , clique em Resolva os desafios, vá na pasta modulo-04/d-13
-e baixe o pacote-d013.zip ; Então extraia os arquivos que são imagens um favicon.
-Agora crie a pasta chamada projeto-social-master e dentro vai todos os arquivos da pasta pacote-d013.
-LEMBRE-SE de subir e comitar tudo para o GitHub.
-    Agora no Visuas Studio Code crie o index.html e inicie o projeto.
+*    03:02 - Hospedagem profissional para sites
+*    04:07 - Como funcionam os mecanismos de busca
+    05:40 - Dificuldades de indexação de iframes
+        Existem problemas que dificultam a entrada dos GoogleBOTs dentro dos "iframes", e consiga {indexar} o contéudo ali presente; Com isso pode ser que contenha problemas de ixexação no conteúdo, o tornando RUIM para algum site; POR iSSO a dica é: 
+            Não monte um site inteiro com uso excessivo de iframes, ou que dentro do iframe contenha conteúdos sensíveis para seu site e que sejam altamente indexável; 
+*               Quanto a isso tome muito cuidado! NÃO use conteúdos muito importantes dentro de iframes.
+    06:51 - Problemas de acessibilidade
+        Há pessoas com algum tipo de necessidade especial, como por exemplo o caso de pessoas com problemas visuais, que por serem cegas, usam o computador por meio de Softwares Leitors de Tela.
+        
+        O problema é quando os leitores de tela tentam acessar "iframes", pois eles ficam perdidos quanto a questões de interpretação.
+    07:19 - Problemas de usabilidade
+        Esse são problemas que o próprio navegador ou usuário têem e até se confundem; 
+            Que são: "VEJA ABAIXO!"
+*    07:36 - Um computador para aprender a programar
+    08:32 - Problemas de navegação em sites
+        1- Um exemplo bem básico é quando o usuário clica na "seta de voltar" do navegador, e com isso gera uma dúvida no navegador, em relação ao voltar, se é da página(conteúdo) principal ou se é no conteúdo do "iframe".
 
-Módulo 04, Capítulo 23, aula 03
-Vídeo:
-Criando a página inicial do projeto - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/HUnltyZ9Rxg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+        2- Outro exemplo é em relação ao parâmetro target="_blank" que informa ao navegador que deve abrir a "URL" indicada em outra ABA e não na mesma do site principal; ENTÃO esse abrir em Nova Aba é a dúvida do navegador, pois há dificuldade em entender se essa nova aba é na página principal ou dentro do iframe.
+    09:31 - Problemas com responsividade
+        Se for em caso de algum site que não seja responsível, há uma grande chance dele ficar todo quebrado(Desfigurado) dentro do iframe. ISSO acaba por ser um problema nosso também pelo motivo que vem a seguir:
+    09:56 - Problemas de segurança
+        Isso se deve ao  motivo de que sites que usam iframes de terceiros, acabam abrindo "PORTAS" para outros "sites".
 
-Nessa aula começamos apartir da tag <main>, que a tag semântica para o contéudo principal. 
+*       A DICA É:
+        {CUIDADO PARA QUEM VOCÊ ESTÁ ABRINDO A PORTA!}
 
-Módulo 04, Capítulo 23, aula 04
-Vídeo:
-Posicionando o conteúdo do site - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/Gx-zp0aaOto?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-Essa aula começa apartir da criação do arquivo home.html.
-    Esse arquivo não possui conteúdos no <body>, mas tão somente estilos CSS, e será carregado dentro do index.html na tag <iframe> dentro da <section>.
-
-Módulo 04, Capítulo 23, aula 05
-Vídeo:
-Criando os botões para redes sociais - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/1kOhJr4DXIg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Essa aula começa apartir da adção de uma mensagem dentro do <iframe> para caso em que o navegador não é
-compatível, adcionamos um link dentro da <section id="redes-sociais"> com imagens , e  cada link será um "botão" .
-
-Módulo 04, Capítulo 23, aula 06
-Vídeo:
-Criando as páginas de cada rede social - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/ar5UB2MxraE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Essa aula iniciamos adcinoando o link do home.html para <a href=""> do botão Home, e resolvendo um
- probleminha que dá quando por curiosidade clicamos nos botões que estão apenas com o "#" definido para o href da âncora. Então para resolver esse problema de barras de rolagem aparecerem, adcionamos os links para todas as âncoras (<a>).
-    As demais telas que serão carregadas quando clicado nos demais botões que não seja o Home, irão carregar
-uma imagem em "tipo ripa" que será ensinado a fazer, em aulas próximas. PArA isso criaremos um arquivo HTML para incorporar essa imagem e torna-lá um link local, assim como o Home.
-
-Módulo 04, Capítulo 23, aula 07
-Vídeo:
-Personalizando as imagens do projeto - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/z30JMe5Cufs?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Nessa aula é ensinado a editar as imagens para ficarem compridas , parecendo ripas e para  poder  aplicar
-dentro do iframe como vimos no exercício anterior.
-    Então o primeiro passo é tirar print da tela do celular com o início da página da rede social, ou com a 
-imagem que se desejar; no exemplo do projeto foi tirado vários prints, (quatro prints em alguns casos e mais de quatrom em outros), para formar uma imagem comprida.
-    Agora use o Gimp para editar as imagens, ou algum editor que se tenha mais noção do que fazer para
-montar a imagem única.
-
->>> {FIM DO CAPÍTULO 23} <<<
-
-
->>> {INÍCIO DO CAPÍTULO 24} <<<
-
-Módulo 04, Capítulo 24, aula 1
-Vídeo:
-Como criar formulários com HTML5 - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/Wa1Ji2t2gmc?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Nessa aula estudaremos sobre formuláros, e é importante que se tenha feitos todos o exercícios, desafio
-e mini-projetos que foram estudados até aqui! Pois nada adianta querer aprender sobre o assunto de formulários se não tiver aprende a base de tudo. 
-    Outra coisa impotante é: Para início de noção JavaScript é bom que se aprenda sobre formulários, pois a 
-linguagem JavaScript na sua essência surgiu como uma linguagem script para ser aplicado junto com HTML e CSS, apesar de existir hoje inúmeras aplicações para essa linguagem de programação.
-    Aprenderemos de fato o que é um formulário, que básicamente é um local onde os visitantes de um site
-(páginas) podem armazenar dados. Os formulários nem sempre são digitais, porém vamos aprender também sobre.
-    De forma simples de entender podemos pegar de exemplo um formulário de papel que muitas vezes eram usados
-em promoções de lojas onde era necessário que o cliente colocasse seus dados para participar de uma promoção, que muitas vezes eram depositadas em urnas improvidas etc.
-
-    Foi usado de exemplo; o site da hostnet para vermos o preenchmento de um formlário para vermos como
-funciona parte de um formulário. Vale lembrar que para abrir conta no GitHub, foi preciso também preeencher um formulário. Pois então! É assim que é básicamente o que o usuário vê como formulário.
-
-    POR FIM , no Visual Studio Code , na pasta do Modulo-04 criamos o exercicio ex25 apartir do form001.html.
-
-
-Módulo 04, Capítulo 24, aula 2
-Vídeo:
-Usar Label vai melhorar seus formulários - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/MqdSffM1HZc?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Nessa aula vamos resolver alguns dos incovenientes de um formulário, como por emxemplo o de os campos
-não terem ligação com seus nomes, já o de os dados não estarem indo para lugar algum será resolvido em aulas futuras, pois necessitamos de aprender outra linguagem.
-    OBS: Ainda continuamos no exercício da pasta ex025 no arquivo form001.html, e inicialmente desligamos o
-campo que mostra textos (memorizados) recém digitados e que servem de preenchimento rápido usando o atributo da seguinte forma <form autocomplete="off">.
-
-
-Módulo 04, Capítulo 24, aula 3
-Vídeo:
-Métodos GET e POST para formulários - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/rcaXavXsWGA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Na aula anterior aprendemos que nessa estrutura básica de formulário, quando digitamos por exemplo nome
-e sobrenome nos campos de dados e enviamos esses dados; os mesmo aparecem na barra de endereços(URL) do navegador e isso é padrão no envi de formulários e pode nos levar a pensar que seja uma falta de segurança.
-    MAs pode ser que seja uma falta de segurança, porém pode ser algo impensado por parte do programador, já
-que se pode desativar por meio de parâmetros.
-    Outra coisa que podemos entender é que formulários usamo por padrão esse parâmetro de mostra na URL o
-que foi digitado dentro da caixa de dados, que é a caixa (q) que é caixa da solitação = \(quere); 
-OBSERVE depois do "search?" e depois e depois do "&oq" os dados digitados na caixa.
-VEJA por exemplo nessa URL pesquisada:  https://www.google.com/search?q=curso+em+video&oq=curso+em+video&aqs=chrome..69i57j0i512l8.5893j0j15&sourceid=chrome&ie=UTF-8
-
-    Agora para deixar formulários seguro é necessário estudos mais avançados em alguma linguagem de
-programação, porém existem dois metódos simples para envio de formulário.
-    1º  É esse padrão que não precisamos definir algo dentro da tag <form>, e ele se chama metódo (GET).
-PODEMOS ainda por meio do atributo method definido da seguinte dorma: <form method=""> e entre aspas duplas por meio do CTRL ver os parâmetros que são o padrão GET , o POST e o {dialog}.
-    "OBSERVAÇÃO: Na HTML tanto faz digitar GET ou get, pois só há diferença para a linguagem PHP."
-    2º Esse é o metódo POST que faz com que esses dados não apareçam na URL da barra de endereços do
-navegador.
-
-    # POR FIM veja no arquivo form001.html apartir da aplicação na tag <form>. 
-
-
-Módulo 04, Capítulo 24, aula 4
-Vídeo:
-Criando caixas de texto e de senha - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/SinNyasc-zU?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Começamos essa aula apartir da criação do arquivo cadastro.php para entendermos um pouco mais sobre
-envios de formulários; neste caso nos deparamos com o envio de dados para o arquivo mesmo sem nada digitado nas caixas de dados; Então para resolvermos isso, iremos entender um pouco mais sobre o assunto.
-    PARA didática inserimos duas frases dentro do arquivo PHP, e enviamos os dados sem nada, e obrservamos
-que mesmo sem dado algum digitado, o envio acontece, então criamos o arquivo fomr002.html para aprendermos alguns atributos para melhorar esse Pequeno incongruente.
-    OBSERVAÇÃO:
-        Caso seu navegador mostre um erro ao invés de mostrar a mensagem que foi digitado no arquivo PHP
-então arraste o arquivo.php para o navegador, isso fará o navegador abrir o arquivo e mostrará a mensagem desse exemplo que foi feito para vizualizar o envio de dados ; {DICA dada por flaviana...9 nos comentários}.
-
-Módulo 04, Capítulo 24, aula 5
-Vídeo:
-Elementos number, month, date e time em formulários HTML - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/7P22zubU6i8?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Nessa aula inicia com a criação do arquivo form003.html.
-
-
-Módulo 04, Capítulo 24, aula 6
-Vídeo:
-ECompatibilidade com navegadores - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/jX7v3lFdnvg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Nessa aula vemos como se comporta os controles para as caixas e as labels em diferentes navegadores.
-    
-    É importante saber que nem todos os navegadores tem suporte para as caixas e configurações de labels e
-inputs, como por exemplo no safari que agora só é disponível para MAC e IOS a caixa configurada para números onde o usuário digita HORA, aceita letras e ainda envia conforme for digitado.
-
-    OBSERVAÇÃO: Dá pra resolver esses problemas de compatíbilidade dos controles, desenvolvendo nossos próprios controles por meio de JavaScrip, porém não é contúdo para essas aulas.
-
-
-Módulo 04, Capítulo 24, aula 7
-Vídeo:
-Formulários com telefone e e-mail - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/SRMEHklQC4M?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    O início dessa aula se dá apartir da criação do arquivo form004.html.
-Nela usaremos o input especial para e-mail, mas não podemos exigir muito dele, pois é algo simples.
-
-
-Módulo 04, Capítulo 24, aula 8
-Vídeo:
-Checkbox e Radio button em HTML - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://youtu.be/iGDHFa4znHE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
-
-    Nessa aula vamos aprender dois botões (tipos de controle) bem utilizados em HTML, que são os botões de radios e o checkboxs.
-Iniciamos então com a adção dos botões Enviar, limpar; e usamos checkboxs para que  usuário marque seus favoritos.
-
->>> {FIM DO CAPÍTULO 24} <<<
+        "POR EXEMPLO:
+            Se por acaso estamos usando um iframe de site de terceiro, e esse for invadido por técnicas de captura de dados(informações de usuário), então o seu site estará comprometido em fazer isso para o invasor."
+*       ATENÇÃO:
+            "
+                Isso pode se tornar responsabilidade sua, pois você, ou o desenvolvedpor do site, podem estar deixando portas abertas para as técnicas de invasão; Como por exemplo: Crossite, Ataques XSs.
+            "
+    11:10 - Use, mas não abuse
