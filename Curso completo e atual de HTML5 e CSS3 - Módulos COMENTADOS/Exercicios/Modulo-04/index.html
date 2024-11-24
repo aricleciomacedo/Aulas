@@ -10,6 +10,11 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+        /* header {
+            display: flex;
+            gap: 3px;
+            flex-direction: column;
+        } */
         iframe.iframe-estilo {
             width: 400px;
             height: 400px;
@@ -32,108 +37,110 @@
 </head>
 <body>
     <hr>
-    <section>
-        <h1>Testando o uso do iframe</h1>
-        <h2>Exemplo sem iframe</h2>
-        <p>
-            Acessando o site do <a href="https://www.cursoemvideo.com" target="_blank">CursoemVideo</a> para aprender a programar.
-        </p>
-    </section>
-    <hr>
-    <br>
-    <hr>
-    <section>
-        <h2>Exemplo com iframe</h2>
-        <p>
-            Acessando o site do 
-            
-            <iframe src="https://www.cursoemvideo.com" frameborder="0"></iframe>
-            
-            para aprender a programar.
-        </p>
+    <header>
+        <section class="section_1">
+            <h1>Testando o uso do iframe</h1>
+            <h2>Exemplo sem iframe</h2>
+            <p>
+                Acessando o site do <a href="https://www.cursoemvideo.com" target="_blank">CursoemVideo</a> para aprender a programar.
+            </p>
+        </section><!-- Section_1 -->
         <hr>
         <br>
         <hr>
-        <aside>
-            <h2>Exemplo de iframe que tem não obtém resposta do site do link usado.</h2>
+        <section class="section_2">
+            <h2>Exemplo com iframe</h2>
             <p>
-                SAIBA QUE:<br>Existem alguns sites, que tem proteção para que o conteúdo não seja exibido dentro de iframe por site de terceiros.
+                Acessando o site do 
+                
+                <iframe src="https://www.cursoemvideo.com" frameborder="0"></iframe>
+                
+                para aprender a programar.
             </p>
-            <p>O site do 
-
-                <iframe src="https://www.google.com.br" frameborder="0"></iframe>
-
-                também é muito legal, pena que não funciona dentro de iframe!
-            </p>
-        </aside>
-    </section>
-    <hr>
-    <br>
-    <hr>
-    <section>
-        <p>
-            O reposiório do Guanabara
-
-            <iframe src="https://gustavoguanabara.github.io" frameborder="0"></iframe>
-
-            também é bem legal!
-        </p>
-        <hr>
-        <hr>
-        <aside>
-            <h2>Configuração iframe para incompatibilidade de navegadores</h2>
-            <p>
-                    Nem todo navegador de Celular, tem suporte ao &lt; iframe &gt; então é por isso que usamos mensagem ou âncora de link
-                    
-                    <iframe src="https://www.cursoemvido.com" frameborder="0">
-                        [ Seu navegador não é compátivel com isso ] 
-                        Mas acesse o link para o <a href="https://www.cursoemvido.com" target="_blank">Curso em Vídeo</a>
-                    </iframe>
-                    
-                    (entre abertura e fechamento da tag) para avisar da incompatibilidade e para que o usuário possa acessar o site que era para estar no iframe.
-                </p>
-        </aside>
-        <hr>
-        <h2>Exemplo de iframe com Largura e Altura definidas na tag</h2>
-        <p>
-            O reposiório do Guanabara
-
-            <iframe src="https://gustavoguanabara.github.io" frameborder="0" width="470" height="185"></iframe>
-
-            também é bem legal!
-        </p>
-        <hr>
-        <h2>Exemplo de iframe com Largura e Altura definidas na CSS</h2>
-        <p>
-            O reposiório do Guanabara
-
-            <iframe class="iframe-estilo" src="https://gustavoguanabara.github.io" frameborder="0" width="370" height="185"></iframe>
-
-            também é bem legal!
-        </p>
-        <hr>
-        <h2>Exemplo de iframe com parâmetro "scrolling"</h2>
-        <p>
-            O scrolling no iframe é um atributo que permite controlar a visibilidade da barra de rolagem dentro do elemento &lt;iframe&gt;;<br>Neste exemplo usamos o "no" para não permitir a rolagem do conteúdo.
-        </p>
-
-            <iframe class="iframe-estilo" src="https://gustavoguanabara.github.io" frameborder="0" width="200" height="100" scrolling="no"></iframe>
-        <hr>
-        <br>
-        <hr>
-        <section>
-            <hr>
-            <h2>Exemplo de iframe com parâmetro "frameborder"</h2>
-            <p>
-                O {frameborder} só aceita dois valores = 1 para com bordas; 0 para sem bordas, ou podemos configurar esta borda por meio da CSS usando a propriedade "border: ; Neste exemplo mudamos a cor da borda."
-            </p>
-                <!-- Neste iframe foi remmovido o par -->
-                <iframe class="iframe-cor-de-borda" src="https://gustavoguanabara.github.io" frameborder="1" width="790" height="100" scrolling="yes"></iframe>
             <hr>
             <br>
             <hr>
-        </section>
-    </section>
+            <aside>
+                <h2>Exemplo de iframe que tem não obtém resposta do site do link usado.</h2>
+                <p>
+                    SAIBA QUE:<br>Existem alguns sites, que tem proteção para que o conteúdo não seja exibido dentro de iframe por site de terceiros.
+                </p>
+                <p>O site do 
+    
+                    <iframe src="https://www.google.com.br" frameborder="0"></iframe>
+    
+                    também é muito legal, pena que não funciona dentro de iframe!
+                </p>
+            </aside>
+        </section><!-- Section_2 -->
+        <hr>
+        <br>
+        <hr>
+        <section class="section_3">
+            <p>
+                O reposiório do Guanabara
+    
+                <iframe src="https://gustavoguanabara.github.io" frameborder="0"></iframe>
+    
+                também é bem legal!
+            </p>
+            <hr>
+            <hr>
+            <aside>
+                <h2>Configuração iframe para incompatibilidade de navegadores</h2>
+                <p>
+                        Nem todo navegador de Celular, tem suporte ao &lt; iframe &gt; então é por isso que usamos mensagem ou âncora de link
+                        
+                        <iframe src="https://www.cursoemvido.com" frameborder="0">
+                            [ Seu navegador não é compátivel com isso ] 
+                            Mas acesse o link para o <a href="https://www.cursoemvido.com" target="_blank">Curso em Vídeo</a>
+                        </iframe>
+                        
+                        (entre abertura e fechamento da tag) para avisar da incompatibilidade e para que o usuário possa acessar o site que era para estar no iframe.
+                    </p>
+            </aside>
+            <hr>
+            <h2>Exemplo de iframe com Largura e Altura definidas na tag</h2>
+            <p>
+                O reposiório do Guanabara
+    
+                <iframe src="https://gustavoguanabara.github.io" frameborder="0" width="470" height="185"></iframe>
+    
+                também é bem legal!
+            </p>
+            <hr>
+            <h2>Exemplo de iframe com Largura e Altura definidas na CSS</h2>
+            <p>
+                O reposiório do Guanabara
+    
+                <iframe class="iframe-estilo" src="https://gustavoguanabara.github.io" frameborder="0" width="370" height="185"></iframe>
+    
+                também é bem legal!
+            </p>
+            <hr>
+            <h2>Exemplo de iframe com parâmetro "scrolling"</h2>
+            <p>
+                O scrolling no iframe é um atributo que permite controlar a visibilidade da barra de rolagem dentro do elemento &lt;iframe&gt;;<br>Neste exemplo usamos o "no" para não permitir a rolagem do conteúdo.
+            </p>
+    
+                <iframe class="iframe-estilo" src="https://gustavoguanabara.github.io" frameborder="0" width="200" height="100" scrolling="no"></iframe>
+            <hr>
+            <br>
+            <hr>
+            <section class="section_3a">
+                <hr>
+                <h2>Exemplo de iframe com parâmetro "frameborder"</h2>
+                <p>
+                    O {frameborder} só aceita dois valores = 1 para com bordas; 0 para sem bordas, ou podemos configurar esta borda por meio da CSS usando a propriedade "border: ; Neste exemplo mudamos a cor da borda."
+                </p>
+                    <!-- Neste iframe foi remmovido o par -->
+                    <iframe class="iframe-cor-de-borda" src="https://gustavoguanabara.github.io" frameborder="1" width="790" height="100" scrolling="yes"></iframe>
+                <hr>
+                <br>
+                <hr>
+            </section>
+        </section><!-- Section_3 -->
+    </header>
     <hr>
     <br>
     <hr>
@@ -162,15 +169,19 @@
                 <li><a href="./paginas-extras/pagina003.html" target="frame">Terceira página</a></li>
             </ul>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi magni laborum soluta quibusdam qui. Eum similique et iure voluptatibus modi, eaque libero temporibus recusandae aliquam autem placeat possimus quod.
-            Qui nam officiis temporibus quod doloremque nulla officia voluptatem molestias ullam, dicta, et assumenda iure, laborum iusto dolorum tempora illo voluptatibus mollitia aut fugiat ad a sequi eligendi? Modi, quidem.
-            Blanditiis laborum quis doloribus eos natus minima repellendus nihil velit id. Itaque tempore sunt maxime repellendus eius nulla aperiam eum, incidunt nemo, adipisci beatae non unde illo, sequi quia nobis!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro sequi magni laborum soluta quibusdam qui. Eum similique et iure voluptatibus modi, eaque libero temporibus recusandae aliquam autem placeat possimus quod./p>
 
-            <iframe class="iframe003" id="tela"  name="frame" src="">
+            <h2>Usando o parâmetro src="caminho_do_arquivo" como capa no &LeftTriangleBar; iframe &RightTriangleBar;</h2>
+            <iframe class="iframe003" id="tela"  name="frame" src="./imagens/cursoemvideo.png">
                 <p>Infelizmente seu navegador não é compatível com isso!</p>
             </iframe>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis itaque quidem nostrum veritatis rem hic saepe voluptatum mollitia quam, ipsa provident delectus id, impedit aspernatur tenetur! Repellendus soluta sit fuga. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi porro earum recusandae expedita nihil architecto in eos illo totam error enim corrupti sapiente qui, est deserunt odit animi similique soluta! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eius dolorum possimus cumque laudantium omnis labore sint, sed, aspernatur magni tempora repellendus impedit nam fuga, vel quisquam a perferendis libero!</p>
+            <hr>
+            <br>
+            <hr>
+            <h2>Usando o parâmetro srcdoc="insira_HTMl_aqui" como capa no &NotLeftTriangleEqual; iframe &NotRightTriangleEqual;</h2>
+            <p>Podemos ainda dentro do srcdoc="", adicionar imagens, como podemos ver aqui!</p>
+            <iframe class="iframe003" id="tela"  name="frame1" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a magnam nulla, placeat, maiores praesentium, enim at autem perspiciatis nihil quia. Nisi eligendi itaque tempore dolor porro debitis eaque fugiat!</p><img src='./imagens/cursoemvideo.png'>">
+            </iframe>
         </aside>
     </section>
     <hr>

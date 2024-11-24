@@ -1,0 +1,80 @@
+<!-- 
+    Módulo 04, Capítulo 22, aula 04, 05 
+Vídeo:
+    4- Navegação no iframe - @Curso em Vídeo HTML5 e CSS3
+    5- Conteúdo no iframe por código - @Curso em Vídeo HTML5 e CSS3
+Link:
+    4- https://youtu.be/y6CKgnBYs5E?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+    5- https://youtu.be/8Jb75kIqUQs?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+    
+    Nessa (4) aula criamos inicialmente uma <ul> unordered list (lista não ordenada), e adcionamos 3 ânoras para exemplos de navegação para outras páginas. Essa navegação será endereçada para outra página dentro do iframe, então usaremos atributo name "carimbar o iframe" e seu nome será usado no target que determina onde queremos abrir esse link.
+        Então com essas propriedades atribuidas ao iframe e aos links, o usuário quando clicar em algum link, dentro do iframe será carregado a página referente a âncora atribuida.
+
+    Partir da aula 5 vimos que o iframe inícia vazio quando a página é carregada, e podemos atribuia ao source(src) um link para abrir no iframe ao inínicar o carregameno da página. OBS: Se colocarmo (#) o frame carrega dentro de si a própria página.
+ Podemos ainda usar srcdoc ao invés de src, pois o srcdoc nos dá  a possibilidade de colocar dentro de si como valor, a HTML; Exemplo: srcdoc="<h1>EXEMPLO</h1><p>PARÁGRAFO</p>" então um título e um parágrafo será exibido dentro do iframe.
+        Além e coneúdos textuais, a srcdoc aceita tags de imagem, e como exemplo nós adcionamos a logo do curso em vídeo dentro do srdoc 2.</p><img src"
+    "OBSERVAÇÃO: Quando usamos a tag img para adcionar imagem, usamos as aspas duplas (""), porém dentro do srcdoc devemos usar aspas simples."
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uso do iframe</title></p>
+    <style>
+        /* Importação da fonte usada. Link: https://fonts.google.com/selection/embed 
+        // <uniquifier>: Use a unique and descriptive class name = usei font_playfair-display
+        // <weight>: Use a value from 400 to 900*/
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+        body {
+            font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+            font-weight:  500;
+            font-style: normal;
+        }
+        .font_playfair-display{/* uniquifier */
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-weight:  900;/* <weight> */
+            font-style: normal;
+        }
+        /* Aqui selecionamos o id tela específico do iframe. */
+        iframe#tela {
+            width: 47vw;/* Largura com base na view-port. */
+            height: 400px;
+            border: 1px solid black;
+            box-shadow: inset 1px 3px 10px 0px black;/* o inset põe a borda para dentro da caixa. */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="font_playfair-display">Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusantium quo ipsum, ipsa architecto veritatis! Obcaecati laudantium provident corporis, in quia ad iusto maiores, commodi optio repellat ducimus veniam assumenda.</p>
+
+    <ul>
+        <!-- Aqui passamos a propriedade target, e o valor passado é o elemento(objeto) atribuido ao name do iframe criado; Com isso, esse link será carregado dentro do iframe assim que o usuário clicar nele. -->
+        <li><a href="#" target="frame1">Exibir própria página</a></li>
+        <li><a href="./paginas_extras/pagina001.html" target="frame1">Primeira página</a></li>
+        <li><a href="./paginas_extras/pagina002.html" target="frame1">Segunda Página</a></li>
+        <li><a href="./paginas_extras/pagina003.html" target="frame1">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore quasi, ex error nesciunt nulla id fuga dolore, quia, sit eaque labore similique harum eligendi quae? Quaerat voluptatem aspernatur suscipit cum.Officiis nemo culpa delectus, deserunt corrupti totam consectetur ullam adipisci odio aliquid. </p>
+
+    <!-- Aqui criamos um iframe e ao invés de remover o frameborder para adcionar a borda, optei por adcionar 1 que é o valor para bordar ativa, e ainda foi adcionada uma mensagem de erro, para caso o iframe quebre por algu motivo.
+        O id servirá para estilizamos esse iframe chamando seletor de id na CSS.-->
+    <iframe id="tela" name="frame1" src="#" frameborder="1">
+        <p>Infelizmente seu navegador não é compatível com isso!</p>
+    </iframe>
+
+    <!-- srcdoc 2 -->
+    <!-- Aqui abaixo usamos o exemplo de iframe com o aributo que possibilita o uso da HTML dentro iframe.
+    Então removemos  src="#" e adcionamos srcdoc="" e entre aspas o HTML. AGORA para adcionar imagem, use a aspas simples('').
+        Com essas configurações podemos atribuir um conteúdo estatíco para o iframe, sempre que a página é carregada (atualizada).-->
+    <iframe id="tela" name="frame" srcdoc="<h1>TESTE usando srcdoc</h1><p>Isso nos possibilita usar tags html dentro do iframe!</p><img src='imagens/cursoemvideo.png'>"frameborder="1">
+        <p>Infelizmente seu navegador não é compatível com isso!</p>
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius debitis, voluptatem ipsa neque aliquam eos consequatur qui in fugiat minima odit eum ipsum, omnis dicta recusandae, aut assumenda cumque sit.Cum mollitia id odit aliquam esse sint beatae iusto? Non, odio sapiente hic illum sit obcaecati eos illo tempore iste! Optio velit quod accusantium molestias rerum, ea voluptatem quibusdam modi.</p>
+</body>
+</html>

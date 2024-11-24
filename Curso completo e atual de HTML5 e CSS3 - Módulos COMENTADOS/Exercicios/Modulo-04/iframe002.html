@@ -1,0 +1,58 @@
+<!-- 
+    Módulo 04, Capítulo 22, aula 03
+
+Vídeos:
+    1- Conteúdo local no iframe - @Curso em Vídeo HTML5 e CSS3
+
+Links:
+    1- https://youtu.be/G8H5jhabq8k?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula podemos atribuir ao iframe uma página pessoal, pois sabemos que não vai receber bloqueio de exibição uma vez que somos o dono. 
+Na aula anterior aprendemos que existem sites que bloqueiam sua exibição em iframes. Então criamos uma segunda página para usar de exemplo nessa aula.
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iframe</title>
+    <!-- Aqui usamos a CSS para centralizar o iframe. -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe {
+            display: block;/* Assim removemos o valor in-line, para que o margin funcione para centralizar */
+            margin: 0 auto;
+            width: 300px;/* Aqui atribuimos uma largura ao iframe sobre-pondo o valor atríbudo in-line. */
+            height: 440px;/* Aqui atribuimos uma altura ao iframe sobre-pondo o valor atríbudo in-line. */
+
+        }
+        .erro {
+            font-size: 30px;
+            color: white;
+            background-color: #000;
+            width: 500px;
+            text-align: center;
+            border-radius: 20px 10px 30px 70px;
+            box-shadow: 10px 10px 40px 0px black;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste com iframe</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est illo sunt, similique sed quos iure ipsam numquam! Eum illo, minima, ex natus sed quis inventore doloremque, provident dignissimos sunt dolorum.
+    Obcaecati non ut repellendus.</p>
+    
+<!-- Aqui substtuimos o endereço https://gustavoguanabara.github.io, depois criamos uma pasta para as páginas e movemos a página para dentro da pasta, e então aqui endereçamos o caminho completo.  -->
+    <iframe src="paginas_extras/pagina001.html" frameborder="0" width="500" height="450">
+        <!-- Aqui adcionamos um parágrafo para caso o iframe não seja exibido, essa mensagem apareça para o usuário.. -->
+        <p class="erro">Infelizmente seu navegador não é compatível com esse iframe!</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam corrupti eius eligendi saepe animi reprehenderit numquam dignissimos! Corrupti modi, debitis repellat itaque sequi consequatur quia rem! Libero, veritatis minima.</p>
+</body>
+</html>
