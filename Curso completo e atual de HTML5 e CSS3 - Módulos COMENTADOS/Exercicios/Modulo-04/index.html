@@ -138,13 +138,13 @@
                 <hr>
                 <br>
                 <hr>
-            </section>
+            </section><!-- section_3a -->
         </section><!-- Section_3 -->
     </header>
     <hr>
     <br>
     <hr>
-    <section>
+    <section class="section_4"><!-- Setion_4 -->
         <h1>Teste com iframe </h1>
         <h2>Aula 3, iframe 002</h2>
         <p>
@@ -178,10 +178,97 @@
             <hr>
             <br>
             <hr>
-            <h2>Usando o parâmetro srcdoc="insira_HTMl_aqui" como capa no &NotLeftTriangleEqual; iframe &NotRightTriangleEqual;</h2>
+            <h2>Usando o parâmetro srcdoc="insira_HTML_aqui" como capa no &NotLeftTriangleEqual; iframe &NotRightTriangleEqual;</h2>
             <p>Podemos ainda dentro do srcdoc="", adicionar imagens, como podemos ver aqui!</p>
             <iframe class="iframe003" id="tela"  name="frame1" srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a magnam nulla, placeat, maiores praesentium, enim at autem perspiciatis nihil quia. Nisi eligendi itaque tempore dolor porro debitis eaque fugiat!</p><img src='./imagens/cursoemvideo.png'>">
             </iframe>
+        </aside>
+    </section><!-- FIM section_4 -->
+    <hr>
+    <br>
+    <hr>
+    <section class="section_5">
+        <h1>Aula 7, iframe 004</h1>
+        <h2>Meu site principal</h2>
+        <p>O &lt;iframe&gt; abaixo está bloqueado para envio de dados, por meio do parâmetro "sandbox", e por meio do "referrerpolicy.</p>
+        <iframe src="paginas-extras/pagina004.html" frameborder="1" sandbox="sandbox" referrerpolicy="no-referrer"><!-- Podemos remover o parâmetro frameborder, que dará o mesmo resultado com valor = 1. -->
+            Seu navegador não é compatível com isso...<!-- Msg de erro... -->
+        </iframe>
+        <p> ABAIXO estamos usando um &lt;iframe&gt; com "sandbox" = "allow-same-origin allow-forms allow-scripts", para permissão de páginas de mesma origem, formulários e Scripts.</p>
+        <br>
+        <div>↓ = &darr;</div>
+        <br>
+        <iframe src="paginas-extras/pagina004.html" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+            Seu navegador não quer isso aqui nem a força...
+        </iframe>
+        <br>
+        <hr>
+        <br>
+        <aside style="background-color: cadetblue;">
+            <h1>Minha página</h1>
+            <h2>Assunto sobre o arquivo "iframe005.html"</h2>
+            <p>Abaixo criamos &lt;iframe&lt; para exemplo de tudo PERMITIDO, inclusive podemos ver a ação de um "script" rodando aqui.</p>
+            <br>
+            &darr;
+            <br>
+            <div>
+                <iframe class="iframe-2_aula-7" src="paginas-extras/pagina005.html"></iframe>
+            </div>
+            <br>
+            &uarr;
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad nemo obcaecati, minus odit nesciunt pariatur eaque reiciendis nisi cumque commodi voluptate vel laudantium dolorem facere. Distinctio laboriosam temporibus incidunt sunt?</p>
+            <br>
+            <h3>Abaixo criamos &lt;iframe&lt; para exemplo de tudo BLOQUEADO, inclusive podemos ver que a ação de um "script" NÃO roda aqui.</h3>
+            <br>
+            &darr;
+            <br>
+            <div>
+                <iframe class="iframe-2_aula-7" src="paginas-extras/pagina005.html" referrerpolicy="no-referrer" sandbox="sandbox"></iframe>
+            </div>
+
+            <br>
+            &uarr;
+            <br>
+
+            <h4>Abaixo criamos &lt;iframe&lt; para PERMITIR <span style="background-color: black; color: red;">somente "scripts"</span>; Inclusive podemos ver que a ação de um "script" sendo permtido aqui.</h4>
+
+            &darr;
+            <br>
+            <br>
+            <div>
+                <iframe class="iframe-2_aula-7" src="paginas-extras/pagina005.html" referrerpolicy="no-referrer" sandbox="allow-scripts"></iframe>
+            </div>
+            <br>
+            &uarr;
+            <br>
+        </aside>
+    </section>
+    <hr>
+    <br>
+    <hr>
+    <section class="section_6">
+        <h1>Aula 8, iframe 006</h1>
+        <h2>Conteúdos dentro de iframes</h2>
+        <p>Abaixo adicionamos um vídeo do vimeo.com e o &lt;iframe&gt; abaixo é gerado pelo próprio site.</p>
+        <p>&darr; Vídeo</p>
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/265045525?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:50%;height:50%;" title="Looking For Something"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <p>&uarr; Vídeo</p>
+        <br>
+        <hr>
+        <h3>Mapas do Google</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725022.008884834!2d-47.37136857526983!3d-24.251681717894662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f58a6a00a9d%3A0x3f251d85272f76f7!2sHostnet%20Internet!5e0!3m2!1spt-BR!2sbr!4v1732586571722!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br>
+        <hr>
+        <br>
+        <h4>Mapas do Waze</h4>
+        <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-22.902449&lon=-43.174591&ct=livemap" width="400" height="250" allowfullscreen></iframe>
+        <aside>
+            <br>
+            <hr>
+            <br>
+            <h5>Google Documents</h5>
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRWFlV_JVxbsRPDM1XrSHhkdwKxbJwaFF-56Hib8FcAOXzAboStEqtGyI2f-f3_SZtknFIYXkj7P0yh/embed?start=false&loop=false&delayms=3000" frameborder="0" width="460" height="249" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </aside>
     </section>
     <hr>

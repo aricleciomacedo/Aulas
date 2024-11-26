@@ -227,7 +227,7 @@ https://www.youtube.com/watch?v=_bYRQTnFXF8&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
         Os mecanismos de busca (são BOTs que vasculham o códigos), como por exemplo o "GoogleBOts" que varrem os sites, encontram esses sites, e de acordo com a relevância desse site determinada pelos algoritimos, eles vão posicionando(ranckeando) o site.
 
         "
-            VEJA abixo , e na vídeo aula mais sobre o assunto.
+            VEJA abaixo , e na vídeo aula mais sobre o assunto.
         "
 
 
@@ -264,3 +264,83 @@ https://www.youtube.com/watch?v=_bYRQTnFXF8&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
                 Isso pode se tornar responsabilidade sua, pois você, ou o desenvolvedpor do site, podem estar deixando portas abertas para as técnicas de invasão; Como por exemplo: Crossite, Ataques XSs.
             "
     11:10 - Use, mas não abuse
+
+            
+
+Módulo 04, Capítulo 22, Aula 7.
+Vídeo:
+Tornando iframes mais seguros - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=mRhjlDN4Ezo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=8
+
+    Iniciamos esta aula abrindo o aqruivo do exercício 24 "ex024" e dentro da pasta "paginas-extras" criamos o arquivo "pagina004.html" e é importante que se veja os comentários no arquivo sobre a aula.
+
+        {Criamos um exemplo simples de formulário, mas isso será tema de aulas futuras, onde iremos aprender de fato a criar formulários avançados.}
+
+    Uma coisa que foi citado na aula anterior é a questão de que outros sites podem usar seu site, se for adcionado iframe para eles, e por meio do "iframe" permitir ataques de captura de informações de usuários; UMA dAS coisas que se pode fazer para resolver esse problema é {bloquear isso}; 
+        AGORA criamos o arquivo "iframe004.html" para nele adicionarmos o formulário no "iframe" para entendermos sobre com bloquear acessos de terceiros.
+    
+    NOTE que ao clicarmos no botão de enviar no formulário dentro do iframe, ele envia os dados; 
+        1- AGORA para bloquear, usamos a configuração por meio do parâmetro "sandbox" com o valor = "sandbox".
+        $ Quando colocamos essa configuração, o iframe irá bloquear todo e qualquer acesso que outros sites que estejam dentro do Iframe possar tentar fazer; Como no exemplo o cadastro de pessoas.
+        A configuração "sandbox" liga o máximo de segurança possível em relação ao iframe.
+    { Quando usamos essa configuração no iframe, é como se uma proteção maior estivesse sendo adicionada a nosso site, e evitando que dados sejam capturados por ataques de captura de algum tipo de dado.}
+        2- OUTRO parâmetro é o "referrerpolicy" que é a politica de referência, que tem por padrão o valor = "no-referrer-when-downgrade.", e para limitar carregamentos dentro do iframe, podemos usar o valro = "no-referrer".
+OBS:
+    Sites capturam dados de navegação para com base nesses dados, comece a enviar e mostrar propagandas, e ao usar o parâmetro e o valor "no-referrer" , então dizemos que tudo o que estiver carregado dentro do iframe (o conteúdo), "NÃO VAI coletar DADOS ou qualquer tipo de informação do usuário".
+
+* MAS e se quisermos que no iframe possa ser coletado algum tipo de dado? Como no exemplo o envio dos dados de um fomulário confiável? COmo podemos desligar algumas coisas e não usar toda segurança possível?
+    "COMO valor para o parâmetro" {sandbox}; POdemos usar:
+        1- "allow-same-origin" Para páginas de mesma origem(servidor) que nosso site = Permitir Conteúdos de Mesma Origem.
+        2- "allow-forms allow-scripts" = Permitir Formulários e Scripts "USamos assim porque geralmente formulários usa de scripts para manipular dados."
+            $   OBS: PODEMOS usar mais valores configurativos, para isso entre aspas "" do sandbox, tecle Ctrl+Space e veja mais opções. 
+    
+    + CRIAMOS agora o arquivo "pagina005.html" para falarmos de um conteúdo um pouco mais avançado, e que vai ser alvo de nossos estudos adiante;
+        VEJA que neste arquivo foi criado um "script", e fique atento as dicas sobre o script.
+            Criamos o arquivo "iframe005.html" para carregar a "pagina005.html".
+*   SAIBA que é muito perigoroso permitir que um site que não seja confiável, rodar(executar) scripts dentro de iframes em seu site! Pode acontecer de ser um código mailicioso e comprometer todo o seu conteúdo, site ou até mesmo sistema(servidor).
+{       COMO BLOQUEAR?      }
+        $ COmo ensinado acima, podemos usar o parâmero "referrerpolicy = no=referrer", e usar também o parâmetro "sandbox =sandbox"
+        " Assim garantimos que tudo seja bloquado!"
+        PARA permitir somente"scripts" basta usar no parâmetro {sandbox} o valor = "allow-scripts".
+
+
+Módulo 04, Capítulo 22, Aula 8.
+Vídeo:
+Tornando iframes mais seguros - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=dzhJsc1YszU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=9
+
+    Os iframes são inúteis? 
+    Você sabia que a maneira mais usada para adicionar vídeos, mapas e documentos a um site é usando iframes?# Acompanhe esse vídeo até o final para responder a estas e muitas outras perguntas.
+
+    Tópicos deste vídeo:
+    00:00 - Módulo 04, Capítulo 22, aula 08
+#    00:49 - Existem profissionais perto de você
+    01:52 - Criando um novo exercício
+        1- Criamos o arquivo "iframe006.html" na pasta do exercício "ex024"
+    02:25 - Adicionando um vídeo usando iframe
+        2- Abrimos o site "vimeo.com", e escolhemos o =vídeo: Looking For Something =link: https://vimeo.com/265045525
+            ENtão vamos na opção "&neArr; = share = compartilhar" , e no <embed> copiamos o código selecionado, ou apenas clicando no </ copy embed code>.
+            $    OBS: As opções de configurações como +tamanho, +cor, +COisas especiais etc, fazem parte de um çogin de grátis ou pago.
+        3- Copiado o <embed>, basta adicionar a <div> onde quiser no código html.
+        "NOTE QUE"
+            NO código gerado pelo [vimeo.com], vem um iframe adicionado; Isso mostra que <iframes> ainda são usados quebrando assim o paradigma de que iframe é ruim de usar.
+    04:09 - Adicionando mapas usando iframe
+        4- Abrimos o site do Google Maps no link: https://google.com.br/maps
+            4a- Pesquisamos no exemplo, o local da Hostnet Internet.
+            4b- Clicamos na opção de compartilhar e na opção de "Incorporar um mapa" copiamos o código HTML.
+            $ Note que já vem num <iframe>.
+    05:40 - Adicionando o Waze no site com iframe
+        5- Esse é outro recurso(serviço) do Google que permite Mapas mostrando trânsitos por perto. 
+            5a- link: https://www.waze.com/pt-BR/live-map/
+                Vamos então na nos 9pontinhos e escolhemos a opção "Mapa ao vivo" , pesquisamos o local, que nesse exemplo é o da (Hosnet internet), clicamos em "Compartilhar" e nas opções de {copia} para este exercício; Escolhemos "Incorporar um mapa".
+    06:49 - Adicionando um documentos Google com iframe
+        6- Abrimos o link:  https://docs.google.com
+            6a- Clicamos nas 3barrinhas e escolhemos a opção "Apresentações".
+            6b- Com a apresentação pronta e aberta, vá na opção "Arquivo" e no "Compartilhar" clique em "publicar na web" então escolha a opção "Incorporar", Defina suas configurações e aperte em "Publicar".
+            6c- Feito isso, copie o código de <Iframe> gerado, e cole no html.
+                OBS: Podemos mudar os valores dos parâmetros, como por exemplo largura = width.
+    09:08 - iframe é inútil? Olha só quem usa
+    09:40 - Seja avisado quando sair vídeo novo
+    10:26 - Vamos criar um projeto profissional com iframe

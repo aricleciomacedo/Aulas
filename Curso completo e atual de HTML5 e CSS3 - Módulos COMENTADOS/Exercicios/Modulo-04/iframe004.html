@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Iframes</title>
+</head>
+<body>
+    <h1>Meu site principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi aut odit nisi! Nesciunt perferendis quaerat provident. Pariatur quisquam at iusto minus incidunt nobis? Nostrum perspiciatis cupiditate consectetur, vel numquam reprehenderit.</p>
+    <!-- Aqui usamos a configuração sandbox para proteger nosso site de qualquer site malicioso ou tentativas maliciosas causadas por rackers ao página dentro do iframe, e o valor "sandbox" bloqueia essas tentativas, e qualquer acesso que outro site dentro do iframe tente fazer, como por exemplo o cadastro de pessoas.
+        AGORA com essa configuração determinada, VEJA que as opções que solicitam envio de dados param de funcionar; PORÉM podemos "desbloquear" alguns acessos, como no caso de um formulário que sabemos que pertence a nosso site, podemos configurar para que este formulário possa funcionar, e tão somente ele e mais nada dentro do iframe; PARA ISSO basta atribuir ao sandbox o valor "allow-same-origin" que quer dizer Permitir COnteúdo de mesma origem, após o origin, podemos atribuir "allow-forms = permitir formulários , ou allow-modals, ou allow-pointer-lock, allow-popups , allow-scripts = permitir scripts, entre outros que queira desbloquear e que você saiba que lhe pertece ou que confia de outro site." PARA MAIS opções par o sandbox, entre aspas ""  tecle CTRL + ESPAÇO. 
+
+    OUTRA configuração é o referrerpolicy que significa Política de referência que tem por padrão o valor "no-refere-when-downgrade", mas pode ser limitado usando o valor "no-referrer" que faz com dados de navegação não sejam capturados , como por exemplo para exibição daquelas propagandas, baseada em pesquisas, likes e etc; ENTÂO ao usar essa configuração, dizemos que o que está carregado dentro do iframe, não vai coletar qualquer tipo de informação do usuário.-->
+    <iframe src="paginas-extras/pagina004.html" frameborder="1" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer">
+        <!-- Mesagem de erro para aviso de algum imprevisto no carregamento do frame. -->
+        Seu navegador não é compatível com isso...
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, accusamus! Sed assumenda consequatur, eum molestias ab provident. Asperiores sequi ipsa repudiandae dolor, id doloremque magnam. Sunt ex officiis dolore asperiores.</p>
+
+</body>
+</html>

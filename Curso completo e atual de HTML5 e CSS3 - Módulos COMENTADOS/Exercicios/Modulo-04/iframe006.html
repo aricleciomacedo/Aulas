@@ -1,0 +1,52 @@
+<!-- 
+    Módulo 04, Capítulo 22, aula 08
+Vídeo:
+Dicas para iframes melhores - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/dzhJsc1YszU?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula foi adicionado um vídeo do site vimeo.com, (https://vimeo.com/113513360), e saiba que ele é pago para que se possa colocar vídeos lá.
+Então no vídeo vamos na opção share(compartilhar), então copiamos o código de incorporação; UMA coisa boa do Vimeo é que no compartilhar o video, na opção (show options= Mostrar opções) podemos editar algumas coisas que queremos tirar do vídeo, como por exemplo adcionar a opção de responsividade, o qual deixará o vídeo automáticamente responsivo; dai é so copiar o código na opção embutir(incorporação), e colar no index.html .
+    (VEJA ABAIXO COMO ficou! e note que já veio montado o código dentro de uma <div> e ainda adcionou o <iframe>).
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Adicionando conteúdos</title>
+</head>
+<body>
+    <h1>Conteúdos dentro de iframes</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem a expedita nam aliquam natus quod totam laboriosam sint sunt, illo vero, provident maiores quo facilis necessitatibus quaerat eligendi alias neque.
+    </p>
+
+    <!-- Aqui adcionamos um vídeo do vimeo.com, e note que ele veio pronto dentro da div e do iframe. -->
+    <h2>Vídeos</h2>
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/113513360?h=4aebf62da9" style="position:absolute;top:0;left:0;width:50%;height:50%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- Aqui adcionamos uma geolocalização no Google Mapas; usamos de exemplo o endereço da Hostnet Internet (https://www.google.com.br/maps/place/Hostnet+Internet/@-22.9024441,-43.1771656,17z/data=!3m1!4b1!4m6!3m5!1s0x997f58a6a00a9d:0x3f251d85272f76f7!8m2!3d-22.9024491!4d-43.1745907!16s%2Fg%2F1tdjsc63?entry=ttu);
+        Então usamos a opção de compartilhar, escolhemos o incorporar , e ainda podemos optar pelas opções de tamanho (pequeno, médio, grande ou peersonalizado), nesse exemplo usamos o tamanho Médio e por fim na opção COPIAR HTML. -->
+    <h2>Mapas do Google</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2961758362594!2d-43.17716562504562!3d-22.902444137715158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f58a6a00a9d%3A0x3f251d85272f76f7!2sHostnet%20Internet!5e0!3m2!1spt-BR!2sbr!4v1712028533994!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- Aqui usamos o serviço do Google chamado Mapa do Waze no site (waze.com) no link: https://www.waze.com/pt-BR/live-map/ , que permite vermos o trânsito  por perto.
+        ENTÃO escolhemos a opção Mapa ao vivo, nos 6 pontinhos, e escolhemos o endereço e então vamos na opção de incorporar e copiar o link do iframe.-->
+    <h2>Mapas do Waze</h2>
+    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=-22.903887&lon=-43.173041&ct=livemap" width="600" height="450" allowfullscreen></iframe>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+
+    <p>
+        Podemos ainda adicionar por exemplo: um Documento apartir do Google Docs (docs.google.com), <br> abrir o documento desejado e ir na opção de incorporar , escolher também o tamanho , <br> editar o avanço dos slides etc, e copiar o link iframe.
+    </p>
+    <iframe style="display: block;" src="#" frameborder="1">
+        Só exemplo: Porém não tenho Docs Google.
+    </iframe>
+</body>
+</html>

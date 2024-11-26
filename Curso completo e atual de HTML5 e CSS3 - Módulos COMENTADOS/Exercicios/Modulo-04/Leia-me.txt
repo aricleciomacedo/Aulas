@@ -1,0 +1,66 @@
+Módulo 04, Capítulo 22, aula 01
+Vídeo:
+O iframe ainda pode ser usado? - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/GWULnkTnapM?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+O que é iFrame?
+Há alguns que pensam que esse "i" é de improve que significa "melhorar " Frame = quadro, 
+mas na verdade o (i) é de "inline" = em linha.
+
+
+Módulo 04, Capítulo 22, aula 02
+Vídeo:
+Configurando iframes - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/eAxGt3ObQ24?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+
+Módulo 04, Capítulo 22, aula 03
+Vídeo:
+Conteúdo local no iframe - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/G8H5jhabq8k?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+
+Módulo 04, Capítulo 22, aula 04
+Vídeo:
+Navegação no iframe - @Curso em Vídeo HTML5 e CSS3	
+Link:
+https://youtu.be/y6CKgnBYs5E?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+
+Módulo 04, Capítulo 22, aula 05
+Vídeo:
+Conteúdo no iframe por código - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/8Jb75kIqUQs?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+Módulo 04, Capítulo 22, aula 06
+Vídeo:
+Inconvenientes do iframe - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/_bYRQTnFXF8?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+	A primeira dica é: Não confudir iframe com frame; e outra observação é que a tag de frames ainda
+é usada pela galera e que a mesma não é considerada absoleta pela comunidade. 
+	 MEsmo ainda sendo usado na HTML:5 o iframe não é bom no que diz respeito ao SEO, que são os mecanismo
+de busca, e que ranckean os sites, pois a indexação fica complicado para os bots de busca.
+ Outro problema dos iframes é na questão de usabilidade e acessibilidade para pessosas especiais. Um exemplo de 
+usabilidade é quando o usuário clica em volta na seta back do navegador, e isso acaba confundido o próprio 
+navegador gerando um erro, que implica na dúvida de voltar na página principal , ou voltar no iframe!
+	UM problema complexo do Iframe, é que abrem portas para ouros sites dentro do nosso site, então é bom
+ter cuidade para quem e qual site você está abrindo portas, pois se acontecer de o site que foi aberto alguma 
+porta dentro do nosso site, ele for hackeado, isso faz com que o nosso também sofra consequências.
+
+Módulo 04, Capítulo 22, aula 07
+Vídeo:
+Tornando iframes mais seguros - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/mRhjlDN4Ezo?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+
+Módulo 04, Capítulo 22, aula 08
+Vídeo:
+Dicas para iframes melhores - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/dzhJsc1YszU?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
