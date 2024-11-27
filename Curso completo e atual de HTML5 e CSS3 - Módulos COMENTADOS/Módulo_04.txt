@@ -344,3 +344,28 @@ https://www.youtube.com/watch?v=dzhJsc1YszU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     09:08 - iframe é inútil? Olha só quem usa
     09:40 - Seja avisado quando sair vídeo novo
     10:26 - Vamos criar um projeto profissional com iframe
+
+
+===    {   FIM do Capítulo 22    }      ===
+
+<<<   {Início do Capítulo 23}       >>>
+
+
+Módulo 04, Capítulo 23, aula 01
+Vídeo:
+Criando um projeto do zero - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=hPze5_OYqBw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=10
+
+    1- O projeto consiste em criar um site, que tem como imagem principal um celular; É responsível para todo tamanho de tela.
+
+    2- OBS: Na tela do celular não é clicável.
+
+    3- Na lateral direita da página existe um menu com link para cinco(5) redes sociais e uma HomePage(casinha) em forma de botões redondos com animação :hover e que são acessiveis com click.
+        3a- Cada botão contém um ícone respectivo a rede social que o link está endereçado.
+
+    4- Cada botão quando clicado, exibe na tela do celular o conteúdo pertinete ao seu link.
+        "ATENÇÃO: Esse segredo das redes sociasi carregar rádio, será alvo da aula do projeto".
+        4a- NOTE que não há nada clicável no conteúdo que carrega dentro do celular, exceto o link no final do conteúdo colocado num botão  de cor vermelha e com texto "acesse".
+    
+$    5- TODO esse projeto será ensinado durante este capítulo!
