@@ -369,3 +369,42 @@ https://www.youtube.com/watch?v=hPze5_OYqBw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
         4a- NOTE que não há nada clicável no conteúdo que carrega dentro do celular, exceto o link no final do conteúdo colocado num botão  de cor vermelha e com texto "acesse".
     
 $    5- TODO esse projeto será ensinado durante este capítulo!
+
+
+
+Módulo 04, Capítulo 23, Aula 02
+Vídeo:
+Vamos começar o projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/Rgji4o96ZhA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    1- Comece acessando https://gustavoguanabara.github.io/ , clique em Resolva os desafios, vá na pasta "modulo-04/d-13"
+
+    2- Baixe o "pacote-d013.zip" ; Então extraia os arquivos que são imagens e um favicon.
+    
+    3- Agora crie a pasta chamada "projeto-social" e dentro vai todos os arquivos da pasta "pacote-d013".
+
+    4- VÁ no GitHub Desktop e crie um novo reposiório para subir o projeto para o GitHub:
+        4a- Na opção "File" clique em "New repository"; 
+        4b- Em "Name" nomeamos de "projeto social"; e a "Description" = " Projeto de Redes Sociais ";
+        4c- A pasta para o salvamento é o mesmo onde estamos salvando as aulas e estudos.
+        4d- O "Gitignore" = "none";
+        4e- A "Licence" = "MTILicence", e clicamos em "Create New repository".
+        4f- {   AGORA verifique a pasta criada e os atributos do Git dentro da pasta , pois essa é a             garantia de que o repositório LOCAL foi criado com sucesso!    }.
+        4g- ENTÃO, clicamos em "Pushing repository" para publicar na internet; Assim no GitHub é criado a      pasta a qual nomeamos anteriormente (vide: "porjeto-social");
+*       4h- OBS: Não se esqueça de desmarcar a opção " Keep trips codes private"
+            Faça isso para não deixar o projeto "privado", e com isso não conseguir hospedar mais pra frente;
+        4i- E POR FIM CLIQUE em "Publish repository" para criar o repositório no GitHub.
+
+            {   AGUARDE um tempinho... FAÇA Login e verifique seu GitHub para ver se subiu o repostório; COM ISSO estamos prontos para COMEçAR... }
+
+    5- Ainda no GitHub Desktop, clique em "Open in Visual Studio Code".
+
+    6- AGORA na pasta principal do projeto, crie o arquivo "index.html", a pasta "estilos" para os arquivos CSS´s que vamos usar.
+        6a- Então Mão na MAssa...
+
+    $ OBS:  {
+        "VEJA nos nos cógidos, os comentrários sobre cada elemento, configuração, etc."
+    }
+
+
