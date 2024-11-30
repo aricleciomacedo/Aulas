@@ -422,3 +422,22 @@ https://www.youtube.com/watch?v=HUnltyZ9Rxg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     3- AGORA acompanhe o vídeo aula e os comentários contidos nos arquivos para entender mais sobre o assunto.
 
 
+
+Módulo 04, Capítulo 23, Aula 04
+Vídeo:
+Posicionando o conteúdo do site - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Gx-zp0aaOto&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=13
+
+    Essa aula começa apartir da criação do arquivo home.html.
+
+*    LEMBRANDO: 
+    "Fazer o "commit and Pushing" para o repositório remoto da aula anterior no GitHub!"
+
+    1- Criamos um arquivo além do "index.html", e esse arquivo será a "Home" do projeto; Para isso deve ser arquivo separado, o qual será o conteúdo que vai ficar aparecendo dentro do 'Celular'.
+        1a- Criamos então na mesma pasta do arquivo "index.html", o arquivo "home.html", e agora veja no arquivo, mais sobre esta aula.
+
+        1b- Esse arquivo não possui conteúdos no <body>, mas tão somente estilos CSS, e será carregado dentro do "index.html" na tag <iframe> dentro da <section>.
+
+
+
