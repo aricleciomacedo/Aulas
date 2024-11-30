@@ -1,0 +1,50 @@
+@charset "UTF-8";/* Para aceitar cáracteres especiais e acentuações de diversos idiomas. */
+
+* {/* Reset dos padrões dos navegadores. */
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {/* Configurações para ambos. */
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    /* Assima adcionamos um imagem de fundo e configuramos para que não fique desalinhada em tela. */
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;/* Assim evita possível barra de rolagem. */
+}
+
+main {
+    position: relative;
+    height: 100vh;/* Assim garantimos com que o <main> ocupe a tela inteira. */
+}
+
+section#telefone {
+
+    /* Essa configurações fazem o elemento se posicionar no centro da página idependente do tamanho da tela.. */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 627px;
+    width: 311px;
+
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+
+marquee {
+    width: 80%;
+    background-color: rgb(255, 0, 255);
+    color: yellow;
+    font-size: 2rem;
+
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}

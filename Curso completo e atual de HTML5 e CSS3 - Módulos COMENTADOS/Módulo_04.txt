@@ -408,3 +408,17 @@ https://youtu.be/Rgji4o96ZhA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
     }
 
 
+
+Módulo 04, Capítulo 23, Aula 03
+Vídeo:
+Criando a página inicial do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=HUnltyZ9Rxg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=12
+
+    1- No arquivo "index.html" da aula, começamos removendo a tag <h1> do exemplo na aula anterior, e apartir da tag <main>, que é a tag semântica para o contéudo principal.
+
+    2- Adicionamos as <section´s> e criamos a pasta "estilos" e o arquivo 'style.css' para apartir de então começarmos a estilizar.
+
+    3- AGORA acompanhe o vídeo aula e os comentários contidos nos arquivos para entender mais sobre o assunto.
+
+
