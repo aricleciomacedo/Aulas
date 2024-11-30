@@ -1,0 +1,36 @@
+<!-- 
+    VEJA o arquivo .txt do módulo-04, lá tem informações e passos iniciais sobre esse projeto.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto Redes Sociais</title>
+    <!-- Aqui adcionamos o favicon, que será o ícone da aba da página no navegador.-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Aqui é o link para o estilos externos. -->
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <main><!-- Aqui é a tag semântica para o conteúdo principal.   -->
+        <section id="telefone"><!-- Seçaõ telefone -->
+            <!-- Aqui carregamos o arquivo home.html. Nomeamos e identificamos esse elemento.-->
+            <iframe src="home.html" frameborder="0" name="tela" id="tela">
+                <!-- Aqui adcionamos um mensagem para caso não seja copatível com o navegador. -->
+                Seu navegador não é compaível com isso.
+            </iframe>
+        </section><!-- FIM Sessão telefone -->
+        <section id="redes-sociais"><!-- Sessão 2 redes sociais-->
+            <!-- Aqui adcionamos um link que vai ser um botão para carregar o name tela do iframe por meio do target, e isso foi o que configuramos acima. Ainda usamos o <br> break line, para deixar os botões um abaixo do outro, já que ainda não aprendemos sobre display grid e outras maneiras de posicionar o elementos assim.-->
+            <a href="home.html" target="tela"><img src="imagens/logo-home.jpg" alt="Home"><img></a><br>
+            <a href="youtube.html" target="tela"><img src="imagens/logo-youtube.jpg" alt="YouTube"><img></a><br>
+            <a href="github.html" target="tela"><img src="imagens/logo-github.jpg" alt="GitHube"><img></a><br>
+            <a href="instagram.html" target="tela"><img src="imagens/logo-instagram.jpg" alt="Instagram"><img></a><br>
+            <a href="twitter.html" target="tela"><img src="imagens/logo-twitter.jpg" alt="Twitter"><img></a><br>
+            <a href="facebook.html" target="tela"><img src="imagens/logo-facebook.jpg" alt="Facebook"><img></a>
+        </section><!-- FIM Sessão redes-sociais -->
+    </main>
+</body>
+</html>

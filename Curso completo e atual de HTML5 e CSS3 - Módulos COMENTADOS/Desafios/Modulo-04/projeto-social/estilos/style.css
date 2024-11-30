@@ -1,0 +1,70 @@
+/* Aqui é a configuração (atributo global) para aceitação de caracteres especiais, como exemplo: (; ç ~) */
+@charset "UTF-8";
+/* Aqui usamos a seletor para toda tag, e serve para remover as configurações padrões do navegador. */
+* {
+    margin: 0;/* Margens */
+    padding: 0;/* Espaço interno entre margem e elementos */
+    font-family: Arial, Helvetica, sans-serif;/* Estilo dos textos */
+}
+/* seletor para as tags <html> e(,) <body> recebem esses parâmetros*/
+html, body {
+    height: 100vh;/* Altura total da view-port */
+    width: 100vw;/* Largura total da viw-port */
+    background-color: black;
+}
+/* Seletor exclusivo para o <body> */
+body {
+    background: black url('../imagens/fundo-madeira.jpg') no-repeat top center;/* Short-hand para adcinar imagem de fundo. */
+    background-size: cover;/* (size) Tamanho do plano de fundo = (cover) cobrir tela inteira */
+    background-attachment: fixed;/* (attachment) anexo (fixed) fixo; faz com que a barra de rolagem não aconteça. */
+}
+/* Aqui é seletor da tag <main> que também podemos chamar de container de fora.*/
+main {
+    position: relative;/* Aqui definimos essa posição para que seus elementos sejam absoluto, e para que possamos ter os parämetros de posicionamento; por exemplo: top, left etc. */
+    height: 100vh;
+    /* background-color: green; *//* cor de fundo para vermos que o main, sobre-poe os 100% do html e do body, ou seja , assume 100% da tela (página); pois zeramos a matrgin e o padding. MAs foi removido durante a aula. */
+}
+/* Seletor do section com id que também podemos chamar de container de dentro.*/
+section#telefone {
+    /* Aqui vemos que 50% em relação ao top e 50% a esquerda , dá um problema de centralização do elemento, então usamos a propriedade transform para centralizar a section.*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/* Assim garantimos que o elemento se posione ao centro do conteúdo principal, pois definimos menos metade pra esquerda e menos metade para cima. "LEMBRANDO que já aprendemos sobre isso na aula de Blocos".
+    Então dessa forma garantimos que independente do tamanho da tela, (menor ou maior) , o elemento , ficará no centro (no meio da tela).*/
+
+    height: 627px;/* Aqui era 500px e foi ajustado conforme o tamanho da imagem. */
+    width: 311px;/* Aqui era 500px e foi ajustado durante a aula. */
+    /* background-color: blue; *//* cor de fundo para vermos como se comporta a section, e removido durante a aula. */
+    background: /* blue */ url('../imagens/frame-iphone.png') no-repeat;/* Aqui usmos a short-hand para o fundo, e adcionamso uma imagem ao fundo, e usamos o url , entre aspas voltamos uma pasta (../) e acessamos a pasta de imagens e selecionamos a imagem, e usamos o atributo no-repeat para não repetir imagem ao fundo com a cor de fundo. OBSERVAÇÃO: Essa short-hand não funcionou asssim, então usamos o background-repeat.*/
+    /* background-repeat: no-repeat; */
+}
+/* Aqui selecionamos o iframe com id. CONTEÚDO da aula 4 */
+iframe#tela {
+    position: relative; /* Assim garante que o elemento fique por cima. */
+    top: 80px;/* Movemos  o elemento em relação ao topo.*/
+    left: 22px;/* Movemos  o elemento em relação a esquerda.*/
+    width: 267px;/* Largura. Depois o valor 269 foi modificada na aula 6.*/
+    height: 471px;/* Altura. */
+}
+/* Aqui usamos o seletor de id para alinhar os elementos a direita.*/
+section#redes-sociais {
+    text-align: right;
+}
+/* Aqui seleionamos as <img> por meio de hierarquia das coisa, pois não daria certo por exemplo usar o seletor: section#redes-sociais > img, pois <img> não é filho direto de sections, já que <img> está dentro <a>; logo <img> é filho direto de <a>. Então poderiamos usar o seletor assim:  
+section#redes-sociais > a > img , porém optamos por usar <img> que está dentro de <section id="redes-sociais">*/
+section#redes-sociais img {
+    width: 50px;
+    /* height: 50px; *//* Isso não precisou, já que ao definir a largura , a altura se ajustou. */
+    margin: 10px;/* Espaço entre os elementos. */
+    border-radius: 50%;/* Assim arrendonda o elemento. */
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.400);
+    box-sizing: border-box;/* POdemos dizer que com isso, cada elemento terá sua ciaxa individual. Então assim definimos que cada elemento tem sua caixa própria, isso faz com que por exemplo a aplicação do :hover não interfira em outros elementos; nesse caso a borda de um botão não terá infuência no outro. OBS: Sem esse parâmetro, um efeito causa indução no outro botão, poderemos notar que ao passar o mouse sobre um botão os outros se mexem.*/
+}
+/* Aqui aplicamos um hover, que são estilos para quando o mouse é posto sobre o elemento, porém foi preciso adcionar o border-box ao size-box, para que esse efeito não mexa nos outros botões. */
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-3px, -3px);/* Assim definimos o quanto o elemento afastará para esquerda e para cima. */
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.623);
+    transition: transform .3s border 1s;/* Aqui aplicamos o transition para o transform: translate(); Assim suaviza o efeito sobre o elemento, e também aplicamos para o border: Com isso definimos um tempo em segundos para o efeito iniciar e findar, tirando aquele movimento seco do padräo.*/
+}

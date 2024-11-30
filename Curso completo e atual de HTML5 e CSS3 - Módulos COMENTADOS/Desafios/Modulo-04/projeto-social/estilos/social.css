@@ -1,0 +1,31 @@
+/* 
+    Essa folha de estilos foi criada na aula 6 inline, depois foi modificada para externa, para o link dessa CSS sirva para as outras páginas que vamos âncorar aos iframes de nosso projeto.
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Aqui escondemos a barra de rolagem lateral direita e em baixo. */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+/* Aqui selecionamos a ag <img> */
+img {
+    width: 100vw;/* Essa largura toral da view-port, é justamente para bem encaixar dentro do iframe,onde serpá usado este arquivo html. */
+}
+/* Aqui selecionamos a tag <a> onde comporta o link para a página escolhida. */
+a {
+    display: block;
+    background-color: darkred;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.3s;/* Suaviza a aplicação de algum efeito, por exemplo o hover, para não ficar tão seco.*/
+}
+a:hover {
+    background-color: red;
+}

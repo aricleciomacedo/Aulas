@@ -454,3 +454,18 @@ https://www.youtube.com/watch?v=1kOhJr4DXIg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     {AGORA} acompanhe nos arquivos mais comentários sobre a aula.
 
 
+Módulo 04, Capítulo 23, aula 06
+Vídeo:
+Criando as páginas de cada rede social - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=ar5UB2MxraE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=15
+
+    Essa aula iniciamos adicionando o link do "home.html" para <a href=""> do botão Home, e resolvendo um
+ probleminha que dá quando por curiosidade clicamos nos botões que estão apenas com o "#" definidos para o "href" da âncora. Então para resolver esse problema de barras de rolagem aparecerem, adcionamos os links para todas as âncoras (<a>).
+    As demais telas que serão carregadas quando clicado nos demais botões que não seja o Home, irão carregar
+uma imagem em "tipo ripa" que será ensinado a fazer, em aulas próximas. PArA isso criaremos um arquivo HTML para incorporar essa imagem e torna-lá um link local, assim como o Home.
+
+    $ AGORA acompanhe a aula para entender mais sobre o assunto.
+
+
+
