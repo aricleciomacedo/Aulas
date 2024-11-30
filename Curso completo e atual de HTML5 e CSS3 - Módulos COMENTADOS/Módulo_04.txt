@@ -441,3 +441,16 @@ https://www.youtube.com/watch?v=Gx-zp0aaOto&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 
 
 
+Módulo 04, Capítulo 23, aula 05
+Vídeo:
+Criando os botões para redes sociais - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=1kOhJr4DXIg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=14
+
+    1- Essa aula começa apartir da adição de uma mensagem dentro do <iframe> para caso em que o navegador não é compatível. 
+
+    2-adcionamos um link dentro da <section id="redes-sociais"> com imagens , e  cada link será um "botão" .
+
+    {AGORA} acompanhe nos arquivos mais comentários sobre a aula.
+
+
