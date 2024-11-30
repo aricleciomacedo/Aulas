@@ -467,5 +467,6 @@ uma imagem em "tipo ripa" que será ensinado a fazer, em aulas próximas. PArA i
 
     $ AGORA acompanhe a aula para entender mais sobre o assunto.
 
+* NÂO esquece de atualizar repositório remoto do GitHub!
 
 
