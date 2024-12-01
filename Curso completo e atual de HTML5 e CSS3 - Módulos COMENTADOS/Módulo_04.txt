@@ -470,3 +470,58 @@ uma imagem em "tipo ripa" que será ensinado a fazer, em aulas próximas. PArA i
 * NÂO esquece de atualizar repositório remoto do GitHub!
 
 
+Módulo 04, Capítulo 23, aula 07
+Vídeo:
+Personalizando as imagens do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=z30JMe5Cufs&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=16
+
+    Nessa aula é ensinado a editar as imagens para ficarem compridas , parecendo ripas e para  poder  aplicar
+dentro do iframe como vimos no exercício anterior.
+
+    1- Então o primeiro passo é tirar print da tela do celular com o início da página da rede social, ou com a imagem que se desejar; 
+        No exemplo do projeto foi tirado vários prints, (quatro prints em alguns casos e mais de quatro em outros), para formar uma imagem "comprida".
+
+    2- Agora use o Gimp para editar as imagens, ou algum editor que se tenha mais noção do que fazer para montar a imagem única.
+
+    3- Como exemplo inicial, selecionamos os quatro(4) prints de imagens do {instagram} e arrastamos para o "Gimp".
+        OBS: Caso abra uma janela perguntado se quer manter o sistema de cores, clique em "OK", epere carregar, e faça assim para todas as imagens.
+
+    4- Escolha o primeiro print(imagem), vá na opção "imagem", clique em "Tamanho da tela de printura".
+        $DICA:
+            Bom que seja 10.000 de Altura para garantir uma imagem bem comprida.
+            Clique em "Redimensionar", e use a "Ferramenta de movimento" para posicionar a imagem na +Ripa+.
+
+    5- Escolha a segunda imagem, clique nela; Vá na "Ferramena de seleção retangular" e em cima dela clique com o borão direito do mouse e escolha a opção "Seleção reangular";
+        5a- Selecione a parte da imagem que quizer copiar , e tecle "Ctrl + C"; AGORA volte para a imagem comprida{Ripa} criada e cole usando "Ctrl + V" .
+        5b- Então vá na "Ferramenta de movimento", em cima dela clique com botão direito do mouse e escolha "Mover" ou teclar {M}.
+*       OBS: 
+            {Para mover}
+            "Caso não esteja conseguindo mover a imagem, então do lado esquerdo clique com o botão direito sobre a camada referente a imagem, e clique na opção {Nova camada...} ou na parte de baixo com a camada referente a imagem clique na (folhinha com sinal de + ) para criar nova camada, e assim poder mover a imagem."
+            {Para redimensionar somente a imagem}
+            "Escolha a camada referente a imagem e Clique na Ferramenta de Redimensionar, e em seguida clique na imagem , escolha a Largura/Altura e clique Redimensionar."
+
+*    6- Faça o mesmo para quantos(as) prints/imagem quizer.
+
+    7- $ Ajustando o tamanho da imagem Ripa{Comprida}.
+        7a- "CASO fique sobra de área sem imagens"(sobrando);
+            Dimua o zoom da página usando a Ferramenta abaixo da barra de rolagem horizontal, e diminua a porcentagem (%); Nesta aula dimuimos para (12,5%) para melhor vizualizar toda a imagem em forma de "Ripa".
+        7b- AGORA use a "Ferramenta de Corte" e marque a parte que desejar; (Neste caso a parte que contém imagens) e tecle "ENTER".
+    
+    8- Diminuindo o tamanho da imagem.
+        8a- COMO NÃO precisamos de um imagem gigantona para o projeto (Percebemos isso quando aumentamos zoom da página do Gimp), pois no projeto a tela é de {600px de Largura}, ENTÃO optamos por redimensionar a LARGURA da imagem.
+        8b- FEITO o corte anterior, AGORA vá na opção "imagem" e clique em "Redimensionar imagem" e escolha a {Largura}, que no caso do projeto é de "600px".
+
+*       OBS:
+            "A Resolução ao Redimensionar a imagem, opte por deixar em 70.000 de Resolução (X) e 70.000 de Resolução (Y) para que a imagem não tenha tanta qualidade, e bem assim tornando seu carregamento mais lento."
+
+    9- Exportanto.
+        Vamos exportar essa imagem para um formato levinho, pois esses /prints/imagens podem ter formatos pesados, como é o caso do formato (.png).
+
+        9a- ENTÃO vá na opção "Arquivo", clique em "Exportar como...".
+        9b- Na janela de (Exportar imagem ) e clique em "Selecionar Tipo de arquivo (Por extensão)"; Procure por {imagem JPEG} que são os formatos (.jpg),(jpeg) e (.jpe) e clique na opção.
+        9c- Nomeie o arquivo como quizer, e clique em "Exportar".
+        9d- Na tela de (Exportar imagem como JPEG), deixe as configurações padrão e  clique em "Exportar".
+
+
+>>> {FIM DO CAPÍTULO 23} <<<
