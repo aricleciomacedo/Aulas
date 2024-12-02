@@ -1,0 +1,88 @@
+@charset "UTF-8";/* Para aceitar cáracteres especiais e acentuações de diversos idiomas. */
+
+* {/* Reset dos padrões dos navegadores. */
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {/* Configurações para ambos. */
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    /* Assima adcionamos um imagem de fundo e configuramos para que não fique desalinhada em tela. */
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;/* Assim evita possível barra de rolagem. */
+}
+
+main {
+    position: relative;
+    height: 100vh;/* Assim garantimos com que o <main> ocupe a tela inteira. */
+}
+
+section#telefone {
+
+    /* Essa configurações fazem o elemento se posicionar no centro da página idependente do tamanho da tela.. */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 627px;
+    width: 311px;
+
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+
+marquee {
+    width: 80%;
+    background-color: rgb(107, 0, 107);
+    color: yellow;
+    font-size: 1.0rem;
+    border-radius: 33px;
+
+    position: absolute;
+    top: 71.5%;
+    left: 10%;
+}
+
+/* Esse estilo pertence ao <iframe> que está recebendo o conteúdo do arquivo "home.html.*/
+iframe#tela {
+    position: relative;
+    top: 80px;
+    left: 22px;
+    width: 269px;
+    height: 471px;
+}
+
+/* Assim jogamos os ícones de imagens para a direita */
+section#redes-sociais {
+    text-align: right;
+}
+
+/* Se fizer assim dá erro!:
+section#redes-sociais > img 
+MAS podemos fazer o seletor assim:
+section#redes-sociais > a > img 
+*/
+section#redes-sociais img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    
+    /* Com essa configuração, garantimos que a borda faça parte da caixa, eliminando a possibilidade de por exemplo um efeito bugar o conteúdo. 
+    VEJA: Sem essa propriedade, um botão quando se mexe, mexe os outros abaixo.*/
+    box-sizing: border-box;
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.637);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.623);
+    transition: transform .5s;/* Essa transição é para a propriedade transition acima. */
+}
