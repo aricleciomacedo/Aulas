@@ -1,0 +1,68 @@
+<!-- 
+    Leia o arquivo Módulo04.txt para ver mais sobre essas aulas.
+
+    Na aula 1 aprenderemos a criar um formulário básico, simples e que seus dados não são enviados a lugar
+algum pois algumas configurações não estão definidas para tal.
+    Outra coisa que nessa aula temos que entender é que essa forma simples de formulário, faz com que: 
+    Nome e Sobrenome não tenham ligação com a caixa de dados e muito menos ainda o botão de Enviar. PORÉM é importante para os mecanismos de buscas que haja ligação entre esses elementos (Nome e link da caixa de input) por exemplo.
+
+    Na aula 2 começamos usando o atributo para eliminar o auto completar text da caixa de input, e fazemos
+isso usando o parâmetro autocomplete com valor off. 
+    PARA enviar os dados, é necessário que haja uso de alguma linguagem de programação que pode ser ASP,
+JAVA, JAVA SERVIDOR, PHP entre outra; No nosso exemplo vamos usar PHP, pois é mas óbvia para esse fim, além de ser a linguagem mais popular; ENTÃO usaremos o atributo action="" (que é um ação que dispara um evento quando se clica no elemento de formulário, seja no botão ou nos inputs) e entre aspas é o nome do arquivo de Script da linguagem escolhida , nesse caso .php.
+
+    SAIBA: A diferença entre name e id; é que name é mais útil e usado para HTML e PHP , enquanto que id é
+usado para Scripts e mais importante para JavaScript. 
+OBS: Até podemos pegar o name com JAvaScript, porém o id é pego automáticamente.
+
+    OBS: Nessa aula mudamos nos inputs o id=nome para inome, e o id=sobrenome para isobrenome para melhor
+didática e organização do conteúdo.
+
+    Na aula 3 inicíamos aprendendo sobre o atributro method="" e seus parâmetros, e é preciso que se veja o
+texto sobre isso no arquivo Módulo.txt.
+    SOBRE o parâmetro POST , SAIBA QUE ele não quer dizer que seu site esteja segure e protegido por conta
+disso, pois assim os dados deixam de estarem visíveis na "URL" porém eles ainda estão em algum lugar; PARA ver esses dados, na página clique o botão direito do mouse ,tecle F12 ou segure Ctrl + Shift e tecle i para abrir o inspeconador (DEVTOOS), vá na opção (network que significa rede) , agora com network aberto digite algo nas caixas do formulário e envie; após o envio, PROCURE o arquivo que aparecerá na aba , que no nosso caso é o cadasro.php, clique nele e vá na opção Headers que é o cabeçalho de envios , os quais fica monitorando tudo que é enviado pelo PC; ENTÃO procure em Form Data pelos dados que nesse exemplo é o name: seguido do dado digitado pelo usuário e o sobrenome: seguido de algo digitado pelo usuário.
+    OBS: Caso não apareça os dados digitados pelo usuário na opção Headers, vá na opção Payload e veja em
+Form Data que dá no mesmo.
+     PARA PROTEGER esses dado é necessário criptografalos usando https (Outro protocolo de transmissão de
+dados) ao invés de usar o padrão http que está sendo usado nessa aula.
+
+    Quando usar GET ou POST?
+        Use GET para  dados que não são sensíveis , como por exemplo nome, quanto pesa, altura etc.
+        USE POST para esconder na URL dados como senhas, endereço, telefone etc.
+
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!--  A primeira coisa que devemos saber, é que um formulário tem que estar dentro da tag form da seguinte forma <form> EXEMPLO </form>. ENTÂO aprenderemos da forma mais básica, como montar um fomulário, mas SAIBA QUE nem sempre funcionar, quer dizer que é a melhor forma de fazer.-->
+    <h1>Meu primeiro formulário.</h1>
+    <!-- OBS existem ainda alguns atributos importantes para o formulário, que por enquanto não será necessário aprender, como por exemplo o action="", mas logo logo iremos entender na aula 2.
+        VEJA no arquivo Módulo04.txt um pouco sobre o uso do atributo (method="") e  para que serve os parâmetro GET e POST.-->
+    <form action="cadastro.php" method="POST" autocomplete="off">
+    <!-- Aqui usamos de ínicio dois parágrafos, e adcionamos inputs (OBS: Podemos digitar input e precionar ctrl para vermos a inúmeras opções e inputs diponíveis.) -->
+        <!-- Usamos o input:text , e é importante saber que toda caixa input de texto tem name e id, (Depois iremos aprender qual a diferença de nome e identificador na caixa de texto.). -->
+        <p><label for="inome">Nome:</label> <!-- Aqui envelopamos o Nome para dentro de <label> e seu parâmetro for (quer dizer que é para quem), faz com que esse elemento tenha a etiqueta (label) para alguém (for), e entre aspas usamos o (id) identificador a quem esse elemento tem ligação (nesse caso é o id=nome). OBS: O mesmo fazemos para o próximo input. OBS: Quando atribuimos esse parâmetro e para quem ele tem ligação, note que ao passar o mouse sobre o elemento (nome), a caixa de texto (campo de digitar) irá mudar levemente de cor mostrando que há uma ligação entre eles, AINDA facilita para o usuário que tem tela de celular pequena, pois ao clicar no texto , objeto para digitar irá ser selecionado, pois o label ampliou a areá de ligação entre eles.-->
+            <input type="text" name="nome" id="inome"><!-- Aqui usamos a (label) etiqueta que liga o <p>Nome ao <input> caixa de dados, para que os mecânismos de busca saibam que ambos tem ligação entre si.  -->
+        </p>
+        <p><label for="isobrenome">Sobrenome</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <!-- Aqui criamos um botão para exemplo de envio dos dados preenchidos no formulário, e usamos o input do tipo submimeter, que quer dizer enviar e sugere um atributo de valor value, que é o texto sugerido ao botão. (sem nada no value, o botão não terá texto.). -->
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>

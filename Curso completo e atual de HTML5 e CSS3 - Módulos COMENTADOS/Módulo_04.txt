@@ -525,3 +525,31 @@ dentro do iframe como vimos no exercício anterior.
 
 
 >>> {FIM DO CAPÍTULO 23} <<<
+
+
+
+>>> {INÍCIO DO CAPÍTULO 24} <<<
+
+Módulo 04, Capítulo 24, aula 1
+Vídeo:
+Como criar formulários com HTML5 - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=Wa1Ji2t2gmc&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=17
+2- https://youtu.be/Wa1Ji2t2gmc?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+*   IMPORTANTE:
+    "Nessa aula estudaremos sobre formuláros, e é importante que se tenha feitos todos o exercícios, desafios e mini-projetos que foram estudados até aqui; Pois nada adianta querer aprender sobre o assunto de formulários se não tiver aprende a base de tudo." 
+        Outra coisa impotante é: 
+            Para início de noção JavaScript é bom que se aprenda sobre formulários, pois a linguagem JavaScript na sua essência surgiu como uma linguagem script para ser aplicado junto com HTML e CSS apesar de existir hoje inúmeras aplicações para essa linguagem de programação.
+    Aprenderemos de fato o que é um formulário, que básicamente é um local onde os visitantes de um site (páginas) podem armazenar dados. Os formulários nem sempre são digitais, porém vamos aprender também sobre; De forma simples de entender podemos pegar de exemplo um formulário de papel que muitas vezes eram usados em promoções de lojas onde era necessário que o cliente colocasse seus dados para participar de uma promoção, que muitas vezes eram depositadas em urnas improvidas etc.
+
+    Foi usado de exemplo; o site da hostnet para vermos o preenchimento de um formulário para vermos como funciona parte de um formulário. 
+    $ Vale lembrar: 
+    {que para abrir conta no GitHub, foi preciso também preeencher um formulário. Pois então; É assim que é básicamente o que o usuário vê como formulário.}
+
+    POR FIM , no GitHub Desktop abrimos o Visual Studio Code; Na pasta de exercicios "Modulo-04" criamos o exercicio "ex25" e apartir do "form001.html" começamos a praticar.
+
+*   LEIA os comentários nos arquivos ".html".
+
+
+
