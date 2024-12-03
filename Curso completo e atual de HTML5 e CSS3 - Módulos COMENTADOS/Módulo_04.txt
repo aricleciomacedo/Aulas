@@ -553,3 +553,64 @@ Link:
 
 
 
+Módulo 04, Capítulo 24, aula 2
+Vídeo:
+Usar Label vai melhorar seus formulários - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=MqdSffM1HZc&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=18
+2- https://youtu.be/MqdSffM1HZc?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula vamos resolver alguns dos incovenientes de um formulário, como por exemplo: Os campos
+não terem ligação com seus nomes, já o de os dados não estarem indo para lugar algum será resolvido em aulas futuras, pois necessitamos de aprender outra linguagem.
+
+*     OBS: Ainda continuamos no exercício da pasta "ex025" no arquivo "form001.html". 
+    
+    1- Inicialmente desligamos o campo que autocompleta textos (memorizados) recém digitados e que servem de preenchimento rápido; Para isso usamos o atributo da seguinte forma <form autocomplete="off">.
+
+    2- PARA onde vai os dados?
+        2a- Normalmente os dados vão para um linguagem de programação.
+        2b- Para essa aula usaremos "PHP" que é mais popular.
+            Usamos então o atributo "action" para \tribuir o arquivo ao formulário, que receberá os dados por meio de uma ação que é disparada somente quando clicarem no botão(input) contendo a submissão que é a ( type="submit).
+
+* ATENÇÃO: Quando clicamos no botão "Enviar", o navegador responderá que o (arquivo não foi encontrado); Isso se dá pelo fato do formulário não ter as ligações devidas com o arquivo de linguagem de programção.
+    "Mas uma coisa podemos ver, que é o fato de o formulário estar enviando dados.".
+
+    3- Ligação do conteúdo externo(nesse caso o <p = Nome e sobrenome> ) com a caixa de digitação que neste caso é o (input=text).
+        3a- O que sabemos é que o navegador não é inteligente o suficiente para identificar por si só, que o texto (Nome e Sobrenome) tem ligação com os campos para digitar exatamente o que o texto pede; 
+            ESSA ligação deve ser feita por meio de "labels = Etiquetas" ou seja, quando por exemplo o <p Nome> tem a etiqueta para o campo de texto, então estamos informando ao navegador que eles tem um ligação entre si.
+        3b- SAIBA que para{linguagem HTML e PHP} a referência ao um elemeno por meio do {name=""} é mais importante do que por {id=""}, porém para a {linguagem JavaScript} o {id=""} é mais importante.
+            EM JavaScript até dá pra pegar "name", porém o "id" é quase que automático. 
+            
+    4- Envelopamos os textos contidos no páragrafos (<p>) com a tag <label>  e o (for="") é a identificação(ligação) do (id"") a que ele pertence.
+        $ OBS: NEsse exemplo nomeamos o id com (i) para dizer que é referente a este seletor; Mas se pode usar qualquer nome de "id". "Usamos assim para que por questão de dática, possamos entender a quem o "for="" pertence, pois para o for podemos atribuir o "name=" ou "id=" e optamos por atribuir o "id".
+        EX: 
+        <form action="cadastro-testing.php" autocomplete="off">
+            <p><label for=">inome<">Nome</label> 
+                <input type="text" name="nome" id=">inome<"></p>
+        </form>
+            "NOTE que ao definir os parâmetros que ligam o texto a caixa de digitação, na página do formulário no navegador, quando clicamos no exto Nome, a caixa de digitar irá ficar marcanda e o indiador de digitação começará a pisca idicando a ligação está funcionando."
+        $ OUTRA coisa, com essa ligação, poderemos notar que um ao passar o mouse sobre a palavra Nome, um efeito de escurecer um pousco a palavra, acontece.
+
+*   SAIBA que: 
+    " - Você está fazendo este fazendo este curso para se profissionalizar, para aprender a ser um profissional de construção de sites.
+      - Não se faz formulários sem relacionar(ligar) o <label> ao seu <input>(controle, elemento), porque senão dificulta os mecânismos de buscas(os Parces de html), o navegador para saber a qual caixa está relacionada com qual label."
+    
+*   Qual a utilidade de ao passar o mouse sobre o texto e um efeito acontecer escurecendo e marcando a caixa?
+    "O objetivo é criar uma relação entre texto e a caixa (palavra e objeto), e é útil para quando em telas de celulares que geralmente são mais estreitas e menores e dificuldade de apertar em cantos específicos se torna uma tarefa complicada; Então ao criar um <label>, criamos uma área maior de sensibilidade para a digitação do formulário. "
+
+* OBS: Uma das primeiras coisas que o professor faz, é clicar na palavra no formulário para saber se a ligação com a caixa está feita.
+
+    $ POR FIM, o professor digitou algo nos campos (caixas) do formulário e clicou "Enviar".
+        O erro apresentado foi (O arquivo não foi encontrado), e deixou a questão para resolver nas aulas seguintes.
+        ANTES:
+            NOTE que os dados enviados, ficaram no campo onde se digita URL no navegador;
+                "...Exercicios/Modulo-04/ex025/cadastro-testing.php?nome=ar&sobrenome=as"
+        VEJA que na URL da página o arquivo php foi chamado com a interrogação(?);
+        {    Essa interrogação divide a URL(que é endereço do arquivo que foi aberto, do que é parâmetros extras que foram enviados) , que no caso é: }
+                "nome=ar & sobrenome=as" que foram os dados digitados nas caixas do formulário.
+
+* PERGUNTAS que ficam para responder na próxima.
+    1- E se escrever SENHAS, elas ficarão ali na URL?
+    2- E se eu quiser esconder a senha (tirar os dados), para não ficar na URL, tem como?
+
+

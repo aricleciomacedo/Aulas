@@ -12,7 +12,7 @@
         }
         h1 {
             background: darkgray url("ico/favicon.ico") no-repeat left top/5%;
-
+            width: 33%;
             word-spacing: .7px;/* Espaço entre palavras */
             line-height: 77px;/* Expessura do background */
             letter-spacing: 1.7px;/* Espaço entre letras */
@@ -24,11 +24,25 @@
 </head>
 <body>
     <h1>Meu primeiro formulário</h1>
+    <h2>Aula 1</h2>
 
     <!-- Todo formulário deve estar entre <form> e </form> ; Quanto aos atributos, não vamos usar por enquanto. -->
     <form>
         <p>Nome <input type="text" name="nome" id="nome"></p>
         <p>Sobrenome <input type="text" name="sobrenome" id="sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    <h2>Aula 2</h2>
+
+    <!-- VEJA os comentários nos arquivos "form.html". 
+        1- autocomplete para ligar ou desligar o auto preenchimento do campo de texto.
+        2- Ligação do <input> ao <label> por meio do "id" ao atributo "for".
+    -->
+    <form action="cadastro-testing.php" autocomplete="off">
+        <p><label for="inome">Nome</label> 
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
