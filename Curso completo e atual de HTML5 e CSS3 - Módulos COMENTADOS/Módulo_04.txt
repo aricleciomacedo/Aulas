@@ -614,3 +614,38 @@ não terem ligação com seus nomes, já o de os dados não estarem indo para lu
     2- E se eu quiser esconder a senha (tirar os dados), para não ficar na URL, tem como?
 
 
+
+Módulo 04, Capítulo 24, aula 4
+Vídeo:
+Criando caixas de texto e de senha - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=SinNyasc-zU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=20
+2- https://youtu.be/SinNyasc-zU?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Começamos essa aula apartir da criação do arquivo "cadastro.php" para entendermos um pouco mais sobre
+envios de formulários; Neste caso nos deparamos com o envio de dados para o arquivo mesmo sem nada digitado nas caixas 
+de dados; Então para resolvermos isso, iremos entender um pouco mais sobre o assunto.
+    
+	PARA didática inserimos duas frases dentro do {arquivo PHP}, e enviamos os dados sem nada, e obrservamos que mesmo sem dado algum digitado, o envio acontece, então criamos o arquivo "fomr002.html" para aprendermos alguns atributos para melhorar esse Pequeno incongruente.
+
+{       OBSERVAÇÃO:     }       
+=   Caso seu navegador mostre um erro ao invés de mostrar a mensagem que foi digitado no arquivo PHP
+então arraste o "arquivo.php" para o navegador, isso fará o navegador abrir o arquivo e mostrará a mensagem desse exemplo que foi feito para vizualizar o envio de dados ; {DICA dada por flaviana...9 nos comentários}.
+
+        1- Aqui criamos um input de id =iusu par ter ligação com a label = iusu.
+        2- Usamos parágrafo, mas pode ser <div>, porém optamos pelo <p> por ter um melhor espaçamento.
+        3- Usamos o controle do tipo (password que muda as letras em bolinhas ou estrelinhas, a depender do navegador),e seu "id" é ligado ao "for" do {label}.
+        4- Criamos dois botões = "submit" para enviar dados que foram digitados na caixa e "reset" que limpa o que foi digitado na caixa.
+        
+        LEMBRANDO: Que o metódo "get" mostra a senha digitada, no campo da URL enquanto "post" Não.
+
+        5- Usamos o atributo "required" para determinar o envio de dados se o campo estiver preenchido e o atributo "minlength ou maxlength" para defenir o tamanho minimo ou máximo de caracteres dentro da caixa.
+        6- Definimos o atributo "size" para aumentar ou diminuir o tamanho da caixa.
+        7- Adicionamos o atributo "placeholder" para mostra um texto de fundo.
+        8 -Desligamos o autocompletador de texto usando o atributo "automplete = off" no <form>.
+            OBS: 
+                Saiba que é interessante usar o autocomplete "on" no <form> e também usar o metódo no <input> pois sugere mais opções além de "on e off", Veja por exemplo: nick-name = apelido, sex = sexo, tel = telefone e nesse exemplo usamos "username = usuário e current-password = senha"
+                    Use new-password para casos de gerir nova senha e current-password para senha atual.
+
+* IMPORTANTE:
+    "Leia os comentários sobre a aula nos arquivos html e php!"

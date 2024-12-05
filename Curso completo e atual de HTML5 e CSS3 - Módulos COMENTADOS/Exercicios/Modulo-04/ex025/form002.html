@@ -1,0 +1,61 @@
+<!-- 
+    A partir da aula 4.
+
+    DICA 1: Quando digitamos >>> <form>, o VSCode autocompleta com 3 opções; São elas = form, form:get e form:post; Coisas que já aprendemos usar na aula anterior; NESSE exemplo vamos usar o method get.
+     OBSS: No action damos (Ctrl + espaço) e escolhemos o arquivo "cadastro.php" criado no ínicio dessa aula.
+
+    DICA 2: Aprenderemos sobre o atributo >>> "required" = (requerido ou obrigatório) que tem como funcionalidade permitir o envio de dados se todos os campos obrigatórios estiverem devidamente preenchidos. VEJA então seu uso no <input> do tipo "password" rederente a <label> = Senha. ISSo faz a ativação de um Script que aciona o validador do Navegador por meio do JavaScript sem que seja necessário fazer códigos. 
+
+    DICA 3: Usamos o atributo >>> "minlength" (comprimento mínimo) para definir um número minímo de caracteres a serem digitados na caixa de dados e "maxlength" (comprimento máximo) para definir o máximo de caracters a serem digitados no campo de input; VEJA que entre aspas("" ), vai o valor que queremos em número.
+
+    ENTÃO: Com esses atributos definidos para o <input> , caso o minímo ou o máximo de caracteres não seja compatível, então o navegador mostrarará uma mensagem informando que algo está precisando ser revisto para que o envio dos dados possa ocorrer.
+
+    DICA 4: Usamos o atributo >>> "size" = (tamanho) para modificar o tamanho padrão da caixa de <input> atribuido pelo navegador, e isso fará com seja mostrado o número de caracteres específicos mesmo que um "maxlength" esteja definido. 
+        EXEMPLO se o (maxlenth for de 20 e o siza de 10), então o número de caracteres mostrado será de 10, criando assim um tipo de rolagem lateral dentro da caixa e isso não anulará o maxlength.
+            OU SEJA o >>> "size" não diz quantos caracteres serão aceitos, e sim quantos serão mostrados por vez.
+
+    DICA 5: Adcionamos o atributo >>> placeholder que é tipo uma dica em forma de texto dentro da caixa de <input>, e isso ficará como um texto ao fundo da caixa até que algo seja digitado na caixa.
+
+    DICA 6: O uso do >>> autocomplete foi ensinado na aula passada, e aqui usamos para melhor aprender sobre
+esse atributo que remove o auto-completador de textos para as caixas do <form> formulário. LEMBRE-SE que dentro do <form> são aceito apenas dois parâmetros o "on" e o "off" que ativa ou desativa o completador.
+    
+    AGORA para ter mais parâmetros do autocomplete, definimos ele no <form> como "on" e para os <inputs>
+podemos atribuir a opção conforme a caixa e os dados que serão digitados nela. 
+
+OPÇÕES para o autocomplete:
+    new-passwor d, nickname (apelido), organization, organization-title, pager, photo, postal-code, sex, shipping (envio), street-address, tel, tel-area-code etc... PARA VER mais, basta digitar autocomplete e o VSCode mostrará as opções, basta scrolar nas opções que aparecer.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <!-- LEMBRANDo que action é o nome pega o arquivo de linguagem de programação para manipular dados. -->
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <!-- OBS: Podemos usar <div> porém  por questão de espaçamentos, optmos pelo uso do parágrafo. -->
+        <p>
+            <!-- Aqui usamos a label for (para) iusu e será a referência ao id do input (caixa de dados).-->
+            <label for="iusu">Usuário</label>
+            <!-- LEBRANDO que name é importante para HTML, PHP e o id é importante para fazer relação com o label que faz a referência da caixa de dados com os textos fora (nesse caso) e serve também para o JavaScript.-->
+            <input type="text" name="isu" id="iusu" required minlength="5" maxlength="30" size="10" placeholder="Nome do Usuário" autocomplete="username"> <!-- Com o autocomplete on na tag <form>, aqui usamos o parâmetro usarname para mostrar as opções de auto completar texto nessa caixa. -->
+        </p>
+        <p>
+            <label for="isen">Senha</label>
+            <!-- Aqui usamos uma caixa de dados para pedir a digitação de senha, e esse controle do tipo passwor oculta o que está sendo digitado em forma de "*" Astériscos. -->
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="8" placeholder="mínimo 8 letras" autocomplete="current-password"><!-- Com o autocomplete on na tag <form>, aqui usar o parâmetro new-password  para pedir a senha ou nova-senha no campo, ou current-password para pedir a senha atual (cadastrada de fato) o qual está salva pelo navegador. -->
+        </p>
+        <!-- Criamos aqui os botões de envio. -->
+        <p>
+            <!-- Usamos o tipo subimit (submição) que aprendemos que é o parâmetro para enviar dados.-->
+            <input type="submit" value="Enviar">
+            <!-- Aqui criamos o botão reset, que limpa os dados digitados nas caixas. -->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

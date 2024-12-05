@@ -45,5 +45,59 @@
             <input type="text" name="sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
+
+    <!-- NEsta aula é ensinado sobre o "method" que recebe os parâmetros {GET ou POST} 
+        GET = Permite que os dados dos formulários, quando enviados, apareçam na URL.
+        POST = Não permite que os dados dos formulários, quando enviados, apareçam na URL.
+            OBS: Mesmo que não apareçam os dados na URL, MAS existe uma maneira de vermos os dados visiveis; Mesmo não estando na URL, os dados permanecem visiveis. 
+    -->
+    <h2>Aula 3</h2>
+    <p>Aqui usamos o "method = POST" para esconder na URL os dados enviados </p>
+    <form action="cadastro-testing.php" method="POST" autocomplete="off">
+        <p><label for="inome1">Nome</label> 
+            <input type="text" name="nome" id="inome1"></p>
+        <p><label for="isobrenome1">Sobrenome</label> 
+            <input type="text" name="sobrenome" id="isobrenome1"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    <!-- 
+        VEJA que criamos o "arquivo.php" e nele escrevemos um exemplo de mensagem de erro, para que o navegador não mostre a mensagem informando que o arquivo não existe.
+
+        1- Aqui criamos um input de id =iusu par ter ligação com a label = iusu.
+        2- Usamos parágrafo, mas pode ser <div>, porém optamos pelo <p> por ter um melhor espaçamento.
+        3- Usamos o controle do tipo (password que muda as letras em bolinhas ou estrelinhas, a depender do navegador),e seu "id" é ligado ao "for" do {label}.
+        4- Criamos dois botões = "submit" para enviar dados que foram digitados na caixa e "reset" que limpa o que foi digitado na caixa.
+        
+        LEMBRANDO: Que o metódo "get" mostra a senha digitada, no campo da URL enquanto "post" Não.
+
+        5- Usamos o atributo "required" para determinar o envio de dados se o campo estiver preenchido e o atributo "minlength ou maxlength" para defenir o tamanho minimo ou máximo de caracteres dentro da caixa.
+        6- Definimos o atributo "size" para aumentar ou diminuir o tamanho da caixa.
+        7- Adicionamos o atributo "placeholder" para mostra um texto de fundo.
+        8 -Desligamos o autocompletador de texto usando o atributo "automplete = off" no <form>.
+            OBS: 
+                Saiba que é interessante usar o autocomplete "on" no <form> e também usar o metódo no <input> pois sugere mais opções além de "on e off", Veja por exemplo: nick-name = apelido, sex = sexo, tel = telefone e nesse exemplo usamos "username = usuário e current-password = senha"
+                    Use new-password para casos de gerir nova senha e current-password para senha atual.
+     -->
+    <h1>Teste de formulário</h1>
+    <h2>Aula 4</h2>
+    <p>Aqui usando controles para adição de text, senha, envio de dados e outro para limpar dados digitados e alguns atributos para melhores informações de formulário.</p>
+    <form action="cadastro.php" method="POST" autocomplete="off">
+         <!-- Essa caixa é para digitar o nome. -->
+        <p>
+            <label for="iusu">Usuário</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" placeholder="nome do usuário" autocomplete="username">
+        </p>
+        <!-- Essa caixa digitar senha. -->
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" placeholder="mínimo 8 letras" autocomplete="current-password">
+        </p>
+        <!-- Botões -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
