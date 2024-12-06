@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <!-- Aqui usamos o parâmetro step="" para definir de quanto em quanto o número será modificado; nesse caso de mei em meio. 
+                O parâmetro value faz com que o valor entre aspas seja atribuído a caixa, eliminando assim o
+            placeholder, pois esse valor ficará como autopreenchido para o usuário aumentar ou diminuir.-->
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5" value="5" required>
+        </p>
+        <p>
+            <label for="imes">Período Letivo</label>
+            <!-- Aqui usamos um atributo especial para para gerar periodo letivo, e isso faz com a caixa dê as opções de escolher mês e digitar o ano desse período. 
+                Aqui o value autopreenche o campo com o mês e ano, mas o usuário poderá escolher outro.
+            OBS: Podemos fazer esse parâmetro de pegar mês e ano atual, mas existe Sripts de JavaSripts que já fazem isso para facilitar o trabalho, ao invés de fazermos tudo a mão.-->
+            <input type="month" name="mes" id="imes" value="2024-04">
+        </p>
+        <!-- Aqui usamos um exemplo de data completa, e a caixa tem as opções de dia, mês e ano. 
+        Adcionamos o value da data atual.-->
+        <p>
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="dia" id="idia" value="2024-04-16">
+        </p>
+        <!-- Aqui é o exemplo de caixa com hora. -->
+        <p>
+            <label for="ihora">Hora da Prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

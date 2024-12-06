@@ -649,3 +649,36 @@ então arraste o "arquivo.php" para o navegador, isso fará o navegador abrir o 
 
 * IMPORTANTE:
     "Leia os comentários sobre a aula nos arquivos html e php!"
+
+
+Módulo 04, Capítulo 24, aula 5
+Vídeo:
+Elementos number, month, date e time em formulários HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=7P22zubU6i8&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=21
+2- https://youtu.be/7P22zubU6i8?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+*   "LEMBRE-SE de commitar e dar pushing origin da aula no GitHub Desktop".
+
+    Nessa aula inicia com a criação do arquivo "form003.html".
+
+    1- No arquivo (html) usamos no <form> o "method = get"; Para vermos como funciona os dados sendo exibidos na URL.
+
+    Então usamos os atributos especiais para input do tipo número <input type =  numbre>, e são eles:
+                1- min = Define o número mínimo de números mostrados na caixa.
+                2- max = Define o número máximo de números msotrados na caixa.
+                3- placeholder = texto de fundo na caixa.
+                4- step = passo; De quanto em quanto uma nota vai mudando, e para notas de alunos é de meio em meio (0.5 + 0.5 + 1.5 etc); Com esse atributo na caixa ao clicar nas setinhas , então a nota aumenta ou diminui de 0.5 em 0.5. VEJA que o padrão é de um em um (1 em 1)!
+                5- required = Para preenchimento de campo obrigatório.
+                6- value = Para que o campo já venha com um número/texto preenchido.
+                    LEMBRANDO que ao usar esse atributo, o "placeholder" não aparece.
+
+                    + Controles especiais.
+            Input do tipo Mês: <input type = month> = Para adicionar mês e ano.
+            Input do tipo Data: <input type = date> = Para adicionar um dia, mês e ano com calendário.
+            Input do tipo Hora: <input type = time> = Para adicionar a hora.
+
+* AVISOS IMPORTANTES:
+    1-"Anote tudo! pratique! É necessário sempre estar treinando a criação de formulários, pois mais cedo ou mais tarde , poderá se usar estes tipos de controles."
+    2-"Caso o comportamento dos controles mudem, ou características de estilo sejam diferentes em relação as caixas; SAIBA que isto se deve aos navegadores e sistemas operacionais que não possuem os mesmos padrões."
+

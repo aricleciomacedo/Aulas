@@ -99,5 +99,64 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+
+
+    <h1>Teste de formulário</h1>
+    <h2>Aula 5</h2>
+    <p>Foi imaginado que se está fazendo um fomrulário para alunos.</p>
+    <form action="cadastro.php" method="GET" autocomplete="on">
+        <p>
+            <label for="inome-5">Nome</label>
+            <input type="text" name="nome" id="inome-5" required maxlength="30" placeholder="Nome completo" autocomplete="name">
+        </p>
+
+        <!-- 
+            
+            Aqui usamos os atributos especiais para input do tipo número <input type =  numbre>, e são eles:
+                1- min = Define o número mínimo de números mostrados na caixa.
+                2- max = Define o número máximo de números msotrados na caixa.
+                3- placeholder = texto de fundo na caixa.
+                4- step = passo; De quanto em quanto uma nota vai mudando, e para notas de alunos é de meio em meio (0.5 + 0.5 + 1.5 etc); Com esse atributo na caixa ao clicar nas setinhas , então a nota aumenta ou diminui de 0.5 em 0.5. VEJA que o padrão é de um em um (1 em 1)!
+                5- required = Para preenchimento de campo obrigatório.
+                6- value = Para que o campo já venha com um número/texto preenchido.
+                    LEMBRANDO que ao usar esse atributo, o "placeholder" não aparece.
+
+                    + Controles especiais.
+            Input do tipo Mês: <input type = month> = Para adicionar mês e ano.
+            Input do tipo Data: <input type = date> = Para adicionar um dia, mês e ano com calendário.
+            Input do tipo Hora: <input type = time> = Para adicionar a hora.
+
+            
+
+         -->
+        <p>
+            <label for="imedia">Média</label>
+            <!-- Usamos esse input especial para aceitar digitar somente números. -->
+            <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.5">
+        </p>
+
+        <!-- Caixa de Mês e Ano -->
+        <p>
+            <label for="imes">Período Letivo</label>
+            <input type="month" name="mes" id="imes" value="2020-07">
+        </p>
+
+        <!-- Caixa de Dia, Mês e Ano e mostra o calendário. -->
+        <p>
+            <label for="idia">Dia da Prova</label>
+            <input type="date" name="dia" id="idia" value="2020-07-14">
+        </p>
+
+        <!-- Caixa de Hora. -->
+        <p>
+            <label for="ihora">Hora da Prova</label>
+            <input type="time" name="hora" id="ihora">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>
