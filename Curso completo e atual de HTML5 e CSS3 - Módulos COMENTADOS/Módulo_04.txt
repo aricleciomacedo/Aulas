@@ -682,3 +682,23 @@ Link:
     1-"Anote tudo! pratique! É necessário sempre estar treinando a criação de formulários, pois mais cedo ou mais tarde , poderá se usar estes tipos de controles."
     2-"Caso o comportamento dos controles mudem, ou características de estilo sejam diferentes em relação as caixas; SAIBA que isto se deve aos navegadores e sistemas operacionais que não possuem os mesmos padrões."
 
+
+
+Módulo 04, Capítulo 24, Aula 6
+Vídeo:
+ECompatibilidade com navegadores - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=jX7v3lFdnvg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=22
+2- https://youtu.be/jX7v3lFdnvg?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula vemos como se comporta os controles em diferentes navegadores.
+    1- [Google Chrome Edge]
+    2- [Fire Fox]
+    3- [Opera]
+    4- [No Celular]
+    5- [No Safari(MAC com IOS)]
+    
+    É importante saber que nem todos os navegadores tem suporte para as caixas e configurações para os controles especiais;Como por exemplo no "safari" que agora só é disponível para {MAC com IOS} a caixa configurada para números onde o usuário digita HORA; também aceita letras e ainda envia conforme for digitado.
+
+*    OBSERVAÇÃO: 
+    "Dá pra resolver esses problemas de compatíbilidade dos controles, desenvolvendo nossos próprios controles por meio de JavaScrip, porém não é conteúdo para essas aulas."
