@@ -158,5 +158,50 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+
+    <!-- 
+        Módulo 04, Capítulo 24, aula 7
+        Vídeo:
+        Formulários com telefone e e-mail - @Curso em Vídeo HTML5 e CSS3
+        Link:
+        1- https://www.youtube.com/watch?v=SRMEHklQC4M&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=23
+     -->
+    <h1>Teste de formulário</h1>
+    <h2>Aula 7</h2>
+    <p>Veja no arquivo &lt;form004.html&gt; os comentários sebre (RegEx) = Regular Expression para atributo no input. <br> Exemplo: "^\(\d{2}\)\d{4,5}-\d{4,5}$" ; Aceita (00)00000-0000 como número de telefone.
+    </p>
+    <p>
+        &popf;&eopf;&sopf;&qopf;&uopf;&iopf;&sopf;&eopf; <br> Pesquise por "HTML5 telefone pattern" para aprender mais sobre o assunto.
+    </p>
+
+    <form action="cadastro.php" method="GET" autocomplete="on">
+        <fieldset><!-- Essa caixa tem bordas. -->
+
+            <!-- Adcionamos a tag <legend> que ficará como um título na parte superior da borda da caixa do <fieldset>.-->
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="Nome">Nome</label>
+                <input type="text" name="nome" id="inome-7" minlength="5" maxlength="20" required>
+            </p>
+    
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required>
+            </p>
+            
+            <!-- Atributo (pattern="") -->
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4,5}$" required placeholder="(xx)xxxxx-xxxx">
+                    <!-- pattern="^[0-9]{4}-[0-9]{4}$" ex: = 0000 - 0000 e "^\d{4,5}-\d{4,5}$" ex: = 12345 - 1234 ou 1234 - 12345 etc-->
+            </p> 
+            <!-- Estudar mais sobre RegEx =  Regular Expression.-->
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>

@@ -1,0 +1,46 @@
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <h2>Aula 7</h2>
+    <form action="cadastro.php" method="get" autocomplete="on"><!-- O atributo autocomplete aqui ativa, outras propriedades para os inputs -->
+        <!-- Aqui envelopamos as label´s e os inputs para a tag <fieldset> = (grupo de campos), e com isso é possível definir vários grupos de dados para o formulário.-->
+        <fieldset>
+            <!--  Título da fieldset -->
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" autocomplete="email" required><!-- Com o autocomplete ativo no <form>, aqui podemos usar outras propriedades desse atributo, que no caso é ="email", sugerindo e-mails; Isso também mostrará algo errado caso o usuário digite algo que não é e-mail. OBSERVAÇÃO: Esse atributo não verifica se e-mail é válido, mas tão somente se há um @ no texto digitado, podendo ser enviado, caso haja o arroba; Exemplo:   -->
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxxx-xxxx"><!-- Esse input, tel tem compatíbilidade adcional com aparelhos de dispositivos de telefones , que têm lista de contatos; então ele consegue puxar esse contatos.
+                    Existe um problema nesse input, é que ele não consegue filtrar muito e aceitar somente números de telefone, veja que podemos enviar letras e poucos números nesse input. 
+                Podemos definir um padrão com expressões regulares; 
+                OBS:não tem detalhes sobre esse assunto nesse curso, mas é preciso pesquisar e aprender sobre isso. Então estudo sobre Expressões regulares ou RegEx.
+                    Para resolver um pequena parcela do problema desse input, usam aqui a Expressão Regular HTML
+                simples para telefone que é: (pattern="") que recebe entre exclamação (^) e Cifrão ($) a devida expressão.
+                1- Para ler alguns digitos: \d ou [0-9] e entre chaves , vai o tanto de digítos que queremos {}-.
+                    Então nesse RegEx queremos números de 0 á 9 seguido de traço (-) e outra vez a mesma coisa; OU SEJA: 0123 - 0123 ou, 2344-5243
+                Caso seja digitado algo diferente, do requerido,  dará mensagem avisando sobre o erro. 
+    
+                2- Podemos sugerir 5 números iniciais - 4 números da seguinte forma: ^[0-9]{4,5}-[0-9]{4,5}$, ou ^\d{4,5}-\d{4,5}$
+    
+                3- Para sugerir código DDD da cidade: 
+                    Com parenteses ^\(\d{2}\)\d{4,5}-\d{4}$
+    
+                VALE LEMBRAR que podemos estudar diversos {patterns} HTML, mas é bom salientar que não são suficientes para bloquear erros de digitação por parte do usuário ; BOM e eficiente é usar PHP ou JavaScript para fazer essa validação mais eficiente.
+            -->
+            </p>    
+        </fieldset>

@@ -702,3 +702,60 @@ Link:
 
 *    OBSERVAÇÃO: 
     "Dá pra resolver esses problemas de compatíbilidade dos controles, desenvolvendo nossos próprios controles por meio de JavaScrip, porém não é conteúdo para essas aulas."
+
+
+
+Módulo 04, Capítulo 24, Aula 7
+Vídeo:
+Formulários com telefone e e-mail - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=SRMEHklQC4M&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=23
+2- https://youtu.be/SRMEHklQC4M?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    O início dessa aula se dá apartir da criação do arquivo "form004.html".
+        1- Aprendemos a usar duas caixas novas; São elas o (input especial para e-mail e telefone).
+            1a- Sobre <input = email> não podemos exigir muito dele do "e-mail", pois é algo bem simples.
+            2b- Sobre <input = tel> podemos usar alguns atributos para aceitar digitos especifico.
+        
+        2- Usamos no <input>" type = email" alguns atributos já ensinados nas aulas; Por
+            Exemplo: {type="" name="" id="" autocomplete="email" required}
+
+        3-  Usamos atributo  (pattern="") para o <input> do "type=tel" para limitar o campo de digitação a algo específico e adicionamos alguns valores que definem esse limite; Por    
+            Exemplo: "^[0-9]{4}-[0-9]{4}$"
+                3a- Aqui dizemos que a caixa aceitará quantro{4} números de 0 á 9 = [0-9]{4};
+                3b- Vai ter um traço (-) entre os números.
+                3c- E repete a aceitação de quatro{4} números de 0 á 9 = [0-9]{4}.
+            $ Podemos ainda fazer assim: 
+            Exem3lo: "^\d{4,5}-\d{4,5}$"
+                3d- Assim dizemos que a caixa aceitará de quatro á cinco números = "\d{4,5}";
+                3e- Vai ter o traço entre os números = "-"
+                3f- E repete a aceitação de quatro á cinco números.
+            $ Para números de telefone com (DDD):
+            Exemplo: "^\(\d{2}\) + o código anterior";
+                2g- Assim dizemos que o número aceito terá entre entre parenteses() dois números, que correspondem ao DDD da cidade.
+
+* LEMBRE-SE
+    "Teste se os códigos de (Expressões Regulares = RegEx) estão funcionando, e sempre verifique como no exemplo da aula se o ENVIO do formulário está sendo feito!"
+
+*   PESQUISE + 
+    "
+        Estude mais sobre (RegEx = Regular Expression) para entender e ficar mais fácil pra você.
+        SAiBA que até conseguimos usar atributo (pattern) para (input type email), e para isso;
+    Pesquise por "HTML5 telefone pattern" para comseguir alguns padrões.
+    "        
+    $ OBSERVAÇÃO:
+    "
+        Nem um deles é suficiente para filtrar dados errados; Portanto usar uma linguagem de programção como PHP ou JavaScript é a melhor solução para fazer essa validação.
+    "
+
+    4- $ PARA AJUDAR o usuário:
+        Podemos usar o atributo (placeholder="") para deixar um texto de fundo como exemplo.
+        EX: {placeholder="(xx)xxxxx-xxxx"}
+    
+    5- Podemos criar um "agrupamento de campos", e para isso selecionamos todos os campos no código <emmet abreviation> envelopar com abreviatura na tag <fieldset> = "Grupo de Campos".
+        VEJA que com isso, na página, os campos ficarão dentro de uma caixa com bordas.
+    
+    6- Adcionamos a tag <legend> que ficará como um título na parte superior da borda da caixa do <fieldset>.
+
+*   NÃO SE ESQUEÇA DE VER os comentários no arquivo index da aula!
+    
