@@ -808,3 +808,5 @@ https://youtu.be/iGDHFa4znHE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
                 ".../cadastro.php?sexo=F&esfut=on&esbas=on"
             ( As opções marcadas aparecem com "on" ou com seu o "value"corresponte, como é o caso da opção do sexo feminino que foi marcada, e seu value=F).
 
+
+
