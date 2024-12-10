@@ -1,0 +1,51 @@
+<!-- 
+    Essa aula inicia com a criação de formulário básico e a criação dos botões ( Que são tipos de controles).
+São eles:
+    ckeckbox e radio que tem como diferença a opção de marcação, onde radio é do tipo bolinha e aceita que
+um seja marcado pr meio do name que tem que ser iguais, enquanto o checkbox tem names e ids diferentes e aceita vários marcados.
+ -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fomulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" method="GET" autocomplete="on">
+
+        <!-- Aqui usamos o segundo tipo de controle ensinado na aula. 
+                OBS: É comum aprendiz cometer o erro de deixar esses botões com a marcação em ambos, fazendo
+            que se possa ,marcar os dois , quando na verdade, o usuário deveria ter apenas uma opção de escolha; ou seja quando marcar um , o outro tem que desmarcar, e vice-versa; PARA RESOLVER isso, usamos o mesmo name="" para ambos os radios 
+            VEJA que mudamos name="sxmasculino" e name="sxfeminino" para ambos name="sexo".
+                VALE LEMBRAR que isso não serve para botões do tipo ckecbox, como vimos abaixo.
+            ckecked foi usado para que a opção do botão e opção Feminino inicie já marcado, e o mesmo fizemos para o botão ckeckbox Futebol.
+        -->
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmasculino"> <label for="isxmasculino"> Masculino</label> <br>
+            <input type="radio" name="sexo" id="isxfeminino" checked> <label for="isxfeminino"> Feminino</label>
+        </fieldset>
+
+        <fieldset><!-- Com isso acionamos um tipo de borda em volta do contéudo, e a legenda fica a esquerda entre a linhas da borda.  -->
+            <legend>Esportes Favoritos</legend>
+        <!-- 
+                Usamos o botão do tipo checkbox para que o usuário marque ou desmarque suas escolhas. 
+        OBS: Por padrão o checkbox é alinhado um ao lado do outro, então optamos por usar <br> Break Hover para quebra linha e posicionar um a baixo do outro.
+            Fizemos a ligação entre botões checkboxes e os nomes , para que quando o usuário clicar no nome
+        da opção, a caixinha check seja marcada; então envelopamos o nome de cada opção de checkbox, dentro de uma label, que fará a ligação entre elementos por meio do id="".
+        -->
+            <input type="checkbox" name="esfutebol" id="iesfutebol" checked> <label for="iesfutebol">Futebol</label> <br>
+            <input type="checkbox" name="esbasquete" id="iesbasquete"> <label for="iesbasquete">Baquete</label> <br>
+            <input type="checkbox" name="esnatacao" id="iesnatacao"> <label for="iesnatacao">Natação</label> <br>
+            <input type="checkbox" name="estenis" id="iestenis"> <label for="iestenis">Tênis</label>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

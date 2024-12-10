@@ -759,3 +759,52 @@ Link:
 
 *   NÃO SE ESQUEÇA DE VER os comentários no arquivo index da aula!
     
+
+
+
+Módulo 04, Capítulo 24, Aula 8
+Vídeo:
+Checkbox e Radio button em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://youtu.be/iGDHFa4znHE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Nessa aula vamos aprender dois botões (tipos de controle) bem utilizados em HTML, que são os botões de (radios e o checkboxs).
+    
+    1- Criamos o arquivo "fomr005.html" e no código adicionamos dois botões que são os de Enviar, limpar;
+        1a- Usamos checkboxs para que  usuário marque seus favoritos.
+    
+    2- Criamos o <fieldset>
+*       OBS: 
+        " Se ainda não sabe o que é a tag <fieldset> volte a aula anterior para entender."
+            1a- Adicioamos uma <legend>
+            1b- Adicionamos alguns <input>´s sobre Esportes.
+            1c- "SE quizer deixar um input abaixo do outro, podemos usar a Quebra de Linha" = a tag <br>==== = (Brake Hover).
+
+    { LEMBRE-SE de relacionar os names e ids dos inputs corretamente para não dara erros. }
+        2- Envelopamos com a <label> os elementos de cada <input>, para que ao clicar por exemplo na palavra "Futebol" a caixa do checkbox fique marcada ou desmarcada; Fazemos isso porque muitas vezes o usuário de celular, que tem tela menor que PC, clica na palavra ao invés de clicar na caixinha de marcação.
+
+        3- Criamos outra <fieldset> com <legend> = Sexo.
+            3a- Adicionamos os <input>´s do tipo "radio".
+            "OBS: 
+                É bem comum que o aprendiz se depare com um pequeno probleminha que é:
+                    Quando marca uma caixinha do tipo radio, ela não desmarca clicando novamente; Diferente do checkbox que precisa apenas estar dentro da <fieldset> para funcionar. 
+            "
+            {   PRA RESOLVER    }
+            "
+                Atribuimos o mesmo (name) aos input´s do tipo radio, para que quando marcar um o outro se estiver desmarcado; Fique marcado.
+            "
+        
+        4- Para que uma caixinha venha já marcada use o atributo "checked" no <input>.
+            "OBS: Pode ser para qualqer tipo de input!"  
+            Ex: 1- <input tipo=radio checked>
+                2- <input tipo=checkbox checked>
+
+*           ATENÇÃO:  Podemos usar vários "checked" para botões do tipo "checkbox" mas não serve para botões                       tipo "radio".  
+
+        5- Atribumos (value) aos <input>´s do tipo "radio".
+
+        $ AGORA veja na URL do navegador os dados que são enviados:
+            Note que os dados que foram marcados aparecem por exemplo da seguinte maneira:
+                ".../cadastro.php?sexo=F&esfut=on&esbas=on"
+            ( As opções marcadas aparecem com "on" ou com seu o "value"corresponte, como é o caso da opção do sexo feminino que foi marcada, e seu value=F).
+
