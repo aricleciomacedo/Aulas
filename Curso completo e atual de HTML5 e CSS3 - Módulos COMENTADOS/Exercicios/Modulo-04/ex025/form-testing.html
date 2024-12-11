@@ -20,6 +20,12 @@
             border: 1px solid gray;
             border-bottom-left-radius: 20px;
         }
+
+        /* Muda a cor do elemento */
+        input[type="checkbox"]:not(:checked) + label::before,
+        input[type="radio"]:not(:checked) + label::before {
+        border-color: black;
+        }
     </style>
 </head>
 <body>
@@ -110,7 +116,7 @@
             <input type="text" name="nome" id="inome-5" required maxlength="30" placeholder="Nome completo" autocomplete="name">
         </p>
 
-        <!-- 
+        <!---->
             
             Aqui usamos os atributos especiais para input do tipo número <input type =  numbre>, e são eles:
                 1- min = Define o número mínimo de números mostrados na caixa.
@@ -233,6 +239,35 @@
             <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
             <input type="checkbox" name="esten" id="iesten"> <label for="iesten">Tênis</label> <br>
         </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <br>
+    <hr>
+    <!-- <h1>Teste de formulário</h1> -->
+    <h2 style="background-color: rgb(112, 112, 112); color: white; filter: drop-shadow(1px 4px 5px rgba(4, 29, 3, 0.925)); text-shadow: 1px 4px 5px black;">Aula 9</h2>
+    <p>Veja no arquivo &lt;form006.html&gt; os comentários sobre a aula. <br>
+        Aqui temos &lt;input&gt; tyep=color, range e file. <br>
+    </p>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <label for="inivel">Nível de Satistação: </label>
+            <input type="range" name="nivel" id="inivel" min="0" max="5" value="2">
+        </p>
+
+        <p>
+            <label for="ifoto">Foto do perfil:</label>
+            <input type="file" name="foto" id="ifoto">
+        </p>
+
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">

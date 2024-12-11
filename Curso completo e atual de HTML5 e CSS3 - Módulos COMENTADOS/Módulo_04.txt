@@ -810,3 +810,22 @@ https://youtu.be/iGDHFa4znHE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
 
 
 
+Módulo 04, Capítulo 24, Aula 9
+Vídeo:
+Elementos color, range e file em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=acOURIAlB1Q&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=25
+
+*       Última aula sobre <input´s>
+
+    1- Criamos o arquivo "form006.html".
+    2- Nesta aula usamos alguns tipos de controles; 
+        São eles "color; range; file".
+    3- No {type=color} podemos atribuir (value="") para dizer qual a cor inicial do botão.
+    4- No {type=range} atribuimos o (value="") para determinar o número inincial; Atribuimos (min e max) para definir qual o valor minímo e máximo que esse botão alcança.
+    5- No {type=file}, o usuário pode escolher de seus arquivos a imagem que deseja subir.
+        $ OBS:
+            No caso do (type=image), o usuário não pode subir de seus arquivos a imagem que ele quer, pois essa escolha é baseada no que o desenvolvedor pré-definiu.
+*       ATENÇÃO para esse tipo de controle!
+        " Este tipo de controle, que envia arquivos, não pode estar com (method=GET), o indicado é o (methd=post), porque assim os arquivos vão ser enviados."
+
