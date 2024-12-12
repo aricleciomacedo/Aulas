@@ -273,5 +273,59 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+
+    <br>
+    <hr>
+    <!-- <h1>Teste de formulário</h1> -->
+    <h2 style="background-color: rgb(112, 112, 112); color: white; filter: drop-shadow(1px 4px 5px rgba(4, 29, 3, 0.925)); text-shadow: 1px 4px 5px black;">Aula 10</h2>
+    <p>Veja no arquivo &lt;form007.html&gt; os comentários sobre a aula. <br></p>
+    <form action="cadastro.php" method="POST" autocomplete="on">
+        <p>
+            <label for="i-time">Times de Futebol</label>
+            <select name="Times-de-Futebol" id="i-time">
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Times do Rio de Janeiro">
+                    <option value="FLA">Flamengo</option>
+                    <option value="VAS">Vasco</option>
+                    <option value="BOT">Bota Fogo</option>
+                </optgroup>
+                <optgroup label="Times de São Paulo">
+                    <option value="COR">Corinthians</option>
+                    <option value="SFC">São Paulo</option>
+                    <option value="PAL">Palmeiras</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <p>Opções COM e SEM atributo "value" para &lt;option&gt;</p>
+            <label for="i-motos">MOTOS: </label>
+            <input type="text" name="motos" id="i-motos" list="list-motos">
+            <datalist id="list-motos">
+                    <!-- COM value -->
+                <option value="FAN08">Fan 125 2008</option>
+                <option value="CG 99">Titan 125 1999</option>
+                <option value="TO 92">Today 125 1992</option>
+                <option value="PROF">Pop 100 2007</option>
+                 <!-- SEM value -->
+                <option>Titan 150/160</option>
+                <option>Bros 125/150/150</option>
+                <option>Pop 100</option>
+                <option>CB-Twister 250</option>
+            </datalist>
+        </p>
+
+        <!-- Caixa para digitar mensagens(textos) -->.
+        <p>
+            <label for="imsg">Mensagem: </label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10">Deixe sua mensagem sobre Motos aqui...</textarea>
+        </p>
+
+        <!-- Botões -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
 </body>
 </html>

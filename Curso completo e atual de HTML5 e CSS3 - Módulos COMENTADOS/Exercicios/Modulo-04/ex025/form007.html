@@ -1,0 +1,85 @@
+<!-- 
+Módulo 04, Capítulo 24, Aula 10
+Vídeo:
+Select, datalist e textarea em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=PFGmSEj2wIo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=26
+ -->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+     <title>Formulário</title>
+ </head>
+ <body>
+     <h1>Teste de formulário</h1>
+     <form action="cadastro.php" method="POST" autocomplete="on">
+        <p>
+            <!-- Aqui fazemos a ligação entre o texto e o botão de exibição dos elementos abaixo. -->
+            <label for="iest">Estado</label>
+            <!-- Aqui criamos as opções para a lista, e será exibido um botão e uma caixa com essas opções.-->
+            <select name="estado" id="iest">
+
+                <option value="" selected>--- Escolha ---</option><!-- Essa opção ficará como padrão de exibição -->
+                
+                <optgroup label="Região Sudeste"><!-- Aqui criamos um tipo de Título para as opções. -->
+
+                    <!-- Cada <option> será exibido com um item de lista para escolhermos um. -->
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+
+        </p>
+
+        <!-- Aqui criamos uma lista de opções, e relacionamos esta lista com o atributo para tal, que o (list).
+                    OBS: O id da "datalist" deve ser igual ao atributo "list" do <input type=text>. -->
+        <p>
+            <p>Opções COM e SEM atributo "value" para &lt;option&gt;</p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <!-- OBS: Podemos usar o "value" na <option> ou não; Caso use, o valor será exibido na caixa de opções junto ao Texto da opção..  -->
+                    <!-- COM value -->
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+                 <!-- SEM value -->
+                <option>Administrador</option>
+                <option>Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+        </p>
+
+        <!-- Caixa para digitar mensagens(textos) -->.
+        <p>
+            <label for="imsg">Mensagem: </label> <br> 
+
+            <!-- 
+                Aqui definimos o tamanho do campo atribuindo os valores de cols e rows.
+            OBS: Essa caixa tem a opção de crescer ou diminuir largura e altura arrastando o mouse no canto inferior direito; Podemos também definir "with e height" com style in-line para deixar um caixa do tamanho que precisamos no projeto.
+                Importante que o atributo "method" seja =post; Pois assim tornamos os campos ilimitados para envio de dados.
+        -->
+            <textarea name="msg" id="imsg" cols="30" rows="10">Sua mensagem...
+            </textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+     </form>
+ </body>
+ </html>

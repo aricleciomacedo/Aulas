@@ -829,3 +829,77 @@ https://www.youtube.com/watch?v=acOURIAlB1Q&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 *       ATENÇÃO para esse tipo de controle!
         " Este tipo de controle, que envia arquivos, não pode estar com (method=GET), o indicado é o (methd=post), porque assim os arquivos vão ser enviados."
 
+
+
+Módulo 04, Capítulo 24, Aula 10
+Vídeo:
+Select, datalist e textarea em HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=PFGmSEj2wIo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=26
+
+    Ainda falando de formulário, vamos começar a ver alguns elementos fora d tag=<input>.
+    
+    1- Criamos o arquivo "form005.hmtl", e antes LEMBRE-SE de "commitar e dar push nos arquivos a aula anterior!"
+    2- Criamos um formulário simples, como temos feito nas aulas anteriores.
+    3- Usamos a tag=<select>; que também precisa dos atributos "name e id";
+        3a- Esse botão serve para mostrar uma lista.
+        3b- dentro de <select>...</select>, nós usamos a tag="option", e seu atributo "value" recebe o valor que corresponderá ao elemento da lista, que será exibida ao clicar no borão <select>.
+            OBS: Cada <option value=""> corresponderá a um "elemento" dessa "lista"
+                Ex:  <option value="MG">Minas Gerais</option> 
+    4- Podemos ainda usar a tag=<optgroup> para formar conjunto de opções para o <label>.
+        Quando usamos <optgroup>; Podemos informar um "label"(elemento/atributo); 
+*           NOTE que o atributo "label" é diferente da tag=<label> 
+        Agora o valor definido no (atributo=label) será como um "Título" para o conjunto de opções.
+
+        EX: 
+            <select name="num" id="id-num">
+
+                <optgroup label="Números ímpares">
+                    <option value="1">Um</option>
+                    <option value="3">Três</option>
+                </optgroup>
+
+                <optgroup label="Números pares">
+                    <option value="2">Dois</option>
+                    <option value="4">Quatro</option>
+                </optgroup>
+
+            </select>
+            "
+                OBS: O título para o conjunto de opções náo pode ser selecionado!
+            "
+
+    5- Podemos usar o atriburo "selected" para que a opção venha já pré-definida para aparecer primeiro.
+
+    $ ALGO bem comum é que o usuário deseja escolher uma opção, e esta coisa não está relacionada na lista de criada; ENTÃO o usuário precisa digitar no campo a sua escolha.
+        "PARA resolver isso:"
+    6- Criamos um um <label + input do type=text> e também o "pulo do gato" que é a tag <datalist>.
+        6a- Atribuimos o "id" da tag <datalist> que tem de ser o mesmo nome dado ao atributo (list="nome-exemplo").
+        6b- OBS: Usamos o atributo "list" no <input>.
+        6c- Adicionamos as tags=<option>, e seu "value" pode ser definido ou não:
+            Se definido, será exibido na caixa de opções e caso contrário não será exibido junto com texto.
+
+        "NOTE que ao passar o mouse sobre a caixa de digitar texto, irá aparecer uma setinha, e se clicar nela poderemos ver as opções."
+    
+    $ O bom de usar <option> com <datalist> é que o campo de opções/sugestões salva as opções digitadas pelo usuário.
+
+*       LEMBRE-SE de usar o "method=post" para tirara a limitação nos campos e digitar textos.  
+
+    7- Usamos a tag=<textarea> para criar um campo de digitar texto, para que o usuário possa digitar texto que preferir.
+        7a-  Nessa tag , definimos alguns atributos importantes.
+            /1 "name"
+            /2 "id"
+            /3 "cols"
+            /4 "rows"
+            $ LEMBRANDO que <textarea> não tem limite minímo e máximo de linhas e colunas; Na verdade "cols e rows" definem o tamanho da caixa de digitação de textos.
+
+
+*       LEMBRE-SE de usar o "method=post" para tirara a limitação nos campos e digitar textos.
+            /5 Podemos ainda adicionar texto entre barra da tag <textarea> para ficar como mensagem de exemplo no campo(caixa) de texto.
+            Ex: 
+                <textarea name="ex:" id="iex:" cols="30" rows="30">Sua mensagem aqui...</textarea> 
+                "
+                Apesar de não se usar muito, é algo que não fica muito legal em projetos, já que o usuário sabe que um campo para digitar algo, é uma caixa de textos.
+                "
+
+*       AGORA veja no "arquivo.html" mais comentrários sobre o assunto.
