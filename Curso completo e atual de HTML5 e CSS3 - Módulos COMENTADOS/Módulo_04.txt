@@ -903,3 +903,50 @@ https://www.youtube.com/watch?v=PFGmSEj2wIo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
                 "
 
 *       AGORA veja no "arquivo.html" mais comentrários sobre o assunto.
+
+
+
+Módulo 04, Capítulo 24, Aula 11
+Vídeo:
+Elemento output em formulários HTML - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=8b6K4UQDm7w&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=27
+
+    $VAMOS falar um prouquinho sobre PROGRAMAÇÃO!
+
+    1- Criamos o arquivo "form008.html"
+    2- Criamos um formulário simples com atributos 
+        /action="" para o arquivo  ".php"
+        /method=get
+        /autocomplete=on
+    3- Adicionamos os botões de "Enviar e Limpara".
+    4- Adicionamos duas/2 (caixas de entrada)="input" do /type="number" com os seguintes atributos:
+        /name
+        /id
+        /min  "Numero minímo aceito"
+        /max  "Número máximo aceito"
+        /required
+    5- Criamos uma/1 (caixa de saída) usando a tag <output>.
+        Essa caixa permite exibir resultado por meio do atributo "oninput"+/propriedade-de-programação; No caso, nesta aula, estamos usando /.innerHTML que pega os "id" dos elementos de <input> HTML e consegue manipular seu atibutos,valores e propriedades.
+
+        "SAIBA MAIS:"
+            Visão geral criada por IA
+
+            O ./innerHTML é uma propriedade do Element que permite definir ou obter o conteúdo "HTML" de um elemento. Ele é utilizado na manipulação do DOM (Document Object Model) através do "JavaScript". 
+            O /.innerHTML retorna todo o texto e o HTML de um elemento, incluindo as tags. Ele pode ser usado para inserir ou substituir um trecho de código HTML, permitindo manipular a estrutura do documento. 
+            O innerHTML pode ser usado para inserir tags, textos e imagens em uma página web, mas isso pode representar um risco de segurança. Para recuperar uma cópia correta do conteúdo de nós de texto, pode-se utilizar o Node.textContent. 
+            O innerHTML difere de outros métodos, como o /.innerText e o /.textContent, no retorno que fazem: 
+            /.innerText: Retorna somente o texto, sem formatações ou elementos HTML. 
+            /.textContent: Retorna o texto com formatações, mas sem os elementos HTML. 
+
+    6- Criamos o arquivo "form009.html" adicionamos um formulário simples, para aplicarmos o <input> type="range".
+        Como sabemos, o type="range" é um botão deslizante, que vai de (0 á 100); Mas podemos definir seu número minímo, máximo e um valor padrão na exibição, usando os atributos (min=""; max="" e value="").
+            1- Para mostra o valor onde o botão deslizante está, usamos a tag <output> com seu "id" apontado para o atributo JavaScript (oninput=""), que fará a captura do elemento por meio da propriedade /.innerHTML e dizer que o elemento type = {Number} será = o resultado do valor(.value) do elemento(id) que contém os dados de entrada, que no caso é o <input>.
+
+    7- Criamos o arquivo "form010.html"; Adcionamos o código base para formulario.
+        7a- Adicionamos uma caixa de entrada dados usando <input type=number> com os atributos para aceitar valores minímo e máximo usando (min="" e max=""); Também usamos o atributo (value="") para definir um valor padrão para ser exibido.
+        7b- Adicionamos uma caixa de saída de dados usando <output>, e seu "id" será usado no atributo (oninput="") do <input>.
+            No "oninput" adicionamos a q/função=calcIdade() e essa função é criada dentro do <script>.
+
+*       VEJA os comentários nos arquivos "form.html"
+

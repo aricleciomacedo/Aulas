@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <h2>Continuação Aula 11</h2>
+        <form action="cadastro.php" method="get" autocomplete="on">
+            <!-- Caixa de entrada de dados.-->
+            <p>
+                <label for="iano">Em que ano você nasceu? </label>
+
+                <!-- Aqui adicionamos a função "calcIdade" criada dentro do <script>. -->
+                <input type="number" name="ano" id="iano" min="1900" max="2020" value="" oninput="calcIdade()">
+            </p>
+    
+            <!-- Criamos aqui essa caixa de saída dados. -->
+            <p>
+                <label for="iidade">Sua idade é: </label>
+                <output id="iidade">0</output>
+            </p>
+
+            <!-- Botões -->
+            <p>
+                <input type="submit" value="Enviar">
+                <!-- Aqui usamos "oniclick" para pegar o id<output> e dizer que ele vai receber(=) o número(number) zero(0).
+                        Assim zeramos o valor na caixa <output> que por padrão definimos "zero (0)" -->
+                <input type="reset" value="Limpar" onclick="iidade.innerHTML = Number(0)">
+            </p>
+        </form>
+
+        <!-- 
+            Aqui usamos o JavaScript para criar a função que adicionamos ao <input>.
+        ENTÃO:
+            criamos a variável "let" nomeda de "atual" que vai receber "=" os valores da função "new Date()" que pega o ano completo por meio da função = ".getFullYear()" e fazemos com que o elemento pego pelo "id" que no caso é o <output> por meio da propriedade ".innerHTML" seja igual "=" ao número do ano atual ="Number(atual)" menos (-) o número do ano que a pessoa nasceu; Que no caso é o "value" contido no "id" da caixa de entrada de dados que pega o ano.
+        -->
+        <script>
+            function calcIdade () {
+                let atual = new Date().getFullYear()
+                iidade.innerHTML = Number(atual) - Number(iano.value)
+            }
+        </script>
+</body>
+</html>

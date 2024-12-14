@@ -327,5 +327,84 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+
+    <!-- Aula 11 -->
+    <br><hr><br>
+    <h2 style="background-color: rgb(112, 112, 112); color: white; filter: drop-shadow(1px 4px 5px rgba(4, 29, 3, 0.925)); text-shadow: 1px 4px 5px black;">Aula 11</h2>
+    <p>Veja no arquivo &lt;form008.html&gt; os comentários sobre a aula. <br></p>
+
+    <form action="cadastro.php" method="GET" autocomplete="on">
+         <!-- Caixas de entrada de dados. -->
+        <p>
+            <label for="in1">Número 1: </label>
+            <input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Número 2:</label>
+            <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(n1.value) + Number(n2.value)">
+        </p>
+
+        <!-- Caixa de saída de dados. -->
+        <p>
+            <label for="soma">Soma: </label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+        <!-- Botões -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar" onclick="isoma.innerHTML = Number(0)">
+        </p>
+    </form>
+
+    <br>
+    <h3>CONTINUAÇÃO</h3>
+    <p>Veja no arquivo &lt;form009.html&gt; os comentários sobre a aula. <br></p>
+    <form action="cadastro.php">
+        <p>
+            <label for="inum">Número: </label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </p>
+
+        <!-- Botões -->
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- Aqui com o "oniclik" o valor no <input range> reberá Number(0)
+            OBS: Se usar o valor =0, buga o range.
+            -->
+            <input type="reset" value="Limpar" onclick="ival.innerHTML = Number(0)">
+        </p>
+    </form>
+
+    <br>
+    <h3>CONTINUAÇÃO</h3>
+    <p>Veja no arquivo &lt;form010.html&gt; os comentários sobre a aula. <br></p>
+    <form action="cadastro1.php" method="GET" autocomplete="on">
+        <!-- Caixa de entrada de dados -->
+        <p>
+            <label for="iano">Em que ano você nasceu? </label>
+            <!-- Aqui adicionamos a função "calcIdade" criada dentro do <script>. -->
+            <input type="number" name="ano" id="iano" min="1900" max="2020" value="" oninput="calcIdade()">
+        </p>
+        <!-- Caixa de saída de dados -->
+        <p>
+            <label for="iidade">Sua idade é: </label>
+            <output id="iidade">0</output>
+        </p>
+
+        <!-- Botões -->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar" onclick="iidade.innerHTML = Number(0)">
+        </p>
+    </form>
+    <!-- Criando a Função "calcIdade" -->
+    <script>
+        function calcIdade () {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+    </script>
 </body>
 </html>

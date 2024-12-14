@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <h2>Continuação da Aula 11</h2>
+    <form action="cadastro.php" method="GET" autocomplete="on">
+        <p>
+            <label for="inum">Número: </label>
+            <!-- Aqui pegamos o número no "range" e exibimos por meio do <output>-->
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </p>
+        <!-- Botões -->
+        <p>
+            <input type="submit" value="Enviar">
+            <!-- Aqui usei o atributo "onclick" para voltar o "range" para o valor 5, que foi o número definido como padrão no <input type=range> -->
+            <input type="reset" value="Limpar" onclick="ival.innerHTML = Number(5)">
+        </p>
+    </form>
+</body>
+</html>
