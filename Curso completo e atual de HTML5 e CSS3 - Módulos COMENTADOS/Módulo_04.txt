@@ -38,7 +38,7 @@ https://www.youtube.com/watch?v=zHKHMmEG9vE&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     04:32 - Quantas aulas por semana?
     05:14 - Vamos começar
 
-{   Iníco do Capítulo 22}
+{   Iníco do Capítulo 22    }
 
 Módulo 04, Capítulo 22, Aula 1.
 Vídeo:
@@ -198,10 +198,8 @@ Como já vimos, quando criamos um <iframe> ele abre vázio na página, e somente
         OBS: POdemos adicionar imagens com o uso de aspas simples.
             "<iframe id="id_frame" name="frame_name" srcdoc="<h1>[usando HTML dentro de um parâmetro]</h1>"><img src='./imagens/imagem1.png'</iframe>"
 
+
             
-
-
-
 Módulo 04, Capítulo 22, Aula 6.
 Vídeo:
 Inconvenientes do iframe - @Curso em Vídeo HTML5 e CSS3
@@ -345,7 +343,6 @@ https://www.youtube.com/watch?v=dzhJsc1YszU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     09:40 - Seja avisado quando sair vídeo novo
     10:26 - Vamos criar um projeto profissional com iframe
 
-
 ===    {   FIM do Capítulo 22    }      ===
 
 <<<   {Início do Capítulo 23}       >>>
@@ -369,7 +366,6 @@ https://www.youtube.com/watch?v=hPze5_OYqBw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
         4a- NOTE que não há nada clicável no conteúdo que carrega dentro do celular, exceto o link no final do conteúdo colocado num botão  de cor vermelha e com texto "acesse".
     
 $    5- TODO esse projeto será ensinado durante este capítulo!
-
 
 
 Módulo 04, Capítulo 23, Aula 02
@@ -422,7 +418,6 @@ https://www.youtube.com/watch?v=HUnltyZ9Rxg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     3- AGORA acompanhe o vídeo aula e os comentários contidos nos arquivos para entender mais sobre o assunto.
 
 
-
 Módulo 04, Capítulo 23, Aula 04
 Vídeo:
 Posicionando o conteúdo do site - @Curso em Vídeo HTML5 e CSS3
@@ -454,6 +449,7 @@ https://www.youtube.com/watch?v=1kOhJr4DXIg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     {AGORA} acompanhe nos arquivos mais comentários sobre a aula.
 
 
+
 Módulo 04, Capítulo 23, aula 06
 Vídeo:
 Criando as páginas de cada rede social - @Curso em Vídeo HTML5 e CSS3
@@ -468,6 +464,7 @@ uma imagem em "tipo ripa" que será ensinado a fazer, em aulas próximas. PArA i
     $ AGORA acompanhe a aula para entender mais sobre o assunto.
 
 * NÂO esquece de atualizar repositório remoto do GitHub!
+
 
 
 Módulo 04, Capítulo 23, aula 07
@@ -615,6 +612,50 @@ não terem ligação com seus nomes, já o de os dados não estarem indo para lu
 
 
 
+Módulo 04, Capítulo 24, aula 3
+Vídeo:
+Métodos GET e POST para formulários - @Curso em Vídeo HTML5 e CSS3
+Link:
+1- https://www.youtube.com/watch?v=rcaXavXsWGA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=19
+2- https://youtu.be/rcaXavXsWGA?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
+
+    Na aula anterior aprendemos que nessa estrutura básica de formulário, quando digitamos por exemplo nome
+e sobrenome nos campos de dados e enviamos esses dados; os mesmo aparecem na barra de endereços(URL) do navegador e isso é padrão no envio de formulários e pode nos levar a pensar que seja uma falta de segurança.
+    MAs pode ser que seja uma falta de segurança, porém pode ser algo impensado por parte do programador, já
+que se pode desativar por meio de metodos(parâmetros) se queremos que não apareça os dados na URl.
+    Outra coisa que podemos entender é que formulários usam por padrão esse parâmetro de mostra na URL o
+que foi digitado dentro da caixa de dados, que é a caixa (q) que é caixa da solitação = \(quere); 
+OBSERVE depois do "search?" e depois e depois do "&oq" os dados digitados na caixa.
+VEJA por exemplo nessa URL pesquisada:  https://www.google.com/search?q=curso+em+video&oq=curso+em+video&aqs=chrome..69i57j0i512l8.5893j0j15&sourceid=chrome&ie=UTF-8
+
+    Agora para deixar formulários seguro é necessário estudos mais avançados em alguma linguagem de
+programação; Porém existem dois metódos simples para envio de formulário.
+    1º-  É esse padrão que não precisamos definir algo dentro da tag <form>, e ele se chama metódo (GET).
+PODEMOS ainda por meio do atributo "method" definido da seguinte dorma: <form method=""> e entre aspas duplas por meio do CTRL ver os parâmetros que são o padrão {GET} , o {POST} e o {dialog}.
+    "OBSERVAÇÃO: Na HTML tanto faz digitar GET ou get, pois só há diferença para a linguagem PHP."
+
+    2º- Esse é o metódo POST que faz com que esses dados não apareçam na URL da barra de endereços do
+navegador.
+
+    OBS: O method = GET, permite que o usuário compartilhe os dados da URL; Por exemplo se for compartilhar um pesquisa e na URL aparece todos os dados da seguinte forma: 
+        https://www.google.com/search?q=virus+e+bac%C3%A9ria&oq=virus+e+bac%C3%A9ria&aqs=chrome..69i57j0i13i512l9.4124j0j7&sourceid=chrome&ie=UTF-8
+
+    Então podemos por causa do GET, pegar apenas a pesquisa que ficou no Endereço URL; Como no exemplo abaixo, que ao ser compartilhada, basta o usuário copiar e colar no campo de URL, que vai aparecer exatamente o que foi pesquisado, sem que o usuário precise digitar novamente a pesquisa.
+        https://www.google.com/search?q=virus+e+bact%C3%A9ria+diferen%C3%A7a
+
+* SAIBA QUE:
+    1- Ao usar GET, é possível enviar apenas 3000Bytes, caso utrapasse os Bytes, então esse não é  melhor "method".
+        1a- 3000Bytes é aproximadamente 3000letras; Então o formulário inteiro usando method GET, não podem possuir mais de 3K_letras. 
+        1b- Não poderar usar para campos sensíveis, que utilizam senhas, cartões bancários etc; Não poderá usar para envio de fotos ou qualquer tipo de arquivo.
+    2- Usamos POST para envio de dados sensíveis e para que os dados não apareça diretamente na URL; "Porém se a questão é dados bancários, então é bom usar {https} que é de suma importâcnia aprender no futuro breve e urgente, no que diz respeito a proteção de dados}".
+        2a- Usamos para Posts com mais de 3K_letras.
+        2b- Usamos para envio de arquivos.
+
+
+ $   POR FIM veja no arquivo form001.html apartir da aplicação na tag <form>. 
+
+
+
 Módulo 04, Capítulo 24, aula 4
 Vídeo:
 Criando caixas de texto e de senha - @Curso em Vídeo HTML5 e CSS3
@@ -649,6 +690,7 @@ então arraste o "arquivo.php" para o navegador, isso fará o navegador abrir o 
 
 * IMPORTANTE:
     "Leia os comentários sobre a aula nos arquivos html e php!"
+
 
 
 Módulo 04, Capítulo 24, aula 5
@@ -799,7 +841,7 @@ https://youtu.be/iGDHFa4znHE?list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT
             Ex: 1- <input tipo=radio checked>
                 2- <input tipo=checkbox checked>
 
-*           ATENÇÃO:  Podemos usar vários "checked" para botões do tipo "checkbox" mas não serve para botões                       tipo "radio".  
+*           ATENÇÃO:  Podemos usar vários "checked" para botões do tipo "checkbox" mas não serve para botões tipo "radio".  
 
         5- Atribumos (value) aos <input>´s do tipo "radio".
 
@@ -905,7 +947,7 @@ https://www.youtube.com/watch?v=PFGmSEj2wIo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 *       AGORA veja no "arquivo.html" mais comentrários sobre o assunto.
 
 
-
+        
 Módulo 04, Capítulo 24, Aula 11
 Vídeo:
 Elemento output em formulários HTML - @Curso em Vídeo HTML5 e CSS3
@@ -950,3 +992,5 @@ https://www.youtube.com/watch?v=8b6K4UQDm7w&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 
 *       VEJA os comentários nos arquivos "form.html"
 
+
+>>> {FIM DO CAPÍTULO 24} <<<
