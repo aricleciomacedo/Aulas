@@ -994,3 +994,101 @@ https://www.youtube.com/watch?v=8b6K4UQDm7w&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 
 
 >>> {FIM DO CAPÍTULO 24} <<<
+
+
+
+
+
+
+
+>>> {ÍNICIO DO CAPÍTULO 25} <<<
+
+Módulo 04, Capítulo 25, Aula 01
+Vídeo:
+O que são Media Queries em CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=9rY8V2rvP2o&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=28
+
+    O que são Media Queries? Para que serve Media Query em CSS? Acompanhe esse vídeo até o final para responder a estas e muitas outras perguntas.
+
+    Download do arquivo de exercícios: https://github.com/gustavoguanabara/h...
+
+"Tópicos deste vídeo:"
+00:00 - Módulo 04, Capítulo 25, aula 01
+01:07 - Para que servem Media Queries?
+    Media Queries são módulos CSS que permitem-nos adaptar nosso site a diversos tamanhos de telas e dispositivos. Podemos dizer que a responsividade de nosso conteúdo depende muito desses módulos.
+02:40 - Já pensou em aprender Linux
+03:38 - Exemplos práticos de Media Queries em sites
+    Abrimos o /youtube.com e o /thenewyorktimes.com
+        A- "Vimos que podemos usar Media Queries para criar uma versão do site para impressões em papel, onde muitos elementos não fazem sentidos serem imprimidos, como por exemplo ícones de mídia social, menus, botões e algo do tipo."
+
+        B- Vimos que os sites se adaptam aos diversos tamanhos de telas, sem perder a responsividade e qualidade do conteúdo.
+
+        C- Vimos que o menus mudam de acordo com os dispositivos; Por exemplo em dispositivos móveis os menus ficam resumidos ou em formato hambúrguer.
+
+09:03 - Ajude o canal a crescer
+09:48 - Baixando os arquivos necessários
+    (Acessamos) o repositório principal do professor https://github.com/gustavoguanabara entramos no repositório de /html-css
+    (Acessamos) a pasta "exercicios" e na pasta "modulo-04/ex26" /Baixe o arquivo "pacote-imagens-cap25.zip"
+
+10:51 - Copiando as imagens para o local certo
+    (Criamos) a pasta "ex026" e dentro dela extraimos o "arquivo.zip" 
+11:57 - O que veremos a seguir
+
+
+Módulo 04, Capítulo 25, Aula 02
+Vídeo:
+Criando um site com versão para impressora - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=DMYlN21ajtU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=29
+
+    Na pasta "ex026" crie a pasta "mq001" e dentro dela criamos o arquivo "index.html".
+    
+    "Vamos simular um site de notícias."
+
+    1- Criamos o código base usando tags semânticas para o conteúdo.
+        EX: <header> para o cabeçalho, <menu> para o menu de navegação, <main> para o conteúdo principal, <article> para o artigo, e bem assim as demais tags que podemos ver no arquivo "index".
+    
+    $    FEITO isso agora vamos aplicar a Media Kery no site.
+
+    "Antes podemos ver usando o atalho Ctrl + P no navegador, que na versão de impressora, que o conteúdo é impresso exatamente como aparece no site"
+    2- Mas o que queremos é que alguns elementos que não faz sentido algum, ser impresso, como no caso do menu, não apareça na versão para impressão; Também notamos que o mesmo tipo de letra para ambos dificulta a leitura se a letra não for adequada para impressão, pois essa vai ser lida em papel e não em tela.
+
+    3- ENTÃO no <head> , lodo abaixo do <title> criamos os links para os estilos de cada versão.
+        3- No link:css aribuimos a que se refere o estilo, no caso para tela usamos o atributo /media="screen" que é para a tela, e /media="print" para impressora; Mas se quisermos para ambos, podemos atribuir o /media="all".
+            $ VEJA no arquivo index, as partes comentadas. 
+
+*       SOBRE a propriedade "media=screnn e media=print" em CSS:
+        As propriedades @media screen e @media print em CSS são usadas para definir estilos diferentes para cada tipo de mídia:
+        @media screen: Define o CSS para telas
+        @media print: Define o CSS para impressão 
+        A regra @media é uma técnica de CSS3 que permite aplicar estilos diferentes para diferentes dispositivos ou tamanhos de tela. Ela funciona da seguinte forma:
+        A regra @media verifica os tipos de dispositivos cobertos pelas media types e a capacidade deles
+        A regra @media efetua consultas ao dispositivo que o usuário está usando para acessar o site
+        A regra @media especifica o estilo desejado conforme as características do dispositivo consultado 
+        A regra @media permite: 
+        Aplicar estilos diferentes para diferentes dispositivos ou tamanhos de tela 
+        Executar testes, como se a tela do usuário é maior que uma certa largura, ou uma certa resolução 
+        Estilizar a página de acordo com as necessidades do usuário 
+
+    "
+        A proriedade media em CSS definem midia e determina quando as regras do CSS devem ser utilizadas. O valor da propriedade deve ser um query de midia.
+        A regra @media é usada para aplicar estilos diferentes para diferentes dispositivos ou tamanhos de tela. Por exemplo, para definir um tamanho de tela de, no máximo, "700px" de largura, você usaria o parâmetro "max-width: 700px" na sua regra @media. 
+        Os media queries são uma técnica CSS que permite tornar um site responsivo, ou seja, adaptável a diferentes tamanhos de tela. 
+        Alguns exemplos de media features são: prefers-color-scheme, prefers-reduced-motion, inverted-colors. 
+        Os media features são usados para identificar características do dispositivo e preferências do usuário. 
+    "
+        
+    4- Criamos portanto a pasta "estilos", e os respectivos estilos de /tela e /impressora que são os arquivos css "tela.css" e "impressora.css".
+
+* Na configuração css da Media Query de impressora, vá conferindo se está ficando bom, usando o atalho de impressão do navegador e atualizando.
+
+    5- Existem limitações para "media=types" que podem ser "type = screen ou print"; No caso de "screen" é referência a toda tela, seja dispositivo móvel ou telas maiores como de tv´s.
+        É POR ISSO que existem além das "media=type", as "media=picture".
+            5a- As (media=picture) nos possibilita a configurar tamanhos e versões diferentes para determinados tamanhos de telas, como vimos nos exemplos anteriores, onde por exemplo o site /youtube se adapta em telas de "celular, tablet, computador e até TV."
+
+*   VEJA MAIS na próxima aula.
+
+
+
+

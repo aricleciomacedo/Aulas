@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* Estilo para impressoras */
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* Removemos da impressão esses elementos */
+ menu {
+    display: none;
+ }
+
+ /* Assim garantimos que a folha de impressão tenha sua largura totalmente ocupada pelo conteúdo. */
+article {
+    width: 100%;
+}
+ /* Adicionamos esse elemento ao contéudo. */
+ article::after {
+     content: 'Esse artigo foi impresso através do site www.cursoemvideo.com';
+ }
+
+
