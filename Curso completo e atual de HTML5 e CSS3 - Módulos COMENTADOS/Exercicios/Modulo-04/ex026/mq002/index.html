@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ptr-b">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Query</title>
+    <link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon">
+
+    <!-- Aqui criamos estilos para todos os tipos de dispositivos; Seja type=sreen ou print. -->
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+
+    <!-- Aqui usamos media type=screen  e"and" media (features=orientation:portrait) para aplicar estilo, quando a largura de tela do dispositivo for menor que a altura. -->
+    <link rel="stylesheet" href="estilos/retrato.css" media="sreen and(orientation:portrait)">
+    <!-- Aqui usamos media type=screen  e"and" media (features=orientation:landscape) para aplicar estilo, quando a largura de tela do dispositivo for maior que a altura.-->
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and(orientation:landscap">
+
+    <!-- OBS: Quano informamos media=tipes, podemos também informar media=features.
+            É indicado que o media=feature fique entre parênteses enquanto que o media=type não.
+        O que o media=feature  básicamente faz é dar um estilo adicional ao estilo principal, que está com media=type="all -->
+
+</head>
+<body>
+    <!-- 
+        SAIBA que celulares e alguns monitores possuem "orientação", que é um "acelerômetro" que identifica (de forma simplificada : Quando o dispositivo está em-pé ou deitado).
+        Essa orientação é feita pegando a largura em relação a altura.
+            Se a largura está menor que a altura, dizemos que ele está = portrait = Em-pé
+            Se a largura está maior que a altura, dizemos que ele está = landscap = Deitado
+        ENTÃO nosso objetivo é adaptar o site a dispositivos que alternem entre deitado ou em-pé.
+     -->
+
+    <h1>Mude a orientação do seu dispositivo</h1>
+</body>
+</html>

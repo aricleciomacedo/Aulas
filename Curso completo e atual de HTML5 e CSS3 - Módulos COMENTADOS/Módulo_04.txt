@@ -1084,11 +1084,90 @@ https://www.youtube.com/watch?v=DMYlN21ajtU&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 * Na configuração css da Media Query de impressora, vá conferindo se está ficando bom, usando o atalho de impressão do navegador e atualizando.
 
     5- Existem limitações para "media=types" que podem ser "type = screen ou print"; No caso de "screen" é referência a toda tela, seja dispositivo móvel ou telas maiores como de tv´s.
-        É POR ISSO que existem além das "media=type", as "media=picture".
-            5a- As (media=picture) nos possibilita a configurar tamanhos e versões diferentes para determinados tamanhos de telas, como vimos nos exemplos anteriores, onde por exemplo o site /youtube se adapta em telas de "celular, tablet, computador e até TV."
+        É POR ISSO que existem além das "media=type", as "media=features".
+            5a- As (media=features) nos possibilita a configurar tamanhos e versões diferentes para determinados tamanhos de telas, como vimos nos exemplos anteriores, onde por exemplo o site /youtube se adapta em telas de "celular, tablet, computador e até TV."
 
 *   VEJA MAIS na próxima aula.
 
 
+Módulo 04, Capítulo 25, Aula 03
+Vídeo:
+Múltiplas Media Features com CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=VGD5Uy1C8Cw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=30
 
+    Nesta aula falaremos de um complemento de "Media Query", que são as "Media Features".
 
+* O que é Media Feature?
+    $Visão geral criada por IA
+    
+    A- As media features no CSS servem para identificar características de um dispositivo e preferências do usuário, permitindo que o site ou aplicação se adapte: 
+        /a- Testar condições para aplicar regras CSS 
+        /b- Atribuir estilos diferentes para diferentes dispositivos ou tamanhos de tela 
+        /c- Aplicar um CSS seletivamente para estilizar a página de acordo com as necessidades do usuário 
+    B- As media features são características específicas das mídias, como:
+        /a- Tamanho de tela
+        /b- Resolução
+        /c- Orientação
+        /d- Pixel-density
+        /e- Aspect-ratio
+        /f- Width
+        /g- Height
+        /h- Color
+        /i- Monochrome. 
+    C- Para definir um tamanho de tela de, no máximo, "700px" de largura, você usaria o parâmetro "max-width: 700px" na sua regra @media. 
+    Alguns exemplos de media features são: 
+        /a- prefers-color-scheme
+        /b- prefers-reduced-motion
+        /c- inverted-colors. 
+
+      "LEMBRE-SE de atualizar o repositório GitHub."
+
+        $ Saiba que existem vários "types" de Media Query, como por exemplo:
+            /sreen para tela
+            /print para impressora
+            /      para impressora de brile
+        
+*   Existem vários tipos de media query, incluindo:
+
+Visão geral criada por IA
+
+    /all: O valor padrão, aplicável a todas as saídas de mídia.
+    /screen: Aplicável a telas.
+    /print: Aplicável a material impresso, útil para remover interações, links e navegações que não serão           visíveis no documento impresso. 
+    /speech: Aplicável a sintetizadores de voz. 
+    /Tv: Aplicável para adequar o layout da página para a tela de uma smart tv.
+    /Projection: Aplicável quando os formatos de apresentação PPS são solicitados.
+    /Tty: Aplicável para dispositivos móveis com display limitado. 
+        
+    Além dos tipos de media query, também é possível usar operadores lógicos para compor media queries complexas. 
+    Os operadores lógicos são:
+        /and: Combina múltiplas media features em uma mesma media query.
+        /not: Nega uma media query inteira.
+        /only: Aplica um estilo apenas se a query inteira for igual.
+    As media queries são uma ferramenta que permite adaptar o layout de um site para diferentes tamanhos de tela, exibir ou ocultar conteúdo, e definir estilos diferentes para telas com suporte a cores limitado ou de alta resolução.
+
+    1- SAIBA que não existem "Media Types" para definir o tamanho de tela de por exemplo um smart-watch que é bem pequeno, ou até mesmo a telas de uma smart-tv que é bem grandona; Mas existem as "Media Features".
+        OBS:
+            Media Query = Media types + Media features.
+        Media type = Tipos de mídia.
+        Media features = Caracteristícas de mídia.
+
+    2- AGORA vamos usar o "Media type=all", e para isso criamos o a pasta "mq002" e dentro dela , criamos o arquivo "index.html" do segundo(2°) exercício .
+        A- Criamos  o código base.
+
+*   Falando sobre acelerômetro em dispositivos com "orientação de tela".
+Visão geral criada por IA
+    O acelerômetro é um sensor que mede a aceleração de um objeto, ou seja, a taxa de variação da velocidade. Nos celulares, ele é usado para detectar movimentos em todas as direções e interagir com aplicativos e a interface do aparelho. 
+    O acelerômetro funciona da seguinte forma:
+    Quando o dispositivo é acelerado, a massa interna se desloca.
+    Esse deslocamento é convertido em sinais elétricos.
+    O processador do dispositivo interpreta os sinais elétricos e traduz as variações de aceleração. 
+    O acelerômetro é usado em diversos dispositivos, como: Celulares e tablets Android, Câmeras digitais, Notebooks, Airbags de carros, Tênis. 
+    Nos celulares, o acelerômetro é usado para:
+    Detectar a inclinação do aparelho 
+    Mudar a interface do aparelho 
+    Interagir com aplicativos de acordo com os movimentos 
+    Ajustar a orientação do que é mostrado na tela, como em jogos 
+
+    $ AGORA VEJA NOS ARQUIVOS MAIS COMENTÁRIOS SOBRE ESTA AULA.
