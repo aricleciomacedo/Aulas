@@ -1150,8 +1150,8 @@ Visão geral criada por IA
     1- SAIBA que não existem "Media Types" para definir o tamanho de tela de por exemplo um smart-watch que é bem pequeno, ou até mesmo a telas de uma smart-tv que é bem grandona; Mas existem as "Media Features".
         OBS:
             Media Query = Media types + Media features.
-        Media type = Tipos de mídia.
-        Media features = Caracteristícas de mídia.
+            Media type = Tipos de mídia.
+            Media features = Caracteristícas de mídia.
 
     2- AGORA vamos usar o "Media type=all", e para isso criamos o a pasta "mq002" e dentro dela , criamos o arquivo "index.html" do segundo(2°) exercício .
         A- Criamos  o código base.
@@ -1171,3 +1171,20 @@ Visão geral criada por IA
     Ajustar a orientação do que é mostrado na tela, como em jogos 
 
     $ AGORA VEJA NOS ARQUIVOS MAIS COMENTÁRIOS SOBRE ESTA AULA.
+
+
+Módulo 04, Capítulo 25, Aula 04
+Vídeo:
+Seguindo a orientação do dispositivo - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=IRCDwdZLlX4&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=31
+
+*   CONTINUAÇÃO do projeto.
+    1- Iniciamos esta aula configurando o css de estilo gerais.
+        Para testes, definimos cores de fundos diferente para cada "Media Feature" e também para o "media type".
+        1a- Verificamos no navegador se está funcionando.
+    2- Adicionamos aos "Media Features" uma imagem de fundo para o "body", definindo também sua posição de fundo.
+    3- Definimos no "estilo gerais", o tamanho de fundo e a repetição de fundo, para melhor posicionar a imagem.
+
+    $ POR FIM Commitamos o repositório local e punshig
+    

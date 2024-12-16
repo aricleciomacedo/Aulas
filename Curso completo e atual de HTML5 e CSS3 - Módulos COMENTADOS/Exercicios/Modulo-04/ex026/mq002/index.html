@@ -1,3 +1,12 @@
+<!-- 
+Módulo 04, Capítulo 25, Aula 03, 04
+Vídeo:
+03- Múltiplas Media Features com CSS - @Curso em Vídeo HTML5 e CSS3
+04- Seguindo a orientação do dispositivo - @Curso em Vídeo HTML5 e CSS3
+Link:
+03- https://www.youtube.com/watch?v=VGD5Uy1C8Cw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=30
+04- https://www.youtube.com/watch?v=IRCDwdZLlX4&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=31
+ -->
 <!DOCTYPE html>
 <html lang="ptr-b">
 <head>
@@ -11,14 +20,32 @@
     <link rel="stylesheet" href="estilos/style.css" media="all">
 
     <!-- Aqui usamos media type=screen  e"and" media (features=orientation:portrait) para aplicar estilo, quando a largura de tela do dispositivo for menor que a altura. -->
-    <link rel="stylesheet" href="estilos/retrato.css" media="sreen and(orientation:portrait)">
+    <link rel="stylesheet" href="estilos/retrato.css" media="screen and (orientation: portrait)">
     <!-- Aqui usamos media type=screen  e"and" media (features=orientation:landscape) para aplicar estilo, quando a largura de tela do dispositivo for maior que a altura.-->
-    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and(orientation:landscap">
+    <link rel="stylesheet" href="estilos/paisagem.css" media="screen and (orientation: landscape">
 
-    <!-- OBS: Quano informamos media=tipes, podemos também informar media=features.
+    <!-- OBS: Quadno informamos media=tipes, podemos também informar media=features.
             É indicado que o media=feature fique entre parênteses enquanto que o media=type não.
         O que o media=feature  básicamente faz é dar um estilo adicional ao estilo principal, que está com media=type="all -->
 
+        <!-- Aqui importamos a font "Playwrite Portugal Guides" 
+            name font =  "Playwrite PT Guides" e alternativa = cursive;
+            font-weight =  400
+            font-style = normal
+}
+        -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PT+Guides&display=swap" rel="stylesheet">
+
+        <!--  Aqui importamos a font "Rye" 
+            name font =  "Rye" e alternativa = serif;
+            font-weight =  400
+            font-style = normal
+        -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 
