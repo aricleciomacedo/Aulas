@@ -23,7 +23,7 @@
         <div>
             <h2>Calcule aqui a Circunferência de um Bolo</h2>
             <p>
-                <label for="in1">Qual o diâmetro do Bolo em cm? </label>
+                <label for="in1">Qual o diâmetro do seu Bolo em cm? </label>
                 <input type="number" name="n1" id="in1" min="0" max="50" required oninput="icirc.innerHTML = Number((2*3.14159)*(in1.value/2)) /* + Number(0) */">
             </p>
             <!-- <p>
@@ -37,7 +37,6 @@
         
             <!-- Botões -->
             <p>
-                <input type="submit" value="Enviar">
                 <!-- Aqui o "oniclick" para zerar o "output". -->
                 <input type="reset" value="Limpar" onclick="icirc.innerHTML = Number(0)">
             </p>
