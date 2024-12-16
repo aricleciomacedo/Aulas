@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Testando Cálculo</title>
+    <style>
+        body > h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Saiba a circunferência de seu Bolo</h1>
+
+    <form style="display: flex; align-items: center;" action="" method="GET" autocomplete="on">
+        <!-- <img width="100" src="https://topoecorte.com.br/wp-content/uploads/2021/02/diametro-1.jpg" alt="diâmetro-bolo"> -->
+        <div>
+            <img width="400" src="diametro.png" alt="diâmetro-bolo">
+        </div>
+        <div>
+            <h2>Calcule aqui a Circunferência de um Bolo</h2>
+            <p>
+                <label for="in1">Qual o diâmetro do Bolo em cm? </label>
+                <input type="number" name="n1" id="in1" min="0" max="50" required oninput="icirc.innerHTML = Number((2*3.14159)*(in1.value/2)) /* + Number(0) */">
+            </p>
+            <!-- <p>
+                <label for="in2">Número 2: </label>
+                <input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+            </p> -->
+            <p>
+                <label for="soma">Circunferência em cm: </label>
+                <output name="soma" id="icirc" style="background-color: rgb(62, 62, 63); color: white;">0</output>
+            </p>
+        
+            <!-- Botões -->
+            <p>
+                <input type="submit" value="Enviar">
+                <!-- Aqui o "oniclick" para zerar o "output". -->
+                <input type="reset" value="Limpar" onclick="icirc.innerHTML = Number(0)">
+            </p>
+        </div>
+    </form>
+
+    <script src="form008-circunferencia.js"></script>
+</body>
+</html>
