@@ -1255,5 +1255,9 @@ https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
         "LEMBRANDO que essas imagens foram retiradas do site: pexels, otimizadas no Gimp."
         $ OBS:
             A imagem mais pesada de nosso projeto possui 367kb, então aconselhamos que para seus projetos, tome bastante cuidado com qualidade de imagens que pesam no site.
-            
+
     3- "ATUALIZAMOS O REPOSITÓRIO REMOTOS DO GITHUB".
+
+    4- Na pasta do exercício, criamos o arquivo "index.html" com o código base.
+    
+    5- "Demos mais um Commit e Pushing origin".
