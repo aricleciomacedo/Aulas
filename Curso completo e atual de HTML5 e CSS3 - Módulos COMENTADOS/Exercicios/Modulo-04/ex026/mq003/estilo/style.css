@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* Declarações gerais */
+
+/* Aqui, ao invés de deixarmos o estilo gerais solto, optamos por adicioná-lo a essa regra@ que também dá no mesmo. */
+@media all {
+    * {
+    margin: 0px;
+    padding: 0px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Rye"/* "Playwrite PT Guides" */, cursive;
+    font-weight: bolder;
+    font-style: normal;
+    }
+    
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #233eff;/* Azul curso em vídeo. */
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    h1 {
+        color:white;
+        text-shadow: 2px 2px 0px #1526a7;
+        padding: 10px;
+    }
+    h1 span {
+        font-family: "Playwrite PT Guides", cursive;
+        font-weight:400;
+        font-style: oblique;
+    }
+}
+
+/* Declarações retrato */
+@media screen and (orientation: portrait){
+    body {
+        background-image: url(../imagens/cev-portrait.jpg);
+        background-position: center bottom;
+    }
+}
+/* Declarações paisagem */
+@media screen and (orientation: landscape){
+    body {
+        background-image: url(../imagens/cev-landscape.jpg);
+        background-position: left bottom;
+    }
+}

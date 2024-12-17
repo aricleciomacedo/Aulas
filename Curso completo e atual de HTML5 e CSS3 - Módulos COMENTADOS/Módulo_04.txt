@@ -1188,3 +1188,32 @@ https://www.youtube.com/watch?v=IRCDwdZLlX4&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 
     $ POR FIM Commitamos o repositório local e punshig
     
+
+Módulo 04, Capítulo 25, Aula 05
+Vídeo:
+Reunindo tudo em um único CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=DkA_OQgjjKg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=32
+
+    Nesta aula vamos aprender outra forma de declaração(link:css), e vamos fazer isso em uma cópia deste projeto, por ser ele pequeno; Então não faz sentido ter muitos arquivos CSS linkados; Já para projetos maiores é bom que a declaração(link:css) seja separada, como no projeto anterior onde fizemos com três(3) declarações que são os arquivos CSS´s.
+
+    1- Criamos então a pasta do exercício "mq003", e dentro dela colamos os arquivos copiados da aula anterior "pasta mq002", que são os arquivos"index.html e a pasta imagens".
+
+    2- Abrimos os arquivos "style.css, retrato.css e paisagem.css" da pasta "mq002", e com a cópia do "index.html" removemos as declarações (que são os links:css´s); Por fim criamos o estilo do nosso projeto de forma interna, adicionando a tag<style> dentro do <head>.
+
+    3- Criamos dentro do <style> as declarações:
+        /Declarações gerais   
+            Aqui colamos o estilo das declarações gerais do arquivo "style.css" da aula anterior.
+        /Declarações retrato
+            Aqui criamos a regra css = /@media "sreen" and (orientation: portrait){"Aqui colamos o estilo das declarações retrato do arquivo retrato.css da aula anterior"}
+        /Declarações paisagem
+            Aqui criamos a regra css = /@media "screen" and (orientation: landscape){"Aqui colamos o estilo das declarações paisagem do arquivo paisagem.css da aula anterior"}
+
+    4- PARA fins didáticos, criamos o arquivo "style.css" por meio do (link:css), e dentro dele colamos a cópia do estilo interno = <style> que fizemos no <head>, para que o estilo seja "externo".
+        Para isso criamos a pasta "estilo" e o arquivo "style.css".
+        
+    /OBS:
+        "PODEMOS ainda para as declarações gerais, adicionarmos o estilo dentro da regra css=(@media all{})"
+
+*   Opnião do professor:
+    "Optar pelas declarações separadas, pois para projetos muito complexo, a organição do código fica até melhor para uma futura modificação de alguma propriedade."

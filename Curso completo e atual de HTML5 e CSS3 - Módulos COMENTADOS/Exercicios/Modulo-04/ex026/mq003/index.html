@@ -1,0 +1,58 @@
+<!-- 
+Módulo 04, Capítulo 25, Aula 03, 04, 05
+Vídeo:
+03- Múltiplas Media Features com CSS - @Curso em Vídeo HTML5 e CSS3
+04- Seguindo a orientação do dispositivo - @Curso em Vídeo HTML5 e CSS3
+05- Reunindo tudo em um único CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+03- https://www.youtube.com/watch?v=VGD5Uy1C8Cw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=30
+04- https://www.youtube.com/watch?v=IRCDwdZLlX4&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=31
+05- https://www.youtube.com/watch?v=DkA_OQgjjKg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=32
+ -->
+<!DOCTYPE html>
+<html lang="ptr-b">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Media Query</title>
+    <link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon">
+
+        <!-- Aqui importamos a font "Playwrite Portugal Guides" 
+            name font =  "Playwrite PT Guides" e alternativa = cursive;
+            font-weight =  400
+            font-style = normal
+}
+        -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PT+Guides&display=swap" rel="stylesheet">
+
+        <!--  Aqui importamos a font "Rye" 
+            name font =  "Rye" e alternativa = serif;
+            font-weight =  400
+            font-style = normal
+        -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+
+    <!-- Estilo externo -->
+    <link rel="stylesheet" href="./estilo/style.css">
+    <style>
+        /* Todo o estilo interno que estava aqui, foi para o arquivo style.css que está linkado acima. */
+    </style>
+</head>
+<body>
+    <!-- 
+        SAIBA que celulares e alguns monitores possuem "orientação", que é um "acelerômetro" que identifica (de forma simplificada : Quando o dispositivo está em-pé ou deitado).
+        Essa orientação é feita pegando a largura em relação a altura.
+            Se a largura está menor que a altura, dizemos que ele está = portrait = Em-pé
+            Se a largura está maior que a altura, dizemos que ele está = landscap = Deitado
+        ENTÃO nosso objetivo é adaptar o site a dispositivos que alternem entre deitado ou em-pé.
+     -->
+
+    <h1><span>Mude</span> a orientação do seu <span>dispositivo</span></h1>
+    <h4>Módulo 04, Capítulo 25, Aula 5</h4>
+</body>
+</html>
