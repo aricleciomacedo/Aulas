@@ -1217,3 +1217,43 @@ https://www.youtube.com/watch?v=DkA_OQgjjKg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 
 *   Opnião do professor:
     "Optar pelas declarações separadas, pois para projetos muito complexo, a organição do código fica até melhor para uma futura modificação de alguma propriedade."
+
+
+Módulo 04, Capítulo 25, Aula 06
+Vídeo:
+Mobile First - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=33
+
+    Surgirdo por volta de 2009, por meio de um cara chamado (Luke Wroblewski), que na época trabalhava na Yahoo, e hoje_2022 é gerente de produto do Google; O que ele propôs, foi que ao invés de criar um site completão e depois retirar coisas, "como era feito por muitos na época", o que acabava por diminuir a experiência do usuário; Então resolveu criar primeiro a verão {Mobile = Móvel}, por isso a idéia "Mobile First = Primeiro o Móvel".
+        A idéia consiste em criar a Versão Móvel e depois ir reposicionando as coisas sem remover muitas "Features", ou talvez uma animação ou outra, uma cor ou outra, um degradê ou algum efeito visual que pesa muito na tela do celular; Mas nunca remover pedaços como era proposta anteriormente.
+
+    VEJA um pouco sobre "Luke Wroblewski":
+        https://www.google.com/search?q=quem+criou+o+mobile+first&oq=quem+criou+o+mobile+first&aqs=chrome..69i57j0i512i546l3.11063j0j7&sourceid=chrome&ie=UTF-8
+    
+*    Usar Mobile First, tem algumas vantagens.
+        1°- "Facilidade na divulgação do site".
+            De acordo com o próprio idealizador da idéia e que trabalha no Google, o algoritmo do Google vai valorizar sites desenvolvidos com foco em "Primerio Móvel" = /Mobile-First.
+
+        2° "Melhoria na experiência do usuário".
+            Devido ao pouco acesso a internet de qualidade, então muitos usuários dependem de que, sites em dispositivos móveis, sejam rápidos, e que não pesem nos aparelhos; Pois bem sabemos que a maioria das pessoas possuem aparelhos bem básicos e muitas das vezes simples e lentos; Então exagerar(pesar) nos recursos dentro de um navegador, pode tornar a experiência do usuário um tanto ruim.
+            Quando criamos uma versão Mobile leve e rápida e que melhora a experiência do usuário, isso faz com que os algoritmos do Google nos  dê uma vantagem e valorização por conta da boa aceitação e exeperiêncai do usuário para com o site na "versão Mobile".
+
+*           OUTRA coisa que "Luke Wroblewski" cita é: 
+            Que segundo ele, de forma instintiva(sem ser racionalmente), quem visita sites, que pensa em alguma marca ou no conteúdo como algo extraordinário; "PENSA: Caramba que coisa profissional, o camarada fez o site inteiro caber no meu celular; Funcionou rápido; Bonificou minha experiência!".
+                $E é exatamente isso que dá uma melhoria na (Credibilidade).
+            
+        3° "Performance".
+            Sites móveis tem que ser mais leves, pois a maioria das pessoas que acessam sites de celular, fazem isto na maioria das vezes com internet de péssima qualidade.
+
+*       LEMBRE-SE de criar os arquivos desta aula dentro do repositório remoto do GitHub; Fazemos isso usando como de costume nesse curso (usando o GitHub Desktop) e abrindo nele o (Visual Studio Code).
+
+*       Começando o Exercicío
+    1- Copiamos as imagens necessárias.
+
+    2- Criamos a pasta "mq004"; Dentro dessa pasta criamos a pasta de imagens e dentro dela colamos as imagens. 
+        "LEMBRANDO que essas imagens foram retiradas do site: pexels, otimizadas no Gimp."
+        $ OBS:
+            A imagem mais pesada de nosso projeto possui 367kb, então aconselhamos que para seus projetos, tome bastante cuidado com qualidade de imagens que pesam no site.
+            
+    3- "ATUALIZAMOS O REPOSITÓRIO REMOTOS DO GITHUB".
