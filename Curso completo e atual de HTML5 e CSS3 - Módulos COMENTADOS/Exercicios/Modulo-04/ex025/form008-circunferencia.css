@@ -30,5 +30,6 @@ div p {
     text-align: center;
 }
 input#in1 {
-    margin-top: 10px;
+    margin: 10px;
+    margin-bottom: 0;
 }
