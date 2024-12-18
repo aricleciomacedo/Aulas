@@ -1261,3 +1261,32 @@ https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     4- Na pasta do exercício, criamos o arquivo "index.html" com o código base.
     
     5- "Adicionamos mais um Commit e Pushing origin".
+
+    $ Na próxima aula vamos começar a criar um projeto com resposta visual para cada tipo de mídia que foram determinadas.
+        Vamos fazer um site que funcione para ambos os dipositivos; Seja ele celular, tablet, PC, TV e Impressora, totalizando cinco(mídias).
+
+
+Módulo 04, Capítulo 25, Aula 07
+Vídeo:
+Iniciando um site mobile first - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=wU80w4xbNxQ&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=34
+
+    $ AGORA veja nos arquivos "index e style" os comentários sobre as configurações feitas na aula.
+
+
+Módulo 04, Capítulo 25, Aula 08
+Vídeo:
+Device breakpoints - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=S8YXMqDsbhA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=35
+
+*    O que é "Device Breakpoints"?
+    Básicamente quando criamos {Media queries}, temos que definir qual o tamanho e limite para diferentes telas; Isso torna-se complicado porquê /Breakpoints podem ficar ultrapassados fácilmente, uma vez que dispositivos variam muito de Tamanho e Resolução.
+        $OBS:
+            "Pesquise por Typical Device Breakpoints" para que fique sempre por dentro das atualizações.
+        
+*   CONTINUANDO...
+    "VEJA apartir dos comentários do arquivo (mediaquery.css)".
+    $LEMBRE-se de pesquisar por:
+        Typical Device Breakpoints, pois vai ser basiado nesses valores que criamos as "media queries" de pequenas telas até grandes telas.

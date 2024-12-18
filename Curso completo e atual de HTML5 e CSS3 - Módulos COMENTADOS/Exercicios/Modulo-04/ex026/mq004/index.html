@@ -1,9 +1,11 @@
 <!-- 
-Módulo 04, Capítulo 25, Aula 06
-Vídeo:
-Mobile First - @Curso em Vídeo HTML5 e CSS3
-Link:
-https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=33
+    Módulo 04, Capítulo 25, Aula 06, 07
+    Vídeos:
+    Mobile First - @Curso em Vídeo HTML5 e CSS3
+    Iniciando um site mobile first - @Curso em Vídeo HTML5 e CSS3
+    Links:
+    https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=33
+    https://www.youtube.com/watch?v=wU80w4xbNxQ&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=34
  -->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,8 +14,22 @@ https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Media Query</title>
+    <link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./estilos/style.css" media="all"><!-- Estilo para Versão Mobile. -->
+    <link rel="stylesheet" href="./estilos/mediasquery.css"><!-- Estilo para todas a mídias.-->
+
+    <!-- Não vamos fazer desta maneira abaixo! -->
+    <!-- <link rel="stylesheet" href="style.css" media="screen and (max-width: 800px)"> -->
 </head>
 <body>
-    
+    <main>
+        <h1>Testando Media Queries</h1>
+        <img id="phone" src="./imagens/icon-phone.png" alt="Acessando via smartphone">
+        <img id="tablet" src="./imagens/icon-tablet.png" alt="Acessando via Tablet">
+        <img id="print" src="./imagens/icon-print.png" alt="Versão para impressão">
+        <img id="pc" src="./imagens/icon-pc.png" alt="Versão para desktop">
+        <img id="tv" src="./imagens/icon-tv.png" alt="Versão para TV">
+    </main>
 </body>
 </html>

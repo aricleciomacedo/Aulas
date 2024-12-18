@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device breakpoints 
+-----------------------------
+Recomendações W3C na data 17 de ago. de 2022 no período em que foi lançado o vídeo.
+-----------------------------------------------------------------------------------
+
+
+1° Pequenas telas: até 600px
+2° Celular: de 600px até 768px
+3° Tablet: de 768px até 992px
+4° Desktop: 992px até 1200px
+5° Grandes telas: acima de 1200px
+*/
+
+
+/* Versão de impressão. 
+OBS:
+    Quando imprimimos, o background-image não sai na impressão, pois não é feito para isso; Por isso marcamos aqui como "desnecessário".
+    Mas podemos aplicar estilos próprios a este elemento.
+*/
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* desnecessário */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+    main::after{
+        content: "Essa impressão foi feita através do site www.cursoemvideo.com";
+        text-decoration: overline;/* Assim colocamos uma linha em cima do texto. */
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    /* Aqui adicionamos os seletores id´s das imagens ícones, e mudamos o display referente a essa media query.*/
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: block;}/* Assim mostra apenas este ícone. */
+    img#pc{display: none;}
+    img#tv{display: none;}
+}
+
+/* ------------------------------------------------------------------------------------------------------
+    Essas partes foram ingnoradas, pois já fizemos as configurações para dispositivos móveis, usando o arquivo "style.css".
+    -----------------------------------------------------------------------------------------------------
+
+1° Pequenas telas: até 600px
+@media screen and (max-width: 600px) {
+
+}
+
+2° Celular: de 600px até 768px
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+} */
+
+/* 3° Tablet: de 768px até 992px */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    /* Aqui adicionamos os seletores id´s das imagens ícones, e mudamos o display referente a essa media query.*/
+    img#phone{display: none;}
+    img#tablet{display: block;}/* Assim mostra apenas este ícone. */
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: none;}
+}
+
+/* 4° Desktop: 992px até 1200px */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    /* Aqui adicionamos os seletores id´s das imagens ícones, e mudamos o display referente a essa media query.*/
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: block;}/* Assim mostra apenas este ícone. */
+    mg#tv{display: none;}
+}
+
+/* 5° Grandes telas: acima de 1200px */
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+    
+    /* Aqui adicionamos os seletores id´s das imagens ícones, e mudamos o display referente a essa media query.*/
+    img#phone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: block;}/* Assim mostra apenas este ícone. */
+}
