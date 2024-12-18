@@ -1260,4 +1260,4 @@ https://www.youtube.com/watch?v=q6SZKTHUQiw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 
     4- Na pasta do exercício, criamos o arquivo "index.html" com o código base.
     
-    5- "Demos mais um Commit e Pushing origin".
+    5- "Adicionamos mais um Commit e Pushing origin".
