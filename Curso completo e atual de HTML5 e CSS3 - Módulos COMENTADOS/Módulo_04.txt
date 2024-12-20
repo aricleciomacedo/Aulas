@@ -1289,4 +1289,71 @@ https://www.youtube.com/watch?v=S8YXMqDsbhA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
 *   CONTINUANDO...
     "VEJA apartir dos comentários do arquivo (mediaquery.css)".
     $LEMBRE-se de pesquisar por:
-        Typical Device Breakpoints, pois vai ser basiado nesses valores que criamos as "media queries" de pequenas telas até grandes telas.
+        Typical Device Breakpoints, pois vai ser baseado nesses valores que criamos as "media queries" de pequenas telas até grandes telas.
+
+
+    
+Módulo 04, Capítulo 25, Aula 09
+Vídeo:
+Menu responsivo com HTML5 e CSS3 - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Zp3fnf99kTg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=36
+
+    Nestas aulas a seguir vamos criar um menu responsivo, o qual se adapta a diversos tamanhos de telas.
+
+    $ OBS: O menu fica em modo hámburger, quando em telas menores.
+
+    1- No "GitHub Desktop" abrimos o "Visual Studio Code", e na pasta de exercícios "ex026", criamos a pasta "mq005" e dentro desta pasta criamos o arquivos "index.css" bem como o código base usando as tags semânticas (header, main, article).
+
+    2- Criamos a pasta "estilos" e o arquivo "syle.css".
+
+
+
+Módulo 04, Capítulo 25, Aula 10
+Vídeo:
+Configurando o layout do projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=67W4NdxW1kw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=37
+
+    Seguindo a ideia das aulas sobre {Mobile Firs}t, então vamos começar o projeto criando primeiro as configurações para telas menores.
+
+
+Módulo 04, Capítulo 25, Aula 11
+Vídeo:
+Criando um menu hambúrguer - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Dd6Z3gkud18&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=38
+
+*   CONTINUANDO o projeto.
+    Nesta aula vamos criar o "hámburguinho" que encolhe(esconde) ou aumenta(revela) o menu.
+
+    1- Usaremos mais um dos recursos que o Google disponibiliza para nós; Que é o uso de ícones em nossos projetos, e para isso acessamos o site: https://fonts.google.com/icons
+        $ Para usar no projeto:
+            1a- Na Opção "Developer guide" copiamos o link no "Método de configuração 1. Usar via Google Fonts" = 
+                    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            1b- Então copia-se o link referente ao ícone a ser usado; "Veja sobre isso" na opção (Como usar os ícones em HTML) e entre tags, o nome no ícone escolhido.
+                EX: Ícone de rosto = <span class="material-icons">face</span>
+
+*   LEMBRANDO que existe diversas maneiras de adicionar ícones em nossos projetos. 
+    "PORÉM esta é uma das mais simples."
+    
+    2- Para configurar o ícone em nosso projeto; Atribuimos um "id".
+    
+        Criado o projeto, e adicionado o ícone de "hámburger"; Então é necessário usar um pouco de "Java Script" para que seja possível "escoder ou aparecer" o menu quando o usuário clicar no ícone.
+*           RECOMENDADOS o curso em vídeo de JAVA SCRIPT.
+
+    3- Adicionamos na tag do ícone <i> um /evento de "JavaScript".
+
+            $ Visão geral criada por IA
+            "
+            OnClick é um evento JavaScript que é acionado quando um elemento HTML é clicado. É um termo muito utilizado no desenvolvimento web e programação, e é fundamental para adicionar interatividade e funcionalidade aos elementos de uma página.
+        " 
+
+        $Com esse evento adicionado dizemos que; Quando o usuário clicar no ícone, então o JavaScript fará algo acontencer, e esse algo é definido dentro da função criada.
+            onclick="funcaoExemplo()"
+
+    4- Adicionamos a tag <script> para usar os recursos do JavaScript.
+
+    5- Definimos um "id" para manipular por meio do JavaScript, a tag <menu>.
+
+        "AGORA" veja no index, os comentrários sobre o código.
