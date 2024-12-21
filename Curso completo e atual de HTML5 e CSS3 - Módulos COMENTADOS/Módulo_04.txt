@@ -1395,3 +1395,29 @@ https://www.youtube.com/watch?v=T1rfhkmcH00&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
             Em alguns browsers mais recentes, é possível registrar o evento manipulador resize em qualquer elemento HTML. 
             Para obter o tamanho de um elemento, é possível usar as propriedades: 
             clientWidth, clientHeight, innerWidth, innerHeight, outerWidth, outerHeight, offsetWidth, offsetHeight.
+
+    4- Criamos o código JavaScript; E por fim demos um "Commit e Pushing Origin" para o repositório remoto.
+
+
+
+
+Módulo 04, Capítulo 26, Aula 01
+Vídeo:
+Tela de login responsiva só com HTML e CSS - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=4NB0_DPpjak&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=40
+
+*    Esta aula é um Desafio, e aqui nós colocamos ele dentro da pasta "d015":
+    "
+        Então vamos aprender a criar uma tela de "login funcional" que se adapta a diferentes tamanhos de telas para diferentes dispositivos.
+    "
+
+    1- Escolhemos uma imagem no site "pexels.com" que não tem direitos autorais.
+        OBS: Opte por baixar no tamanho médio = (1280x1484).
+
+*   Baixe o material da aula no repositório do professor.
+    Link: https://github.com/professorguanabara/projeto-login
+    
+*   Para esse projeto, o professor fez um novo repositório nomeado de "projeto-login" no GitHub.
+    Esse mesmo nome de pasta, usaremos para esse projeto, e o colocamos dentro da pasta "Desafios" e dentro da pasta "d015".
+
