@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Typical_Device_Breakpoints
+    /------------------------------\
+    /Pequenas_telas(até 600px)-----\
+    /Celular(de 600px até 768px)---\
+    /Tablet(de 768px até 992px)----\
+    /Desktop(de 992px até 1200px)--\
+    /Grandes_telas(acima de 1200px)\
+*/
+
+/* Aqui criamos uma media feature para dispostivos com telas maiores que 768px, como por exemplo tablets.
+COm isso aplicamos um estilo ao menu, diferente do estilo "hámburguinho". */
+@media screen and (min-width: 768px) {
+    i#burguer {/* Assim o ícone hámburguer some. */
+        display: none;
+    }
+    menu {/* Assim posiciona itens de menu aparecem um em baixo do outro. */
+        display: block;
+    }
+
+    menu > ul > li {
+        display: inline-block;/* Assim deixamos os itens do menu um ao lado do outro. */
+        /* width: 19.7%; *//* Usamos uma largura se preferir botões maiores. */
+    }
+}

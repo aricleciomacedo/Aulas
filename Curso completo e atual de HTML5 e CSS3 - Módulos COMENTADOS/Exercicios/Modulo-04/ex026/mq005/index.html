@@ -1,9 +1,16 @@
 <!-- 
-    Módulo 04, Capítulo 25, Aula 09
+    Módulo 04, Capítulo 25, Aula 09, 10, 11, 12
     Vídeo:
     Menu responsivo com HTML5 e CSS3 - @Curso em Vídeo HTML5 e CSS3
+    Configurando o layout do projeto - @Curso em Vídeo HTML5 e CSS3
+    Criando um menu hambúrguer - @Curso em Vídeo HTML5 e CSS3
+    Media Queries para outros dispositivos - @Curso em Vídeo HTML5 e CSS3
     Link:
     https://www.youtube.com/watch?v=Zp3fnf99kTg&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=36
+    https://www.youtube.com/watch?v=67W4NdxW1kw&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=37
+    https://www.youtube.com/watch?v=Dd6Z3gkud18&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=38
+    https://www.youtube.com/watch?v=T1rfhkmcH00&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=39
+        Criação do estilo para media query type media features para telas maiores que 768px
  -->
 <!DOCTYPE html>
 <html lang="pt0br">
@@ -14,19 +21,22 @@
     <title>Media Query</title>
     <link rel="shortcut icon" href="../ico/favicon.ico" type="image/x-icon">
 
-    <!-- Estilos -->
+    <!-- Estilo First Mobile-->
     <link rel="stylesheet" href="estilos/style.css">
+    <!-- Estilo  -->
+    <link rel="stylesheet" href="estilos/media-query.css">
 
     <!-- Link para uso dos Ícones do Google -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<!-- Aqui adicionamos um evento JavaScript, que será (monitorado/capturado) pela função() que nomeamos entre aspas"" -->
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu site</h1>
         <!-- Ícone escolhido do Google Ícons. -->
         <!-- <span id="burger" class="material-icons">menu</span> 
         Aqui optamos por usar a tag<i>, para ficar igual a aula.-->
-        <i id="burger" class="material-icons" onclick="clickMenu()">menu</i><!-- Adicionamos aqui um evento JavaScript{click=""} para disparar a função de nomeada de clickMenu()quando o usuário clicar aqui. -->
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i><!-- Adicionamos aqui um evento JavaScript{click=""} para disparar a função de nomeada de clickMenu()quando o usuário clicar aqui. -->
         <menu id="itens">
             <ul>
                 <li><a href="#">Opção 1</a></li>
@@ -52,6 +62,20 @@
 
     <!-- Aqui adicionamos o Script para configurar a Função que adicionamos ao evento "onclick" -->
     <script>
+        /* Aqui é a função criada na Aula 12, que monitora(captura) o evento "{onresize}, o qual testa a largura da tela." */
+        function mudouTamanho() {
+            /* Se a largura da minha tela(window.innerWidth) for maior ou igual(>=) a 768px */
+
+            if (window.innerWidth >= 768) {
+            /* Então o elemento "id", recebe(=) block em seu estilo(style) de display. */
+                itens.style.display = 'block'
+
+                /* Se não(else); o elemento "id=itens" recebe no estilo ,o display=none  */
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             /* Aqui dizemos que o elemento de id "itens", recebe(=) seu estilo de display definido para block */
         /* itens.style.display = 'block' */

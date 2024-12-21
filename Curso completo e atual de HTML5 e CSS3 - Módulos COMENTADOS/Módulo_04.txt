@@ -1357,3 +1357,41 @@ https://www.youtube.com/watch?v=Dd6Z3gkud18&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     5- Definimos um "id" para manipular por meio do JavaScript, a tag <menu>.
 
         "AGORA" veja no index, os comentrários sobre o código.
+
+
+Módulo 04, Capítulo 25, Aula 12
+Vídeo:
+Media Queries para outros dispositivos - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=T1rfhkmcH00&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=39
+
+*       CONTINUAÇÃO
+    Precisamos que o "Memu Hámburguer" não apareça em telas maiores do que a de dispositivos móveis; ENTÃO:
+    1- Criamos um tipo(type) de estilo de media query =(media feature) que funcionará para dispositivos com telas acima de (768px) e o arquivo é o "media-query.css".
+        1a- Com isso garantimos que (Menu Hámburguinho) apareça só em telas menores que 768px, como por exemplo em telas de celulares.
+
+        "OBS:"
+        Lembre-se de olhar a lista de Breakpoints para definir o tamanho de tela desejado.
+            /--Typical_Device_Breakpoints--\
+            /------------------------------\
+            /Pequenas_telas(até 600px)-----\
+            /Celular(de 600px até 768px)---\
+            /Tablet(de 768px até 992px)----\
+            /Desktop(de 992px até 1200px)--\
+            /Grandes_telas(acima de 1200px)\
+
+    2- Usamos então a " @media screen and (width: 768px){}", porém um pequeno problema há, que é quando clicamos no (menu hambúrguer) para fechar em telas menores, e ao abrir em telas maiores, ele (o menu) some, e para aparecer, é necessário atualizar o navegador.
+*       MAS PARA RESOLVER isso; 
+            Vamos utilizar JavaScript.
+    
+        "ENTÃO"
+    3 Usamos na tag<body> o evento JavaScrpt (onresize="nome") e nomeamos entre aspas a função para identificar(capturar) o evento.
+*       O que é o evento OnResize?
+            Visão geral criada por IA
+            
+            O evento onresize no JavaScript é disparado quando a janela do navegador é redimensionada. Para registrar o evento manipulador resize, é possível: 
+            Usar o atributo window.onresize
+            Usar window.addEventListener('resize', ...)
+            Em alguns browsers mais recentes, é possível registrar o evento manipulador resize em qualquer elemento HTML. 
+            Para obter o tamanho de um elemento, é possível usar as propriedades: 
+            clientWidth, clientHeight, innerWidth, innerHeight, outerWidth, outerHeight, offsetWidth, offsetHeight.

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "UTF-8";/* Regra para  */
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +20,7 @@ header > h1 {
 }
 
 /* Configurações  */
-i#burger {
+i#burguer {
     background-color: rgb(48, 48, 48);
     display: block;/* Assim garantimos que o ícone ocupe toda a largura */
     color: white;
@@ -28,7 +28,7 @@ i#burger {
     padding: 10px;
     cursor: pointer;
 }
-i#burger:hover {
+i#burguer:hover {
     background-color: white;
     color: black;
 }
