@@ -1419,5 +1419,6 @@ https://www.youtube.com/watch?v=4NB0_DPpjak&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     Link: https://github.com/professorguanabara/projeto-login
     
 *   Para esse projeto, o professor fez um novo repositório nomeado de "projeto-login" no GitHub.
-    Esse mesmo nome de pasta, usaremos para esse projeto, e o colocamos dentro da pasta "Desafios" e dentro da pasta "d015".
+    Esse mesmo nome de pasta, usaremos para esse projeto, e o colocamos dentro da pasta "Desafios" e dentro da pasta "d015".    
 
+    1- Criamos o aquivo CSS, e como sempre adicionamos ao estilo (A @regra = @charset "UTF-8"), e fizemos o código básico HTML.
