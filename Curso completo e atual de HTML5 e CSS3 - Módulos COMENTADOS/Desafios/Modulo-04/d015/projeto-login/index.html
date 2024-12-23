@@ -1,13 +1,15 @@
 <!-- 
-    Módulo 04, Capítulo 26, Aula 01, 02, 03
+    Módulo 04, Capítulo 26, Aula 01, 02, 03, 04
     Vídeos:
     1- Tela de login responsiva só com HTML e CSS - @Curso em Vídeo HTML5 e CSS3
     2- Versão mobile first da tela de login - @Curso em Vídeo HTML5 e CSS3
     3- Outras Media Queries para o projeto - @Curso em Vídeo HTML5 e CSS3
+    4- Criando o formulário de login - @Curso em Vídeo HTML5 e CSS3
     Links:
     1- https://www.youtube.com/watch?v=4NB0_DPpjak&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=40
     2- https://www.youtube.com/watch?v=AKj3L3ouVAk&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=41
     3- https://www.youtube.com/watch?v=Ec7Vu96wdpA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=42
+    4- https://www.youtube.com/watch?v=htekZ2wA7Zo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=43
  -->
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,6 +25,10 @@
     <!-- CSS  para diferentes tamanhos de telas.-->
     <link rel="stylesheet" href="./estilos/media-query.css">
 
+    <!-- API do Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -36,7 +42,27 @@
 
                 <!-- Aqui usamos um campo de senha para o usuário inserir dados. -->
                 <form action="login.php" method="POST">
+                    <div class="campo">
+                        <!-- icon -->
+                        <i class="material-icons">person</i>
+                        <!-- Login -->
+                        <input type="email" name="login" id="ilogin" placeholder="seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <!-- icon -->
+                        <i class="material-icons">vpn_key</i>
+                        <!-- Senha -->
+                        <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    <!-- Botão de submissão -->
+                    <input type="submit" value="Entrar"></input>
 
+                    <!-- Por qustões de prática, pois não vamos usar JavaSccrip, optmos por usar uma âncora como botão de esqueci a senha. -->
+                    <a href="esqueci.html">
+                        Esqueci a senha <!-- icon --> <i class="material-icons">mail</i>
+                    </a>
                 </form>
             </div>
         </section>

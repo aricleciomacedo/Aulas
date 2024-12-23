@@ -1452,3 +1452,23 @@ https://www.youtube.com/watch?v=Ec7Vu96wdpA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     3- Adicionamos as Medias e as respectivas propriedades a sob-escrever.
 
     4- "Commit and Pushing Origin" no GitHub Desktop para não perder a "prática".
+
+
+
+Módulo 04, Capítulo 26, Aula 04
+Vídeo:
+Criando o formulário de login - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=htekZ2wA7Zo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=43
+
+    1- Fizemos com que o Menu de Login ficasse na esquerda e a imagem na direita alterando as propriedades CSS de Media Query para /Telas_Grandes.
+        "Telas de Notebook pra cima!"  
+    
+    2- Estilizamos a "seção Login" onde está o "formulário".
+
+    3- Criamos então o formulário composto por (Usuário; Senha, Botão Login e Botão Esqueci Minha Senha).
+
+    4- Usamos ícones do "Google Icons": https://fonts.google.com/icons?icon.size=24&icon.color=%235f6368
+        Na opção "Developer guide" pegamos o cógido, na parte (Método de configuração 1. Usar via Google Fonts) e copiamos o "link" e colamos no HTML.
+
+    5- "Commit and Pushing Origin" para o GitHub.

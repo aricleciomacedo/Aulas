@@ -65,3 +65,13 @@ section#login > div#formulario {
     display: block;
     padding: 10px;
 }
+
+/* Estilo geral para a seção de Login que contém o formulário.*/
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+}
