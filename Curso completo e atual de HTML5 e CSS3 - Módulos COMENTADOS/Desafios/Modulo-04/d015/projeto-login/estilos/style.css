@@ -6,3 +6,62 @@
     Lilás: #5f2c82
 */
 
+/* Reset dos padrões */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;/* Com isso garantimos que a borda fique fazendo parte da conta de largura. */
+}
+
+body, html {
+    background-color: #5f2c82;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    /* Essa posição serve para posicionar a section ao centro. */
+    position: relative;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login {
+
+    /* Assim garantimos que essa seção fique no meio da tela, idependente da resolução de tela. */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Assim garantimos que tudo o que estiver fora da(transbordando a) borda, passe a ser escondido. */
+    overflow: hidden;
+
+    background-color: white;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+
+    /* Puequena animação, nas propredades. */
+    transition: width .3s, height 0.3s;
+    transition-timing-function: ease;/* Suaviza */
+}
+
+/* Aqui selecionamos a div(id-imagem) que está dentro da div(id=login) */
+section#login > div#imagem {
+    display: block;
+    background: #5f2c82 url(../imagens/metal.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 200px;
+}
+
+/* Aqui selecinamos a div(id=formulario) que está dentro(>) da sections(id=login) */
+section#login > div#formulario {
+    display: block;
+    padding: 10px;
+}

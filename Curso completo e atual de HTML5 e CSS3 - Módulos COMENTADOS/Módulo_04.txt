@@ -1422,3 +1422,33 @@ https://www.youtube.com/watch?v=4NB0_DPpjak&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
     Esse mesmo nome de pasta, usaremos para esse projeto, e o colocamos dentro da pasta "Desafios" e dentro da pasta "d015".    
 
     1- Criamos o aquivo CSS, e como sempre adicionamos ao estilo (A @regra = @charset "UTF-8"), e fizemos o código básico HTML.
+
+    2- Então "Commitamos e Pushing Origin" para o repositório Remoto, e habilitams o GitHub Pages para vermos o projeto funcionando.
+
+
+Módulo 04, Capítulo 26, Aula 02
+Vídeo:
+Versão mobile first da tela de login - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=AKj3L3ouVAk&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=41
+
+*   LEMBRANDO que vamos primeiro criar tela "Mobile First".
+
+    1- Fizemos as configurações que estilizaram nosso projeto para versões de telas pequenas.
+
+    "VEJA nos arquivos os comentários sobre as propriedades utilizadas."
+
+
+Módulo 04, Capítulo 26, Aula 03
+Vídeo:
+Outras Media Queries para o projeto - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=Ec7Vu96wdpA&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=42
+
+    1- Criamos o aquivo "media-query.css", adicionamos a regra @charset e o lembrete /TDB=Typical_Device_Breakpoints:
+
+    2- Criamos Media Queries nas versões; Uma específica para /Tablete e para outra para /Desktop e /Telas_Grandes.
+
+    3- Adicionamos as Medias e as respectivas propriedades a sob-escrever.
+
+    4- "Commit and Pushing Origin" no GitHub Desktop para não perder a "prática".
