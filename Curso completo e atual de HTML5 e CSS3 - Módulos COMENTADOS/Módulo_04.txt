@@ -1472,3 +1472,23 @@ https://www.youtube.com/watch?v=htekZ2wA7Zo&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh
         Na opção "Developer guide" pegamos o cógido, na parte (Método de configuração 1. Usar via Google Fonts) e copiamos o "link" e colamos no HTML.
 
     5- "Commit and Pushing Origin" para o GitHub.
+
+
+
+Módulo 04, Capítulo 26, Aula 05
+Vídeo:
+Aplicando estilo ao formulário de login - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=JDS9ZLpoS6E&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=44
+
+    Nesta aula fizemos algumas configurações para estilo dos botões, no que diz respeito ao <Form>ulário.
+
+
+
+Módulo 04, Capítulo 26, Aula 06
+Vídeo:
+Finalizando projeto tela de login - @Curso em Vídeo HTML5 e CSS3
+Link:
+https://www.youtube.com/watch?v=c2PePX8joKc&list=PLHz_AreHm4dkcVCk2Bn_fdVQ81Fkrh6WT&index=45
+
+*   LEMBRE-SE de (Commit e Pushing Origin).
