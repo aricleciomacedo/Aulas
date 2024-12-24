@@ -134,12 +134,15 @@ div.campo > input:focus-within {
     border-color: #5f2c82;
     border-top-color:#5f2c82;
     border-left-color: #5f2c82;
-    border-bottom-color: #b952fa;
-    border-right-color: #b24dec;
+    border-bottom-color: #5f2c82;
+    border-right-color: #5f2c82;
 
 
     /* Aqui é a suposta borda que aparece quando clica no campo de input. */
     outline: 0px solid #160a1d;
+
+    /* Transição da borda */
+    transition: border 0.3s ease;
 }
 
 /* Botão de ENTRAR */
