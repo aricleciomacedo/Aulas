@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        h1, h2, h3, p {
+            text-align: center;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        p span{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        div.conteiner {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            /* flex: auto; ----------Removido na aula */
+            padding: 40px;
+        }
+
+        /* Exemplo 2 */
+        .conteiner.conteiner2 {
+            height: 400px;
+        }
+        /* Exemplo 3 */
+        .conteiner.conteiner3 {
+            height: 400px;
+            align-items: flex-start;
+        }
+        /* Exemplo 4 */
+        .conteiner.conteiner4 {
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: flex-start;
+        }
+        /* Exemplo 5 */
+        .conteiner.conteiner5 {
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: stretch;
+        }
+        /* Conteiner 6 */
+        .conteiner.conteiner6 {
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: flex-end;
+        }
+        /* Conteiner 7 */
+        .conteiner.conteiner7 {
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: center;
+        }
+        /* Conteiner 8 */
+        .conteiner.conteiner8 {
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: space-between;
+        }
+        /* Conteiner 9 */
+        .conteiner.conteiner9{
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: space-evenly;
+        }
+        /* Conteiner 10 */
+        .conteiner.conteiner10{
+            height: 400px;
+            /* align-items: flex-start; Removido durante a aula.*/
+            align-content: space-around;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Comportamento dos elementos(flex-itens) mediante a aplicação da propriedade "align-content" ao contêiner(pai).</h1>
+    <hr>
+    <h3><i>"PARA VER O Comportamento dos contêiners e dos flex-itens, aumente ou diminua a proporção da janela do navegador".</ri></h3>
+    <p><span>&#8794;</span></p>
+
+    <!-- Exemplo 1 PADRÃO -->
+    <h2>&nbsp; <b>ABAIXO</b> vemos o código de estilo inicial para vermos os elementos quebrando, quando o contêiner diminuir a ponto de não caber um flex-item no espaço destinado a ele. <br> <i><b>OBS:</b>&nbsp;O tamanho dos itens configuramos com a propriedade [padding=""]</i></h2>
+    <div style="display: flex;">
+        <img style="margin: 0 auto;" width="400" height="300" src="./imagens/img0.jpg" alt="Exemplo de código">
+    </div>
+    <p><b>Podemos ver</b> que as caixas (os itens) estão ocupando uma altura do padrão determinada pelo contêiner e sua largura é padrão.<br><b>VEJA que:</b> "Display = flex" faz um item se posicionar um ao lado do outro e quebrar para a coluna seguinte sem deixar espaço vazio entre os elementos.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img1.jpg" alt="Exemplo de código">
+        <img width="400" height="300" src="./imagens/img2.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>
+            Removemos a propriedade "flex=auto" dos "itens" para que que possamos ver a quebra causada pela propriedade "align-itens=flex-start"; &nbsp; <br> 
+            <b>OUTRA COISA</b> que é preciso fazer; É determinar o tamanho dos elementos = flex-itens(filhos).</i>
+    </p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Exemplo 2 -->
+    <h2>&nbsp; Comportamento PADRÃO da propriedade [align-content = stretch] </h2>
+
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img3.jpg" alt="Exemplo de código">
+        <img width="400" height="300" src="./imagens/img4.jpg" alt="Exemplo de código">
+        <img width="400" height="300" src="./imagens/img5.jpg" alt="Exemplo de código">
+    </div>
+
+    <p><b>Podemos ver</b> que as caixas (os itens) estão ocupando 100% da altura do contêiner; Isso fica mais evidente, quando definimos uma altura (height) expessífica ao contêiner/pai = (flex-box).</p>
+    <p>
+        <i>
+            <b>OBS:</b> <br>
+            Adicionando ao código de configuração do contêiner, a propriedade [height=""] &nbsp; <br> 
+            <b>FAZ com que</b> os flex-itens estiquem no sentido do cross-axis na direção do cross-start e quebrem pra próxima coluna sem deixar espaços vazios entre os elementos.
+        </i> <br><br>
+        <b>OBSERVE ABAIXO!</b>
+    </p>
+    <div class="conteiner conteiner2">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Exemplo 3 -->
+    <h2>&nbsp; Contêiner sem a propriedade [align-content]</h2>
+    <p><b>Podemos ver</b> que a primeira caixa (os itens) gruda no ínicio do contêiner na parte superior esquerda e os demais ficam lado a lado na mesma linha.</p>
+    <p>
+        <i>
+            <b>OBS:</b> <br>
+            Adicionamos ao código de configuração do contêiner, a propriedade [align-itens=flex-start] &nbsp; <br> 
+            <b>ASSIM FAZ com que</b> os flex-itens não estiquem no sentido do cross-axis e quebram para a próxima coluna deixando espaços vazios entre elementos.
+        </i> <br><br>
+        <b>OBSERVE ABAIXO!</b>
+    </p>
+    <div class="conteiner conteiner3">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Exemplo 4 -->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = flex-start]</h2>
+    <p><b>Podemos ver</b> que a primeira caixa (os itens) gruda no ínicio do contêiner na parte superior esquerda e os demais ficam lado a lado na mesma linha, e quebram para a coluna seguinte sem deixar espaços vazios entre os elementos.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img6.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>
+            Removemos  do código de configuração do contêiner, a propriedade [align-itens=flex-start] &nbsp; e Adicionamos a propriedade [align-content = flex-start].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner4">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Exemplo5  -->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = flex-stretch]</h2>
+    <p><b>Podemos ver</b> que a primeira caixa (os itens) gruda no ínicio do contêiner na parte superior esquerda e os demais ficam lado a lado na mesma linha; Esticam ocupando toda a alura reservada e quebram para a coluna seguinte sem deixar espaços vazios entre os elementos.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img5.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>
+            &nbsp; Adicionamos a propriedade [align-content = stretch].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner5">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Exemplo 6  -->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = flex-end]</h2>
+    <p><b>Podemos ver</b> que a primeira caixa (os itens) gruda no fim do contêiner na parte inferior esquerda e os demais ficam lado a lado na mesma linha; Não esticam  e quebram para a coluna seguinte sem deixar espaços vazios entre os elementos, a não ser o espaço em branco no cross-axis em direção do cross-start e cross-end.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img7.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>
+            Adicionamos a propriedade [align-content = flex-end].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner6">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Exemplo  7-->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = center</h2>
+    <p><b>Podemos ver</b> que a primeira caixa (os itens) grudam no centro do contêiner a esquerda e os demais ficam lado a lado na mesma linha; Não   Esticam ocupando toda a alura reservada e quebram para a coluna seguinte sem deixar espaços vazios entre os elementos.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img8.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>&nbsp; Adicionamos a propriedade [align-content = center].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner7">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+    <!-- Exemplo 8 -->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = space-beteween</h2>
+    <p><b>Podemos ver</b> que os flex-itens quebram conforme o número de colunas, mas sempre mantendo itens colados no cross-start e no cross-end.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img9.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>&nbsp; Adicionamos a propriedade [align-content = space-beteween].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner8">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Exemplo 9 -->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = space-evenly</h2>
+    <p><b>Podemos ver</b> que os flex-itens quebram conforme o número de colunas, mas sempre mantendo os itens com uma distância o cross-start e no cross-end que igual ao espaço entre elementos.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img10.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>&nbsp; Adicionamos a propriedade [align-content = space-evenly].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner9">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Exemplo 10 -->
+    <h2>&nbsp; Contêiner com a propriedade [align-content = space-around</h2>
+    <p><b>Podemos ver</b> que os flex-itens quebram conforme o número de colunas, mas sempre mantendo os itens com espaço entre eles que equivale ao dobro da distância do primeiro e último flex-item em relação ao cross-start e o cross-end.</p>
+    <div style="display: flex; gap: 8px; overflow: scroll; width: 400px; margin: 0 auto;">
+        <img width="400" height="300" src="./imagens/img11.jpg" alt="Exemplo de código">
+    </div>
+    <p>
+        <i>
+            <b>OBS:</b> <br>&nbsp; Adicionamos a propriedade [align-content = space-around].<br>
+        </i> <br><br>
+        <b>OBSERVE ABAIXO a mudança de Comportamento!</b>
+    </p>
+    <div class="conteiner conteiner10">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+        <div class="item">M</div>
+    </div>
+    <br>
+    <hr>
+    <h4><i><b>LEMBRANDO que:</b> &nbsp; A propriedade [align-items] deve ser em conjunto com a propriedade [flex-direction = row + flex-wrap = wrap ou wrap-reverse] que é igual à shorthand = [flex-flow = row wrap ou wrap-reverse]</i></h4>
+
+    <br>
+</body>
+</html>

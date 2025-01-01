@@ -307,3 +307,58 @@ Tópicos desse vídeo:
 *       NÃO ESQUEÇA...
 13:06 - Acompanha a gente nas redes sociais 
 13:52 - O que vem a seguir?    
+
+
+
+Módulo 05, Capítulo 27, Aula 06
+Vídeo:
+Alinhamento de elementos empacotados no Flexbox - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=qMTX98pCwXA&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=7
+
+* sabe alinhar os elementos empacotados usando Flexbox? Sabe como fazer vários tipos de alinhamento dos componentes empacotados usando CSS Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+
+Tópicos desse vídeo:
+00:00 - Alinhando conteúdo com Flexbox
+02:08 - Hospedagem de sites com cursos
+03:11 - O que é conteúdo empacotado?
+05:33 - Entendendo a propriedade align-content
+    Básicamente a propriedade "align-content">(Conteúdo de empacotamento) decide o que vai fazer com o espaço vazio(em branco) deixado pelo aninhamento dos flex-itens mediante a aplicação das propriedade "justify-content e align-itens"  ao contêiner(pai).
+06:03 - Diferença align-content, align-items e justify-content
+    1- "justify-content"; Alinha o conteúdo(itens) dentro do eixo principal(main-axis).
+    2- "align-items"; Alinha o conteúdo(elementos) dentro do eixo transversal(cross-axis).
+    3- "align-content"; Alinha os elementos no eixo transversal, somente quando eles estiverem [empacotados].
+
+* Agora vemos abaixo os valores aceito pela propriedade "align-content"
+06:48 - align-content: stretch
+    Esse é o valor /PADRÃO e seu funcionamento consiste em pegar a dimensão inteira do /contêiner(PAI) e dividir em duas parte iguais isso no caso de duas(2) linhas(Ou colunas se for a configuração); Então podemos dizer que o número de linhas(colunas) será o número pelo qual a propriedade vai dividir os espaços por iguais, e assim puxar o flex-item de forma que ocupe o espaço vazio.
+08:31 - align-content: flex-start
+    Esse valor consiste em pegar todos os elementos e colocar grudados no /cross-start; Se o cross-start estiver em cima, então a propriedade vai colar o /flex-itens em cima e o espaço vazio(reservado) fica em baixo.
+    "OBS:
+        Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
+09:13 - align-content: flex-end
+    Esse valor consiste em pegar todos os elementos e colocar grudados no /cross-end; Se o cross-start estiver em cima, então a propriedade vai colar o /flex-itens em baixo e o espaço vazio(reservado) fica em cima no cross-start.
+    "OBS:
+        Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
+09:46 - align-content: center
+    Esse valor consiste em pegar todos os elementos e colocar grudados no centro /cross-axis; Isso entre o /cross-start e o /cross-end; Então o espaços vazio(reservado) ficam em ambos; Tant cross-start quanto no cross-end.
+    "OBS:
+        Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
+10:22 - align-content: space-between
+    Esse valor consiste em pegar os primeiros elementos e colocar perto do /cross-start; Pegar os últimos elementos e colocar perto do /cross-end; Então o espaços vazios(reservados) ficam exatamente no meio do cross-start em sentido ao cross-end.
+    "OBS:
+        Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
+11:12 - align-content: space-evenly
+    Esse valor consiste em pegar os elementos e distribuí-los de tal forma, que haja espaços vazios no ínicio e fim dos elementos calculadamente iguais, e esse mesmo valor de espaço inicial e final, é igual ao espaço em distância de um flex-item para outro.
+        "OBS:
+            Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
+11:58 - align-content: space-around
+    Esse valor muito parecido com "strech" consiste em dividir o eixo transversal em partes iguais conforme o número de linhas, e distribuir os elementos centralizados, com espaços calculadamete iguais no ínicio e fim do croos-axis, e esse valor é dobrado para dar o espaço vaxio de uma linha de elementos para outra.
+    "OBS:
+        Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
+12:45 - Precisa de um computador pra estudar?
+3---------------------------------------------
+13:41 - Exemplo prático
+    Abrimos então o /repositório-local no /Visual-Studio-Code; Copiamos o exercício "flex001" para usarmos o código base do flex-contêiner para aplicação da aula.
+17:10 - Testando cada valor de align-content
+21:39 - O que vem a seguir?
