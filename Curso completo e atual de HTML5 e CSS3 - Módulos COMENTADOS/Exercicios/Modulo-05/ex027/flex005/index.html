@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox centralizado</title>
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+
+    <style>
+        /* Reset dos padrões. */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightsalmon;
+        } 
+
+        /* Contêiner Pai, pois lhe foi definido "dislay = flex". */
+        main {
+            background-color: lightgreen;
+
+            /* Com essas propriedades vemos que  o <main> aparece em tela.*/
+            height: 69vh;/* Ateramos o que era 90vh, para que ocupe o <body> inteiro */
+            /* width: 100vw; *//* Ateramos o que era 90vw, para que ocupe o <body> inteiro */
+
+            /* Assim define que essa caixa é um flex-pai */
+            display: flex;
+            flex-flow: row nowrap;/* Shorthand da propriedades "flex-direction" que define a direção dos elementos no eixo principal(main-axis) ou no eixo transversal(cross-axis), e "flex-wrap" que define se os elemento quebram ou não para outra linha ou para outro bloco. */
+
+            /* Assim garantimos com que os "flex-itens" dentro de <main> fiquem sempre centralizados idependente do tamanho de tela. */
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background-color: lightseagreen;
+            height: 200px;
+            width: 200px;
+        }
+
+        /* Imagens de exemplo */
+        .container-section {
+
+            display: flex;
+            justify-content: center;
+            flex-flow: row nowrap;
+            align-items: center;
+            height: 400px;
+            transition: ease-in-out;
+            animation-delay: .9ms;
+        }
+        .container-section .img {
+            width: 50%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.281) center center/100% no-repeat;
+            animation: conteiner-imgAnim 10s linear infinite;
+        }
+
+        /* Animação */
+        @keyframes conteiner-imgAnim {
+            0% {
+                background-image: url("./imagens/img1.jpg");
+            }
+            80% {
+                background-image: url("./imagens/img2.jpg");
+            }
+        }
+
+
+        /* Animação efeito digitando... */
+        .digitando {
+            margin:  0 auto;
+            width: 336px;
+            animation: digitando 2s steps(22), piscar .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black;
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 1px 2px 1px black;
+        }
+        @keyframes digitando {
+            from {
+                width: 0;
+            }
+        }
+        @keyframes piscar {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="digitando"><!-- usando o efeito > typing = digitando -->
+        Créditos: Curso em vídeo
+    </div>
+    <div class="container-section"> <!-- class conteiner-imgAnim -->
+        <div class="img">
+            Tela de Login<!-- <img src="./imagens/img1.jpg" alt="align-itens=flex-start"> -->
+        </div>
+    </div>
+    
+    <!-- OBS:
+    Para que possamos ver a diferença de <main> para <section> em tela, é necessário definir uma altura e largura para o <main>, caso contrário a <section> fica de tamanho igual, e ao definir uma cor de fundo por exemplo; A cor da <section> sobre-põe visualmente a do <main>. -->
+    <main>
+        <section>
+            <h1>Tela de Login</h1>
+        </section>
+    </main>
+</body>
+</html>

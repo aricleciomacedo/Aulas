@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+        }
+
+        div.conteiner-flex {
+            display: flex;
+        }
+        div.conteiner-flex .item-auto {
+            flex: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Usamos aqui tags <div>´s; Porém ainda vamos usar tags semênticas para melhor aprendizado e que fazem sentido. -->
+    <h1>Comportamento padrão de &lt;div&gt;´s sem "flex-box"</h1>
+    <p>Podemos ver que as caixas (os itens) estão ocupando 100% da largura do conteiner; Sua altura é padrão, e sua cor de fundo sobrepõe a do conteiner, pois seu display é block (que faz um item se posicionar um abaixo do outro.)</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h1>Comportamento padrão de &lt;div&gt;´s com "flex-box"</h1>
+    <p>Podemos ver que as caixas (os itens) estão ocupando 100% da altura do conteiner; Sua largura é padrão, e sua cor de fundo sobrepõe do conteiner. <br> Display = flex, faz um item se posicionar um ao lado do outro.)</p>
+    <div class="conteiner-flex conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <h2>Comportamento fluído do itens dentro do conteiner.</h2>
+    <p>Podemos ver que os itens(caixas) estão ocupando larguras e alturas iguais de acordo com a determinação (automática) do conteiner. <br> Fazemos isso atribuindo a propriedade "flex" e o valor "auto" aos itens.</p>
+    <div class="conteiner conteiner-flex">
+        <div class="item item-auto">A</div>
+        <div class="item item-auto">B</div>
+        <div class="item item-auto">C</div>
+        <div class="item item-auto">D</div>
+        <div class="item item-auto">E</div>
+        <div class="item item-auto">F</div>
+        <div class="item item-auto">G</div>
+    </div>
+    <p><b>OBSERVE:</b> <br> Que as caixas diminuem conforme o conteiner diminue, e aumenta conforme o conteiner aumenta sem que quebrem o padrão que é ficar um ao lado do outro. <br> <b>Faça o teste diminuindo e aumentando a largura da página (ou da janela do navegador)</b>.</p>
+</body>
+</html>

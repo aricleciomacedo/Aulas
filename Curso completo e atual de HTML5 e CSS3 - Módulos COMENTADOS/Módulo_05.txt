@@ -1,0 +1,309 @@
+﻿>>> { INÍCIO DO MÓDULO 5 } <<<
+
+Link da PlayList compelta:
+https://www.youtube.com/playlist?list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d
+
+< Incorporar >
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YJInv0QDwAt4Hmlc&amp;list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Módulo 05, Capítulo 27, Apresentação.
+Vídeo:
+O que vamos aprender no módulo 5? - Curso em Vídeo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=rqvn_c2n9Eg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=1
+
+O que vamos aprender no módulo 5 do Curso em Vídeo de HTML5 e CSS3? Veja nesse vídeo os principais tópicos do nosso primeiro módulo do curso.
+
+Tópicos desse vídeo:
+00:00 - Começa aqui o módulo 5
+00:58 - O que aprendemos até aqui?
+02:05 - O que aprenderemos no Módulo 5
+02:22 - Conhece as caixas flexíveis?
+04:23 - Conheça os layouts em grade
+05:37 - O projeto final do curso 
+06:39 - Quer certificado desse curso?
+07:45 - Passo-a-passo pra fazer o curso pelo site
+11:20 - Passo-a-passo pra conseguir o certificado 
+12:35 - Dica pra economizar em créditos 
+14:16 - E se eu quiser tirar dúvidas do curso?
+15:45 - Encerramento
+
+ 
+
+Módulo 05, Capítulo 27, Aula 01.
+Vídeo:
+Primeiros passos com Flexbox CSS - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=YeGn9nGies0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=2
+
+20.561 visualizações  31 de mai. de 2024  #cursohtml5css3 #modulo05
+Como usar Flexbox com HTML e CSS? O que é um contêiner? O que são itens do Flexbox? Como criar um exemplo simples de site usando Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+
+Tópicos desse vídeo:
+00:00 - Duas perguntas malucas 
+    1- Qual é o formato da água?
+    2- Quem é o pai?
+        E até o final da aula saberemos a resposta, e isso no ajudará a entender e aprender (flex-box).
+00:55 - Você conhece o curso completo?
+    #---------------------------------------------
+01:55 - Educação muda vidas
+    #---------------------------------------------
+03:06 - CSS Flexible Box Module Level 1
+    É o módulo de nivel 1 que trata de caixas flexíveis; E sua reponsividade é limitada as @medias Queries e surgiu em 2017.
+04:20 - CSS Grid Layout Module Level 1/2
+    Também surgiu em 2017 e é o módulo de nível 2.
+05:02 - Outros Layouts mais antigos
+    Exemplos:
+        - Block Layout
+        - Inline Layout
+        - Tabel Layout
+        - Position Layout
+06:30 - Qual é o formato da água?
+    A água é adaptável a qualquer tipo e formato de recipientes; O mesmo acontece as caixas flexíveis.
+    ENTÃO:
+        Vai depender do recipiente(contêiner) .
+08:25 - Entendendo Flexbox
+09:44 - Limitações do display:block
+10:32 - Comportamento do display:flex
+11:50 - Comportamento de caixas flexíveis
+12:27 - Caixas adaptáveis
+12:49 - Eixo principal na direção vertical
+13:29 - Quem é o pai?
+    Quando trabalhamos com caixas flexíveis, precisamos saber quem é o "pai"; O /elemento-pai, é justamente o contêiner que vai levar a configuração(propriedade CSS) /display=flex, e habilitar para os (flex-itens = filhos)outras configurações de flexibilidade; Por isso é bom saber diferenciar quem é o /Pai que é o (flex-contêiner = elemento que envolve outros elementos) e os /Filhos que são os (flex-itens = filhos = elementos internos).
+14:23 - Faça os módulos pelo site
+    #--------------------------------------
+14:58 - Colocando a mão na massa
+*   Criamos a pasta do Módulo = "Modulo-05", dentro dela criamos a pasta de exercicio = "ex027", dentro dela criamos a pasta = "flex001" e criamos o aquivo = "index.html".
+    /Adicionamos ao HTML o código base.
+17:09 - Primeiro exemplo prático Flexbox
+20:09 - O que veremos a seguir?
+
+
+
+Módulo 05, Capítulo 27, Aula 02.
+Vídeo:
+Direções e Eixos Flexbox CSS - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=qtGI16QcV1U&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=3
+
+Você sabe definir as direções e eixos do Flexbox? Sabe configurar a propriedade flex-direction de um Container Flexível? Sabe a diferença entre row, row-reverse, column e column-reverse? Sabe identificar o eixo principal e transversal? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+
+Tópicos desse vídeo:
+00:00 - Direções e Eixos Flexbox 
+    # Vide
+00:27 - O que vimos até aqui 
+    #   
+01:13 - Construtores de site
+    #   
+02:24 - Contêiner e itens
+*    Que quando o flex-conteiner(pai) recebe a configuração display=flex, os filhos(flex-itens) não necessáriamente recebem essa configuração.
+03:06 - Configurando o /flex-direction:-;
+    OBS:
+        "Essa configurações são para os /pais\ , para os conteiners."
+    Existem quatro(4) configurações permitidas para essa propriedade:
+    1- "row" /Linha que por padrão já vem definida pelo browser; Essa propriedade deixa os itens lado a lado.
+    2- "row-reverse" /Linha-reversa, muda o fluxo dos itens da esquerda para a direita apartir do primeiro.
+    3- "column" /Coluna, alinha o itens de cima para baixo, pois seu fluxo é o eixo vertical.
+    4- "column-reverse" /Coluna-reversa, semelhante ao anterior, porém empilha os itens de baixo para cima.
+05:08 - Direção row-reverse
+    /OBS: EM idiomas onde o fluxo de leitura é da esquerda para a direita, ou de baixo para cima; Como por exemplo no /Japonês; Então a disposição dos itens ficam da direita para esquerda, pois segue o "fluxo do eixo horizontal".
+05:35 - Direção column
+    /OBS: EM idiomas onde o fluxo de leitura é da esquerda para a direita, ou de baixo para cima; Como por exemplo no /Japonês; Então a disposição dos itens ficam de baixo para cima, pois segue o "fluxo do eixo vertical".
+06:24 - Direção column-reverse 
+    OBS: EM idiomas onde o fluxo de leitura é da esquerda para a direita, ou de baixo para cima; Como por exemplo no /Japonês; Então a disposição dos itens ficam de cima para baixo, pois segue o "fluxo do eixo vertical".
+07:01 - Entendendo os eixos
+    Existem basicamente dois(2) eixos(axis) e cada eixo gera basicamente dois(pontos = Inicial e o final).
+    1- Eixo(axis) Vertical = main-axis "Eixo Principal".
+    2- Eixo(axis) horizontal = cross-axis "Eixo Transversal"
+07:37 - Eixo principal
+    Ponto1- main-start = Começa no valor 0 do eixoX e vai até o máximo valor do eixoX no sentido Horizontal.
+        Ou seja começa no ponto inicial 0 da esquerda e vai até o ponto final máximo que fica a direita
+    Ponto2- main-end = Segue o mesmo sentido citado acima.
+08:09 - Eixo transversal
+        Ponto1- cross-start = Começa no valor 0 do eixoY e vai até o máximo valor do eixoY no sentido Vertical.
+            Ou seja começa no ponto inicial 0 da esquerda e vai até o ponto final máximo que fica em baixo.
+        Ponto2- cross-end = Segue o mesmo sentido citado acima.
+08:56 - Um resumo muito valioso
+*   LEMBRANDO que em idiomas que o fluxo de leitura é diferente do padrão para nossa linguagem, a disposição do (axis)eixos seguem o fluxo normal, fazendo com que por exemplo o main-axis que é da esquerda para a direita, fique invertido, indo da direita para esquerda em idiomas como por exemplo os idiomas árabe e hebraico.
+    Configuração das propriedades nos Eixos(axis).
+    1- "flex-direction: row;" segue no /main-axis da esquerda para a direita e /cross-axis de cima para baixo.
+    2- "flex-direction: row-reverse;" segue no /main-axis da direita para a esquerda e /cross-axis de cima para baixo.
+    3- "flex-direction: column;" segue no /main-axis de cima para baixo e /cross-axis da esquerda para a direita.
+    4- "flex-direction: column-reverse;" segue no /main-axis de baixo para cima e /cross-axis da esquerda para a direita.
+
+*   SAIBA QUE:
+    "Os itens sempre seguem (são colocados n)o sentido do main-axis".
+11:10 - A importância de conhecer tudo isso
+    "SIM" precisamos dessa teoria para sabermos aplicar na prática as propriedades de posicionamento/alinhamento (aninhamento).
+    "Se não" aprendermos na teoria, não poderemos enender quando, como e onde aplicar por exemplo a propriedade "justify-content, align-content, o align-itens."
+    "Conhecer" os eixos e as quatro direções, nos ajudará a posicionar os itens usando as propriedades.
+12:01 - Faça outros cursos grátis
+    #-------------------------------
+12:40 - Exemplo prático
+    Copiamos a pasta do exercício anterior e renomeamos para "flex002" e com isso usamos exemplo do exercício da aula anterior para aplicarmos na prática a teoria das direções e dos eixos. 
+17:26 - A importância dessa teoria
+#   O que ja dito foi.
+18:30 - O que vem na próxima aula?
+
+
+
+Módulo 05, Capítulo 27, Aula 03
+Vídeo:
+Empacotamento e fluxo no Flexbox CSS - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=KRk3tjIZeFI&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=4
+
+    Você sabe como usar a propriedade flex-wrap dentro do container Flex do seu site? Sabe qual é a diferença entre nowrap, wrap e wrap-reverse? Sabe como funciona o flex-flow para simplificar? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+
+Tópicos desse vídeo:
+
+00:00 - Direções e Eixos Flexbox 
+00:52 - O que aprendemos até aqui
+01:27 - Quer aprender a programar?
+#---------------------------------
+02:42 - Entendendo o flex-wrap
+    A propriedade "flex-wrap" significa /Empacotamento/Encapsulamento.
+        Basicamente, essa propriedade configura o Comportamento do /flex-contêiner = Pai.
+        Comportamentos:
+            1- "flex-wrap: no-wrap;".
+            2- "flex-wrap: wrap;".
+            3- "flex-wrap: wrap-reverse;".
+04:05 - O valor nowrap do flex-wrap
+    1- "flex-wrap: nowrap" Significa: (Não emcapsule)/não-quebre, faz com que os flex-itens encolham mediante a diminuição do contêiner dependendo também do conteúdo, pois em alguns casos, o conteúdo vaza/transborda para fora da caixa-pai; E esse é o Comportamento = "valor" /padrão.
+        Em outras palavras podemos dizer que o /nowrap é o mesmo que fazer com que os flex-itens não saiam da sequência configurada mesmo que encolham.
+05:18 - O valor wrap do flex-wrap
+    2- "flex-wrap: wrap;" Significa: (Sim Emcapsule)/sim-quebre, faz com os flex-itens não encolham mediante a diminuição da caixa-pai/contêiner idependente do conteúdo; Neste caso o conteúdo não vaza/transborda para fora do /Contêiner.
+        Em outras palavras; o comportamento "wrap" faz com que os "flex-itens" se comportem de tal maneira que ao atigir o contêiner um espaço em que o último elemento não caiba na dimensão; Então o último flex-item quebra/desce para a próxima linha no sentido do (eixo-transversal) do /cross-axi que é para baixo.
+06:40 - O valor wrap-reverse do flex-wrap 
+    3- "flex-wrap: wrap-reverse;" Sigmifica: (Sim Emcapsule ao contrário)/sim-quebre-reversamente, faz com os flex-itens não encolham mediante a diminuição da caixa-pai/contêiner idependente do conteúdo; Neste caso o conteúdo não vaza/transborda para fora do /Contêiner.
+        AINDA; o comportamento "wrap-reverse" faz com que os "flex-itens" se comportem de tal maneira que ao atigir o contêiner um espaço em que o último elemento não caiba na dimensão; Então o último flex-item quebra/sobe para a próxima linha no sentido oposto do (eixo-transversal) do /cross-axi que é neste caso é para cima.
+08:04 - Um resumo muito importante! Anote!
+*   ANOTE e salve imagens do resumo.
+10:08 - Quer um notebook para desenvolvedor?
+#--------------------------------------------
+11:04 - Exemplo prático com flex-wrap
+    Iniciamos esta aula copiando o arquivo "flex001" e renomeando para "flex003", e no "index.html" removemos a propriedade (flex: auto;) no seletor CSS "div.item".
+16:00 - Simplificando tudo com flex-flow
+    Essa é uma propriedade que unem as propriedades "flex-direction + flex-wrap" em uma /shorthand.
+    Ex:
+        Se cofiguramos o contêiner com "flex-direction: row;" e "flex-wrap: nowrap."; Então podemos usar a /shorthand e declarar a propriedade com valores = "fle-flow; row nowrap", pois dá no mesmo.
+16:49 - Usando o flex-flow na prática
+"
+        VIDE!
+"
+17:39 - Usando o flex: auto
+*   OBSEVAÇÃO: A propriedade flex que é uma shorthand, só funciona no flex-itens que são os filhos.
+    "Quanto a essa shorthand, iremos ter mas detalhes nas aulas seguintes."
+22:06 - O que vamos ver a seguir?
+
+
+
+
+Módulo 05, Capítulo 27, Aula 04
+Vídeo:
+Alinhamento nos eixos Flexbox - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=KKdr1KZeFqk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=5
+
+* Você sabe usar as propriedades Flexbox justify-content e align-items? Sabe a diferença entre valores de alinhamento flex-start, flex-end, center, space-between, space-evenly e space-around? Sabe como fazer o alinhamento nos eixos principal e transversal do Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+
+Tópicos desse vídeo:
+00:00 - Alinhamento nos eixos Flexbox
+01:53 - Cursos que podem ajudar na sua carreira
+#----------------------------------------------
+02:52 - Uma revisão rápida  
+04:25 - Alinhamento no eixo principal
+    A propriedade [justify-content=""] faz o alinhamento dos flex-itens em relação ao /main-axis que é o eixo horizontal em direção do eixo X da tela.
+    OBS: 
+        Nem sempre o justify-content faz o alinhamento do elementos para ficarem deitados, pois se o /main-axis do box-pai for em-pé como no caso em que se usa a propriedade [flex-flow= column], então o alinhamento é verticalmente em direção do eixo Y da tela.
+05:34 - justify-content: flex-start 
+    Faz com que o primeiro elemento(flex-item) fique grudado no "main-start" que é o ponto inicial do "main-axis" e deixa espaço em branco(vazio) no "main-end" que é o ponto final.
+07:00 - justify-content: flex-end
+    Faz com que o último elemento(flex-item) fique grudado no "main-end" que é o ponto final do "main-axis" e deixa espaço em branco(vazio) no "main-start" que é o ponto inicial.
+07:38 - justify-content: center
+    Faz com que os elementos(flex-itens) calcule o centro do (contêiner) e se aninhem a partir do centro do /main-axis que é o Eixo Principal; Quanto aos espaços vazios(em branco) ambos ficam por igual tanto no "main-start" quanto no "main-end".
+08:31 - justify-content: space-between 
+    Faz com que o primeiro(flex-item) grude no "main-start" e o último(flex-item) grude no "main-end", enquanto os demais elementos(flex-itens) ficam no meio com espaçamento entre eles iguais.
+09:22 - justify-content: space-evenly
+    Faz com que os elementos(flex-itens) fiquem com espaçamento antes e depois deles exatamente iguais.
+10:08 - justify-content: space-around
+    Faz com que o espaço do (contêiner) seja dividido pelo número de (flex-itens) e apartir desse valor, os elementos são centralizados dentro desses espaçoes iguais.
+        OBS: O efeito visual dessa propriedade se parece muito com o "space-evenly"; Mas a diferença consiste nos espaços do "main-star e main-end".
+            ENTÃO isso faz com que o espaço no "main-start" e "main-end" fiquem iguais em relação ao primeiro e último (flex-itens), e a soma desses espaços é igual ao valor do espaço de um elemento pro outro dentro do (contêiner).
+11:01 - Comparando os resultados
+*   Considere os hífens(-) como o espaço entre os flex-itens definidos pela propriedade atribuida ao contêiner Pai que define o conportamento(alinhamento) dos elementos no Eixo-Principal(main-axis).
+    "--------------------------DIFERENÇA--------------------------"
+            A--B--C     Comportamento do /space-between
+            -A-B-C-     Comportamento do /space-evenly
+            -A--B--C-   Comportamento do /space-between
+
+12:10 - E quando muda a direção dos eixos?
+    Quando muda de direção, na verdade é o /maix-axis que muda.
+        Por exemplo: 
+            Se o contêiner Pai esta definido com a propriedade "flex-flow=column nowrap"= (flex-direction=column e flex-wrap=nowrap) e defirnirmos a propriedade "felx-start" então o espaço em branco fica em baixo, pois o primeiro "flex-item" grudou em cima.
+                Esse é um exemplo de como muda as direções conforme muda o /main-axis = (Eixo Principal).
+
+*   Aqui é um exemplo com a propriedade "flex-flow: column nowrap" definida; Com isso os flex-itens são distribidos conforme a direção do main-axis que está column(pra baixo).
+(       OBSERVAÇÃO: Considere os hífen"-" como espaços vázios.       )
+    "--------------------------DIFERENÇAS--------------------------"
+    Comportamento do /flex-start    Comportamento do /flex-end    Comportamento do /center
+                A                              -                            -
+                B                              A                            A
+                C                              B                            B
+                -                              C                            C
+                                                                            -
+
+    Comportamento do /between    Comportamento do /flex-evenly   Comportamento do /around
+                A                           -                               -
+                -                           A                               A
+                B                           -                               -
+                -                           B                               -
+                C                           -                               B
+                                            C                               -
+                                                                            -
+                                                                            C
+                                                                            -
+
+13:53 - Ajude o projeto do Curso em Vídeo
+#-----------------------------------------
+14:32 - Exercício prático com alinhamentos
+    Começamos então copiando o arquivo "flex001" que contém o  arquivo ".html" básico já feito e renomeamos para "flex004".
+16:03 - Testando os alinhamentos que aprendemos
+18:09 - Alinhamento no eixo transversal
+19:07 - align-items: stretch
+    Os flex-itens são esticados no sentido do cross-axis, de tal forma, que os itens ocupam toda a altura do contêiner(caixa-pai)
+19:44 - align-items: flex-start
+    Os flex-itens <não> esticam; Porém grudam no ínicio do contêiner(caixa-pai) no sentido do cross-axis, e todo espaço vazio fica abaixo em direção ao "cross-and.".
+20:24 - align-items: flex-end e center
+    /flex-end:
+    Os flex-itens <não> esticam; Porém grudam no fim do contêiner(caixa-pai) no sentido do cross-axis, e todo espaço vazio fica em cima em direção ao "cross-start".
+    /center:
+    Os flex-itens <não> esticam; Grudam no centro do contêiner(caixa-pai) no sentido do cross-axis, e todo espaço vazio fica por igual em cima e em baixo em ambas as direções do "cross-start e cross-end".
+21:16 - Teste prático do align-items
+#-------------------------------------
+22:22 - Está tendo alguma dificuldade?
+
+
+
+Módulo 05, Capítulo 27, Aula 05
+Vídeo:
+Centralização absoluta com Flexbox - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=gfimpySRhUI&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=6
+
+* Você sabe centralizar os elementos usando Flexbox? Sabe como fazer uma centralização absoluta dos componentes usando CSS Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+
+Tópicos desse vídeo:
+00:00 - Centralização com Flexbox
+01:33 - Quer aprender as linguagens C e C# ?
+#--------------------------------------------
+02:26 - Centralizando um item
+04:23 - Lembrando do justify-content e align-items
+05:36 - Exemplo prático para centralização
+    Iniciamos a aula criando o arquivo "flex005" e o "index.html".
+*   Opamos por usar as div´s semânticas por questão de pratica.
+08:39 - Alinhamento da section
+11:47 - Atualizando o repositório remoto
+*       NÃO ESQUEÇA...
+13:06 - Acompanha a gente nas redes sociais 
+13:52 - O que vem a seguir?    

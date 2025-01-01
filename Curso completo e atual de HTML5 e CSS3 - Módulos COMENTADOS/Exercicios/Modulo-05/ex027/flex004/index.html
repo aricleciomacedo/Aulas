@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        body > h1, h2, h3 {
+            text-align: center;
+        }
+        div.conteiner {
+            background-color: lightsalmon;
+            
+            display: flex;
+
+            /* Aqui é o padrão definido mesmo que não atribuiamos elas ao Contêiner. */
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            /* flex: auto; Removemos esta propriedade para vermos o comportamento do itens em relação ao padrão do contêiner pai.*/
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        span {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+        textarea {/* Para desabilitar o campo de escrever, use o atributo [disble] na tag.   */
+            resize: none;/* Assim desabilitamos o cantinho de esticar o textarea. */
+            overflow: hidden;/*  Assim desabilitamos a barra de rolagem. */
+        }
+
+        .conteiner-img {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 0px;
+        }
+        .img {
+            width: 45%;
+        }
+        .img img {
+            width: 100%;
+        }
+
+        /* Aplicando animação */
+        div.conteiner-img.conteiner-imgAnim {
+            color: white;
+        }
+        div.conteiner-img.conteiner-imgAnim div.img {
+            width: 45%;
+            height: 320px;
+            background: black  center center/100% no-repeat;
+            animation: conteiner-imgAnim 5s linear infinite;
+            animation-delay: none;
+        }
+
+        /* Contêiner 2*/
+        .conteiner.conteinerFlexFlow_row-reverse {/* Aqui selecionamos as duas classes */
+            flex-flow: row-reverse nowrap;
+        }
+        /* Contêiner 3*/
+        .conteiner.conteinerJustify-content_flex-end {
+            justify-content: flex-end;
+        }
+        /* Contêiner 4*/
+        .conteiner.conteinerJustify-content_center {
+            justify-content: center;
+        }
+        /* Contêiner 5*/
+        .conteiner.conteinerJustify-space-between {
+            justify-content: space-between;
+        }
+        /* Contêiner 6*/
+        .conteiner.conteinerJustify-space-evenly {
+            justify-content: space-evenly;
+        }
+        /* Contêiner 7*/
+        .conteiner.conteinerJustify-space-around {
+            justify-content: space-around;
+        }
+
+        /* Eixo Transversal 
+        contêiners*/
+        .conteiner.conteiner2 {
+            height: 300px;
+            justify-content: space-around;
+        }
+
+        /* Contêiner 8 */
+        .conteiner2.conteinerAlign-itens_flex-start {
+            align-items: stretch;/* PADRÃO */
+        }
+        /* Contêiner 9 */
+        .conteiner2.conteinerAlign-itens_flex-start {
+            align-items: flex-start;
+        }
+        /* Contêiner 10 */
+        .conteiner2.conteinerAlign-itens_flex-end {
+            align-items: flex-end;
+        }
+        /* Contêiner 10 */
+        .conteiner2.conteinerAlign-itens_center {
+            align-items: center;
+        }
+        
+
+        /* Animação */
+        @keyframes conteiner-imgAnim {
+            0% {
+                background-image: url("./imagens/img10.jpg");
+            }
+            50% {
+                background-image: url("./imagens/img11.jpg");
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>AULA 4</h1>
+    <hr>
+    <h2>ALINHAMENTO NO EIXO PRINCIPAL (main-axis)</h2>
+    <span>&#8794;</span>
+    <h3>Comportamento padrão da &lt;div&gt; que é o contêiner Pai dos flex-itens</h3>
+    <p><b>ABAIXO</b> podemos ver a configuração padrão do contêiner flex que não muda o comportamento dos elmentos, mesmo que as propriedades não sejam atribuidas ao seletor na CSS.</p>
+    <div style="display: flex;">
+        <textarea disabled style=" margin: 0 auto; margin-bottom: 10px;" name="" id="" cols="50" rows="14">
+<!--<style>
+        div.conteiner {
+            background-color: lightsalmon;
+            
+            display: flex; PADRÃO
+            flex-flow: row nowrap; PADRÃO
+            justify-content: flex-start;PADRÃO
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style> -->
+        </textarea>
+    </div>
+    <br>
+    <h2>PADRÃO</h2>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img1.jpg" alt="flex-flow">
+        </div>
+        <div class="img">
+            <img src="./imagens/img2.jpg" alt="justify-content">
+        </div>
+    </div>
+    <hr>
+
+    <!-- Contêiner 1 -->
+    <h3>VEJA ABAIXO o comportamento PADRÃO dos flex-itens em relação ao padrão do Contêiner..</h3>
+    <p><b>NOTE</b> que; Quem gruda no ínicio do contêiner é o primeiro flex-item(elemento).</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 2 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com propriedade "flex-flow = row-reverse + nowrap".</h3>
+    <p><b>NOTE</b> que; Quem gruda no fim do contêiner é o primeiro  flex-item(elemento).</p>
+    <div class="conteiner conteinerFlexFlow_row-reverse">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+    
+    <!-- Contêiner 3 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com as propriedade "flex-flow = row + nowrap" e a propriedade "justify-content = flex-end"</h3>.
+    <p><b>NOTE</b> que; Quem gruda no fim do contêiner é o último flex-item(elemento).</p>
+    <div class="conteiner conteinerJustify-content_flex-end">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <br>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img3.jpg" alt="justify-content=center">
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 4 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com as propriedade "flex-flow = row + nowrap" e a propriedade "justify-content = center"</h3>
+    <p><b>NOTE</b> que; Quem gruda no fim do contêiner é o último flex-item(elemento).</p>
+    <div class="conteiner conteinerJustify-content_center">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <br>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img4.jpg" alt="justify-content=center">
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 5 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com as propriedade "flex-flow = row + nowrap" e a propriedade "justify-content = space-between"</h3>
+    <p><b>NOTE</b> que; O primeiro flex-item gruda no início do contêiner, o último flex-item(elemento) gruda no fim do contêiner e os demais tem espaço entre eles "calculado automáticamente" para que fiquem iguais entre si.</p>
+    <div class="conteiner conteinerJustify-space-between">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <br>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img5.jpg" alt="justify-content=space-between">
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 6 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com as propriedade "flex-flow = row + nowrap" e a propriedade "justify-content = space-evenly"</h3>
+    <p><b>NOTE</b> que; Os flex-itens são distribuidos de tal forma que fiquem espaços antes e depois de si iguais.</p>
+    <div class="conteiner conteinerJustify-space-evenly">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <br>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img6.jpg" alt="justify-content=evenly">
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 7 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com as propriedade "flex-flow = row + nowrap" e a propriedade "justify-content = space-around"</h3>
+    <p><b>NOTE</b> que; Os flex-itens são distribuidos de tal forma que fiquem espaços antes e depois de si iguais; Porém o primeiro e o último não grudam no fim e nem no início do contêiner, e esse espaço que separa o primeiro e o último elemento da margem do contêiner, equivale a divisão por dois(2) do valor do espaço entre os elementos.</p>
+    <div class="conteiner conteinerJustify-space-around">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <br>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img7.jpg" alt="justify-content=space-around">
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <h2>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner com a propriedade "flex-flow = column + nowrap" e os valores da propriedade "justify-content" </h2>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img8.jpg" alt="justify-content´s">
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Eixo Transversal -->
+    <br>
+    <br>
+    <h2>ALINHAMENTO NO EIXO TRANSVERSAL (cross-axis) <br><br> <i>"Lembrando que precisamos definir uma altura para o contêiner, para vermos na prática a aplicação das propriedades".</i></h2>
+    <span>&#8794;</span>
+
+    <!-- Contêiner 8 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner definido  com a propriedade (padrão)>"flex-flow = row + nowrap" e a propriedade "align-items=stretch".</h3>
+    <br>
+    <div class="conteiner-img">
+        <div class="img">
+            <img src="./imagens/img9.jpg" alt="align-itens=stretch">
+        </div>
+    </div>
+    <br>
+    <p><b>NOTE</b> que; Os flex-itens são esticados no sentido do cross-axis, de tal forma, que os itens ocupam toda a altura do contêiner(caixa-pai).</p>
+    <i style="font-size: 1rem;"> <b>OBS:</b> &nbsp;&nbsp;&nbsp;justify-content neste caso foi alterado para o valor "space-around"; Já a propriedade "align-items", tem seu valor padrão definido como "stretch"=(esticar).</i>
+    <div class="conteiner conteiner2 conteinerAlign-itens_stretch">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 9 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner definido  com a propriedade (padrão)>"flex-flow = row + nowrap" e a propriedade "align-items=flex-start".</h3>
+    <br>
+    <div class="conteiner-img conteiner-imgAnim">
+        <div class="img">
+            flex-start<!-- <img src="./imagens/img10.jpg" alt="align-itens=flex-start"> -->
+        </div>
+    </div>
+    <br>
+    <p><b>NOTE</b> que; Os flex-itens <b>não</b> esticam; Grudam no ínicio do contêiner(caixa-pai) no sentido do cross-axis, e todo espaço vazio fica abaixo em direção ao "cross-and.".</p>
+    <i style="font-size: 1rem;"> <b>OBS:</b> &nbsp;&nbsp;&nbsp;justify-content neste caso foi alterado para o valor "space-around".</i>
+    <div class="conteiner conteiner2 conteinerAlign-itens_flex-start">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 10 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner definido  com a propriedade (padrão)>"flex-flow = row + nowrap" e a propriedade "align-items=flex-end".</h3>
+    <br>
+    <div class="conteiner-img conteiner-imgAnim2">
+        <div class="img">
+            <img src="./imagens/img12.jpg" alt="align-itens=flex-end">
+        </div>
+    </div>
+    <br>
+    <p><b>NOTE</b> que; Os flex-itens <b>não</b> esticam; Grudam no fim do contêiner(caixa-pai) no sentido do cross-axis, e todo espaço vazio fica em cima em direção ao "cross-start.".</p>
+    <i style="font-size: 1rem;"> <b>OBS:</b> &nbsp;&nbsp;&nbsp;justify-content neste caso foi alterado para o valor "space-around".</i>
+    <div class="conteiner conteiner2 conteinerAlign-itens_flex-end">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 11 -->
+    <h3>VEJA ABAIXO o comportamento dos flex-itens dentro do Contêiner definido  com a propriedade (padrão)>"flex-flow = row + nowrap" e a propriedade "align-items=center".</h3>
+    <br>
+    <div class="conteiner-img conteiner-imgAnim3">
+        <div class="img">
+            <img src="./imagens/img13.jpg" alt="align-itens=center">
+        </div>
+    </div>
+    <br>
+    <p><b>NOTE</b> que; Os flex-itens <b>não</b> esticam; Grudam no centro do contêiner(caixa-pai) no sentido do cross-axis, e todo espaço vazio fica por igual em cima e em baixo em ambas as direções do "cross-start e cross-end".</p>
+    <i style="font-size: 1rem;"> <b>OBS:</b> &nbsp;&nbsp;&nbsp;justify-content neste caso foi alterado para o valor "space-around".</i>
+    <div class="conteiner conteiner2 conteinerAlign-itens_center">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+</body>
+</html>

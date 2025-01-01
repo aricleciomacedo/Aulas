@@ -1,0 +1,162 @@
+<!--    AULA 2
+    Iníciamos esta aula prática, removendo a propriedade "flex=auto" para vermos o fluxo padrão dos itens dentro do conteiner flex, e atribuimos um espaçamento interno para que os itens ficassem mais gordinhos.
+        OBS:
+        O fluxo padrão do flex-itens, é aninhados da esquerda para a direita e de cima para baixo; Ou seja posicionados no flex-start + cross-start seguindo maix-axis = flex-direcion="row".
+            ENTÃO agora acompanhe a aula.
+ -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=html" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        div.imagens {
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            box-shadow:inset -4px -2px 10px 1px black;
+
+            overflow: hidden;
+        }
+        div.imagens img {
+            width: 50rem;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+            
+            display: flex;
+            flex-direction: row;/* Esse é o fluxo padrão, é o mesmo que não atribuir. */
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+
+            padding: 20px;
+            /* flex: auto;  Removemos essa propriedade*/
+        }
+
+        div.conteiner2 {
+            flex-direction: column;
+        }
+        div.conteiner3 {
+            flex-direction: row-reverse;
+        }
+        div.conteiner4 {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div style="text-align: center; padding: 10px;">
+        <h1>AULA 2</h1>
+    </div>
+    <div class="imagens" style="width: 98%;">
+        <h2>CSS Flexible Box Module</h2>
+        <div class="imagemFlexible">
+            <img src="./imagens/flexible-box-module.jpg" alt="">
+        </div>
+        <h3>Eixo Principal e Eixo Tranversal</h3>
+        <div class="imagemAxis">
+            <img src="./imagens/Eixo(axis).jpg" alt="">
+        </div>
+        <p> <i style="padding: 0px 7px;">&RightArrow;</i> "main-axis" = Eixo Principal = Eixo Horizontal = Eixo X <span style="padding: 3px 33px; font-size: 2rem;" class="material-symbols-outlined">html</span> <i style="padding: 0px 7px;">&DownArrow; </i>"cross-axis" = Eixo Transversal = Eixo Vertical = Eixo Y</p>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h2>flex-direction="row"</h2>
+    <div class="conteiner">
+        <div class="imagem">
+            <img src="./imagens/flex-direction=row.jpg" alt="">
+        </div>
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h2>flex-direction="column"</h2>
+    <div class="conteiner conteiner2">
+        <div class="imagem">
+            <img src="./imagens/flex-direction=column.jpg" alt="">
+        </div>
+        <div class="item item2">A</div>
+        <div class="item item2">B</div>
+        <div class="item item2">C</div>
+        <div class="item item2">D</div>
+        <div class="item item2">E</div>
+        <div class="item item2">F</div>
+        <div class="item item2">G</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h2>flex-direction="row-reverse"</h2>
+    <div class="conteiner conteiner3">
+        <div class="imagem">
+            <img src="./imagens/flex-direction=row-reverse.jpg" alt="">
+        </div>
+        <div class="item item3">A</div>
+        <div class="item item3">B</div>
+        <div class="item item3">C</div>
+        <div class="item item3">D</div>
+        <div class="item item3">E</div>
+        <div class="item item3">F</div>
+        <div class="item item3">G</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h2>flex-direction="column-reverse"</h2>
+    <div class="conteiner conteiner4">
+        <div class="imagem">
+            <img src="./imagens/flex-direction=column-reverse.jpg" alt="">
+        </div>
+        <div class="item item4">A</div>
+        <div class="item item4">B</div>
+        <div class="item item4">C</div>
+        <div class="item item4">D</div>
+        <div class="item item4">E</div>
+        <div class="item item4">F</div>
+        <div class="item item4">G</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+</body>
+</html>
