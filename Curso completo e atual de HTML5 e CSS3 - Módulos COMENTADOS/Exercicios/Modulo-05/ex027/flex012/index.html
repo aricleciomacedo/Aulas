@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+
+            /* flex-direction: row; Padrão */
+            /* flex-wrap: nowrap; Padrão */
+            flex-flow: wrap nowrap;/* Padrão referente a flex-direction e flex-wrap.*/
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+
+            /* flex: auto; Removido */
+
+            /* flex-basis: 200px; Removemos daqui e colocamos nos flex-itens. */
+            /*flex-shrink: 1;  Padrão*/
+            /*flex-grow: 0;  Padrão*/
+        }
+
+        /* Exemplo 1 */
+        div#cxA {
+            /*flex-shrink: 0;  O quanto encolhe */
+            /*flex-grow: 1;  O quanto cresce */
+            /*flex-basis: 200px;  tamanho base */
+
+            flex: 1 0 200px; /* ShortHand para simplicar o uso das 3 propriedades acima. */
+        }
+        div#cxB {
+            /* flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 150px; */ 
+
+            flex: 1 1 150px;
+        }
+        div#cxC {
+            /* flex-shrink: 8;
+            flex-grow: 1; 
+            flex-basis: auto; */ /* Valor auto, faz com que o tamanho do item seja padronizado. */
+
+            flex: 1 8 auto;
+        }
+
+        div.containerDeImagens {
+            display: flex;
+            gap: 10px;
+            width: 800px;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+        div.containerDeImagens div img {
+            width: 740px;
+            padding: 6px;
+        }
+        div.containerDeImagens div.img {
+            border: 1px solid blue;
+            box-shadow: 4px 5px 2px 1px rgba(0, 0, 0, 0.342);
+        }
+        div.containerDeImagens p{
+            padding-left: 10px;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AULA 12</h1>
+    <p><b>OBSERVAÇÃO:</b>
+        <br>
+        "Altere a dimensão do navegador para ver o comportamento dos elementos mediante as configurações feitas durante a aula".
+    </p>
+    <hr>
+
+    <h2>propriedade flex: ;</h2>
+    <p>Podemos definir os valores de "flex-grow"; "flex-shrink" e  de "flex-bass" ao mesmo tempo em uma propriedade que única, chamada de {shorthando} para diferentes /flex-itens, usando seletores para (class) ou (id) e atribuindo a propriedade individualmente.</p>
+
+    <h3>Qual é o comportamento dos flex-itens em relação a isto?</h3>
+    <p><b>A ilustração abaixo</b> exemplifica a aplicação da propriedade nos elementos-filhos e a mostra a maneira como vai se comportar mediante aumento ou diminuição do contêiner.</p>
+
+    <div class="containerDeImagens">
+        <div class="img">
+            <h4>imagem 1</h4>
+            <p><b>Entenda quem</b> é contêiner e quem é itens.</i></b>
+            </p>
+            <img src="./imagens/img1.jpg" alt="imagem1.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 2</h4>
+            <p><b>Entenda quem</b> é contêiner e quem é itens.</i></b>
+            </p>
+            <img src="./imagens/img2.jpg" alt="imagem2.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 3</h4>
+            <p><b>Aplicação</b> da propriedades aos itens individualmente.</i></b>
+            </p>
+            <img src="./imagens/img3.jpg" alt="imagem3.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 4</h4>
+            <p><b>Atribuindo</b> a propriedade [flex] com os três(3) valores, aos itens individualmente.</i></b>
+            </p>
+            <img src="./imagens/img4.jpg" alt="imagem3.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 5</h4>
+            <p><b>simplificando</b> a propriedade [flex] com os três(3) valores.</i></b>
+            </p>
+            <img src="./imagens/img5.jpg" alt="imagem3.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 6</h4>
+            <p><b>simplificando</b> a propriedade [flex] com os três(3) valores.</i></b>
+            </p>
+            <img src="./imagens/img6.jpg" alt="imagem3.jpg">
+        </div>
+    </div>
+    <br>
+    <br>
+    <h2>
+        Entendendo mais sobre os valores na propriedade [flex]:
+    </h2>
+    <p>
+        <b>1-</b> /flex = /flex-grow + "flex-shirink" + {flex-basis} <br>
+        <b>#PADRÃO</b> <br> 
+        <b>2-</b> /flex: 0 1 auto; = É o mesmo que não atribuir NADA, é o PADRÃO. <br>
+        &nbsp;&nbsp;[Podemos não declarar os valores acima, ou se houver dúvida tem alguma configuração que vai sobrepor os valores: ENTÃO usamos o valor =  initial como vemos abaixo]. <br>
+        <b>3-</b> /flex: initial; = /flex: 0 1 auto; = PADRÃO. <br>
+        <b># NADA FLEXÍVEL</b>  <br>
+        <b>4-</b> /flex: 0 0 auto; = É o mesmo que deixar os itens não flexíveis. <br>
+        &nbsp;&nbsp;Fazendo assim os itens não podem crescer, não podem diminuir e o tamanho vai depender do tamanho do conteúdo. <br>
+        <b>5-</b> /flex: none; = Segue a mesma lógica do /flex: 0 0 auto; que vimos na opção 4. <br>
+        <b># MÁXIMA FLEXIBILDADE</b>  <br>
+        <b>6-</b> /flex: 1 1 auto; = É o contrário do anterior(flex: 0 0 auto;),. <br>
+        &nbsp;&nbsp;Com isso dizemos que o elemento vai crescer a vontade, diminuir a vontade o elemento, e o limite de aumetar e diminuir vai ser o  tamanho natural do conteúdo.
+        &nbsp;&nbsp;Podemos dizer que isso é o máximo de flexibilidade que um flex-item pode ter. <br>
+        <b>7-</b> /flex-auto; = A lógica da configuração anterior (flex: 1 1 auto;). <br>
+        <b>8-</b> /flex: 3; = Assim determinamos o valor para /flex-grow <br>
+        &nbsp;&nbsp;já o "flex-shirink" + {flex-basis} ficam padronizados. <br>
+        <b>9-</b> /flex: 3 1 auto; = A lógica anterior que é = /flex: 3;
+    </p>
+    <hr>
+
+    <h3>EXEMPLO 1</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para os flex-itens definimos o flex-basis = valor indiviual ; flex-shrink = valor individual e flex-grow = valor individual;
+        <br>
+        <br>
+        &nbsp; <b>Mas para simplificar o uso das propriedades [flex-grow + flex-shrink + flex-basis; Nesta aula usamos a maneira simplicada das propriedades em forma de ShortHand chamada "flex: ;".</b>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    <br>
+    <hr>
+</body>
+</html>
