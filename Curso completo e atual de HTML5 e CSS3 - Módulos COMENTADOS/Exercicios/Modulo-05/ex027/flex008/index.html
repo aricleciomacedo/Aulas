@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        .caixaDeImagens {
+            display: flex;
+            gap: 12px;
+            overflow: scroll;
+        }
+        .caixaDeImagens img {
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .caixaDeImagens2 {
+            display: flex;
+            gap: 12px;
+            overflow: scroll;
+        }
+        .caixaDeImagens2 img {
+            width: 480px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;/* PADRÃO que é = a flex-direction=row e flex-wrap=wrap;*/
+            height: 400px;/* Definimos uma altura para vermos a ação da propriedade alig-self nos flex-itens */
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            /* flex: auto;  Removido durante a aula*/
+            text-align: center;
+            padding: 20px;/* Para aumentar a dimensão das caixas-filhos */
+        }
+
+        /* Contêiner 3 */
+        div#i1 {
+            order: 0;       
+        }
+        div#i2 {
+            order: 0;   
+        }
+        div#i3 {
+            order: 0;   
+        }
+        div#i4 {
+            order: 0;   
+        }
+        div#i5 {
+            order: 0;   
+        }
+        div#i6 {
+            order: 0;   
+        }
+        div#i7 {
+            order: 0;   
+        }
+
+        /* Contêiner 2 */
+        .conteiner2 {
+            align-items: flex-start;
+        }
+
+        div#i2b {
+            align-self: auto;
+        }
+        div#i3c {
+            align-self: flex-end;
+        }
+        div#i5e {
+            align-self: center;
+        }
+        div#i6f {
+            align-self: flex-start;
+        }
+        div#i7g {
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <h1>AULA 8</h1>
+
+    <h2>Compreendendo a propriedade [align-self] nos elementos filhos de um Contêiner FlexBox.</h2>
+    <p><b>Abaixo vemos o comportamento de Flex-Contêiner e dos flex-itens</b></p>
+    <div class="caixaDeImagens2">
+        <div><i>O alinhamento dos itens é sempre na direção do cross-axis</i>
+            <br>
+            <br>
+            <br>
+            <img src="./imagens/img8.jpg" alt="Exemplo de Contêiner Flexbox">
+        </div>
+        <div><i>Exemplo de Flex itens e os valores da propriedade "align-self</i> <br><br><br>
+            <img src="./imagens/img9.jpg" alt="Exemplo de flex-item">
+        </div>
+    </div>
+    <p>Podemos notar acima que o comportamento dos flex-itens mudam corfome a altura do Contêiner; <br>
+         Isso devido a propriedade align-self definida para cada item.</p>
+    <br>
+    <hr>
+
+    <!-- Contêiner 1 -->
+    <h2>PADRÃO</h2>
+    <p><b>Aqui</b> vemos o exemplo de Contêiner definido com a propriedade "display=flex", que tem por padrão as propriedades "flex-direction = row; flex-wrap = wrap e align-itens = stretch", e os flex-itens mesmo sem estar definido na CSS; Recebem por padrão a propriedade "order = 0" que alinha os elementos conforme estão no conteúdo html.</p>
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+    <p><b>OBSERVE nos exemplos acima que:</b> os flex-itens com "order = 0" ficam agrupados conforme a ordem que foram colocados no conteúdo HTML e esticam ocupando a altura inteira do contêiner.</p>
+    <br>
+    <hr>
+
+    
+    <!-- Contêiner 2 -->
+    <h2>Usando a propriedade "align-self" no filhos.</h2>
+    <p><b>Aqui</b> vemos o exemplo de Contêiner definido com a propriedade "display=flex", que tem por padrão as propriedades "flex-direction = row; flex-wrap = wrap"; A propriedade "align-itens = flex-start", e os flex-itens mesmo sem estar definido na CSS; Recebem por padrão a propriedade "order = 0" que alinha os elementos conforme estão no conteúdo html, e </p>
+    <div class="conteiner conteiner2">
+        <div class="item" id="i1a">A</div>
+        <div class="item" id="i2b">B</div>
+        <div class="item" id="i3c">C</div>
+        <div class="item" id="i4d">D</div>
+        <div class="item" id="i5e">E</div>
+        <div class="item" id="i6f">F</div>
+        <div class="item" id="i7g">G</div>
+    </div>
+    <p><b>OBSERVE nos exemplos acima, a diposição dos elementos com a configuração align-self individual.</b> <br>
+        O flex-item (B) foi definido com a propriedade "align-self = auto ou inherit(herdado)" fazendo ele herdar a configuração do "contêiner-pai", e podemos ver na prática mudando o valor da propriedade "align-items" para (center) &nbsp; OBS: Mesmo sem definir valor, esse é o padrão que o filho herdará.
+        <br>
+        O flex-item (C) foi definido com a propriedade "align-self = flex-end" fazendo co que ele grudar no ponto final do "cross-axis".
+        <br>
+        O flex-item (E) foi definido com a propriedade "align-self = center" fazendo com que ele fique no ponto central do "cross-axis".
+        <br>
+        O flex-item (F) foi definido com a propriedade "align-self = flex-start" fazendo com que ele fique no ponto inicial do "cross-axis".
+        <br>
+        O flex-item (G) foi definido com a propriedade "align-self = stretch" fazendo com que ele estique do ponto in do "cross-axis".
+        <br>
+    </p>
+    <br>
+    <hr>
+
+</body>
+</html>

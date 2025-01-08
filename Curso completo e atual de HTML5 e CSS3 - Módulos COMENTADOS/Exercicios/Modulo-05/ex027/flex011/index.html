@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+
+            /* flex-direction: row; Padrão */
+            /* flex-wrap: nowrap; Padrão */
+            flex-flow: wrap nowrap;/* Padrão referente a flex-direction e flex-wrap.*/
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+
+            /* flex: auto; Removido */
+
+            flex-basis: 200px;
+            flex-shrink: 1;/* Padrão*/
+            flex-grow: 0;/* Padrão*/
+        }
+
+        /* Exemplo 1 */
+        div#cxA {
+            flex-shrink: 0;/* O quanto encolhe */
+            flex-grow: 0; /* O quanto cresce */
+        }
+        div#cxB {
+            flex-shrink: 0;
+            flex-grow: 0; 
+        }
+        div#cxC {
+            flex-shrink: 0;
+            flex-grow: 0; 
+        }
+
+        /* Exemplo 2 */
+        div#cxA2 {
+            flex-shrink: 0;
+            flex-grow: 0; 
+        }
+        div#cxB2 {
+            flex-shrink: 0;
+            flex-grow: 1; 
+        }
+        div#cxC2 {
+            flex-shrink: 0;
+            flex-grow: 0; 
+        }
+
+        /* Exemplo 3 */
+        div#cxA3 {
+            flex-shrink: 1;
+            flex-grow: 0; 
+        }
+        div#cxB3 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxC3 {
+            flex-shrink: 1;
+            flex-grow: 0; 
+        }
+
+        /* Exemplo 4 */
+        div#cxA4 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxB4 {
+            flex-shrink: 1;
+            flex-grow: 4; 
+        }
+        div#cxC4 {
+            flex-shrink: 1;
+            flex-grow: 0; 
+        }
+
+        /* Exemplo 5 */
+        div#cxA5 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxB5 {
+            flex-shrink: 1;
+            flex-grow: 2; 
+        }
+        div#cxC5 {
+            flex-shrink: 1;
+            flex-grow: 0; 
+        }
+
+        /* Exemplo 6 */
+        div#cxA6 {
+            flex-shrink: 1;
+            flex-grow: 0; 
+        }
+        div#cxB6 {
+            flex-shrink: 1;
+            flex-grow: 2; 
+        }
+        div#cxC6 {
+            flex-shrink: 1;
+            flex-grow: 4; 
+        }
+
+        /* Exemplo 7 */
+        div#cxA7 {
+            flex-shrink: 1;
+            flex-grow: 0; 
+        }
+        div#cxB7 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxC7 {
+            flex-shrink: 1;
+            flex-grow: 4; 
+        }
+
+        /* Exemplo 8 */
+        div#cxA8 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxB8 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxC8 {
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+
+        /* Exemplo 9 */
+        div#cxA9 {
+            flex-shrink: 2;
+            flex-grow: 2; 
+        }
+        div#cxB9 {
+            flex-shrink: 2;
+            flex-grow: 2; 
+        }
+        div#cxC9 {
+            flex-shrink: 2;
+            flex-grow: 2; 
+        }
+
+        /* Exemplo 10*/
+        div#cxA10{
+            flex-shrink: 0;
+            flex-grow: 1; 
+        }
+        div#cxB10{
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxC10{
+            flex-shrink: 3;
+            flex-grow: 1; 
+        }
+
+        /* Exemplo 11*/
+        div#cxA11{
+            flex-shrink: 0;
+            flex-grow: 1; 
+        }
+        div#cxB11{
+            flex-shrink: 1;
+            flex-grow: 1; 
+        }
+        div#cxC11{
+            flex-shrink: 8;
+            flex-grow: 1; 
+        }
+
+
+
+        div.containerDeImagens {
+            display: flex;
+            gap: 10px;
+            width: 800px;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+        div.containerDeImagens div img {
+            width: 740px;
+            padding: 6px;
+        }
+        div.containerDeImagens div.img {
+            border: 1px solid blue;
+            box-shadow: 4px 5px 2px 1px rgba(0, 0, 0, 0.342);
+        }
+        div.containerDeImagens p{
+            padding-left: 10px;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AULA 11</h1>
+    <p><b>OBSERVAÇÃO:</b>
+        <br>
+        "Altere a dimensão do navegador para ver o comportamento dos elementos mediante as configurações feitas durante a aula".
+    </p>
+    <hr>
+
+    <h2>/flex-grow</h2>
+    <p>Podemos definir diferentes valores de "flex-grow" para diferentes /flex-itens, usando seletores para (class) ou (id) e atribuindo a propriedade individualmente.</p>
+
+    <h3>Qual é o comportamento dos flex-itens em relação a isto?</h3>
+    <p>
+        <b>1-</b>Itens com valores iguais(=) a zero(0) significa que não vai /crescer. <br>
+        <b>2-</b> Itens com valores (1), significa que vai /crescer em relação aos demais com valor menor. <br>
+        <b>3-</b> Itens com valores acima de (1), siginifica que ele vai /crescer vezes(*) mais que o item de valor = (1), isso acontence em proporção(relação) aos demais com valor = (0); Por exemplo o valor = (2) quer dizer que vai /crescer o dobro do valor que o elemento de valor maior que zero(0) e inferior a ele.
+            <b>Em outras palavras</b>; Valores acima de (0) quer dizer que é a "proporção" em que o item vai /crescer.  
+        <br> 
+        &nbsp;&nbsp;&nbsp;<b>"NÃO confunda":</b> <br>
+            <b><i>Por exemplo;</i></b> Quando o flex-grow = 2, não significa ao pé da letra que um item vai crescer o dobro; Pois se dois itens estiverem com o mesmo valor = a 2? O que vai acontecer? <br>
+            &nbsp;&nbsp;    A conta para definir o tamanho desses itens é baseada na "proporção", se a menor proporção de um item é = 0, então os itens de valores iguais vão crescer por iguais, se o valor for = 1, então os itens vão crescer em proporção ao valor 1.
+    </p>
+
+    <p><b>A ilustração abaixo</b> exemplifica a aplicação da propriedade nos elementos-filhos e a mostra a maneira como vai se comportar mediante aumento aumento ou diminuição do contêiner.</p>
+
+    <div class="containerDeImagens">
+        <div class="img">
+            <h4>imagem 12</h4>
+            <p><b>Com flex-grow</b> definido com valores diferentes para vários flex-itens: <br>
+                <b><i>"Podemos notar neste exemplo" que ambos vão manter o mesmo tamanho pois o contêiner corporta a dimensão dos elementos.</i></b>
+            </p>
+            <img src="./imagens/img12.jpg" alt="imagem12.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 13</h4>
+            <p><b>Com flex-grow</b> definido com valores diferentes para vários flex-itens: <br>
+                <b><i>"Podemos notar neste exemplo" que o "item" [de valor = 1] grow/cresce, enquanto os de [valores = 0] não crescem.</i></b>
+            </p>
+            <img src="./imagens/img13.jpg" alt="imagem 13.jpg">
+        </div>
+        <div class="img">
+            <h4>imagem 14</h4>
+            <p><b>Com flex-grow</b> definido com valores diferentes para vários flex-itens: <br>
+                <b>"Podemos notar neste exemplo"</b> que o "item" [de valor = 1] grow/cresce, e o "item" [de valor = 2] cresce em proporção ao item de valor maior que zero(0) e inferior a ele; Enquanto os de [valores = 0] não crescem. <br>
+                <b><i>Podemos conclui que:</i></b> <br>
+                Os itens se manteem do mesmo tamanho pois o contêiner está comportando todos os itens.
+            </p>
+            <img src="./imagens/img14.jpg" alt="imagem 14">
+        </div>
+        <div class="img">
+            <h4>imagem 15</h4>
+            <p><b>Com flex-grow</b> definido com valores diferentes para vários flex-itens: <br>
+                <b>"Podemos notar neste exemplo"</b> que o "item" [de valor = 1] grow/cresce, e o "item" [de valor = 2] cresce em proporção ao item de valor maior que zero(0) e inferior a ele; Enquanto os de [valores = 0] não crescem. <br> <br>
+                <b><i>Podemos concluir que:</i></b> <br>
+                item de valor = 1 cresce, e item de valor = 2 vai grow/crescer 2 vezes mais(o dobro) que a proporção do item imediatamente maior que zero(0).
+            </p>
+            <img src="./imagens/img15.jpg" alt="imagem 15">
+        </div>
+        <div class="img">
+            <h4>imagem 16</h4>
+            <p><b>Com flex-grow definido com valor = 2 </b> ; <b>Com flex-grow definido com valor = 0 </b> Nada acontece com os itens se o contêiner for do tamanho da soma dos flex-itens.</p>
+            <img src="./imagens/img16.jpg" alt="imagem 16">
+        </div>
+        <div class="img">
+                <h4>imagem 17</h4>
+            <p><b>Com flex-grow definido com valores iguais </b> isso quer dizer que a proporção é igual, e os itens vão crescer igualmente comforme aumentar o tamanho do contêiner.</p>
+            <img src="./imagens/img17.jpg" alt="imagem 17">
+        </div>
+        <div class="img">
+                <h4>imagem 18</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> Nada acontece com os itens se o contêiner for de tamanho igual ao da soma dos flex-itens.</p>
+            <img src="./imagens/img18.jpg" alt="imagem 18">
+        </div>
+        <div class="img">
+                <h4>imagem 19</h4>
+            <p><b>Com item definido com flex-shrink de valor = 1 </b> ;Dizemos que o flex-item vai "encolher".</p>
+            <img src="./imagens/img19.jpg" alt="20magem 19">
+        </div>
+        <div class="img">
+            <h4>imagem 20</h4>
+            <p><b>Item om flex-shrink definido com valor = 2; Item com flex-shrink definido com valor = 1 </b> quer dizer que o  flex-item de valor = 2 vai encolher em proporção a dimensão do item com valor imediatamente maior que 0.</p> <br>
+            <b><i>Podemos conclui que:</i></b> <br>
+            Os itens se manteem do mesmo tamanho pois o contêiner está comportando todos os itens.
+            </p>
+            <img src="./imagens/img20.jpg" alt="imagem 20">
+        </div>
+        <div class="img">
+            <h4>imagem 21</h4>
+            <p><b>Item om flex-shrink definido com valor = 2; Item com flex-shrink definido com valor = 1 </b> quer dizer que o  flex-item de valor = 2 vai encolher em proporção a dimensão do item com valor imediatamente maior que 0.</p> <br>
+            <b><i>Podemos conclui que:</i></b> <br>
+            O item de valor = 2 vai encolher duas(2 *) vezes mais que o item de valor = 1 quando contêiner diminuir de tamanho; Pois a proporção de encolhimento é o valor imediatamente  maior que zero(022
+            </p>
+            <img src="./imagens/img21.jpg" alt="imagem 21">
+        </div>
+        <div class="img">
+            <h4>imagem 22</h4>
+            <p><b>Podemos atribuir as três propriedades aos elementos filhos;</b>
+                E com isso determinar individualmente os valores para cada item separadamente.
+            </p>
+            <img src="./imagens/img22.jpg" alt="imagem 22">
+        </div>
+        <div class="img">
+            <h4>imagem 23</h4>
+            <p><b>Podemos atribuir as três propriedades aos elementos filhos</b>
+                E com isso determinar individualmente os valores para cada item separadamente. <br>
+                <b><i>"Fazemos" isso usando "class e id" nos elementos e definindo o [basis = tamanho base; grow = o quanto cresce e shrink = o quanto encolhe].</i></b> <br>
+                <b>NESTE esxemplo abaixo;</b> Nada acontece pois o contêiner é igual ao tamanho da soma dos "flex-basis" dos itens.
+            </p>
+            <img src="./imagens/img23.jpg" alt="imagem 23">
+        </div>
+        <div class="img">
+            <h4>imagem 24</h4>
+            <p><b>Podemos atribuir as três propriedades aos elementos filhos</b>
+                E com isso determinar individualmente os valores para cada item separadamente. <br>
+                <b><i>"Fazemos" isso usando "class e id" nos elementos e definindo o [basis = tamanho base; grow = o quanto cresce e shrink = o quanto encolhe].</i></b>
+            </p>
+            <img src="./imagens/img24.jpg" alt="imagem 24">
+        </div>
+        <div class="img">
+            <h4>imagem 25</h4>
+            <p><b>Podemos atribuir as três propriedades aos elementos filhos</b>
+                E com isso determinar individualmente os valores para cada item separadamente. <br>
+                <b><i>"Fazemos" isso usando "class e id" nos elementos e definindo o [basis = tamanho base; grow = o quanto cresce e shrink = o quanto encolhe].</i></b>
+            </p>
+            <img src="./imagens/img25.jpg" alt="imagem 25">
+        </div>
+        <div class="img">
+            <h4>imagem 26</h4>
+            <p><b>Podemos atribuir as três propriedades aos elementos filhos</b>
+                E com isso determinar individualmente os valores para cada item separadamente. 
+                <br>
+                <i>"Fazemos" isso usando "class e id" nos elementos e definindo o [basis = tamanho base; grow = o quanto cresce e shrink = o quanto encolhe].</i> 
+                <br>
+                <b>Abaixo vejamos o exmeplo:</b> de todas os comportamento mediante as cofigurações individuais dos elementos.
+            </p>
+            <img src="./imagens/img26.jpg" alt="imagem 26">
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+    <h3>EXEMPLO 1</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para os flex-itens definimos o flex-basis = 200px; flex-shrink = 0 e flex-grow = 0;
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>Os itens não encolhem e nem crescem se aumentar ou diminuir o contêiner.</i>
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 2</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 0 e flex-grow = 0; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 0 e flex-grow = 1; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 0 e flex-grow = 0; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA2">A</div>
+        <div class="item" id="cxB2">B</div>
+        <div class="item" id="cxC2">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [B] é o único que cresce pois (grow = 1), e ambos não não encolhem pois (shrink = 0).</i>
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 3</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 0; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 0; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA3">A</div>
+        <div class="item" id="cxB3">B</div>
+        <div class="item" id="cxC3">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [B] é o único que cresce pois (grow = 1) e ambos os itens encolhem pois [flex-shrink = 1].</i>
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 4</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 4; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 0; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA4">A</div>
+        <div class="item" id="cxB4">B</div>
+        <div class="item" id="cxC4">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [B] é o único que cresce 4 vezes(mais)/[grow = 4], isso em proporção ao item imediatamente maior que zero(0), que é o "item A" com (grow = 1) e ambos os itens encolhem pois [flex-shrink = 1].</i>
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 5</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 2; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 0; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA5">A</div>
+        <div class="item" id="cxB5">B</div>
+        <div class="item" id="cxC5">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [B] é o único que cresce 2 vezes(mais)/[grow = 2], isso em proporção ao item imediatamente maior que zero(0), que é o "item A" com (grow = 1) e ambos os itens encolhem pois [flex-shrink = 1].</i>
+        &nbsp;&nbsp; Podemos dizer que o item B cresce o dobro do item A por causa da proporção (2x1), equanto o item C não cresce.
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 6</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 0; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 2; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 4; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA6">A</div>
+        <div class="item" id="cxB6">B</div>
+        <div class="item" id="cxC6">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [C] é o único que cresce 2 vezes(mais)/[grow = 4], isso em proporção ao item imediatamente maior que zero(0), que é o "item B" com (grow = 2) e ambos os itens encolhem pois [flex-shrink = 1].</i>
+        &nbsp;&nbsp; Podemos dizer que o item C cresce o dobro do item B por causa da proporção (4x2), equanto o item A não cresce.
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 7</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 0; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 4; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA7">A</div>
+        <div class="item" id="cxB7">B</div>
+        <div class="item" id="cxC7">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [C] é o único que cresce 4 vezes(mais)/[grow = 4], isso em proporção ao item imediatamente maior que zero(0), que é o "item B" com (grow = 1) e ambos os itens encolhem pois [flex-shrink = 1].</i>
+        &nbsp;&nbsp; Podemos dizer que o item C cresce o quadrúplo do item B por causa da proporção (4x1), equanto o item A não cresce.
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 8</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA8">A</div>
+        <div class="item" id="cxB8">B</div>
+        <div class="item" id="cxC8">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b>
+        <i>&nbsp;&nbsp;Todos os itens Crescem e Encolhem na mesma proporção.</i>
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 9</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 2 e flex-grow = 2; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 2 e flex-grow = 2; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 2 e flex-grow = 2; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA9">A</div>
+        <div class="item" id="cxB9">B</div>
+        <div class="item" id="cxC9">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b>
+        <i>&nbsp;&nbsp;Todos os itens Crescem e Encolhem na mesma proporção como no exemplo anterior, pois os valores das propriedades são iguais para todos os elementos.</i>
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 10</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 0 e flex-grow = 1; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 3 e flex-grow = 1; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA10">A</div>
+        <div class="item" id="cxB10">B</div>
+        <div class="item" id="cxC10">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [C] é o único que encolhe 3 vezes(mais)/[shrink = 3], isso em proporção ao item imediatamente maior que zero(0), que é o "item B" com (shrink = 1) e ambos os itens crescem pois [flex-grow = 1].</i>
+        &nbsp;&nbsp; Podemos dizer que o item C encolhe o triplo do item B por causa da proporção (3x1), equanto o item A não encolhe.
+    </p>
+    <br>
+    <hr>
+
+
+    <h3>EXEMPLO 11</h3>
+    <h3>Crescendo ou Encolhendo em proporção</h3>
+    <p>
+        <b>1-</b> Aqui configuramos o flex-contêiner com display = flex; flex-flow = row nowrap; 
+        <br>
+        <b>2-</b> Definimos [id] para cada flex-item receber diferentes configurações.
+        <br>
+        <b>3-</b> Para o flex-item "A" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 0 e flex-grow = 1; <br>
+        <b>4-</b> Para o flex-item "B" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 1 e flex-grow = 1; <br>
+        <b>5-</b> Para o flex-item "C" <br>
+        &nbsp;&nbsp; definimos o flex-basis = 200px; flex-shrink = 8 e flex-grow = 1; <br>
+    </p>
+    <div class="conteiner">
+        <div class="item" id="cxA11">A</div>
+        <div class="item" id="cxB11">B</div>
+        <div class="item" id="cxC11">C</div>
+    </div>
+    <p>
+        <b>NOTE que:</b><i>O item [C] é o único que encolhe 8 vezes(mais)/[shrink = 8], isso em proporção ao item imediatamente maior que zero(0), que é o "item B" com (shrink = 1) e ambos os itens crescem pois [flex-grow = 1].</i>
+        &nbsp;&nbsp; Podemos dizer que o item C encolhe o triplo do item B por causa da proporção (8x1), equanto o item A não encolhe.
+    </p>
+    <br>
+    <hr>
+</body>
+</html>

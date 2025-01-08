@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightsalmon;
+            display: flex;
+
+            /* flex-direction: row; Padrão */
+            /* flex-wrap: nowrap; Padrão */
+            flex-flow: wrap nowrap;/* Padrão referente a flex-direction e flex-wrap.*/
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            /* flex: auto; Removido */
+            flex-basis: auto;/* Padrão */
+            flex-shrink: 1;/* Padrão */
+            flex-grow: 0;/* Padrão */
+        }
+
+        /* Exemplo 2 */
+        div.conteiner.conteiner2 {
+            background-color: rgb(248, 110, 55);
+        }
+        div.item.itens2 {
+            background-color: rgb(44, 174, 255);
+            flex-basis: 250px;
+        }
+        /* Exemplo 3 */
+        div.conteiner.conteiner3 {
+            background-color: rgb(248, 72, 2);
+        }
+        div.item.itens3 {
+            background-color: rgb(0, 149, 248);
+            flex-basis: 250px;
+            flex-shrink: 0;
+        }
+        /* Exemplo 4 */
+        div.conteiner.conteiner4 {
+            background-color: rgb(195, 58, 4);
+            flex-flow: row wrap;
+        }
+        div.item.itens4 {
+            background-color: rgb(3, 109, 180);
+            flex-basis: 250px;
+            flex-shrink: 0;
+        }
+        /* Exemplo 5 */
+        div.conteiner.conteiner5 {
+            background-color: rgb(200, 103, 65);
+            flex-flow: row nowrap;
+        }
+        div.item.itens5 {
+            background-color: rgb(84, 141, 180);
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+        /* Exemplo 6 */
+        div.conteiner.conteiner6 {
+            background-color: rgb(170, 84, 50);
+            flex-flow: row wrap;
+        }
+        div.item.itens6 { /* Modelo 1 */
+            background-color: rgb(72, 114, 155);
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+        div.conteiner.conteiner6a {
+            background-color: rgb(170, 84, 50);
+            flex-flow: row wrap;
+        }
+        div.item.itens6a { /* Modelo 2 */
+            background-color: rgb(72, 114, 155);
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+        /* Exemplo 7 */
+        div.conteiner.conteiner7 {
+            background-color: rgb(177, 112, 87);
+            flex-flow: row nowrap;
+        }
+        div.item.itens7 { /* Modelo 1 */
+            background-color: rgb(102, 129, 156);
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div.containerDeImagens {
+            display: flex;
+            gap: 10px;
+            width: 800px;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+        div.containerDeImagens div img {
+            width: 700px;
+            padding: 6px;
+        }
+        div.containerDeImagens div.img {
+            border: 1px solid blue;
+            box-shadow: 4px 5px 2px 1px rgba(0, 0, 0, 0.342);
+        }
+        div.containerDeImagens p{
+            padding-left: 10px;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>AULA 10</h1>
+    <p><b>OBSERVAÇÃO:</b>
+        <br>
+        "Altere a dimensão do navegador para ver o comportamento dos elementos mediante as configurações feitas durante a aula".
+    </p>
+    <hr>
+
+    <h2>Comportamento padrão de &lt;div contêiner pai&gt;´s com "flex-box" e &lt;div flex-itens filho&gt;´s</h2>
+    <p><b>Ilustração abaixo</b> da aplicação das propriedades do contêiner-pai e dos elementos-filhos.</p>
+
+    <div class="containerDeImagens">
+        <div class="img">
+            <h4>imagem 1</h4>
+            <p><b>Configuração padrão</b> do contêiner para a aula:</p>
+            <img src="./imagens/img.jpg" alt="imagem">
+        </div>
+        <div class="img">
+            <h4>imagem 2</h4>
+            <p><b>Com flex-basis</b> definido aos filhos, eles travam no valor definido se o contêiner for maior que a soma da dimensão dos flex-itens. </p>
+            <img src="./imagens/img2.jpg" alt="imagem 2">
+        </div>
+        <div class="img">
+            <h4>imagem 3</h4>
+            <p><b>Com flex-basis definido</b> é possível encolher ou aumentar um flex-item? </p>
+            <img src="./imagens/img3.jpg" alt="magem 3">
+        </div>
+        <div class="img">
+            <h4>imagem 4</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> determinamos o quanto o flex-item vai encolher em relação aos demais, e <b>Com flex-grow definido com valor = 0 </b> determinamos que o flex-item não vai crescer em relação aos demais</p>
+            <img src="./imagens/img4.jpg" alt="magem 4">
+        </div>
+        <div class="img">
+            <h4>imagem 5</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> ; <b>Com flex-grow definido com valor = 0 </b> Nada acontece com os itens se o contêiner for do tamanho da soma dos flex-itens.</p>
+            <img src="./imagens/img5.jpg" alt="magem 5">
+        </div>
+        <div class="img">
+                <h4>imagem 6</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> ; <b>Com flex-grow definido com valor = 0 </b> os elementos diminuem de tamanho comforme deminuimos o  tamanho do contêiner.</p>
+            <img src="./imagens/img6.jpg" alt="magem 6">
+        </div>
+        <div class="img">
+                <h4>imagem 7</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> ; <b>Com flex-grow definido com valor = 0 </b> Nada acontece com os itens se o contêiner for de tamanho maior que o da soma dos flex-itens.</p>
+            <img src="./imagens/img7.jpg" alt="magem 7">
+        </div>
+        <div class="img">
+                <h4>imagem 8</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> ; <b>Com flex-grow definido com valor = 1 </b> dizemos que os  flex-itens vão crescer para caber na dimensão do contêiner se este ultrapassar o tamanho da soma dos flex-basis.</p>
+            <img src="./imagens/img8.jpg" alt="magem 8">
+        </div>
+        <div class="img">
+            <h4>imagem 9</h4>
+            <p><b>Com flex-shrink definido com valor = 1 </b> ; <b>Com flex-grow definido com valor = 1 </b> dizemos que os  flex-itens vão diminuir mesmo que a dimensão do contêiner seja inferior    , ao tamanho da soma dos flex-basis.</p>
+            <img src="./imagens/img9.jpg" alt="magem 9">
+        </div>
+        <div class="img">
+            <h4>imagem 10</h4>
+            <p><b>Com flex-shrink definido com valor = 0 </b> ; <b>Com flex-grow definido com valor = 1 </b> dizemos que os  flex-itens vão manter a dimensão definida se o contêiner tiver dimensão igual ao tamanho da soma dos flex-basis.</p>
+            <img src="./imagens/img10.jpg" alt="magem 10">
+        </div>
+        <div class="img">
+            <h4>imagem 11</h4>
+            <p><b>Com flex-shrink definido com valor = 0 </b> ; <b>Com flex-grow definido com valor = 1 </b> dizemos que os  flex-itens vão quebrar(vazar do contêiner) se a dimensão definida do contêiner tiver dimensão inferior ao tamanho da soma dos flex-basis.</p>
+            <img src="./imagens/img11.jpg" alt="magem 11">
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <h2>Comportamento padrão dos flex-item em relação ao flex-container.</h2>
+    <p>Considere o comportamento padrão do exemplo <b>abaixo</b> que tem como Configuração, o padrão determinado pelos navegadores da seguinte forma:</p>
+    <code>
+        <b>.conteiner</b> { <br>
+        &nbsp;    display: flex; <br>
+
+        &nbsp;    /* flex-direction: row; Padrão */ <br>
+        &nbsp;    /* flex-wrap: nowrap; Padrão */ <br>
+        &nbsp;    flex-flow: wrap nowrap; /* Padrão referente a flex-direction e flex-wrap.*/ <br>
+        } <br>
+        <b>.item</b> { <br>
+        &nbsp;    /* flex: auto; Removido */ <br>
+        &nbsp;    flex-basis: auto;/* Padrão */ <br>
+        &nbsp;    flex-shrink: 1;/* Padrão */ <br>
+        &nbsp;    flex-grow: 0;/* Padrão */ <br>
+        } <br>
+    </code>
+    <br>
+    <h3>EXEMPLO 1</h3>
+    <p>Exemplo do padrão:</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+
+    <h2>Exemplo 2</h2>
+    <h3>Comportamento dos elementos com a propriedade [flex-basis] definida para todos os itens, e tendo como padrão [flex-shrink = 1 e flex-grow = 0].</h3>
+    <div class="conteiner conteiner2">
+        <div class="item itens2">A</div>
+        <div class="item itens2">B</div>
+        <div class="item itens2">C</div>
+    </div>
+    <p><b>NOTE que:</b>
+        <br>
+        1- Os itens não mudam de proporção(tamanho) se o contêiner for maior ou igual que a soma do valor do flex-basis dos elementos.
+        <br>
+        2- Os itens encolhem(shrink = padrão = 1) na proporção que o contêiner diminui de dimensão e não crescem(grow = padrão = 0), como podemos ver no exemplo da Ilustração na imagem 4.
+    </p>
+    <br>
+    <hr>
+
+    <h2>Exemplo 3</h2>
+    <h3>Comportamento dos elementos com a propriedade [flex-basis] definida para todos os itens, e tendo configurações de [flex-shrink = 0 e flex-grow = padrão = 0].</h3>
+    <div class="conteiner conteiner3">
+        <div class="item itens3">A</div>
+        <div class="item itens3">B</div>
+        <div class="item itens3">C</div>
+    </div>
+    <p><b>NOTE que:</b>
+        <br>
+        1- Os itens não mudam de proporção(tamanho) se o contêiner for maior ou igual que a soma do valor do flex-basis dos elementos.
+        <br>
+        2- Os itens não encolhem(shrink = 0) e vazam da caixa na proporção que o contêiner diminui de dimensão e não crescem(grow = 0), como podemos ver no exemplo da Ilustração na imagem 11.
+    </p>
+    <br>
+    <hr>
+
+
+    <h2>Exemplo 4</h2>
+    <h3>Comportamento dos elementos com a propriedade [flex-basis] definida para todos os itens;  configurações de [flex-shrink = 0 e flex-grow = padrão = 0] e [flex-wrap = wrap] definido no contêiner, para quebrar os elementos.</h3>
+    <div class="conteiner conteiner4">
+        <div class="item itens4">A</div>
+        <div class="item itens4">B</div>
+        <div class="item itens4">C</div>
+    </div>
+    <p><b>NOTE que:</b>
+        <br>
+        1- Os itens não mudam de proporção(tamanho) se o contêiner for maior ou igual que a soma do valor do flex-basis dos elementos.
+        <br>
+        2- Os itens não encolhem(shrink = 0); Não crescem(grow = 0) e (quebram) na proporção que o contêiner diminui de dimensão, fazendo com que um elemento se posicione na direção determinada pelo eixo principal se o item não couber na dimensão do flex-box.
+    </p>
+    <br>
+    <hr>
+
+
+    <h2>Exemplo 5</h2>
+    <h3>Comportamento dos elementos com a propriedade [flex-basis] definida para todos os itens;  configurações de [flex-shrink = padrão = 1 e flex-grow = 1] e [flex-wrap = padrão = nowrap] definido no contêiner, para não quebrar os elementos.</h3>
+    <div class="conteiner conteiner5">
+        <div class="item itens5">A</div>
+        <div class="item itens5">B</div>
+        <div class="item itens5">C</div>
+    </div>
+    <p><b>NOTE que:</b>
+        <br>
+        1- Os itens não mudam de proporção(tamanho) se o contêiner for maior ou igual que a soma do valor do flex-basis dos elementos.
+        <br>
+        2- Os itens encolhem(shrink = 1); Crescem(grow = 1) e não quebram na proporção que o contêiner diminui ou aumenta de dimensão, fazendo com que os elementos fiquem altamente maleáveis(adaptáveis, fluídos) como podemos ver nas imagens 8 e 9 das Ilustrações.
+    </p>
+    <br>
+    <hr>
+
+    <h2>Exemplo 6</h2>
+    <h3>Comportamento dos elementos com a propriedade [flex-basis] definida para todos os itens;  Configurações de [flex-shrink = padrão = 1 e flex-grow = 0] para o primeiro modelo; [flex-grow = 1] no segundo modelo e [flex-wrap = wrap] definido no contêiner, para quebrar os elementos.</h3>
+    <p>Modelo 1</p>
+    <div class="conteiner conteiner6">
+        <div class="item itens6">A</div>
+        <div class="item itens6">B</div>
+        <div class="item itens6">C</div>
+    </div>
+    <br>
+    <p>Modelo 2</p>
+    <div class="conteiner conteiner6a">
+        <div class="item itens6a">A</div>
+        <div class="item itens6a">B</div>
+        <div class="item itens6a">C</div>
+    </div>
+    <p><b>NOTE que:</b>
+        <br>
+        1- Os itens não mudam de proporção(tamanho) se o contêiner for maior ou igual que a soma do valor do flex-basis dos elementos.
+        <br>
+        2- No modelo (1) os itens encolhem(shrink = 1); Não crescem(grow = 0) e quebram na proporção que o contêiner diminui de dimensão, fazendo com que os elementos que foram quebrados, não ocupe todo o espaço do contêiner.
+        <br>
+        3- No modelo (2) os itens encolhem(shrink = 1); Crescem(grow = 1) ocupando por igual todo os espaço do contêiner e quebram na proporção que o contêiner diminui de dimensão, fazendo com que os elementos quebrados, ocupem todo o espaço do contêiner.
+    </p>
+    <br>
+    <hr>
+
+
+    <h2>Exemplo 7</h2>
+    <h3>Comportamento dos elementos maleáveis com muito conteúdo e com propriedade [flex-basis] definida para todos os itens;  Configurações de [flex-shrink = padrão = 1 e flex-grow = 1] e [flex-wrap = nowrap] definido no contêiner, para não quebrar os elementos.</h3>
+    <div class="conteiner conteiner7">
+        <div class="item itens7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor ipsum voluptatem sapiente eveniet atque labore aperiam inventore soluta veritatis, minima praesentium, incidunt deserunt ea, blanditiis aliquid a fugiat rerum temporibus!</div>
+        <div class="item itens7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloremque sint voluptate praesentium, itaque ab laborum modi provident qui, molestias velit, ut necessitatibus tempore obcaecati! Dolorem quia optio repellat consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim et mollitia natus sapiente voluptatibus perferendis eos, consequatur porro quisquam sint sunt corrupti at deleniti optio reprehenderit! Repellat pariatur cupiditate ab.</div>
+        <div class="item itens7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sequi recusandae laudantium tenetur minus ipsa, assumenda et, eius iste rerum neque voluptatum, id totam inventore expedita consequatur voluptatem! Temporibus, assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non officia similique ullam eaque explicabo consequuntur at quidem saepe pariatur. Laborum adipisci iusto nemo suscipit ullam consectetur, dicta natus tempora atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique numquam ratione, quo dolore, ducimus iusto aperiam reiciendis id maiores deleniti quibusdam eaque sed laboriosam quas qui itaque! Doloribus, tempora quis?</div>
+    </div>
+    <br>
+    <p><b>NOTE que:</b>
+        <br>
+        1- Os itens não mudam de proporção(tamanho) se o contêiner for maior ou igual que a soma do valor do flex-basis dos elementos.
+        <br>
+        2- Os itens encolhem(shrink = 1); Sim crescem(grow = 1) e Não quebram na proporção que o contêiner diminui de dimensão.
+        <br>
+        <br>
+        <b><i>TALVEZ haja problema em telas de celulares, podendo o conteúdo ficar fininho.</i></b>
+    </p>
+    <br>
+    <hr>
+    <hr>
+</body>
+</html>

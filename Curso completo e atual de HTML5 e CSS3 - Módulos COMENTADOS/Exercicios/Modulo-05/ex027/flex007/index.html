@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        .caixaDeImagens {
+            display: flex;
+            gap: 12px;
+            overflow: scroll;
+        }
+        .caixaDeImagens img {
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .caixaDeImagens2 {
+            display: flex;
+            gap: 12px;
+            overflow: scroll;
+        }
+        .caixaDeImagens2 img {
+            width: 480px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;/* PADRÃO que é = a flex-direction=row e flex-wrap=wrap;*/
+        }
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            /* flex: auto;  Removido durante a aula*/
+            text-align: center;
+            padding: 20px;/* Para aumentar a dimensão das caixas-filhos */
+        }
+
+        /* Contêiner 3 */
+        div#i1 {
+            order: 0;       
+        }
+        div#i2 {
+            order: 0;   
+        }
+        div#i3 {
+            order: 0;   
+        }
+        div#i4 {
+            order: 0;   
+        }
+        div#i5 {
+            order: 0;   
+        }
+        div#i6 {
+            order: 0;   
+        }
+        div#i7 {
+            order: 0;   
+        }
+
+        /* Contêiner 4 */
+        div#i1a {
+            order: 0;       
+        }
+        div#i2b {
+            order: -2;   
+        }
+        div#i3c {
+            order: 4;   
+        }
+        div#i4d {
+            order: 8;   
+        }
+        div#i5e {
+            order: 2;   
+        }
+        div#i6f {
+            order: 0;   
+        }
+        div#i7g {
+            order: -4;   
+        }
+    </style>
+</head>
+<body>
+    <h1>AULA 7</h1>
+    <h2>Compreendendo a propriedade [order] nos elementos filhos de um Contêiner FlexBox.</h2>
+    <div class="caixaDeImagens">
+        <div><b>Exemplo de Flex Contêiner</b> <br><br><br>
+            <img src="./imagens/img1.jpg" alt="Exemplo de Contêiner Flexbox">
+        </div>
+        <div><b>Exemplo de Flex itens</b> <br><br><br>
+            <img src="./imagens/img2.jpg" alt="Exemplo de flex-item">
+        </div>
+        <div><b>Exemplo de Flex-itens com a propriedade (order) com valor padrão, e o alinhamento é feito na ordem que está o conteúdo.</b>
+            <img src="./imagens/img3.jpg" alt="propriedade order e o valor padrão = 0">
+        </div>
+        <div><b>Exemplo de Flex-itens com a propriedade (order) e seus valores especificados.</b> <br><br>
+            <img src="./imagens/img4.jpg" alt="Flex-itens com ordem específicas">
+        </div>
+        <div><b>Exemplo dos Flex-itens com a propriedade (order) e seus valores especificados para se alinharem dentro do Contêiner apartir do menor número.</b>
+            <img src="./imagens/img5.jpg" alt="Flex-itens com ordem específicas"">
+        </div>
+        <div><b>Exemplo de Flex-itens com a propriedade (order) e seus valores especificados.</b> <br><br>
+            <img src="./imagens/img6.jpg" alt="Flex-itens com ordem específicas">
+        </div>
+        <div><b>Exemplo dos Flex-itens com a propriedade (order) e seus valores especificados para se alinharem dentro do Contêiner apartir do menor número.</b>
+            <img src="./imagens/img7.jpg" alt="Flex-itens com ordem específicas"">
+        </div>
+    </div>
+    <hr>
+
+
+    <!-- Contêiner 1 -->
+    <h2>PADRÃO</h2>
+    <p><b>Aqui</b> vemos o exemplo de Contêiner definido com a propriedade "display=flex", que tem por padrão as propriedades "flex-direction = row e flex-wrap = wrap", e os flex-itens mesmo sem estar definido na CSS; Recebem por padrão a propriedade "order = 0" que alinha os elementos conforme estão no conteúdo html.</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <br>
+    <hr>
+
+    <!-- Contêiner 2 -->
+    <h2>Definindo valores com a propriedade "order" nos elementos</h2>
+    <p><b>Aqui</b> adicionamos a propriedade [order] no estilo "inline" para vermos como funciona o agrupamento dos flex-itens dentro do Contêiner-flex. </p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item" style="order: -3;">D</div>
+        <div class="item">E</div>
+        <div class="item" style="order: 1;">F</div>
+        <div class="item">G</div>
+    </div>
+    <p><b>OBSERVE nos exemplos acima que:</b> o flex-item "D" com "order = -3", foi para a primeira posição pois possui o valor menor que zero(0) {que o padrão de todos o flex-itens}, e o item "F" com "order = 1" vai para última posição dentro do Contêiner pois seu valor definido é maior que zero(0)</p>
+    <br>
+    <hr>
+
+
+    <!-- Contêiner 3 -->
+    <h2>Definindo valores com a propriedade "order" nos elementos pelo seletor "id".</h2>
+    <p><b>Aqui</b> adicionamos a propriedade [order] com valor padrão igual = a zero(0) no estilo "interno" para vermos como funciona o agrupamento (padrão) dos flex-itens dentro do Contêiner-flex. </p>
+    <div class="conteiner">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+        <div class="item" id="i4">D</div>
+        <div class="item" id="i5">E</div>
+        <div class="item" id="i6">F</div>
+        <div class="item" id="i7">G</div>
+    </div>
+    <p><b>OBSERVE nos exemplos acima que:</b> os flex-itens com "order = 0" ficam agrupados conforme a ordem que foram colocados no conteúdo HTML.</p>
+    <br>
+    <hr>
+
+    <!-- Contêiner 4 -->
+    <h2>Definindo valores com a propriedade "order" nos elementos pelo seletor "id".</h2>
+    <p><b>Aqui</b> adicionamos a propriedade [order=""] com valores diferentes no estilo "interno" para vermos como funciona o agrupamento dos flex-itens dentro do Contêiner-flex mediante a propriedade "order". </p>
+    <div class="conteiner">
+        <div class="item" id="i1a">A</div>
+        <div class="item" id="i2b">B</div>
+        <div class="item" id="i3c">C</div>
+        <div class="item" id="i4d">D</div>
+        <div class="item" id="i5e">E</div>
+        <div class="item" id="i6f">F</div>
+        <div class="item" id="i7g">G</div>
+    </div>
+    <p>
+        <b>OBSERVE nos exemplos acima a distribuição dos elementos com a propriedade "order" definida para cada flex-item:</b>
+        <br>
+        <br>
+        <b>Ordem definida na css</b>
+        <br>
+        > A está com "order = &nbsp;0"; <br>
+        > B está com "order = -2"; <br>
+        > C está com "order = &nbsp;4"; <br>
+        > D está com "order = &nbsp;8"; <br>
+        > E está com "order = &nbsp;2"; <br>
+        > F está com "order = &nbsp;0"; <br>
+        > G está com "order = -4";
+        <br>
+        <br>
+        <b>Ordem de agrupameno no Contêiner</b>
+        <br>
+        > G está com "order = -4"; <br>
+        > B está com "order = -2"; <br>
+        > A está com "order = &nbsp;0"; <br>
+        > F está com "order = &nbsp;0"; <br>
+        > E está com "order = &nbsp;2"; <br>
+        > C está com "order = &nbsp;4"; <br>
+        > D está com "order = &nbsp;8";
+    </p>
+    <br>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./ico/curso-em-video.ico" type="image/x-icon">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner-flex {
+            background-color: lightsalmon;
+
+            display: flex;
+
+            /* Padrão */
+        /* flex-direction: row; *//* Eixo principal em linha horizontal = main-axis */
+        /* flex-wrap: nowrap; *//* Não vai quebrar. */
+
+            /*Shorthand de das duas propriedades acima:  */
+            flex-flow: row nowrap;
+        }
+        /* conteiner 2 */
+        div.conteiner2 {
+            background-color: rgb(253, 96, 34);
+        }
+        /* conteiner 3 */
+        div.conteiner3 {
+            background-color: rgb(255, 72, 0);
+            flex-flow: row wrap;
+        }
+
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            /* flex: auto; removido */
+
+            /* Padrão definido, e que funciona sem estar aqui. */
+            flex-basis: auto;
+        }
+        /* Itens do contêiner 2 */
+        div.conteiner2 > div.item {
+            background-color: rgb(31, 168, 253);
+            flex-basis: 150px;
+        }
+        /* Itens do contêiner 3 */
+        div.conteiner3 > div.item {
+            background-color: rgb(0, 152, 246);
+            flex-basis: 150px;
+        }
+
+        div.caixaDeImagens {
+            width: 720px;
+            margin: 0 auto ;
+            display: flex;
+            flex-flow: row nowrap;
+            overflow: scroll;
+            overflow-y: visible;
+        }
+        /* div.caixaDeImagens div{
+            flex-basis: 50px;
+        } */
+        div.caixaDeImagens div img {
+            width: 700px;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aula 9</h1>
+
+    <hr>
+
+    <p><b>OBSERVAÇÃO:</b> <br>
+        <b><i>"Diminua ou aumente a dimensão da página do navegador para ver as configurações funcionando na prática".</i></b></p>
+
+    <hr>
+
+    <div class="caixaDeImagens">
+        <div> <b>ABAIXO vemos o pai contêiner e os filhos itens:</b>
+            <br>
+            <br>
+            <img src="./imagens/img1.jpg" alt="imagem 1">
+        </div>
+        <div>
+            <b>ABAIXO vemos filhos itens:</b>
+            <br>
+            <br>
+            <img src="./imagens/img2.jpg" alt="imagem 2">
+        </div>
+        <div>
+            <b>ABAIXO vemos propriedades padrões do pai contêiner e "flex-basis" é a propriedade aplicada somente á filhos:</b>
+            <img src="./imagens/img3.jpg" alt="imagem 3">
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Comportamento padrão de &lt;div&gt;´s com "flex-box"</h2>
+    <p>Podemos ver que as caixas (os itens) estão ocupando 100% da altura do conteiner; Sua largura é padrão, e sua cor de fundo sobrepõe do conteiner. <br> Display = flex, faz um item se posicionar um ao lado do outro.)</p>
+
+    <h2><b>OBSERVAÇÃO:</b> <br>
+    Por padrão os [flex-itens] já vem com "flex-basis = auto".</h2>
+
+    <div style="display: flex; justify-content: center; background-color: rgba(0, 0, 0, 0.37); width: 98vw;">
+        <div>
+            <img width="600" src="./imagens/img4.jpg" alt="flex-basis = auto">
+        </div>
+        <!-- <div>
+            <img src="./imagens/img4.jpg" alt="flex-basis = auto">
+        </div> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="conteiner-flex">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+    <p><b>ACIMA VEMOS</b> O comportamento dos itens mediante o padrão da propriedade [flex-basis] onde seu valor = "auto" e com contéudo mínimo para não alterar o tamanho da caixa-filho.</p>
+
+    <hr>
+
+    <h2>Por padrão os [flex-itens] já vem com "flex-basis = auto" e se aumentamos o conteúdo dentro dos [flex-itens], então as caixas aumentam de tamanho mediante a proporção do conteúdo.</h2>
+    <div style="display: flex; margin: 0 auto; gap: 6px; background-color: rgba(0, 0, 0, 0.37); width: 700px; overflow: scroll;">
+            <div>
+                <p><b>Os flex-itens aumentam sua dimensão conforme adicionamos conteúdo neles </b> e faz o contêiner acompanhar a dimensão dos elementos.</p>
+                <img width="600" src="./imagens/img5.jpg" alt="flex-basis = auto">
+            </div>
+            <div>
+                    <p><b>Os flex-itens diminuem</b> comforme diminui o contêiner.</p>
+                <img width="560" src="./imagens/img6.jpg" alt="flex-basis = auto">
+            </div>
+            <div>
+                    <p><b>Os flex-itens mentêm-se no tamanho padrão </b> comforme aumentamos o contêiner.</p>
+                <img width="700" src="./imagens/img7.jpg" alt="flex-basis = auto">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    <div class="conteiner-flex">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo </div>
+        <div class="item">C</div>
+        <div class="item">Conteúdo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteúdo mairo ainda, que vai ocaupar mais espaço.</div>
+        <div class="item">G</div>
+    </div>
+    <p><b><i>ACIMA Observe os itens "B; D; e F</i></b> 
+    <br>
+    <b>NOTE 
+    </b> O comportamento dos itens mediante o padrão da propriedade [flex-basis] onde seu valor = "auto" e com contéudo mais para alterar o tamanho da caixa-filho.</p>
+
+    <hr>
+
+    <!-- Conteiner 2 -->
+    <h2>Se definirmos um valor de flex-basis para todos os [flex-itens] então o conteúdo dentro dos [flex-itens] vão quebrar para que a proporção da caixa se mantenha no valor definido.</h2>
+    <div style="display: flex; margin: 0 auto; gap: 6px; background-color: rgba(0, 0, 0, 0.37); width: 700px; overflow: scroll;">
+        <div>
+            <p><b>Os flex-itens poder:</b> Ter dimensão definida.</p>
+            <img width="600" src="./imagens/img8.jpg" alt="flex-basis = pixels">
+        </div>
+        <div>
+            <p><b>Os flex-itens:</b> Se mantêm na dimensão se o conteúdo dentro deles crescerem.</p>
+            <img width="600" src="./imagens/img9.jpg" alt="flex-basis = pixels">
+        </div>
+        <div>
+            <p><b>Os flex-itens:</b> podem ter valores específicos indivudualmente.</p>
+            <img width="600" src="./imagens/img10.jpg" alt="flex-basis = pixels">
+        </div>
+        <div>
+            <p><b>Os flex-itens:</b> quebram o conteúdo e perde a dimensão definida quando o contêiner diminui de tamanho.</p>
+            <img width="0" src="./imagens/img11.jpg" alt="flex-basis = pixels">
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="conteiner-flex conteiner2">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo</div>
+        <div class="item">C</div>
+        <div class="item">Conteúdo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteúdo mairo ainda, que vai ocaupar mais espaço.</div>
+        <div class="item">G</div>
+    </div>
+    <p>
+        <b>
+            <i>ACIMA Observe os itens "B; D; e F</i>
+        </b> 
+        <br>
+        <br>
+        <b>NOTE</b> 
+        O comportamento dos itens mediante o valor da propriedade [flex-basis] onde seu valor = "150px" faz com que o contéudo quebre na direção do eixo transversal para não alterar o tamanho da caixa se esta estiver com valor inferior ao conteúdo e fazendo o valor de flex-basis ir pro espaço se diminuir o tamanho da tela do navegador. 
+        <b>Esse valor de flex-basis definido para todos os elementos serve mais para manter a proporção para telas maiores, 
+            <i>Já em telas muito pequenas não fica tão legal se travar um valor.</i>
+        </b>
+    </p>
+    <hr>
+
+
+    <!-- Conteiner 3 -->
+    <h2>Se definirmos para o contêiner, o valor do "flex-wrap = wrap", isso fará com que os itens com flex-basis definido quebre no sentido do eixo principal para que seu conteúdo se mantenha dentro do valor flex-basis definido  .</h2>
+    <div class="conteiner-flex conteiner3">
+        <div class="item">A</div>
+        <div class="item">Outro conteúdo</div>
+        <div class="item">C</div>
+        <div class="item">Conteúdo um pouco maior</div>
+        <div class="item">E</div>
+        <div class="item">Conteúdo mairo ainda, que vai ocaupar mais espaço.</div>
+        <div class="item">G</div>
+    </div>
+    <p>
+        <b>
+            <i>ACIMA Observe os itens "B; D; e F</i>
+        </b> 
+        <br>
+        <br>
+        <b>NOTE</b> 
+        O comportamento dos itens mediante o valor da propriedade [flex-basis] onde seu valor = "150px" faz com que o contéudo quebre na direção do eixo transversal sem alterar a largura da caixa se esta estiver com valor inferior; Isso acontece porque o "flex-wrap" está com valor "wrap" definido para quebrar no sentido do eixo principal se o tamanho da tela do navegador diminuir. 
+        <b>Esse valor de flex-basis definido para todos os elementos serve mais para manter a proporção para telas maiores, 
+            <i>Já em telas muito pequenas não fica tão legal se travar um valor.</i>
+        </b>
+    </p>
+    <hr>
+</body>
+</html>

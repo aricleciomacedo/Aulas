@@ -357,8 +357,227 @@ Tópicos desse vídeo:
     "OBS:
         Veja que os elementos quebram normalmente, sem que ocupe o espaço vazio determinado pela propriedade em questão."
 12:45 - Precisa de um computador pra estudar?
-3---------------------------------------------
+#---------------------------------------------
 13:41 - Exemplo prático
     Abrimos então o /repositório-local no /Visual-Studio-Code; Copiamos o exercício "flex001" para usarmos o código base do flex-contêiner para aplicação da aula.
 17:10 - Testando cada valor de align-content
 21:39 - O que vem a seguir?
+
+
+
+Módulo 05, Capítulo 27, Aula 07
+Vídeo:
+Anatomia dos itens Flexbox - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=D7jeyyfigBM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=8
+
+    Nesta aulas vamos aprender as propriedades aplicadas exclusivamente aos /flex-itens.
+
+*   LEMBRA da propriedade "flex=auto" que usamos e depos removemos do itens?
+    "Essa propriedade é usada somente em elementos filhos de contêiner-flex-box".
+
+    1- Propriedade "order"
+        Todo elemento filho (flex-item) dentro do Flexbox(contêiner), possuí o valor = 0 na propriedade /order definido por "padrão".
+            Sabendo disso; Podemos então denominar valores de posição para cada /flex-item, e então o /Flexbox irá distribuir os elementos dentro do contêiner na ordem específicada na propriedade.
+        Essa propriedade serve para quando queremos posicionar elementos(blocos) numa interface, onde a ordem dos elementos podem ser alteradas para se alinharem em diferentes posições e tamanhos de telas.
+
+        Pra vermos em prática o que as imagens da aula mostrou, o que precisamos é que o /contêiner tenha a propriedade "flex-flow= row nowrap(ou wrap) = direction =row e flex-wrap=wrap(ou nowrap)"  e aos /flex-itens determinados a propriedade "order" e seu valor de posicionamento.
+
+*       Para praticar...
+$   Abrimos o repositório Github Desktop e nele abrimos o Visual Studio code;
+    Copiamos a pasta do exercicio "flex001" para usarmos o código base já criado e nomeamos como "flex007".
+        Ainda para explicação e prática da propriedade "align-self", nós copiamos o arquivo "flex-007" e renomeamos para "flex-008" para usarmos o código base.
+
+
+
+Módulo 05, Capítulo 27, Aula 08
+Vídeo:
+Propriedade flex-basis em Flexbox - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=J8iyHpOoLSU&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=9
+
+    Nesta aula vamos compreender um pouco sobre a propriedade "flex-basis" que é aplicada em itens/"flex-itens" de um contêiner flexível/"Flexbox".
+
+* Como já vimos nas aulas anteriores, o Flexbox é o contêiner(flex-container) que envolve vários itens  (flex-itens), e nesta aula vamos copreender a propriedade que se aplica aos itens e não ao contêiner.
+    "
+    Consideramos a configuração para esta aula da seguinte maneira:
+        Contêiner-flex com [flex-flow = row nowrap(flex-drection + flexwrap)] que são os padrões.
+        Para os itens atribuimos o valor padrão que igual a [flex-basis = auto], o que siguinifica que é o tamanho do elemento(item) no seu eixo principal(que é a largura, por conta do flex-direction); Então o tamanho do flex-item é editada levando em consideração, o tamanho do seu conteúdo.
+
+            1- Sendo assim se o conteúdo não ultrapassa o valor da caixa-filho(flex-item), então a caixa não muda de tamanho, por outro lado se o conteúdo aumetar ultrapassando o tamanho da caixa, então a caixa cresce automáticamente para (comportar)/caber todo o conteúdo dentro de si no sentido do main-axis => flex-direction = row.
+
+            2- Em outras palavras, [flex-basis = auto] quer dizer que a largura dos itens(cada elemento) é dada através do tamanho do seu conteúdo.
+    "
+    $ Podemos definir para a propriedade [flex-basis] um valor em "pixel".
+        Esse valor fará com que os itens:
+            1- Fiquem com tamanhos fixo e iguais.
+            2- Não se adaptem ao tamanho do contêiner  se este for reduzido ou aumentado idempendente do conteúdo dentro dele(do item).
+
+* Podemos definir [flex-basis] para itens individualmente e com isso definir qual tamhanho cada um vai ter.
+    "EXEMPLO":
+        1° /item flex-basis = 200px
+        2° /item flex-basis = auto
+        3° /item com flex-basis = 100px
+    "MAS" normalmente fazemos a configuração para todos igualmente.
+
+* SAIBA que a propriedade [flex-basis] não trava o item num valor determindo, pois eles são caixas flexiveis pertencentes a um contêiner-flex.
+    "
+        O flex-basis faz com que os itens diminuam de tamanho em quanto o contêiner diminui(enquanto dá); Quando não dá mais, a têndencia é quebrar o conteúdo dentro do elemento(item) invalidando o valor em pixel que foi configurado no flex=item.
+
+        Por outro lado se o contêiner diminuir tanto que não consida manter a igualdade no tamanho dos filhos, então os elementos podem vazar(quebrar) por conta do flex-wrap = nowrap se estiver definido no pai.
+    "
+
+$       PRATICANDO:
+    Copiamos então o arquivo "flex001" para usarmos o códido base e renomeamos para "flex009" .
+
+
+
+Módulo 05, Capítulo 27, Aula 09
+Vídeo:
+Controle do tamanho de itens flexíveis - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=Le_rq-Cz_mo&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=10
+
+    NEsta aula vamos aprender um pouco sobre as propriedades "flex-grow e flex-shrink" que se aplicam diretamente ao um ou mais "flex-itens".
+
+*   Podemos dizer que ao definir a proprieda para o item, isso determinará o quanto o item vai:
+    /flex-grow = Crescer
+    /flex-shrink = Encolher
+
+    1- Considerando um flex-box(contêiner pai) configurado com [flex-flow = row nowrap;] onde "row" direciona os itens em linha, e nowrap não permite que os elementos(itens) quebre.
+        $ É IMPORTANTE que se tenha essa configuração no elemento pai, pois crescer ou diminuir vai depender de que se pode quebrar ou não, e se definimos flex-wrap no contêiner fará com que os itens não cresça pois a ordem é que quebrem quando eles não coberem mais.
+
+*   Por padrão os valores das propriedades [flex-shrink é = 1; e flex-grow é = 0;].
+    $ Isso significa que mesmo sem definir essas propriedades na CSS para os itens; Elas terão esses valores já pré-configurados, mesmo sem serem atribuídos aos elementos filhos.
+    Entenda que:
+    /flex-shrink = 1 quer dizer que o elemento poderá encolher, e = 0 quer dizer que não poderá encolher.
+    /flex-grow = 0 quer dizer que o elemento não poderá crescer, e = 1 quer dizer que poderá crescer.
+
+08:33
+* SAIBA QUE:
+    "Por padrão quando diminuimos a largura do contêiner, os flex-itens encolhem por ter a propriedade flex-shrink = 1, e não crescem se o contêiner aumentar de largura por causa da propriedade flex-grow = 0."
+
+08:45
+*   LEMBRANDO que:
+    "flex-shrink e flex-grow" se aplica somente aos itens(filhos) de um contêiner pai flex-box.
+
+08:55
+    2- Quando definimos "flex-grow = 1", estamos dizendo que o item vai crescer mediante o aumento de dimensão do contêiner.
+        Se diminuir a dimensão do contêiner, o flex-item leva em consideração o valor de /flex-shrink.
+
+$ Para se ter elementos fluídos dentro do contêiner, basta definir as propriedades flex-shirnk e flex-grow com valores = 1; Com isso os elementos crescem e diminuem a votade mediante a alteração de tamanho do contêiner pai.
+
+10:00
+    3- Agora com flex-shrink = 0, e flex-grow = 1 invertemos o padrão, e isso faz com que os flex-itens mediante essa configuração Não encolham e Sim cresçam de acordo com alteração da dimensão do contêiner.
+        /Se a soma de tamanho dos flex-itens ultrapassam o tamanho do contêiner, com essa configuração, eles irão quebrar(vazar) para fora da caixa-pai por causa do valor de flex-shrink = 0, que foi definido para "Não crescerem".
+        /MAS se aumentar o contêiner, então por causa do valor = 1 de flex-grow, os itens vão crescer ocupando toda a dimensão que o contêiner crescer.
+
+11:50
+"VAMOS Praticar..."
+
+11:55
+    Começamos copiando o exercício "flex001" para usarmos o código base, e renomeamos para "flex010."
+*    LEMBRE-SE que nesta aula usamos as configurações padrão:
+"   A configuração do contêiner é:
+        display = flex
+        flex-flow = row nowrap (o mesmo que flex-direction = row e flex-wrap = nowrap)
+    A configuração do itens é:
+        flex = auto tem que ser removido
+"
+20:20
+    /flex-grow
+    Podemos definir diferentes valores de "flex-grow" para diferentes /flex-itens, usando seletores para (class) ou (id) e atribuindo a propriedade individualmente.
+
+    $ Qual é o comportamento dos flex-itens em relação a isto?
+    1- Itens com valores iguais(=) a zero(0) significa que não vai /crescer.
+    2- Itens com valores (1), significa que vai /crescer em relação aos demais com valor menor.
+    3- Itens com valores acima de (1), siginifica que ele vai /crescer vezes(*) mais que o item de valor = (1), isso acontence em proporção(relação) aos demais com valor = (0); Por exemplo o valor = (2) quer dizer que vai /crescer o dobro do valor que o elemento de valor maior que zero(0) e inferior a ele.
+        Em outras palavras; Valores acima de (0) quer dizer que é a "proporção" em que o item vai /crescer.  
+        
+        "NÃO confunda":
+            Por exemplo; Quando o flex-grow = 2, não significa ao pé da letra que um item vai crescer o dobro; Pois se dois itens estiverem com o mesmo valor = a 2? O que vai acontecer?
+                $ A conta para definir o tamanho desses itens é baseada na "proporção", se a menor proporção de um item é = 0, então os itens de valores iguais vão crescer por iguais, se o valor for = 1, então os itens vão crescer em proporção ao valor 1.
+                
+23:45
+    /flex-shrink
+    Assim como outras propriedades; Podemos definir diferentes valores de "flex-shrink" para diferentes /flex-itens, usando seletores para (class) ou (id) e atribuindo a propriedade individualmente.
+
+    $ Qual é o comportamento dos flex-itens em relação a isto?
+    1- Itens com valores iguais(=) a zero(0) significa que não vai /encolher.
+    2- Itens com valores (1), significa que vai /encolher em relação aos demais com valor menor.
+    3- Itens com valores acima de (1), siginifica que ele vai /encolher vezes(*) mais que o item de valor = (1), isso acontence em proporção(relação) aos demais com valor = (0); Por exemplo o valor = (2) quer dizer que vai /encolher o dobro do valor que o elemento de valor maior que zero(0) e inferior a ele.
+        Em outras palavras; Valores acima de (0) quer dizer que é a "proporção" em que o item vai /encolher.
+
+        "NÃO confunda":
+            Por exemplo; Quando o flex-shrink = 2, não significa ao pé da letra que um item vai crescer o dobro; Pois se dois itens estiverem com o mesmo valor = a 2? O que vai acontecer?
+                $ A conta para definir o tamanho desses itens é baseada na "proporção", se a menor proporção de um item é = 0, então os itens de valores iguais vão diminuir por iguais, se o valor for = 1, então os itens vão diminuir em proporção ao valor 1.
+
+24:45
+    /flex-basis + /flex-grow + /flex-shrink 
+    Assim como outras propriedades; Podemos definir diferentes valores de "flex-basis + flex-grow + flex-shrink" para diferentes /flex-itens, usando seletores para (class) ou (id) e atribuindo as propriedades individualmente.
+
+27:12
+"VAMOS Praticar..."
+
+
+
+Módulo 05, Capítulo 27, Aula 10
+Vídeo:
+A propriedade flex - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=JSf4HuF52g0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=11
+
+0:45
+    NEsta aula vamos aprender a simplicar o uso das propriedades /flex-basis /flex-grow e /flex-shrink em uma propriedade abreviada que tem o mesmo esfeito sobre os "itens". 
+
+02:58
+*   LEBRANDO que:
+    "A propriedade aqui ensinda se aplica somente aos flex-itens, e não ao flex-container";
+    $Por isso é importante saber quem é: Pai, filho, direção dos eixos, específicar os eixos, as direções dos eixos, fluxo e tudo mais do flex-box.
+
+05:10
+    A "W3C" [que é a organização que dita quais as regras da CSS e HTML], recomenda evitar o uso das propriedades com valores individuais, determinado {flex-basis, flex-grow e flex-shirink} em cada elemento.
+        Não há problemas em usar; Mas exite uma propriedade que aprendemos nesta aula, que se chama (flex) e que é recomendada para usar.
+    
+    "EXEMPLO:"
+    Se definimos para um elemento as propriedade com os seguintes valores:
+        $ flex-basis: 150px;    $ flex-basis: 150px;
+        $ flex-grow: 0;         $ flex-grow: 2;
+        $ flex-shrink: 1;       $ flex-shrink: 0;
+    
+    Podemos simplificar usando a shorthand da propriedade com valores da seguinte forma:
+        $ flex: 0 1 150px;      $ flex: 2 0 150px;
+
+07:05
+* NOTE ai:
+    A propriedade [flex] segue a seguinte formúla(ordem):
+        /flex-grow + "flex-shirink" + {flex-basis}
+
+07:25
+"Criação de um projeto----------->>>>>>>>"
+    Copiamos o arquivo "flex011" da aula anterior, e romeamos para "flex012" pra usarmos o código base.
+
+12:16
+*   Entendendo mais sobre os valores na propriedade [flex]:
+    1- /flex = /flex-grow + "flex-shirink" + {flex-basis}
+    #PADRÃO  
+    2- /flex: 0 1 auto; = É o mesmo que não atribuir NADA, é o PADRÃO.
+        [Podemos não declarar os valores acima, ou se houver dúvida tem alguma configuração que vai sobrepor os valores: ENTÃO usamos o valor =  initial como vemos abaixo].
+    3- /flex: initial; 
+        = /flex: 0 1 auto; = PADRÃO.
+    # NADA FLEXÍVEL  
+    4- /flex: 0 0 auto; = É o mesmo que deixar os itens não flexíveis.
+        Fazendo assim os itens não podem crescer, não podem diminuir e o tamanho vai depender do tamanho do conteúdo.
+    5- /flex: none; = Segue a mesma lógica do /flex: 0 0 auto; que vimos na opção 4.
+    # MÁXIMA FLEXIBILDADE  
+    6- /flex: 1 1 auto; = É o contrário do anterior(flex: 0 0 auto;),.
+        Com isso dizemos que o elemento vai crescer a vontade, diminuir a vontade o elemento, e o limite de aumetar e diminuir vai ser o  tamanho natural do conteúdo.
+            Podemos dizer que isso é o máximo de flexibilidade que um flex-item pode ter.
+    7- /flex-auto; = A lógica da configuração anterior (flex: 1 1 auto;).
+
+    8- /flex: 3; = Assim determinamos o valor para /flex-grow
+        já o "flex-shirink" + {flex-basis} ficam padronizados.
+    9- /flex: 3 1 auto; = A lógica anterior que é = /flex: 3;
+
+
+
