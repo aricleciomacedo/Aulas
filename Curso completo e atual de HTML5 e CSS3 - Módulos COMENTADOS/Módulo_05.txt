@@ -581,3 +581,135 @@ https://www.youtube.com/watch?v=JSf4HuF52g0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
 
 
 
+* Módulo 05, Capítulo 27, Aula 11
+Vídeo:
+Criando um menu com Flexbox (parte 1) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=VlAv9_R_rNY&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=12
+
+    Criamos então pasta do exercício "flex013-menu-flexbox".
+
+03:05 
+    $   Explicando o exercício(projeto).
+    "Veja o vídeo aula"!
+
+08:27
+    "Estilo aplicado por meio do arquivo css esterno".
+    $   Lembre-se de configurar [charset: "UTF-8";] para permissão de caracteres especias e de resetar os padrões de espaço entre elementos, usando o seletor global da tags = [*].
+
+1-    Na estrutura do código usamos as tags semânticas e criamos o cabeçalho com menu.
+        Vide:   <header> 
+                    <h1> Título Principal </h1>
+                    <nav>
+                        <a href="#">Opção 1</a>
+                        + 5 links nesse modelo.
+                    </nav>
+                </header>
+2-         Criamos o conteúdo principal.
+        Vide:   
+                <main>
+                    <h2> Sub-título </h2>
+                    <p>
+                        Parágrafos
+                    </p>
+                </main>
+
+    [   Agora acompanhe o vídeo aula para ver as configurações CSS.     ]
+
+    [   Vide próximo vídeo aula.    ]
+
+#--------------------------------------------
+
+
+
+* Módulo 05, Capítulo 27, Aula 12
+Vídeo:
+Criando um menu com Flexbox (parte 2) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=MXYtSrkHdCs&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=13
+
+    $       LEMBRE-SE de dar "commit to" and "Push Origin" para o repositório remoto.
+
+{       CONTINUANDO o exercício...      }
+
+
+* Módulo 05, Capítulo 27, Aula 13
+Vídeo:
+Menu Responsivo com Flexbox e Media Queries na Prática - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=hlp3C9QI3Qk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=14
+
+01:04
+    Neste vídeo vamos aplicar/acrescentar os conceitos de [@media-queries] para fazermos uma versão desse exercício, exclusiva para telas menores, para resolver os problemas de quebra de menu quando visto em telas de dispositivos móveis.
+
+01:25
+    $   Lembre-se que podemos aplicar e unificar as técnicas de configuração Flexbox e Media-queries , pois nada impede o uso de ambas juntas, para refinar o projeto que se esteja desenvolvendo.
+
+03:15
+"   Na prática....      "
+
+04:46
+    $ Podemos usar a regra css para cofigurações de telas pequenas:
+        Ex:    @media screen and () {}
+
+    $ Um pouco mais sobre regras CSS para medias.
+    $Visão geral criada por IA
+    
+        A media screen é um tipo de mídia usado em CSS para aplicar estilos a dispositivos com tela, como smartphones, tablets, laptops e desktops. 
+        A regra @media screen é usada para definir que as regras de estilo serão aplicadas apenas em telas. 
+        Para aplicar estilos diferentes a diferentes dispositivos ou tamanhos de tela, é possível usar os media queries. 
+
+        Alguns comandos de media query são: 
+            @media screen
+            @media (min-width: valor)
+            @media (max-width: valor)
+            @media (orientation: portrait)
+            @media (orientation: landscape)
+            @media (min-resolution: valor)
+            @media (max-resolution: valor)
+
+        "PARA esta aula vamos usar a regra aplicada por meio de um link CSS."
+            EX: <link rel="stylsheet" href="file-name.css" media="screen and (max-width: value)">
+    
+    $OBSERVAÇÃO:
+    $       Teste o momento que os elementos quebram em telas menores para que se possa configurar melhor os posicionamentos.
+    Ex: Nesta aula iniciamos definindo (max-width: 600px), "MAS" pode ser que o melhor resultado seja com mais ou menos pixels que isso, a depender do navegador que se está usando!.
+
+10:17
+"
+    Revisando todo o código!
+"
+
+
+
+* Módulo 05, Capítulo 27, Aula 14
+Vídeo:
+Conteúdo flexível apenas com Flexbox (parte 1) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=hlp3C9QI3Qk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=15
+
+    Aprenda como utilizar Flexbox em CSS para organizar o conteúdo de um site de forma eficiente e responsiva, sem usar Media Queries. O Guanabara vai demonstrar como criar um layout onde os elementos se adaptam a diferentes tamanhos de tela, incluindo a inversão da ordem de elementos (texto e mídia) em dispositivos móveis. 
+
+Assuntos Abordados e Tempo:
+0:00 - Introdução ao exercício de Flexbox    
+    #-------------------------------------
+0:30 - Hospedagem profissional com Hostnet 
+    #-------------------------------------
+2:36 - Apresentação do layout do site a ser construído  
+    $ Veja na pasta 'flex014' as imagens de exemplo.
+5:03 - Início da construção do projeto    
+    $ Abra o GitHub Desktop, vá no repositório que estamos trabalhando e abra no Visual Studio Code.
+    Então na pasta do curso 'Curso completo e atual de HTML5 e CSS3 - Módulos', dentro da pasta 'Exercicios', dentro da pasta 'Modulo-05', dentro da pasta 'ex027' criamos a pasta 'flex014 - conteudo flex' e dentro dela criamos os arquivos básicos para a aula, que são 'inde.html  e style.css'.
+
+    [       LEMBRANDO que:     ]
+        NEste exercício não usaremos de @medias queries; Usaremos tão somente arquivo de estilo CSS.
+
+    $ Editando a imagem no Gimp:
+        1- Abra a imagem no Gimp, e vá na opção 'imagem' no menu principal;
+        2- Escolha a opção "Propriedades de imagem" ou tecle "Alt + Enter";
+            Com isso podemos ver a dimensão e outras informações da imagem, como /Meta_Dados etc.
+            A dimensão da imagem da aula e de 400x400 pixels.
+10:44 - Estrutura do código HTML  
+14:21 - Reset CSS e estilos iniciais    
+16:11 - Estilização do header e section    
+17:55 - Preparação para a próxima aula 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conteúdo Flex</title>    <!-- Título da página -->
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">  <!-- Ícone -->
+    <link rel="stylesheet" href="style.css">    <!-- Estilo -->
+</head>
+<body>
+    <header class="normal">
+        <h1>Exemplo de conteúdo Flexível</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid laboriosam non facere id fuga, ut temporibus et maiores aut eligendi possimus nihil libero autem hic quisquam repellat. Enim, expedita unde!</p>
+    </header>
+    <main>
+
+        <!-- Essa seção é de conteúdos flexíveis. -->
+        <section class="flex-content">
+
+            <!-- Element Media -> Text
+            Esse artigo vai quebrar, fazendo o texto ir para baixo da imagem. -->
+            <article class="media-text">
+                <div class="text">
+                    <h2>Elemento Media &rArr; Text</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tenetur pariatur vero repellendus aut corrupti vel enim magnam consectetur sed, doloribus, deleniti amet, facilis architecto animi ducimus facere error ea. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, veritatis, omnis rem esse ab error ullam eos vitae veniam sapiente sequi. Dolor, perspiciatis molestias nostrum repellendus adipisci modi eos? Sapiente?</p>
+                </div>
+                <div class="media">
+                    <img src="site.png" alt="Imagem de desenho de homem olhando olograma de dashbord virtual/criando site.">
+                </div>
+            </article>
+
+            <!-- Elemento Text -> Media
+            Este artigo vai quebrar faxendo o texto ir para cima e a imagem para baixo -->
+            <article class="text-media">
+                <div class="text">
+                    <h2>Elemento Text = > Media</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores tenetur dicta saepe enim magni facilis ducimus, facere neque, aliquid id labore, veniam reiciendis voluptatum dolorum ratione minus alias soluta natus? lorem</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid voluptatibus ipsam molestias, nostrum ad eligendi pariatur debitis consectetur iure? Culpa rem deleniti officiis rerum, eos ratione ipsum autem? Minus, velit.</p>
+                </div>
+                <div class="media">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcQ5WDUUB0o?si=jJsUKAY7A1XyaE43" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </article>
+        </section>
+
+        <section class="normal">
+            <h2>Conteúdo Normal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores doloribus exercitationem similique animi, tempore ullam, voluptatibus temporibus aliquam minima at nihil, perspiciatis debitis. Sint vero quas reprehenderit illo expedita.Vel dolorem, ad rem assumenda voluptate modi dolorum? Fuga maxime sunt ullam. Asperiores voluptates quisquam sunt perferendis nisi non atque, id sapiente consectetur sint repudiandae soluta amet eligendi adipisci expedita.</p>
+        </section>  <!-- Fim da seção flex content -->
+    </main>
+</body>
+</html>

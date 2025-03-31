@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+header, header > nav {
+    flex-flow: column nowrap; /* Assim o menu quebra, posicionando os itens em coluna(um abaixo do outro). */
+}
+
+header > h1 {
+    flex-basis: 50px;/* Assim configura a dimensão do eixo principal do elemento(flex-item). */
+}
+
+header > nav > a {/* Assim definimos a largura da caixa do flex-item. */
+    width: 90vw;
+}

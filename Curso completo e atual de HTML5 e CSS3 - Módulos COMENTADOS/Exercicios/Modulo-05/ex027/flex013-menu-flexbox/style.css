@@ -19,14 +19,38 @@ header {
     background-color: gray;
     color: white;
     padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;/* Eixo principal(main-axis) =>flex-direction = row e flex-wrap = wrap p/quebrar */
+    justify-content: space-between;/* Alinha no eixo principal. */
+    align-items: center;/* Alinha no eixo transversal */
 }
 header > h1 {/* Seletor do <h1> filho > de <header> */
-    border: 1px dotted black;
+    /* border: 1px dotted black;   REMOVIDO durante a aula! */
+    flex: 0 0 200px;/* Esse elemento não vai crescer, nem encolher e tem base fixa em pixels. */
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.404);
 }
 header > nav {/* Seletor de <nav> filho > de <header> */
-    border: 1px dotted black;
-}
+    /*border: 1px dotted black; definimos essa borda pontilhada p/ vermos como estão se comportando as caixas flexíveis e REMOVIDO durante a aula!. */
 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+}
+header > nav > a {/* Seletor de <a> filho de <nav> que é filho > de <header> */
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+header > nav > a:hover {/* Seletor para quanod passar o mouse sobre <a> filho de <nav> que é filho > de <header> */
+    background-color: white;
+    color: black;
+    transition: background .5s;
+}
 main {
     /* height: calc(100vh - 55px); */
     background-color: white;
@@ -35,3 +59,14 @@ main {
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.336);
 }
+
+
+/* 
+    Poderiamos fazer a regra Media aqui, para definir quando o menu vai quebrar, mas optmaos por fazer em um arquivo externo, e com o parâmetro definido no link para o arquivo.
+    
+@media screen and(max-width: 566px) {
+    ...
+}
+
+    Veja no arquivo mobile.css na parte Mobile First:
+*/
