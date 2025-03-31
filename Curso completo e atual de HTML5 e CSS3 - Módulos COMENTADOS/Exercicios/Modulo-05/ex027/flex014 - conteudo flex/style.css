@@ -21,9 +21,15 @@ body {
     */
 }
 
-p, h1, h2 {
+p {
     margin-bottom: 10px;
     text-align: justify;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    text-align: left;
 }
 
 header, section.normal {
@@ -33,4 +39,69 @@ header, section.normal {
 section.flex-content{
     padding: 20px;
     background-color: rgb(156, 156, 156);
+
+    /* Aqui configuramos um display flex, para que ambos os articles sejam filhos flexíveis.  */
+    display: flex;
+
+    /* Assim fazemos com que o conteúdo quebre para a linha de baixo, fazendo com fique um article abaixo do outro. Mas não é assim que queremos e porisso configuramos em coluna = column e não quebrar = nowrap
+    flex-flow: row wrap;*/
+    flex-flow: column nowrap;
+}
+
+/* Aqui adicionamos esta borda para vermos a dimensão dos articles e para entender o que o professor está explicando sobre o assunto. */
+section > article {
+    border: 2px dashed lime;
+}
+
+
+/* 
+    Na configuração padrão de display = flax, os itens não quebram e encolhem o máximo que podem até vazar do container pai; Então para resolver isso as configurações abaixo são necessárias. 
+*/
+
+/* Aqui selecionamos todo article que for da classe text-media e aplicamos estas configurações: */
+article.text-media {
+    display: flex;
+    flex-flow: row wrap;/* Assim fazemos com que o vídeo quebre para baixo do texto. */
+    justify-content: space-between;
+}
+
+/* Aqui selecionamos todo article que for da classe media-text e aplicamos estas configurações: */
+article.media-text {
+    display: flex;
+    flex-flow: row wrap-reverse; /* Assim fazemos com que a imagem quebre para cima do texto */
+    justify-content: space-between;
+}
+
+/* Aqui selecionamos de dentro do article, toda <div> que tiver a classe = text*/
+article > div.text {
+    /* Aqui definimos os valores de flex-grow, flex-shrink e flex-basis; Que define o quando o item flexível vai crescer = 1, o quanto vai encolher = 1 e o tamanho mínimo desse item = 500px antes de quebrar.*/
+    flex:  1 1 500px;
+
+    border: 2px dashed blue; /* Essa borda serve para vermos o comportamento dos flex-items */
+}
+
+/* Aqui selecionamos de dentro do article, toda <div> que tiver a classe = text*/
+article > div.media {
+    /* Aqui definimos os valores de flex-grow, flex-shrink e flex-basis; Que define o quando o item flexível vai crescer = 1, o quanto vai encolher = 1 e o tamanho máximo desse item = 400px */
+    flex:  1 0 400px;
+
+    border: 2px dashed red; /* Essa borda serve para vermos o comportamento dos flex-items */
+}
+
+/* Aqui selecionamos a caixa onde está a imagem. */
+div.media > img {
+    display: block;
+    /*float: right; Posiciona a direita. */
+    margin: auto; /* Assim centraliza a imagem na caixa. */
+    width: 300px;
+    padding: 10px;
+}
+
+/* Aqui selecionamos a caixa onde está o vídeo. */
+div.media > iframe {
+    display: block;
+    /*float: right; Posiciona a direita. */
+    margin: auto; /* Assim centraliza o vídeo na caixa. */
+    /* padding: 0px 20px; */
+    width: 90%;
 }

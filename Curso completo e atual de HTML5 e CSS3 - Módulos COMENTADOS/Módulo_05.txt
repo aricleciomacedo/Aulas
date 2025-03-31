@@ -1,4 +1,4 @@
-﻿>>> { INÍCIO DO MÓDULO 5 } <<<
+﻿* >>> { INÍCIO DO MÓDULO 5 } <<<
 
 Link da PlayList compelta:
 https://www.youtube.com/playlist?list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d
@@ -6,7 +6,7 @@ https://www.youtube.com/playlist?list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d
 < Incorporar >
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=YJInv0QDwAt4Hmlc&amp;list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Módulo 05, Capítulo 27, Apresentação.
+* Módulo 05, Capítulo 27, Apresentação.
 Vídeo:
 O que vamos aprender no módulo 5? - Curso em Vídeo HTML5 + CSS3
 Link:
@@ -30,7 +30,7 @@ Tópicos desse vídeo:
 
  
 
-Módulo 05, Capítulo 27, Aula 01.
+* Módulo 05, Capítulo 27, Aula 01.
 Vídeo:
 Primeiros passos com Flexbox CSS - @CursoemVideo HTML5 + CSS3
 Link:
@@ -73,14 +73,14 @@ Tópicos desse vídeo:
 14:23 - Faça os módulos pelo site
     #--------------------------------------
 14:58 - Colocando a mão na massa
-*   Criamos a pasta do Módulo = "Modulo-05", dentro dela criamos a pasta de exercicio = "ex027", dentro dela criamos a pasta = "flex001" e criamos o aquivo = "index.html".
-    /Adicionamos ao HTML o código base.
+    $   Criamos a pasta do Módulo = "Modulo-05", dentro dela criamos a pasta de exercicio = "ex027", dentro dela criamos a pasta = "flex001" e criamos o arquivo = "index.html".
+    />>> Adicionamos ao HTML o código base.
 17:09 - Primeiro exemplo prático Flexbox
 20:09 - O que veremos a seguir?
 
 
 
-Módulo 05, Capítulo 27, Aula 02.
+* Módulo 05, Capítulo 27, Aula 02.
 Vídeo:
 Direções e Eixos Flexbox CSS - @CursoemVideo HTML5 + CSS3
 Link:
@@ -96,7 +96,7 @@ Tópicos desse vídeo:
 01:13 - Construtores de site
     #   
 02:24 - Contêiner e itens
-*    Que quando o flex-conteiner(pai) recebe a configuração display=flex, os filhos(flex-itens) não necessáriamente recebem essa configuração.
+    $Que quando o flex-conteiner(pai) recebe a configuração display=flex, os filhos(flex-itens) não necessáriamente recebem essa configuração.
 03:06 - Configurando o /flex-direction:-;
     OBS:
         "Essa configurações são para os /pais\ , para os conteiners."
@@ -124,15 +124,15 @@ Tópicos desse vídeo:
             Ou seja começa no ponto inicial 0 da esquerda e vai até o ponto final máximo que fica em baixo.
         Ponto2- cross-end = Segue o mesmo sentido citado acima.
 08:56 - Um resumo muito valioso
-*   LEMBRANDO que em idiomas que o fluxo de leitura é diferente do padrão para nossa linguagem, a disposição do (axis)eixos seguem o fluxo normal, fazendo com que por exemplo o main-axis que é da esquerda para a direita, fique invertido, indo da direita para esquerda em idiomas como por exemplo os idiomas árabe e hebraico.
+$   LEMBRANDO que em idiomas que o fluxo de leitura é diferente do padrão para nossa linguagem, a disposição do (axis)eixos seguem o fluxo normal, fazendo com que por exemplo o main-axis que é da esquerda para a direita, fique invertido, indo da direita para esquerda em idiomas como por exemplo os idiomas árabe e hebraico.
     Configuração das propriedades nos Eixos(axis).
     1- "flex-direction: row;" segue no /main-axis da esquerda para a direita e /cross-axis de cima para baixo.
     2- "flex-direction: row-reverse;" segue no /main-axis da direita para a esquerda e /cross-axis de cima para baixo.
     3- "flex-direction: column;" segue no /main-axis de cima para baixo e /cross-axis da esquerda para a direita.
     4- "flex-direction: column-reverse;" segue no /main-axis de baixo para cima e /cross-axis da esquerda para a direita.
 
-*   SAIBA QUE:
-    "Os itens sempre seguem (são colocados n)o sentido do main-axis".
+{   SAIBA QUE:  }
+    "Os itens sempre seguem ( são colocados ) no sentido do main-axis".
 11:10 - A importância de conhecer tudo isso
     "SIM" precisamos dessa teoria para sabermos aplicar na prática as propriedades de posicionamento/alinhamento (aninhamento).
     "Se não" aprendermos na teoria, não poderemos enender quando, como e onde aplicar por exemplo a propriedade "justify-content, align-content, o align-itens."
@@ -147,7 +147,7 @@ Tópicos desse vídeo:
 
 
 
-Módulo 05, Capítulo 27, Aula 03
+* Módulo 05, Capítulo 27, Aula 03
 Vídeo:
 Empacotamento e fluxo no Flexbox CSS - @CursoemVideo HTML5 + CSS3
 Link:
@@ -178,7 +178,7 @@ Tópicos desse vídeo:
     3- "flex-wrap: wrap-reverse;" Sigmifica: (Sim Emcapsule ao contrário)/sim-quebre-reversamente, faz com os flex-itens não encolham mediante a diminuição da caixa-pai/contêiner idependente do conteúdo; Neste caso o conteúdo não vaza/transborda para fora do /Contêiner.
         AINDA; o comportamento "wrap-reverse" faz com que os "flex-itens" se comportem de tal maneira que ao atigir o contêiner um espaço em que o último elemento não caiba na dimensão; Então o último flex-item quebra/sobe para a próxima linha no sentido oposto do (eixo-transversal) do /cross-axi que é neste caso é para cima.
 08:04 - Um resumo muito importante! Anote!
-*   ANOTE e salve imagens do resumo.
+    $   ANOTE e salve imagens do resumo.
 10:08 - Quer um notebook para desenvolvedor?
 #--------------------------------------------
 11:04 - Exemplo prático com flex-wrap
@@ -192,20 +192,20 @@ Tópicos desse vídeo:
         VIDE!
 "
 17:39 - Usando o flex: auto
-*   OBSEVAÇÃO: A propriedade flex que é uma shorthand, só funciona no flex-itens que são os filhos.
+  $ OBSEVAÇÃO: A propriedade flex que é uma shorthand, só funciona no flex-itens que são os filhos.
     "Quanto a essa shorthand, iremos ter mas detalhes nas aulas seguintes."
 22:06 - O que vamos ver a seguir?
 
 
 
 
-Módulo 05, Capítulo 27, Aula 04
+* Módulo 05, Capítulo 27, Aula 04
 Vídeo:
 Alinhamento nos eixos Flexbox - @CursoemVideo HTML5 + CSS3
 Link:
 https://www.youtube.com/watch?v=KKdr1KZeFqk&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=5
 
-* Você sabe usar as propriedades Flexbox justify-content e align-items? Sabe a diferença entre valores de alinhamento flex-start, flex-end, center, space-between, space-evenly e space-around? Sabe como fazer o alinhamento nos eixos principal e transversal do Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+    $ Você sabe usar as propriedades Flexbox justify-content e align-items? Sabe a diferença entre valores de alinhamento flex-start, flex-end, center, space-between, space-evenly e space-around? Sabe como fazer o alinhamento nos eixos principal e transversal do Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
 
 Tópicos desse vídeo:
 00:00 - Alinhamento nos eixos Flexbox
@@ -231,7 +231,7 @@ Tópicos desse vídeo:
         OBS: O efeito visual dessa propriedade se parece muito com o "space-evenly"; Mas a diferença consiste nos espaços do "main-star e main-end".
             ENTÃO isso faz com que o espaço no "main-start" e "main-end" fiquem iguais em relação ao primeiro e último (flex-itens), e a soma desses espaços é igual ao valor do espaço de um elemento pro outro dentro do (contêiner).
 11:01 - Comparando os resultados
-*   Considere os hífens(-) como o espaço entre os flex-itens definidos pela propriedade atribuida ao contêiner Pai que define o conportamento(alinhamento) dos elementos no Eixo-Principal(main-axis).
+    $   Considere os hífens(-) como o espaço entre os flex-itens definidos pela propriedade atribuida ao contêiner Pai que define o conportamento(alinhamento) dos elementos no Eixo-Principal(main-axis).
     "--------------------------DIFERENÇA--------------------------"
             A--B--C     Comportamento do /space-between
             -A-B-C-     Comportamento do /space-evenly
@@ -243,7 +243,7 @@ Tópicos desse vídeo:
             Se o contêiner Pai esta definido com a propriedade "flex-flow=column nowrap"= (flex-direction=column e flex-wrap=nowrap) e defirnirmos a propriedade "felx-start" então o espaço em branco fica em baixo, pois o primeiro "flex-item" grudou em cima.
                 Esse é um exemplo de como muda as direções conforme muda o /main-axis = (Eixo Principal).
 
-*   Aqui é um exemplo com a propriedade "flex-flow: column nowrap" definida; Com isso os flex-itens são distribidos conforme a direção do main-axis que está column(pra baixo).
+    $   Aqui é um exemplo com a propriedade "flex-flow: column nowrap" definida; Com isso os flex-itens são distribidos conforme a direção do main-axis que está column(pra baixo).
 (       OBSERVAÇÃO: Considere os hífen"-" como espaços vázios.       )
     "--------------------------DIFERENÇAS--------------------------"
     Comportamento do /flex-start    Comportamento do /flex-end    Comportamento do /center
@@ -285,13 +285,13 @@ Tópicos desse vídeo:
 
 
 
-Módulo 05, Capítulo 27, Aula 05
+* Módulo 05, Capítulo 27, Aula 05
 Vídeo:
 Centralização absoluta com Flexbox - @CursoemVideo HTML5 + CSS3
 Link:
 https://www.youtube.com/watch?v=gfimpySRhUI&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=6
 
-* Você sabe centralizar os elementos usando Flexbox? Sabe como fazer uma centralização absoluta dos componentes usando CSS Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+    $ Você sabe centralizar os elementos usando Flexbox? Sabe como fazer uma centralização absoluta dos componentes usando CSS Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
 
 Tópicos desse vídeo:
 00:00 - Centralização com Flexbox
@@ -301,22 +301,22 @@ Tópicos desse vídeo:
 04:23 - Lembrando do justify-content e align-items
 05:36 - Exemplo prático para centralização
     Iniciamos a aula criando o arquivo "flex005" e o "index.html".
-*   Opamos por usar as div´s semânticas por questão de pratica.
+    $   Opamos por usar as div´s semânticas por questão de pratica.
 08:39 - Alinhamento da section
 11:47 - Atualizando o repositório remoto
-*       NÃO ESQUEÇA...
+    $       NÃO ESQUEÇA...
 13:06 - Acompanha a gente nas redes sociais 
 13:52 - O que vem a seguir?    
 
 
 
-Módulo 05, Capítulo 27, Aula 06
+* Módulo 05, Capítulo 27, Aula 06
 Vídeo:
 Alinhamento de elementos empacotados no Flexbox - @CursoemVideo HTML5 + CSS3
 Link:
 https://www.youtube.com/watch?v=qMTX98pCwXA&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=7
 
-* sabe alinhar os elementos empacotados usando Flexbox? Sabe como fazer vários tipos de alinhamento dos componentes empacotados usando CSS Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
+    $ sabe alinhar os elementos empacotados usando Flexbox? Sabe como fazer vários tipos de alinhamento dos componentes empacotados usando CSS Flexbox? Veja nesse vídeo a resposta para essas e muitas outras perguntas.
 
 Tópicos desse vídeo:
 00:00 - Alinhando conteúdo com Flexbox
@@ -329,7 +329,7 @@ Tópicos desse vídeo:
     2- "align-items"; Alinha o conteúdo(elementos) dentro do eixo transversal(cross-axis).
     3- "align-content"; Alinha os elementos no eixo transversal, somente quando eles estiverem [empacotados].
 
-* Agora vemos abaixo os valores aceito pela propriedade "align-content"
+    $ Agora vemos abaixo os valores aceito pela propriedade "align-content"
 06:48 - align-content: stretch
     Esse é o valor /PADRÃO e seu funcionamento consiste em pegar a dimensão inteira do /contêiner(PAI) e dividir em duas parte iguais isso no caso de duas(2) linhas(Ou colunas se for a configuração); Então podemos dizer que o número de linhas(colunas) será o número pelo qual a propriedade vai dividir os espaços por iguais, e assim puxar o flex-item de forma que ocupe o espaço vazio.
 08:31 - align-content: flex-start
@@ -365,7 +365,7 @@ Tópicos desse vídeo:
 
 
 
-Módulo 05, Capítulo 27, Aula 07
+* Módulo 05, Capítulo 27, Aula 07
 Vídeo:
 Anatomia dos itens Flexbox - @CursoemVideo HTML5 + CSS3
 Link:
@@ -373,7 +373,7 @@ https://www.youtube.com/watch?v=D7jeyyfigBM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
 
     Nesta aulas vamos aprender as propriedades aplicadas exclusivamente aos /flex-itens.
 
-*   LEMBRA da propriedade "flex=auto" que usamos e depos removemos do itens?
+    $   LEMBRA da propriedade "flex=auto" que usamos e depos removemos do itens?
     "Essa propriedade é usada somente em elementos filhos de contêiner-flex-box".
 
     1- Propriedade "order"
@@ -383,14 +383,14 @@ https://www.youtube.com/watch?v=D7jeyyfigBM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
 
         Pra vermos em prática o que as imagens da aula mostrou, o que precisamos é que o /contêiner tenha a propriedade "flex-flow= row nowrap(ou wrap) = direction =row e flex-wrap=wrap(ou nowrap)"  e aos /flex-itens determinados a propriedade "order" e seu valor de posicionamento.
 
-*       Para praticar...
+    $       Para praticar...
 $   Abrimos o repositório Github Desktop e nele abrimos o Visual Studio code;
     Copiamos a pasta do exercicio "flex001" para usarmos o código base já criado e nomeamos como "flex007".
         Ainda para explicação e prática da propriedade "align-self", nós copiamos o arquivo "flex-007" e renomeamos para "flex-008" para usarmos o código base.
 
 
 
-Módulo 05, Capítulo 27, Aula 08
+* Módulo 05, Capítulo 27, Aula 08
 Vídeo:
 Propriedade flex-basis em Flexbox - @CursoemVideo HTML5 + CSS3
 Link:
@@ -398,7 +398,7 @@ https://www.youtube.com/watch?v=J8iyHpOoLSU&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
 
     Nesta aula vamos compreender um pouco sobre a propriedade "flex-basis" que é aplicada em itens/"flex-itens" de um contêiner flexível/"Flexbox".
 
-* Como já vimos nas aulas anteriores, o Flexbox é o contêiner(flex-container) que envolve vários itens  (flex-itens), e nesta aula vamos copreender a propriedade que se aplica aos itens e não ao contêiner.
+    $ Como já vimos nas aulas anteriores, o Flexbox é o contêiner(flex-container) que envolve vários itens  (flex-itens), e nesta aula vamos copreender a propriedade que se aplica aos itens e não ao contêiner.
     "
     Consideramos a configuração para esta aula da seguinte maneira:
         Contêiner-flex com [flex-flow = row nowrap(flex-drection + flexwrap)] que são os padrões.
@@ -413,14 +413,14 @@ https://www.youtube.com/watch?v=J8iyHpOoLSU&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
             1- Fiquem com tamanhos fixo e iguais.
             2- Não se adaptem ao tamanho do contêiner  se este for reduzido ou aumentado idempendente do conteúdo dentro dele(do item).
 
-* Podemos definir [flex-basis] para itens individualmente e com isso definir qual tamhanho cada um vai ter.
+$OBSERVAÇÃO Podemos definir [flex-basis] para itens individualmente e com isso definir qual tamhanho cada um vai ter.
     "EXEMPLO":
         1° /item flex-basis = 200px
         2° /item flex-basis = auto
         3° /item com flex-basis = 100px
     "MAS" normalmente fazemos a configuração para todos igualmente.
 
-* SAIBA que a propriedade [flex-basis] não trava o item num valor determindo, pois eles são caixas flexiveis pertencentes a um contêiner-flex.
+$OBSERVAÇÃO SAIBA que a propriedade [flex-basis] não trava o item num valor determindo, pois eles são caixas flexiveis pertencentes a um contêiner-flex.
     "
         O flex-basis faz com que os itens diminuam de tamanho em quanto o contêiner diminui(enquanto dá); Quando não dá mais, a têndencia é quebrar o conteúdo dentro do elemento(item) invalidando o valor em pixel que foi configurado no flex=item.
 
@@ -432,7 +432,7 @@ $       PRATICANDO:
 
 
 
-Módulo 05, Capítulo 27, Aula 09
+* Módulo 05, Capítulo 27, Aula 09
 Vídeo:
 Controle do tamanho de itens flexíveis - @CursoemVideo HTML5 + CSS3
 Link:
@@ -440,25 +440,25 @@ https://www.youtube.com/watch?v=Le_rq-Cz_mo&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
 
     NEsta aula vamos aprender um pouco sobre as propriedades "flex-grow e flex-shrink" que se aplicam diretamente ao um ou mais "flex-itens".
 
-*   Podemos dizer que ao definir a proprieda para o item, isso determinará o quanto o item vai:
+    $   Podemos dizer que ao definir a proprieda para o item, isso determinará o quanto o item vai:
     /flex-grow = Crescer
     /flex-shrink = Encolher
 
     1- Considerando um flex-box(contêiner pai) configurado com [flex-flow = row nowrap;] onde "row" direciona os itens em linha, e nowrap não permite que os elementos(itens) quebre.
         $ É IMPORTANTE que se tenha essa configuração no elemento pai, pois crescer ou diminuir vai depender de que se pode quebrar ou não, e se definimos flex-wrap no contêiner fará com que os itens não cresça pois a ordem é que quebrem quando eles não coberem mais.
 
-*   Por padrão os valores das propriedades [flex-shrink é = 1; e flex-grow é = 0;].
+    $   Por padrão os valores das propriedades [flex-shrink é = 1; e flex-grow é = 0;].
     $ Isso significa que mesmo sem definir essas propriedades na CSS para os itens; Elas terão esses valores já pré-configurados, mesmo sem serem atribuídos aos elementos filhos.
     Entenda que:
     /flex-shrink = 1 quer dizer que o elemento poderá encolher, e = 0 quer dizer que não poderá encolher.
     /flex-grow = 0 quer dizer que o elemento não poderá crescer, e = 1 quer dizer que poderá crescer.
 
 08:33
-* SAIBA QUE:
+    $ SAIBA QUE:
     "Por padrão quando diminuimos a largura do contêiner, os flex-itens encolhem por ter a propriedade flex-shrink = 1, e não crescem se o contêiner aumentar de largura por causa da propriedade flex-grow = 0."
 
 08:45
-*   LEMBRANDO que:
+    $   LEMBRANDO que:
     "flex-shrink e flex-grow" se aplica somente aos itens(filhos) de um contêiner pai flex-box.
 
 08:55
@@ -477,7 +477,7 @@ $ Para se ter elementos fluídos dentro do contêiner, basta definir as propried
 
 11:55
     Começamos copiando o exercício "flex001" para usarmos o código base, e renomeamos para "flex010."
-*    LEMBRE-SE que nesta aula usamos as configurações padrão:
+    $    LEMBRE-SE que nesta aula usamos as configurações padrão:
 "   A configuração do contêiner é:
         display = flex
         flex-flow = row nowrap (o mesmo que flex-direction = row e flex-wrap = nowrap)
@@ -521,7 +521,7 @@ $ Para se ter elementos fluídos dentro do contêiner, basta definir as propried
 
 
 
-Módulo 05, Capítulo 27, Aula 10
+* Módulo 05, Capítulo 27, Aula 10
 Vídeo:
 A propriedade flex - @CursoemVideo HTML5 + CSS3
 Link:
@@ -531,7 +531,7 @@ https://www.youtube.com/watch?v=JSf4HuF52g0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
     NEsta aula vamos aprender a simplicar o uso das propriedades /flex-basis /flex-grow e /flex-shrink em uma propriedade abreviada que tem o mesmo esfeito sobre os "itens". 
 
 02:58
-*   LEBRANDO que:
+    $   LEBRANDO que:
     "A propriedade aqui ensinda se aplica somente aos flex-itens, e não ao flex-container";
     $Por isso é importante saber quem é: Pai, filho, direção dos eixos, específicar os eixos, as direções dos eixos, fluxo e tudo mais do flex-box.
 
@@ -549,7 +549,7 @@ https://www.youtube.com/watch?v=JSf4HuF52g0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
         $ flex: 0 1 150px;      $ flex: 2 0 150px;
 
 07:05
-* NOTE ai:
+    $ NOTE ai:
     A propriedade [flex] segue a seguinte formúla(ordem):
         /flex-grow + "flex-shirink" + {flex-basis}
 
@@ -558,7 +558,7 @@ https://www.youtube.com/watch?v=JSf4HuF52g0&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
     Copiamos o arquivo "flex011" da aula anterior, e romeamos para "flex012" pra usarmos o código base.
 
 12:16
-*   Entendendo mais sobre os valores na propriedade [flex]:
+    $   Entendendo mais sobre os valores na propriedade [flex]:
     1- /flex = /flex-grow + "flex-shirink" + {flex-basis}
     #PADRÃO  
     2- /flex: 0 1 auto; = É o mesmo que não atribuir NADA, é o PADRÃO.
@@ -712,4 +712,38 @@ Assuntos Abordados e Tempo:
 10:44 - Estrutura do código HTML  
 14:21 - Reset CSS e estilos iniciais    
 16:11 - Estilização do header e section    
-17:55 - Preparação para a próxima aula 
+17:55 - Preparação para a próxima aula      
+
+
+* Módulo 05, Capítulo 27, Aula 15
+Vídeo:
+Conteúdo flexível apenas com Flexbox (parte 2) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=U9-L5yXiNyE&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=16
+
+    Este vídeo dá continuidade a um projeto de desenvolvimento web utilizando Flexbox em CSS. O Guanabara vai demonstrar como criar um layout flexível onde os elementos se adaptam a diferentes tamanhos de tela, com foco na organização de conteúdos (texto e mídia) e no comportamento dos elementos ao redimensionar a tela. Ele também aborda a importância da prática no aprendizado de desenvolvimento web e apresenta cursos complementares de hardware e redes.
+
+Assuntos Abordados e Tempo:
+0:00 - Continuação do projeto Flexbox
+0:32 - Cursos de hardware e redes no Estudonauta
+2:46 - Revisão do HTML da aula anterior
+    $ OBSERVAÇÃO:
+    "O conteúdo do header" e também o conteúdo do 'section class=normal' não serão [flexíveis].
+    
+3:25 - Estilização com Flexbox: parte 1
+    $ Iniciamos;
+    Adicinamos ao seletetor CSS section > article {}, uma 'borda de 2px pontilhada', para vermos a dimensão do conteúdo que será flexível e para compreendermos o que o professor está explicando; Note essa borda ao redor dos dois 'article's.
+
+    $ Aplicamos:
+    No seletor 'section.flex-content{}' aplicamos a propriedade 'displa = flex' e com isso os 'articles' ficaram um ao lado do outro.
+
+    $Agora veja:
+    No arquivo 'style.css' apartir dos mencionados seletores mais detalhes e comentários sobre o assunto.
+
+10:00 - Estilização com Flexbox: parte 2 (justify-content)
+10:48 - Estilização das mídias (imagens e vídeos)
+14:21 - Ajustes finais e considerações sobre o layout
+16:00 - Revisão do código HTML e CSS
+16:58 - Publicação do projeto no GitHub
+17:11 - Apresentação de máquina para desenvolvimento (Vivobook Asus)
+18:12 - Considerações finais e encorajamento à prática.
