@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>O que é Grid Layout?</title>
+
+    <!-- FONTE Whereas recognition of the inherent dignity:
+    link: https://fonts.google.com/selection/embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <style>
+        /* SELETORES GLOBAIS */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Source Code Pro", monospace;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background: black;
+            border-left: 2px solid #ff6804e3;
+            border-bottom: 2px solid #ff6804e3;
+        }
+        h1, h2, h3, p {
+            padding: 10px;
+        }
+        h1 {
+            font-size: 2.2rem;
+        }
+        h2 {
+            font-size: 1.1rem;
+        }
+        p {
+            font-weight: 600;
+            border-top: 2px solid #ff6804e3;
+        }
+        strong {
+            display: block;
+            font-weight: bolder;
+            text-indent: 10px;
+        }
+
+            /* HEADER */
+        header {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+        header::after {
+            content:"";
+            position: absolute;
+            top: 30%;
+            left: 6%;
+            width: 86%;
+            margin-bottom: 20px;
+            background-color: red;
+            border-top: 2px solid #ff6804;
+        }
+        header section {
+            display: flex;
+            text-align: center;
+            padding: 2px 8px 2px 8px;
+            background-color: #0CF7F8;
+            border-bottom: 1px solid #ff6804e3;
+        }
+        header section img{
+            flex-basis: 0 0 500px;
+            width: 300px;
+        }
+        header div.logo {
+            background: transparent url(./img1/cursoemvideo-logo-branca.png) 100% 58%/100% no-repeat;
+            width: 200px;
+            height: 150px;
+            overflow: hidden;
+            color: transparent;
+            border-bottom: 1px solid #ff6804e3;
+        }
+        /* header div.logo img{
+            width: 150px;
+            height: 100px;
+        } */
+        header a {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bolder;
+            background-color: #1C1DFB;
+            width: 150px;
+            height: 40px;
+            padding: 12px;
+            border-radius: 22px;
+            border-bottom: 1px solid white;
+        }header a:hover {
+            background-color: rgba(0, 0, 253, 0.89);
+            color: white;
+            border-bottom: 1px solid #ff6804e3;
+            transition: background .4s;
+        }
+        div.titulo_principal {
+            background-color: #0CF7F8;
+            color: rgb(0, 0, 170);
+            padding: 0px 8px 0px 8px;
+            border-bottom: 1px solid #ff6804e3;
+        }
+
+
+            /* MAIN */
+        main {
+            background-color: #0CF7F8;
+            width: 94%;
+            /* height: 100%; */
+            margin: 0 auto;
+        }
+        main article {
+            padding: 20px;
+        }
+        main div {
+            display: flex;
+            /* flex-grow: column wrap; */
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            align-content: center;
+            padding: 10px;
+        }
+        main div.div_img_main2 {
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+        main div.div_img_main2 p {
+            border-bottom: 2px solid #ff6804;
+            border-top: none;
+        }
+        main article span.span_minute {
+            background-color: blue;
+            color: white;
+            position: relative;
+            margin: 10px;
+        }
+        main div.div_img_main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        main div.div_img_main div{
+            /* flex-basis: 100px;
+            flex-shrink: 1;
+            flex-grow: 1; */
+            flex: 0 1 200px;
+        }
+        main img.img_main {
+            width: 350px;
+        }
+        main p.p_destaque {
+            color: white;
+            font-size: 1.4em;
+        }
+        main p.p_destaque2 {
+            color: white;
+            font-size: 1.2em;
+            text-indent: 10px;
+        }
+        main span.span_destaque {
+            color: blue;
+            font-size: 3vh;
+            font-weight: bolder;
+        }
+        main span.span_destaque2 {
+            color: rgb(255, 251, 0);
+            font-size: 3vh;
+            font-weight: 600;
+        }
+        main aside {
+            border: 2px solid #ff6804;
+            background: black;
+        }
+
+
+            /* FOOTER */
+        footer {
+            display: flex;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            margin-top: 4px;
+        }
+        footer::after {
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 6%;
+            width: 86%;
+            margin: 10px;
+            background-color: red;
+            border-top: 2px solid #ff6804;
+        }
+        footer img.img_footer {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><!-- <img src="./img1/logo1.jpg" alt="logo"> -->LOGO</div>
+        <section>
+            <!-- <div class="titulo_principal">
+                <h1>* Módulo 05, Capítulo 28, Aula 01</h1>
+            </div> -->
+            <img src="./img1/img.jpg" alt="capítulo da aula">
+        </section>
+        <a href="https://www.youtube.com/watch?v=p8q2_VIk-2Y&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=17" target="_blank">Vídeo Aula aqui!</a>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <article>
+            <div class="div_img_main2">
+                <img class="img_main" src="./img1/logo1.jpg" alt="imagem do curso em vídeo">
+                <div>
+                    <p>Com: Professor Gustavo Guanabara</p>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <h1>Você sabe o que é 'Grid Layout'? </h1>
+                    <span class="span_minute">2:30</span>
+                    <p><strong>Referência à documentação do W3C</strong></p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main" src="./img1/img2.jpg" alt="imagem W3C">
+                    </div>
+                    <div>
+                        <img class="img_main" src="./img1/img3.jpg" alt="imagem W3C 2">
+                    </div>
+                </div>
+                <p>
+                    A específicação de Grid Layout surgiu em 2011 sendo a primeira versão a ser citada como padrão que virou 'wyse candate'.
+                    <strong>
+                        A específicação é conhecida como [ CSS Grid Layout Module Level 1].
+                    </strong>
+                </p>
+                <br>
+                <aside>
+                    <p class="p_destaque">"Segundo a tradução do Professor Guanabara:</p>
+                    <div>
+                        <img class="img_main" src="./img1/img4.jpg" alt="imagem W3C 3">
+                    </div>
+                </aside>
+            </section>
+        </article>
+        <article>
+            <section>
+                <div>
+                    <h1>Exemplo prático de Grid Layout no site do G1</h1>
+                    <span class="span_minute">4:52</span>
+                    <p>Aqui na imagem abaixo vemos a maneira como se distribuem os elementos do <span class="span_destaque">site G1</span> dentro da <span class="span_destaque">Grid</span>, e o mesmo acontece por exemplo se visualizarmos o site em tela de celular onde os elementos se adaptam em telas menores e estreitas.</p>
+                    <p><strong><span class="span_destaque">...................</span></strong></p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main" src="./img1/img5.jpg" alt="imagem exemplo site G1">
+                    </div>
+                    <p>Então vemos no exemplo do site do G1 abaixo, que as partes tracejadas formam as colunas verticalmente, e as partes horizontais formam as linhas.</p>
+                    <div>
+                        <img class="img_main" src="./img1/img6.jpg" alt="imagem exemplo site G1 com linhas tracejadas">
+                    </div>
+                </div>
+                <p>
+                    A específicação de Grid Layout surgiu em 2011 sendo a primeira versão a ser citada como padrão que virou 'wyse candate'.
+                    <strong>
+                        Ainda nos exemplo a seguir, o professor delimita|marca a área com linhas brancas as quas seguem as linhs tracejadas e assim formam os 'blocos'.
+                    </strong>
+                    <div>
+                        <img class="img_main" src="./img1/img7.jpg" alt="imagem exemplo site G1 com linhas brancas delimitando blocos">
+                    </div>
+                </p>
+                <br>
+                <aside>
+                    <p class="p_destaque2" style="text-align: center;">Com esses exemplos podemos entender que um bloco pode ser definido começando de uma determinada linha vertial até outra, e ao mesmo tempo começando de uma determinada linha horizontal até outra;</p>
+                    <p class="p_destaque2">No exemplo abaixo vemos que esse bloco do meio <span style="color: rgb(0, 110, 255);">"Esse maior com outros dois blocos dentro"</span>, começa na <span class="span_destaque2">linha vertical 2</span> e termina na <span class="span_destaque2">linha 22</span>, e ao mesmo tempo começa na <span class="span_destaque2">linha horizontal 2</span>, e termina na linha <span class="span_destaque2">horizontal 4</span> 'de acordo com a marcação exemplar do professor!'.</p>
+                    <div>
+                        <img class="img_main" src="./img1/img8.jpg" alt="imagem exemplo site G1 com linhas brancas delimitando blocos">
+                    </div>
+                    <p class="p_destaque2" style="text-align: center;">É justamente isto que é sensacional no <span class="span_destaque2">'Grid Layout'</span> , pois podemos <span style="color: rgb(0, 110, 255);">"criar"</span> interfaces de maneira mais fácil.</p>
+                </aside>
+            </section>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section>
+            <h2>Siga nossas redes sociais e <span style="color: #ff6804e3; font-weight: bolder;">+</span></h2>
+            <img style="width: 300px;" src="./img1/logocursoemvideomax.jpg" alt="imagem logo curso em vídeo">
+            <img src="./img1/insta.jpg" alt="imagem insta curso em vídeo" class="img_footer">
+            <img src="./img1/cursogratisrecode.jpg" alt="imagem recode" class="img_footer">
+        </section>
+        <section>
+            <img style="width: 250px;" src="./img1/gustavoguanabara-vertical2.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+        </section>
+        <section>
+            <h2>Patrocínios</h2>
+            <img src="./img1/patrocinio.jpg" alt="imagem patrocinio hostenet" class="img_footer">
+            <img src="./img1/patrocinio1.jpg" alt="imagem patrocinio recode" class="img_footer">
+            <img src="./img1/patrocinio2.jpg" alt="imagem patrocinio estudonauta" class="img_footer">
+        </section>
+    </footer>   
+</body>
+</html>
