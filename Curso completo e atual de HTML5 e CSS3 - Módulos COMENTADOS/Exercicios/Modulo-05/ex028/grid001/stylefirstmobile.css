@@ -11,9 +11,12 @@
     header section img, main img.img_main {
         width: 100%;
     }
+    img.img_main.img2_main {
+        width: 150%;
+    }
     main span.span_destaque2 {
         color: rgb(255, 251, 0);
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 600;
     }
 }
