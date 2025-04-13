@@ -5,17 +5,26 @@
     header {
         flex-direction: column;
     }
-    img {
+    /* img {
+        width: 100%;
+    } */
+    header section img {
         width: 100%;
     }
-    header section img, main img.img_main {
+    main div.div_img_main {
         width: 100%;
     }
-    main img.img2_main {
-        width: 150%;
+    main div.div_img_main div {
+        width: 80%;
+    }
+    main img.img_main {
+        width: 100%;
+    }
+    main img.img_main.img2 {
+        width: 140%;
     }
     img.img_main.img2_main {
-        width: 150%;
+        width: 140%;
     }
     main span.span_destaque2 {
         color: rgb(255, 251, 0);

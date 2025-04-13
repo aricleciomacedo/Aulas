@@ -142,13 +142,15 @@ main article {
 }
 main div {
     display: flex;
-    /* flex-grow: column wrap; */
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     align-content: center;
     padding: 10px;
+}
+main marquee p {
+    width: 100vmax;
 }
 main div.div_img_main2 {
     background-color: black;
@@ -177,13 +179,7 @@ main div.div_img_main {
     justify-content: space-evenly;
     align-items: center;
 }
-main div.div_img_main div{
-    /* flex-basis: 100px;
-    flex-shrink: 1;
-    flex-grow: 1; */
-    flex: 0 1 200px;
-}
-main img.img_main {
+main img.img_main{
     width: 350px;
 }
 main p.p_destaque {
