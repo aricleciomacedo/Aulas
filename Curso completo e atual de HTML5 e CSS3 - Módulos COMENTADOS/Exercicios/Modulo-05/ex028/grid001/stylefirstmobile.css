@@ -11,6 +11,9 @@
     header section img, main img.img_main {
         width: 100%;
     }
+    main img.img2_main {
+        width: 150%;
+    }
     img.img_main.img2_main {
         width: 150%;
     }
