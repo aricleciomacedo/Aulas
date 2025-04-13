@@ -1,0 +1,19 @@
+@charset "UTF8";
+
+/* 1° Pequenas telas: até 500px */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
+    header section img, main img.img_main {
+        width: 100%;
+    }
+    main span.span_destaque2 {
+        color: rgb(255, 251, 0);
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+}
