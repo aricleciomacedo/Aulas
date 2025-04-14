@@ -63,7 +63,6 @@ header section {
     display: flex;
     text-align: center;
     padding: 2px 8px 2px 8px;
-    background-color: #05f0f1;
     border-bottom: 1px solid #ff6804e3;
 }
 header section img{
@@ -85,9 +84,9 @@ header a {
     font-weight: bolder;
     font-size: 1rem;
     background-color: #1C1DFB;
-    width: 150px;
+    width: 190px;
     height: 40px;
-    padding: 10px;
+    padding: 8px;
     margin: 10px;
     border-radius: 22px;
     border-bottom: 1px solid #5a5af5;
@@ -127,7 +126,7 @@ div.titulo_principal {
 
     /* MAIN */
 main {
-    background-color: #05f0f1;
+    background-color: white;
     width: 94%;
     margin: 0 auto;
 
@@ -181,6 +180,7 @@ main div.div_img_main {
 }
 main img.img_main{
     width: 350px;
+    border: 1px solid white;
 }
 main p.p_destaque {
     color: white;
@@ -204,6 +204,7 @@ main span.span_destaque2 {
 main aside {
     border: 2px solid #ff6804;
     background: black;
+    color: white;
 }
 
 
