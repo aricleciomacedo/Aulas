@@ -1,0 +1,66 @@
+* Módulo 05, Capítulo 28, Aula 01
+Vídeo:
+O que é Grid Layout? - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=p8q2_VIk-2Y&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=17
+
+    Você sabe o que é 'Grid Layout'? 
+Neste vídeo, vamos iniciar um novo assunto, falando sobre Grid Layout em CSS, contrastando-o com Flexbox e explicando sua importância no design de interfaces de usuário. 
+Ele utiliza o [site do G1] como exemplo prático para demonstrar como o 'Grid Layout' organiza o conteúdo em linhas e colunas, facilitando a criação de layouts responsivos. Além disso, o vídeo aborda a evolução do design web, desde o uso de tabelas e frames até a adoção do Grid Layout, destacando as vantagens desta nova tecnologia.
+
+Assuntos Abordados e Tempo:
+0:00 - Introdução ao Grid Layout e comparação com Flexbox
+0:37 - Patrocínio da Recode e depoimento de um aluno
+1:49 - Definição de Grid Layout e sua aplicação em interfaces de usuário
+2:30 - Referência à documentação do W3C 
+    A específicação de Grid Layout surgiu em 2011 sendo a primeira versão a ser citada como padrão que virou 'wyse candate'.
+        A específicação é conhecida como [ CSS Grid Layout Module Level 1].
+    
+    "Segundo a tradução do Professor Guanabara:
+        Css Grid Layout é:
+    " Um sistema para criação de layout baseado em uma grade 'bidimensional' e otimizado para design de "interfaces de usuário". Nesse modelo de grade, os 'elementos-filhos' do 'contêiner' que define a grade podem ser posicionados livremente em espaços criados na estrutura, quer ela tenha sido definida com suas dimensões 'flexíveis' ou 'fixas'.
+    
+
+3:37 - Explicação do conceito de contêiner e itens no Grid Layout
+4:52 - Exemplo prático de Grid Layout no site do G1
+    Aqui vemos a maneira como se distribuem os elementos do site G1 dentro da Grid, e o mesmo acontece por exemplo se visualizarmos o site em tela de celular onde os elementos se adaptam em telas menores e estreitas.
+
+    Então vemos no exemplo do site do G1, que as partes tracejadas formam as colunas verticalmente, e as partes horizontais formam as linhas.
+
+    Ainda nos exemplo a seguir, o professor delimita|marca a área com linhas brancas as quas seguem as linhas tracejadas e assim formam os 'blocos'.
+
+    Com esses exemplos podemos entender que um bloco pode ser definido começando de uma determinada linha vertial até outra, e ao mesmo tempo começando de uma determinada linha horizontal até outra; No exemplo abaixo vemos que esse bloco do meio"Esse maior com outros dois blocos dentro", começa na linha vertical 2, e termina na linha 22, e ao memso tempo começa na linha horizontal 2, e termina na linha horizontal 4 'de acordo com a marcação exemplar do professor!'.
+
+    É justamente isto que é sensacional no 'Grid Layout' , pois podemos "criar" interfaces de maneira mais fácil.
+
+    Observe que as linhas brancas seguem as pontilhadas formando as área; Então a proposta foi montada seguindo essas linhas pontilhadas para se ter uma idéia de como pode ser a distribuição dos elementos do site G1 dentro da Grid.
+
+        "imagem 8"
+
+    "OBS"
+        Lembra que; Talvez no módulo 2 do curso onde aprendemos a montar um grade, a estrutura do site?
+            Pois bem; Este exemplo abaixo é uma estrutura muito mais avançada.
+
+    "Então", essa estrutura mostrada no vídeo pode ser uma grade de proposta "uma versão" ou uma possibilidade que conseguimos fazer com Grid Layout no site do G1.
+        Veja abaixo como fica essa possibilidade marcadas por linhas brancas.
+        Mas saiba que no fim, tudo obedece a grade mostrada antes.
+
+    As imagens 10 e 11 são exemplos de como fica em telas menores'estreitas' como é o caso de celulares.
+
+    Portanto o objetivo do Grid Layout é criar interfaces; Posicionar elementos|itens dentro da grade de maneira organizada, para que consigamos ver o site de uma forma apresentável em deversos tipos de telas.
+
+9:06 - Uso de Media Queries com Grid Layout para responsividade
+9:31 - Evolução do design web: tabelas, frames e tableless
+    Alguns anos atrás, antes da específicação da Grid Layout, tudo era 'macro' na intenet, e os sites eram 'Horripilantes' sem design ou efeitos visual agradáveis.
+        Na vídeo aula vimos alguns exemplos, como o caso do site '3DRealms.com' feito no modelo antigo que usa o conceito de tabela; 
+        Outro exemplo de site criado com tabela é o 'logracket.com' que também usa o mesmo conceito que aprendemos nas aulas sobre tabelas.
+
+    Outra maneira antiga, e "parece até ter surgido antes"; Era a criação de sites com o uso dos 'frames'.
+        Um exemplo com esse conceito bizonho, é o site 'logracket.com' no 'Danny´s Homepage'.
+
+    Essa maneira de criar site foi sendo deixada de lado no que diz respeito a aparência e interatividade, uma vez que geralmente neste tipo site, a parte lateral, a parte de cima do site ficava parada enquanto que o meio onde fica o conteúdo da página rolava e todo o resto ficava parado; Isso gerava um problema muito grande, porque em telas um pouco menores, "e isso começou a acontecer com frequência"; Existia versões do mesmo site onde assim que era acessada a página principal, o usuário teria de escolher entre a versão com 'frames' ou na versão 'sem frames'.
+
+        Isso se dava porque as telas menores começaram a sugir, e também alguns navegadores começaram a ser incompátiveis com o uso de frames.
+        
+13:06 - Introdução ao Grid Layout e seus benefícios
+13:32 - Preparação para a próxima aula sobre anatomia do Grid
