@@ -1,0 +1,105 @@
+* Módulo 05, Capítulo 28, Aula 02
+Vídeo:
+A Anatomia de um Grid - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=u1m7ukyC0Yg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=18
+
+    Assuntos Abordados e Tempo:
+0:00 - Introdução ao Grid Layout e anatomia de um Grid
+    -----------------------------
+
+0:35 - Patrocínio da Hostnet
+    -----------------------------
+
+2:42 - Explicação sobre Grid Rows e Grid Lines
+    Neste exemplo abaixo temos uma "Grid" 6x6 que equivale a 6/linhas e 6/colunas:
+
+        'imagem'
+
+    Apesar de haver um pequeno problema por causa da tradução inglês para português das palavras "row" e "line" que significam "linha"; Porém quando se trata de "Grid Area", a 'Grid Line' e 'Grid Row' são coisas completamente diferentes e quanto a isto é necessário ficar atento.
+ 
+4:06 - Definição de Grid Container e Grid Item
+    O 'container' é a caixa que envolve outras caixas; Ou podemos chamar o container de "caixa pai" onde contém outras caixas que podem ser chamadas de "itens" ou "elemento filhos" como podemos ver no exemplo abaixo:
+
+        'imagem 1'
+
+    Na imagem seguinte vemos que um 'item' ou "vários itens" se forma na junção das grades:
+
+        'imagem 2'
+
+5:23 - Explicação sobre Grid Tracks (Row Tracks e Column Tracks)
+    Quando temos vários itens na mesma linha ou na mesma coluna; "Estes itens que vão do ínicio ao fim da grade" e que seja na vertical ou na horizontal, chamamos a estes de "Grid Track".
+
+    O nome "Grid Track" é um nome genérico, pois existem os nomes para os blocos deitados e o sde pé; Que são 'linha e coluna'.
+
+    "OUTRO DETALHE IMPORTANTE:" 
+        Quando as "tracks" se encontram; Esse ponto de encontro|cruzamento, chamamos de 'Item de Grade'.
+            Observe no detalhe da imagem acima, onde o "item de grade" tem a sua cor destacada.
+
+        Quando temos uma "grid track" /deitada/horizontal, chamamos ele de /row_track, e quando temos a "track" /em-pé/vertical, chamamos ela de /column_track como podemos ver no exemplo da imagem abaixo:
+
+            'imagem 4'
+
+        Quando temos "linhas" entre os elementos, chamamos estas linhas de /Grid_lines; Nos exemplos abaixo onde a grade é de 6x6, temos 7/grid_lines_horizontais e 7/grid_lines_verticais.
+            As grid lines horizontais delimitam os itens de linhas e as grid lines verticais delimitam os itens de coluna.
+
+        "OBSERVE:" 
+            Que neste exemplo abaixo, as 'grid lines' em pé tem sua enumeração da esquerda para direita.
+
+            'imagem 5'
+
+            Já neste exemplo abaixo, as "grid lines" deitadas são enumeradas de cima para baixo.
+
+            'imagem 6'
+
+10:00 - Numeração das Grid Lines (positiva e negativa)
+    A Numeração das 'grid lines' podem ser (positivas ou negativas) e compreender isto, facilita na hora de criação de /grades.
+
+        'imagem 7'
+
+    Saber as númearações das 'grid lines' nos ajudam bastante, pois muitas vezes não sabemos o valor real da última grid line; Então podemos dizer que ela é a (-1) independente do tamanho da /grade.
+        "-1 vai se a última."
+
+    'OBS':
+        Podemos dizer que a linha de (número 1), também equivale a linha (-7)"Isso para o nosso exemplo de grade, que é 6x6"; Que a linha (2) também é a linha (-6), ou que a linha (6) equivale a linha -2.
+    
+    "Detalhe":
+        A linha (-1 e -2) sempre será a última e a penúltima grid line mesmo que não saibamos o tanto de linhas que temos na grade; E o mesmo vale para os outros números.
+            Veja no exemplo abaixo, que temos várias opções para enumerar uma área dentro da grid.
+
+            'imagem 8'
+
+        Exemplos de como podemos enumerar uma área:
+            A- Da linha  2 à linha  6
+            B- Da linha -6 à linha -2
+            C- Da linha -6 à linha  6
+            D- Da linha  2 à linha -2
+
+    Para a construção de interfaces é mais fácil de se dizer que uma determinda grade vai da /linha 2 até a penúltima linnha (que é a) -2, como podemos ver no exemplo abaixo.
+
+        'imagem 9'
+
+13:00 - Definição de Grid Area
+    Quando temos um agrupamento de itens, nós chamamos a isto de "Grid Area" ou (área de grid.)
+
+        'imagem 10'
+
+13:45 - Explicação sobre Grid Gap
+    Chamado 'respiro', o espaço entre os elementos é conhecido como "Grid Gap".
+        Veja como fica este "respiro", Observando as imagens abaixo:
+
+        'imagem 11' e 'imagem 12'
+
+    "OBS":
+        O uso do "Grid Gap" não altera o tamanho do item(Grid Item).
+
+        Note que com o aumento do 'Grid Gap', os quadrados não mudaram de tamanho, e o mesmo acontece se o 'respiro' for menor.
+
+        'imagem 13' e 'imagem 14'
+
+16:00 - Divulgação do canal do Telegram
+    ----------------------------------
+--:-- - Comparação entre Grid Layout e Flexbox
+    ------------------------------------
+--:-- - Preparação para a próxima aula sobre propriedades do Grid Container
+    ------------------------------------
