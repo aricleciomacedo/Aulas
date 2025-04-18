@@ -37,6 +37,10 @@ strong {
     font-weight: bolder;
     text-indent: 10px;
 }
+ul {
+    padding: 20px;
+    margin: 10px;
+}
 
 
     /* HEADER */

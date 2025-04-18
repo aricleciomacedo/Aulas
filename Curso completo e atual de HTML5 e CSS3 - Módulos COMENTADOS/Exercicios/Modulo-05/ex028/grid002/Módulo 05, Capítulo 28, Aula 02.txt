@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=u1m7ukyC0Yg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
 5:23 - Explicação sobre Grid Tracks (Row Tracks e Column Tracks)
     Quando temos vários itens na mesma linha ou na mesma coluna; "Estes itens que vão do ínicio ao fim da grade" e que seja na vertical ou na horizontal, chamamos a estes de "Grid Track".
 
-    O nome "Grid Track" é um nome genérico, pois existem os nomes para os blocos deitados e o sde pé; Que são 'linha e coluna'.
+    O nome "Grid Track" é um nome genérico, pois existem os nomes para os blocos deitados e os blocos em pé; Que são 'linha e coluna'.
 
     "OUTRO DETALHE IMPORTANTE:" 
         Quando as "tracks" se encontram; Esse ponto de encontro|cruzamento, chamamos de 'Item de Grade'.
@@ -58,10 +58,10 @@ https://www.youtube.com/watch?v=u1m7ukyC0Yg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
         'imagem 7'
 
     Saber as númearações das 'grid lines' nos ajudam bastante, pois muitas vezes não sabemos o valor real da última grid line; Então podemos dizer que ela é a (-1) independente do tamanho da /grade.
-        "-1 vai se a última."
+        "-1 vai ser sempre a última."
 
     'OBS':
-        Podemos dizer que a linha de (número 1), também equivale a linha (-7)"Isso para o nosso exemplo de grade, que é 6x6"; Que a linha (2) também é a linha (-6), ou que a linha (6) equivale a linha -2.
+        Podemos dizer que a linha de (número 1), também equivale a linha (-7)"Isso para o nosso exemplo de grade, que é 6x6"; Que a linha (2) também é a linha (-6), ou que a linha (6) equivale a linha (-2).
     
     "Detalhe":
         A linha (-1 e -2) sempre será a última e a penúltima grid line mesmo que não saibamos o tanto de linhas que temos na grade; E o mesmo vale para os outros números.
@@ -85,7 +85,7 @@ https://www.youtube.com/watch?v=u1m7ukyC0Yg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_
         'imagem 10'
 
 13:45 - Explicação sobre Grid Gap
-    Chamado 'respiro', o espaço entre os elementos é conhecido como "Grid Gap".
+    chamado por muitos de 'respiro', o espaço entre os elementos se chama "Grid Gap".
         Veja como fica este "respiro", Observando as imagens abaixo:
 
         'imagem 11' e 'imagem 12'
