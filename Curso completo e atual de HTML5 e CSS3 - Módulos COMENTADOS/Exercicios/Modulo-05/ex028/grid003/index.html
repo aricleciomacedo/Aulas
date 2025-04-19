@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Propriedades de container para Grids (parte 1) - @CursoemVideo HTML5 + CSS3</title>
+
+    <!-- FONTE Whereas recognition of the inherent dignity:
+    link: https://fonts.google.com/selection/embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <!-- <style> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- </style> -->
+
+    <link rel="stylesheet" href="stylefirstmobile.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><!-- <img src="./img2/logo1.jpg" alt="logo"> --></div>
+        <section>
+            <!-- <div class="titulo_principal">
+                <h1>* Módulo 05, Capítulo 28, Aula 03</h1>
+            </div> -->
+            <img src="./img3/logo1.jpg" alt="capítulo da aula">
+        </section>
+        <a href="https://www.youtube.com/watch?v=rPUK2-dzTmg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=19" target="_blank">Vídeo Aqui!</a>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <article>
+            <div class="div_img_main2">
+                <img class="img_main" src="./img3/img-aula.jpg" alt="imagem do curso em vídeo">
+                <div>
+                    <p>Créditos:</p>
+                    <marquee behavior="up" direction="left" width="100%"><p>Ao Professor Gustavo Guanabara do Curso em Vídeo</p></marquee>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <h1>Propriedades de container para Grids (parte 1)</h1>
+                    <span class="span_minute">2:10</span>
+                </div>
+                <p>Nesta aula vamos aprender <b>(4)</b>quatro propriedades que se aplicam a um <span class="span_destaque">"container"</span> do tipo <span class="span_destaque">"Grid Layout"</span>.
+                    <br>
+                    Veja na imagem abaixo, que propriedades são essas:
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2" src="./img3/img.jpg" alt="imagem de uma grid">
+                    </div>
+                </div>
+                <!-- 
+                <aside>
+                    <p>
+                        Apesar de haver um pequeno problema por causa da tradução inglês para português das palavras <b>"row" e "line"</b> que significam "linha"; Porém quando se trata de "Grid Area", as  
+                        <strong style="display: inline-block;">
+                            'Grid Line' e 'Grid Row'
+                        </strong>
+                        são coisas completamente diferentes e quanto a isto é necessário ficar atento.
+                    </p>
+                </aside>
+            </section> -->
+
+        </article>
+        <!-- 
+        <article>
+            <section> 
+                <div>
+                    <h1>Definição de Grid Container e Grid Item</h1>
+                    <span class="span_minute">4:06</span>
+                    <p>O <span class="span_destaque">'container'</span> é a caixa que envolve outras caixas; Ou podemos chamar o container de <span class="span_destaque">"caixa pai"</span>, que é onde contém outras caixas que podem ser chamadas de "itens" ou "elemento filhos" como podemos ver no exemplo abaixo:</p>
+                    <p><strong><span class="span_destaque">...................</span></strong></p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img1.jpg" alt="imagem de uma grid container">
+                    </div>
+                </div>
+                <p>
+                    Na imagem seguinte vemos que um 'item' ou "vários itens" se forma na junção das grades:</p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img2.jpg" alt="imagem de um grid item">
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article>
+            <section>
+                <h1>Explicação sobre Grid Tracks (Row Tracks e Column Tracks)</h1>
+                <span class="span_minute">5:23</span>
+                <p>Quando temos vários itens na mesma linha ou na mesma coluna; "Estes itens que vão do ínicio ao fim da grade" e que seja na vertical ou na horizontal, chamamos a estes de
+                    <br>
+                    <span style="color: rgb(0, 53, 122);">"Grid Track".</span>
+                </p>
+                <p>
+                    O nome <span style="color: rgb(0, 53, 122);">"Grid Track".</span> é um nome genérico, pois existem os nomes para os blocos deitados e os blocos em pé; Que são:<strong>'linha e coluna'</strong>.
+                </p>
+                <p>
+                    "OUTRO DETALHE IMPORTANTE:" <span style="color: rgb(0, 53, 122);">Quando as "tracks" se encontram; Esse ponto de encontro|cruzamento, chamamos de 'Item de Grade'. 
+                    <br>
+                    <strong>Observe no detalhe da imagem acima, onde o "item de grade" tem a sua cor destacada.</strong> </span>
+                </p>
+                <p>Quando temos uma "grid track" /deitada/horizontal, chamamos ele de <span style="color: rgb(0, 53, 122);">row_track</span>, e quando temos a "track" /em-pé/vertical, chamamos ela de <span style="color: rgb(0, 53, 122);">column_track</span> como podemos ver no exemplo da imagem abaixo:
+                    <br>
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img4.jpg" alt="imagem grid track,row track e column track">
+                    </div>
+                </div>
+                <aside>
+                    <p>Quando temos "linhas" entre os elementos, chamamos estas linhas de <span class="span_destaque2">Grid_lines</span>; Nos exemplos abaixo onde a grade é de 6x6, temos <span style="color: rgb(6, 102, 228);">7/grid_lines_horizontais e 7/grid_lines_verticais</span>.
+                    <br>
+                    <strong>As grid lines horizontais delimitam os itens de linhas e as grid lines verticais delimitam os itens de coluna.</strong>
+                    </p>
+                    
+                    <p><span class="span_destaque2">"OBSERVE:"</span>
+                        Que neste exemplo abaixo, as <span style="color: rgb(6, 102, 228);">'grid lines' em pé</span> tem sua enumeração da esquerda para direita.</p>
+                    <div>
+                        <img class="img_main" src="./img2/img5.jpg" alt="imagem exemplo de númeração de grid line">
+                    </div>
+
+                    <p><span class="span_destaque2">Já neste exemplo abaixo</span>
+                        , as <span style="color: rgb(6, 102, 228);">'grid lines' deitadas</span> são enumeradas de cima para baixo.</p>
+                    <div>
+                        <img class="img_main" src="./img2/img6.jpg" alt="imagem exemplo de númeração de grid line">
+                    </div>
+                </aside>
+            </section>
+        </article>
+        <article>
+            <section>
+                <h1>Numeração das Grid Lines (positiva e negativa)</h1>
+                <span class="span_minute">10:00</span>
+                <p><span class="span_destaque">A Numeração das 'grid lines'</span> podem ser <span style="color: rgb(0, 53, 122);">(positivas ou negativas) </span> e compreender isto, facilita na hora de criação de /grades.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img7.jpg" alt="imagem grid lines positivas e negativas">
+                    </div>
+                </div>
+                <aside>
+                    <p>Saber as númearações das 'grid lines' nos ajudam bastante, pois muitas vezes não sabemos o valor real da última grid line; <span>Então podemos dizer que ela é a </span> <span class="span_destaque2">(-1)</span>; independente do tamanho da /grade.<span style="color: rgb(6, 102, 228);">"-1 vai ser sempre a última."</span>.
+                        <br>
+                        <span class="span_destaque2">'OBS':</span>
+                        <strong>Podemos dizer que a linha de <span style="color: rgb(6, 102, 228);">(número 1)</span>, também equivale a linha <span class="span_destaque2">(-7) </span>"Isso para o nosso exemplo de grade, que é <span style="color: rgb(6, 102, 228);">6x6</span>"; Que a linha <span style="color: rgb(6, 102, 228);">(2)</span> também é a linha <span class="span_destaque2">(-6)</span>, ou que a linha <span style="color: rgb(6, 102, 228);">(6)</span> equivale a linha <span class="span_destaque2">(-2)</span>.</strong>
+                    </p>
+                    
+                    <p><span class="span_destaque2">"Detalhe:"</span>
+                        <br>
+                        A linha <span style="color: rgb(6, 102, 228);">(-1 e -2)</span> sempre será a <span class="span_destaque2">última e a penúltima grid line</span> mesmo que não saibamos o tanto de linhas que temos na grade; E o mesmo vale para os outros números.
+                        <br>
+                        <br>
+                        <strong>
+                            Veja no exemplo abaixo, que temos várias opções para enumerar uma área dentro da grid.
+                        </strong> 
+                    </p>
+                    <div>
+                        <img class="img_main" src="./img2/img8.jpg" alt="imagem exemplo de númeração de grid line">
+                    </div>
+                    
+                    <p>
+                        <span class="span_destaque2">Exemplos de como podemos enumerar uma área:</span>
+                    </p>
+                    <ul>
+                        <li>A- Da linha  2 à linha  6</li>
+                        <li>B- Da linha -6 à linha -2</li>
+                        <li>C- Da linha -6 à linha  6</li>
+                        <li>D- Da linha  2 à linha -2</li>
+                    </ul>
+
+                    <p>Para a construção de interfaces é mais fácil de se dizer que uma determinda grade vai da /linha 2 até a penúltima linha (que é a -2), <span class="span-destaque2">como podemos ver no exemplo abaixo</span>.</p>
+                    <div>
+                        <img class="img_main" src="./img2/img9.jpg" alt="imagem exemplo de númeração de grid line">
+                    </div>
+                </aside>
+            </section> 
+        </article>
+        <article>
+            <section>
+                <h1>Definição de Grid Area</h1>
+                <span class="span_minute">13:00</span>
+                <p>
+                    Quando temos um agrupamento de itens, nós chamamos a isto de <span class="span_destaque">"Grid Area"</span> ou <span style="color: rgb(0, 53, 122);">(área de grid.)</span>
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img10.jpg" alt="imagem grid area">
+                    </div>
+                </div>
+            </section> 
+        </article>
+
+
+        <article>
+            <section>
+                <h1>Explicação sobre Grid Gap</h1>
+                <span class="span_minute">13:45</span>
+                <p>
+                    Chamado por muitos de <span class="span_destaque">'respiro'</span>; O espaço entre os elementos é conhecido como <span class="span-destaque2">"Grid Gap"</span>.
+                    <br>
+                    <span style="color: rgb(0, 53, 122);">Veja</span> como fica este <span class="span_destaque">"respiro"</span>, Observando as imagens abaixo:
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img11.jpg" alt="imagem grid gap">
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img12.jpg" alt="imagem grid gap">
+                    </div>
+                </div>
+                <p>
+                    <span class="span_destaque">"OBS":</span>
+                        O uso do <span style="color: rgb(0, 53, 122);">"Grid Gap"</span> não altera o tamanho do item(Grid Item).
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img13.jpg" alt="imagem grid gap">
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img2/img14.jpg" alt="imagem grid gap">
+                    </div>
+                </div>
+            </section> 
+        </article> 
+    -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer_redessociais">
+            <h2>Siga nossas redes sociais e <span style="color: #ff6804e3; font-weight: bolder;">+</span></h2>
+            <img class="img_footer" src="./img3/logocursoemvideomax.jpg" alt="imagem logo curso em vídeo">
+            <img class="img_footer" src="./img3/insta.jpg" alt="imagem insta curso em vídeo">
+            <img class="img_footer" src="./img3/cursogratisrecode.jpg" alt="imagem recode">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Curso grátis</h2>
+            <img style="width: 250px;" src="./img3/gustavoguanabara-vertical2.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+            <img style="width: 250px;" src="./img3/instagram-multi-005.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Patrocínios</h2>
+            <img src="./img3/patrocinio.jpg" alt="imagem patrocinio hostenet" class="img_footer">
+            <img src="./img3/patrocinio1.jpg" alt="imagem patrocinio recode" class="img_footer">
+            <img src="./img3/patrocinio2.jpg" alt="imagem patrocinio estudonauta" class="img_footer">
+        </section>
+    </footer>   
+</body>
+</html>
