@@ -1,0 +1,6 @@
+﻿* Módulo 05, Capítulo 28, Aula 03
+Vídeo:
+CSS Grid Layout na prática (parte 1) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=1FKUfMWBcLM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=20
+
