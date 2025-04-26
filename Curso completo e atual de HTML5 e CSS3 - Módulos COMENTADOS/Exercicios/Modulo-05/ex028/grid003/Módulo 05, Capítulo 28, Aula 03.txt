@@ -1,7 +1,122 @@
 ﻿* Módulo 05, Capítulo 28, Aula 03
 Vídeo:
-A Anatomia de um Grid - @CursoemVideo HTML5 + CSS3
+Propriedades de container para Grids (parte 1) - @CursoemVideo HTML5 + CSS3
 Link:
 https://www.youtube.com/watch?v=rPUK2-dzTmg&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=19
 
+2:10
+    Um container possui várias propriedades , e aqui vamos aprender 4 propriedades de container do Grid Layout.
+        1- /display
+            Importante para tornar o elemento num [container] e o valor no caso é /grid.
+        2- /grid-template-columns
+        3- /grid-template-rows
+            Importantes para definirem a estrutura da [grid] quanto a ao número de [linhas] e [colunas].
+        4- /grid-gap
+            Importante para dar espaço entre [itens].
 
+            'Imagem'
+        
+    Abaixo temos uma /Grid_layout 3x3 = (3 tracks verticais e 3 tracks horizontais); Com 4 "grid lines" cada.
+        Então marcamos a parte que envolve o container como podemos observar na imagem abaixo:
+
+            'imagem 1'
+
+
+    'SAIBA' que o /Grid é uma estrutura {Bidimensional} enquanto que o 'flexbox' é uma estrutura 'one-dimensional(umidimensional)'.
+        Um 'flexbox' nos dá apenas a possibilidade de escolher entre o formato de de linha ou o formato de coluna, enquanto que um "Grid Layout" é composto de (2 duas dimensões), que facilita na contrução de interfaces.
+
+    É muito comum, pessoas se 'enrolarem' quanto ao uso do 'flexbox' quando querem trabalhar com linhas e colunas, pois o 'flexbox' só nos dá apenas uma única possibilidade, e fora isso é complicado e leva até mesmo a quebra da interface.
+
+
+5:00
+    Criando /Grid_Container
+        Para Criar um /Grid_Container, pegamos o elemento escolhido e na CSS(Cascading Style Sheets) por meio do seletor do elemento, definimos a propriedade e o seu valor como podems ver na imagem abaixo:
+
+            'Imagem 2'
+
+    Ao definir a um componente a propriedade /display como /grid; Ele passa a ser um /grid_container e todos os elementos dentro dele se tornão "grid_itens".
+        Abaixo temos um exemplo HTML(HyperText Markup Language), e note que os "itens" ocupam o espaço total da largura do 'container',, pois por padrão, as <div>´s são elementos de 'bloco'.
+
+            'imagem 3'
+
+    "Importante lembrar que":
+        Nesta aula, as propriedades apresentadas são de aplicação para o elemento /container. 
+            Veja abaixo um exemplo para o seletor do elemento <div class = container>:
+
+            'imagem 4'
+
+
+7:10
+    Propriedade display:grid
+
+    Ao definir um elemento como 'display' do tipo 'grid'; "Nada muda visualmente" pois por padrão e sem outras propriedades definidas  um /grid se comporta como "gride de uma coluna e múltiplas linhas" que visualmente não altera nada.
+
+        'imagem 5'
+
+    
+7:40
+    Propriedade grid-template-columns
+
+    "OBS":
+        Ainda vamos compreender um pouco mais sobre os valores 'auto' e 'fr = fraction' que são medidas específicas dos /grids.
+
+    Vale ressaltar que "grid-template-columns" define o número de colunas que queremos na /grid, e o número de valores equivalem que ao número de colunas.
+
+        Assim dizemos ao /CSS (Cascading Style Sheet), que a /grid terá um template de duas colunas como podemos ver no comportamento do exemplo abaixo:
+
+            'imagem 6'
+
+    "EXEMPLO":
+        /grid com 3(três) colunas:
+
+        "OBS":
+            O valor 'auto' define tamanho do /item baseado em valores iguais.
+
+            'imagem 7'
+
+
+        
+9:20
+    Propriedade grid-template-rows
+
+    Essa propriedade define a medida que queremos para 'altura' dos filhos, que são os /itens\linhas da 'grid'.
+
+        Veja no exemplo abaixo, onde definimos que a altura das linhas é de 100pixels e o total de esticamento é de 300pixels.
+
+            "CASO" não defina uma medida; Então o valor padrão(auto) é mantido.
+
+            'imagem 8'
+
+
+    "Agora" veja como os /itens se esticaram na proporção da medida definida de 100pixels cada, e bem assim o /container que passou a ter 300pixels de altura.
+
+        "Imagem 9"
+
+
+10:40
+    Propriedade grid-gap
+
+    A propriedade /grid-gap cria um espaço entre os /items.
+
+        No exemplo abaixo definimos /gap de 20pixels.
+            Veja abaixo o comportamento comparando as imagens:
+
+                'imagem 10' e 'imagem 11'
+
+        Agora observe o espaço entre os /itens, "destacados na cor laranja", que representa o /gap.
+
+            'imagem 12'
+
+        "Detalhe":
+            Quanto maior o valor do /gap, maior será o espaço entre os itens, e quanto menor o valor do espaço entre os itens, menor é o gap.
+
+                'imagem 12a'
+
+            
+11:30
+    Detalhando o /grid da aula:
+
+        'imagem 14'
+
+        A /grid_container acima possuí 7 itens, distribuído em 3 linhas e 3 colunas que estão divididas 'automáticamente' de acordo com o tamanho máximo do /container;
+        As linhas estão configuradas com cem|100pixels de altura cada e entre os /itens temos um 'respiro\espaço\gap' de vinte|20pixels.
