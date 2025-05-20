@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Propriedades de container para Grids (parte 3)</title>
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+
+    <!-- Estilo -->
+    <style>
+        body {
+            background-image: url(./img/background.jpg);
+        }
+        div.container {
+            border: 2px solid yellow;
+            display: grid;
+
+        /* Propriedades de alinhamento adicionadas no exemplo do vídeo */
+
+            /* align-items: stretch;
+            justify-items: center; */
+            place-items: stretch center;/* Esta propriedade, é uma simplificação da duas propriedades de alinhamento de items. */
+
+            /* align-content: start;
+            justify-content: end; */
+            place-content: stretch center;/* Esta propriedade, é uma simplificação da duas propriedades de alinhamento de conteúdo. */
+
+            
+            /* Aqui podemos chamar de (Grid Explícito), que é como um padrão definido para as linhas e colunas, que neste caso foram 3 colunas auto, e 3 linhas de 100px cada. */
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+
+
+            /* Para este exemplo removemos as propriedades abaixo, e adicionamos as propriedades de alinhamento acima. */
+
+            /* Assim fazemos com que as novas linhas ou colunas que forem adicionadas, recebam os valores aqui definidos, e a isto chamamos de (Grid Implícito).*/
+            /* grid-auto-rows: 100px; */
+            /* grid-auto-columns: 100px; */
+        }       
+        div.item {
+            border: 1px dashed white;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <!-- <div class="item">J</div> removemos este item durante para prática da aula.b-->
+    </div>
+</body>
+</html>

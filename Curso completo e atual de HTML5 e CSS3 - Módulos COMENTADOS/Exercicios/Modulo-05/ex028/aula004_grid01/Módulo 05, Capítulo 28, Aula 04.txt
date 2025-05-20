@@ -1,6 +1,88 @@
-﻿* Módulo 05, Capítulo 28, Aula 03
+﻿* Módulo 05, Capítulo 28, Aula 04
 Vídeo:
 CSS Grid Layout na prática (parte 1) - @CursoemVideo HTML5 + CSS3
 Link:
 https://www.youtube.com/watch?v=1FKUfMWBcLM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=20
 
+    "OBS.:"
+        A propriedade /gap é uma substituição á propriedade /grid-gap que foi depreciaa, e é por isso que ela aparece risada no (VS Code).
+
+4:10
+    Código base da aula + resultado no navegador
+        'imagem'
+    
+5:30
+    Estilizando o container + resultado
+        'imagem 1'
+
+6:00
+    Estilizando os itens + resultado
+        'imagem 2'
+
+6:33
+    Aplicando display: grid
+        O primeiro passo pode ser frustrante, pois visivelmente não muda nada "diferente do que acontece no display flex".
+            "Veja abaixo" ambos os exemplos e compare:
+                'imagem 3' com display: flex;
+                'imagem 4' com display: vazio;
+                'imagem 5' com display: grid;
+
+
+7:50
+    Configurações iniciais: Definindo altura e padding.
+        'imagem 6' height = altura
+        'imagem 7' height sem display: grid;
+        'imagem 8' padding no item
+
+
+8:45
+    grid-template-columns: Definindo as colunas da grade.
+        'imagem 9' Exemplo de 3/três colunas 50/pixels cada
+        'imagem 10' Exemplo com 3/três colunas /automáticas
+        'imagem 11' Exemplo com 4 colunas /automáticas
+
+
+9:45
+    grid-template-rows: Definindo as linhas da grade.
+        'imagem 12' Exemplo com 3/linhas /automáticas
+        'imagem 12a' Exemplo com 4/linhas /auto
+
+
+10:32
+    grid-gap vs gap:
+    {   Atenção a propriedade utilizada para espaçamento.    }
+        'imagem 14'
+            Veja que no VSCOde a propriedade /grid-gap está riscada, pois ela está depreciada e por isso foi substituida por /gap.
+        
+        'imagem 15' Exemplo com /gap
+
+11:42
+    'imagem 16' Exemplo adicionando outro elemento.
+
+
+11:48
+    Usando o /Grid_view na prática:
+        'imagem 17' Em qualquer parte da página aberta, 'clique' com o botão direito do mouse em /Inspecionar, ou tecle F12.
+            Na aba que é a ferramenta do 'desenvolvedor' clique em /Elementos.
+
+                "VEJA" a imagem abaixo:
+
+                    'imagem 18'
+
+            
+13:25
+    Ativando o /Grid_Overlay: Visualizando "linhas e colunas" numeradas.
+
+        'imagem 19' Observe no /container que tem um botão (grid) , e esse botão serve para 'ativar' a /Grid_view.
+        
+    Quando o /Grid_view está ativado , observe quea /Grid é desenhada mostrando as "linhas, colunas e múmerações" das /Grid_Lines como vemos na imagem acima.
+    
+
+14:35
+    painel de Layout no /Devtools: Explorando opções de /alinhamento\prévia
+
+        'Imagem 20 e imagem 21'
+
+
+16:10
+    As configurações feitas no /Grid_view são temporárias e apenas para testes; Basta atualizar a página, que todas as configurações somem.

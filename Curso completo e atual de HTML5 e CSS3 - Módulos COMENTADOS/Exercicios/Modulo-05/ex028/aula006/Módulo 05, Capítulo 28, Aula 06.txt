@@ -1,0 +1,223 @@
+﻿* Módulo 05, Capítulo 28, Aula 06
+Vídeo:
+CSS Grid Layout na prática (parte 2) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=k3wb4g6exi8&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=22
+
+--:--
+    CSS Grid Layout na prática (parte 2)
+
+    Nesta aula vamos colocar a mão na massa e aplicar as 4(quatro) propriedades de alinhamento que aprendemos na aula anterior.
+        "São elas":
+            1- align-items: ;
+            2- justify-items: ;
+            3- align-content: ;
+            4- justify-content: ;
+
+        "Observação":
+            Vamos praticar estes exercícios usando o exercício 1(um) que fizemos na parte 1(um) do "mão na massa".
+
+        "imagem" código Base HTML (HyperText Markup Language)
+        "imagem1" código Estilo CSS (Cascating Style Sheet)
+
+    
+2:40
+    Revisão Rápida: 'Grid View' e o painel de alinhamento "DevTools".
+        "imagem2" > Botão (Grid) desligado.
+        "imagem3" > Botão (Grid) ligado com a identificação do /container selecionado e das linhas de                    [Grid-Lines Vericais e Horizontais].
+        "imagem4" > Botão para listar as 4(quatro) propriedades.
+        "imagem5" > align-content: center; (ativado).
+        "imagem6" > align-content: space-between; (ativado).
+        "imagem7" > align-content: space-between; + justify-content: start; (ativados).
+        "imagem8" > align-content: space-between; + justify-content: center; (ativados).
+        "imagem9" > align-content: space-between; + justify-content: space-between; + align-items: stretch;  (ativados).
+        "imagem10" > align-content: center; + justify-content: center; + align-items: stretch;  (ativados).
+
+
+3:50
+    "IMPORTANTE":
+        O painel (DevTools) é para teste, e não aplica as propriedades e valores "simulados" no /console ao código principal.
+
+    
+4:35
+    Propriedades Padrão: (normal) vs (stretch) no alinhamentos
+
+        "OBSERVE" na imagens a seguir, que com a aplicação das 4(quatro) propriedades de alinhamento com o valor "padrão"/normal ou /strech nada muda visualmente, pois de acordo com a /W3C (World Wide Web Consortion) o "normal é = strech" como podemos observar nas imagem seguintes:
+
+            "imagem 11" /VS "Imagem 12"
+
+
+
+5:35
+    align-items: Testanto (start, end e center) "Horizontalmente"
+
+        "LEMBRANDO" que:
+            Nesta aula is /items foram destacados com bordas vermelhas, e por "padrão" o (align e justify para items) fazem a configuração (strech) para ambos no sentido "Vertical" = /align quanto no sentido "horizonal" = /justify; 
+                Isto para "Grid-Layout" como podemos observar na imagem abaixo:
+
+                "Imagem 12a"
+
+
+6:22
+    /start
+
+        O valor (start) na propriedade "align-items" faz com que os /items cole na parte de cima, como podemos ver na imagem abaixo:
+
+            "imagem 14"
+
+        "Agora Observe" a configuração da (Grid) ao desligar o "botão"_(Grid) do /DevTools, pois mostra os espaços deixados em branco.
+
+            "imagem 15"
+
+
+        
+7:30
+    /end
+        O valor (end) na propriedade "align-items" faz os items grudarem em baixo respeitando o limite estabelecido, como podemos observar nas /celulas(blocos) tracejados nas bordas como mostra a imagem a seguir:
+
+        "Imagem 16"
+
+7:35
+    /center
+        Ao usar o valor (center) na propriedade "align-items", os items ficam literalmente centralizados.
+
+        "Imagem 17"
+
+
+7:40    
+    justify-items: 
+        Testanto (start, end e center) "Verticalmente" 
+
+
+7:45
+    /start
+        Com o valor /start na propriedade "justify-items" os items colam à esquerda.
+
+        "Imagem 18"
+
+7:50 
+    /end
+        Faz com que os /items cole no final.
+
+        "imagem 19"
+
+
+7:52
+    /center
+        Centraliza os items ao centro do espaço pré-determinado do bloco da "Grid".
+
+        "imagem 20"
+
+
+8:10
+    align-content na prática: (start, end e center) "Verticalmente".
+
+        As propriedades de /contents referem-se ao alinhamento do conteúdo inteiro.
+        
+        Os /items que estão dentro do conteiner é um exemplo da aula passada, que foi adicionado um borda azul em volta dos blocos para exemplificar a ação do alinhamento de conteúdo e que serão mostrados nas imagens a seguir com o valor (start) na propriedade /align-content:
+
+
+8:25
+    /start
+        O valor (start) na propriedade /align-content faz todo o conteúdo "grudar" na parte de cima do "container"; Pois se trata de {alinhamento vertical}.
+
+        "imagem 21"
+
+8:32
+    /end
+        O valor (end) na propriedade /align-content gruda todo mundo na parte de baixo do "container".
+
+        "imagem 22"
+
+8:35
+    /center
+        O valor (center) na propriedade /align-content centraliza o conteúdo dentro do "container".
+
+        "Imagem 23"
+
+
+8:40
+    justify-content na prática: 
+        Valores (start, end e center) "Horizontalmente".
+
+8:50
+    /start 
+    O valor (start) para a propriedade /justify-content gruda o conteúdo à esquerda do "container".
+
+    "imagem 24"
+
+8:55
+    /end    
+    O valor (end) na propriedade /justify-content cola o conteúdo à direita do container.
+
+    "imagem 25"
+
+8:57
+    /center
+    O valor (center) na propriedade /justify-content centraliza o conteúdo.
+
+    "Imagem 26"
+
+
+9:09
+    align e justify-content: center;
+
+        O valor (center) nas propriedades /align-content e /justify-content "centraliza absolutamente".
+
+        "Imagem 27"
+
+9:49
+    align-content + space: 
+
+        Testando (space-between, evenly e around).
+
+
+9:53
+    align-content: space-between;
+
+        O /align-content: (space-between) coloca os primeiros /items na parte de cima da "Grid", cola os últimos na parte de baixo, e o "espaço entre" os demais items são distribuidos igualmente.
+
+    "Imagem 28"
+
+10:14
+    align-content: space-evenly;
+
+        Faz com que haja "espaços iguais antes e depois" dos /items.
+
+        "Imagem 29"
+
+10:50
+    align-content: space-around;
+
+        O valor (space-around) na propriedade "align-content" faz com que haja espaço entre os primeiros e últimos items em relação a borda do container, e esse valor é multiplicado 2x (duas vezes) para espaçar entre os demais items.
+        
+        "imagem 30"
+
+
+11:25
+    justify-content na prática: 
+         
+        Os valores (start, end e center) "Horizontalmente"
+
+11:37
+    justify-content: space-between;
+
+        O valor (space-between) na propriedade "justify-content" segue a mesma lógica que o "align-content", porém seu alinhamento é "horizontalmente".
+
+        Então os /primeiros_items e os /últimos_items colam no sentido da borda, e os "demais items" são separados por espaçoes iguais entre si.
+
+        "Imagem 31"
+
+12:12
+    justify-content: space-evenly;
+
+        O valor (space-evenly) na propriedade "justify-content" faz com que os espaços entre os elementos sejam iguais e bem assim entre a borda e os primeiros e últimos elementos.
+
+        "Imagem 32"
+
+12:26
+    justify-content: space-around;
+
+        O valor (space-around) na propriedade "justify-content" adiciona um espaço "ao redor" dos elementos com o dobro do valor do espaço entre os primeiros e últimos /items em relação a borda do container.
+
+        "Imagem 33"

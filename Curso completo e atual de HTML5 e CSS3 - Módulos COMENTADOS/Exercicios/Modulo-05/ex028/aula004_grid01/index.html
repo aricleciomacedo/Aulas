@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>CSS Grid Layout na prática (parte 1) - @CursoemVideo HTML5 + CSS3</title>
+
+    <!-- FONTE Whereas recognition of the inherent dignity:
+    link: https://fonts.google.com/selection/embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <!-- <style> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- </style> -->
+
+    <link rel="stylesheet" href="stylefirstmobile.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><!-- <img src="./img2/logo1.jpg" alt="logo"> --></div>
+        <section>
+            <!-- <div class="titulo_principal">
+                <h1>* Módulo 05, Capítulo 28, Aula 04</h1>
+            </div> -->
+            <img src="./img/logo1.jpg" alt="capítulo da aula">
+        </section>
+        <a href="https://www.youtube.com/watch?v=1FKUfMWBcLM&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=20" target="_blank">Vídeo Aqui!</a>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <article>
+            <div class="div_img_main2">
+                <img class="img_main" src="./img/img-aula.jpg" alt="imagem do curso em vídeo">
+                <div>
+                    <p>Créditos:</p>
+                    <marquee behavior="up" direction="left" width="100%"><p>Ao Professor Gustavo Guanabara do Curso em Vídeo</p></marquee>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <h1>CSS Grid Layout na prática (parte 1)</h1>
+                    <span class="span_minute">--:--</span>
+                </div>
+                <p>Nesta aula vamos praticar as <b>(4)</b>quatro propriedades que se aplicam a um <span class="span_destaque">"container"</span> do tipo <span class="span_destaque">"Grid Layout"</span> que aprendemos até aqui.
+                </p>
+                <aside>
+                    <p>
+                        <span class="span_destaque2">"OBS.:"</span>
+                        <br>
+                        A propriedade /gap é uma substituição á propriedade /grid-gap que foi depreciaa, e é por isso que ela aparece risada no (VS Code).
+                    </p>
+                </aside>
+            </section>
+        
+            <section> 
+                <div>
+                    <h2>Código base da aula + resultado no navegador</h2>
+                    <span class="span_minute">4:10</span>
+                    <p>
+                        <span class="span_destaque">Veja abaixo</span>: O código <abbr title="HyperText Markup Language"><span class="span_destaque">HTML</span></abbr> aplicado durante a aula:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img.jpg" alt="imagem mostra código html com class contaner e alguns items.">
+                    </div>
+                </div>
+            </section>
+        
+            <section>
+                <div>
+                    <h2>Estilizando o container + resultado</h2>
+                    <span class="span_minute">5:30</span>
+                    <p> 
+                        <span class="span_destaque">Na imagem abaixo</span> colocamos uma borda <span style="color: rgb(0, 53, 122);">de cor</span>; <span class="span_destaque">"azul"</span> para vermos a dimensão do container feito na aula:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img1.jpg" alt="imagem de códgo css para adicionar uma borda ao container.">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Estilizando os itens + resultado</h2>
+                    <span class="span_minute">6:00</span>
+                    <p>
+                        <span class="span_destaque">"OBSERVE"</span>:
+                        <br>
+                        O código
+                        <span style="color: rgb(0, 53, 122);"> <abbr title="HyperText Markup Language">HTML</abbr></span> e o código <span style="color: rgb(0, 53, 122);"><abbr title="Cascading Style Sheet">CSS</abbr></span> com a definição de bordas vermelhas para identificar os items dentro do container, e ao lado, o resultado visto no navegador.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img2.jpg" alt="imagem mostra bordas vermelhas que identificam os item dentro do container. ">
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div>
+                    <h2>Aplicando display: grid</h2>
+                    <span class="span_minute">6:33</span>
+                    <p>
+                        O primeiro passo pode ser frustrante, pois visivelmente não muda nada <span class="span_destaque3">"diferente do que acontece no display flex"</span>.
+                    </p>
+                    <p>
+                        <span class="span_destaque">"Veja abaixo"</span> 
+                        <br>
+                        ambos os exemplos e compare:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img3.jpg" alt="imagem mostra aplicação padrão do display flex ao container">
+                        <caption>imagem mostra aplicação padrão do display flex ao container.</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img4.jpg" alt="imagem mostra aplicação padrão de display sem propriedade definida ao container">
+                        <caption>imagem mostra aplicação padrão de display sem propriedade definida ao container.</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img5.jpg" alt="imagem mostra aplicação padrão de display grid definida ao container">
+                        <caption>imagem mostra aplicação padrão de display grid definida ao container.</caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Configurações iniciais: Definindo altura e padding.</h2>
+                    <span class="span_minute">7:50</span>
+                    <p>
+                        <span class="span_destaque">As imagens abaixo</span> são exemplos de aplicação das propriedades de altura de container, e espaço iterno de elementos do
+                        <span style="color: rgb(0, 53, 122);">Grid Container</span>.
+                    </p>
+                    <p>Veja abaixo o comportamento comparando as imagens:</p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img6.jpg" alt="imagem com configuração de altura do container e espaço interno dos itens.">
+                        <caption>imagem com configuração de "altura"(height) do container e "espaço interno"(padding) dos items.</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img7.jpg" alt="imagem mostra aplicação de altura de container sem display:grid;">
+                        <caption>imagem mostra aplicação de altura de container sem display:grid;</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img8.jpg" alt="imagem mostra aplicação de padding aos items.">
+                        <caption>imagem mostra aplicação de padding aos items.</caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>grid-template-columns: Definindo as colunas da grade.</h2>
+                    <span class="span_minute">8:45</span>
+                    <p>
+                        <span class="span_destaque">As imagens abaixo</span> são exemplos de aplicação da propriedade" grid-template-columns" no
+                        <span style="color: rgb(0, 53, 122);">Grid Container</span>.
+                    </p>
+                    <p>Veja abaixo o comportamento comparando as imagens:</p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img9.jpg" alt="imagem com Exemplo de 3/três colunas 50/pixels cada.">
+                        <caption>Exemplo de 3/três colunas 50/pixels cada.</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img10.jpg" alt="imagem mostra Exemplo com 3/três colunas /automáticas.">
+                        <caption>Exemplo com 3/três colunas /automáticas.</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img11.jpg" alt="imagem mostra Exemplo com 4 colunas /automáticas.">
+                        <caption>Exemplo com 4 colunas /automáticas.</caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>grid-template-rows: Definindo as linhas da grade.</h2>
+                    <span class="span_minute">9:45</span>
+                    <p>
+                        <span class="span_destaque">As imagens abaixo</span> são exemplos de aplicação da propriedade" grid-template-rows" no
+                        <span style="color: rgb(0, 53, 122);">Grid Container</span>.
+                    </p>
+                    <p>Veja abaixo o comportamento comparando as imagens:</p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12.jpg" alt="imagem com Exemplo com 3/linhas /automáticas.">
+                        <caption>Exemplo com 3/linhas /automáticas.</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12a.jpg" alt="imagem mostra Exemplo com 4/linhas /auto.">
+                        <caption>Exemplo com 4/linhas /auto.</caption>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section>
+                <div>
+                    <h1>grid-gap vs gap:</h1>
+                    <span class="span_minute">10:32</span>
+                </div>
+                <p>
+                    <span class="span_destaque">{   Atenção a propriedade utilizada para espaçamento.    }</span>
+                </p>
+                <p>
+                    Veja que no <abbr title="Visual Studio Code">VS_Code</abbr> a propriedade <span class="span_destaque3">grid-gap</span> está riscada, pois ela está depreciada e por isso foi substituida por <span class="span_destaque">gap</span>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img14.jpg" alt="imagem mostra que a propriedade grid-gap está riscada no VS_Code.">
+                    </div>
+                </div>
+                <p>
+                    Veja abaixo um exemplo usando a propriedade <span class="span_destaque">gap</span>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img15.jpg" alt="imagem mostra a propriedade gap aplicando espaço entre os items dentro da Grid.">
+                    </div>
+                    <caption>imagem mostra a propriedade gap aplicando espaço entre os items dentro da Grid.</caption>
+                </div>
+                <aside>
+                    <p>
+                        <span class="span_destaque2">"Exemplo"</span> 
+                         adicionando outro elemento dentro da grade.
+                    </p>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img16.jpg" alt="imagem mostra os items dentro da Grid.">
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        
+            <section> 
+                <div>
+                    <h2>Usando o /Grid_view na prática:</h2>
+                    <span class="span_minute">11:48</span>
+                </div>
+                <p>
+                    Em qualquer parte da página aberta, <span class="span_destaque3">'clique'</span> com o <span class="span_destaque3">botão direito do mouse</span> em <span class="span_destaque3">Inspecionar</span>, ou tecle <kbd><span class="span_destaque3">F12</span></kbd>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img17.jpg" alt="imagem mostra como inspecionar código da página no navegador.">
+                    </div>
+                </div>
+                <p>
+                    Na aba que é a <span class="span_destaque3">'ferramenta do desenvolvedor'</span> clique em <span class="span_destaque3">Elementos</span>.
+                    <br>
+                    <span class="span_destaque">"VEJA"</span> o exemplo na imagem abaixo:
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img18.jpg" alt="imagem mostra a aba de elementos da página.">
+                    </div>
+                </div>
+            </section>
+
+            <section> 
+                <div>
+                    <h2>Ativando o /Grid_Overlay: Visualizando "linhas e colunas" numeradas.</h2>
+                    <span class="span_minute">13:25</span>
+                </div>
+                <p>
+                    Observe no <span class="span_destaque3">container</span> que tem um botão <span class="span_destaque">(grid)</span> , e esse botão serve para <span class="span_destaque3">'ativar'</span> a <span class="span_destaque">Grid_view</span>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img19.jpg" alt="imagem mostra o botão para ativar a Grid_View do navegador.">
+                    </div>
+                </div>
+                <p>
+                    Quando o <span class="span_destaque">Grid_view</span> está ativado , observe quea <span class="span_destaque">Grid</span> é desenhada mostrando as <span class="span_destaque3">"linhas, colunas e múmerações"</span> das <span class="span_destaque">Grid_Lines</span> como podemos ver na imagem acima.
+                </p>
+            </section>
+
+            <section> 
+                <div>
+                    <h2>Painel de Layout no /Devtools: Explorando opções de /alinhamento\prévia</h2>
+                    <span class="span_minute">14:35</span>
+                    <p>
+                        Os exemplos das imagens abaixo mostra a inumeras opções, onde podemos ver em tempo real o comportamento da grid e dos items mediante as Configurações aplicadas.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img20.jpg" alt="imagem mostra o botão para ativar as opções de alinhamento prévio de Grid do navegador.">
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img21.jpg" alt="imagem mostra o botão para ativar as opções de alinhamento prévio de Grid do navegador.">
+                    </div>
+                </div>
+                <div>
+                    <h2>Observação muito importante:</h2>
+                    <span class="span_minute">16:10</span>
+                    <p>
+                        <span class="span_destaque">As configurações feitas no /Grid_view são temporárias e apenas para testes; Basta atualizar a página, que todas as configurações somem.</span>
+                    </p>
+                </div>
+            </section>
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer_redessociais">
+            <h2>Siga nossas redes sociais e <span style="color: #ff6804e3; font-weight: bolder;">+</span></h2>
+            <img class="img_footer" src="./img/logocursoemvideomax.jpg" alt="imagem logo curso em vídeo">
+            <img class="img_footer" src="./img/insta.jpg" alt="imagem insta curso em vídeo">
+            <img class="img_footer" src="./img/cursogratisrecode.jpg" alt="imagem recode">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Curso grátis</h2>
+            <img style="width: 250px;" src="./img/gustavoguanabara-vertical2.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+            <img style="width: 250px;" src="./img/instagram-multi-005.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Patrocínios</h2>
+            <img src="./img/patrocinio.jpg" alt="imagem patrocinio hostenet" class="img_footer">
+            <img src="./img/patrocinio1.jpg" alt="imagem patrocinio recode" class="img_footer">
+            <img src="./img/patrocinio2.jpg" alt="imagem patrocinio estudonauta" class="img_footer">
+        </section>
+    </footer>   
+</body>
+</html>

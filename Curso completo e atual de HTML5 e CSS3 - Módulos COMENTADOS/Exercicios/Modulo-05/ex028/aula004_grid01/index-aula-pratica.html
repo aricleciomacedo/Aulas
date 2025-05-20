@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Grid Layout na prática</title>
+
+    <!-- Estilo -->
+    <style>
+
+        /* 
+            No minuto 11:55 da aula, o professor mostra um recurso do navegador , "como por exemplo tem no Microsoft Edge, no Safari e no Google Chrome";
+            O recurso é a "ferramenta do desenvolvedor", e pode ser aberto teclando F12, ou Ctrl+Shift+i estando com a página da aula aberta no navegador:
+                Na Aba do desenvolvedor vá na opção "Elmentos", e procure entre os elementos qual foi definido como display "grid"; Você vai identificar ao lado do elemento, um botão com o nome 'grid' (e chamado pelo professor de grid_view), então clique nele e veja como o navegador mostra a distribuição dos elementos marcados por linhas e traços que identificam a "Grade com a numeração das linhas e colunas". 
+         */
+
+        div.container {
+            border: 3px solid blue;
+            height: 250px;
+            display: grid;
+
+            /* Assim criamos um Grid Layout de 3 tracks rows e 3 tracks columns */
+            grid-template-columns: auto auto auto; /* Assim criamos 3 colunas com 4 grid lines */
+            grid-template-rows: auto auto auto;/* Assim criamos 3 linhas com 4 grid lines */
+
+            /* Essa propriedade aparece riscada, porque ela foi "depreciated = depreciada" e substituida por somente "gap"*/
+            /* grid-gap: 10px; */
+            gap: 10px;
+        }
+        div.item {
+            border: 3px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>

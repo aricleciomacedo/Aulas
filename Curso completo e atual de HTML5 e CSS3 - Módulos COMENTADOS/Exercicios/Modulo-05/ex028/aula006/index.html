@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>CSS Grid Layout na prática (parte 2)</title>
+
+    <!-- FONTE Whereas recognition of the inherent dignity:
+    link: https://fonts.google.com/selection/embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <!-- <style> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- </style> -->
+
+    <link rel="stylesheet" href="stylefirstmobile.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><!-- <img src="./img2/logo1.jpg" alt="logo"> --></div>
+        <section>
+            <!-- <div class="titulo_principal">
+                <h1>* Módulo 05, Capítulo 28, Aula 06</h1>
+            </div> -->
+            <img src="./img/logo1.jpg" alt="capítulo da aula">
+        </section>
+        <a href="https://www.youtube.com/watch?v=k3wb4g6exi8&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=22" target="_blank">Vídeo Aqui!</a>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <article>
+            <div class="div_img_main2">
+                <img class="img_main" src="./img/img-aula.jpg" alt="imagem do curso em vídeo">
+                <div>
+                    <p>Créditos:</p>
+                    <marquee behavior="up" direction="left" width="100%"><p>Ao Professor Gustavo Guanabara do Curso em Vídeo</p></marquee>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <h1>CSS Grid Layout na prática (parte 2)</h1>
+                    <span class="span_minute">--:--</span>
+                
+
+                    <p>
+                        Nesta aula vamos colocar a mão na massa e aplicar as <b>4(quatro)</b> propriedades de <span class="span_destaque">alinhamento</span> que aprendemos na aula anterior.
+                    </p>
+                    <h2>As Propriedades são:</h2>
+                    <ul>
+                        <li>align-items: ;</li>
+                        <li>justify-items: ;</li>
+                        <li>align-content: ;</li>
+                        <li>justify-content: ;</li>
+                    </ul>
+                    <p>
+                        <span class="span_destaque">"Observação":</span>
+                        <br>
+                        Vamos praticar estes exercícios usando o exercício 1(um) que fizemos na parte 1(um) do "<em style="color: rgb(0, 53, 122);">mão na massa</em>".
+                    </p>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img.jpg" alt="imagem mostra código html com class container e alguns items.">
+                        </div>
+                        <caption><abbr title="HyperText Markup Language">HTML</abbr></caption>
+                        <div>
+                            <img class="img_main img2_main" src="./img/img1.jpg" alt="imagem mostra código CSS e o resultado no navegador.">
+                        </div>
+                        <caption><abbr title="Cascating Style Sheet">CSS</abbr></caption>
+                    </div>
+                </div>
+            </section>
+            
+            <section> 
+                
+                <h2>Revisão Rápida: 'Grid View' e o painel de alinhamento "DevTools".</h2>
+                <span class="span_minute">2:40</span>
+                <p>
+                    Botão (<span class="span_destaque">Grid</span>) <em style="color: rgb(0, 53, 122);">(desligado)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img2.jpg" alt="imagem mostra botão grid desligado do DevTools num elemento.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Botão (<span class="span_destaque">Grid</span>) <em style="color: rgb(0, 53, 122);">(ligado)</em> com a identificação do <span class="span_destaque">container</span> selecionado e das linhas de <em style="color: rgb(0, 53, 122);">Grid-Lines Verticais e Horizontais</em>.
+                    <span>&dArr;</span>
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img3.jpg" alt="imagem mostra botão grid ligado do DevTools num elemento.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Botão para listar as <em style="color: rgb(0, 53, 122);">4(quatro)</em> propriedades.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img4.jpg" alt="imagem mostra Botão para listar as 4(quatro) propriedades de alinhamento.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Propriedade <span class="span_destaque">align-content: center;</span> <em style="color: rgb(0, 53, 122);">(ativado)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img5.jpg" alt="imagem mostra a propriedade align-contenter com center ativado.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Propriedade <span class="span_destaque">align-content: space-between;</span> <em style="color: rgb(0, 53, 122);">(ativado)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img6.jpg" alt="imagem mostra a propriedade align-contenter com space-between ativado.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Propriedades <span class="span_destaque">align-content: space-between; + justify-content: start;</span> <em style="color: rgb(0, 53, 122);">(ativados)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img7.jpg" alt="imagem mostra a propriedade align-contenter com space-between + justify-content: start; ativados.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Propriedades <span class="span_destaque">align-content: space-between; + justify-content: center;</span> <em style="color: rgb(0, 53, 122);">(ativados)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img8.jpg" alt="imagem mostra a propriedade align-contenter com space-between + justify-content: center; ativados.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Propriedades <span class="span_destaque">align-content: space-between; + justify-content: space-between; + align-items: stretch;</span> <em style="color: rgb(0, 53, 122);">(ativados)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img9.jpg" alt="imagem mostra a propriedade align-contenter com space-between + justify-content: space-between; + align-items: stretch; ativados.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+
+                <p>
+                    Propriedades <span class="span_destaque">align-content: center; + justify-content: center; + align-items: stretch;</span> <em style="color: rgb(0, 53, 122);">(ativados)</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img10.jpg" alt="imagem mostra as propriedade align-content: center; + justify-content: center; + align-items: stretch; ativados.">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+            </section>
+        </article>
+
+        <aside>
+            <article>
+                <section>
+                    <div>
+                        <h1>"<span style="color: rgb(255, 238, 0);">IMPORTANTE</span>":</h1>
+                        <span class="span_minute">3:50</span>
+                    
+    
+                        <p>
+                            O painel (<span class="span_destaque2">DevTools</span>) é para teste, e não aplica as propriedades e valores "<em style="color: rgb(7, 114, 255);">simulados</em>" no <em style="color: rgb(253, 237, 6);">console</em> ao código principal.
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </aside>
+
+        <article>
+            <section>
+                <div>
+                    <h1>Propriedades Padrão: (normal) vs (stretch) no alinhamentos</h1>
+                    <span class="span_minute">4:35</span>
+                    <p> 
+                        "<span class="span_destaque">OBSERVE</span>"
+                        <br>
+                        nas imagens a seguir, que com a aplicação das <span style="color: rgb(0, 53, 122);">4(quatro)</span> propriedades de alinhamento com o valor <em style="color: rgb(0, 53, 122);">"padrão" que é normal ou strech</em> nada muda visualmente, pois de acordo com a <abbr title="World Wide Web Consortion">W3C</abbr> o "<i>normal é = strech</i>" como podemos observar nas imagem seguintes:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img11.jpg" alt="Imagem com DevTools mostrando o valor padráo das propriedades de alinhamento Grid.">
+                        <caption>imagem com DevTools mostrando o valor normal que é padrão das propriedades de alinhamento Grid</caption>
+                    </div>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12.jpg" alt="Imagem com DevTools mostrando o valor padráo das propriedades de alinhamento Grid.">
+                        <caption>imagem com DevTools mostrando o valor stretch que é padrão das propriedades de alinhamento Grid</caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>align-items: Testanto (start, end e center) "Horizontalmente"</h2>
+                    <span class="span_minute">5:35</span>
+                    <p>
+                        <span class="span_destaque">"LEMBRANDO"</span> que:
+                        <br>
+                        Nesta aula os <em style="color: rgb(0, 53, 122);">items</em> foram destacados com bordas vermelhas, e por "<em style="color: rgb(0, 53, 122);">padrão</em>" o (<em>align e justify para items</em>) fazem a configuração (<em style="color: rgb(0, 53, 122);">strech</em>) para ambos no sentido "<em style="color: rgb(0, 53, 122);">Vertical" = align</em> quanto no sentido "<em style="color: rgb(0, 53, 122);">horizonal" = justify</em>; Isto para "<em style="color: rgb(0, 53, 122);">Grid-Layout</em>" como podemos observar na imagem abaixo:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12a.jpg" alt="imagem mostra bordas vermelhas que identificam os item dentro do container. ">
+                        <caption>A imagem acima mostra bordas vermelhas que identificam os item dentro do container.</caption>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div>
+                    <h2>start</h2>
+                    <span class="span_minute">6:22</span>
+                    <p>
+                        O valor (<span class="span_destaque">start</span>) na propriedade "<em style="color: rgb(0, 53, 122);">align-items</em>" faz com que os <i>items</i> cole na parte de cima, como podemos ver na imagem abaixo:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img14.jpg" alt="imagem com o comportamento dos items com a aplicação do valor start na propriedade align-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor start na propriedade align-items.</caption>
+                    </div>
+                    <p>
+                        "<span class="span_destaque">Agora Observe</span>" na imagem abaixo, a configuração da (<em style="color: rgb(0, 53, 122);">Grid</em>) ao desligar o "<em style="color: rgb(0, 53, 122);">botão"(Grid)</em> do <abbr title="As DevTools, ou (ferramentas de desenvolvimento do navegador), são um conjunto de ferramentas integradas em alguns navegadores que permitem aos desenvolvedores testar, modifcar, ou melhorar sites e aplicativos web. Elas oferecem uma forma de analisar o código, o CSS e as funcionalidades de uma página web, facilitando a criação e o ajuste de sites. ">DevTools</abbr>, pois mostra os espaços deixados em branco.
+                    </p>
+                    <div>
+                        <img class="img_main img2_main" src="./img/img15.jpg" alt="imagem com o comportamento dos items com a aplicação do valor start na propriedade align-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor start na propriedade align-items.</caption>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>end</h2>
+                    <span class="span_minute">7:30</span>
+                    <p>
+                        O valor (<span class="span_destaque">end</span>) na propriedade "<em style="color: rgb(0, 53, 122);">align-items</em>" faz os items grudarem em baixo respeitando o limite estabelecido, como podemos observar nas <span class="span_desaque">celulas</span>(<em style="color: rgb(0, 53, 122);">blocos</em>) tracejados nas bordas como mostra a imagem a seguir:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img16.jpg" alt="imagem com o comportamento dos items com a aplicação do valor end na propriedade align-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor end na propriedade align-items.</caption>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>center</h2>
+                    <span class="span_minute">7:35</span>
+                    <p>
+                        Ao usar o valor (<span class="span_destaque">center</span>) na propriedade "<em style="color: rgb(0, 53, 122);">align-items</em>", os items ficam literalmente centralizados.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img17.jpg" alt="Imagem com o comportamento dos items com a aplicação do valor center na propriedade align-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor center na propriedade align-items.</caption>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <div>
+                    <h1>justify-items:</h1>
+                    <span class="span_minute">7:40</span>
+                    <p>Testanto (<span class="span_destaque">start, end e center</span>) "<em style="color: rgb(0, 53, 122);">Verticalmente</em>"</p>
+                </div>
+                
+                <div>
+                    <h2>start</h2>
+                    <span class="span_minute">7:45</span>
+                    <p>
+                        Com o valor <span class="span_desataque">start</span> na propriedade "<span style="color: rgb(0, 53, 122);">justify-items</span>" os items colam à esquerda.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img18.jpg" alt="imagem com o comportamento dos items com a aplicação do valor start na propriedade justify-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor start na propriedade justify-items.</caption>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>end</h2>
+                    <span class="span_minute">7:50</span>
+                    <p>
+                        Faz com que os <span class="span_destaque">items</span> colem no final.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img19.jpg" alt="A imagem com comportamento dos items com a aplicação do valor end na propriedade justify-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor end na propriedade justify-items.</caption>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>center</h2>
+                    <span class="span_minute">7:50</span>
+                    <p>
+                        Centraliza os items ao centro do espaço pré-determinado do bloco da "<span class="span_destaque">Grid</span>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img20.jpg" alt="A imagem com comportamento dos items com a aplicação do valor cener na propriedade justify-items.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor center na propriedade justify-items.</caption>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section>
+                <div>
+                    <h1>align-content na prática: (start, end e center) "Verticalmente".</h1>
+                    <span class="span_minute">8:10</span>
+                    <p>
+                        As propriedades de <span class="span_destaque">contents</span> referem-se ao alinhamento do <span style="color: rgb(0, 53, 122);">conteúdo inteiro</span>.
+                    </p>
+                    <p>
+                        Os <em style="color: rgb(0, 53, 122);">items</em> que estão dentro do conteiner é um exemplo da aula passada, que foi adicionado um borda azul em volta dos blocos para exemplificar a ação do alinhamento de conteúdo e que serão mostrados nas imagens a seguir com o <em style="color: rgb(0, 53, 122);">valor (start)</em> na propriedade <span class="span_destaque"
+                        >align-content:</span>
+                    </p>
+                </div>
+                    
+                <div>
+                    <h2>start</h2>
+                    <span class="span_minute">8:25</span>
+                    <p>
+                        O valor (<span class="span_destaque">start</span>) na propriedade <em style="color: rgb(0, 53, 122);">align-content</em> faz todo o conteúdo "<em style="color: rgb(0, 53, 122);">grudar</em>" na parte de cima do "<span class="span_destaque">container</span>"; Pois se trata de {<em style="color: rgb(0, 53, 122);">alinhamento vertical</em>}.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img21.jpg" alt="A imagem com comportamento dos items com a aplicação do valor start na propriedade align-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor start na propriedade align-content.</caption>
+                    </div>
+                </div>
+                    
+                <div>
+                    <h2>end</h2>
+                    <span class="span_minute">8:32</span>
+                    <p>
+                        O valor (<span class="span_destaque">end</span>) na propriedade <span style="color: rgb(0, 53, 122);">align-content</span> gruda todo mundo na parte de baixo do "<em style="color: rgb(0, 53, 122);">container</em>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img22.jpg" alt="A imagem com comportamento dos items com a aplicação do valor end na propriedade align-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor end na propriedade align-content.</caption>
+                    </div>
+                </div>
+                    
+                <div>
+                    <h2>center</h2>
+                    <span class="span_minute">8:32</span>
+                    <p>
+                        O valor (<span class="span_destaque">center</span>) na propriedade <span style="color: rgb(0, 53, 122);">align-content</span> centraliza o conteúdo dentro do "<em style="color: rgb(0, 53, 122);">container</em>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img23.jpg" alt="A imagem com comportamento dos items com a aplicação do valor center na propriedade align-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor center na propriedade align-content.</caption>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article>
+            <section>
+                <div>
+                    <h1>justify-content na prática:</h1>
+                    <span class="span_minute">8:40</span>
+                    <p>
+                        (<span class="span_destaque">start</span>, <span class="span_destaque">end</span> e <span class="span_destaque">center</span>) "<span style="color: rgb(0, 53, 122);">Horizontalmente</span>".
+                    </p>
+                </div>
+
+                        
+                <div>
+                    <h2>start</h2>
+                    <span class="span_minute">8:50</span>
+                    <p>
+                        O valor (<span class="span_destaque">start</span>) na propriedade <em style="color: rgb(0, 53, 122);">justify-content</em> gruda o conteúdo à esquerda do "<span class="span_destaque">container</span>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img24.jpg" alt="A imagem com comportamento dos items com a aplicação do valor start na propriedade justify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor start na propriedade justify-content.</caption>
+                    </div>
+                </div>
+                    
+                <div>
+                    <h2>end</h2>
+                    <span class="span_minute">8:55</span>
+                    <p>
+                        O valor (<span class="span_destaque">end</span>) na propriedade <span style="color: rgb(0, 53, 122);">justify-content</span> cola o conteúdo à direita do "<em style="color: rgb(0, 53, 122);">container</em>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img25.jpg" alt="A imagem com comportamento dos items com a aplicação do valor end na propriedade justify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor end na propriedade justify-content.</caption>
+                    </div>
+                </div>
+                    
+                <div>
+                    <h2>center</h2>
+                    <span class="span_minute">8:57</span>
+                    <p>
+                        O valor (<span class="span_destaque">center</span>) na propriedade <span style="color: rgb(0, 53, 122);">justify-content</span> centraliza o conteúdo dentro do "<em style="color: rgb(0, 53, 122);">container</em>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img26.jpg" alt="A imagem com comportamento dos items com a aplicação do valor center na propriedade justify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor center na propriedade justify-content.</caption>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div>
+                    <h2>align e justify-content: center;</h2>
+                    <span class="span_minute">9:09</span>
+                    <p>
+                        O valor (<span class="span_destaque">center</span>) nas propriedades <span style="color: rgb(0, 53, 122);">align-content e justify-content</span> "<em style="color: rgb(0, 53, 122);">centraliza absolutamente</em>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img27.jpg" alt="A imagem com comportamento dos items com a aplicação do valor center na propriedades align-content ejustify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor center nas propriedades align-content e justify-content.</caption>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+
+
+        <article>
+            <section>
+                <div>
+                    <h1>align-content  + space:</h1>
+                    <span class="span_minute">9:49</span>
+                    <p>
+                        Testando (<span class="span_destaque">space-between</span>, <span class="span_destaque">evenly</span> e <span class="span_destaque">around</span>).
+                    </p>
+                </div>
+
+                <div>
+                    <h2>align-content: space-between;</h2>
+                    <span class="span_minute">9:53</span>
+                    <p>
+                        O <em style="color: rgb(0, 53, 122);">align-content</em>: (<span class="span_destaque">space-between</span>) coloca os primeiros <em style="color: rgb(0, 53, 122);">items</em> na parte de cima da "<em style="color: rgb(0, 53, 122);">Grid</em>", cola os últimos na parte de baixo, e o "<em style="color: rgb(0, 53, 122);">espaço entre</em>" os demais items são distribuidos igualmente.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img28.jpg" alt="A imagem com comportamento dos items com a aplicação do valor space-between na propriedade align-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor space-between na propriedade align-content.</caption>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>align-content: space-evenly;</h2>
+                    <span class="span_minute">10:14</span>
+                    <p>
+                        Faz com que haja "<em style="color: rgb(0, 53, 122);">espaços iguais antes e depois</em>" dos <span class="span_destaque">items</span>.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img29.jpg" alt="A imagem com comportamento dos items com a aplicação do valor space-evenly na propriedade align-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor space-evenly na propriedade align-content.</caption>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>align-content: space-around;</h2>
+                    <span class="span_minute">10:50</span>
+                    <p>
+                        O valor (<span class="span_destaque">space-around</span>) na propriedade "<em style="color: rgb(0, 53, 122);">align-content</em>" faz com que haja espaço entre os primeiros e últimos items em relação a borda do container, e esse valor é multiplicado <em style="color: rgb(0, 53, 122);">2x (duas vezes)</em> para espaçar entre os demais items.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img30.jpg" alt="A imagem com comportamento dos items com a aplicação do valor space-around na propriedade align-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor space-around na propriedade align-content.</caption>
+                    </div>
+                </div>
+            </section>
+        </article>
+        
+
+        <article>
+            <section>
+                <div>
+                    <h1>justify-content na prática:</h1>
+                    <span class="span_minute">11:25</span>
+                    <p>
+                        Os valores (<span class="span_destaque">start</span>, <span class="span_destaque">end</span> e <span class="span_destaque">center</span>) "<em style="color: rgb(0, 53, 122);">Horizontalmente</em>"
+                    </p>
+                </div>
+
+
+                
+                <div>
+                    <h2>justify-content: space-between;</h2>
+                    <span class="span_minute">11:37</span>
+                    <p>
+                        O valor (<span class="span_destaque">space-between</span>) na propriedade "<em style="color: rgb(0, 53, 122);">justify-content</em>" segue a mesma lógica que o "<em style="color: rgb(0, 53, 122);">align-content</em>", porém seu alinhamento é "<em style="color: rgb(0, 53, 122);">horizontal</em>".
+                    </p>
+                    <p>
+                        Então os <em>primeiros_items</em> e os <em>últimos_items</em> colam no <i>sentido da borda</i>, e os "<em style="color: rgb(0, 53, 122);">demais items</em>" são separados por espaços iguais entre si.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img31.jpg" alt="A imagem com comportamento dos items com a aplicação do valor space-between na propriedade justify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor space-between na propriedade justify-content.</caption>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>justify-content: space-evenly;</h2>
+                    <span class="span_minute">12:12</span>
+                    <p>
+                        O valor (<span class="span_destaque">space-evenly</span>) na propriedade "<em style="color: rgb(0, 53, 122);">justify-content</em>" faz com que os espaços entre os elementos sejam iguais e bem assim entre a borda e os primeiros e últimos elementos.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img32.jpg" alt="A imagem com comportamento dos items com a aplicação do valor space-evenly na propriedade justify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor space-evenly na propriedade justify-content.</caption>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>justify-content: space-around;</h2>
+                    <span class="span_minute">12:26</span>
+                    <p>
+                        O valor (<span class="span_destaque">space-around</span>) na propriedade "<em style="color: rgb(0, 53, 122);">justify-content</em>" adiciona um espaço "<i>ao redor</i>" dos elementos com o dobro do valor do espaço entre os <em style="color: rgb(0, 53, 122);">primeiros e últimos items</em> em relação a <i>borda do container</i>.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img33.jpg" alt="A imagem com comportamento dos items com a aplicação do valor space-around na propriedade justify-content.">
+                        <caption>A imagem acima mostra o comportamento dos items com a aplicação do valor space-around na propriedade justify-content.</caption>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer_redessociais">
+            <h2>Siga nossas redes sociais e <span style="color: #ff6804e3; font-weight: bolder;">+</span></h2>
+            <img class="img_footer" src="./img/logocursoemvideomax.jpg" alt="imagem logo curso em vídeo">
+            <img class="img_footer" src="./img/insta.jpg" alt="imagem insta curso em vídeo">
+            <img class="img_footer" src="./img/cursogratisrecode.jpg" alt="imagem recode">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Curso grátis</h2>
+            <img style="width: 250px;" src="./img/gustavoguanabara-vertical2.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+            <img style="width: 250px;" src="./img/instagram-multi-005.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Patrocínios</h2>
+            <img src="./img/patrocinio.jpg" alt="imagem patrocinio hostenet" class="img_footer">
+            <img src="./img/patrocinio1.jpg" alt="imagem patrocinio recode" class="img_footer">
+            <img src="./img/patrocinio2.jpg" alt="imagem patrocinio estudonauta" class="img_footer">
+        </section>
+    </footer>   
+</body>
+</html>

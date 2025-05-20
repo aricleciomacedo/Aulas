@@ -1,0 +1,206 @@
+﻿* Módulo 05, Capítulo 28, Aula 05
+Vídeo:
+Propriedades de container para Grids (parte 2) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=RK3TLfFqEDw&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=21
+
+2:09
+    Propriedades já vistas (display, template, gap).
+
+        'imagem'
+
+2:55
+    4(quatro) novas Propriedades de alinhamento:
+
+        'imagem 1'
+
+
+3:20
+    Alinhamento Vertical e Horizontal
+
+    "Obsevação":
+        /align = alinhamento (vertical).
+            vs 
+        /justify = alinhamento (horizontal).
+
+    Se trantando de "Grid", sempre que você olhar a palavra /align, isto refere-se ao sentido do conteúdo na (vertical) = "de cima para baixo", e ao referir-se à palavra /justify, é porque tem haver com o sentido do conteúdo na (horizontal) = "da esquerda para a direita ou vice-versa".
+
+        "imagem2"
+
+4:35
+    Lembrando a estrutura de /Grid_Container:
+        Aqui temos um exemplo de Grid 3x3 = 3Colunas e 3Linhas que é = 9Células|items.
+
+            "Imagem 3"
+
+4:45
+    Código base de /Grid_Container da aula anterior
+
+        "LEMBRE" que:
+        Essa é a estrutura /HTML"HyperText Markup Language" de um /Container com os padrões estabelecidos no navegadorm, as quais podemos dizer que não há estilo /CSS"Cascading Style Sheet" ainda.
+
+            "Imagem 4"
+
+        Abaixo temos o código Código da aula anterior com propriedades CSS "Cascading Style Sheet"  definidas para o /Container.
+        
+            "Imagem 5"
+
+    
+5:48
+    Usando a propriedade /align-itens: ;
+
+        Qual a diferença de /items para /Content?
+            1- /Items = Cada célula(bloco item), que no exemplo da imagem abaixo é representado por 7(sete) quadrados de "A á G".
+
+            2- /Content = O conjunto inteiro, e sobre isso veremos mais adiante.
+
+                "Imagem 6"
+
+        
+        O valor /padrão da propriedade /align-items é o valor: /normal;, porém o /normal é o valor: /stretch;.
+            O /stretch estica o /item de uma /Grid-Line "verticalmente" a outra, até que ele caiba dentro da /Grade, como podemos ver no exemplo abaixo:
+
+                "Imagem 7"
+
+
+6:50
+    Outros valores da propriedade /align-items:
+
+        Abaixo temos as propriedades para alinhamento dos items na vertical.
+
+        /start;
+            Quando usamos este valor; Ele faz com que todos os /items colem no início da /Grade.
+
+                "VEJA" a ação do valor no exemplo abaixo:
+
+                    "Imagem 8"
+
+        /center;
+            Faz com que os /items fiquem "verticalmente" centralizados, como podemos ver no exemplo da imagem baixo:
+
+                "Imagem 9"
+
+        /end;
+            Gruda todos os /items na parte de baixo, como podemos ver no exemplo abaixo:
+
+                "Imagem 10"
+
+
+            
+8:05
+    Propriedade /justify-items e seus valores:
+
+        Abaixo temos os valores da propriedade para alinhamento dos items na Horizontal.
+
+        Por /padrão;
+            Esta propriedade possui o valor /stretch, que estica os items e seu alinhamento é feito "horizontalmente", como podemos ver no exemplo da imagem destacando o /item (A) abaixo;
+
+            "Imagem 11"
+
+        /start;
+            Faz com que os items grudem à esquerda, pois o seu alinhamento é "horizontal" como podemos ver na imagem de exemplo abaixo:
+
+                "Imagem 12"
+
+        /center;
+            O valor Center "Centraliza" os /elementos/items "horizontalmente".
+
+                "Imagem 12a"
+
+        /end;
+            O valor "end" Cola os elementos à direita.
+
+                "Imagem 14"
+
+            
+        
+9:00
+    Propriedades /align e /justify para /Container.
+
+        Para entendermos a aplicação das propriedades /align e /justify no /container; No exemplo desta aula, o /Container foi "aumentado de tamanho".
+
+            "Imagem 15"
+
+
+
+9:30
+    Propriedade /align-content e seus valores
+
+        Abaixo temos os valores da propriedade para alinhamento do conteúdo dentro da Grid no sentido "Vertical".
+
+        Por /padrão;
+            Esta propriedade tem como valor /start que faz com que todo conteúdo dentro da /Grade, fiquem colados na "parte de cima", como podemos ver no exemplo da imagem abaixo, onde o /content é envolto por "linhas vermelhas".
+
+                "Imagem 16"
+
+        /center;
+            Faz todo o conteúdo ficar 'centralizado verticalmente', e com espaços de cima e de baixo iguais, como podemos entender, vendo a imagem abaixo:
+
+                "Imagem 17"
+
+        /end;
+            É usado para "colar verticalmente" o conteúdo em baixo.
+            
+                "Imagem 18"
+
+        /space-between;
+            Faz com que os primeiros elementos(primeira track) grude(em) em cima e faz os últimos elementos(últimas tracks) grudarem em baixo, e faz com os demais elementos se distribuam separados por "espaços iguais" entre as /tracks, como podemos ver no exemplo abaixo;
+
+                "Imagem 19"
+
+        /space-evenly;
+            Faz com as /tracks tenham "espaços verticalmente iguais" entre si, e deixa o espaço da (primeira track) com o da (última track), iguais em relação a borda do /Container, como podemos ver no exemplo abaixo;
+
+                "Imagem 20"
+
+        /space-around;
+            Faz com que a "primeira e a última track" tenham espaços iguais em relação borda do /Container, e este espaço é duas(2x) vezes calculado para espaçar as /tracks de uma para outra.
+
+            "Observe" as imagens abaixo com as marcações de espaços, e entenda um pouco mais:
+
+                "Imagem 21" e "Imagem 22"
+
+                Em outra palavras:
+                    O /space-around faz os espaços "ao redor" da /tracks ficarem iguais entre si, e com o dobro do valor em relação ao espaço entre a (borda do container) e a "primeira e a última track". 
+                
+        /stretch;
+            Estica os /items "verticalmente".
+
+                "Imagem 23"
+
+
+14:15
+    Propriedade /justify-content e seus valores:
+
+        O /justify-content faz o mesmo que o /align-content, porém, seu alinhamento de conteúdo é na "horizontal".
+
+        O valor /padrão é o /start;
+            O qual pega todo o conteúdo (exemplificado pelas linhas vermelhas na imagem) e vai colara no lado esquerdo da /Grid (exemplificada pela seta amarela), como podemos ver na imagem abaixo:
+            
+                "imagem 24"
+
+        /center;
+         Pega todo o bloco(conteúdo) e centraliza "horizontalmente".
+
+            "Imagem 25"
+
+        /end;
+            Faz com que o conteúdo cole à direita do /Container; Isto "horizontalmente".
+
+                "Imagem 26"
+
+        /space-between;
+            Cola a "primeira e última track" na borda do /Container, e deixa espaços iguais 'entre' as demais /tracks na "horizontal".
+
+                "imagem 27"
+
+        /space-evenly;
+            Faz com que as /tracks tenhas espaços iguais 'entre si', e o mesmo em relação as /tracks com as bordas do /Container, como podemos ver na ilustração abaixo:
+
+                "Imagem 28"
+
+        /space-around;
+            Faz com que o "espaço entre" as /tracks sejam o 'dobro do valor do espaço' entre as /tracks e as bordas do /container;
+                Em outras palavras, podemos dizer que o espaço "ao redor" das /tracks são iguais.
+
+                "Imagem 29"
