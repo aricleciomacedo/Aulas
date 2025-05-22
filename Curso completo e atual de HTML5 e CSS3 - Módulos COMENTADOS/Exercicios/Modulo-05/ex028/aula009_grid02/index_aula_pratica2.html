@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout na prática</title>
+
+    <style>
+        div.container {
+            border: 3px solid blue;
+            height: 250px;
+            display: grid;
+
+            /*
+                Aqui aplicamos a shorthand para simplificar o uso das propriedades de linha(rows) que vem primeiro , e coluna(columns) que vem depois do barra(/).
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto; 
+
+            grid-template: auto auto auto / auto auto auto;*/
+            grid-template: repeat(3, auto) / repeat(3, auto);/* Aqui usamos a shorthand com o uso da função repeat() para simplicar o uso das propriedades repetidas */
+
+            gap: 10px;
+
+            /* 
+                Aqui simplicamos o uso das propriedades de alinhamento para itens"items", com a aplicação da shorthand, onde o primeiro valor é o alinhamento vertical(align), e o segundo valor é para alinhamento horizontal(justify). 
+             
+            align-items: start;
+            justify-items: center;*/
+            place-items: start center;
+
+            /* 
+                Aqui simplicamos o uso das propriedades de alinhamento para conteúdo"content", com a aplicação da shorthand, onde o primeiro valor é o alinhamento vertical(align), e o segundo valor é para alinhamento horizontal(justify).
+            align-content: space-between;
+            justify-content: end;*/
+            place-content: space-between end;
+        }
+        div.item {
+            border: 3px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+    </div>
+</body>
+</html>

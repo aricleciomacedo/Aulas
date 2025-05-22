@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Layout na prática</title>
+
+    <style>
+        div.container {
+            border: 3px solid blue;
+            /* height: 250px; removed*/
+            display: grid;
+
+            /* 
+                O que temos que entender é que essa maneira de criar Grid é explícita, pois define o número de linhas(grid-template-rows) e colunas(grid-template-columns) exatos, e vai fazer com os novos items que forem adicionados ocupem apenas o tamanho que o coteúdo tiver, ao invés de ter os pixels, ou valor definido nas propriedades.
+                    Para resolver este "probleminha" passamos os valores nas propriedades de "Grid Implícita" (grid-auto-rows e grid-auto-colums) que fará as novas linhas e colunas que forem adicionadas tenham o valores definidos automáticamente ao serem adicionados.
+
+                    "Para entender" esta aplicação, foi adicionados os items de letra "I" e "J".
+             */
+            grid-template-rows: repeat(3, 80px);/* Aqui simplicamos o que seria (80px 80px 80px) */
+            grid-template-columns: 4fr repeat(2, 1fr);/* Assim teremos 1 coluna de 4fr e 2 colunas de 1fr.
+            */
+
+
+                /* Aqui usamos esta propriedade que foi vista nas aulas anteriores, mas que ficará fácil de compreender por meio desta explicação: 
+
+            O grid-auto-flow tem como valor padrão, o valor "row" que acrescenta o (item) e esse novo item será acrescentado embaixo e em forma de linha.
+                Com o valor "column", os items serão organizados na ordem de coluna, e os novos items terão o valor pré-definido como stretch que faz o item crescem todo o espaço do container.
+            */
+            grid-auto-flow: row;
+
+            grid-auto-rows: 80px; /* Essa propriedade fará os novos items que forem adicionados, terem o valor definido, que neste caso é de 80px */
+            grid-auto-columns: 120px;/* Essa propriedade fará os novos items terem a dimensão aqui estabelecida. */
+
+            gap: 10px;
+
+            /* 
+                Aqui 
+            */
+            place-items: normal normal;
+            place-content: normal normal;
+        }
+        div.item {
+            border: 3px solid red;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>  
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div>
+</body>
+</html>
