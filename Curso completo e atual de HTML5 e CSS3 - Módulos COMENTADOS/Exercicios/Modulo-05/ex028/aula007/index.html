@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
-    <title>Propriedades de container para Grids (parte 2)</title>
+    <title>Propriedades de container para Grids (parte 3)</title>
 
     <!-- FONTE Whereas recognition of the inherent dignity:
     link: https://fonts.google.com/selection/embed -->
@@ -27,11 +27,11 @@
         <div class="logo"><!-- <img src="./img2/logo1.jpg" alt="logo"> --></div>
         <section>
             <!-- <div class="titulo_principal">
-                <h1>* Módulo 05, Capítulo 28, Aula 05</h1>
+                <h1>* Módulo 05, Capítulo 28, Aula 07</h1>
             </div> -->
             <img src="./img/logo1.jpg" alt="capítulo da aula">
         </section>
-        <a href="https://www.youtube.com/watch?v=RK3TLfFqEDw&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=21" target="_blank">Vídeo Aqui!</a>
+        <a href="https://www.youtube.com/watch?v=q3q3zqyg9_E&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=25" target="_blank">Vídeo Aqui!</a>
     </header>
 
 
@@ -47,284 +47,434 @@
             </div>
             <section>
                 <div>
-                    <h1>Propriedades de container para Grids (parte 2)</h1>
+                    <h1>Propriedades de container para Grids (parte 3)</h1>
                     <span class="span_minute">--:--</span>
                 </div>
-                <p>Nesta aula vamos praticar mais <b>(4)</b>quatro propriedades que se aplicam a um <span class="span_destaque">"container"</span> do tipo <span class="span_destaque">"Grid Layout"</span> que aprendemos até aqui.
+                <p>Nesta aula vamos aprender mais algumas propriedades que se aplicam a um <span class="span_destaque">"container"</span> do tipo <span class="span_destaque">"Grid Layout"</span>.
                 </p>
                 <aside>
-                    <h2>Propriedades já vistas</h2>
+                    <h2>Revisão Essêncial:</h2>
+                    <span class="span_minute">2:15</span>
                     <p>
-                        <span class="span_destaque2">(display, template, gap).</span>
+                        <span class="span_destaque2">Propriedades vistas nas aulas anteriores.</span>
                     </p>
                     <div class="div_img_main">
                         <div>
-                            <img class="img_main img2_main" src="./img/img.jpg" alt="imagem mostra código html com class contaner e alguns items.">
+                            <img class="img_main img2_main" src="./img/img.jpg" alt="imagem mostra propriedades de container grid layout.">
                         </div>
                     </div>
                 </aside>
             </section>
-                                                                                                    <!-- 
-        
+        </article>
+        <article>
             <section> 
                 <div>
-                    <h2>Código base da aula + resultado no navegador</h2>
-                    <span class="span_minute">4:10</span>
+                    <h2>Novas Propriedades:</h2>
+                    <span class="span_minute">3:25</span>
                     <p>
-                        <span class="span_destaque">Veja abaixo</span>: O código <abbr title="HyperText Markup Language"><span class="span_destaque">HTML</span></abbr> aplicado durante a aula:
+                        Foco em <span class="span_destaque">grid-auto</span> e <span class="span_destaque">shorthands</span>.
                     </p>
                 </div>
                 <div class="div_img_main">
                     <div>
-                        <img class="img_main img2_main" src="./img/img.jpg" alt="imagem mostra código html com class contaner e alguns items.">
+                        <img class="img_main img2_main" src="./img/img1.jpg" alt="imagem mostra propriedades de container grid layout.">
                     </div>
                 </div>
+                <p>
+                    <span class="span_destaque">"Observe"</span> 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;as <i>3(três)</i> últimas Propriedades pois elas são '<em>propriedades</em>'  simplificadoras, e servirá para que não precise ficar decorando as várias propriedades vistas a esquerda.
+                </p>
             </section>
-        
+            
             <section>
                 <div>
-                    <h2>Estilizando o container + resultado</h2>
-                    <span class="span_minute">5:30</span>
+                    <h2>grid-auto-rows e grid-auto-colums: Controlando o "grid implicíto".</h2>
+                    <span class="span_minute">4:15</span>
                     <p> 
-                        <span class="span_destaque">Na imagem abaixo</span> colocamos uma borda <span style="color: rgb(0, 53, 122);">de cor</span>; <span class="span_destaque">"azul"</span> para vermos a dimensão do container feito na aula:
+                        O <span style="color: rgb(0, 53, 122);">exemplo</span> que usamos durante a aula é o mesmo das aulas anteriores; Como podemos ver na imagem abaixo.
+                    </p>
+                    <p>
+                        Observe que a <span class="span_destaque">Grid</span> da aula é <span style="color:rgb(0, 53, 122)">3</span>X<span style="color:rgb(0, 53, 122)">3</span> (<span style="color:rgb(0, 53, 122)">três por três</span>), que são <span style="color:rgb(0, 53, 122)">9</span>(<span style="color:rgb(0, 53, 122)">nove</span>) <em>áreas</em> onde as linhas amarelas destacam todo o container.
                     </p>
                 </div>
                 <div class="div_img_main">
                     <div>
-                        <img class="img_main img2_main" src="./img/img1.jpg" alt="imagem de códgo css para adicionar uma borda ao container.">
+                        <img class="img_main img2_main" src="./img/img2.jpg" alt="imagem mostra exemplo de container com destaque nas bordas que estão de cor de amarela.">
+                        <caption>
+                            imagem mostra exemplo de container com destaque nas bordas que estão de cor de amarela.
+                        </caption>
                     </div>
                 </div>
             </section>
+
+
             <section>
                 <div>
-                    <h2>Estilizando os itens + resultado</h2>
+                    <h2>Exemplo Base: Grid 3x3 com items de "A á I".</h2>
+                    <span class="span_minute">5:00</span>
+                    <p> 
+                        Abaixo o código <abbr title="HyperText Markup Language">HTML</abbr>.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img3.jpg" alt="imagem mostra exemplo com o código html base para a aula.">
+                        <caption>
+                            imagem mostra exemplo com o código html base para a aula.
+                        </caption>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        Abaixo o código base <abbr title="Cascating Style Sheet">CSS</abbr> para estilo do container;
+                        <br>
+                        "<span class="span_destaque">OBS</span>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Atente para a adição do items "<span style="color:rgb(0, 53, 122)">H</span> e <span style="color:rgb(0, 53, 122)">I</span>" ao código HTML.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img4.jpg" alt="imagem mostra exemplo com o código css base para a aula.">
+                        <caption>
+                            imagem mostra exemplo com o código css base para a aula.
+                        </caption>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        A maneira acima como podemos observar, faz com que os 
+                        <br>
+                        <span class="span_destaque">items</span>(<span style="color: rgb(0, 53, 122);">celulas</span>)/<em>areas</em> preencha completamente o <span class="span_destaque">Grid</span>, 
+                        <br>
+                        e a isso chamamos de "<span class="span_destaque">Grid explícito</span>".
+                    </p>
+                </div>
+            </section>
+        </article>
+        <article>
+            <section>
+                <div>
+                    <h1>Grid Explícito  VS Implicíto: O que acontence com items extras(J) ?</h1>
                     <span class="span_minute">6:00</span>
                     <p>
-                        <span class="span_destaque">"OBSERVE"</span>:
-                        <br>
-                        O código
-                        <span style="color: rgb(0, 53, 122);"> <abbr title="HyperText Markup Language">HTML</abbr></span> e o código <span style="color: rgb(0, 53, 122);"><abbr title="Cascading Style Sheet">CSS</abbr></span> com a definição de bordas vermelhas para identificar os items dentro do container, e ao lado, o resultado visto no navegador.
+                        Quando adicionamos um novo <em style="color: rgb(0, 53, 122);">item</em> como é o exemplo (<span class="span_destaque">J</span>), esperamos que ele preencha todo o '<span class="span_destaque">grid</span>',
+                        mas na prática não é isso que acontece pois o "<span class="span_destaque">Grid Explícito</span>" 
+                        que é o exemplo do código abaixo e está com definição para <em style="color: rgb(0, 53, 122);">3(três)</em> <span class="span_destque">colunas auto</span>, e <em style="color: rgb(0, 53, 122);">3(três)</em> <span class="span_destque">linhas</span> de <b>100 pixels</b>.
+                    </p>
+
+                    <p>
+                        Com essa configuração a <span class="span_destaque">Grid</span> só cabe <em>9(nove)</em> <span class="span_destaque">items</span>, e ao adicionar o (<span class="span_destaque">J</span>), ele passa a fazer parte do que chamamos de "<span class="span_destaque">Grid Implícito</span>"; Ou seja <em>não dá erro</em>; <em>Não fica escondido</em>; Porém ele <em>não foi definido ainda</em>.
+
+                    </p>
+
+                    <p>
+                        Por padrão um <span class="span_destaque">item_Implícito</span> é adicionado a uma '<em style="color: rgb(0, 53, 122);">nova linha</em>', mais não recebe as mesmas <span class="span_destaque">configurações (Explícitadas)</span> das demais áreas.
+                    </p>
+
+                    <p>
+                        O <span class="span_destaque">novo Item</span> na verdade fica com as <mark>
+                            configurações padrões de Grid
+                        </mark> e respeita o limite do conteúdo que nesse caso é apenas um letra (<span class="span_destaque">J</span>) e por isso aparece '<i style="color: rgb(0, 53, 122);">fininho</i>' pois é pouco o conteúdo dessa área, como podemos ver na imagem abaixo:
+
                     </p>
                 </div>
                 <div class="div_img_main">
                     <div>
-                        <img class="img_main img2_main" src="./img/img2.jpg" alt="imagem mostra bordas vermelhas que identificam os item dentro do container. ">
+                        <img class="img_main img2_main" src="./img/img5.jpg" alt="imagem mostra exemplo de um item implicíto.">
+                        <caption>
+                            imagem mostra exemplo de um item implícito.
+                        </caption>
                     </div>
+                </div>
+
+                <div>
+                    <h2>Problema Comum: Items Implícitos com tamanho incorreto.</h2>
+                    <span class="span_minute">7:50</span>
+                    <p> 
+                        O mais correto seria que uma nova <span class="span_destaque">área</span>|<span class="span_destaque">item</span> ocupasse a mesma dimensão que os <em>demais items</em> configurados, mas na prática isso não acontece pois para este exemplo as "<em>nossas linhas</em>" estão definidas com (<em style="color: rgb(0, 53, 122);">100 pixels cada</em>), e  a definição para a <em>4ª</em>(<em>quarta</em>) linha, <span class="span_destaque">não está configurada</span>.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img6.jpg" alt="imagem mostra que os valores ao item implícito não é atribuido.">
+                        <caption>
+                            imagem mostra que os valores da propriedade de linha ao item implícito não é atribuido.
+                        </caption>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        "<span class="span_destaque">Observação</span>":
+                        <br>
+                        Adicionar o valor de <span style="color: rgb(0, 53, 122);">100</span>/<span style="color: rgb(0, 53, 122);">pixels</span>  para a possível "<span class="span_destaque">nova linha</span>" também não é aconselhável, pois se não houver adição desse "<em>novo item</em>", então teremos na <span class="span_destaque">Grid</span> uma área de <em>100</em>/<em>pixels</em> "<span class="span_destaque">vazia</span>".
+                    </p>
                 </div>
             </section>
             
             <section>
                 <div>
-                    <h2>Aplicando display: grid</h2>
-                    <span class="span_minute">6:33</span>
-                    <p>
-                        O primeiro passo pode ser frustrante, pois visivelmente não muda nada <span class="span_destaque3">"diferente do que acontece no display flex"</span>.
+                    <h2>Solução: Usando grid-auto-rows para definir a altura das "linhas Implícitas".</h2>
+                    <span class="span_minute">8:10</span>
+                    <p> 
+                        Para que tenhamos um <span class="span_destaque">Grid_Implícito</span> "<mark>
+                            que nesse caso é 3X3 = três linhas e três colunas
+                        </mark>"; Para que ao adicionarmos novas linhas e para que essas linhas tenham as mesmas definições configuradas, basta acrescentar a propriedade <span class="span_destaque">grid-auto-row</span> como no exmeplo abaixo:
                     </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img7.jpg" alt="imagem mostra a propriedade grid-auto-row.">
+                        <caption>
+                            imagem mostra a propriedade grid-auto-row que serve para definir "items implícitos; 
+                            <br>
+                            Que não tem dimensões definidas pela propriedade "grid-template-rows.
+                        </caption>
+                    </div>
+                </div>
+                <div>
                     <p>
-                        <span class="span_destaque">"Veja abaixo"</span> 
+                        Assim para as novas linhas "<mark>
+                            seja item K, L, M etc
+                        </mark>" a(s) sua(s) definição(ões) seria(m) de 100pixels também, pois é o valor usado neste exemplo, como podemos ver no resultado na imagem abaixo:
+                    </p>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img8.jpg" alt="imagem mostra a propriedade grid-auto-row.">
+                            <caption>
+                                imagem mostra a propriedade grid-auto-row que 
+                                <br>
+                                neste exemplo está definindo os novos items = "items implícitos; 
+                                <br>
+                                Com dimensões definidas em 100pixels.
+                            </caption>
+                        </div>
+                    </div>
+                    <p>
+                        "<em style="color: rgb(0, 53, 122);">LEMBRANDO QUE</em>":
                         <br>
-                        ambos os exemplos e compare:
+                        <mark style="background-color: lime; color: rgb(0, 53, 122);">
+                            Todas as novas linhas acrescentadas terão 100pixels.
+                        </mark>
                     </p>
-                </div>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img3.jpg" alt="imagem mostra aplicação padrão do display flex ao container">
-                        <caption>imagem mostra aplicação padrão do display flex ao container.</caption>
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img4.jpg" alt="imagem mostra aplicação padrão de display sem propriedade definida ao container">
-                        <caption>imagem mostra aplicação padrão de display sem propriedade definida ao container.</caption>
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img5.jpg" alt="imagem mostra aplicação padrão de display grid definida ao container">
-                        <caption>imagem mostra aplicação padrão de display grid definida ao container.</caption>
-                    </div>
                 </div>
             </section>
 
             <section>
                 <div>
-                    <h2>Configurações iniciais: Definindo altura e padding.</h2>
-                    <span class="span_minute">7:50</span>
-                    <p>
-                        <span class="span_destaque">As imagens abaixo</span> são exemplos de aplicação das propriedades de altura de container, e espaço iterno de elementos do
-                        <span style="color: rgb(0, 53, 122);">Grid Container</span>.
+                    <h2>grid-auto-colums: Definindo largura das "colunas implícitas".</h2>
+                    <span class="span_minute">9:10</span>
+                    <p> 
+                        Outro exemplo de <em style="color:rgb(0, 53, 122); font-weight:bolder;">problema em adicionar</em> "<em style="color:rgb(0, 53, 122); font-weight:bolder;">novo item</em>" acontece se tivermos as definições da <i>grid</i> para (3 três linhas e três 3 colunas) e quisermos adicionar uma "<span>nova coluna</span>".
                     </p>
-                    <p>Veja abaixo o comportamento comparando as imagens:</p>
-                </div>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img6.jpg" alt="imagem com configuração de altura do container e espaço interno dos itens.">
-                        <caption>imagem com configuração de "altura"(height) do container e "espaço interno"(padding) dos items.</caption>
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img7.jpg" alt="imagem mostra aplicação de altura de container sem display:grid;">
-                        <caption>imagem mostra aplicação de altura de container sem display:grid;</caption>
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img8.jpg" alt="imagem mostra aplicação de padding aos items.">
-                        <caption>imagem mostra aplicação de padding aos items.</caption>
-                    </div>
-                </div>
-            </section>
 
-            <section>
-                <div>
-                    <h2>grid-template-columns: Definindo as colunas da grade.</h2>
-                    <span class="span_minute">8:45</span>
                     <p>
-                        <span class="span_destaque">As imagens abaixo</span> são exemplos de aplicação da propriedade" grid-template-columns" no
-                        <span style="color: rgb(0, 53, 122);">Grid Container</span>.
+                        Assim como no exemplo anterior onde a <span style="color: rgb(0, 53, 122);">nova</span> "<span style="color: rgb(0, 53, 122);">linha implícita</span>" não recebe as configurações das "<em style="color: rgb(0, 53, 122);">linhas explícitas</em>" o mesmo acontece com as "<span style="color:rgb(0, 53, 122)">colunas implícitas</span>" que não recebem as configurações das dimensões das "<span style="color:rgb(0, 53, 122)">colunas explícitas</span>".
                     </p>
-                    <p>Veja abaixo o comportamento comparando as imagens:</p>
-                </div>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img9.jpg" alt="imagem com Exemplo de 3/três colunas 50/pixels cada.">
-                        <caption>Exemplo de 3/três colunas 50/pixels cada.</caption>
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img10.jpg" alt="imagem mostra Exemplo com 3/três colunas /automáticas.">
-                        <caption>Exemplo com 3/três colunas /automáticas.</caption>
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img11.jpg" alt="imagem mostra Exemplo com 4 colunas /automáticas.">
-                        <caption>Exemplo com 4 colunas /automáticas.</caption>
-                    </div>
-                </div>
-            </section>
 
-            <section>
-                <div>
-                    <h2>grid-template-rows: Definindo as linhas da grade.</h2>
-                    <span class="span_minute">9:45</span>
                     <p>
-                        <span class="span_destaque">As imagens abaixo</span> são exemplos de aplicação da propriedade" grid-template-rows" no
-                        <span style="color: rgb(0, 53, 122);">Grid Container</span>.
+                        "<span class="span_destque">Observe na imagem a seguir</span>" 
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;que a dimensão do conteúdo será a dimensão da coluna.
                     </p>
-                    <p>Veja abaixo o comportamento comparando as imagens:</p>
                 </div>
                 <div class="div_img_main">
                     <div>
-                        <img class="img_main img2_main" src="./img/img12.jpg" alt="imagem com Exemplo com 3/linhas /automáticas.">
-                        <caption>Exemplo com 3/linhas /automáticas.</caption>
+                        <img class="img_main img2_main" src="./img/img9.jpg" alt="imagem mostra como fica um novo item implícito num grid de items explícitos com valores = auto.">
+                        <caption>
+                            imagem mostra como fica um novo item implícito de coluna num grid de items explícitos com valores = auto.
+                        </caption>
                     </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img12a.jpg" alt="imagem mostra Exemplo com 4/linhas /auto.">
-                        <caption>Exemplo com 4/linhas /auto.</caption>
+                </div>
+                <div>
+                    <p>
+                        "<span class="span_destaque">Resolvemos</span>" o problema apresentado, usando a <em style="color: rgb(0, 53, 122);">propriedade</em> <span class="span_destaque">grid-auto-column</span> que faz com as novas colunas sejam adicionadas com o valor configurado, que no exemplo abaixo é de <em>100</em>pixels.
+                    </p>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img10.jpg" alt="imagem mostra como configurar um novo item implícito num grid de items explícitos com valores = auto.">
+                            <caption>
+                                imagem mostra como configurar novos items implícitos de coluna
+                                <br>
+                                num grid de items explícitos com valores = auto.
+                            </caption>
+                        </div>
                     </div>
+                    <p>
+                        "<span class="span_destque">Então</span>":
+                        As propriedades <mark>grid-auto-row</mark> e <mark>grid-auto-column</mark> servem para quando criarmos celulas que estão "<em style="color: rgb(0, 53, 122);">fora do Grid</em>"; O nome correto para isso é: Dentro do "<span class="span_destaque">Grid Implícito</span>".
+                    </p>
+                    <p>
+                            "<span class="span_destaque">Em outras palavras</span>":
+
+                        (<mark>Grid Implícito</mark>) é o que foi definido por meio das propriedades <mark>grid-template-row</mark> e <mark>grid-template-colums</mark>, enquanto que (<mark style="background-color: lime;">Grid Explícito</mark>) é toda '<mark style="background-color: lime;">linha</mark> e <mark style="background-color: lime;">coluna</mark>' que recebem os valores das propriedades <mark style="background-color: lime;">grid-auto-row</mark> e <mark style="background-color: lime;">grid-auto-column</mark>.
+                    </p>
                 </div>
             </section>
         </article>
+
 
         <article>
             <section>
                 <div>
-                    <h1>grid-gap vs gap:</h1>
-                    <span class="span_minute">10:32</span>
-                </div>
-                <p>
-                    <span class="span_destaque">{   Atenção a propriedade utilizada para espaçamento.    }</span>
-                </p>
-                <p>
-                    Veja que no <abbr title="Visual Studio Code">VS_Code</abbr> a propriedade <span class="span_destaque3">grid-gap</span> está riscada, pois ela está depreciada e por isso foi substituida por <span class="span_destaque">gap</span>.
-                </p>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img14.jpg" alt="imagem mostra que a propriedade grid-gap está riscada no VS_Code.">
-                    </div>
-                </div>
-                <p>
-                    Veja abaixo um exemplo usando a propriedade <span class="span_destaque">gap</span>.
-                </p>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img15.jpg" alt="imagem mostra a propriedade gap aplicando espaço entre os items dentro da Grid.">
-                    </div>
-                    <caption>imagem mostra a propriedade gap aplicando espaço entre os items dentro da Grid.</caption>
-                </div>
-                <aside>
+                    <h1>Propriedades ShortHands: Simplificando o CSS Grid.</h1>
+                    <span class="span_minute">11:00</span>
                     <p>
-                        <span class="span_destaque2">"Exemplo"</span> 
-                         adicionando outro elemento dentro da grade.
+                        Para aplicação das <span style="color: rgb(0, 53, 122);">3</span>(<span style="color: rgb(0, 53, 122);">três</span>) propriedades '<span style="color: rgb(0, 53, 122);">simplificadoras</span>', voltamos ao <mark>Grid 3X3</mark> sem a celula(<span class="span_destaque">J</span>) e removemos as declarações de <i>grid-auto-row</i> e <i>column</i>; Adicionamos as <i>4</i>(<i>quatro</i>) seguintes propriedades que aprendemos anteriormente e que serão "<i>simplificadas</i>".
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img11.jpg" alt="imagem mostra 4 propriedades de alinhamento de item na Grid.">
+                        <caption>
+                            imagem mostra 4 propriedades de alinhamento de item na Grid.
+                        </caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Revisão Alinhamentos: align e justify para items e content.</h2>
+                    <span class="span_minute">12:30</span>
+                    <p> 
+                        Sempre que nos referimos à "<span class="span_destaque">items</span>" estamos se referindo às <em>áreas</em> que não são <em>celulas</em>, que no exemplo são os "<mark>
+                            blocos
+                        </mark>" 
+                        destacados 
+                        <mark>
+                            por linhas tracejadas
+                        </mark>.
+                    </p>
+                    <p>
+                        Por outro lado, sempre que nos referimos à <span class="span_destaque">content</span>, estamos falando de "<em style="color: rgb(0, 53, 122);">todo o conteúdo</em>" que é a área total formada pelos <b>items</b>.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>ShortHand /place-items: Combinando align-items e justify-items.</h2>
+                    <span class="span_minute">12:42</span>
+                    <p> 
+                        A propriedade <span class="span_destaque">place-items</span> configura de forma simplificadora, o "<mark>align</mark> e o <mark>justify</mark>" para <span class="span_destaque">items</span>.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12.jpg" alt="imagem mostra a propriedade place-items.">
+                        <caption>
+                            imagem mostra a propriedade place-items, que é uma shorthand para configurar 
+                            <br>
+                            as propriedades (align-items e justify-items) numa Grid.
+                        </caption>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>ShortHand /place-content: Combinando align-content e justify-content.</h2>
+                    <span class="span_minute">12:54</span>
+                    <p> 
+                        A propriedade <span class="span_destaque">place-content</span> configura de forma simplificada, as duas propriedades de alinhamento do conteúdo. 
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12a.jpg" alt="imagem mostra a propriedade place-content.">
+                        <caption>
+                            imagem mostra a propriedade place-content, que é uma shorthand para configurar 
+                            <br>
+                            as propriedades (align-content e justify-content) numa Grid.
+                        </caption>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        <mark style="background-color: lime;">
+                            Agora veja abaixo e compare as imagens onde mostra como simplificar as propriedades de alinhamento.
+                        </mark>
+                    </p>
+                    <p>
+                        "<span class="span_destaque">Lembrando que</span>":
+                        <br>
+                        Primeiro é o <em style="color: rgb(0, 53, 122);">valor de align</em> e depois o <em style="color: rgb(0, 53, 122);">valor de justify</em>:
+                    </p>
+                </div>
+                <div>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img14.jpg" alt="imagem mostra a propriedade shorthand para alinhar items e conteúdos.">
+                            <caption>
+                                imagem mostra as propriedades place-items e place-content, que é uma shorthand para configurar 
+                                <br>
+                                as propriedades (align-content/items e justify-items/content) numa Grid.
+                            </caption>
+                        </div>
+                    </div>
+                    <p>
+                        "<span class="span_destaque">Outra vez para lembrar</span>":
+                        <br>
+                        Primeiro é o <em style="color: rgb(0, 53, 122);">valor de align</em> e depois o <em style="color: rgb(0, 53, 122);">valor de justify</em>:
                     </p>
                     <div class="div_img_main">
                         <div>
-                            <img class="img_main img2_main" src="./img/img16.jpg" alt="imagem mostra os items dentro da Grid.">
+                            <img class="img_main img2_main" src="./img/img15.jpg" alt="imagem mostra a propriedade place-content.">
+                            <caption>
+                                imagem mostra as propriedade place-items/content, que é uma shorthand para configurar 
+                                <br>
+                                as propriedades (align-itens/content e justify-items/content) numa Grid.
+                            </caption>
                         </div>
                     </div>
-                </aside>
-            </section>
-        
-            <section> 
-                <div>
-                    <h2>Usando o /Grid_view na prática:</h2>
-                    <span class="span_minute">11:48</span>
-                </div>
-                <p>
-                    Em qualquer parte da página aberta, <span class="span_destaque3">'clique'</span> com o <span class="span_destaque3">botão direito do mouse</span> em <span class="span_destaque3">Inspecionar</span>, ou tecle <kbd><span class="span_destaque3">F12</span></kbd>.
-                </p>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img17.jpg" alt="imagem mostra como inspecionar código da página no navegador.">
-                    </div>
-                </div>
-                <p>
-                    Na aba que é a <span class="span_destaque3">'ferramenta do desenvolvedor'</span> clique em <span class="span_destaque3">Elementos</span>.
-                    <br>
-                    <span class="span_destaque">"VEJA"</span> o exemplo na imagem abaixo:
-                </p>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img18.jpg" alt="imagem mostra a aba de elementos da página.">
-                    </div>
                 </div>
             </section>
 
-            <section> 
+            <section>
                 <div>
-                    <h2>Ativando o /Grid_Overlay: Visualizando "linhas e colunas" numeradas.</h2>
-                    <span class="span_minute">13:25</span>
-                </div>
-                <p>
-                    Observe no <span class="span_destaque3">container</span> que tem um botão <span class="span_destaque">(grid)</span> , e esse botão serve para <span class="span_destaque3">'ativar'</span> a <span class="span_destaque">Grid_view</span>.
-                </p>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img19.jpg" alt="imagem mostra o botão para ativar a Grid_View do navegador.">
-                    </div>
-                </div>
-                <p>
-                    Quando o <span class="span_destaque">Grid_view</span> está ativado , observe quea <span class="span_destaque">Grid</span> é desenhada mostrando as <span class="span_destaque3">"linhas, colunas e múmerações"</span> das <span class="span_destaque">Grid_Lines</span> como podemos ver na imagem acima.
-                </p>
-            </section>
-
-            <section> 
-                <div>
-                    <h2>Painel de Layout no /Devtools: Explorando opções de /alinhamento\prévia</h2>
-                    <span class="span_minute">14:35</span>
+                    <h2>Shorthand /grid-template: Combinando grid-template-rows e columms.</h2>
+                    <span class="span_minute">13:55</span>
+                    <p> 
+                        geralmente também se configura as propriedades <span class="span_destaque">grid-template-rows</span> e <span class="span_destaque">columns</span> em conjunto.
+                    </p>
                     <p>
-                        Os exemplos das imagens abaixo mostra a inumeras opções, onde podemos ver em tempo real o comportamento da grid e dos items mediante as Configurações aplicadas.
+                        "<span class="span_destaque">Vale lembrar</span>" que: 
+                        <br>
+                        A ordem das propriedades é <em style="color: rgb(0, 53, 122);">grid-template-rows</em> e depois <em style="color: rgb(0, 53, 122);">grid-template-columns</em>.
+                    </p>
+                    <p>
+                        "<span class="span_destaque">Então</span>.":
+                        <br>
+                        Podemos simplificar as duas propriedades, usando a propriedade <span class="span_destaque">grid-template</span>, que no exemplo está com dimensão de: (<em style="color:rgb(0, 53, 122)">100px 100px 100px</em> "e" <em style="color:rgb(0, 53, 122)">auto auto auto</em>) para <mark>linhas</mark> e <mark>colunas</mark>.
+                    </p>
+                    <p>
+                        "<span class="span_destaque">Agora</span>":
+                        <br>
+                        Compare ambas as imagens e veja a <mark>
+                            <em style="color:rgb(0, 53, 122)">forma</em> '<em style="color:rgb(0, 53, 122)">padrão</em>' e a <em style="color:rgb(0, 53, 122)">maneira</em> '<em style="color:rgb(0, 53, 122)">simplicada</em>'
+                        </mark> das propriedades:
                     </p>
                 </div>
-                <div class="div_img_main">
-                    <div>
-                        <img class="img_main img2_main" src="./img/img20.jpg" alt="imagem mostra o botão para ativar as opções de alinhamento prévio de Grid do navegador.">
-                    </div>
-                    <div>
-                        <img class="img_main img2_main" src="./img/img21.jpg" alt="imagem mostra o botão para ativar as opções de alinhamento prévio de Grid do navegador.">
-                    </div>
-                </div>
                 <div>
-                    <h2>Observação muito importante:</h2>
-                    <span class="span_minute">16:10</span>
-                    <p>
-                        <span class="span_destaque">As configurações feitas no /Grid_view são temporárias e apenas para testes; Basta atualizar a página, que todas as configurações somem.</span>
-                    </p>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img16.jpg" alt="imagem mostra as propriedades grid-teplate para rows e colums..">
+                            <caption>
+                                imagem mostra as propriedades grid-teplate para rows e colums.
+                            </caption>
+                        </div>
+                    </div>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img17.jpg" alt="imagem mostra a propriedade grid-template, que simplica o uso de grid-template-rows/colums.">
+                            <caption>
+                                Imagem mostra a propriedade grid-template que simplifica o uso
+                                das propriedades para definição de linhas e colunas numa Grid.
+                                Os primeiros valores são dos items em "linha" e os segundos valores depois da barra são para os items em "coluna".
+                            </caption>
+                        </div>
+                    </div>
                 </div>
             </section>
         </article>
- -->
     </main>
 
     <!-- FOOTER -->
