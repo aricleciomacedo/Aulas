@@ -3,3 +3,121 @@ Vídeo:
 Propriedades de container para Grids (parte 4) - @CursoemVideo HTML5 + CSS3
 Link:
 https://www.youtube.com/watch?v=eWxNsMI4UWc&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=24
+
+--:--
+    "Continuação" Propriedades de container para Grids (parte 4):
+
+        Em continuação aos estudos de Propriedades aplicáveis a "container" de "Grid Layout" , nesta aula vamos aprender o uso de uma função chamada /repeat() e também vamos aprender a usar uma nova 'undidade de divisão' chamada /fração = (fr)
+
+2:15
+    Revisão Geral: Propriedades e Shorthands vistas anteriormente.
+
+        Em destaque na imagem abaixo, temos as Propriedades que já aprendemos até aqui.
+
+        "Imagem"
+
+3:49
+    Foco na aula: Função repeat() e undidade de fração (fr).
+
+    Abaixo destacamos as Propriedades que aprenderemos durante esta aula.
+
+        "Imagem 1"
+
+4:37
+    Função repeat(): Simplificando valores repetidos /ex: (auto auto auto).
+
+        Como podemos observar, o nosso "Grid" de exemplo possui 3(três) colunas /auto repetidos, e de maneira simplicada podemos substituir os valores (auto auto auto) e (100px 100px 100px) por /repeat (3, auto) e /repeat (3, 100px).
+
+        Assim podemos comparar as imagens e vermos que os 'parâmetros' passados para a função repeat(), fazem de maneira simples o que os valores 'repetidos' fazem.
+
+            "Imagem 2" e "Imagem 3"
+
+5:21
+    Combinando repeat() com Shorthands: grid-template mais enxuto.
+
+        Na imagem abaixo temos o exemplo da aplicação da propriedade simplificada /grid-template: ; e como valor temos o uso da função repeat() como os parâmetros.
+
+        Note que:
+
+            As propriedades marcadas de amarelo podem ser substituidas pela propriedade marcada de verde.
+
+            "Imagem 4"
+
+6:05
+    Introdução à unidade /fr 'frações' para a divisão de espaço.
+
+        "Saiba" que: 
+
+            O uso de /frações (fr) torna a divisão de tela muito mais precisa do que usar /unidades de "medidas automáticas" ou "medidas fixas".
+
+6:20
+    Exemplo com /fr: (1fr 1fr 1fr ) vs (auto auto auto)
+
+        Como exemplo; Pegamos um container que tem '1500px de largura'; Em destaque mostra a propriedade /grid-template-colums com os valores (auto auto auto) que estão gerando 3 /celulas (automáticas).
+
+        O valor (auto) calcula a largura automática das celulas para que fiquem proporcionais com a mesma largura; Assim como podemos ver na imagem abaixo, cada área ficará com "500px" de largura.
+
+            "imagem 5"
+
+8:00
+    Como /fr funciona: Soma das frações divide espaço total.
+
+        A medida /fr significa (fraction) = (fração);
+        
+        Quando ultilizamos /frações (fr), isso faz com que a largura do container seja dividido pelo valor da soma do total de "frações".
+
+        No exemplo abaixo, os "1500 pixels de largura" do container, serão divididos por 3/frações e fazendo cada área ficar com "500 pixels cada".
+
+            "imagem 6"
+
+9:10
+    auto vs fr: Diferença e recomendação de uso (fr).
+
+        Nesta aula não é tão aprofundado sobre esta questão; Mas o recomendado é que sempre que usar "grid", use a medida (fr) em lugar de (auto).
+
+        "Na verdade":
+            Na prática tanto faz usar (auto ou fr) mas a "recomendação do professor" é usar o (fr).
+
+9:55
+    Layout assimétrico com 'fr'; Exemplo: (1fr 2fr 1fr)
+
+    No exemplo abaixo aplicamos o dobro de (fr) na celula (B) para que ela tenha o dobro do tamanho em relação as demais; Coisa que com o uso do valor de medida (auto) não seria possível.
+
+        "Imagem 7"
+
+10:34
+    Cálculo com "fr" (Exemplo 1fr 2fr 1fr) Dividindo o espaço disponível.
+
+        O que temos que entender é que; O espaço disponível será dividido pelo número de (frações), que no exemplo somado é = a (4fr´s).
+
+        Assim na divisão do espaço como podemos notar na imagem abaixo, é a divisão do espaço total de (1500px), pelo valor da soma das frações que é = 4.
+
+            "imagem 8"
+
+        Agora veja abaixo que a "area/coluna" definida com (2fr) fica o dobro do espaço.
+
+            "Imagem 9"
+
+13:00
+    Misturando Unidades: /px, % e /fr na mesma declaração:
+
+        O exemplo da declaração abaixo, se comporta da seguinte maneira.
+
+            1º O espaço total de (1500px) será dividido pelo número de colunas, pois são 4(quatro) valores declarados (100px; 20%; 1fr; 1fr).
+
+                "Observação":
+                    Sempre que temos uma medida que não seja 'fração', então ela (a medida) será contada "como um todo".
+
+            2º O elemento com 'medida fixa', que no caso são o items de 100pixels será posicionado primeiro.
+
+            3º O elemento com medida "automática"; Que no caso é o item de /20% será posicionado adiante.
+
+                20% de quê?
+                Do valor total do espaço, que no exemplo a seguir é de 300pixels dos 1500pixels referente a largura do /container.
+
+            Por fim; Os elementos com medidas de "fração"(fr) será "fracionados" da sobra do espaço que no caso é (1500 - 300 - 100 = 1100px); Logo essa sobra de 1100pixels será dividido pela soma das 'frações' que é igual à (2fr) ficando assim; Cada área com 550pixels como podemos ver no exemplo abaixo:
+
+                "imagem 10"
+
+    "ATENÇÃO":
+        O professor não recomenda o uso dessas unidades mistas e sim a medida (fr) para todos, exceto se por acaso um cliente pedir em seu projeto, um elemento de valor fixo como por exemplo, algo com 200pixels.

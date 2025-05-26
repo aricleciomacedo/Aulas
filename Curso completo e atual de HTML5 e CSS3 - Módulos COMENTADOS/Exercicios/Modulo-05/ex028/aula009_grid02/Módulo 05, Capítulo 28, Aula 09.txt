@@ -3,3 +3,20 @@ Vídeo:
 CSS Grid Layout na prática (parte 3) - @CursoemVideo HTML5 + CSS3	
 Link:
 https://www.youtube.com/watch?v=UhvHw8SSWVs&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=25
+
+4:00
+    Código Base:
+
+        "Abaixo" temos as imagens que mostram a base do código para esta aula e o resultado no /Grid no navegador, como vimos na aula (aula 04 grid 01).
+
+            "Imagem " + "Imagem 2" e "Imagem 1"
+
+
+5:10
+    "OBSERVAÇÕES":
+        Atualize o repositório no /GitHub.
+
+5:33
+    Mão na massa:
+
+        Agora siga as explicações da aula e pratique o ensinado.
