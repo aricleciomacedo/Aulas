@@ -1,0 +1,121 @@
+* Módulo 05, Capítulo 28, Aula 10
+Vídeo:
+Propriedades de itens para Grids (parte 1) - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=4qZ0BL5vauQ&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=26
+
+--:--
+    Esta aula diz respeito a um assunto novo; Que é sobre "propriedades de items", pois até o vídeo 09 desse Capítulo 28, foi abordado assuntos sobre "propriedades de container".
+
+2:10
+    Revisando:
+
+        Abaixo vemos as propriedades referentes a "container" que foram ensinadas até agora.
+
+            "Imagem"
+
+3:11
+    Propriedades para /items no Grid Layout:
+
+        Nesta aula vamos aprender as seguintes propriedades de /items.
+
+            "Lembrando" que: 
+                As seguintes propriedades não podem ser usadas em /container.
+
+                "Imagem 1"
+
+6:09
+    Base para Grid Layout da aula:
+
+        Veja abaixo como é a "Grid" que será usada de exemplo para aplicação das propriedades de "items".
+
+            "Imagem 2"
+
+7:30
+
+    Questão importante sobre elementos|items:
+
+        Na "Grid Layout" do exmplo, podemos observar que temos (4 colunas) e (3 linhas) que totalizam "12 elementos"; Porém isso não sgnifica obrigatoriamente que está "Grid" contenha (12 items) dentro da /Grid.
+
+        Quando criamos uma /Grid assim; Que neste caso está com (4 colunas) que contém "items explicítos" e (3 linhas) com "items explicítos"; Isso nos dá a possibilidade de criar /Items como podemos ver na imagem abaixo, e a isto chamamos de /gri_area.
+
+            "Imagem 3"
+
+            "Entenda" que:
+
+                Podemos fazer com que um item ocupe um espaço específico como podemos ver na imagem acima, onde (1 item) chamado /grid_area está ocupando o espaço de (4 items).
+
+8:14
+    Relembrando detalhes:
+
+        Quando criamos um /container, as /linhas são numeradas de cima para baixo: essas são as (grid lines horizontais).
+
+            "Imagem 4"
+
+        Semelhante a isto; temos também as /colunas que são formadas pelos (grid lines verticais) e numeradas da esquerda para a direita.
+
+            "Imagem 5"
+
+10:02
+    Definindo grid areas:
+
+        Ao invés de (12 elementos), o exemplo a seguir será um /Grid_layout  com  (3 elementos) dentro, que formarão (3 grandes areas).
+
+        A imagem abaixo tem a demarcação dessas areas que cada /elemento/item ocupará, e como nomeamos cada um deles:
+
+            "Imagem 6"
+
+10:58
+    Definindo o elemento caixa1:
+
+        "Observe" na imagem abaixo que: 
+
+            Para definir o /item (caixa1), temos que informar, de que ponto este elemento começa e onde ele termina.
+
+                "Imagem 7"
+
+        Esse" ponto inicial a esquerda e final a direita" podem ser declarados da seguinte maneira:
+
+            "Imagem 8"
+
+            "Observe" que:
+
+                /grid-row-start refere-se a (linha 1 horizontal) onde "começa" o /item, e /grid-row-end  para definir onde "termina" o /item, que no caso é na (linha 2 horizontal).
+
+            Agora para as colunas, usamos as propriedades que identificam a (linha vertical) que "começa" e onde "termina" o /elemento.
+
+                "Imagem 9"
+
+            "Note" que:
+
+                /grid-column-start identifica onde começa o /elemento, e /grid-column-end refere-se a (linha vertical) que termina o /item, que no caso é (linha 1 de inicío e linha 5 no final).
+
+13:45
+    Resumindo as propriedades de item.
+
+        Com as propriedades vistas nesta aula, basicamente definimos as /areas "demarcadas pelas linhas e colunas de início e as linhas e colunas de fim".
+
+        Para definir uma /grid_area usamos as seguintes propriedades:
+            
+            1º  /grid-row-start para definir o início da linha.
+            2º  /grid-row-end para definir onde terminha a linha.
+            3º  /grid-column-start para definir o início da coluna.
+            4º  /grid-column-end para definir onde termina a coluna.
+
+14:11
+    Definindo a caixa2:
+
+        Seguindo a mesma lógica que criamos a (caixa1) usamos para criar a (caixa2):
+
+            "Imagem 10"
+
+        Da mesma forma; a (caixa3) fica da seguinte maneira:
+
+            "Imagem 11"
+
+15:50
+    Todas as configurações:
+
+        Abaixo temos a imagem das configurações de /container e /items, e que serão usadas na aula do "Mão na massa".
+
+            "Imagem 12"
