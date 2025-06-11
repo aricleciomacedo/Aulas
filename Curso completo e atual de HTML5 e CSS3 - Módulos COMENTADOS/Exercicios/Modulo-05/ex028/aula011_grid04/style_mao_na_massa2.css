@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+nav {
+    position: relative;
+}
+header nav::after {
+    content: "✎";
+    left: -10%;
+    top: -10px;
+    font-size: 1.4rem;
+    color: blue;
+    position: absolute;
+}
+
+
+/* Configuração do container. */
+.container {
+    display: grid;/* Define um container como Grid Layout. */
+    grid-template-rows: repeat(3, 100px);/* 3 linhas de 100px */
+    grid-template-columns: repeat(4, 1fr);/* 4 colunas dividas por frações */
+}
+
+
+/* Configurando os elementos */
+.caixa1 {
+    background-color: red;
+    grid-row-start: 1;/* Define a linha onde começa a area. */
+    grid-row-end: 2;/* Define a linha onde termina a area. */
+    grid-column-start: 1;/* Define a coluna onde começa a area. */
+    grid-column-end: -1;/* Define a coluna onde termina a area. O valor(-1 è igual a 5)*/
+}
+
+.caixa2{
+    background-color: lime;
+    grid-row-start:2;
+    grid-row-end: -1;/* O valor -1 è igual a 4 */
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+.caixa3{
+    background-color: blue;
+    grid-row-start: 2;
+    grid-row-end: -1;/* O valor -1 è igual a 4 */
+    grid-column-start: 3;
+    grid-column-end: -1;/* O valor è igual a 5 */
+}

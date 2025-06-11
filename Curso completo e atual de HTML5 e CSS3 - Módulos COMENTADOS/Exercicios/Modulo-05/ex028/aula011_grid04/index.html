@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Mão na Massa: Posicionando Itens no Grid Layout</title>
+
+    <!-- FONTE Whereas recognition of the inherent dignity:
+    link: https://fonts.google.com/selection/embed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+    <!-- <style> -->
+    <link rel="stylesheet" href="style.css">
+    <!-- </style> -->
+
+    <link rel="stylesheet" href="stylefirstmobile.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo"><!-- <img src="./img2/logo1.jpg" alt="logo"> --></div>
+        <section>
+            <!-- <div class="titulo_principal">
+                <h1>* Módulo 05, Capítulo 28, Aula 11</h1>
+            </div> -->
+            <img src="./img/logo1.jpg" alt="capítulo da aula">
+        </section>
+        <a href="https://www.youtube.com/watch?v=4qZ0BL5vauQ&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=26" target="_blank">Vídeo Aqui!</a>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <article>
+            <div class="div_img_main2">
+                <img class="img_main" src="./img/img-aula.jpg" alt="imagem do curso em vídeo">
+                <div>
+                    <p>Créditos:</p>
+                    <marquee behavior="up" direction="left" width="100%"><p>Ao Professor Gustavo Guanabara do Curso em Vídeo</p></marquee>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <h1>Propriedades de itens para Grids (parte 1)</h1>
+                    <span class="span_minute">--:--</span>
+                </div>
+                <p>
+                    Esta aula diz respeito a um assunto novo; Que é sobre "<span class="span_destaque">propriedades de items</span>", pois até o vídeo <em style="color: rgb(0, 53, 122);">09 desse Capítulo 28</em>, foi abordado assuntos sobre "<span class="span_destaque">propriedades de container</span>".
+                </p>
+                <aside>
+                    <h2>Revisando:</h2>
+                    <span class="span_minute">2:10</span>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Abaixo vemos as propriedades referentes a "<span class="span_destaque2">container</span>" que foram ensinadas até agora.
+                    </p>
+                    <div class="div_img_main">
+                        <div>
+                            <img class="img_main img2_main" src="./img/img.jpg" alt="imagem com propriedades de container Grid Layout.">
+                            <caption>
+                                Imagem com propriedades de container Grid Layout ensinadas até aqui.
+                            </caption>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+        </article>
+<!-- 
+        <article>
+            <section>
+                <div>
+                    <h1>Propriedades para /items no Grid Layout:</h1>
+                    <span class="span_minute">3:11</span>
+                </div>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Nesta aula vamos aprender as seguintes propriedades de <span class="span_destaque">items</span>.  
+                </p>
+                <p>
+                    "<mark>Lembrando</mark>" que: 
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;As seguintes propriedades <span class="span_destaque">não</span> podem ser usadas em <span class="span_destaque">container</span>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img1.jpg" alt="imagem com propriedades de items de Grid Layout.">
+                        <caption>
+                            Imagem com propriedades de items Grid Layout referentes a esta aula.
+                        </caption>
+                    </div>
+                </div>
+                <div>
+                    <h2>Base para Grid Layout da aula:</h2>
+                    <span class="span_minute">6:09</span>
+                    <p>Veja abaixo como é a "<span class="span_destaque">Grid</span>" que será usada de exemplo para aplicação das <span style="color: rgb(0, 53, 122);">propriedades de</span> "<span class="span_destaque">items</span>".</p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img2.jpg" alt="imagem com Grid Layout.">
+                        <caption>
+                            Imagem com Grid Layout usada de exemplo na aula.
+                        </caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Questão importante sobre <mark>elementos|items</mark>:</h2>
+                    <span class="span_minute">7:30</span>
+                    <p>
+                        Na "<span class="span_destaque">Grid Layout</span>" do exmplo, podemos observar que temos (<span class="span_destaque">4</span> colunas) e (<span class="span_destaque">3</span> linhas) que totalizam "<span class="span_destaque">12</span> elementos"; Porém isso não significa obrigatoriamente que esta "<span class="span_destaque">Grid</span>" contenha (<span class="span_destaque">12</span> items) dentro da <span class="span_destaque">Grid</span>.
+                    </p>
+                    <p>
+                        Quando criamos uma <span class="span_destaque">Grid</span> assim; Que neste caso está com (<span class="span_destaque">4</span> colunas) que contém "<span class="span_destaque">items explicítos</span>" e (<span class="span_destaque">3</span> linhas) com "<span class="span_destaque">items explicítos</span>"; Isso nos dá a possibilidade de criar <span class="span_destaque">Item</span>s como podemos ver na imagem abaixo, e a isto chamamos de <span class="span_destaque">grid area</span>.
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img3.jpg" alt="imagem com Grid area.">
+                        <caption>
+                            Imagem com Grid Area usada de exemplo na aula.
+                        </caption>
+                    </div>
+                </div>
+                <p>
+                    "<mark><span class="span_destaque">Entenda</span></mark>" que:
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Podemos fazer com que um item ocupe um espaço específico como podemos ver na imagem acima, onde (<span class="span_destaque">1 item</span>) chamado <span class="span_destaque">grid_area</span> está ocupando o espaço de (<span class="span_destaque">4 items</span>).
+                </p>
+            </section>
+            
+            <aside>
+                <h3>Relembrando detalhes:</h3>
+                <span class="span_minute">8:14</span>
+
+                <p>
+                    Quando criamos um <span class="span_destaque">container</span>, as <span class="span_destaque">linhas</span> são <span style="color: rgb(7, 94, 255);">numeradas de cima para baixo</span>: essas são as (<span class="span_destaque">grid lines horizontais</span>).
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img4.jpg" alt="imagem mostra as grid lines horizontais (de linha).">
+                        <caption>
+                                imagem mostra as grid lines horizontais (de linha).
+                        </caption>
+                    </div>
+                </div>
+                <p>
+                    Semelhante a isto; temos também as <span class="span_destaque">colunas</span> que são formadas pelos (<span class="span_destaque">grid lines verticais</span>) e <span style="color: rgb(7, 94, 255);">numeradas da esquerda para a direita</span>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img5.jpg" alt="imagem mostra as grid lines verticas (de coluna).">
+                        <caption>
+                                imagem mostra as grid lines verticais (de coluna).
+                        </caption>
+                    </div>
+                </div>
+            </aside>
+        </article>
+
+        <article>
+            <section>
+                <div>
+                    <h1>Definindo grid areas:</h1>
+                    <span class="span_minute">10:02</span>
+                </div>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Ao invés de (<span class="span_destaque">12</span> elementos), o exemplo a seguir será um <span class="span_destaque">Grid Layout</span>  com  (<span class="span_destaque">3</span> elementos) dentro, que formarão (<span class="span_destaque">3</span> grandes areas).
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;A imagem abaixo tem a demarcação dessas <em style="color: rgb(0, 53, 122);">areas</em> que cada <span class="span_destaque">elemento</span>(<span class="span_destaque">item</span>) ocupará, e como nomeamos cada um deles:
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img6.jpg" alt="imagem com 3 grid areas.">
+                        <caption>
+                            Imagem com 3 grid areas.
+                        </caption>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Definindo o elemento caixa1:</h2>
+                    <span class="span_minute">10:58</span>
+                </div>
+                <p>
+                    "<span class="span_destaque">Observe</span>" na imagem abaixo que: 
+                    &nbsp;&nbsp;&nbsp;&nbsp;Para definir o <span class="span_destaque">item</span> (<span class="span_destaque">caixa1</span>), temos que informar, <em style="color: rgb(0, 53, 122);">de que ponto este elemento começa e onde ele termina</em>.
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img7.jpg" alt="Imagem com ponto de início e fim de um item grid area.">
+                        <caption>
+                            Imagem com ponto de início e fim de um item grid area.
+                        </caption>
+                    </div>
+                </div>
+                <p>
+                    Esse "<span class="span_destaque">ponto inicial a esquerda e final a direita</span>" podem ser declarados da seguinte maneira:
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img8.jpg" alt="Imagem com ponto de início e fim de um item grid area.">
+                        <caption>
+                            Imagem com ponto de início e fim de um item grid area e as propriedades para declarar cada ponto desse.
+                        </caption>
+                    </div>
+                </div>
+                <p>
+                    "<span class="span_destaque">Observe</span>" que:
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="span_destaque">grid-row-start</span> refere-se a (<span class="span_destaque">linha 1 horizontal</span>) onde "<em style="color: rgb(0, 53, 122);">começa</em>" o <span class="span_destaque">item</span>, e <span class="span_destaque">grid-row-end</span>  para definir onde "<em style="color: rgb(0, 53, 122);">termina</em>" o <span class="span_destaque">item</span>, que no caso é na (<span class="span_destaque">linha 2 horizontal</span>).
+                </p>
+
+                <p>
+                    Agora para as <span class="span_destaque">colunas</span> usamos as propriedades que identificam a (<sp<span class="span_destaque">linha vertical</span>"<em style="color: rgb(0, 53, 122);">começa</em>" e onde "<em style="color: rgb(0, 53, 122);">termina</em>" o /<span class="span_destaque">elemento</span>
+                </p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img9.jpg" alt="Imagem com os pontos de início e fim de um item grid area.">
+                        <caption>
+                            Imagem com os pontos de início e fim de um item grid area e as propriedades para declarar cada ponto desse.
+                        </caption>
+                    </div>
+                </div>
+                <p>
+                    <mark>
+                        "<span class="span_destaque">Note</span>" que:
+                    </mark>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="span_destaque">grid-column-start</span> identifica onde começa o <span class="span_destaque">elemento</span>, e <span class="span_destaque">grid-column-end</span> refere-se a (<span class="span_destaque">linha vertical</span>) que termina o <span class="span_destaque">item</span>, que no caso é (<span class="span_destaque">linha 1 de inicío e linha 5 no final</span>).
+                </p>
+            </section>
+        </article>
+
+        <article>
+            <section>
+                <div>
+                    <h1>Resumindo as propriedades de item.</h1>
+                    <span class="span_minute">13:45</span>
+                </div>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Com as propriedades vistas nesta aula, basicamente definimos as <span class="span_destaque">areas</span> "<em style="color: rgb(0, 53, 122);">demarcadas pelas linhas e colunas de início e as linhas e colunas de fim</em>".
+                </p>
+                <div>
+                    <p>
+                        Para definir uma <span class="span_destaque">grid area</span> usamos as seguintes propriedades:
+                        <ul>
+                            <li><span class="span_destaque">1º</span>  <em style="color: rgb(0, 53, 122);">grid-row-start</em> para definir o início da linha.</li>
+                            <li><span class="span_destaque">2º</span>  <em style="color: rgb(0, 53, 122);">grid-row-end</em> para definir onde terminha a linha.</li>
+                            <li><span class="span_destaque">3º</span>  <em style="color: rgb(0, 53, 122);">grid-column-start</em> para definir o início da coluna.</li>
+                            <li><span class="span_destaque">4º</span>  <em style="color: rgb(0, 53, 122);">grid-column-end</em> para definir onde termina a coluna.</li>
+                        </ul>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Definindo a caixa2:</h2>
+                    <span class="span_minute">14:11</span>
+                    <p>
+                        Seguindo a mesma lógica que criamos a (<span style="color: rgb(0, 53, 122);">caixa1</span>) usamos para criar a (<span class="span_destaque">caixa2</span>):
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img10.jpg" alt="Imagem com pontos de início e fim de um item grid area chamado caixa2.">
+                        <caption>
+                            Imagem com pontos de início e fim de um item grid area chamado caixa2.
+                        </caption>
+                    </div>
+                </div>
+                <div>
+                    <p>
+                        Da mesma forma; a (<span class="span_destaque">caixa3</span>) fica da seguinte maneira:
+                    </p>
+                </div>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img11.jpg" alt="Imagem com pontos de início e fim de um item grid area chamado caixa3.">
+                        <caption>
+                            Imagem com pontos de início e fim de um item grid area chamado caixa3.
+                        </caption>
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <h3>Todas as configurações:</h3>
+                <span class="span_minute">15:55</span>
+                <p> Abaixo temos a imagem das configurações de <em style="color: rgb(7, 94, 255);">container</em> e <em style="color: rgb(7, 94, 255);">items</em>, e que serão usadas na aula do "<em style="color: rgb(7, 94, 255);">Mão na massa</em>".</p>
+                <div class="div_img_main">
+                    <div>
+                        <img class="img_main img2_main" src="./img/img12.jpg" alt="Imagem as propriedades de container e item de Grid Layout.">
+                        <caption>
+                            Imagem as propriedades de container e item de Grid Layout.
+                        </caption>
+                    </div>
+                </div>
+            </aside>
+        </article> 
+        -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="footer_redessociais">
+            <h2>Siga nossas redes sociais e <span style="color: #ff6804e3; font-weight: bolder;">+</span></h2>
+            <img class="img_footer" src="./img/logocursoemvideomax.jpg" alt="imagem logo curso em vídeo">
+            <img class="img_footer" src="./img/insta.jpg" alt="imagem insta curso em vídeo">
+            <img class="img_footer" src="./img/cursogratisrecode.jpg" alt="imagem recode">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Curso grátis</h2>
+            <img style="width: 250px;" src="./img/gustavoguanabara-vertical2.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+            <img style="width: 250px;" src="./img/instagram-multi-005.png" alt="imagem qrcode e sobre o curso em vídeo" class="img_footer">
+        </section>
+        <section class="footer_redessociais">
+            <h2>Patrocínios</h2>
+            <img src="./img/patrocinio.jpg" alt="imagem patrocinio hostenet" class="img_footer">
+            <img src="./img/patrocinio1.jpg" alt="imagem patrocinio recode" class="img_footer">
+            <img src="./img/patrocinio2.jpg" alt="imagem patrocinio estudonauta" class="img_footer">
+        </section>
+    </footer>   
+</body>
+</html>
