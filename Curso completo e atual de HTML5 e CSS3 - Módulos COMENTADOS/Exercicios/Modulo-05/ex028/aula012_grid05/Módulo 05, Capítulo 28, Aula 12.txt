@@ -1,0 +1,5 @@
+﻿* Módulo 05, Capítulo 28, Aula 12
+Vídeo:
+CSS Grid: Shorthands para Itens - @CursoemVideo HTML5 + CSS3
+Link:
+https://www.youtube.com/watch?v=HTCaQ28xPMU&list=PLHz_AreHm4dn1bAtIJWFrugl5z2Ej_52d&index=28
