@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio 1 - Grid Layout</title>
+
+    <style>
+        /* Assim resetamos as propriedades padrões aplicadas a todos os elementos; */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            /* Definmos esta altura e largura para que o container ocupe todo o espaço da tela, e para que os itens possam serem divididos por frações (fr) */
+            width: 100vw;
+            height: 100vh;
+
+            display: grid; /* Indica a criação de um Grid Layout */
+            grid-template-rows: 80px 40px /* 200px */ 1fr 40px;/* grid com 4 linhas */
+            grid-template-columns: /* 200px */ 1fr 150px;/* Grid com 2 colunas.*/
+            gap: 5px;/* Espaço entre os grid items */
+        }
+
+        .caixa {
+            background-color: lightgray;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #topo{
+            /* Assim definimos que este elemento começa na linha 1 coluna 1 e termina na linha 2 coluna -1 */
+            grid-area: 1 / 1 / 2 / -1;
+        }
+        #menu{
+            /* Assim dizemos que esta área será da linha 2 coluna 1 e vai até linha 3 na coluna última (-1) */
+            grid-area: 2 / 1 / 3 / -1;
+        }   
+        #principal{
+            /* Assim dizemos que essa área começa na linha 3 na coluna 1 e termina na penúltima linha (-2)  na coluna 2 */
+            grid-area: 3 / 1 / -2 / 2;
+        }
+        #secundario{
+            /* Assim dizemos que esse elemento começa na linha 3 na penúltima coluna (-2) e vai até a penúltima linha (2) na última coluna (-1) */
+            grid-area: 3 / -2 / -2 / -1;
+        }
+        #rodape{
+            /* Assim dizemos que esta area vai da penúltima linha (-2) na coluna 1 e vai até a última linha (-1) na última coluna (-1) */
+            grid-area: -2 / 1 / -1 / -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="caixa" id="topo">
+            Topo
+        </header>
+        <nav class="caixa" id="menu">
+            Menu
+        </nav>
+        <main class="caixa" id="principal">
+            Principal
+        </main>
+        <aside class="caixa" id="secundario">
+            Secundário
+        </aside>
+        <footer class="caixa" id="rodape">
+            Rodapé
+        </footer>
+    </div>
+</body>
+</html>
